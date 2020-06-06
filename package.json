@@ -1,7 +1,7 @@
 {
   "name": "webpacktemplate",
   "version": "1.0.0",
-  "description": "JackCoder, WDM",
+  "description": "WDM",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./conf/webpack.dev.conf.js",
