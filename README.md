@@ -2,10 +2,10 @@
 ```bash
 # Download repository:
 
-$ git clone https://github.com/WhiteDevilMan/webpack_template
+$ git clone https://github.com/WhiteDevilMan/FSD
 
 # Go to the folder:
-$ cd webpack_template
+$ cd FSD
 
 # Install dependencies from package.json:
 $ npm install
