@@ -1,0 +1,10 @@
+mixin item(title, descr)
+  h2.content__item-header.item-title= title
+  p.item-descr= descr
+
+block content
+  section
+    .container.content__container-text-align
+      +item('Usage:', 'add ycfn.pug, ycfn.scss and ycfn.js files to src/componets/ycfn')
+      +item('Add to .js file:', "import './ycfn.scss';")
+      +item('Note:', 'ycfn - your component folder name')
