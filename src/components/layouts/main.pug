@@ -10,10 +10,6 @@ html(lang='en')
     meta(name="description", content=description)
 
   body(class=pageClass)
-    .wrapper
-      include ../header/header
-      .contant-wrapper
-        include ../content/content
-      include ../footer/footer
+    block content
 
     block script
