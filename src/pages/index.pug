@@ -1,6 +1,14 @@
-extends ../components/layouts/navpage
+extends ../components/layouts/main
 
 block variables
-  - var title = 'FSD index page';
-  - var description = 'FSD education project';
-  - var pageClass = 'index-page';
+  - var title = 'FSD Navigation Menu';
+  - var description = 'FSD education project | navigation page';
+  - var pageClass = 'navigation-page';
+
+block content
+  .wrapper
+    .contant-wrapper
+      .navpagemenu
+        h1.navpagemenu__header Navigation Menu
+        a.navigation__link(href="colorsntypes.html") Colors & Types
+        a.navigation__link(href="#") New Link
