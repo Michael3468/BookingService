@@ -47,12 +47,10 @@ section,
 .wrapper{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 auto;
   min-height: 100vh;
   //min-width: 100vh;
-  background-color: #2b3a42;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .content-wrapper {
