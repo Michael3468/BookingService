@@ -1,1 +1,1 @@
-import './colorsntypes.scss'
+import './colors.scss'
