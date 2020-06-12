@@ -13,11 +13,10 @@
 
 // Montserrat
 @font-face {
-  font-family: 'Montserrat-Black'; //, sans-serif;
-  src:  url('../fonts/Montserrat-Black.eot'); // IE9 Compat Modes
-  src:  url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-        url('../fonts/Montserrat-Black.woff') format('woff'), // Pretty Modern Browsers
-        url('../fonts/Montserrat-Black.woff2') format('woff2'), // Pretty Modern Browsers
-        url('../fonts/Montserrat-Black.ttf') format('truetype'), //Safari, Android, iOS
-        url('../fonts/Montserrat-Black.svg') format('svg'); // Legacy iOS
+  font-family: 'Quicksand-Bold'; //, sans-serif;
+  src:  url('../fonts/Quicksand-Bold.eot'); // IE9 Compat Modes
+  src:  url('../fonts/Quicksand-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+        url('../fonts/Quicksand-Bold.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Quicksand-Bold.ttf') format('truetype'), //Safari, Android, iOS
+        url('../fonts/Quicksand-Bold.svg') format('svg'); // Legacy iOS
 }
