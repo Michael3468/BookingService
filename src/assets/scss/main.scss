@@ -48,7 +48,6 @@ section,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  //min-width: 100vh;
   margin: 0 auto;
   padding: 0 auto;
 }
@@ -75,3 +74,23 @@ section,
     max-width: $smPhoneWidth;
   }
 }
+
+//flexbox+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.flex-row-reverse{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-column-reverse{
+  display: flex;
+  flex-direction: column-reverse;
+}
+//flexbox-
