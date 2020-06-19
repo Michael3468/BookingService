@@ -1,17 +1,4 @@
-  /*
-
-  // Base Helvetica (example):
-  @font-face {
-    font-family: "Helvetica-Base";
-    src: url('../fonts/Helvetica-Base.eot'); // IE9 Compat Modes
-    src: url('../fonts/Helvetica-Base.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-         url('../fonts/Helvetica-Base.woff') format('woff'), // Pretty Modern Browsers
-         url('../fonts/Helvetica-Base.ttf')  format('truetype'), // Safari, Android, iOS
-         url('../fonts/Helvetica-Base.svg') format('svg'); // Legacy iOS
-  }
-  */
-
-// Montserrat
+// Quicksand-Bold
 @font-face {
   font-family: 'Quicksand-Bold'; //, sans-serif;
   src:  url('../fonts/Quicksand-Bold.eot'); // IE9 Compat Modes
@@ -19,4 +6,34 @@
         url('../fonts/Quicksand-Bold.woff') format('woff'), // Pretty Modern Browsers
         url('../fonts/Quicksand-Bold.ttf') format('truetype'), //Safari, Android, iOS
         url('../fonts/Quicksand-Bold.svg') format('svg'); // Legacy iOS
+}
+
+// Quicksand-Regilar
+@font-face {
+  font-family: 'Quicksand-Regular'; //, sans-serif;
+  src:  url('../fonts/Quicksand-Regular.eot'); // IE9 Compat Modes
+  src:  url('../fonts/Quicksand-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+        url('../fonts/Quicksand-Regular.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Quicksand-Regular.ttf') format('truetype'), //Safari, Android, iOS
+        url('../fonts/Quicksand-Regular.svg') format('svg'); // Legacy iOS
+}
+
+// Montserrat-Bold
+@font-face {
+  font-family: 'Montserrat-Bold'; //, sans-serif;
+  src:  url('../fonts/Montserrat-Bold.eot'); // IE9 Compat Modes
+  src:  url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+        url('../fonts/Montserrat-Bold.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Montserrat-Bold.ttf') format('truetype'), //Safari, Android, iOS
+        url('../fonts/Montserrat-Bold.svg') format('svg'); // Legacy iOS
+}
+
+// Montserrat-Regular
+@font-face {
+  font-family: 'Montserrat-Regular'; //, sans-serif;
+  src:  url('../fonts/Montserrat-Regular.eot'); // IE9 Compat Modes
+  src:  url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+        url('../fonts/Montserrat-Regular.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Montserrat-Regular.ttf') format('truetype'), //Safari, Android, iOS
+        url('../fonts/Montserrat-Regular.svg') format('svg'); // Legacy iOS
 }
