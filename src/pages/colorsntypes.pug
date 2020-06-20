@@ -3,13 +3,12 @@ extends ../components/layouts/main
 block variables
   - var title = 'FSD Colors & Types';
   - var description = 'FSD education project | Colors & Types page';
-  - var pageClass = 'colors-and-types-page';
+  - var pageClass = 'colors-and-types';
 
 block content
   .wrapper
     .content-wrapper
-      .toxin-logo
-        img(src="/assets/img/logo.svg", alt="logo")
+      include ../components/logo/logo
       .container.flex-row.justify-content-between
         .colorsntypes__colors
           include ../components/colorsntypes/colors/colors
