@@ -45,34 +45,36 @@ section,
 }
 
 .wrapper{
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  max-width: 1440px;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  // margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  // padding: 0 auto;
+  // padding-left: 10px;
+  // padding-right: 10px;
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   flex: 0 0 auto;
-  position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-  }
+  padding: 0 140px;
+  // position: relative;
+
+  // max-width: $desktopWidth;
+  // @media screen and (max-width: $smDesktopWidth) {
+  //   max-width: $tableWidth;
+  // }
+  // @media screen and (max-width: $tableWidth) {
+  //   max-width: $phoneWidth;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+  //   max-width: $smPhoneWidth;
+  // }
 }
 
 //flexbox+
