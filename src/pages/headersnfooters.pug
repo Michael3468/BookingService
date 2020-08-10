@@ -1,0 +1,15 @@
+extends ../components/layouts/main
+
+block variables
+  - var title = 'FSD Headers & Footers';
+  - var description = 'FSD education project | Headers & Footers page';
+  - var pageClass = 'headers-and-footers';
+
+block content
+  .wrapper
+      //- .content-wrapper
+      include ../components/logo/logo
+        //- .container.flex-row
+      include ../components/headersnfooters/headers/headers
+      //-   .colorsntypes__types
+      //-     include ../components/colorsntypes/types/types
