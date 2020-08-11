@@ -1,4 +1,5 @@
 dist
 node_modules
 notes.txt
+ignore
 vim.exe.stackdump
