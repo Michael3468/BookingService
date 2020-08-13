@@ -21,12 +21,10 @@ module.exports = {
   },
   entry: {
     app: PATHS.src,
-    lk:  `${PATHS.src}/lk.js` //дополнительная точка входа для примера
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    //publicPath: './' //без pablicPath работают стили и в dev и в build
   },
   optimization: {
     splitChunks: {
@@ -79,21 +77,7 @@ module.exports = {
         options: { sourceMap: true }
       } 
     ]
-    }, 
-    // {
-    // test: /\.css$/,
-    // use: [
-    //   'style-loader',
-    //   MiniCssExtractPlugin.loader,
-    //   {
-    //     loader: 'css-loader',
-    //     options: { sourceMap: true }
-    //   }, {
-    //     loader: 'postcss-loader',
-    //     options: { sourceMap: true, config: { path: `./postcss.config.js`} }
-    //   }
-    // ]
-    // }
+    },
     ]
   },
   resolve: {
@@ -111,21 +95,7 @@ module.exports = {
       { from: `${PATHS.src}/${PATHS.assets}fonts`,  to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
-    /*
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/index.html`,
-      filename: './index.html',
-      inject: true
-    }),
-    */
 
-    /*
-      Automatic creation any html pages (Don't forget to RERUN dev server!)
-      See more:
-      https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
-      Best way to create pages:
-      https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
-    */
     ...PAGES.map(
      page =>
       new HtmlWebpackPlugin({
