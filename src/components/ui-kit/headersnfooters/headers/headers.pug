@@ -1,13 +1,24 @@
-.header.hf-bg-color.flex-row
-  .container
-    .header__logo
-      img.header__logo-img(src="./assets/img/logo.svg", alt="logo")
-      img.header__logo-name(src="./assets/img/TOXIN.png", alt="logo")
-    nav.header__nav
-      ul.header__nav-ul.flex-row
-        li.header__nav-li.header__nav-li-active О нас
-        li.header__nav-li Услуги
-        li.header__nav-li Вакансии
-        li.header__nav-li Новости
-        li.header__nav-li Соглашения
-    //- .nav-buttons
+include ../../buttons/buttons.pug
+include  header_logo/header_logo.pug
+
+mixin header(loginStatus)
+  .header.hf-bg-color.flex-row
+    .container
+      +header_logo()
+      nav.header__nav
+        ul.header__nav-ul.flex-row
+          li.header__nav-li.header__nav-li-active О нас
+          li.header__nav-li Услуги
+            img.expand_more(src="./assets/img/expand_more.svg", alt="expand")
+          li.header__nav-li Вакансии
+          li.header__nav-li Новости
+          li.header__nav-li Соглашения
+            img.expand_more(src="./assets/img/expand_more.svg", alt="expand")
+        if loginStatus == 'authorised'
+          .header__notAuthorized
+            - var userName = 'Юлий Цезарь'
+            li.header__nav-li #{userName}
+        else
+          .header__authorized
+            +button({link:"#", value:"Войти", mod: ["bordered","small"]})
+            +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
