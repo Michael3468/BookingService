@@ -1,0 +1,11 @@
+mixin type(tagName, tagDescription, fontSize, tagNameFontFamily, tagDescFontFamily, typeDescLineHeight, tagDescColor, textTransform)
+  .types-block(style= 'line-height: '+typeDescLineHeight+'px')
+    .type__description.flex-row(style= 'font-size: '+fontSize+'px')
+      .type__tagName(style= 'font-family: '+tagNameFontFamily+'; color: rgba(31, 32, 65, 0.25)')= tagName
+      .type__tagDescription(style= 'font-family: '+tagDescFontFamily+'; text-transform: '+textTransform+'; color: '+tagDescColor+'')= tagDescription
+
+.types
+  +type("H1", "This one is the sub-section or widget title", "24", "Montserrat-Regular","Quicksand-Bold", "30", "#1F2041")
+  +type("H2", "Next one is the item title inside widgets", "19", "Montserrat-Regular", "Quicksand-Bold", "24", "#1F2041")
+  +type("H3", "This is a label or cta text", "12", "Montserrat-Regular", "Montserrat-Bold", "15", "#1F2041", "uppercase")
+  +type("Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.", "14", "Montserrat-Regular", "Montserrat-Regular", "24", "rgba(31, 32, 65, 0.75)")

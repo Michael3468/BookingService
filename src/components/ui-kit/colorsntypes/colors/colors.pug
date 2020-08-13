@@ -1,0 +1,15 @@
+mixin color(colorName, colorValue, backgrColor, opacityColor)
+  .color-block
+    .color__sample(style= 'background: '+backgrColor+'; opacity: '+opacityColor+'')
+    .color__description(style= 'color: #1F2041')
+      h2.color_colorName= colorName
+      p.color__colorCode(style= 'font-family: Quicksand-Regular')= colorValue
+
+.colors
+  +color("Dark Shade 100%","#1F2041", "#1F2041", "1")
+  +color("Dark Shade 75%" ,"#1F2041", "#1F2041", ".75")
+  +color("Dark Shade 50%" ,"#1F2041", "#1F2041", ".5")
+  +color("Dark Shade 25%" ,"#1F2041", "#1F2041", ".25")
+  +color("Dark Shade 5%"  ,"#1F2041", "#1F2041", ".05")
+  +color("Purple"         ,"#BC9CFF", "#BC9CFF")
+  +color("Green"          ,"#6FCF97", "#6FCF97")

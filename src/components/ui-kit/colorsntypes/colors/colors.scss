@@ -1,0 +1,28 @@
+.colors{
+  margin: 67px 0 0 115px;
+  width: 269px;
+}
+
+.color-block{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.color__sample{
+  width: 70px;
+  height: 70px;
+  left: 150px;
+  top: 145px;
+  border-radius: 6px;
+}
+
+.color__description{
+  flex-direction: column;
+  margin: 6px 0 0 40px;
+  font-family: 'Quicksand-Bold', sans-serif;
+  font-size: 19px;
+  line-height: 29px;
+  display: flex;
+  align-items: flex-start;
+}
