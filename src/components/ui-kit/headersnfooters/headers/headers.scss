@@ -1,19 +1,6 @@
 .header{
   background-color: #000;
 }
-.header__logo{
-  display: flex;
-  flex-direction: row;
-}
-.header__logo-img{
-  margin: 16px 12px 16px 0px;
-  height: 40px;
-  width: 40px;
-}
-.header__logo-name{
-  height: 14px;
-  margin-top: 30px;
-}
 .header__nav{
   display: flex;
   align-items: center;
@@ -23,14 +10,32 @@
 .header__nav-ul{
   display: flex;
   justify-content: space-between;
-  width: 447px;
+  width: 442px;
 }
 .header__nav-li{
-  font-family: Montserrat-Regular;
+  font-family: Montserrat;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: rgba(31, 32, 65, 0.75);
 }
 .header__nav-li-active{
-  font-family: Montserrat-Bold;
+  font-family: Montserrat;
+  font-weight: 700;
+}
+.expand_more{
+  margin-left: 10px;
+}
+
+.header__authorized{
+  display: flex;
+  justify-content: space-between;
+  width: 303px;
+  margin-left: 26px;
+}
+
+.header__notAuthorized{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 46px;
 }
