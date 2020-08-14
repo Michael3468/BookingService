@@ -22,7 +22,7 @@ html{
 body{
   font-family: $mainFont;
   font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
+  font-weight: 700;
   //сглаживание шрифтов+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -45,16 +45,10 @@ section,
 }
 
 .wrapper{
-  // display: flex;
-  // flex-direction: column;
   max-width: 1440px;
   min-height: 100vh;
-  // margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
-  // padding: 0 auto;
-  // padding-left: 10px;
-  // padding-right: 10px;
 }
 
 .container {
