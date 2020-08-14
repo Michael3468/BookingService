@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+$height: 44px;
+$height-small: 34px;
+$width: 99px;
+$padding: 15px;
+$padding-small-lr: 20px;
+$border-width: 2px;
+$linear-gradient: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 1) 0%,
+  rgba(139, 164, 249, 1) 100%
+);
+$linear-gradient05: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.5) 0%,
+  rgba(139, 164, 249, 0.5) 100%
+);
+$color: #bc9cff;
+* {
+  box-sizing: border-box;
+}
+$arrow-fsz: 24px;
+$arrow-right: 14px;
+
+.main {
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.w320 {
+  margin: 10px 0 10px 0;
+  max-width: 320px;
+}
+.button {
+  margin: 0;
+  display: inline-block;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  background: $linear-gradient;
+  background-position: center;
+  text-align: center;
+  vertical-align: middle;
+  min-height: $height - $padding * 2;
+  min-width: $width;
+  line-height: $height - $padding * 2;
+  border-radius: 22px;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: $padding;
+  text-transform: uppercase;
+  &:hover {
+    background: $linear-gradient05;
+  }
+  &_bordered {
+    background: none;
+    color: $color;
+    min-height: $height - $padding * 2 - $border-width * 2;
+    line-height: $height - $padding * 2 - $border-width * 2;
+    border: solid $border-width transparent;
+    background-image: linear-gradient(white, white), $linear-gradient;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-background-clip: padding-box, border-box;
+    color: #bc9cff;
+    &:hover {
+      border: solid $border-width transparent;
+      background-image: linear-gradient(white, white), $linear-gradient05;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      -webkit-background-clip: padding-box, border-box;
+    }
+  }
+  &_small {
+    min-height: $height-small - $padding * 2;
+    line-height: $height-small - $padding * 2;
+    min-width: unset;
+    padding-left: $padding-small-lr;
+    padding-right: $padding-small-lr;
+  }
+  &_small.button_bordered {
+    min-height: $height-small - $padding * 2 - $border-width * 2;
+    line-height: $height-small - $padding * 2 - $border-width * 2;
+    min-width: unset;
+    padding-left: $padding-small-lr - $border-width;
+    padding-right: $padding-small-lr - $border-width;
+  }
+  &_block {
+    display: block;
+    min-width: 100%;
+  }
+  &_with_arrow {
+    $arrow-rl:$padding+$arrow-fsz+$arrow-right;
+    position: relative;
+    padding-right: $arrow-rl;
+    padding-left: $arrow-rl;
+    &:after {
+      content: "arrow_forward";
+      position: absolute;
+      right: $arrow-right;
+      top: 50%;
+      transform:translateY(-50%);
+      font-family: "Material Icons";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+    }
+  }
+}
