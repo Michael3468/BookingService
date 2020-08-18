@@ -57,7 +57,10 @@ section,
   width: 100%;
   flex: 0 0 auto;
   padding: 0 140px;
-  // position: relative;
+
+  @media screen and (max-width: $desktopWidth){
+    padding: 0 40px;
+  }
 
   // max-width: $desktopWidth;
   // @media screen and (max-width: $smDesktopWidth) {
