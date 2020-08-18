@@ -14,3 +14,27 @@ mixin button(params)
     a.button(href="link" class=classes)=value
   else
     button.button(class=classes)=value
+
+//- Buttons examples
+//- .main
+//-   +button({link:"#", value:"Кнопка"})
+//-   +button({value:"Кнопка"})
+//-   +button({link:"#", value:"Кнопка", mod: ["bordered"]})
+//-   +button({value:"Кнопка", mod: ["bordered"]})
+//-   +button({link:"#", value:"Войти", mod: ["bordered","small"]})
+//-   +button({value:"Кнопка", mod: ["bordered","small"]})
+//-   +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
+//-   +button({value:"Кнопка", mod: ["small"]})
+//-   +button({value:"Очень большой текст", mod: ["small"]})
+//- .main
+//-   +button({link:"#", value:"Кнопка", mod: ["block"]})
+//-   +button({link:"#", value:"Кнопка", mod: ["bordered","block"]})
+//-   +button({link:"#", value:"Кнопка", mod: ["bordered","small","block"]})
+//-   +button({link:"#", value:"Кнопка", mod: ["small","block"]})
+//-   +button({link:"#", value:"Кнопка", mod: ["with_arrow"]})
+//- .w320
+//-   +button({link:"#", value:"Подобрать номер", mod: ["with_arrow", "block"]})
+//- .w320
+//-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block"]})
+//- .w320
+//-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block", "bordered"]})
