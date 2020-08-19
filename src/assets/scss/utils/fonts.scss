@@ -1,43 +1,63 @@
 // Quicksand-Bold
 @font-face {
-  font-family: 'Quicksand'; //, sans-serif;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
   src:  url('../fonts/Quicksand/Quicksand-Bold.eot'); // IE9 Compat Modes
   src:  url('../fonts/Quicksand/Quicksand-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Quicksand/Quicksand-Bold.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Quicksand/Quicksand-Bold.woff2') format('woff'), // Pretty Modern Browsers
         url('../fonts/Quicksand/Quicksand-Bold.ttf') format('truetype'), //Safari, Android, iOS
         url('../fonts/Quicksand/Quicksand-Bold.svg') format('svg'); // Legacy iOS
-  font-weight: 700;
 }
 
 // Quicksand-Regilar
 @font-face {
-  font-family: 'Quicksand'; //, sans-serif;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
   src:  url('../fonts/Quicksand/Quicksand-Regular.eot'); // IE9 Compat Modes
   src:  url('../fonts/Quicksand/Quicksand-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Quicksand/Quicksand-Regular.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Quicksand/Quicksand-Regular.woff2') format('woff'), // Pretty Modern Browsers
         url('../fonts/Quicksand/Quicksand-Regular.ttf') format('truetype'), //Safari, Android, iOS
         url('../fonts/Quicksand/Quicksand-Regular.svg') format('svg'); // Legacy iOS
-  font-weight: 400;
 }
 
 // Montserrat-Bold
 @font-face {
-  font-family: 'Montserrat'; //, sans-serif;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
   src:  url('../fonts/Montserrat/Montserrat-Bold.eot'); // IE9 Compat Modes
   src:  url('../fonts/Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Montserrat/Montserrat-Bold.woff2') format('woff'), // Pretty Modern Browsers
         url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), //Safari, Android, iOS
         url('../fonts/Montserrat/Montserrat-Bold.svg') format('svg'); // Legacy iOS
-  font-weight: 700;
 }
 
 // Montserrat-Regular
 @font-face {
-  font-family: 'Montserrat'; //, sans-serif;
+  font-family: 'Montserrat';
+  font-weight: 400;
   src:  url('../fonts/Montserrat/Montserrat-Regular.eot'); // IE9 Compat Modes
   src:  url('../fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'), // Pretty Modern Browsers
+        url('../fonts/Montserrat/Montserrat-Regular.woff2') format('woff'), // Pretty Modern Browsers
         url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), //Safari, Android, iOS
         url('../fonts/Montserrat/Montserrat-Regular.svg') format('svg'); // Legacy iOS
+}
+
+// Material-icons
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
   font-weight: 400;
+  src: url('../fonts/Material-icons/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: url('../fonts/Material-icons/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Material-icons/MaterialIcons-Regular.woff') format('woff'),
+       url('../fonts/Material-icons/MaterialIcons-Regular.woff2') format('woff2'),
+       url('../fonts/Material-icons/MaterialIcons-Regular.ttf') format('truetype'),
+       url('../fonts/Material-icons/MaterialIcons-Regular.svg') format('svg');
 }
