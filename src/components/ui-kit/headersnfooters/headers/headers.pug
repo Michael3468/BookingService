@@ -9,11 +9,11 @@ mixin header(loginStatus)
         ul.header__nav-ul
           li.header__nav-li.header__nav-li-active О нас
           li.header__nav-li Услуги
-            i.material-icons.header__expand-more expand_more
+            span.material-icons expand_more
           li.header__nav-li Вакансии
           li.header__nav-li Новости
           li.header__nav-li Соглашения
-            i.material-icons expand_more
+            span.material-icons expand_more
         if loginStatus == 'authorised'
           .header__notAuthorized
             - var userName = 'Юлий Цезарь'

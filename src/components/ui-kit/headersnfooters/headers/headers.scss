@@ -1,5 +1,10 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
 .header{
+  display: flex;
+  align-items: center;
   background-color: #000;
+  height: 72px;
 }
 .header__nav{
   display: flex;
@@ -10,32 +15,31 @@
 .header__nav-ul{
   display: flex;
   justify-content: space-between;
-  width: 442px;
+  width: 446px;
+  @media screen and (max-width: $smDesktopWidth){
+    flex-direction: column;
+  }
 }
 .header__nav-li{
   font-family: Montserrat;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 25px;
   color: rgba(31, 32, 65, 0.75);
+  cursor: pointer;
 }
 .header__nav-li-active{
   font-family: Montserrat;
   font-weight: 700;
 }
-.expand_more{
-  margin-left: 10px;
-}
-
 .header__authorized{
   display: flex;
   justify-content: space-between;
   width: 303px;
-  margin-left: 26px;
+  margin-left: 21px;
 }
-
 .header__notAuthorized{
   display: flex;
   justify-content: flex-end;
-  margin-left: 46px;
+  margin-left: 42px;
 }
