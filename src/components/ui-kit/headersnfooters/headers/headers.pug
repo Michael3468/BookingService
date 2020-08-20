@@ -5,15 +5,35 @@ mixin header(loginStatus)
   .header.hf-bg-color
     .container
       +header_logo()
+      //- navigation menu
       nav.header__nav
         ul.header__nav-ul
           li.header__nav-li.header__nav-li-active О нас
-          li.header__nav-li Услуги
+          //- css dropdown
+          li.header__nav-li.header__nav-dropdown Услуги
             span.material-icons expand_more
+            .header__nav-dropdown-content
+              p
+                a.header__dropdown-link(href="change-me-usluga-1") Услуга 1
+              p
+                a.header__dropdown-link(href="change-me-usluga-2") Услуга 2
+              p
+                a.header__dropdown-link(href="change-me-usluga-3") Услуга 3
+          //- css dropdown end
           li.header__nav-li Вакансии
           li.header__nav-li Новости
-          li.header__nav-li Соглашения
+          //- css dropdown
+          li.header__nav-li.header__nav-dropdown Соглашения
             span.material-icons expand_more
+            .header__nav-dropdown-content
+              p
+                a.header__dropdown-link(href="change-me-soglashenie-1") Соглашение 1
+              p
+                a.header__dropdown-link(href="change-me-soglashenie-2") Соглашение 2
+              p
+                a.header__dropdown-link(href="change-me-soglashenie-3") Соглашение 3
+          //- css dropdown end
+        //- authorisation block
         if loginStatus == 'authorised'
           .header__notAuthorized
             - var userName = 'Юлий Цезарь'
@@ -22,3 +42,5 @@ mixin header(loginStatus)
           .header__authorized
             +button({link:"#", value:"Войти", mod: ["bordered","small"]})
             +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
+        //- authorisation block end
+      //- navigation menu end
