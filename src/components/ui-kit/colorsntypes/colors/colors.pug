@@ -1,9 +1,9 @@
 mixin color(colorName, colorValue, backgrColor, opacityColor)
   .color-block
     .color__sample(style= 'background: '+backgrColor+'; opacity: '+opacityColor+'')
-    .color__description(style= 'color: #1F2041')
+    .color__description
       h2.color__colorName= colorName
-      p.color__colorCode(style= 'font-family: Quicksand; font-weight: 400')= colorValue
+      p.color__colorCode= colorValue
 
 .colors
   +color("Dark Shade 100%","#1F2041", "#1F2041", "1")
