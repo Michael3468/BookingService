@@ -21,15 +21,15 @@
   }
 }
 .header__nav-li {
-  font-family: Montserrat;
+  font-family: $secondFont;
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
-  color: rgba(31, 32, 65, 0.75); //цвет должен быть из переменной?
+  color: $DarkShade75;
   cursor: pointer;
 }
 .header__nav-li-active {
-  font-family: Montserrat;
+  font-family: $secondFont;
   font-weight: 700;
 }
 .header__authorized {
@@ -62,7 +62,7 @@
   z-index: 1;
 }
 .header__dropdown-link {
-  color: rgba(31,32,65,.75); //цвет должен быть из переменной?
+  color: $DarkShade75;
   &:hover {
     font-weight: 700;
   }
