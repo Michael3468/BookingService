@@ -16,9 +16,6 @@
   display: flex;
   justify-content: space-between;
   width: 446px;
-  @media screen and (max-width: $smDesktopWidth){
-    flex-direction: column;
-  }
 }
 .header__nav-li {
   font-family: $secondFont;
