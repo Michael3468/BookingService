@@ -59,7 +59,7 @@ section,
   padding: 0 140px;
 
   @media screen and (max-width: $desktopWidth){
-    padding: 0 40px;
+    padding: 0 $desktopWidthPadding;
   }
 }
 
