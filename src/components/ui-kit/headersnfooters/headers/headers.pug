@@ -41,8 +41,8 @@ mixin header(loginStatus)
                 a.header__dropdown-link(href="change-me-soglashenie-3") Соглашение 3
           //- css dropdown end
 
+        //- authorisation block
         .main-menu
-          //- authorisation block
           if loginStatus == 'authorised'
             .header__notAuthorized
               - var userName = 'Юлий Цезарь'
@@ -53,5 +53,5 @@ mixin header(loginStatus)
                 +button({link:"#", value:"Войти", mod: ["bordered","small"]})
               .header__auth-button-padding
                 +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
-          //- authorisation block end
+        //- authorisation block end
       //- navigation menu end
