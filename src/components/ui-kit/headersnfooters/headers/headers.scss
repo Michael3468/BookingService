@@ -22,8 +22,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
-  color: $DarkShade75;
   cursor: pointer;
+}
+.header__nav-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: $DarkShade75;
 }
 .header__nav-li-active {
   font-family: $secondFont;
