@@ -13,7 +13,7 @@ mixin header(loginStatus)
       //- hiden checkbox for burger label
       input#menu-checkbox(type='checkbox')
       nav.header__nav(role='navigation')
-        ul.header__nav-ul.main-menu
+        ul.header__nav-ul.expand-menu
           li.header__nav-li.header__nav-li-active 
             a.header__nav-link(href='change-me-link') О нас
           //- css dropdown
@@ -39,7 +39,7 @@ mixin header(loginStatus)
           //- css dropdown end
 
         //- authorisation block
-        .main-menu
+        .expand-menu
           if loginStatus == 'authorised'
             .header__notAuthorized
               - var userName = 'Юлий Цезарь'

@@ -46,7 +46,7 @@
   justify-content: flex-end;
   margin-left: 42px;
 }
-.main-menu {
+.expand-menu {
   display: -webkit-box;
   flex-direction: row;
 }
@@ -105,8 +105,9 @@
     justify-self: flex-start;
     width: 100vw;
   }
-  .main-menu {
+  .expand-menu {
     display: none;
+    background: $default-color;
   }
   #header__container {
     display: flex;
@@ -121,9 +122,6 @@
   }
   .header__authorized {
     margin-left: 0;
-  }
-  .main-menu {
-    background: $default-color;
   }
   .header__nav-ul {
     width: 100%;
@@ -154,7 +152,7 @@
     display: block;
     justify-content: flex-end;
   }
-  #menu-checkbox:checked + nav[role='navigation'] .main-menu {
+  #menu-checkbox:checked + nav[role='navigation'] .expand-menu {
     display: block;
   }
 
