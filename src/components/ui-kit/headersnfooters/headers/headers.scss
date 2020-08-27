@@ -24,6 +24,9 @@
   font-size: 14px;
   line-height: 25px;
   cursor: pointer;
+  &:hover {
+    font-weight: 700;
+  }
 }
 .header__nav-link {
   display: flex;
