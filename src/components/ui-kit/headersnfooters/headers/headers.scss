@@ -18,7 +18,7 @@
   width: 446px;
   line-height: 17px;
 }
-.header__nav-li{
+.header__nav-li {
   font-family: $secondFont;
   font-weight: 400;
   font-size: 14px;
@@ -28,26 +28,32 @@
     font-weight: 700;
   }
 }
+.header__nav-li-active {
+  font-family: $secondFont;
+  font-weight: 700;
+}
 .header__nav-link {
   display: flex;
   justify-content: center;
   width: 100%;
   color: $DarkShade75;
 }
-.header__nav-li-active {
-  font-family: $secondFont;
-  font-weight: 700;
-}
+
+
 .header__authorized {
   display: flex;
-  justify-content: space-between;
-  width: 303px;
+  justify-content: flex-end;
+  width: 120px;
   margin-left: 21px;
+  border-left: 1px solid #f4f3f6;
 }
 .header__notAuthorized {
   display: flex;
   justify-content: flex-end;
-  margin-left: 42px;
+  margin-left: 21px;
+}
+.header__auth-buttons-padding:last-child {
+  margin-left: 21px;
 }
 .expand-menu {
   display: -webkit-box;
@@ -89,15 +95,16 @@
 /* dropdown end */
 
 /* adaptive header */
+#header__container {
+  height: 40px;
+}
 .burger {
   display: none;
   font-size: 40px;
   color: $DarkShade50;
   cursor: pointer;
 }
-#header__container {
-  height: 40px;
-}
+
 
 @media screen and (max-width: 1024px) {
   .header__authorized {  
@@ -106,12 +113,20 @@
     flex-direction: column;
     align-items: flex-start;
     justify-self: flex-start;
+    margin-left: 0;
     width: 100vw;
   }
-  .expand-menu {
-    display: none;
-    background: $default-color;
+  .header__notAuthorized {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
   }
+  .header__authorized,
+  .header__notAuthorized {
+    align-items: center;
+    width: 100vw;
+  }
+
   #header__container {
     display: flex;
     flex-direction: column;
@@ -123,9 +138,11 @@
     width: 100vw;
     margin-left: -$desktopWidthPadding;
   }
-  .header__authorized {
-    margin-left: 0;
+  .expand-menu {
+    display: none;
+    background: $default-color;
   }
+
   .header__nav-ul {
     width: 100%;
   }
@@ -145,26 +162,21 @@
     width: 100%;
   }
 
+  .burger {
+    display: block;
+    justify-content: flex-end;
+  }
   .burger__logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .burger {
-    display: block;
-    justify-content: flex-end;
-  }
   #menu-checkbox:checked + nav[role='navigation'] .expand-menu {
     display: block;
   }
 
-  .header__notAuthorized,
-  .header__authorized {
-    align-items: center;
-  }
-
-  .header__auth-button-padding {
+  .header__auth-buttons-padding {
     padding: 10px 0;
   }
 } //- end @media screen and (max-width: 1024px)

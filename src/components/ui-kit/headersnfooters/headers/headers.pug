@@ -41,14 +41,14 @@ mixin header(loginStatus)
         //- authorisation block
         .expand-menu
           if loginStatus == 'authorised'
-            .header__notAuthorized
+            .header__authorized
               - var userName = 'Юлий Цезарь'
               li.header__nav-li #{userName}
           else
-            .header__authorized
-              .header__auth-button-padding
+            .header__notAuthorized
+              .header__auth-buttons-padding
                 +button({link:"#", value:"Войти", mod: ["bordered","small"]})
-              .header__auth-button-padding
+              .header__auth-buttons-padding
                 +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
         //- authorisation block end
       //- navigation menu end
