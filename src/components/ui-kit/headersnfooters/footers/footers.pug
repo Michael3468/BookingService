@@ -1,0 +1,47 @@
+include ../headers/header_logo/header_logo.pug
+
+mixin footer()
+  .footer
+    .container
+      .grid_layout
+        .grid_layout-logo
+          +header_logo()
+          p.footer__logo-p.footer__padding
+            | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        .grid_layout-list
+          h3 Навигация
+          ul.footer__nav
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") О нас
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Новости
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Служба поддержки
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Услуги
+        .grid_layout-list
+          h3 О нас
+          ul.footer__nav
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") О сервисе
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Наша команда
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Вакансии
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Инвесторы
+        .grid_layout-list
+          h3 Служба поддержки
+          ul.footer__nav
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Соглашения
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Сообщества
+            li.footer__nav-li
+              a.footer__nav-link(href="change_me") Связь с нами
+        .grid_layout-form
+          h3 Подписка
+          .footer__nav
+            p.footer__nav-p Получайте специальные предложения и новости сервиса
+            input.footer__nav-input(type='text' name='email' placeholder='Email')
+

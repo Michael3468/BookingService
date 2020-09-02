@@ -1,0 +1,55 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
+.footer {
+  display: flex;
+  background-color: $default-color;
+  padding-top: 102px;
+  font-family: $secondFont;
+  font-style: normal;
+  font-weight: 400;
+}
+.footer__logo-p {
+  line-height: 24px;
+  color: $DarkShade75;
+}
+.footer__padding {
+  padding-top: 17px;
+}
+.footer__nav {
+  padding-top: 19px;
+  color: $DarkShade50;
+}
+.footer__nav-li {
+  padding-bottom: 19px;
+}
+.footer__nav-p {
+  line-height: 22px;
+}
+.footer__nav-input {
+  margin-top: 25px;
+  border: 1px solid $DarkShade25;
+  border-radius: 4px;
+  padding: 12px 10px 12px 14px;
+  font-family: $secondFont;
+  width: 260px;
+}
+
+
+// grid
+.grid_layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 40px;
+}
+.grid_layout-logo {
+  grid-column: span 3;
+}
+.grid_layout-list {
+  grid-column: span 2;
+  padding-top: 3px;
+}
+.grid_layout-form {
+  grid-column: span 3;
+  padding-top: 3px;
+}
+// grid end
