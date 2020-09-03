@@ -109,3 +109,19 @@ section,
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+// TODO добавить стили для types.pug
+h3 {
+  color: $DarkShade100;
+  font-family: $secondFont;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+a {
+  color: $DarkShade50;
+  &:hover {
+    font-weight: 700;
+  }
+}
