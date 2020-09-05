@@ -21,8 +21,8 @@
 .header__nav-li {
   font-family: $secondFont;
   font-weight: 400;
-  font-size: 14px;
   line-height: 25px;
+  color: $DarkShade50;
   cursor: pointer;
   &:hover {
     font-weight: 700;
