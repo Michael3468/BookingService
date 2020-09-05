@@ -7,6 +7,9 @@
   font-family: $secondFont;
   font-style: normal;
   font-weight: 400;
+  padding-top: 102px;
+  height: 376px;
+  border-bottom: 1px solid rgba(223, 222, 227, 1);
 }
 .footer__logo-p {
   line-height: 24px;
@@ -22,6 +25,9 @@
 .footer__nav-li {
   padding-bottom: 19px;
 }
+.footer__nav-link:hover {
+  color: $DarkShade75;
+}
 .footer__nav-p {
   line-height: 22px;
 }
@@ -31,8 +37,63 @@
   border-radius: 4px;
   padding: 12px 10px 12px 14px;
   font-family: $secondFont;
-  width: 260px;
+  width: 100%;
 }
+.input__arrow-forward {
+  margin: -34px 0 0 226px;
+  cursor: pointer;
+}
+
+// subfooter
+.subfooter {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: $default-color;
+}
+.subfooter__content {
+  justify-content: space-between;
+}
+.subfooter__copyright {
+  display: flex;
+  font-family: $secondFont;
+  font-weight: 400;
+  color: $DarkShade75;
+  margin-top: 6px;
+}
+
+//subfooter__socials
+.subfooter__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+  width: 113px;
+  margin-top: -3px;
+}
+.fab {
+  font-family: 'Font Awesome 5 Brands'; 
+  font-style: normal;
+  font-size: 24px;
+  // color: black;
+}
+.fa-twitter::before {
+  content: "\f099";
+}
+.fa-facebook::before {
+  content: "\f09a"
+}
+.fa-instagram::before {
+  content: "\f16d";
+}
+.gradient-icon {
+  background: linear-gradient(180deg,#bc9cff 0%,#8ba4f9 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  // display: initial;
+}
+//subfooter__socials end
+// subfooter end
 
 
 // grid
