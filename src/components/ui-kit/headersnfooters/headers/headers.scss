@@ -25,6 +25,7 @@
   color: $DarkShade50;
   cursor: pointer;
   &:hover {
+    color: $DarkShade75;
     font-weight: 700;
   }
 }
