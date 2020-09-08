@@ -5,6 +5,8 @@ mixin type(tagName, tagDescription, fontSize, tagDescFontFamily, tagDescFontWeig
       .type__tagDescription(style= 'font-family: '+tagDescFontFamily+'; font-weight: '+tagDescFontWeight+'; text-transform: '+textTransform+'; opacity: '+tagDescOpacity+';')= tagDescription
 
 .types
+  //- TODO вынести стили для тегов в глобальный scss
+  //- TODO вынести tagName из миксина 
   +type("H1",
         "This one is the sub-section or widget title",
         "24",
@@ -28,7 +30,7 @@ mixin type(tagName, tagDescription, fontSize, tagDescFontFamily, tagDescFontWeig
         "uppercase")
   +type("Body",
         "This is the body text which is used for most of the design, like paragraphs, lists, etc.",
-        "14",
+        "",
         "Montserrat",
         "400",
         "24",
