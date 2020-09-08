@@ -16,11 +16,8 @@ $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
 
 // Paddings
-// TODO сделать максимальную шируну container вместо паддингов
-$desktopWidthPadding     : 40px;
+$desktopWidthPadding     : 30px;
 
-
-// TODO удалить лишние цвета
 // Colors
 $DarkShade100            : rgba(31, 32, 65, 1);
 $DarkShade75             : rgba(31, 32, 65, .75);
@@ -33,21 +30,3 @@ $green                   : rgba(111, 207, 151, 1);
 // Main color
 $default-color           : #ffffff;
 $menu-hover-color        : #e3e3e3;
-// $primary-color           : #1c78c0;
-// $success-color           : #23b33a;
-// $danger-color            : #fc5c65;
-// $warning-color           : #fed330;
-// $light-color             : #999999;
-// $purple-color            : #8854d0;
-
-// // Border Color
-// $border-base             : #DCDFE6;
-// $border-light            : #E4E7ED;
-// $border-lighter          : #EBEEF5;
-// $border-lightex          : #F2F6FC;
-
-// // Neutral Color
-// $neutral-primary         : #303133;
-// $neutral-regular         : #606266;
-// $neutral-secondary       : #909399;
-// $neutral-placeholder     : #C0C4CC;
