@@ -3,7 +3,7 @@ include  header_logo/header_logo.pug
 
 mixin header(loginStatus)
   .header.hf-bg-color
-    .container#header__container
+    .container.header__container
       .burger__logo
         +header_logo()
         //- label for #menu-checkbox input
@@ -20,7 +20,7 @@ mixin header(loginStatus)
           li.header__nav-li.header__nav-dropdown.header__nav-link Услуги
               //- used material icons font
               span.material-icons expand_more
-              .header__nav-dropdown-content                
+              .header__nav-dropdown-content.header__shadow
                 a.header__dropdown-link(href="change-me-usluga-1") Услуга 1
                 a.header__dropdown-link(href="change-me-usluga-2") Услуга 2
                 a.header__dropdown-link(href="change-me-usluga-3") Услуга 3
@@ -34,14 +34,14 @@ mixin header(loginStatus)
           li.header__nav-li.header__nav-dropdown.header__nav-link Соглашения
               //- used material icons font
               span.material-icons expand_more
-              .header__nav-dropdown-content
+              .header__nav-dropdown-content.header__shadow
                 a.header__dropdown-link(href="change-me-soglashenie-1") Соглашение 1
                 a.header__dropdown-link(href="change-me-soglashenie-2") Соглашение 2
                 a.header__dropdown-link(href="change-me-soglashenie-3") Соглашение 3
           //- css dropdown end
 
         //- authorisation block
-        .expand-menu
+        .expand-menu.header__shadow
           if loginStatus == 'authorised'
             .header__authorized
               - var userName = 'Юлий Цезарь'
