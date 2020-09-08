@@ -8,3 +8,8 @@
 .headernfooters__margin {
   margin-top: 38px;
 }
+.responsive-footer-container {
+  display: grid;
+  max-width: 768px;
+  margin: 0 auto;
+}
