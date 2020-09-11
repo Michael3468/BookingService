@@ -1,8 +1,11 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
 .navpagemenu{
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 24px;
+  font-size: rem(24);
 }
 
 .navpagemenu__header{

@@ -1,38 +1,38 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .footer {
   display: flex;
   background-color: $default-color;
-  padding-top: 102px;
+  padding-top: rem(102);
   font-family: $secondFont;
   font-style: normal;
   font-weight: 400;
-  padding-top: 102px;
-  height: 376px;
+  height: rem(376);
   border-bottom: 1px solid rgba(223, 222, 227, 1);
 }
 .footer__logo-p {
-  line-height: 24px;
+  line-height: rem(24);
   color: $DarkShade75;
 }
 .footer__padding {
-  padding-top: 17px;
+  padding-top: rem(17);
 }
 .footer__nav {
-  padding-top: 19px;
+  padding-top: rem(19);
   color: $DarkShade50;
 }
 .footer__nav-li {
-  padding-bottom: 19px;
+  padding-bottom: rem(19);
 }
 .footer__nav-link:hover {
   color: $DarkShade75;
 }
 .footer__nav-p {
-  line-height: 22px;
+  line-height: rem(22);
 }
 .footer__nav-input {
-  margin-top: 25px;
+  margin-top: rem(25);
   border: 1px solid $DarkShade25;
   border-radius: 4px;
   padding: 12px 10px 12px 14px;
@@ -40,7 +40,7 @@
   width: 100%;
 }
 .input__arrow-forward {
-  margin: -34px 0 0 226px;
+  margin: -34px 0 0 88%;
   cursor: pointer;
 }
 
@@ -68,15 +68,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: rem(24);
   width: 113px;
   margin-top: -3px;
 }
 .fab {
   font-family: 'Font Awesome 5 Brands'; 
   font-style: normal;
-  font-size: 24px;
-  // color: black;
+  font-size: rem(24);
 }
 .fa-twitter::before {
   content: "\f099";
@@ -152,7 +151,6 @@
 @media screen and (max-width: 1024px){
   .grid-layout {
     grid-template-columns: 1fr;
-    grid-column-gap: 0px;
   }
   .grid-layout__list, .grid-layout__form, .footer__logo-p {
     display: none;
@@ -184,7 +182,7 @@
     border-bottom: none;
   }
   .subfooter {
-    height: 207px;
+    height: rem(207);
     align-items: flex-start;
   }
   .subfooter__content {

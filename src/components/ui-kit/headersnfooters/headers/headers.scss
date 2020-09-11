@@ -1,11 +1,11 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .header {
   display: flex;
   align-items: center;
   background-color: $default-color;
   height: 72px;
-  // z-index: 1;
 }
 .header__nav {
   display: flex;
@@ -17,12 +17,12 @@
   display: flex;
   justify-content: space-between;
   width: 446px;
-  line-height: 17px;
+  line-height: rem(17);
 }
 .header__nav-li {
   font-family: $secondFont;
   font-weight: 400;
-  line-height: 25px;
+  line-height: rem(25);
   color: $DarkShade50;
   cursor: pointer;
   &:hover {
@@ -86,7 +86,7 @@
   font-weight: 400;
   background: $default-color;
   width: 20vw;
-  padding: 0 20px;
+  padding: 0 rem(20);
 }
 .header__nav-dropdown-content,
 .header__dropdown-link:hover {
@@ -102,7 +102,7 @@
 }
 .burger {
   display: none;
-  font-size: 40px;
+  font-size: rem(40);
   color: $DarkShade50;
   cursor: pointer;
 }
@@ -116,7 +116,6 @@
     align-items: flex-start;
     justify-self: flex-start;
     margin-left: 0;
-    width: 100vw;
   }
   .header__notAuthorized {
     display: flex;
