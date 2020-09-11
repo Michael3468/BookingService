@@ -23,24 +23,20 @@ body{
   font-family: $mainFont;
   font-size: $mainFontSize;
   font-weight: 700;
-  //сглаживание шрифтов+
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  //сглаживание шрифтов (safari)-
 }
 
 section,
 .section{
   position: relative;
-  padding: 40px 0;
+  padding: rem(40) 0;
   @media screen and (min-width: $tableWidth) and (max-width: $smDesktopWidth){
-    padding: 36px 0;
+    padding: rem(36) 0;
   }
   @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth){
-    padding: 28px 0;
+    padding: rem(28) 0;
   }
   @media screen and (min-width: $smPhoneWidth) and (max-width: $phoneWidth){
-    padding: 20px 0;
+    padding: rem(20) 0;
   }
 }
 
@@ -93,7 +89,7 @@ section,
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: rem(24);  /* Preferred icon size 24px*/
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -116,7 +112,7 @@ section,
 h3 {
   color: $DarkShade100;
   font-family: $secondFont;
-  font-size: 12px;
+  font-size: rem(12);
   font-weight: 700;
   text-transform: uppercase;
 }
