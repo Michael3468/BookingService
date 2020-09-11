@@ -7,7 +7,7 @@
   padding-top: rem(102);
   font-family: $secondFont;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   height: rem(376);
   border-bottom: 1px solid rgba(223, 222, 227, 1);
 }
@@ -57,7 +57,7 @@
 .subfooter__copyright {
   display: flex;
   font-family: $secondFont;
-  font-weight: 400;
+  font-weight: normal;
   text-align: center;
   color: $DarkShade75;
   margin-top: 5px;

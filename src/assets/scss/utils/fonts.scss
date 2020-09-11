@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   src:  url('../fonts/Quicksand/Quicksand-Bold.eot'); // IE9 Compat Modes
   src:  url('../fonts/Quicksand/Quicksand-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Quicksand/Quicksand-Bold.woff') format('woff'), // Pretty Modern Browsers
@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src:  url('../fonts/Quicksand/Quicksand-Regular.eot'); // IE9 Compat Modes
   src:  url('../fonts/Quicksand/Quicksand-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Quicksand/Quicksand-Regular.woff') format('woff'), // Pretty Modern Browsers
@@ -28,7 +28,7 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   src:  url('../fonts/Montserrat/Montserrat-Bold.eot'); // IE9 Compat Modes
   src:  url('../fonts/Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff'), // Pretty Modern Browsers
@@ -40,7 +40,7 @@
 // Montserrat-Regular
 @font-face {
   font-family: 'Montserrat';
-  font-weight: 400;
+  font-weight: normal;
   src:  url('../fonts/Montserrat/Montserrat-Regular.eot'); // IE9 Compat Modes
   src:  url('../fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
         url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff'), // Pretty Modern Browsers
@@ -53,7 +53,7 @@
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src: url('../fonts/Material-icons/MaterialIcons-Regular.eot'); /* For IE6-8 */
   src: url('../fonts/Material-icons/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
        url('../fonts/Material-icons/MaterialIcons-Regular.woff') format('woff'),

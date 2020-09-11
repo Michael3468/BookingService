@@ -22,7 +22,7 @@ html{
 body{
   font-family: $mainFont;
   font-size: $mainFontSize;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 section,
@@ -113,13 +113,13 @@ h3 {
   color: $DarkShade100;
   font-family: $secondFont;
   font-size: rem(12);
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 a {
   color: $DarkShade50;
   &:hover {
-    font-weight: 700;
+    font-weight: bold;
   }
 }
