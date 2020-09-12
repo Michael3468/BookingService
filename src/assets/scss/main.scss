@@ -4,10 +4,13 @@
 @import 'utils/reset.scss';
 
 html{
-  line-height: $mainLineHeight;
+  font-family: $mainFont;
   font-size: $mainFontSize;
+  font-weight: normal;
   color: $mainFontColor;
+  line-height: $mainLineHeight;
   height: 100%;
+
   @media screen and (min-width: $tableWidth) and (max-width: $desktopWidth){
     font-size: 16px;
   }
@@ -17,12 +20,6 @@ html{
   @media screen and (min-width: $smPhoneWidth) and (max-width: $phoneWidth){
     font-size: 14px;
   }
-}
-
-body{
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: bold;
 }
 
 section,
