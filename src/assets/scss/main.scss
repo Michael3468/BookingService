@@ -12,13 +12,10 @@ html{
   height: 100%;
 
   @media screen and (min-width: $tableWidth) and (max-width: $desktopWidth){
-    font-size: 16px;
+    font-size: $mainFontSize;
   }
   @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth){
-    font-size: 15px;
-  }
-  @media screen and (min-width: $smPhoneWidth) and (max-width: $phoneWidth){
-    font-size: 14px;
+    font-size: 0.85rem;
   }
 }
 
@@ -103,15 +100,6 @@ section,
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   font-feature-settings: 'liga';
-}
-
-// TODO добавить стили для types.pug
-h3 {
-  color: $DarkShade100;
-  font-family: $secondFont;
-  font-size: rem(12);
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 a {
