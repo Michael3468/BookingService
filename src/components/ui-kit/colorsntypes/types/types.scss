@@ -1,19 +1,21 @@
-.types{
-  margin-top: 67px;
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.types__block {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(50);
 }
-.types-block{
-  margin: 0 62px 49px 0;
+.type__tagDescription {
+  width: 336px;
+  color: $DarkShade100;
 }
-.type__tagName{
-  margin-right: 31px;
+.type__tagName {
   display: flex;
   justify-content: flex-end;
   width: 37px;
-  font-family: Montserrat;
+  margin: -1px 30px 0 0;
+  font-family: $secondFont;
   font-weight: normal;
-  color: rgba(31, 32, 65, .25);
-}
-.type__tagDescription{
-  width: 340px;
-  color: #1F2041;
+  color: $DarkShade25;
 }

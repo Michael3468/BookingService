@@ -1,38 +1,37 @@
-mixin type(tagName, tagDescription, fontSize, tagDescFontFamily, tagDescFontWeight, typeDescLineHeight, textTransform, tagDescOpacity)
-  .types-block(style= 'line-height: '+typeDescLineHeight+'px')
-    .type__description.flex-row(style= 'font-size: '+fontSize+'px')
-      .type__tagName= tagName
-      .type__tagDescription(style= 'font-family: '+tagDescFontFamily+'; font-weight: '+tagDescFontWeight+'; text-transform: '+textTransform+'; opacity: '+tagDescOpacity+';')= tagDescription
+- var h1_fontSize= 24
+- var h2_fontSize= 19
+- var h3_fontSize= 12
+- var Body_fontSize= 14
 
-.types
-  //- TODO вынести стили для тегов в глобальный scss
-  //- TODO вынести tagName из миксина 
-  +type("H1",
-        "This one is the sub-section or widget title",
-        "24",
-        "Quicksand",
-        "700",
-        "30",
-        "none")
-  +type("H2",
-        "Next one is the item title inside widgets",
-        "19",
-        "Quicksand",
-        "700",
-        "24",
-        "none")
-  +type("H3",
-        "This is a label or cta text",
-        "12",
-        "Montserrat",
-        "700",
-        "15",
-        "uppercase")
-  +type("Body",
-        "This is the body text which is used for most of the design, like paragraphs, lists, etc.",
-        "",
-        "Montserrat",
-        "400",
-        "24",
-        "none",
-        "0.75")
+//- types block
+mixin type(tagName, params)
+
+  - var textTransform = none
+  - var typeDescOpacity= 1
+  - var tagDescFontWeight= 700
+  - var tagDescFontFamily= 'Quicksand'
+
+
+  if tagName == 'h1'
+    - var fontSize= h1_fontSize
+    - var typeDescLineHeight= 30
+
+  else if tagName == 'h2'
+    - var fontSize= h2_fontSize
+    - var typeDescLineHeight= 24
+
+  else if tagName == 'h3'
+    - var fontSize= h3_fontSize
+    - var tagDescFontFamily= 'Montserrat'
+    - var typeDescLineHeight= 15
+    - var textTransform= 'uppercase'
+
+  else
+    - var fontSize= Body_fontSize
+    - var tagDescFontFamily= 'Montserrat'
+    - var tagDescFontWeight= 400
+    - var typeDescLineHeight= 24
+    - var typeDescOpacity= .75
+
+
+  .type__tagDescription(style= 'font-size: '+fontSize+'px; font-family: '+tagDescFontFamily+'; font-weight: '+tagDescFontWeight+'; text-transform: '+textTransform+'; opacity: '+typeDescOpacity+'; line-height: '+typeDescLineHeight+'px')= params.text
