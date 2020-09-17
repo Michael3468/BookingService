@@ -102,6 +102,34 @@ section,
   font-feature-settings: 'liga';
 }
 
+h1, h2, h3 {
+  font-weight: bold;
+  color: $DarkShade100;
+}
+h1 {
+  font-family: $mainFont;
+  font-size: rem(24);
+  line-height: rem(30);
+}
+h2 {
+  font-family: $mainFont;
+  font-size: rem(19);
+  line-height: rem(24);
+}
+h3 {
+  font-family: $secondFont;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-transform: uppercase;
+}
+p {
+  font-family: $secondFont;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: normal;
+  color: $DarkShade75;
+}
+
 a {
   color: $DarkShade50;
   &:hover {
