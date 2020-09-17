@@ -1,37 +1,21 @@
-- var h1_fontSize= 24
-- var h2_fontSize= 19
-- var h3_fontSize= 12
-- var Body_fontSize= 14
+.types
+  //- block H1
+  .types__block
+    h1.type__tagName H1
+    h1.type__tagDescription This one is the sub-section or widget title
 
-//- types block
-mixin type(tagName, params)
+  //- block H2
+  .types__block
+    h2.type__tagName H2
+    h2.type__tagDescription Next one is the item title inside widgets
 
-  - var textTransform = none
-  - var typeDescOpacity= 1
-  - var tagDescFontWeight= 700
-  - var tagDescFontFamily= 'Quicksand'
+  //- block H3
+  .types__block
+    h3.type__tagName H3
+    h3.type__tagDescription This is a label or CTA text
 
-
-  if tagName == 'h1'
-    - var fontSize= h1_fontSize
-    - var typeDescLineHeight= 30
-
-  else if tagName == 'h2'
-    - var fontSize= h2_fontSize
-    - var typeDescLineHeight= 24
-
-  else if tagName == 'h3'
-    - var fontSize= h3_fontSize
-    - var tagDescFontFamily= 'Montserrat'
-    - var typeDescLineHeight= 15
-    - var textTransform= 'uppercase'
-
-  else
-    - var fontSize= Body_fontSize
-    - var tagDescFontFamily= 'Montserrat'
-    - var tagDescFontWeight= 400
-    - var typeDescLineHeight= 24
-    - var typeDescOpacity= .75
-
-
-  .type__tagDescription(style= 'font-size: '+fontSize+'px; font-family: '+tagDescFontFamily+'; font-weight: '+tagDescFontWeight+'; text-transform: '+textTransform+'; opacity: '+typeDescOpacity+'; line-height: '+typeDescLineHeight+'px')= params.text
+  //- block body
+  .types__block
+    p.type__tagName Body
+    p.type__tagDescription This is the body text which is used for most of the design, like paragraphs, lists, etc.
+//- types block end
