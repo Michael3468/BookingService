@@ -19,11 +19,11 @@
   padding-top: rem(17);
 }
 .footer__nav {
-  padding-top: rem(19);
+  padding-top: rem(21);
   color: $DarkShade50;
 }
 .footer__nav-li {
-  padding-bottom: rem(19);
+  padding-bottom: rem(18);
 }
 .footer__nav-link:hover {
   color: $DarkShade75;
@@ -40,7 +40,9 @@
   width: 100%;
 }
 .input__arrow-forward {
-  margin: -34px 0 0 88%;
+  margin: -34px 0 0 87%;
+}
+#footer_email_input {
   cursor: pointer;
 }
 
@@ -60,7 +62,7 @@
   font-weight: normal;
   text-align: center;
   color: $DarkShade75;
-  margin-top: 5px;
+  margin-top: rem(3);
 }
 
 //subfooter__socials
@@ -69,7 +71,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: rem(24);
-  width: 113px;
+  width: 111px;
   margin-top: -3px;
 }
 .fab {
@@ -138,7 +140,7 @@
   margin-top: 15px;
 }
 .subfooter__socials_mob {
-  margin-top: 17px;
+  margin-top: rem(14);
 }
 // mobile end
 
