@@ -14,26 +14,4 @@ block content
         include ../components/ui-kit/colorsntypes/colors/colors
 
       .colorsntypes__types
-        //- types block
         include ../components/ui-kit/colorsntypes/types/types
-        .types
-          //- block H1
-          .types__block
-            h1.type__tagName(style= 'font-size: '+h1_fontSize+'px') H1
-            +type("h1",{text: "This one is the sub-section or widget title"})
-
-          //- block H2
-          .types__block
-            h2.type__tagName(style= 'font-size: '+h2_fontSize+'px') H2
-            +type("h2",{text: "Next one is the item title inside widgets"})
-
-          //- block H3
-          .types__block
-            h3.type__tagName(style= 'font-size: '+h3_fontSize+'px') H3
-            +type("h3",{text: "This is a label or CTA text"})
-
-          //- block body
-          .types__block
-            p.type__tagName(style= 'font-size: '+Body_fontSize+'px') Body
-            +type("Body",{text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."})
-        //- types block end
