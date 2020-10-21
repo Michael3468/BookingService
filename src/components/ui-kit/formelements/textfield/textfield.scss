@@ -1,0 +1,45 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
+.textfield__caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.textfield__caption-left {
+  display: flex;
+  justify-self: flex-start;
+}
+.textfield__caption-right {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: normal;
+}
+
+.input__style {
+  border: 1px solid $DarkShade25;
+  border-radius: $inputBorderRadius;
+  width: 100%;
+  padding: 13px 0 12px 15px;
+  font-family: $secondFont;
+}
+
+.textfield__input {
+  color: $DarkShade75;
+  &::placeholder {
+    color: $DarkShade25;
+  }
+  &:hover {
+    border-color: $DarkShade50;
+    &::placeholder {
+      color: $DarkShade75;
+    }
+  }
+}
+.like-hover {
+  border-color: $DarkShade50;
+  &::placeholder {
+    color: $DarkShade75;
+  }
+}

@@ -1,0 +1,15 @@
+mixin textfield(params)
+  .textfield__caption
+    h3.textfield__caption-left= params.leftCaption
+    h3.textfield__caption-right= params.rightCaption
+  input.textfield__input.input__style(class=params.hoverStyle)(type= params.inpType name=params.inpName inputmode=params.inpMode placeholder=params.inpPlaceholder id=params.inpId)
+
+//- example
+//- +textfield({leftCaption:    'text field', 
+//-             rightCaption:   'default',
+//-             inpType:        'email',
+//-             inpName:        'email',
+//-             inpMode:        'email',
+//-             inpPlaceholder: 'Email',
+//-             inpId:          'emailtexfield',
+//-             hoverStyle:     'like-hover'})
