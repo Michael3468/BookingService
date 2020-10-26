@@ -4,7 +4,9 @@ mixin textfield(params)
     h3.textfield__caption-right= params.rightCaption
   input.textfield__input(style= 'text-transform: '+params.textTransform+';').input__style(class=params.hoverStyle)(type= params.inpType name=params.inpName inputmode=params.inpMode placeholder=params.inpPlaceholder id=params.inpId)
 
-//- example
+//- examples
+//-
+//- textfield
 //- +textfield({leftCaption:    'text field', 
 //-             rightCaption:   'default',
 //-             inpType:        'email',
@@ -13,3 +15,10 @@ mixin textfield(params)
 //-             inpPlaceholder: 'Email',
 //-             inpId:          'emailtexfield',
 //-             hoverStyle:     'like-hover'})
+//-
+//- masked textfield
+//- +textfield({leftCaption:    'masked text field',
+//-             inpType:        'date',
+//-             inpName:        'date',
+//-             inpId:          'dateField',
+//-             textTransform:  'uppercase'})
