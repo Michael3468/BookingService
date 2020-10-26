@@ -1,0 +1,11 @@
+mixin dropdown(params)
+  .dropdown__caption
+    h3= params.leftCaption
+  .dropdown.input__style
+    p.dropdown__p Сколько гостей
+    span.dropdown__expand-button.material-icons expand_more
+  .dropdownOptions
+    //- TODO expanded dropdown code here
+
+//- example
+//- +dropdown({leftCaption: 'dropdown'})

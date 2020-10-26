@@ -1,0 +1,30 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
+.dropdown__caption {
+  margin-bottom: $inputCapMarBottom;
+}
+// .dropdown__caption-left {
+
+// }
+
+//common input__style
+.input__style {
+  border: 1px solid $DarkShade25;
+  border-radius: $inputBorderRadius;
+  width: 100%;
+  font-family: $secondFont;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 9px 9px 9px 15px;
+}
+.dropdown__p {
+  width: 100%;
+}
+.dropdown__expand-button {
+  cursor: pointer;
+  color: $DarkShade50;
+}
