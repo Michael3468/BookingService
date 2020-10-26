@@ -1,6 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 
-.dropdown__caption {
+.dropdown-guests__caption {
   margin-bottom: $inputCapMarBottom;
 }
 // .dropdown__caption-left {
@@ -15,16 +15,16 @@
   font-family: $secondFont;
 }
 
-.dropdown {
+.dropdown-guests {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 9px 9px 9px 15px;
 }
-.dropdown__p {
+.dropdown-guests__p {
   width: 100%;
 }
-.dropdown__expand-button {
+.dropdown-guests__expand-button {
   cursor: pointer;
   color: $DarkShade50;
 }
