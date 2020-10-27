@@ -1,0 +1,40 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
+.date-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.date-dropdown__block {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+}
+.date-dropdown__caption {
+  margin-bottom: $inputCapMarBottom;
+}
+.date-dropdown__input {
+  padding: 12px 10px 11px 13px;
+  text-transform: uppercase;
+}
+
+//common input__style
+.input__style {
+  border: 1px solid $DarkShade25;
+  border-radius: $inputBorderRadius;
+  width: 100%;
+  font-family: $secondFont;
+}
+
+.date-dropdown__input-block {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px 8px 15px;
+}
+.date-dropdown__expand-button {
+  cursor: pointer;
+  color: $DarkShade50;
+  margin: -23px 0 0 82%;
+  width: 20px;
+}

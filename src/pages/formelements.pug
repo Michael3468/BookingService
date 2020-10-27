@@ -32,17 +32,24 @@ block content
                       inpId:          'textField',
                       hoverStyle:     'like-hover'})
 
-        include ../components/ui-kit/formelements/dropdown/dropdown
+        include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
         .block-margin
-          +dropdown({leftCaption: 'dropdown'})
+          +dropdown-guests({leftCaption: 'dropdown'})
         
         .block-margin.date-margin
-          //- TODO add example to textfield.pug mixin
           +textfield({leftCaption:    'masked text field',
                       inpType:        'date',
                       inpName:        'date',
-                      inpId:          'dateTextField',
+                      inpId:          'dateField',
                       textTransform:  'uppercase'})
+        
+        include ../components/ui-kit/formelements/date-dropdown/date-dropdown
+        .block-margin.date-dropdown-margin
+          +date-dropdown({startDateCaption: 'date dropdown',
+                          endDateCaption:   'date dropdown',
+                          startInpId:       'startDate',
+                          endInpId:         'endDate',
+                          endDefaultDate:   '2019-08-19'})
 
 
       .column-2
