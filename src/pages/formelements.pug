@@ -37,6 +37,7 @@ block content
           +dropdown-guests({leftCaption: 'dropdown'})
         
         .block-margin.date-margin
+          //- TODO make new mixin maskedTextField with jq plugin
           +textfield({leftCaption:    'masked text field',
                       inpType:        'date',
                       inpName:        'date',
@@ -51,8 +52,20 @@ block content
                           endInpId:         'endDate',
                           endDefaultDate:   '2019-08-19'})
 
+        .mini-column
+
+          include ../components/ui-kit/formelements/filter-date-dropdown/filter-date-dropdown
+          .block-margin.date-dropdown-margin
+            +filter-date-dropdown({leftCaption : 'filter date dropdown'})
+
+          
+          .block-margin.date-dropdown-margin
+
 
       .column-2
         h3 checkbox buttons
       .column-3
         h3 range slider
+
+    .container
+    .container

@@ -1,0 +1,22 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
+.filter-date-dropdown__caption {
+  //- TODO add margin to main.scss for all caption classes (rename classes)
+  margin-bottom: $inputCapMarBottom;
+}
+.filter-date-dropdown__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+.filter-date-dropdown__text {
+  padding: 9px 10px 9px 0px;
+}
+.filter-date-dropdown__expand-button {
+  cursor: pointer;
+  color: $DarkShade50;
+  margin: 10px 0 0 10px;
+  width: 20px;
+}
