@@ -30,6 +30,7 @@
 }
 .footer__nav-p {
   line-height: rem(22);
+  margin-bottom: rem(19);
 }
 .footer__nav-input {
   margin-top: rem(25);
@@ -108,7 +109,7 @@
 .grid-layout__logo {
   grid-column: span 3;
 }
-.grid-layout__list {
+.grid-layout__col {
   grid-column: span 2;
   padding-top: 3px;
 }
@@ -154,7 +155,7 @@
   .grid-layout {
     grid-template-columns: 1fr;
   }
-  .grid-layout__list, .grid-layout__form, .footer__logo-p {
+  .grid-layout__col, .grid-layout__form, .footer__logo-p {
     display: none;
   }
   .grid-layout__logo {

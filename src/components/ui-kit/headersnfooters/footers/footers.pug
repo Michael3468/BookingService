@@ -11,7 +11,7 @@ mixin footer(footerType)
             +header_logo()
             p.footer__logo-p.footer__padding
               | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-          .grid-layout__list
+          .grid-layout__col
             h3 Навигация
             ul.footer__nav
               li.footer__nav-li
@@ -22,7 +22,7 @@ mixin footer(footerType)
                 a.footer__nav-link(href="change_me") Служба поддержки
               li.footer__nav-li
                 a.footer__nav-link(href="change_me") Услуги
-          .grid-layout__list
+          .grid-layout__col
             h3 О нас
             ul.footer__nav
               li.footer__nav-li
@@ -33,7 +33,7 @@ mixin footer(footerType)
                 a.footer__nav-link(href="change_me") Вакансии
               li.footer__nav-li
                 a.footer__nav-link(href="change_me") Инвесторы
-          .grid-layout__list
+          .grid-layout__col
             h3 Служба поддержки
             ul.footer__nav
               li.footer__nav-li
@@ -46,9 +46,13 @@ mixin footer(footerType)
             h3 Подписка
             .footer__nav
               p.footer__nav-p Получайте специальные предложения и новости сервиса
-              input.footer__nav-input(type='email' name='subscribe' inputmode='email' placeholder='Email' id='footer_email_input')
-              .input__arrow-forward
-                label#footer_email_input.material-icons.gradient-icon arrow_forward
+              include ../../formelements/textfield/textfield
+              +textfield({inpType:        'email',
+                          inpName:        'email',
+                          inpMode:        'email',
+                          inpPlaceholder: 'Email',
+                          inpId:          'Subscription',
+                          isArrow:        'true'})
     .subfooter
       .container.subfooter__content
         .subfooter__copyright
