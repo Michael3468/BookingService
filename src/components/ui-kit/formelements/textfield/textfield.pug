@@ -3,7 +3,10 @@ mixin textfield(params)
     h3.textfield__caption-left= params.leftCaption
     h3.textfield__caption-right= params.rightCaption
   input.textfield__input(style= 'text-transform: '+params.textTransform+';').input__style(class=params.hoverStyle)(type= params.inpType name=params.inpName inputmode=params.inpMode placeholder=params.inpPlaceholder id=params.inpId)
-
+  if ( params.isArrow == 'true' )
+    .input__arrow-forward
+      label(id= params.inpId).material-icons.gradient-icon arrow_forward
+      
 //- examples
 //-
 //- textfield
@@ -15,7 +18,6 @@ mixin textfield(params)
 //-             inpPlaceholder: 'Email',
 //-             inpId:          'emailtexfield',
 //-             hoverStyle:     'like-hover'})
-//-
 
 //- TODO add mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya
 //-
@@ -25,3 +27,12 @@ mixin textfield(params)
 //-             inpName:        'date',
 //-             inpId:          'dateField',
 //-             textTransform:  'uppercase'})
+
+//- subscription text field
+//- +textfield({leftCaption:    'subscription text field', 
+//-             inpType:        'email',
+//-             inpName:        'email',
+//-             inpMode:        'email',
+//-             inpPlaceholder: 'Email',
+//-             inpId:          'Subscription',
+//-             isArrow:        'true'})
