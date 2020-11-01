@@ -1,0 +1,8 @@
+mixin checkbox-buttons(params)
+  .checkbox-buttons
+    h3.checkbox-buttons__caption= params.leftCaption
+
+    each val, index in params.inpText
+      .checkbox-buttons__input
+        input.custom-checkbox(type='checkbox', id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
+        label.checkbox-buttons__text(for= params.inpId + index) #{val}
