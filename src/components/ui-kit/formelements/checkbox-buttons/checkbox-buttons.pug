@@ -4,5 +4,5 @@ mixin checkbox-buttons(params)
 
     each val, index in params.inpText
       .checkbox-buttons__input
-        input.custom-checkbox(type='checkbox', id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
+        input.custom-checkbox(type='checkbox', checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
         label.checkbox-buttons__text(for= params.inpId + index) #{val}

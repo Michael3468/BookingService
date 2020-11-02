@@ -71,15 +71,19 @@ block content
 
 
       .column-2
+
         .super-mini-column
-          include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
-          +checkbox-buttons({leftCaption: 'checkbox buttons',
-                            inpId:       'chkboxbtns',
-                            inpClass:    'custom-checkbox',
-                            inpName:     'chkboxname',
-                            inpValue:    ['allow-smoke','allow pet','allow guests'],
-                            inpText:     ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'],
-                            })
+
+          .block-margin
+            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            +checkbox-buttons({leftCaption: 'checkbox buttons',
+                              inpId:        'chkboxbtns',
+                              inpClass:     'custom-checkbox',
+                              inpStatus:    [ ,'checked','checked'],
+                              inpName:      'chkboxname',
+                              inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
+                              inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'],
+                              })
 
 
       .column-3
