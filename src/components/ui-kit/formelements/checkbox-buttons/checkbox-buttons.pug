@@ -6,3 +6,13 @@ mixin checkbox-buttons(params)
       .checkbox-buttons__input
         input.custom-checkbox(type='checkbox', checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
         label.checkbox-buttons__text(for= params.inpId + index) #{val}
+
+//- example
+//- +checkbox-buttons({leftCaption: 'checkbox buttons',
+//-                   inpId:        'chkboxbtns',
+//-                   inpClass:     'custom-checkbox',
+//-                   inpStatus:    [ ,'checked','checked'],
+//-                   inpName:      'chkboxname',
+//-                   inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
+//-                   inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'],
+//-                   })
