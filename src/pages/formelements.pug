@@ -85,6 +85,15 @@ block content
                               inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'],
                               })
 
+          .block-margin.checkbox-buttons-margin
+            include ../components/ui-kit/formelements/radio-buttons/radio-buttons
+            +radio-buttons({leftCaption:    'radio buttons',
+                            formActionName: 'form-action.php',
+                            radioBtnsName:  'radio-btns',
+                            inpName:        ['man',    'woman'],
+                            inpText:        ['Мужчина','Женщина'],
+                            inpStatus:      ['checked',],
+                           })
 
       .column-3
         h3 range slider
