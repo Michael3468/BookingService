@@ -1,18 +1,19 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .checkbox-buttons {
   display: flex;
   flex-direction: column;
 }
 .checkbox-buttons__caption {
-  margin-bottom: 16px;
+  margin-bottom: rem(16);
 }
 .checkbox-buttons__input {
   display: flex;
-  margin-bottom: 11px;
+  margin-bottom: rem(11);
 }
 .checkbox-buttons__text {
-  line-height: 18px;
+  line-height: rem(18);
   font-family: $secondFont;
 }
 
@@ -33,13 +34,13 @@
   cursor: pointer;
   display: inline-block;
   align-items: flex-start;
-  width: 20px;
-  height: 20px;
+  width: rem(20);
+  height: rem(20);
   flex-shrink: 0;
   flex-grow: 0;
   border: 1px solid $DarkShade25;
-  border-radius: 0.25rem;
-  margin-right: 10px;
+  border-radius: rem(4);
+  margin-right: rem(10);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
@@ -48,4 +49,5 @@
 .custom-checkbox:checked+label::before {
   border-color: $purple;
   background-image: url("/assets/img/chkboxvector.svg");
+  background-size: rem(12) rem(12);
 }
