@@ -1,12 +1,12 @@
 mixin toggle(params)
   h3.toggle__caption= params.leftCaption
   .toggle
-    input.toggle__button(type='checkbox' id=params.toggleId checked=params.tglStatus)
+    input.toggle__button(type='checkbox' id=params.toggleId checked=params.toggleStatus)
     label.toggle__text(for=params.toggleId) #{params.toggleBtnText}
 
 
 //- example
 //- +toggle({leftCaption:   'toggle',
-//-           toggleId:      'toggle-button',
-//-           toggleBtnText: 'Получать спецпредложения',
-//-           tglStatus:     'checked'})
+//-           toggleId:       'toggle-button',
+//-           toggleBtnText:  'Получать спецпредложения',
+//-           toggleStatus:   'checked'})
