@@ -66,34 +66,41 @@ block content
                         inpMode:        'email',
                         inpPlaceholder: 'Email',
                         inpId:          'Subscription',
-                        isArrow:        'true',
-                      })
+                        isArrow:        'true'})
 
 
       .column-2
 
-        .super-mini-column
+        .block-margin
+          include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+          +checkbox-buttons({leftCaption: 'checkbox buttons',
+                             inpId:        'chkboxbtns',
+                             inpClass:     'custom-checkbox',
+                             inpStatus:    [ ,'checked','checked'],
+                             inpName:      'chkboxname',
+                             inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
+                             inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
 
-          .block-margin
-            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
-            +checkbox-buttons({leftCaption: 'checkbox buttons',
-                              inpId:        'chkboxbtns',
-                              inpClass:     'custom-checkbox',
-                              inpStatus:    [ ,'checked','checked'],
-                              inpName:      'chkboxname',
-                              inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
-                              inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'],
-                              })
+        .block-margin.checkbox-buttons-margin
+          include ../components/ui-kit/formelements/radio-buttons/radio-buttons
+          +radio-buttons({leftCaption:    'radio buttons',
+                          formActionName: 'form-action.php',
+                          radioBtnsName:  'radio-btns',
+                          inpName:        ['man',    'woman'],
+                          inpText:        ['Мужчина','Женщина'],
+                          inpStatus:      ['checked',]})
 
-          .block-margin.checkbox-buttons-margin
-            include ../components/ui-kit/formelements/radio-buttons/radio-buttons
-            +radio-buttons({leftCaption:    'radio buttons',
-                            formActionName: 'form-action.php',
-                            radioBtnsName:  'radio-btns',
-                            inpName:        ['man',    'woman'],
-                            inpText:        ['Мужчина','Женщина'],
-                            inpStatus:      ['checked',],
-                           })
+        .block-margin.toggle-margin
+          include ../components/ui-kit/formelements/toggle/toggle
+          +toggle({leftCaption:   'toggle',
+                   toggleId:      'toggle-button',
+                   toggleBtnText: 'Получать спецпредложения',
+                   tglStatus:     'checked'})
+          .toggle-margin-between
+            +toggle({leftCaption:   '',
+                    toggleId:      'toggle-button',
+                    toggleBtnText: 'Получать спецпредложения',
+                    tglStatus:     ''})
 
       .column-3
         h3 range slider
