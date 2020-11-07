@@ -18,12 +18,13 @@ $toggle-size: rem(10);
   border: $toggle-size/10 solid $purple;
   border-radius: $toggle-size;
   background: url("/assets/img/radiochecked.svg") no-repeat;
-  background-position: 90% 50%;
+  background-position: 10% 50%;
   background-size: 34%;
+  filter: grayscale(100%);
 }
 .toggle__button:checked {
-  filter: grayscale(100%);
-  background-position: 10% 50%;
+  filter: grayscale(0);
+  background-position: 90% 50%;
 }
 .toggle__text {
   margin-left: rem(11);
