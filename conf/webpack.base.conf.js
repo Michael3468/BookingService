@@ -92,7 +92,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/components/**/*.{jpg,jpeg,png,svg,gif}`,    to: `${PATHS.assets}img`, flatten: true },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`,  to: `${PATHS.assets}fonts` },
+      // { from: `${PATHS.src}/${PATHS.assets}fonts`,  to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
 
