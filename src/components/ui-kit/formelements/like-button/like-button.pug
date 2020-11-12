@@ -1,0 +1,6 @@
+mixin like-button(params)
+  .like-button__container
+    .like-button
+      input.like-button__image(type='checkbox' id= params.likeBtnId checked= params.likeBtnStatus)
+      label(for=params.likeBtnId).material-icons.like-button-icon
+      .like-button__content= params.likeBtnText

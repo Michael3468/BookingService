@@ -1,0 +1,56 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+$size: 10px;
+$padd: 1px;
+
+.like-button__container {
+  width: $size*4;
+  height: $size*2;
+  border-radius: $size;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: $DarkShade25;
+  padding: $padd;
+}
+.like-button {
+  position: absolute;
+  width: $size*4 - $padd*2;
+  height: $size*2 - $padd*2;
+  border-radius: $size;
+  background: white;
+}
+.like-button__content {
+  display: flex;
+  justify-content: center;
+  padding-left: 28%;
+  margin-top: 1px;
+  font-family: $mainFont;
+  color: $DarkShade25;
+  font-size: 10px;
+}
+
+.like-button-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: rem(10);
+  margin-left: 4px;
+  color: $DarkShade25;
+}
+.like-button-icon::after {
+  font-family: "Material Icons";
+  content: "favorite_border";
+}
+.like-button__image:checked + .like-button-icon::after {
+  font-family: "Material Icons";
+  content: "favorite";
+  color: $purple;
+}
+.like-button__image {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: $size*4 - $padd*2;
+  height: $size*2 - $padd*2;
+}

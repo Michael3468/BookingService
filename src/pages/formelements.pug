@@ -101,6 +101,18 @@ block content
                     toggleId:      'toggle-button2',
                     toggleBtnText: 'Получать спецпредложения',})
 
+        .block-margin.like-buttons-margin
+          include ../components/ui-kit/formelements/like-button/like-button
+          h3.like-button__caption like button
+          .like-buttons__direction
+            .like-button__margin
+              +like-button({leftCaption:   'like button',
+                            likeBtnId:     'likeBtnId-1',
+                            likeBtnText:   '2'})
+
+            +like-button({likeBtnId:     'likeBtnId-2',
+                          likeBtnStatus: 'checked',
+                          likeBtnText:   '12'})
 
       .column-3
         h3 range slider

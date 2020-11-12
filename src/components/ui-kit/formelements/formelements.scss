@@ -37,3 +37,16 @@
 .toggle-margin-between {
   margin-top: rem(-2);
 }
+.like-buttons-margin {
+  margin-top: rem(25);
+}
+.like-buttons__direction {
+  display: flex;
+  flex-direction: row;
+}
+.like-button__caption {
+  margin-bottom: 16px;
+}
+.like-button__margin {
+  margin-right: 10px;
+}
