@@ -41,5 +41,8 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jquery.rateit": "^1.1.3"
+  }
 }
