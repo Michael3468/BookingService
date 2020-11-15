@@ -45,8 +45,19 @@
   flex-direction: row;
 }
 .like-button__caption {
-  margin-bottom: 16px;
+  margin-bottom: rem(16);
 }
 .like-button__margin {
-  margin-right: 10px;
+  margin-right: rem(10);
+}
+.rate-button__caption {
+  margin-top: rem(21);
+  margin-bottom: rem(11);
+}
+.rate-buttons-block {
+  display: flex;
+  flex-direction: row;
+}
+.rate-buttons-margin {
+  margin-right: rem(20);
 }

@@ -114,6 +114,20 @@ block content
                           likeBtnStatus: 'checked',
                           likeBtnText:   '12'})
 
+        .block-margin
+          include ../components/ui-kit/formelements/rate-button/rate-button
+          h3.rate-button__caption rate button
+          .rate-buttons-block
+            .rate-buttons-margin
+              +rate-button({rateBtnName: 'rateBtnName-1',
+                            rateBtnId:   'rateBtnId-1',
+                            starsCount:  '4'})
+
+            +rate-button({rateBtnName: 'rateBtnName-2',
+                          rateBtnId:   'rateBtnId-2',
+                          starsCount:  '5'})
+
+
       .column-3
         h3 range slider
 

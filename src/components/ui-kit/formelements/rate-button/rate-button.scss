@@ -1,0 +1,25 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.rate-button__inp {
+  display: none;
+}
+.rate-button__star, .rate-button__star_border {
+  display: inline-block;
+  width: rem(24);
+}
+.rate-button__star::after, .rate-button__star_border::after {
+  cursor: pointer;
+  font-family: "Material Icons";
+  font-size: rem(24);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.rate-button__star::after {
+  content: "star";
+}
+.rate-button__star_border::after {
+  content: "star_border";
+}
