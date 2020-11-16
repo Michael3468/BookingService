@@ -61,3 +61,19 @@
 .rate-buttons-margin {
   margin-right: rem(20);
 }
+.buttons__caption {
+  margin-top: rem(33);
+  margin-bottom: rem(16);
+}
+.buttons-block {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(30);
+  width: 100%;
+}
+.button__margin {
+  margin-right: rem(20);
+}
+.btn-mt {
+  margin-top: rem(-4);
+}

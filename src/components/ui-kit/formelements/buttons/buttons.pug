@@ -16,7 +16,6 @@ mixin button(params)
     button.button(class=classes)=value
 
 //- Buttons examples
-//- .main
 //-   +button({link:"#", value:"Кнопка"})
 //-   +button({value:"Кнопка"})
 //-   +button({link:"#", value:"Кнопка", mod: ["bordered"]})
@@ -26,15 +25,14 @@ mixin button(params)
 //-   +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
 //-   +button({value:"Кнопка", mod: ["small"]})
 //-   +button({value:"Очень большой текст", mod: ["small"]})
-//- .main
 //-   +button({link:"#", value:"Кнопка", mod: ["block"]})
 //-   +button({link:"#", value:"Кнопка", mod: ["bordered","block"]})
 //-   +button({link:"#", value:"Кнопка", mod: ["bordered","small","block"]})
 //-   +button({link:"#", value:"Кнопка", mod: ["small","block"]})
 //-   +button({link:"#", value:"Кнопка", mod: ["with_arrow"]})
-//- .w320
+
 //-   +button({link:"#", value:"Подобрать номер", mod: ["with_arrow", "block"]})
-//- .w320
 //-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block"]})
-//- .w320
 //-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block", "bordered"]})
+//-   +button({link: 'change_me', mod: ['noback','noback_hover']})
+//-   +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
