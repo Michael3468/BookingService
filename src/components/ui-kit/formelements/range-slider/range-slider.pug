@@ -1,0 +1,7 @@
+mixin range-slider(params)
+  .range-slider
+    .range-slider__caption
+      h3.range-slider__caption-left= params.leftCaption
+      h3.range-slider__caption-right= params.rightCaption
+
+    input.range-slider__input(type="text" class="js-range-slider" name="my_range" value="")

@@ -12,6 +12,7 @@ block content
     .container
 
       .column-1
+
         .block-margin
           include ../components/ui-kit/formelements/textfield/textfield
           +textfield({leftCaption:    'text field', 
@@ -129,7 +130,10 @@ block content
 
 
       .column-3
-        h3 range slider
+      
+        include ../components/ui-kit/formelements/range-slider/range-slider
+        +range-slider({leftCaption:   'range slider',
+                       rightCaption:  '5 000₽ - 10 000₽'})
 
     .container
     .container
