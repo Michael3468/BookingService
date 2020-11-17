@@ -2,16 +2,15 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 @import '../../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css';
 
-.range-slider {
-  width: 266px;
-}
+$border_bg-color: #fff;
+
 .range-slider__caption {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .range-slider__caption-left {
-  margin-right: 30px;
+  margin-right: rem(30);
 }
 .range-slider__caption-right {
   font-weight: normal;
@@ -33,7 +32,7 @@
 .irs--flat .irs-line {
   top: rem(23);
   height: rem(7);
-  background-color: #fff;
+  background-color: $border_bg-color;
   border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
 }
@@ -64,6 +63,6 @@ $size: rem(16);
   margin-left: -($size / 2);
   background: $secondaryGradient;
   border-radius: 50%;
-  border: rem(2) solid #fff;
+  border: rem(2) solid $border_bg-color;
 }
 /* rangeSlider.css */
