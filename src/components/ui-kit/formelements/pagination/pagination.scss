@@ -1,0 +1,88 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+@import '../../../../../node_modules/paginationjs/dist/pagination.css';
+
+$size: rem(40);
+
+#pagination-container {
+  display: inline-block;
+  width: auto;
+}
+.paginationjs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  font-family: $secondFont;
+}
+.paginationjs-page,
+.paginationjs-page .active,
+.paginationjs-prev,
+.paginationjs-next,
+.paginationjs .paginationjs-pages li.active > a {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: $size / 2;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.paginationjs .paginationjs-pages li:first-child,
+.paginationjs .paginationjs-pages li:first-child > a,
+.paginationjs .paginationjs-pages li:last-child,
+.paginationjs .paginationjs-pages li:last-child > a,
+.paginationjs .paginationjs-pages li,
+.paginationjs .paginationjs-pages li > a {
+  border-radius: $size / 2;
+  border: none;
+}
+.paginationjs-page .active,
+.paginationjs .paginationjs-pages li,
+.paginationjs .paginationjs-pages li > a,
+.paginationjs .paginationjs-pages li:first-child,
+.paginationjs .paginationjs-pages li:first-child > a {
+  border-radius: $size / 2;
+  line-height: $size;
+  font-size: rem(12);
+  color: $DarkShade50;
+}
+
+.paginationjs-prev,
+.paginationjs-next {
+  background: $secondaryGradient;
+}
+
+.paginationjs .paginationjs-pages li > a,
+.paginationjs .paginationjs-pages li > a:hover {
+  background: transparent;
+  text-align: center;
+}
+
+.paginationjs .paginationjs-pages li.active > a {
+  background: $primaryGradient;
+  color: #fff;
+  font-weight: bold;
+}
+
+.paginationjs-next::before,
+.paginationjs-prev::before {
+  margin-left: rem(8);
+  font-family: 'Material Icons';
+  font-size: rem(22);
+  color: #fff;
+}
+
+.paginationjs-next::before {
+  content: 'arrow_forward';
+}
+.paginationjs-prev::before {
+  content: 'arrow_backward';
+}
+
+.paginationjs-pages-footer {
+  display: flex;
+  justify-content: center;
+  font-size: rem(14);
+  color: $DarkShade75;
+  margin-top: rem(10);
+}
