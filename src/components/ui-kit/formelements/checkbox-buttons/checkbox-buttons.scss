@@ -4,6 +4,7 @@
 .checkbox-buttons {
   display: flex;
   flex-direction: column;
+  width: rem(230);
 }
 .checkbox-buttons__caption {
   margin-bottom: rem(16);
