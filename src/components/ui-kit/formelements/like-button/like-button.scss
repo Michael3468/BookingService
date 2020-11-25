@@ -8,7 +8,6 @@ $padd: 1px;
   width: $size*4;
   height: $size*2;
   border-radius: $size;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   background: $DarkShade25;
   padding: $padd;
 }
@@ -26,7 +25,7 @@ $padd: 1px;
   margin-top: 1px;
   font-family: $mainFont;
   color: $DarkShade25;
-  font-size: 10px;
+  font-size: rem(10);
 }
 
 .like-button-icon {
@@ -38,19 +37,28 @@ $padd: 1px;
   margin-left: 4px;
   color: $DarkShade25;
 }
-.like-button-icon::after {
+.like-button__input + .like-button-icon::after {
   font-family: "Material Icons";
   content: "favorite_border";
+  color: $DarkShade25;
 }
-.like-button__image:checked + .like-button-icon::after {
+.like-button__input:checked + .like-button-icon::after,
+.js-icon-checked-status:after {
   font-family: "Material Icons";
   content: "favorite";
   color: $purple;
 }
-.like-button__image {
+.like-button__input {
   position: absolute;
   cursor: pointer;
   opacity: 0;
   width: $size*4 - $padd*2;
   height: $size*2 - $padd*2;
+}
+
+.js-content-checked-status {
+  color: $purple;
+}
+.js-container-checked-status {
+  background: $primaryGradient;
 }
