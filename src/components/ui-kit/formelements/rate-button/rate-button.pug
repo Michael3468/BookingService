@@ -2,7 +2,7 @@ mixin rate-button(params)
   .radio-button
     each value in [1,2,3,4,5]
       input.rate-button__inp(type='radio' name= params.rateBtnName id= params.rateBtnId+value)
-      if value == params.starsCount || value < params.starsCount
+      if value <= params.starsCount
         label.rate-button__star(for= params.rateBtnId+value)
       else
         label.rate-button__star_border(for= params.rateBtnId+value)
