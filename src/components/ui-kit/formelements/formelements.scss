@@ -1,6 +1,12 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
+#first-container {
+  margin-bottom: 85px;
+}
+#second-container {
+  margin-bottom: 300px;
+}
 .column-1, .column-2, .column-3 {
   display: flex;
   flex-direction: column;

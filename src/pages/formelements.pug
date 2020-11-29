@@ -9,7 +9,7 @@ block content
   .wrapper
 
     include ../components/ui-kit/logo/logo
-    .container
+    #first-container.container
 
       .column-1
 
@@ -163,5 +163,19 @@ block content
           +pagination()
 
 
-    .container
-    .container
+    #second-container.container
+
+      .column-1
+
+        h3 dropdown
+
+
+      .column-2
+
+        include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
+        +dropdown-guests({leftCaption: 'dropdown',
+                          item1:       'Взрослые',
+                          item2:       'Дети',
+                          item3:       'Младенцы'})
+
+    #third-container.container
