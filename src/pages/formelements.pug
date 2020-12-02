@@ -35,8 +35,13 @@ block content
 
         .block-margin
           include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
-          +dropdown-guests({leftCaption: 'dropdown'})
-        
+          +dropdown-guests({leftCaption:   'dropdown',
+                            idPrefix:      'iqdropdown',
+                            idPostfix:     '-1',
+                            selectionText: 'Сколько гостей',
+                            expMenuStatus: 'hidden',
+                           })
+
         .block-margin.date-margin
           //- TODO make new mixin maskedTextField with jq plugin
           +textfield({leftCaption:    'masked text field',
@@ -173,9 +178,12 @@ block content
       .column-2
 
         include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
-        +dropdown-guests({leftCaption: 'dropdown',
-                          item1:       'Взрослые',
-                          item2:       'Дети',
-                          item3:       'Младенцы'})
+        +dropdown-guests({leftCaption:    'dropdown',
+                          selectionText:  'Сколько гостей',
+                          idPrefix:       'dropdown-guests',
+                          idPostfix:      '-2',
+                          items:          ['Взрослые','Дети','Младенцы'],
+                          menuStatus:     'menu-open',
+                         })
 
     #third-container.container

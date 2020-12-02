@@ -1,11 +1,24 @@
 mixin dropdown-guests(params)
-  .dropdown-guests__caption
-    h3= params.leftCaption
-  .dropdown-guests.input__style
-    p.dropdown-guests__p Сколько гостей
-    span.dropdown-guests__expand-button.material-icons expand_more
-  .dropdown-guests__options
-    //- TODO expanded dropdown code here
+  h3.dropdown-guests__caption= params.leftCaption
+  .iqdropdown(id=`${params.idPrefix}${params.idPostfix}` class=params.menuStatus)
+    .dropdown-guests
+      p.iqdropdown-selection__text= params.selectionText
+      .dropdown-guests__expand-button.material-icons expand_more
+      
+    .iqdropdown-menu(class=params.expMenuStatus)
 
-//- example
-//- +dropdown({leftCaption: 'dropdown'})
+      - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
+      each val, key in items
+        .iqdropdown-menu-option(id=key)
+          p.iqdropdown-item= val.valName
+          .iqdropdown-item-controls
+            button.button-decrement.empty(id=`${params.idPrefix}${params.idPostfix}-${key}-button-decrement`)
+              i.icon-decrement
+            span.counter(id=`${params.idPrefix}${params.idPostfix}-${key}-counter`) 0
+            button.button-increment(id=`${params.idPrefix}${params.idPostfix}-${key}-button-increment`)
+              i.icon-increment
+      
+      .iqdropdown-buttons
+        button.iqdropdown-button_clean.hidden(id=`${params.idPrefix}${params.idPostfix}-button-clean`) очистить
+        button.iqdropdown-button_apply(id=`${params.idPrefix}${params.idPostfix}-button-apply`) применить
+

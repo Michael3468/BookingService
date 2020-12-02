@@ -1,11 +1,9 @@
 @import '../../../../assets/scss/utils/vars.scss';
-
+@import '../../../../assets/scss/utils/mixins.scss';
+s
 .dropdown-guests__caption {
   margin-bottom: $inputCapMarBottom;
 }
-// .dropdown__caption-left {
-
-// }
 
 //common input__style
 .input__style {
@@ -19,12 +17,152 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 9px 9px 9px 15px;
-}
-.dropdown-guests__p {
-  width: 100%;
+  align-items: center;
+  padding: rem(-3) rem(9) rem(0) rem(0);
 }
 .dropdown-guests__expand-button {
+  position: relative;
   cursor: pointer;
   color: $DarkShade50;
+  margin: rem(-3) rem(9) rem(0) rem(0);
 }
+
+//- item-quantity-dropdown styles
+.iqdropdown {
+  height: rem(44) !important;
+  border-color: $DarkShade25 !important;
+  align-items: center;
+  border: rem(1) solid $DarkShade25;
+  border-radius: rem(4);
+}
+
+.iqdropdown.menu-open {
+  border-bottom-left-radius: rem(0);
+  border-bottom-right-radius: rem(0);
+  display: block;
+}
+.iqdropdown-selection__text {
+  font-family: $secondFont !important;
+  font-size: rem(14) !important;
+  color: $DarkShade75 !important;
+  height: rem(45);
+  padding: rem(9) rem(15) rem(0) rem(15);
+}
+.iqdropdown-menu {
+  border-bottom-left-radius: rem(4);
+  border-bottom-right-radius: rem(4);
+}
+.hidden {
+  visibility: hidden;
+}
+.iqdropdown-item {
+  font-family: $secondFont;
+  font-weight: bold;
+  font-size: rem(12);
+  color: $DarkShade100;
+  text-transform: uppercase;
+  padding-top: rem(7);
+}
+.iqdropdown-menu-option {
+  display: flex;
+  justify-content: space-between;
+}
+.iqdropdown-menu-option {
+  height: rem(37);
+  padding: rem(0) rem(5) rem(0) rem(15);
+}
+.iqdropdown-menu {
+  box-shadow: none;
+  border: rem(1) solid $DarkShade25;
+  cursor: default;
+  margin: rem(-3) rem(-1) rem(-1);
+}
+.iqdropdown-item-controls button.button-decrement,
+.iqdropdown-item-controls button.button-increment {
+  border-radius: 50% !important;
+  height: rem(30);
+  width: rem(30);
+  margin-top: rem(6);
+}
+.iqdropdown-item-controls .counter {
+  position: relative;
+  border: none;
+  margin: rem(0) rem(13) rem(0) rem(13);
+  top: rem(-3);
+  font-family: $secondFont;
+  font-size: rem(12);
+  font-weight: bold;
+}
+.icon-increment::before {
+  display: block;
+  height: rem(0);
+  top: rem(6);
+  width: rem(13);
+}
+.iqdropdown,
+.icon-decrement,
+.icon-increment,
+.iqdropdown-button_clean,
+.iqdropdown-button_apply {
+  cursor: pointer;
+}
+.button-decrement,
+.button-increment {
+  background: #fff;
+}
+.icon-decrement::after,
+.icon-increment::after {
+  font-size: rem(18);
+  font-style: normal;
+  font-family: $secondFont;
+}
+.icon-decrement::after {
+  display: block;
+  content: '-';
+}
+.icon-increment::after {
+  content: '+';
+  color: $DarkShade50;
+}
+
+.button-increment {
+  border: rem(1) solid $DarkShade50 !important;
+}
+.iqdropdown-item-controls button {
+  padding: rem(0);
+}
+.button-decrement {
+  color: $DarkShade25 !important;
+  border: rem(1) solid $DarkShade25 !important;
+}
+.empty {
+  color: $DarkShade25 !important;
+  border: rem(1) solid $DarkShade25 !important;
+}
+//- item-quantity-dropdown styles end
+
+//- buttons
+.iqdropdown-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: rem(19) rem(0) rem(11) rem(5);
+}
+.iqdropdown-button_clean {
+  display: flex;
+  justify-content: flex-start;
+}
+.iqdropdown-button_apply {
+  display: flex; 
+  justify-content: flex-end;
+}
+.iqdropdown-button_clean,
+.iqdropdown-button_apply {
+  font-family: $secondFont;
+  font-size: rem(12);
+  font-weight: bold;
+  color: $purple;
+  text-transform: uppercase;
+  background: #fff;
+}
+//- buttons end
