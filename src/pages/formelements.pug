@@ -172,8 +172,26 @@ block content
 
       .column-1
 
-        h3 dropdown
+        .mini-column
 
+          .block-margin
+            include ../components/ui-kit/formelements/dropdown-options/dropdown-options
+            +dropdown-options({leftCaption:   'dropdown',
+                              rightCaption:  'default',
+                              idPrefix:      'dropdown-options',
+                              idPostfix:     '-1',
+                              selectionText: '2 спальни, 2 кровати...',
+                              expMenuStatus: 'hidden',
+                              })
+
+          .block-margin
+            include ../components/ui-kit/formelements/dropdown-options/dropdown-options
+            +dropdown-options({leftCaption:   'dropdown',
+                              rightCaption:   'expanded',
+                              idPrefix:       'dropdown-options',
+                              idPostfix:      '-changed-example',
+                              selectionText:  '2 спальни, 2 кровати...',
+                              })
 
       .column-2
 
