@@ -87,11 +87,15 @@
 .dropdown-guests-item-controls .counter {
   position: relative;
   border: none;
-  margin: rem(0) rem(13) rem(0) rem(13);
   top: rem(-3);
   font-family: $secondFont;
   font-size: rem(12);
   font-weight: bold;
+}
+.counter {
+  display: inline-block;
+  text-align: center;
+  width: rem(33);
 }
 .icon-increment::before {
   display: block;
