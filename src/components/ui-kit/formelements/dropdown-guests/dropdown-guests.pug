@@ -7,18 +7,47 @@ mixin dropdown-guests(params)
       
     .dropdown-guests-menu(class=params.expMenuStatus)
 
-      - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
+      if (params.idPostfix == '-changed-example')
+        - var items = { 'item1': {valName : 'Взрослые', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Дети', valCounter: '1', valClass: 'dark'},'item3': {valName : 'Младенцы'} };
+      else
+        - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
+
       each val, key in items
         .dropdown-guests-menu-option(id=key)
           p.dropdown-guests-item= val.valName
           .dropdown-guests-item-controls
-            button.button-decrement.empty(id=`dropdown-guests${params.idPostfix}-${key}-button-decrement`)
+            button.button-decrement(id=`dropdown-guests${params.idPostfix}-${key}-button-decrement` class=(val.valClass))
               i.icon-decrement
-            span.counter(id=`dropdown-guests${params.idPostfix}-${key}-counter`) 0
+            span.counter(id=`dropdown-guests${params.idPostfix}-${key}-counter`)= val.valCounter || 0
             button.button-increment(id=`dropdown-guests${params.idPostfix}-${key}-button-increment`)
               i.icon-increment
       
       .dropdown-guests-buttons
-        button.dropdown-guests-button_clean.hidden(id=`dropdown-guests${params.idPostfix}-button-clean`) очистить
+        button.dropdown-guests-button_clean(id=`dropdown-guests${params.idPostfix}-button-clean` class='dropdown-guests-button_clean-'+params.cleanBtnStatus) очистить
         button.dropdown-guests-button_apply(id=`dropdown-guests${params.idPostfix}-button-apply`) применить
 
+//- examples
+
+//- +dropdown-guests({leftCaption:    'dropdown',
+//-                   selectionText:  'Сколько гостей',
+//-                   idPrefix:       'dropdown-guests',
+//-                   idPostfix:      '-2',
+//-                   items:          ['Взрослые','Дети','Младенцы'],
+//-                   menuStatus:     'menu-open',
+//-                  })
+
+//- +dropdown-guests({leftCaption:    'dropdown',
+//-                   selectionText:  '3 гостя',
+//-                   idPrefix:       'dropdown-guests',
+//-                   idPostfix:      '-changed-example',
+//-                   items:          ['Взрослые','Дети','Младенцы'],
+//-                   menuStatus:     'menu-open',
+//-                   cleanBtnStatus: 'show'
+//-                  })
+
+//- +dropdown-guests({leftCaption:   'dropdown',
+//-                   idPrefix:      'iqdropdown',
+//-                   idPostfix:     '-1',
+//-                   selectionText: 'Сколько гостей',
+//-                   expMenuStatus: 'hidden',
+//-                  })

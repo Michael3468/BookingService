@@ -186,4 +186,17 @@ block content
                           menuStatus:     'menu-open',
                          })
 
+      .column-3
+
+        include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
+        +dropdown-guests({leftCaption:    'dropdown',
+                          selectionText:  '3 гостя',
+                          idPrefix:       'dropdown-guests',
+                          idPostfix:      '-changed-example',
+                          items:          ['Взрослые','Дети','Младенцы'],
+                          menuStatus:     'menu-open',
+                          cleanBtnStatus: 'show'
+                         })
+
+
     #third-container.container
