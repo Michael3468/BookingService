@@ -68,4 +68,7 @@
 .expandable-checkbox-list__expand-more {
   margin: rem(-4) rem(8) rem(0) rem(0);
 }
+.expandable-checkbox-list__expand-more-rotate {
+  transform: rotate(180deg);
+}
 //- expandable-checkbox-list end
