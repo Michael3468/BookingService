@@ -39,7 +39,7 @@ block content
                             idPrefix:      'iqdropdown',
                             idPostfix:     '-1',
                             selectionText: 'Сколько гостей',
-                            expMenuStatus: 'hidden',
+                            expMenuStatus: 'vhidden',
                            })
 
         .block-margin.date-margin
@@ -81,7 +81,7 @@ block content
           include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
           +checkbox-buttons({leftCaption: 'checkbox buttons',
                              inpId:        'chkboxbtns',
-                             inpClass:     'custom-checkbox',
+                             showCaption:  'true',
                              inpStatus:    [ ,'checked','checked'],
                              inpName:      'chkboxname',
                              inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
@@ -176,12 +176,12 @@ block content
 
           .block-margin
             include ../components/ui-kit/formelements/dropdown-options/dropdown-options
-            +dropdown-options({leftCaption:   'dropdown',
+            +dropdown-options({leftCaption:  'dropdown',
                               rightCaption:  'default',
                               idPrefix:      'dropdown-options',
                               idPostfix:     '-1',
                               selectionText: '2 спальни, 2 кровати...',
-                              expMenuStatus: 'hidden',
+                              expMenuStatus: 'vhidden',
                               })
 
           .block-margin
@@ -192,6 +192,28 @@ block content
                               idPostfix:      '-changed-example',
                               selectionText:  '2 спальни, 2 кровати...',
                               })
+
+          .block-margin.expandable-checkbox-list__margin
+            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            +checkbox-buttons({caption:        'expandable checkbox list',
+                               leftCaption:    'checkbox buttons',
+                               inpId:          'chkboxbtns-1',
+                               optionsDisplay: 'display-none',
+                               inpStatus:      [,,,,,,],
+                               inpName:        'chkboxname-1',
+                               inpValue:       ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
+                               inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
+          
+          .block-margin.expandable-checkbox-list__margin2
+            
+            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            +checkbox-buttons({caption:     'expandable checkbox list',
+                               leftCaption: 'checkbox buttons',
+                               inpId:       'chkboxbtns-2',
+                               inpStatus:   [ ,'checked','checked','checked',,,],
+                               inpName:     'chkboxname-2',
+                               inpValue:    ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
+                               inpText:     ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
 
       .column-2
 

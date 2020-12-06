@@ -14,10 +14,10 @@
   margin-bottom: rem(11);
 }
 .checkbox-buttons__text {
+  cursor: pointer;
   line-height: rem(18);
   font-family: $secondFont;
 }
-
 .custom-checkbox {
   position: absolute;
   z-index: -1;
@@ -52,3 +52,20 @@
   background-image: url("/assets/img/chkboxvector.svg");
   background-size: rem(12) rem(12);
 }
+.display-none {
+  display: none;
+}
+
+//- expandable-checkbox-list
+.expandable-checkbox-list {
+  margin-bottom: 12px;
+}
+.expandable-checkbox-list__caption {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.expandable-checkbox-list__expand-more {
+  margin: rem(-4) rem(8) rem(0) rem(0);
+}
+//- expandable-checkbox-list end
