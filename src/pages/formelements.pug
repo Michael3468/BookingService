@@ -193,26 +193,6 @@ block content
                               selectionText:  '2 спальни, 2 кровати...',
                               })
 
-          .block-margin.expandable-checkbox-list__margin
-            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
-            +checkbox-buttons({caption:        'expandable checkbox list',
-                               leftCaption:    'checkbox buttons',
-                               inpId:          'chkboxbtns-1',
-                               optionsDisplay: 'display-none',
-                               inpStatus:      [,,,,,,],
-                               inpName:        'chkboxname-1',
-                               inpValue:       ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
-                               inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
-          
-          .block-margin.expandable-checkbox-list__margin2
-            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
-            +checkbox-buttons({caption:     'expandable checkbox list',
-                               leftCaption: 'checkbox buttons',
-                               inpId:       'chkboxbtns-2',
-                               inpStatus:   [ ,'checked','checked','checked',,,],
-                               inpName:     'chkboxname-2',
-                               inpValue:    ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
-                               inpText:     ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
 
       .column-2
 
@@ -224,6 +204,7 @@ block content
                           items:          ['Взрослые','Дети','Младенцы'],
                           menuStatus:     'menu-open',
                          })
+
 
       .column-3
 
@@ -239,3 +220,37 @@ block content
 
 
     #third-container.container
+
+      .column-1
+
+        .mini-column
+
+          .block-margin.expandable-checkbox-list__margin
+            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            +checkbox-buttons({caption:        'expandable checkbox list',
+                                leftCaption:    'checkbox buttons',
+                                inpId:          'chkboxbtns-1',
+                                optionsDisplay: 'display-none',
+                                inpStatus:      [,,,,,,],
+                                inpName:        'chkboxname-1',
+                                inpValue:       ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
+                                inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
+          
+          .block-margin.expandable-checkbox-list__margin2
+            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            +checkbox-buttons({caption:     'expandable checkbox list',
+                                leftCaption: 'checkbox buttons',
+                                inpId:       'chkboxbtns-2',
+                                inpStatus:   [ ,'checked','checked','checked',,,],
+                                inpName:     'chkboxname-2',
+                                inpValue:    ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
+                                inpText:     ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
+
+
+      .column-2
+
+        include ../components/ui-kit/formelements/rich-checkbox-buttons/rich-checkbox-buttons
+        +rich-checkbox-buttons({caption: 'rich checkbox buttons'})
+
+
+      .column-3
