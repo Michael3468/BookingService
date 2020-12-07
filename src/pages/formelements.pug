@@ -249,8 +249,17 @@ block content
 
       .column-2
 
-        include ../components/ui-kit/formelements/rich-checkbox-buttons/rich-checkbox-buttons
-        +rich-checkbox-buttons({caption: 'rich checkbox buttons'})
+        .mini-column
+
+          include ../components/ui-kit/formelements/rich-checkbox-buttons/rich-checkbox-buttons
+          +rich-checkbox-buttons({caption:       'rich checkbox buttons',
+                                  optionsValue:  ['wide-corridor',
+                                                  'assistant-for-the-disabled'],
+                                  optionText:    ['Широкий коридор',
+                                                  'Помощник для инвалидов'],
+                                  optionSubText: ['Ширина коридоров в номере не менее 91 см.',
+                                                  'На 1 этаже вас встретит специалист и проводит до номера'],
+                                  })
 
 
       .column-3

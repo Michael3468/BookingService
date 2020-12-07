@@ -1,0 +1,12 @@
+mixin rich-checkbox-buttons(params)
+  //- TODO add FORM tag
+  h3.rich-checkbox-buttons__caption= params.caption
+
+  each val, index in params.optionText
+    - var rcb_item_id = 'rich-checkbox-buttons-' + index
+    .rich-checkbox-buttons__item
+      input.rich-checkbox-buttons__input(type='checkbox', id=rcb_item_id, name='rcb-'+index, value=params.optionsValue[index])
+      label.rich-checkbox-buttons__text(for=rcb_item_id)
+        .rich-checkbox-buttons__textblock
+          .rich-checkbox-buttons__boldtext #{val}
+          p.rich-checkbox-buttons__p= params.optionSubText[index]
