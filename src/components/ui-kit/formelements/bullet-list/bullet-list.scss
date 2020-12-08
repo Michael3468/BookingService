@@ -1,0 +1,34 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.bullet-list__caption {
+  margin-bottom: rem(14);
+}
+.bullet-list__ul {
+  display: flex;
+  flex-direction: column;
+}
+.bullet-list__item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(10);
+}
+
+.bullet-list__li-marker {
+  display: inline-block;
+  width: rem(11);
+  height: rem(10);
+  border-radius: rem(5);
+  background: $DarkShade25;
+  margin: rem(6) rem(11) 0 0;
+}
+
+.bullet-list__li {
+  display: inline-block;
+  list-style-type: none;
+  font-family: $secondFont;
+  font-size: rem(14);
+  line-height: rem(24);
+  color: $DarkShade75;
+  width: 100%;
+}

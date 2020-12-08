@@ -1,0 +1,15 @@
+mixin bullet-list(params)
+  h3.bullet-list__caption=params.caption
+
+  ul.bullet-list__ul
+    each val in params.options
+      .bullet-list__item
+        .bullet-list__li-marker
+        li.bullet-list__li #{val}
+
+
+//- example
+//- +bullet-list({caption: 'bullet list',
+//-               options: ['Нельзя с питомцами',
+//-                         'Без вечеринок и мероприятий',
+//-                         'Время прибытия - после 13:00, а выезд до 12:00']})
