@@ -1,4 +1,4 @@
-include ../../formelements/buttons/buttons.pug
+include ../../form-elements/buttons/buttons.pug
 include  header_logo/header_logo.pug
 
 mixin header(loginStatus)
@@ -10,7 +10,7 @@ mixin header(loginStatus)
         label.material-icons.burger(for='menu-checkbox', onclick='') menu
 
       //- navigation menu
-      //- hiden checkbox for burger label
+      //- hidden checkbox for burger label
       input#menu-checkbox(type='checkbox')
       nav.header__nav(role='navigation')
         ul.header__nav-ul.expand-menu
@@ -21,9 +21,9 @@ mixin header(loginStatus)
               //- used material icons font
               span.material-icons expand_more
               .header__nav-dropdown-content.header__shadow
-                a.header__dropdown-link(href="change-me-usluga-1") Услуга 1
-                a.header__dropdown-link(href="change-me-usluga-2") Услуга 2
-                a.header__dropdown-link(href="change-me-usluga-3") Услуга 3
+                a.header__dropdown-link(href="change-me-amenity-1") Услуга 1
+                a.header__dropdown-link(href="change-me-amenity-2") Услуга 2
+                a.header__dropdown-link(href="change-me-amenity-3") Услуга 3
           //- css dropdown end
           li.header__nav-li
             a.header__nav-link(href='change-me-link') Вакансии
@@ -35,14 +35,14 @@ mixin header(loginStatus)
               //- used material icons font
               span.material-icons expand_more
               .header__nav-dropdown-content.header__shadow
-                a.header__dropdown-link(href="change-me-soglashenie-1") Соглашение 1
-                a.header__dropdown-link(href="change-me-soglashenie-2") Соглашение 2
-                a.header__dropdown-link(href="change-me-soglashenie-3") Соглашение 3
+                a.header__dropdown-link(href="change-me-agreement-1") Соглашение 1
+                a.header__dropdown-link(href="change-me-agreement-2") Соглашение 2
+                a.header__dropdown-link(href="change-me-agreement-3") Соглашение 3
           //- css dropdown end
 
-        //- authorisation block
+        //- authorization block
         .expand-menu.header__shadow
-          if loginStatus == 'authorised'
+          if loginStatus == 'authorized'
             .header__authorized
               - var userName = 'Юлий Цезарь'
               li.header__nav-li #{userName}
@@ -52,5 +52,5 @@ mixin header(loginStatus)
                 +button({link:"#", value:"Войти", mod: ["bordered","small"]})
               .header__auth-buttons-padding
                 +button({link:"#", value:"Зарегистрироваться", mod: ["small"]})
-        //- authorisation block end
+        //- authorization block end
       //- navigation menu end

@@ -14,7 +14,7 @@ block content
       .column-1
 
         .block-margin
-          include ../components/ui-kit/formelements/textfield/textfield
+          include ../components/ui-kit/form-elements/textfield/textfield
           +textfield({leftCaption:    'text field', 
                       rightCaption:   'default',
                       inpType:        'email',
@@ -34,7 +34,7 @@ block content
                       hoverStyle:     'like-hover'})
 
         .block-margin
-          include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
+          include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
           +dropdown-guests({leftCaption:   'dropdown',
                             idPrefix:      'iqdropdown',
                             idPostfix:     '-1',
@@ -51,7 +51,7 @@ block content
                       textTransform:  'uppercase'})
         
         .block-margin.date-dropdown-margin
-          include ../components/ui-kit/formelements/date-dropdown/date-dropdown
+          include ../components/ui-kit/form-elements/date-dropdown/date-dropdown
           +date-dropdown({startDateCaption: 'date dropdown',
                           endDateCaption:   'date dropdown',
                           startInpId:       'startDate',
@@ -61,11 +61,11 @@ block content
         .mini-column
 
           .block-margin.date-dropdown-margin
-            include ../components/ui-kit/formelements/filter-date-dropdown/filter-date-dropdown
+            include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
             +filter-date-dropdown({leftCaption : 'filter date dropdown'})
 
           .block-margin.date-dropdown-margin.subscription-textfield-margin
-            include ../components/ui-kit/formelements/textfield/textfield
+            include ../components/ui-kit/form-elements/textfield/textfield
             +textfield({leftCaption:    'subscription text field', 
                         inpType:        'email',
                         inpName:        'email',
@@ -78,7 +78,7 @@ block content
       .column-2
 
         .block-margin
-          include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+          include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
           +checkbox-buttons({leftCaption: 'checkbox buttons',
                              inpId:        'chkboxbtns',
                              showCaption:  'true',
@@ -88,7 +88,7 @@ block content
                              inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
 
         .block-margin.checkbox-buttons-margin
-          include ../components/ui-kit/formelements/radio-buttons/radio-buttons
+          include ../components/ui-kit/form-elements/radio-buttons/radio-buttons
           +radio-buttons({leftCaption:     'radio buttons',
                           formActionName:  'form-action.php',
                           radioButtonName: 'radio-button',
@@ -97,7 +97,7 @@ block content
                           inpStatus:       ['checked',]})
 
         .block-margin.toggle-margin
-          include ../components/ui-kit/formelements/toggle/toggle
+          include ../components/ui-kit/form-elements/toggle/toggle
           +toggle({leftCaption:    'toggle',
                    toggleId:       'toggle-button1',
                    toggleBtnText:  'Получать спецпредложения',
@@ -108,7 +108,7 @@ block content
                     toggleBtnText: 'Получать спецпредложения',})
 
         .block-margin.like-buttons-margin
-          include ../components/ui-kit/formelements/like-button/like-button
+          include ../components/ui-kit/form-elements/like-button/like-button
           h3.like-button__caption like button
           .like-buttons__direction
             .like-button__margin
@@ -121,7 +121,7 @@ block content
                           likeBtnText:   '12'})
 
         .block-margin
-          include ../components/ui-kit/formelements/rate-button/rate-button
+          include ../components/ui-kit/form-elements/rate-button/rate-button
           h3.rate-button__caption rate button
           .rate-buttons-block
             .rate-buttons-margin
@@ -137,12 +137,12 @@ block content
       .column-3
       
         .mini-column
-          include ../components/ui-kit/formelements/range-slider/range-slider
+          include ../components/ui-kit/form-elements/range-slider/range-slider
           +range-slider({leftCaption:   'range slider',
                         rightCaption:  '5 000₽ - 10 000₽'})
 
         .block-margin
-          include ../components/ui-kit/formelements/buttons/buttons
+          include ../components/ui-kit/form-elements/buttons/buttons
           h3.buttons__caption buttons
           .buttons-block
             .button__margin
@@ -163,7 +163,7 @@ block content
             +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
 
         .block-margin
-          include ../components/ui-kit/formelements/pagination/pagination
+          include ../components/ui-kit/form-elements/pagination/pagination
           h3.pagination__caption pagination
           +pagination()
 
@@ -175,7 +175,7 @@ block content
         .mini-column
 
           .block-margin
-            include ../components/ui-kit/formelements/dropdown-options/dropdown-options
+            include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
             +dropdown-options({leftCaption:  'dropdown',
                               rightCaption:  'default',
                               idPrefix:      'dropdown-options',
@@ -185,7 +185,7 @@ block content
                               })
 
           .block-margin
-            include ../components/ui-kit/formelements/dropdown-options/dropdown-options
+            include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
             +dropdown-options({leftCaption:   'dropdown',
                               rightCaption:   'expanded',
                               idPrefix:       'dropdown-options',
@@ -196,7 +196,7 @@ block content
 
       .column-2
 
-        include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
+        include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
         +dropdown-guests({leftCaption:    'dropdown',
                           selectionText:  'Сколько гостей',
                           idPrefix:       'dropdown-guests',
@@ -208,7 +208,7 @@ block content
 
       .column-3
 
-        include ../components/ui-kit/formelements/dropdown-guests/dropdown-guests
+        include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
         +dropdown-guests({leftCaption:    'dropdown',
                           selectionText:  '3 гостя',
                           idPrefix:       'dropdown-guests',
@@ -226,7 +226,7 @@ block content
         .mini-column
 
           .block-margin.expandable-checkbox-list__margin
-            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
             +checkbox-buttons({caption:        'expandable checkbox list',
                                 leftCaption:    'checkbox buttons',
                                 inpId:          'chkboxbtns-1',
@@ -237,7 +237,7 @@ block content
                                 inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
           
           .block-margin.expandable-checkbox-list__margin2
-            include ../components/ui-kit/formelements/checkbox-buttons/checkbox-buttons
+            include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
             +checkbox-buttons({caption:     'expandable checkbox list',
                                 leftCaption: 'checkbox buttons',
                                 inpId:       'chkboxbtns-2',
@@ -251,7 +251,7 @@ block content
 
         .mini-column
 
-          include ../components/ui-kit/formelements/rich-checkbox-buttons/rich-checkbox-buttons
+          include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
           +rich-checkbox-buttons({caption:       'rich checkbox buttons',
                                   optionsValue:  ['wide-corridor',
                                                   'assistant-for-the-disabled'],
@@ -266,7 +266,7 @@ block content
 
         .mini-column
 
-          include ../components/ui-kit/formelements/bullet-list/bullet-list
+          include ../components/ui-kit/form-elements/bullet-list/bullet-list
           +bullet-list({caption: 'bullet list',
                         options: ['Нельзя с питомцами',
                                   'Без вечеринок и мероприятий',

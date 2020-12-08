@@ -46,18 +46,18 @@ mixin footer(footerType)
             h3 Подписка
             .footer__nav
               p.footer__nav-p Получайте специальные предложения и новости сервиса
-              include ../../formelements/textfield/textfield
+              include ../../form-elements/textfield/textfield
               +textfield({inpType:        'email',
                           inpName:        'email',
                           inpMode:        'email',
                           inpPlaceholder: 'Email',
                           inpId:          'Subscription',
                           isArrow:        'true'})
-    .subfooter
-      .container.subfooter__content
-        .subfooter__copyright
+    .sub-footer
+      .container.sub-footer__content
+        .sub-footer__copyright
           p #{copyrightText}
-        .subfooter__socials
+        .sub-footer__socials
           a(href='change_me')
             i.fab.fa-twitter.gradient-icon
           a(href='change_me')
@@ -72,11 +72,11 @@ mixin footer(footerType)
         .grid-layout
           .grid-layout__logo.grid-layout__logo_mob
             +header_logo()
-    .subfooter.subfooter__mob
-      .container.subfooter__content.subfooter__content_mob
-        .subfooter__copyright
+    .sub-footer.sub-footer__mob
+      .container.sub-footer__content.sub-footer__content_mob
+        .sub-footer__copyright
           p #{copyrightText}
-        .subfooter__socials.subfooter__socials_mob
+        .sub-footer__socials.sub-footer__socials_mob
           a(href='change_me')
             i.fab.fa-twitter.gradient-icon
           a(href='change_me')
