@@ -39,7 +39,7 @@ block content
                             idPrefix:      'iqdropdown',
                             idPostfix:     '-1',
                             selectionText: 'Сколько гостей',
-                            expMenuStatus: 'vhidden',
+                            expMenuStatus: 'visibility-hidden',
                            })
 
         .block-margin.date-margin
@@ -89,12 +89,12 @@ block content
 
         .block-margin.checkbox-buttons-margin
           include ../components/ui-kit/formelements/radio-buttons/radio-buttons
-          +radio-buttons({leftCaption:    'radio buttons',
-                          formActionName: 'form-action.php',
-                          radioBtnsName:  'radio-btns',
-                          inpName:        ['man',    'woman'],
-                          inpText:        ['Мужчина','Женщина'],
-                          inpStatus:      ['checked',]})
+          +radio-buttons({leftCaption:     'radio buttons',
+                          formActionName:  'form-action.php',
+                          radioButtonName: 'radio-button',
+                          inpName:         ['man',    'woman'],
+                          inpText:         ['Мужчина','Женщина'],
+                          inpStatus:       ['checked',]})
 
         .block-margin.toggle-margin
           include ../components/ui-kit/formelements/toggle/toggle
@@ -181,7 +181,7 @@ block content
                               idPrefix:      'dropdown-options',
                               idPostfix:     '-1',
                               selectionText: '2 спальни, 2 кровати...',
-                              expMenuStatus: 'vhidden',
+                              expMenuStatus: 'visibility-hidden',
                               })
 
           .block-margin

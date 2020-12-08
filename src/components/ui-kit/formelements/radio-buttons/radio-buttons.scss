@@ -13,7 +13,7 @@
   }
 }
 
-.radio-btns__size {
+.radio-button__size {
   width: rem(20);
   height: rem(20);
 }
@@ -22,7 +22,7 @@
   cursor: pointer;
   z-index: 1;
   opacity: 0;
-  @extend .radio-btns__size;
+  @extend .radio-button__size;
 }
 .radio-buttons__label {
   display: inline-block;
@@ -40,7 +40,7 @@
   left: 0;
   border: 1px solid $DarkShade25;
   border-radius: 50%;
-  @extend .radio-btns__size;
+  @extend .radio-button__size;
 }
 .radio-buttons__input:checked + .radio-buttons__label::before{
   display: block;
