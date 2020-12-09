@@ -1,0 +1,36 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.icon-text-list__wrapper {
+  width: rem(280);
+}
+.icon-text-list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(19);
+  border-bottom: rem(1) solid $DarkShade25;
+}
+.icon-text-list__icon {
+  font-size: rem(48);
+  background: $primaryGradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icon-text-list__text-block {
+  margin-left: rem(10);
+  font-family: $secondFont;
+  font-size: rem(14);
+  color: $DarkShade75;
+}
+.icon-text-list__caption {
+  text-transform: none;
+  color: $DarkShade75;
+  font-size: rem(14);
+  margin-top: rem(4);
+  margin-bottom: rem(5);
+  font-weight: bold;
+}
+.icon-text-list__text {
+  font-weight: normal;
+  margin-bottom: rem(21);
+}

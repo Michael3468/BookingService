@@ -271,3 +271,18 @@ block content
                         options: ['Нельзя с питомцами',
                                   'Без вечеринок и мероприятий',
                                   'Время прибытия - после 13:00, а выезд до 12:00']})
+
+
+    #fourth-container.container
+
+      .column-1
+
+        .icon-text-list__wrapper
+          include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
+          +icon-text-list({iconName : 'insert_emoticon',
+                           caption:   'Комфорт',
+                           text:      'Шумопоглощающие стены'})
+
+          +icon-text-list({iconName : 'location_city',
+                           caption:   'Удобство',
+                           text:      'Окно в каждой из спален'})
