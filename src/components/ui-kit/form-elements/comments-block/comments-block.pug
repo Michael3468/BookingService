@@ -1,0 +1,21 @@
+//- Мурад Сарафанов
+//- 5 дней назад
+
+//- Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+mixin comments-block(params)
+  .comments-block
+    .comments-block__user
+      .comments-block__user-photo
+        img.comments-block__user-photo-img(src="/assets/img/"+params.imageName, alt="alt text")
+      .comments-block__user-info
+        .comments-block__user-name= params.userName
+        .comments-block__comment-date= params.commentDate
+
+    .comments-block__feedback
+      .comments-block__feedback-like
+        //- include добавлен в form-elements.pug
+        +like-button({likeBtnId:     'likeBtnId-3',
+                      likeBtnStatus: 'checked',
+                      likeBtnText:   '12'})
+      .comments-block__feedback-text= params.feedbackText

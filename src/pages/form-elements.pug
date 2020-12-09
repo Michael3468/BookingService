@@ -227,7 +227,7 @@ block content
 
           .block-margin.expandable-checkbox-list__margin
             include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-            +checkbox-buttons({caption:        'expandable checkbox list',
+            +checkbox-buttons({caption:         'expandable checkbox list',
                                 leftCaption:    'checkbox buttons',
                                 inpId:          'chkboxbtns-1',
                                 optionsDisplay: 'display-none',
@@ -238,7 +238,7 @@ block content
           
           .block-margin.expandable-checkbox-list__margin2
             include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-            +checkbox-buttons({caption:     'expandable checkbox list',
+            +checkbox-buttons({caption:      'expandable checkbox list',
                                 leftCaption: 'checkbox buttons',
                                 inpId:       'chkboxbtns-2',
                                 inpStatus:   [ ,'checked','checked','checked',,,],
@@ -286,3 +286,14 @@ block content
           +icon-text-list({iconName : 'location_city',
                            caption:   'Удобство',
                            text:      'Окно в каждой из спален'})
+
+      .column-4
+
+        .comments-block__margin
+          include ../components/ui-kit/form-elements/comments-block/comments-block
+          //- include ../components/ui-kit/form-elements/like-button/like-button
+          +comments-block({imageName:   'image.png',
+                          userName:     'Мурад Сарафанов',
+                          commentDate:  '5 дней назад',
+                          feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                          })
