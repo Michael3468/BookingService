@@ -23,11 +23,11 @@ function toggleClasses(elementId) {
 
 function changeCounter(elementId) {
   var counterId = '#content_'+elementId;
-  var counterValue = Number( $(counterId).text() );
+  var $counterValue = Number( $(counterId).text() );
 
   if ( $(counterId).hasClass('js-content-checked-status') ) {
-    $(counterId).text(counterValue+1);
+    $(counterId).text($counterValue+1);
   } else {
-    $(counterId).text(counterValue-1);
+    $(counterId).text($counterValue-1);
   };
 }

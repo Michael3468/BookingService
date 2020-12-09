@@ -12,11 +12,11 @@ $(function() {
   });
 
   $(".js-range-slider").on('change', function(){
-    var valueFrom = $('.irs-from').text();
-    var valueTo   = $('.irs-to').text();
-    var valuesRange = `${valueFrom} ₽ - ${valueTo} ₽`;
+    var $valueFrom = $('.irs-from').text();
+    var $valueTo   = $('.irs-to').text();
+    var $valuesRange = `${$valueFrom} ₽ - ${$valueTo} ₽`;
     
-    $('.range-slider__caption-right').text(valuesRange);
+    $('.range-slider__caption-right').text($valuesRange);
   });
   
 });
