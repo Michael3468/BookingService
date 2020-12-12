@@ -2,7 +2,7 @@ import './checkbox-buttons.scss';
 
 {
 
-  let expandableCheckbox = document.getElementById("expandable-checkbox-list-chkboxbtns-1");
+  let expandableCheckbox = document.getElementById("expandable-checkbox-list-check-box-buttons-1");
   let checkboxOptions = expandableCheckbox.nextElementSibling;
   let expandMore = expandableCheckbox.lastElementChild.children[1];
 
