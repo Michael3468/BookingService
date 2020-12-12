@@ -1,0 +1,39 @@
+mixin text-field(params)
+  .text-field__caption
+    h3.text-field__caption-left= params.leftCaption
+    h3.text-field__caption-right= params.rightCaption
+  input.text-field__input.input__style(style= 'text-transform: '+params.textTransform+';' class=params.hoverStyle type= params.inpType name=params.inpName inputmode=params.inpMode placeholder=params.inpPlaceholder id=params.inpId)
+  if ( params.isArrow == 'true' )
+    .input__arrow-forward
+      label(id= params.inpId).material-icons.gradient-icon arrow_forward
+      
+//- examples
+//-
+//- text-field
+//- +text-field({leftCaption:    'text field', 
+//-              rightCaption:   'default',
+//-              inpType:        'email',
+//-              inpName:        'email',
+//-              inpMode:        'email',
+//-              inpPlaceholder: 'Email',
+//-              inpId:          'emailtexfield',
+//-              hoverStyle:     'like-hover'})
+
+//- TODO add mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya
+//-
+//- masked text-field
+//- +text-field({leftCaption:    'masked text field',
+//-              inpType:        'date',
+//-              inpName:        'date',
+//-              inpId:          'dateField',
+//-              textTransform:  'uppercase'})
+
+//- subscription text field
+//- +text-field({leftCaption:    'subscription text field', 
+//-              inpType:        'email',
+//-              inpName:        'email',
+//-              inpMode:        'email',
+//-              inpPlaceholder: 'Email',
+//-              inpId:          'Subscription',
+//-              isArrow:        'true',
+//-             })

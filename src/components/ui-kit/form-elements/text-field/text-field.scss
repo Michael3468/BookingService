@@ -1,17 +1,17 @@
 @import '../../../../assets/scss/utils/vars.scss';
 
-.textfield__caption {
+.text-field__caption {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   margin-bottom: $inputCapMarBottom;
 }
-.textfield__caption-left {
+.text-field__caption-left {
   display: flex;
   justify-self: flex-start;
 }
-.textfield__caption-right {
+.text-field__caption-right {
   display: flex;
   justify-content: flex-end;
   font-weight: normal;
@@ -26,7 +26,7 @@
   font-family: $secondFont;
 }
 
-.textfield__input {
+.text-field__input {
   padding: 13px 10px 12px 15px;
   color: $DarkShade75;
   &::placeholder {

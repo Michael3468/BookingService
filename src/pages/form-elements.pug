@@ -14,24 +14,24 @@ block content
       .column-1
 
         .block-margin
-          include ../components/ui-kit/form-elements/textfield/textfield
-          +textfield({leftCaption:    'text field', 
-                      rightCaption:   'default',
-                      inpType:        'email',
-                      inpName:        'email',
-                      inpMode:        'email',
-                      inpPlaceholder: 'Email',
-                      inpId:          'emailTextField'})
+          include ../components/ui-kit/form-elements/text-field/text-field
+          +text-field({leftCaption:    'text field', 
+                       rightCaption:   'default',
+                       inpType:        'email',
+                       inpName:        'email',
+                       inpMode:        'email',
+                       inpPlaceholder: 'Email',
+                       inpId:          'emailTextField'})
 
         .block-margin
-          +textfield({leftCaption:    'text field', 
-                      rightCaption:   'hover /focus',
-                      inpType:        'text',
-                      inpName:        'text',
-                      inpMode:        'text',
-                      inpPlaceholder: 'This is pretty awesome',
-                      inpId:          'textField',
-                      hoverStyle:     'like-hover'})
+          +text-field({leftCaption:    'text field', 
+                       rightCaption:   'hover /focus',
+                       inpType:        'text',
+                       inpName:        'text',
+                       inpMode:        'text',
+                       inpPlaceholder: 'This is pretty awesome',
+                       inpId:          'textField',
+                       hoverStyle:     'like-hover'})
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
@@ -44,11 +44,11 @@ block content
 
         .block-margin.date-margin
           //- TODO make new mixin maskedTextField with jq plugin
-          +textfield({leftCaption:    'masked text field',
-                      inpType:        'date',
-                      inpName:        'date',
-                      inpId:          'dateField',
-                      textTransform:  'uppercase'})
+          +text-field({leftCaption:    'masked text field',
+                       inpType:        'date',
+                       inpName:        'date',
+                       inpId:          'dateField',
+                       textTransform:  'uppercase'})
         
         .block-margin.date-dropdown-margin
           include ../components/ui-kit/form-elements/date-dropdown/date-dropdown
@@ -64,15 +64,15 @@ block content
             include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
             +filter-date-dropdown({leftCaption : 'filter date dropdown'})
 
-          .block-margin.date-dropdown-margin.subscription-textfield-margin
-            include ../components/ui-kit/form-elements/textfield/textfield
-            +textfield({leftCaption:    'subscription text field', 
-                        inpType:        'email',
-                        inpName:        'email',
-                        inpMode:        'email',
-                        inpPlaceholder: 'Email',
-                        inpId:          'Subscription',
-                        isArrow:        'true'})
+          .block-margin.date-dropdown-margin.subscription-text-field-margin
+            include ../components/ui-kit/form-elements/text-field/text-field
+            +text-field({leftCaption:    'subscription text field', 
+                         inpType:        'email',
+                         inpName:        'email',
+                         inpMode:        'email',
+                         inpPlaceholder: 'Email',
+                         inpId:          'Subscription',
+                         isArrow:        'true'})
 
 
       .column-2
@@ -293,7 +293,7 @@ block content
           include ../components/ui-kit/form-elements/comments-block/comments-block
           //- include ../components/ui-kit/form-elements/like-button/like-button
           +comments-block({imageName:   'image.png',
-                          userName:     'Мурад Сарафанов',
-                          commentDate:  '5 дней назад',
-                          feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                           userName:     'Мурад Сарафанов',
+                           commentDate:  '5 дней назад',
+                           feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
                           })
