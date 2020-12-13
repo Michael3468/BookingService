@@ -6,8 +6,6 @@ import './checkbox-buttons.scss';
   let checkboxOptions = expandableCheckbox.nextElementSibling;
   let expandMore = expandableCheckbox.lastElementChild.children[1];
 
-  console.dir(expandMore);
-
   expandableCheckbox.onclick = function(){
     if ( isCheckboxOptionsVisible() ) {
       hideCheckboxOptions();
