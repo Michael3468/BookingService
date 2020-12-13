@@ -36,7 +36,7 @@ block content
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
           +dropdown-guests({leftCaption:   'dropdown',
-                            idPrefix:      'iqdropdown',
+                            idPrefix:      'drop-down',
                             idPostfix:     '-1',
                             selectionText: 'Сколько гостей',
                             expMenuStatus: 'visibility-hidden',
@@ -155,8 +155,8 @@ block content
 
           .buttons-block
             .button__margin.btn-mt
-              +button({link: 'change_me', mod: ['noback']})
-            +button({link: 'change_me', mod: ['noback','noback_hover']})
+              +button({link: 'change_me', mod: ['no-background']})
+            +button({link: 'change_me', mod: ['no-background','no-background_hover']})
 
           .buttons-block
             +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
