@@ -10,6 +10,9 @@
 #third-container {
   margin-bottom: 73px;
 }
+#fourth-container {
+  margin-bottom: 111px;
+}
 .column-1, .column-2, .column-3 {
   display: flex;
   flex-direction: column;
@@ -37,7 +40,7 @@
 .date-dropdown-margin {
   margin-top: rem(22);
 }
-.subscription-textfield-margin {
+.subscription-text-field-margin {
   margin-top: rem(41);
 }
 .checkbox-buttons-margin {
