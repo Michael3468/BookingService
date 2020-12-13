@@ -1,0 +1,49 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.masked-text-field__caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: $inputCapMarBottom;
+}
+.masked-text-field__caption-left {
+  display: flex;
+  justify-self: flex-start;
+}
+.masked-text-field__caption-right {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: normal;
+  color: $DarkShade50;
+}
+
+//common input__style
+.input__style {
+  border: rem(1) solid $DarkShade25;
+  border-radius: $inputBorderRadius;
+  width: 100%;
+  font-family: $secondFont;
+}
+
+.masked-text-field__input {
+  padding: rem(13) rem(10) rem(12) rem(15);
+  color: $DarkShade75;
+  text-transform: uppercase;
+  &::placeholder {
+    color: $DarkShade25;
+  }
+  &:hover {
+    border-color: $DarkShade50;
+    &::placeholder {
+      color: $DarkShade75;
+    }
+  }
+}
+.like-hover {
+  border-color: $DarkShade50;
+  &::placeholder {
+    color: $DarkShade75;
+  }
+}

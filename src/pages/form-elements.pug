@@ -43,13 +43,12 @@ block content
                            })
 
         .block-margin.date-margin
-          //- TODO make new mixin maskedTextField with jq plugin
-          +text-field({leftCaption:    'masked text field',
-                       inpType:        'date',
-                       inpName:        'date',
-                       inpId:          'dateField',
-                       textTransform:  'uppercase'})
-        
+          include ../components/ui-kit/form-elements/masked-text-field/masked-text-field
+          +masked-text-field({leftCaption:    'masked text field',
+                              inpId:          'masked-date-field',
+                              inpName:        'date',
+                              inpPlaceholder: 'ДД.ММ.ГГГГ'})
+
         .block-margin.date-dropdown-margin
           include ../components/ui-kit/form-elements/date-dropdown/date-dropdown
           +date-dropdown({startDateCaption: 'date dropdown',
