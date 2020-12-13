@@ -6,7 +6,7 @@ mixin checkbox-buttons(params)
     .expandable-checkbox-list(id= 'expandable-checkbox-list-'+params.inpId)
       .expandable-checkbox-list__caption
         h3.expandable-checkbox-list__text= params.caption
-        .expandable-checkbox-list__expand-more.material-icons expand_more
+        .expandable-checkbox-list__expand-more.material-icons(class=params.rotate) expand_more
 
   .checkbox-buttons__block(class= params.optionsDisplay)
     each val, index in params.inpText
@@ -25,7 +25,7 @@ mixin checkbox-buttons(params)
 //-                   })
 
 
-//- exmple expandable checkbox list (default, not expanded)
+//- example expandable checkbox list (default, not expanded)
 //- +checkbox-buttons({caption:        'expandable checkbox list',
 //-                   leftCaption:    'checkbox buttons',
 //-                   inpId:          'check-box-buttons-1',
@@ -36,7 +36,7 @@ mixin checkbox-buttons(params)
 //-                   inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
 
 
-//- exmple expandable checkbox list
+//- example expandable checkbox list
 //- +checkbox-buttons({caption:      'expandable checkbox list',
 //-                    inpId:        'check-box-buttons-2',
 //-                    inpStatus:    [ ,'checked','checked'],
