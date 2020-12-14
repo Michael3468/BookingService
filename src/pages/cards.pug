@@ -1,0 +1,17 @@
+extends ../components/layouts/main
+
+block variables
+  - var title = 'FSD Cards';
+  - var description = 'FSD education project | Form Elements page';
+  - var pageClass = 'cards';
+
+block content
+  .wrapper
+
+    include ../components/ui-kit/logo/logo
+    .container
+      
+      .cards-column-1
+
+        include ../components/ui-kit/cards/room-search/room-search
+        +room-search({caption: 'Найдём номера под ваши пожелания'})

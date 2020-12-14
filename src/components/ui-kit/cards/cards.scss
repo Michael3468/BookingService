@@ -1,0 +1,17 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.cards {
+  background: $backgroundColor;
+}
+.cards-column-1 {
+  width: 380px;
+  margin-top: rem(12);
+}
+.cards-border {
+  background: #FFFFFF;
+  border: rem(1) solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: rem(0) rem(0) rem(25) rgba(0, 0, 0, 0.2);
+  border-radius: rem(4);
+}

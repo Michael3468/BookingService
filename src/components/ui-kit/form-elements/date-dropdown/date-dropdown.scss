@@ -1,4 +1,5 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .date-dropdown {
   display: flex;
@@ -15,19 +16,20 @@
   margin-bottom: $inputCapMarBottom;
 }
 .date-dropdown__input {
-  padding: 12px 10px 11px 13px;
+  padding: rem(12) rem(10) rem(11) rem(13);
   text-transform: uppercase;
 }
 .date-dropdown__input-block {
   display: flex;
   flex-direction: column;
-  padding: 8px 10px 8px 15px;
+  padding: rem(8) rem(10) rem(8) rem(15);
+  cursor: pointer;
 }
 
 //- common styles
 // common input__style
 .input__style {
-  border: 1px solid $DarkShade25;
+  border: rem(1) solid $DarkShade25;
   border-radius: $inputBorderRadius;
   width: 100%;
   font-family: $secondFont;
@@ -36,7 +38,7 @@
 .date-dropdown__expand-button {
   cursor: pointer;
   color: $DarkShade50;
-  margin: -23px 0 0 82%;
-  width: 20px;
+  margin: rem(-23) 0 0 82%;
+  width: rem(20);
 }
 //- common styles end
