@@ -1,11 +1,11 @@
 mixin button(params)
   -
-    const defaultclass = 'button'
+    const defaultClass = 'button'
     const link= params.link|| undefined
     const value = params.value|| 'Click me'
     let mod = params.mod
     if(mod !== undefined){
-      mod = mod.map((item)=> `${defaultclass}_${item}`)
+      mod = mod.map((item)=> `${defaultClass}_${item}`)
       classes = mod.join(' ')
       }  else {
       classes = ""
