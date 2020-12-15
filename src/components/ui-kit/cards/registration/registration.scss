@@ -1,0 +1,34 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.registration__caption {
+  font-family: $secondFont;
+  margin-bottom: rem(17);
+}
+.registration-text-field__margin {
+  margin-bottom: rem(4);
+}
+.registration-radio-buttons__margin {
+  margin-top: rem(-8);
+  margin-bottom: rem(23);
+}
+
+.registration-text-field__block-margin {
+  margin-top: rem(20);
+}
+.registration-text-field__block-margin-between {
+  margin-top: rem(4);
+}
+.registration-toggle__margin {
+  margin-top: rem(-7);
+  margin-bottom: rem(23);
+}
+.registration__enter-button-block {
+  display: flex;
+  flex-shrink: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration__enter-button-block-margin {
+  margin-top: rem(30);
+}
