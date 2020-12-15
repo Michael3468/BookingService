@@ -1,16 +1,14 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.room-search {
-  padding: 38px 30px 29px 30px;
-}
+
 .room-search__caption {
   font-family: $secondFont;
-  margin-bottom: 21px;
+  margin-bottom: rem(21);
 }
 .room-search__date-dropdown-margin {
-  margin-bottom: 22px;
+  margin-bottom: rem(22);
 }
 .room-search__dropdown-guests-margin {
-  margin-bottom: 31px;
+  margin-bottom: rem(31);
 }
