@@ -19,3 +19,18 @@ block content
         .registration__block-margin
           include ../components/ui-kit/cards/registration/registration
           +registration({caption:  'Регистрация аккаунта'})
+
+      .cards-column-2
+
+        include ../components/ui-kit/cards/booking/booking
+        +booking({roomNumber:                   '888',
+                  roomStatus:                   'Люкс',
+                  roomPrice:                    '9 990₽',
+                  daysPriceText:                ' x 4 суток',
+                  servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
+                  additionalServicesPriceText:  'Сбор за дополнительные услуги',
+                  daysPriceValue:               '39 960₽',
+                  servicesPriceValue:           '0₽',
+                  additionalServicesPriceValue: '300₽',
+                  resultText:                   'Итого',
+                  resultSum:                    `38\u00A0081₽`})

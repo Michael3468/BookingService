@@ -1,0 +1,123 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.booking {
+  display: flex;
+  flex-direction: column;
+}
+.booking__caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: rem(19);
+}
+.booking__caption-right {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-family: $secondFont;
+  margin-top: 5px;
+}
+.booking__caption-number {
+  display: flex;
+  flex-direction: row;
+  font-family: $secondFont;
+  line-height: rem(17);
+  color: $DarkShade100;
+}
+.booking__caption-symbol {
+  font-size: rem(14);
+  align-self: flex-end;
+  margin: 0 0 rem(5) rem(-1);
+}
+.booking__caption-room-number {
+  font-size: rem(24);
+  font-weight: bold;
+  color: $DarkShade100;
+  margin-left: rem(3);
+}
+.booking__caption-status {
+  align-self: flex-end;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-transform: uppercase;
+  color: $purple;
+  margin-bottom: rem(4);
+}
+.booking__caption-left {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  font-family: $secondFont;
+  font-weight: bold;
+  font-size: rem(14);
+  line-height: rem(18);
+  color: $DarkShade50;
+  margin-top: rem(9);
+}
+.booking__caption-price {
+  font-weight: bold;
+}
+.booking__caption-text {
+  font-weight: normal;
+  font-size: rem(12);
+  margin-left: rem(3);
+}
+.booking__date-dropdown-margin {
+  margin-bottom: rem(21);
+}
+
+
+.booking__options-block,
+.booking__options-item-block {
+  display: flex;
+  flex-direction: row;
+}
+.booking__options-block {
+  justify-content: space-between;
+  margin-top: rem(20);
+}
+.booking__options-item-block {
+  display: flex;
+  justify-content: space-between;
+  width: rem(239);
+}
+.booking__options-info-icon {
+  border: rem(1) solid $DarkShade25;
+  box-sizing: border-box;
+  width: rem(20);
+  height: rem(20);
+  border-radius: rem(10);
+}
+.booking__options-info-icon::before {
+  content: 'i';
+  position: relative;
+  left: rem(7);
+  font-family: $secondFont;
+  font-size: rem(14);
+  color: $DarkShade25;
+}
+.booking__options-right .booking__options-item {
+  display: flex;
+  justify-content: flex-end;
+}
+.booking__options-item {
+  margin-bottom: rem(14);
+  line-height: rem(20);
+}
+
+.booking__options-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: $secondFont;
+  font-weight: bold;
+  font-size: rem(19);
+  margin-top: rem(12);
+  margin-bottom: rem(18);
+}
+.booking__options-result-line {
+  width: 100%;
+  border-bottom: rem(1) dashed $DarkShade25;
+  margin: 0 rem(3) rem(7);
+}
