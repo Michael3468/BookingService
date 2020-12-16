@@ -5,7 +5,7 @@ mixin date-dropdown(params)
       .date-dropdown__caption
         h3= params.startDateCaption
       .date-dropdown__input-block(id=params.startInpId).input__style
-        p.date-dropdown__text ДД.ММ.ГГГГ
+        p.date-dropdown__text= (params.startDefaultDate || "ДД.ММ.ГГГГ")
         span.date-dropdown__expand-button.material-icons expand_more
 
     .date-dropdown__block
@@ -14,3 +14,11 @@ mixin date-dropdown(params)
       .date-dropdown__input-block(id=params.endInpId).input__style
         p.date-dropdown__text= (params.endDefaultDate || "ДД.ММ.ГГГГ")
         span.date-dropdown__expand-button.material-icons expand_more
+
+//- example
+//- +date-dropdown({startDateCaption: 'date dropdown',
+//-                 endDateCaption:   'date dropdown',
+//-                 startInpId:       'startDate',
+//-                 endInpId:         'endDate',
+//-                 startDefaultDate: '19.08.2019',
+//-                 endDefaultDate:   '23.08.2019'})
