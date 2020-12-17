@@ -1,6 +1,6 @@
 mixin registration(params)
   .registration.cards-border
-    h1.registration__caption=params.caption
+    h1.registration__caption Регистрация аккаунта
 
     .registration-text-field__margin
       include ../../../ui-kit/form-elements/text-field/text-field
@@ -48,6 +48,7 @@ mixin registration(params)
                   inpPlaceholder: 'Пароль',
                   inpId:          'password',
                   })
+
     .registration-toggle__margin
       include ../../../ui-kit/form-elements/toggle/toggle
       +toggle({toggleId:     'toggle-button1',
