@@ -1,0 +1,25 @@
+mixin login(params)
+  .login.cards-border
+    h1.login__caption Войти
+
+    .login__inputs-block
+      +text-field({ inpType:        'email',
+                    inpName:        'email',
+                    inpMode:        'email',
+                    inpPlaceholder: 'Email',
+                    inpId:          'email',
+                  })
+
+      +text-field({ inpType:        'password',
+                    inpName:        'password',
+                    inpMode:        'password',
+                    inpPlaceholder: 'Пароль',
+                    inpId:          'password',
+                  })
+
+    include ../../../ui-kit/form-elements/buttons/buttons
+    +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Войти'})
+
+    .login__create-login-block
+      p.login__create-login-text Нет аккаунта на Toxin?
+      +button({link: 'change_me', mod: ['bordered'], value: 'Создать'})

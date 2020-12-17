@@ -1,0 +1,17 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.login__caption {
+  font-family: $secondFont;
+  margin-bottom: rem(17);
+}
+.login__inputs-block {
+  margin-bottom: rem(22);
+}
+.login__create-login-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rem(30);
+}
