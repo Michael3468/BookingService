@@ -1,14 +1,10 @@
 mixin booking(params)
   .booking.cards-border
-    .booking__caption
-      .booking__caption-right
-        h1.booking__caption-number
-          span.booking__caption-symbol №
-          p.booking__caption-room-number= params.roomNumber
-        .booking__caption-status=params.roomStatus
-      .booking__caption-left
-        p.booking__caption-price=params.roomPrice
-        p.booking__caption-text в сутки
+
+    include ./__caption/__caption
+    +booking-caption({roomNumber: '888',
+                      roomStatus: 'Люкс',
+                      roomPrice:  '9 990₽',})
 
     .booking__date-dropdown-margin
       include ../../../ui-kit/form-elements/date-dropdown/date-dropdown

@@ -1,0 +1,10 @@
+mixin booking-caption(params)
+  .booking__caption
+    .booking__caption-right
+      h1.booking__caption-number
+        span.booking__caption-symbol №
+        p.booking__caption-room-number= params.roomNumber
+      .booking__caption-status=params.roomStatus
+    .booking__caption-left
+      p.booking__caption-price=params.roomPrice
+      p.booking__caption-text в сутки
