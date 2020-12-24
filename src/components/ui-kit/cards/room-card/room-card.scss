@@ -1,0 +1,106 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.room-card,
+.room-card__picture,
+.room-card__picture-block::before,
+.room-card__picture-block::after {
+  border-radius: $BorderRadius $BorderRadius 0 0;
+}
+.room-card {
+  box-sizing: border-box;
+  width: rem(271);
+  background: $default-color;
+}
+.room-card__picture-container {
+  position: relative;
+}
+.room-card__picture {
+  object-fit: contain;
+}
+.room-card__picture-block::before,
+.room-card__picture-block::after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: rem(42);
+  height: 100%;
+}
+.room-card__picture-block:hover::before {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+}
+.room-card__picture-block:hover::after {
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+  right: 0;
+}
+.room-card__picture-block:hover {
+  .room-card__picture-navigation {
+    opacity: 1;
+  }
+}
+//- navigation
+.room-card__picture-navigation {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 36%;
+  color: $default-color;
+  width: 100%;
+  opacity: 0;
+}
+.room-card__picture-navigation_left,
+.room-card__picture-navigation_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(44);
+  height: rem(44);
+  cursor: pointer;
+  z-index: 20;
+}
+.room-card__picture-navigation_left {
+  transform: rotate(90deg);
+}
+.room-card__picture-navigation_right {
+  transform: rotate(-90deg);
+}
+.room-card__picture-slides {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 5.5%;
+  bottom: 10%;
+  z-index: 20;
+}
+
+$room-card__picture-slide_width: rem(8);
+.room-card__picture-slide {
+  width: $room-card__picture-slide_width;
+  height: $room-card__picture-slide_width;
+  border: rem(1) solid $default-color;
+  border-radius: $room-card__picture-slide_width / 2;
+  margin-left: $room-card__picture-slide_width / 2;
+  cursor: pointer;
+  &_active {
+    background: $default-color;
+  }
+}
+//- navigation end
+
+.room-card__number-price {
+  margin: rem(14) rem(18) 0 rem(22);
+  border-bottom: rem(1) solid $DarkShade25;
+}
+.number-price_font-size {
+  font-size: rem(19);
+}
+.number-price_m-bottom {
+  margin-bottom: rem(7);
+}
+.room-card__feedback-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(3) rem(20) rem(14) rem(20);
+}

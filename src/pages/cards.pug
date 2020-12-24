@@ -9,7 +9,7 @@ block content
   .wrapper
 
     include ../components/ui-kit/logo/logo
-    .container
+    .container.cards__container
       
       .cards-column-1
 
@@ -23,17 +23,14 @@ block content
       .cards-column-2
 
         include ../components/ui-kit/cards/booking/booking
-        +booking({roomNumber:                   '888',
-                  roomStatus:                   'Люкс',
-                  roomPrice:                    '9 990₽',
-                  daysPriceText:                ' x 4 суток',
-                  servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
-                  additionalServicesPriceText:  'Сбор за дополнительные услуги',
-                  daysPriceValue:               '39 960₽',
-                  servicesPriceValue:           '0₽',
-                  additionalServicesPriceValue: '300₽',
-                  resultText:                   'Итого',
-                  resultSum:                    `38\u00A0081₽`})
+        +booking({  daysPriceText:                ' x 4 суток',
+                    servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
+                    additionalServicesPriceText:  'Сбор за дополнительные услуги',
+                    daysPriceValue:               '39 960₽',
+                    servicesPriceValue:           '0₽',
+                    additionalServicesPriceValue: '300₽',
+                    resultText:                   'Итого',
+                    resultSum:                    `38\u00A0081₽`})
 
         .login__margin
           include ../components/ui-kit/cards/login/login
@@ -44,3 +41,25 @@ block content
 
         include ../components/ui-kit/cards/date-picker/date-picker
         +date-picker()
+
+        .room-card__margin
+          include ../components/ui-kit/cards/room-card/room-card
+          +room-card({  Id:               '1',
+                        number:           '888',
+                        status:           'Люкс',
+                        price:            '9 900₽',
+                        photoName:        'room-card-888.jpg',
+                        starsRate:        '5',
+                        feedbacksNumber:  '145',
+                     })
+
+        .room-card__margin
+          include ../components/ui-kit/cards/room-card/room-card
+          +room-card({  Id:               '2',
+                        number:           '840',
+                        status:           'Люкс',
+                        price:            '9 900₽',
+                        photoName:        'room-card-840.jpg',
+                        starsRate:        '4',
+                        feedbacksNumber:  '65',
+                     })
