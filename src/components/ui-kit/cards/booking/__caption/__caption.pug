@@ -1,10 +1,25 @@
 mixin booking-caption(params)
-  .booking__caption
+  .booking__caption(class=params.marginBottom)
     .booking__caption-right
       h1.booking__caption-number
         span.booking__caption-symbol №
-        p.booking__caption-room-number= params.roomNumber
+        p.booking__caption-room-number(class=params.fontSize)= params.roomNumber
       .booking__caption-status=params.roomStatus
     .booking__caption-left
       p.booking__caption-price=params.roomPrice
       p.booking__caption-text в сутки
+
+
+//- example
+//- +booking-caption({roomNumber: '888',
+//-                   roomStatus: 'Люкс',
+//-                   roomPrice:  '9 990₽',})
+
+//- usage in other mixin example
+//- +booking-caption({  roomNumber:    params.number,
+//-                     roomStatus:    params.status,
+//-                     roomPrice:     params.price,
+//-                     fontSize:     'number-price_font-size',
+//-                     marginBottom: 'number-price_m-bottom',
+//-                 })
+//- add classes .number-price_font-size, .number-price_m-bottom to element's css
