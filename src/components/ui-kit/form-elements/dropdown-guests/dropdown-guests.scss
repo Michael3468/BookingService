@@ -111,7 +111,7 @@
 }
 .button-decrement,
 .button-increment {
-  background: #fff;
+  background: $default-color;
 }
 .icon-decrement::after,
 .icon-increment::after {
@@ -158,7 +158,7 @@
   font-weight: bold;
   color: $purple;
   text-transform: uppercase;
-  background: #fff;
+  background: $default-color;
 }
 .dropdown-guests-button_clean {
   visibility: hidden;

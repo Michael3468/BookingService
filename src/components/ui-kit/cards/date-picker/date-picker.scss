@@ -130,7 +130,7 @@
 .datepicker--cell.-selected-,
 .datepicker--cell.-selected-.-focus-,
 .datepicker--cell.-selected-.-current- {
-  color: #fff;
+  color: $default-color;
   background: $primaryGradient;
 }
 .datepicker--cell.-range-from-,
@@ -141,7 +141,7 @@
 }
 .datepicker--cell.-current-,
 .datepicker--cell.-current-.-in-range- {
-  color: #fff;
+  color: $default-color;
   font-weight: bold;
   background: $secondaryGradient;
 }
