@@ -8,19 +8,15 @@
   display: flex;
   flex-direction: row;
 }
+
+$comments-block__user-photo_size: rem(48);
 .comments-block__user-photo {
-  position: relative;
-  overflow: hidden;
-  width: rem(48);
-  height: rem(48);
-  border-radius: rem(24);
-}
-.comments-block__user-photo-img {
-  position: absolute;
-  top:-24%;
-  width: rem(90);
-  height: rem(90);
-  object-fit:cover;
+  width: $comments-block__user-photo_size;
+  height: $comments-block__user-photo_size;
+  border-radius: $comments-block__user-photo_size / 2;
+  border: rem(2) solid $default-color;
+  box-sizing: border-box;
+  filter: drop-shadow(rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.1));
 }
 .comments-block__user-info {
   margin: rem(1) 0 0 rem(10);

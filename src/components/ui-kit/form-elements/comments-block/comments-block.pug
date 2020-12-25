@@ -1,8 +1,8 @@
 mixin comments-block(params)
   .comments-block
     .comments-block__user
-      .comments-block__user-photo
-        img.comments-block__user-photo-img(src="/assets/img/"+params.imageName, alt="alt text")
+      img.comments-block__user-photo(src="/assets/img/"+params.imageName, alt="alt text")
+      
       .comments-block__user-info
         .comments-block__user-name= params.userName
         .comments-block__comment-date= params.commentDate
