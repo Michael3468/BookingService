@@ -10,6 +10,9 @@
 }
 .headers-and-footers__margin {
   margin-top: rem(38);
+  &:last-child {
+    margin-bottom: rem(140);
+  }
 }
 .responsive-footer-container {
   display: grid;
