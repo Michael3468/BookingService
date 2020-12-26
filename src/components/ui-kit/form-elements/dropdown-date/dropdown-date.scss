@@ -1,25 +1,25 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.date-dropdown {
+.dropdown-date {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-.date-dropdown__block {
+.dropdown-date__block {
   display: flex;
   flex-direction: column;
   width: calc(50% - 10px);
 }
-.date-dropdown__caption {
+.dropdown-date__caption {
   margin-bottom: $inputCapMarBottom;
 }
-.date-dropdown__input {
+.dropdown-date__input {
   padding: rem(12) rem(10) rem(11) rem(13);
   text-transform: uppercase;
 }
-.date-dropdown__input-block {
+.dropdown-date__input-block {
   display: flex;
   flex-direction: column;
   padding: rem(8) rem(10) rem(8) rem(15);
@@ -35,7 +35,7 @@
   font-family: $secondFont;
 }
 //- TODO .input__expand-button to main.scss
-.date-dropdown__expand-button {
+.dropdown-date__expand-button {
   cursor: pointer;
   color: $DarkShade50;
   margin: rem(-23) 0 0 82%;

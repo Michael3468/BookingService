@@ -7,8 +7,8 @@ mixin booking(params)
                       roomPrice:  params.roomPrice,})
 
     .booking__date-dropdown-margin
-      include ../../../ui-kit/form-elements/date-dropdown/date-dropdown
-      +date-dropdown({startDateCaption: 'прибытие',
+      include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
+      +dropdown-date({startDateCaption: 'прибытие',
                       endDateCaption:   'выезд',
                       startInpId:       'startDate',
                       endInpId:         'endDate',

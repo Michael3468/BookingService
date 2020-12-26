@@ -3,8 +3,8 @@ mixin room-search(params)
     h1.room-search__caption Найдём номера под ваши пожелания
 
     .room-search__date-dropdown-margin
-      include ../../../ui-kit/form-elements/date-dropdown/date-dropdown
-      +date-dropdown({startDateCaption: 'прибытие',
+      include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
+      +dropdown-date({startDateCaption: 'прибытие',
                       endDateCaption:   'выезд',
                       startInpId:       'startDate',
                       endInpId:         'endDate',
