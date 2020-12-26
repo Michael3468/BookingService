@@ -1,10 +1,10 @@
 include ../../form-elements/buttons/buttons.pug
-include  header_logo/header_logo.pug
 
 mixin header(loginStatus)
   .header.hf-bg-color
     .container.header__container
       .burger__logo
+        include  header_logo/header_logo.pug
         +header_logo()
         //- label for #menu-checkbox input
         label.material-icons.burger(for='menu-checkbox', onclick='') menu
