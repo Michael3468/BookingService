@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   background-color: $default-color;
-  height: 72px;
+  height: rem(72);
 }
 .header__nav {
   display: flex;
@@ -16,7 +16,7 @@
 .header__nav-ul {
   display: flex;
   justify-content: space-between;
-  width: 446px;
+  width: rem(446);
   line-height: rem(17);
 }
 .header__nav-li {
@@ -45,17 +45,17 @@
 .header__authorized {
   display: flex;
   justify-content: flex-end;
-  width: 120px;
-  margin-left: 21px;
-  border-left: 1px solid #f4f3f6;
+  width: rem(120);
+  margin-left: rem(21);
+  border-left: rem(1) solid #f4f3f6;
 }
 .header__notAuthorized {
   display: flex;
   justify-content: flex-end;
-  margin-left: 21px;
+  margin-left: rem(21);
 }
 .header__auth-buttons-padding:last-child {
-  margin-left: 21px;
+  margin-left: rem(21);
 }
 .expand-menu {
   display: -webkit-box;
@@ -97,7 +97,7 @@
 
 /* adaptive header */
 .header__container {
-  height: 40px;
+  height: rem(40);
   z-index: 1;
 }
 .burger {
@@ -128,7 +128,7 @@
     width: 100vw;
   }
   .header__shadow {
-    box-shadow: 0px 8px 7px 0px rgba(0,0,0,0.2);
+    box-shadow: rem(0) rem(8) rem(7) rem(0) rgba(0,0,0,0.2);
   }
   .header__container {
     display: flex;
@@ -151,7 +151,7 @@
   }
   .header__nav-li {
     width: 100%;
-    padding: 15px 0;
+    padding: rem(15) 0;
     text-align: center;
     &:hover {
       background: $menu-hover-color;
@@ -180,7 +180,7 @@
   }
 
   .header__auth-buttons-padding {
-    padding: 10px 0;
+    padding: rem(10) 0;
   }
 
   .header__auth-buttons-padding:last-child {
