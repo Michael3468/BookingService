@@ -9,7 +9,9 @@ block content
   .wrapper
 
     .landing-page__img-block
-      img.landing-page__background(src="/assets/img/landing-page__background-image-3.jpg", alt="landing page background image")
+      img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-1.jpg", alt="landing page background image")
+      img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-2.jpg", alt="landing page background image")
+      img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-3.jpg", alt="landing page background image")
 
       include ../components/ui-kit/headers-and-footers/headers/headers
       +header()
