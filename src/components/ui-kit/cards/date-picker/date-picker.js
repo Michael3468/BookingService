@@ -10,15 +10,21 @@ $('#date-picker').datepicker({
     days: 'MM <i>yyyy</i>',
   },
 
+  onSelect: function (fd, d, picker) {
+    $("#startDate").val(fd.split(" - ")[0]);
+    $("#endDate").val(fd.split(" - ")[1]);
+  },
+
 })
 
 $(function(){
 
   $(function addApplyButton() {
-    let pickerButtons = $('#date-picker').find('.datepicker--buttons');
-    pickerButtons.append('<span class="datepicker--button" data-action="apply">Применить</span>');
+    let isPickerButtons = $('#date-picker').find('.datepicker--buttons');
+    if (isPickerButtons) {
+      isPickerButtons.append('<span class="datepicker--button" data-action="apply">Применить</span>');
+    }
   });
-
   addApplyButton();
 
 });

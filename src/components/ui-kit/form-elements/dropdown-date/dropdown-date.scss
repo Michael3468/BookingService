@@ -20,10 +20,14 @@
   text-transform: uppercase;
 }
 .dropdown-date__input-block {
+  position: relative;
+}
+.dropdown-date__input {
   display: flex;
   flex-direction: column;
-  padding: rem(8) rem(10) rem(8) rem(15);
+  padding: rem(10) rem(10) rem(13) rem(15);
   cursor: pointer;
+  caret-color: white;
 }
 
 //- common styles
@@ -36,9 +40,20 @@
 }
 //- TODO .input__expand-button to main.scss
 .dropdown-date__expand-button {
+  position: absolute;
   cursor: pointer;
   color: $DarkShade50;
-  margin: rem(-23) 0 0 82%;
+  right: 8%;
+  top: rem(10);
   width: rem(20);
 }
 //- common styles end
+
+.dropdown-date__date-picker {
+  margin-top: rem(7);
+  position: absolute;
+  z-index: 10;
+}
+.dropdown-date__date-picker_hidden {
+  display: none;
+}

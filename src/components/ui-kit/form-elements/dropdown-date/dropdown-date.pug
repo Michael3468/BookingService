@@ -4,16 +4,21 @@ mixin dropdown-date(params)
     .dropdown-date__block
       .dropdown-date__caption
         h3= params.startDateCaption
-      .dropdown-date__input-block(id=params.startInpId).input__style
-        p.dropdown-date__text= (params.startDefaultDate || "ДД.ММ.ГГГГ")
+      .dropdown-date__input-block
+        input.dropdown-date__input(id=params.startInpId type='text' placeholder="ДД.ММ.ГГГГ").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 
     .dropdown-date__block
       .dropdown-date__caption
         h3= params.endDateCaption
-      .dropdown-date__input-block(id=params.endInpId).input__style
-        p.dropdown-date__text= (params.endDefaultDate || "ДД.ММ.ГГГГ")
+      .dropdown-date__input-block
+        input.dropdown-date__input(id=params.endInpId type='text' placeholder="ДД.ММ.ГГГГ").input__style
         span.dropdown-date__expand-button.material-icons expand_more
+
+  //- .dropdown-date
+  .dropdown-date__date-picker.dropdown-date__date-picker_hidden
+    include ../../cards/date-picker/date-picker
+    +date-picker()
 
 //- example
 //- +dropdown-date({startDateCaption: 'date dropdown',
