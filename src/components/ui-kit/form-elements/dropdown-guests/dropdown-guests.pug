@@ -5,7 +5,7 @@ mixin dropdown-guests(params)
       p.dropdown-guests-selection__text= params.selectionText
       .dropdown-guests__expand-button.material-icons expand_more
       
-    .dropdown-guests-menu(class=params.expMenuStatus)
+    .dropdown-guests__menu(class=params.expMenuStatus)
 
       if (params.idPostfix == '-changed-example')
         - var items = { 'item1': {valName : 'Взрослые', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Дети', valCounter: '1', valClass: 'dark'},'item3': {valName : 'Младенцы'} };
@@ -13,7 +13,7 @@ mixin dropdown-guests(params)
         - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
 
       each val, key in items
-        .dropdown-guests-menu-option(id=key)
+        .dropdown-guests__menu_option(id=key)
           p.dropdown-guests-item= val.valName
           .dropdown-guests-item-controls
             button.button-decrement(id=`dropdown-guests${params.idPostfix}-${key}-button-decrement` class=(val.valClass))
@@ -23,14 +23,13 @@ mixin dropdown-guests(params)
               i.icon-increment
       
       .dropdown-guests-buttons
-        button.dropdown-guests-button_clean(id=`dropdown-guests${params.idPostfix}-button-clean` class='dropdown-guests-button_clean-'+params.cleanBtnStatus) очистить
+        button.dropdown-guests-button_clean(id=`dropdown-guests${params.idPostfix}-button-clean` class='dropdown-guests-button_clean_'+params.cleanBtnStatus) очистить
         button.dropdown-guests-button_apply(id=`dropdown-guests${params.idPostfix}-button-apply`) применить
 
 //- examples
 
 //- +dropdown-guests({leftCaption:    'dropdown',
 //-                   selectionText:  'Сколько гостей',
-//-                   idPrefix:       'dropdown-guests',
 //-                   idPostfix:      '-2',
 //-                   items:          ['Взрослые','Дети','Младенцы'],
 //-                   menuStatus:     'menu-open',
@@ -38,7 +37,6 @@ mixin dropdown-guests(params)
 
 //- +dropdown-guests({leftCaption:    'dropdown',
 //-                   selectionText:  '3 гостя',
-//-                   idPrefix:       'dropdown-guests',
 //-                   idPostfix:      '-changed-example',
 //-                   items:          ['Взрослые','Дети','Младенцы'],
 //-                   menuStatus:     'menu-open',
@@ -46,7 +44,6 @@ mixin dropdown-guests(params)
 //-                  })
 
 //- +dropdown-guests({leftCaption:   'dropdown',
-//-                   idPrefix:      'drop-down',
 //-                   idPostfix:     '-1',
 //-                   selectionText: 'Сколько гостей',
 //-                   expMenuStatus: 'visibility-hidden',
