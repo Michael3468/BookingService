@@ -207,13 +207,13 @@ block content
       .column-3
 
         include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
-        +dropdown-guests({leftCaption:    'dropdown',
-                          selectionText:  '3 гостя',
-                          idPrefix:       'dropdown-guests',
-                          idPostfix:      '-changed-example',
-                          items:          ['Взрослые','Дети','Младенцы'],
-                          menuStatus:     'menu-open',
-                          cleanBtnStatus: 'show'
+        +dropdown-guests({leftCaption:       'dropdown',
+                          selectionText:     '3 гостя',
+                          idPrefix:          'dropdown-guests',
+                          idPostfix:         '-changed-example',
+                          items:             ['Взрослые','Дети','Младенцы'],
+                          menuStatus:        'menu-open',
+                          cleanButtonStatus: 'show'
                          })
 
 
@@ -236,7 +236,7 @@ block content
 
           .block-margin.expandable-checkbox-list__margin2
             include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-            +checkbox-buttons({caption:      'expandable checkbox list',
+            +checkbox-buttons({ caption:     'expandable checkbox list',
                                 leftCaption: 'checkbox buttons',
                                 inpId:       'check-box-buttons-2',
                                 inpStatus:   [ ,'checked','checked','checked',,,],
