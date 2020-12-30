@@ -1,6 +1,7 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+
 .dropdown-guests__caption {
   margin-bottom: $inputCapMarBottom;
 }
@@ -139,10 +140,10 @@
 .button-decrement {
   color: $DarkShade25;
   border: rem(1) solid $DarkShade25;
-}
-.dark {
-  color: $DarkShade50;
-  border: rem(1) solid $DarkShade50;
+  &_dark {
+    color: $DarkShade50 !important;
+    border: rem(1) solid $DarkShade50 !important;
+  }
 }
 //- item-quantity-dropdown styles end
 
