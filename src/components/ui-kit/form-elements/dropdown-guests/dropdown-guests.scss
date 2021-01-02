@@ -115,6 +115,7 @@
 .button-decrement,
 .button-increment {
   background: $default-color;
+  cursor: pointer;
 }
 .icon-decrement::after,
 .icon-increment::after {
