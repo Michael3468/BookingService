@@ -38,6 +38,7 @@ function buttonDecrementClick(event) {
     }
   }
 
+  //- TODO event.target change to this
   const dropdown = event.target.offsetParent;
   showHideCleanButton(dropdown);
 
@@ -49,13 +50,19 @@ function buttonDecrementClick(event) {
 function buttonIncrementClick(event) {
 
   const counter = this.previousElementSibling;
-  counter.innerText = +(counter.innerText) + 1;
-
+  const dropdownMenu = this.offsetParent;
+  let countersSum = getCountersValuesSum(dropdownMenu);
+  const maxGuests = 10;
   const buttonDecrement = counter.previousElementSibling;
-  buttonDecrement.classList.add('button-decrement_dark');
 
-  const dropdown = event.target.offsetParent;
-  showHideCleanButton(dropdown);
+  if ( countersSum < maxGuests ) {
+    counter.innerText = +(counter.innerText) + 1;
+    buttonDecrement.classList.add('button-decrement_dark');
+  }
+
+  //- TODO add change dropdownText on click
+  const dropdownText = dropdownMenu.previousElementSibling.firstChild;
+  showHideCleanButton(dropdownMenu);
 
   event.stopPropagation();
 
@@ -72,14 +79,15 @@ function addClickListenersToClasses(className, functionName) {
 }
 
 
+//- TODO del event
 function showHideDropdownMenu(event) {
 
   const dropdown = this;
-  const menu = this.querySelector('.dropdown-guests__menu');
+  const dropdownMenu = this.querySelector('.dropdown-guests__menu');
   const cleanButton = this.querySelector('.dropdown-guests-button_clean');
 
-  menu.classList.toggle('visibility-hidden');
-  if ( menu.classList.contains('visibility-hidden') ) {
+  dropdownMenu.classList.toggle('visibility-hidden');
+  if ( dropdownMenu.classList.contains('visibility-hidden') ) {
     //- hide menu
     dropdown.classList.remove('menu-open');
     cleanButton.classList.remove('dropdown-guests-button_clean_show');
@@ -87,29 +95,38 @@ function showHideDropdownMenu(event) {
     //- show menu
     dropdown.classList.add('menu-open');
 
-    showHideCleanButton(dropdown);
+    showHideCleanButton(dropdownMenu);
 
   }
 
 }
 
 
-function showHideCleanButton(dropdown) {
+function showHideCleanButton(dropdownMenu) {
 
-  const counters = dropdown.querySelectorAll('.counter');
+  let countersSum = getCountersValuesSum(dropdownMenu);
 
-  let countersValSum = 0;
-  counters.forEach(element => {
-    countersValSum += +(element.innerText);
-  });
-
-  const cleanButton = dropdown.querySelector('.dropdown-guests-button_clean');
-  if ( countersValSum > 0 ) {
+  const cleanButton = dropdownMenu.querySelector('.dropdown-guests-button_clean');
+  if ( countersSum > 0 ) {
     //- show clean button
     cleanButton.classList.add('dropdown-guests-button_clean_show');
   } else {
     //- hide clean button
     cleanButton.classList.remove('dropdown-guests-button_clean_show');
   }
+
+}
+
+
+function getCountersValuesSum(dropdownMenu) {
+
+  const counters = dropdownMenu.querySelectorAll('.counter');
+
+  let countersValuesSum = 0;
+  counters.forEach(element => {
+    countersValuesSum += +(element.innerText);
+  });
+
+  return countersValuesSum;
 
 }
