@@ -21,6 +21,10 @@ function cleanButtonClick(event) {
   });
 
   this.classList.remove('dropdown-guests-button_clean_show');
+
+  const dropdownText = menu.previousElementSibling.firstChild;
+  dropdownText.innerText = 'Сколько гостей';
+  
   event.stopPropagation();
 
 }
@@ -38,9 +42,9 @@ function buttonDecrementClick(event) {
     }
   }
 
-  //- TODO event.target change to this
-  const dropdown = event.target.offsetParent;
-  showHideCleanButton(dropdown);
+  const dropdownMenu = this.offsetParent;
+  changeDropdownText('dropdown-guests', dropdownMenu);
+  showHideCleanButton(dropdownMenu);
 
   event.stopPropagation();
 
@@ -55,18 +59,73 @@ function buttonIncrementClick(event) {
   const maxGuests = 10;
   const buttonDecrement = counter.previousElementSibling;
 
+  //- TODO do not inc last counter if others == 0 when it is guests dropdown
   if ( countersSum < maxGuests ) {
     counter.innerText = +(counter.innerText) + 1;
     buttonDecrement.classList.add('button-decrement_dark');
   }
 
-  //- TODO add change dropdownText on click
-  const dropdownText = dropdownMenu.previousElementSibling.firstChild;
+  //- TODO add change dropdownText on click for dropdown-options
+  changeDropdownText('dropdown-guests', dropdownMenu);
   showHideCleanButton(dropdownMenu);
 
   event.stopPropagation();
 
 }
+
+//-
+function changeDropdownText(dropdownType, dropdownMenu) {
+
+  if ( dropdownType == 'dropdown-guests' ) {
+
+    //- change dropdown-guests text
+    let dropdownText = dropdownMenu.previousElementSibling.firstChild;
+    const counters = dropdownMenu.querySelectorAll('.counter');
+    const guestsNum = Number(counters[0].innerText) + Number(counters[1].innerText);
+    const babiesNum = Number( counters[2].innerText );
+
+    let guestsText = 'гостей';
+    switch (guestsNum) {
+      //- case number depends on maxGuests in buttonIncrementClick function
+      case 1:
+        guestsText = 'гость';
+        break;
+      case 2:
+      case 3:
+      case 4:
+        guestsText = 'гостя';
+        break;
+    }
+
+    let babiesText = 'младенцев';
+    switch (babiesNum) {
+      case 1:
+        babiesText = 'младенец';
+        break;
+      case 2:
+      case 3:
+      case 4:
+        babiesText = 'младенца';
+        break;
+    }
+
+    if ( guestsNum > 0 && babiesNum > 0) {
+      dropdownText.innerText = `${guestsNum} ${guestsText}, ${babiesNum} ${babiesText}`;
+    } else if ( guestsNum == 0 && babiesNum == 0 ) {
+      dropdownText.innerText = `Сколько гостей`;
+    } else if ( guestsNum >= 0 ) {
+      dropdownText.innerText = `${guestsNum} ${guestsText}`;
+    }
+
+    //- change dropdown-guests text end
+  } //- if ( dropdownType == 'dropdown-guests' ) end
+  else if ( dropdownType == 'dropdown-options' ) {
+    //- change dropdown-options text
+    //- code
+    //- change dropdown-options text end
+  }
+}
+//-
 
 
 function addClickListenersToClasses(className, functionName) {
@@ -79,8 +138,7 @@ function addClickListenersToClasses(className, functionName) {
 }
 
 
-//- TODO del event
-function showHideDropdownMenu(event) {
+function showHideDropdownMenu() {
 
   const dropdown = this;
   const dropdownMenu = this.querySelector('.dropdown-guests__menu');
