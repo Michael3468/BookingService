@@ -5,11 +5,11 @@ $(function() {
 
   let isDropdownDateBlock = $('.dropdown-date__input-block');
   if( isDropdownDateBlock ) {
-    isDropdownDateBlock.on('click', showDatePicker);
+    isDropdownDateBlock.on('click', showHideDatePicker);
   }
 
 });
 
-function showDatePicker(){
+function showHideDatePicker(){
   $('.dropdown-date__date-picker').toggle('.dropdown-date__date-picker_hidden');
 };
