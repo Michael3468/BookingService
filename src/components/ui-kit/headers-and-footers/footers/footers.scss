@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: normal;
   height: rem(376);
-  border-bottom: 1px solid rgba(223, 222, 227, 1);
+  border-bottom: rem(1) solid rgba(223, 222, 227, 1);
 }
 .footer__logo-p {
   line-height: rem(24);
@@ -146,7 +146,7 @@
 
 @media screen and (max-width: $desktopWidth){
   .grid-layout {
-    grid-column-gap: 10px;
+    grid-column-gap: rem(10);
   }
 }
 
@@ -177,7 +177,7 @@
     justify-items: center;
     align-items: flex-start;
     grid-column: span 12;
-    margin-top: 19px;
+    margin-top: rem(19);
   }
   .footer {
     height: auto;
