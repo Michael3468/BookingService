@@ -1,0 +1,11 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+
+.option_column {
+  width: 266px;
+}
+.container__option_column,
+.container__room-cards_column {
+  margin-top: 28px;
+}
