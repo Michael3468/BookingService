@@ -3,9 +3,9 @@ import '../../cards/date-picker/date-picker.js';
 
 $(function() {
 
-  let isDropdownDateBlock = $('.dropdown-date__input-block');
-  if( isDropdownDateBlock ) {
-    isDropdownDateBlock.on('click', showHideDatePicker);
+  let $isDropdownDateBlock = $('.dropdown-date__input-block');
+  if( $isDropdownDateBlock ) {
+    $isDropdownDateBlock.on('click', showHideDatePicker);
   }
 
 });
