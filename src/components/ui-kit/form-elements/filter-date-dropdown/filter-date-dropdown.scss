@@ -1,22 +1,32 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
 
 .filter-date-dropdown__caption {
-  //- TODO add margin to main.scss for all caption classes (rename classes)
   margin-bottom: $inputCapMarBottom;
 }
-.filter-date-dropdown__input {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 10px;
+.filter-date-dropdown__input_block {
+  position: relative;
 }
-.filter-date-dropdown__text {
-  padding: 9px 10px 9px 0px;
+.filter-date-dropdown__input,
+.filter-date-dropdown__input::placeholder,
+.filter-date-dropdown__input_arrow,
+.filter-date-dropdown__expand-button {
+  color: $DarkShade50;
+}
+.filter-date-dropdown__input {
+  padding: rem(12) rem(10) rem(12) rem(15);
+  cursor: pointer;
+  &::placeholder {
+    opacity: 1;
+  }
+}
+.filter-date-dropdown__input_arrow {
+  position: absolute;
+  top: rem(10);
+  right: rem(10);
 }
 .filter-date-dropdown__expand-button {
-  cursor: pointer;
-  color: $DarkShade50;
-  margin: 10px 0 0 10px;
-  width: 20px;
+  margin: rem(10) rem(0) rem(0) rem(10);
+  width: rem(20);
 }
