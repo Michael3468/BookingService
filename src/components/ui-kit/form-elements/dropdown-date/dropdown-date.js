@@ -11,5 +11,6 @@ $(function() {
 });
 
 function showHideDatePicker(){
-  $('.dropdown-date__date-picker').toggle('.dropdown-date__date-picker_hidden');
+  let $dropdownDate = $(this.parentElement.offsetParent.nextSibling);
+  $dropdownDate.toggle('.dropdown-date__date-picker_hidden');
 };

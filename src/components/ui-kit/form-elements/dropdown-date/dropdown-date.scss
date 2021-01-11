@@ -2,6 +2,7 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 .dropdown-date {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
