@@ -36,5 +36,5 @@ function addApplyButton() {
 
 function hideDatePicker(){
   let $isDatePicker = $('.dropdown-date__date-picker');
-  $isDatePicker.toggle('dropdown-date__date-picker_hidden');
+  $isDatePicker.toggle('.dropdown-date__date-picker_hidden');
 };
