@@ -2,10 +2,39 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 
-.option_column {
-  width: 266px;
-}
-.container__option_column,
+.search-room__options-column__date-dropdown,
 .container__room-cards_column {
-  margin-top: 28px;
+  margin-top: rem(28);
+}
+
+.search-room__options-column {
+  width: rem(266);
+
+  &__date-dropdown {
+    margin-bottom: rem(20);
+  }
+  &__range-slider {
+    margin-top: rem(30);
+    margin-bottom: rem(26);
+  }
+  &__checkbox-buttons {
+    width: rem(225);
+  }
+  &__rich-checkbox-buttons {
+    margin-top: rem(31);
+    width: rem(260);
+  }
+  &__dropdown-options {
+    margin-top: rem(28);
+  }
+  &__checkbox-buttons_expandable {
+    margin-top: rem(30);
+  }
+}
+
+.search-room__range-slider_text {
+  font-family: $secondFont;
+  font-size: rem(12);
+  color: $DarkShade50;
+  margin-top: rem(-3);
 }
