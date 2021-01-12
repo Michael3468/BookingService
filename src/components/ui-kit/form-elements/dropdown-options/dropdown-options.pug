@@ -4,15 +4,15 @@ mixin dropdown-options(params)
     h3.dropdown-options__caption-right= params.rightCaption
   .dropdown-options-block(id=`dropdown-options${params.idPostfix}` class=params.menuStatus)
     .dropdown-options
-      p.dropdown-options-selection__text= params.selectionText
+      p.dropdown-options__selection_text= params.selectionText
       .dropdown-options__expand-button.material-icons expand_more
       
     .dropdown-options-menu(class=params.expMenuStatus)
 
       if (params.idPostfix == '-changed-example')
-        - var items = { 'item1': {valName : 'Cпальни', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Кровати', valCounter: '2', valClass: 'dark'},'item3': {valName : 'Ванные комнаты'} };
+        - var items = { 'item1': {valName : 'Спальни', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Кровати', valCounter: '2', valClass: 'dark'},'item3': {valName : 'Ванные комнаты'} };
       else
-        - var items = { 'item1': {valName : 'Cпальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
+        - var items = { 'item1': {valName : 'Спальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
 
       each val, key in items
         .dropdown-options-menu-option(id=key)
