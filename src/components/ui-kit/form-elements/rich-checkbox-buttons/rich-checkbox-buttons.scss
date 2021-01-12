@@ -1,13 +1,14 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+
 .rich-checkbox-buttons__caption {
-  margin-bottom: 16px;
+  margin-bottom: rem(16);
 }
 .rich-checkbox-buttons__item {
   display: flex;
   flex-direction: row;
-  margin-bottom: 9px;
+  margin-bottom: rem(9);
 }
 .rich-checkbox-buttons__input {
   position: absolute;
@@ -37,21 +38,22 @@
 .rich-checkbox-buttons__text {
   display: flex;
 }
-.rich-checkbox-buttons__textblock {
-  margin-left: 30px;
+.rich-checkbox-buttons__text-block {
+  cursor: pointer;
+  margin-left: rem(30);
   font-family: $secondFont;
 }
-.rich-checkbox-buttons__boldtext {
+.rich-checkbox-buttons__text_bold {
   font-weight: bold;
-  font-size: 14px;
+  font-size: rem(14);
   color: $DarkShade75;
-  letter-spacing: 0px;
-  margin-bottom: 6px;
+  letter-spacing: rem(0);
+  margin-bottom: rem(6);
 }
 .rich-checkbox-buttons__p {
   font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: rem(12);
+  line-height: rem(14);
   color: $DarkShade50;
-  letter-spacing: 0px;
+  letter-spacing: rem(0);
 }
