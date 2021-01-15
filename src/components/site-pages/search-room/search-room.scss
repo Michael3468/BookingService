@@ -8,7 +8,7 @@
 }
 
 .search-room__options-column {
-  width: rem(266);
+  min-width: rem(266);
 
   &__date-dropdown {
     margin-bottom: rem(20);
@@ -37,4 +37,30 @@
   font-size: rem(12);
   color: $DarkShade50;
   margin-top: rem(-3);
+}
+
+.room-cards_column {
+  width: 100%;
+  margin-left: rem(59);
+}
+.search-room__room-cards {
+  &_h1 {
+    font-family: $secondFont;
+    margin-bottom: rem(20);
+  }
+  &_grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-column-gap: rem(32);
+    grid-row-gap: rem(20);
+  }
+  &_pagination-position {
+    width: 100%;
+    display: flex;
+    margin-top: rem(43);
+  }
+}
+.search-room__footer_position {
+  margin-top: rem(70);
 }
