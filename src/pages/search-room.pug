@@ -85,7 +85,7 @@ block content
 
             include ../components/ui-kit/cards/room-card/room-card
             each room, index in rooms
-              +room-card({  Id:        index+1,
+              +room-card({  id:        index+1,
                             number:    room.number,
                             status:    room.luxStatus,
                             price:     `${room.price}₽`,
