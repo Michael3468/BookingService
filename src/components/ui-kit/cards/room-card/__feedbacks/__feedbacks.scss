@@ -5,9 +5,8 @@
 .feedbacks {
   display: flex;
   flex-direction: row;
+  &__number {
+    font-weight: bold;
+    margin-right: rem(4);
+  }
 }
-.feedbacks__number {
-  font-weight: bold;
-  margin-right: 4px;
-}
-.feedbacks__text {}
