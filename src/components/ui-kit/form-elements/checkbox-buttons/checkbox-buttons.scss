@@ -1,24 +1,29 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+
 .checkbox-buttons {
   display: flex;
   flex-direction: column;
   width: rem(230);
+
+  &__caption {
+    margin-bottom: rem(16);
+  }
+
+  &__input {
+    display: flex;
+    margin-bottom: rem(11);
+  }
+
+  &__text {
+    cursor: pointer;
+    line-height: rem(18);
+    font-family: $secondFont;
+    color: $DarkShade50;
+  }
 }
-.checkbox-buttons__caption {
-  margin-bottom: rem(16);
-}
-.checkbox-buttons__input {
-  display: flex;
-  margin-bottom: rem(11);
-}
-.checkbox-buttons__text {
-  cursor: pointer;
-  line-height: rem(18);
-  font-family: $secondFont;
-  color: $DarkShade50;
-}
+
 .custom-checkbox {
   position: absolute;
   z-index: -1;
@@ -29,23 +34,23 @@
   display: inline-flex;
   align-items: flex-start;
   user-select: none;
-}
 
-.custom-checkbox+label::before {
-  content: '';
-  cursor: pointer;
-  display: inline-block;
-  align-items: flex-start;
-  width: rem(20);
-  height: rem(20);
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid $DarkShade25;
-  border-radius: rem(4);
-  margin-right: rem(10);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    align-items: flex-start;
+    width: rem(20);
+    height: rem(20);
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: rem(1) solid $DarkShade25;
+    border-radius: rem(4);
+    margin-right: rem(10);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
 }
 
 .custom-checkbox:checked+label::before {
@@ -57,19 +62,31 @@
   display: none;
 }
 
-//- expandable-checkbox-list
+//- styles for expandable-checkbox-list
 .expandable-checkbox-list {
-  margin-bottom: 12px;
+  margin-bottom: rem(12);
+
+  &__caption {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    &::selection {
+      background: transparent;
+    }
+  }
+
+  &__expand-more {
+    margin: rem(-4) rem(8) rem(0) rem(0);
+
+    &::selection {
+      background: transparent;
+    }
+  }
+
+  &__expand-more-rotate {
+    transform: rotate(180deg);
+  }
 }
-.expandable-checkbox-list__caption {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.expandable-checkbox-list__expand-more {
-  margin: rem(-4) rem(8) rem(0) rem(0);
-}
-.expandable-checkbox-list__expand-more-rotate {
-  transform: rotate(180deg);
-}
-//- expandable-checkbox-list end
