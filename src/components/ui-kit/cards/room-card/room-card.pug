@@ -31,17 +31,17 @@ mixin room-card(params)
 
       include __feedbacks/__feedbacks
       +feedbacks({
-                  number: params.feedbacksNumber,
+                  number: params.feedbacks,
                   text:   'Отзывов',
                 })
 
 
 //- example
-//- +room-card({  Id:              '2',
-//-               number:          '840',
-//-               status:          'Люкс',
-//-               price:           '9 900₽',
-//-               photoName:       'room-card-840.jpg',
-//-               starsRate:       '4',
-//-               feedbacksNumber: '65',
+//- +room-card({  Id:        '2',
+//-               number:    '840',
+//-               status:    'Люкс',
+//-               price:     '9 900₽',
+//-               photoName: 'room-card-840.jpg',
+//-               starsRate: '4',
+//-               feedbacks: '65',
 //-             })
