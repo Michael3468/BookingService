@@ -1,0 +1,17 @@
+extends ../components/layouts/main-header-footer
+
+block variables
+  - var title = 'FSD Registration';
+  - var description = 'FSD education project | Registration';
+  - var pageClass = 'registration-page';
+
+block content
+  .wrapper
+
+    .registration__block
+      img(src="/assets/img/registration-bg.jpg", alt="registration page background image").registration__background-image
+
+      .registration__registration-card_block
+        .registration__registration-card
+          include ../components/ui-kit/cards/registration/registration
+          +registration()

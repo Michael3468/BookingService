@@ -1,0 +1,17 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+
+.registration__background-image {
+  position: relative;
+  z-index: -10;
+  margin-top: rem(-72);
+}
+
+$card-width: rem(380);
+.registration__registration-card {
+  position: absolute;
+  top: rem(90);
+  left: calc( 50% - (#{$card-width} / 2) );
+  width: $card-width;
+}
