@@ -1,0 +1,125 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+
+.room-details__images-block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  $imagesBlockHeight: rem(486);
+  &_left {
+    width: rem(981);
+    height: $imagesBlockHeight;
+  }
+  &_right {
+    width: rem(459);
+    height: $imagesBlockHeight;
+  }
+
+  &_big-size {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__middle-size {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+//- room-details columns
+.room-details {
+  &__column-1 {
+    width: rem(710);
+    margin-right: rem(70);
+  }
+  &__blocks {
+    display: flex;
+    flex-direction: row;
+  }
+  &__right-block {
+    margin-right: rem(80);
+  }
+  // &__left-block {}
+
+  &__column-2 {
+    width: rem(380);
+  }
+}
+//- room-details columns end
+
+
+//- info about room
+.room-details {
+  &__container {
+    margin-top: rem(67);
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__h2 {
+    font-family: $secondFont;
+  }
+
+  &__icon-text-list__position {
+    margin-top: rem(20);
+    width: rem(280);
+  }
+}
+//- info about room end
+
+//- impressions of the room
+//- impressions of the room end
+
+//- visitors feedbacks
+.room-details {
+  &__feedbacks {
+    margin-top: rem(11);
+
+    &_caption {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: rem(21);
+    }
+  }
+
+  &__comments-block_position {
+    margin-bottom: rem(23);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+//- visitors feedbacks end
+
+//- rules block
+.room-details {
+  &__rules {
+    display: flex;
+    flex-direction: row;
+    margin-top: rem(30);
+  }
+  &__rules-block {
+    width: rem(270);
+    margin-right: rem(90);
+  }
+  &__h2_rules-block {
+    margin-left: rem(20);
+    margin-bottom: rem(19);
+  }
+  &__cancel-block {
+    width: rem(335);
+  }
+  &__h2_cancel-block {
+    margin-bottom: rem(20);
+  }
+}
+//- rules block end
+
+
+.room-details__footer {
+  margin-top: rem(61);
+}
