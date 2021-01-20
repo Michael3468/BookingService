@@ -10,7 +10,8 @@ mixin comments-block(params)
     .comments-block__feedback
       .comments-block__feedback-like
         //- include добавлен в form-elements.pug
-        +like-button({likeBtnId:     'likeBtnId-3',
-                      likeBtnStatus: 'checked',
-                      likeBtnText:   '12'})
+        +like-button({likeBtnId:     params.likeBtnId,
+                      likeBtnStatus: params.likeBtnStatus,
+                      likeBtnText:   params.likeBtnText,
+                    })
       .comments-block__feedback-text= params.feedbackText
