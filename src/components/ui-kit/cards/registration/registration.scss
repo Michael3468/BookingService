@@ -1,34 +1,48 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.registration__caption {
-  font-family: $secondFont;
-  margin-bottom: rem(17);
-}
-.registration-text-field__margin {
-  margin-bottom: rem(4);
-}
-.registration-radio-buttons__margin {
-  margin-top: rem(-8);
-  margin-bottom: rem(23);
-}
 
-.registration-text-field__block-margin {
-  margin-top: rem(20);
-}
-.registration-text-field__block-margin-between {
-  margin-top: rem(4);
-}
-.registration-toggle__margin {
-  margin-top: rem(-7);
-  margin-bottom: rem(23);
-}
-.registration__enter-button-block {
-  display: flex;
-  flex-shrink: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.registration__enter-button-block-margin {
-  margin-top: rem(30);
+.registration {
+  &__caption {
+    font-family: $secondFont;
+    margin-bottom: rem(17);
+  }
+
+  &__radio-buttons_position {
+    margin-top: rem(-8);
+    margin-bottom: rem(23);
+  }
+
+  &__toggle_position {
+    margin-top: rem(-7);
+    margin-bottom: rem(23);
+  }
+
+
+  &__enter-button-block {
+    display: flex;
+    flex-shrink: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &_position {
+      margin-top: rem(30);
+    }
+  }
+
+
+  &__text-field {
+    &_position {
+      margin-bottom: rem(4);
+    }
+
+    &_block-position {
+      margin-top: rem(20);
+    }
+
+    &_block-margin-between {
+      margin-top: rem(4);
+    }
+  }
+
 }

@@ -2,7 +2,7 @@ mixin registration(params)
   .registration.cards-border
     h1.registration__caption Регистрация аккаунта
 
-    .registration-text-field__margin
+    .registration__text-field_position
       include ../../../ui-kit/form-elements/text-field/text-field
       +text-field({inpType:        'text',
                    inpName:        'text',
@@ -19,7 +19,7 @@ mixin registration(params)
                   inpId:          'user-last-name',
                 })
 
-    .registration-radio-buttons__margin
+    .registration__radio-buttons_position
       include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
       +radio-buttons({formActionName:  'form-action.php',
                       radioButtonName: 'radio-button',
@@ -33,7 +33,7 @@ mixin registration(params)
                         inpName:        'date',
                         inpPlaceholder: 'ДД.ММ.ГГГГ'})
 
-    .registration-text-field__block-margin
+    .registration__text-field_block-position
       +text-field({leftCaption:   'Данные для входа в сервис',
                   inpType:        'email',
                   inpName:        'email',
@@ -41,7 +41,7 @@ mixin registration(params)
                   inpPlaceholder: 'Email',
                   inpId:          'email',
                   })
-    .registration-text-field__block-margin-between
+    .registration__text-field_block-margin-between
       +text-field({inpType:       'password',
                   inpName:        'password',
                   inpMode:        'password',
@@ -49,7 +49,7 @@ mixin registration(params)
                   inpId:          'password',
                   })
 
-    .registration-toggle__margin
+    .registration__toggle_position
       include ../../../ui-kit/form-elements/toggle/toggle
       +toggle({toggleId:     'toggle-button1',
               toggleBtnText: 'Получать спецпредложения',
@@ -58,7 +58,7 @@ mixin registration(params)
     include ../../../ui-kit/form-elements/buttons/buttons
     +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
 
-    .registration__enter-button-block-margin
+    .registration__enter-button-block_position
       .registration__enter-button-block
         p.registration__enter-button-text Уже есть аккаунт на Toxin
         +button({link: 'change_me', mod: ['bordered'], value: 'Войти'})
