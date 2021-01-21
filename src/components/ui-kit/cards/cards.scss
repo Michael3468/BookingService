@@ -2,38 +2,45 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .cards {
+
   background: $backgroundColor;
-}
-.cards-column-1,
-.cards-column-2 {
-  width: 380px;
-  margin-top: rem(12);
-  margin-right: rem(40);
-}
-.cards-column-3 {
-  width: 320px;
-  margin-top: rem(12);
-}
-.cards__container {
-  margin-bottom: rem(140);
-}
-.cards-border {
-  background: $default-color;
-  border: rem(1) solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: rem(0) rem(0) rem(25) rgba(0, 0, 0, 0.2);
-  border-radius: rem(4);
-  padding: rem(38) rem(30) rem(29) rem(30);
-}
 
-.registration__block-margin {
-  margin-top: rem(40);
-}
+  &__container {
+    margin-bottom: rem(140);
+  }
 
-.login__margin {
-  margin-top: rem(40);
-}
+  &_border {
+    box-sizing: border-box;
+    padding: rem(38) rem(30) rem(29) rem(30);
+    background: $default-color;
+    box-shadow: rem(0) rem(0) rem(25) rgba(0, 0, 0, 0.2);
+    border: rem(1) solid rgba(0, 0, 0, 0.12);
+    border-radius: rem(4);
+  }
 
-.room-card__margin {
-  margin-top: rem(40);
+  &__column-1,
+  &__column-2 {
+    width: rem(380);
+    margin-top: rem(12);
+    margin-right: rem(40);
+  }
+
+  &__column-3 {
+    width: rem(320);
+    margin-top: rem(12);
+  }
+
+
+  &__registration_position {
+    margin-top: rem(40);
+  }
+
+  &__login_position {
+    margin-top: rem(40);
+  }
+
+  &__room-card_position {
+    margin-top: rem(40);
+  }
+
 }

@@ -6,61 +6,60 @@ block variables
   - var pageClass = 'cards';
 
 block content
-  .wrapper
 
-    include ../components/ui-kit/logo/logo
-    .container.cards__container
-      
-      .cards-column-1
+  include ../components/ui-kit/logo/logo
+  .container.cards__container
+    
+    .cards__column-1
 
-        include ../components/ui-kit/cards/room-search/room-search
-        +room-search()
+      include ../components/ui-kit/cards/room-search/room-search
+      +room-search()
 
-        .registration__block-margin
-          include ../components/ui-kit/cards/registration/registration
-          +registration()
+      .cards__registration_position
+        include ../components/ui-kit/cards/registration/registration
+        +registration()
 
-      .cards-column-2
+    .cards__column-2
 
-        include ../components/ui-kit/cards/booking/booking
-        +booking({  roomPrice:                    '9 990₽',
-                    daysPriceText:                ' x 4 суток',
-                    servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
-                    additionalServicesPriceText:  'Сбор за дополнительные услуги',
-                    daysPriceValue:               '39 960₽',
-                    servicesPriceValue:           '0₽',
-                    additionalServicesPriceValue: '300₽',
-                    resultText:                   'Итого',
-                    resultSum:                    `38\u00A0081₽`})
+      include ../components/ui-kit/cards/booking/booking
+      +booking({  roomPrice:                    '9 990₽',
+                  daysPriceText:                ' x 4 суток',
+                  servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
+                  additionalServicesPriceText:  'Сбор за дополнительные услуги',
+                  daysPriceValue:               '39 960₽',
+                  servicesPriceValue:           '0₽',
+                  additionalServicesPriceValue: '300₽',
+                  resultText:                   'Итого',
+                  resultSum:                    `38\u00A0081₽`})
 
-        .login__margin
-          include ../components/ui-kit/cards/login/login
-          +login()
+      .cards__login_position
+        include ../components/ui-kit/cards/login/login
+        +login()
 
 
-      .cards-column-3
+    .cards__column-3
 
-        include ../components/ui-kit/cards/date-picker/date-picker
-        +date-picker()
+      include ../components/ui-kit/cards/date-picker/date-picker
+      +date-picker()
 
-        .room-card__margin
-          include ../components/ui-kit/cards/room-card/room-card
-          +room-card({  id:        '1',
-                        number:    '888',
-                        status:    'Люкс',
-                        price:     '9 900₽',
-                        photoName: 'room-card-888.jpg',
-                        starsRate: '5',
-                        feedbacks: '145',
-                     })
+      .cards__room-card_position
+        include ../components/ui-kit/cards/room-card/room-card
+        +room-card({  id:        '1',
+                      number:    '888',
+                      status:    'Люкс',
+                      price:     '9 900₽',
+                      photoName: 'room-card-888.jpg',
+                      starsRate: '5',
+                      feedbacks: '145',
+                    })
 
-        .room-card__margin
-          include ../components/ui-kit/cards/room-card/room-card
-          +room-card({  id:        '2',
-                        number:    '840',
-                        status:    'Люкс',
-                        price:     '9 900₽',
-                        photoName: 'room-card-840.jpg',
-                        starsRate: '4',
-                        feedbacks: '65',
-                     })
+      .cards__room-card_position
+        include ../components/ui-kit/cards/room-card/room-card
+        +room-card({  id:        '2',
+                      number:    '840',
+                      status:    'Люкс',
+                      price:     '9 900₽',
+                      photoName: 'room-card-840.jpg',
+                      starsRate: '4',
+                      feedbacks: '65',
+                    })
