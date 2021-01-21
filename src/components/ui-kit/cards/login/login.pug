@@ -3,6 +3,7 @@ mixin login(params)
     h1.login__caption Войти
 
     .login__inputs-block
+      include ../../../ui-kit/form-elements/text-field/text-field
       +text-field({ inpType:        'email',
                     inpName:        'email',
                     inpMode:        'email',

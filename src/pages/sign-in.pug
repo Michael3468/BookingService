@@ -1,0 +1,16 @@
+extends ../components/layouts/main-header-footer
+
+block variables
+  - var title = 'FSD Sign in';
+  - var description = 'FSD education project | Sign in';
+  - var pageClass = 'sign-in-page';
+
+block content
+
+  .sign-in__block
+    img(src="/assets/img/registration-bg.jpg", alt="sign in page background image").sign-in__background-image
+
+    .sign-in__sign-in-card_block
+      .sign-in__sign-in-card
+        include ../components/ui-kit/cards/login/login
+        +login()
