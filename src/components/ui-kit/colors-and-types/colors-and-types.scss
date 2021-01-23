@@ -3,10 +3,11 @@
 
 .colors-and-types {
   padding-top: rem(7);
-}
-.colors-and-types__colors {
-  padding-left: rem(10);
-}
-.colors-and-types__types {
-  padding-right: rem(51);
+
+  &__colors {
+    padding-left: rem(10);
+  }
+  &__types {
+    padding-right: rem(51);
+  }
 }

@@ -2,18 +2,22 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 
-.sign-in__background-image {
-  position: relative;
-  z-index: -10;
-  margin-top: rem(-72);
-  width: 100%;
-  height: 770px;
-}
+.sign-in {
 
-$card-width: rem(380);
-.sign-in__sign-in-card {
-  position: absolute;
-  top: rem(242);
-  left: calc( 50% - (#{$card-width} / 2) );
-  width: $card-width;
+  &__background-image {
+    position: relative;
+    z-index: -10;
+    margin-top: rem(-72);
+    width: 100%;
+    height: 770px;
+  }
+
+  $card-width: rem(380);
+  &__sign-in-card {
+    position: absolute;
+    top: rem(242);
+    left: calc( 50% - (#{$card-width} / 2) );
+    width: $card-width;
+  }
+
 }

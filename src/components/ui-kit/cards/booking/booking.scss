@@ -2,63 +2,77 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 .booking {
+
   display: flex;
   flex-direction: column;
-}
-.booking__date-dropdown-margin {
-  margin-bottom: rem(21);
-}
-.booking__options-block,
-.booking__options-item-block {
-  display: flex;
-  flex-direction: row;
-}
-.booking__options-block {
-  justify-content: space-between;
-  margin-top: rem(20);
-}
-.booking__options-item-block {
-  display: flex;
-  justify-content: space-between;
-  width: rem(239);
-}
-.booking__options-info-icon {
-  cursor: pointer;
-  border: rem(1) solid $DarkShade25;
-  box-sizing: border-box;
-  width: rem(20);
-  height: rem(20);
-  border-radius: rem(10);
-}
-.booking__options-info-icon::before {
-  content: 'i';
-  position: relative;
-  left: rem(7);
-  font-family: $secondFont;
-  font-size: rem(14);
-  color: $DarkShade25;
-}
-.booking__options-right .booking__options-item {
-  display: flex;
-  justify-content: flex-end;
-}
-.booking__options-item {
-  margin-bottom: rem(14);
-  line-height: rem(20);
-}
 
-.booking__options-result {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: $secondFont;
-  font-weight: bold;
-  font-size: rem(19);
-  margin-top: rem(12);
-  margin-bottom: rem(18);
-}
-.booking__options-result-line {
-  width: 100%;
-  border-bottom: rem(1) dashed $DarkShade25;
-  margin: 0 rem(3) rem(7);
+  &__options-block,
+  &__options-item-block {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__date-dropdown-margin {
+    margin-bottom: rem(21);
+  }
+
+  &__options-block {
+    justify-content: space-between;
+    margin-top: rem(20);
+  }
+
+  &__options-item-block {
+    display: flex;
+    justify-content: space-between;
+    width: rem(239);
+  }
+
+
+  &__options-info-icon {
+    cursor: pointer;
+    border: rem(1) solid $DarkShade25;
+    box-sizing: border-box;
+    width: rem(20);
+    height: rem(20);
+    border-radius: rem(10);
+  
+    &::before {
+      content: 'i';
+      position: relative;
+      left: rem(7);
+      font-family: $secondFont;
+      font-size: rem(14);
+      color: $DarkShade25;
+    }
+  }
+
+
+  &__options-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $secondFont;
+    font-weight: bold;
+    font-size: rem(19);
+    margin-top: rem(12);
+    margin-bottom: rem(18);
+  
+    &_line {
+      width: 100%;
+      border-bottom: rem(1) dashed $DarkShade25;
+      margin: 0 rem(3) rem(7);
+    }
+  }
+
+
+  &__options-right &__options-item {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__options-item {
+    margin-bottom: rem(14);
+    line-height: rem(20);
+  }
+
 }

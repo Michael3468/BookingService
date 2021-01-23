@@ -1,41 +1,46 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .colors {
-  width: 269px;
+  width: rem(269);
 }
 
-.color-block {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-}
+.color {
+  &-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem(20);
+  }
 
-.color__sample {
-  width: 70px;
-  height: 70px;
-  left: 150px;
-  top: 145px;
-  border-radius: 6px;
-}
+  &__sample {
+    width: rem(70);
+    height: rem(70);
+    left: rem(150);
+    top: rem(145);
+    border-radius: rem(6);
+  }
 
-.color__description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 8px 0 0 40px;
-  font-family: $mainFont;
-  color: #1F2041;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 29px;
-}
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: rem(8) 0 0 rem(40);
+    font-family: $mainFont;
+    color: #1F2041;
+    font-weight: bold;
+    font-size: rem(19);
+    line-height: rem(29);
+  }
 
-.color__colorName {
-  font-weight: bold;
-}
-.color__colorCode {
-  font-family: $mainFont;
-  font-weight: normal;
-  font-size: 19px;
-  margin-top: 6px;
+  &__colorName {
+    font-weight: bold;
+  }
+
+  &__colorCode {
+    font-family: $mainFont;
+    font-weight: normal;
+    font-size: rem(19);
+    margin-top: rem(6);
+  }
+
 }

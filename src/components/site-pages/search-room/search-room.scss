@@ -43,7 +43,9 @@
   width: 100%;
   margin-left: rem(59);
 }
+
 .search-room__room-cards {
+ 
   &_h1 {
     font-family: $secondFont;
     margin-bottom: rem(20);
@@ -60,7 +62,9 @@
     display: flex;
     margin-top: rem(43);
   }
+
 }
+
 .search-room__footer_position {
   margin-top: rem(70);
 }

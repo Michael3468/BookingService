@@ -1,61 +1,63 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+
 .dropdown-date {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-}
-.dropdown-date__block {
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - 10px);
-}
-.dropdown-date__caption {
-  margin-bottom: $inputCapMarBottom;
-}
-.dropdown-date__input {
-  padding: rem(12) rem(10) rem(11) rem(13);
-  text-transform: uppercase;
-}
-.dropdown-date__input-block {
-  position: relative;
-}
-.dropdown-date__input {
-  display: flex;
-  flex-direction: column;
-  padding: rem(10) rem(10) rem(13) rem(15);
-  cursor: pointer;
-  caret-color: white;
-  color: $DarkShade75;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+  }
+
+  &__caption {
+    margin-bottom: $inputCapMarBottom;
+  }
+
+  &__input-block {
+    position: relative;
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    padding: rem(12) rem(10) rem(11) rem(13);
+    cursor: pointer;
+    caret-color: transparent;
+    text-transform: uppercase;
+    color: $DarkShade75;
+  }
+
+  &__expand-button {
+    position: absolute;
+    cursor: pointer;
+    color: $DarkShade50;
+    right: 8%;
+    top: rem(10);
+    width: rem(20);
+  }
+
+
+  &__date-picker {
+    margin-top: rem(7);
+    position: absolute;
+    z-index: 20;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
 }
 
-//- common styles
 // common input__style
 .input__style {
   border: rem(1) solid $DarkShade25;
   border-radius: $BorderRadius;
   width: 100%;
   font-family: $secondFont;
-}
-//- TODO .input__expand-button to main.scss
-.dropdown-date__expand-button {
-  position: absolute;
-  cursor: pointer;
-  color: $DarkShade50;
-  right: 8%;
-  top: rem(10);
-  width: rem(20);
-}
-//- common styles end
-
-.dropdown-date__date-picker {
-  margin-top: rem(7);
-  position: absolute;
-  z-index: 20;
-}
-.dropdown-date__date-picker_hidden {
-  display: none;
 }

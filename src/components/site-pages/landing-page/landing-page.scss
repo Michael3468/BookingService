@@ -2,27 +2,38 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 
-.landing-page__background {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
+.landing-page {
 
-.landing-page__room-search_block-width {
-  width: rem(380);
-}
-.landing-page__room-search_position {
-  margin-top: rem(68);
-}
-.landing-page__img-text {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  text-align: right;
-}
-.landing-page__img-text_position {
-  margin-top: rem(318);
-  margin-bottom: rem(20);
+  &__background {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+
+  &__room-search {
+    &_block-width {
+      width: rem(380);
+    }
+
+    &_position {
+      margin-top: rem(68);
+    }
+  }
+
+
+  &__img-text {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    text-align: right;
+
+    &_position {
+      margin-top: rem(318);
+      margin-bottom: rem(20);
+    }
+  }
+
 }
 
 
@@ -38,8 +49,9 @@
   animation-name: fade;
   animation-duration: 30s;
   animation-iteration-count: infinite;
+
+  &:nth-child(1) { animation-delay: 0s; }
+  &:nth-child(2) { animation-delay: 10s; }
+  &:nth-child(3) { animation-delay: 20s; }
 }
-.landing-page__fade-in:nth-child(1) { animation-delay: 0s; }
-.landing-page__fade-in:nth-child(2) { animation-delay: 10s; }
-.landing-page__fade-in:nth-child(3) { animation-delay: 20s; }
 //- background animation end

@@ -6,15 +6,20 @@
   flex-direction: row;
   margin-bottom: rem(50);
 }
-.type__tagDescription {
-  width: 336px;
-}
-.type__tagName {
-  display: flex;
-  justify-content: flex-end;
-  width: 37px;
-  margin: -1px 30px 0 0;
-  font-family: $secondFont;
-  font-weight: normal;
-  color: $DarkShade25;
+
+
+.type {
+  &__tagDescription {
+    width: 336px;
+  }
+
+  &__tagName {
+    display: flex;
+    justify-content: flex-end;
+    width: 37px;
+    margin: -1px 30px 0 0;
+    font-family: $secondFont;
+    font-weight: normal;
+    color: $DarkShade25;
+  }
 }

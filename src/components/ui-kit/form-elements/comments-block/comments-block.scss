@@ -1,45 +1,51 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+
 .comments-block {
   color: $DarkShade75;
-}
-.comments-block__user {
-  display: flex;
-  flex-direction: row;
-}
 
-$comments-block__user-photo_size: rem(48);
-.comments-block__user-photo {
-  width: $comments-block__user-photo_size;
-  height: $comments-block__user-photo_size;
-  border-radius: $comments-block__user-photo_size / 2;
-  border: rem(2) solid $default-color;
-  box-sizing: border-box;
-  filter: drop-shadow(rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.1));
-}
-.comments-block__user-info {
-  margin: rem(1) 0 0 rem(10);
-  font-family: $secondFont;
-  font-size: rem(14);
-}
-.comments-block__user-name {
-  font-weight: bold;
-  margin-bottom: rem(5);
-}
-.comments-block__comment-date {}
-.comments-block__feedback {
-  display: flex;
-  flex-direction: row;
-  margin-top: rem(11);
-}
-.comments-block__feedback-like {
-  width: rem(48);
-  margin-left: rem(4);
-}
-.comments-block__feedback-text {
-  font-family: $secondFont;
-  margin-left: rem(14);
-  line-height: rem(24);
-  margin-top: rem(-1);
+  &__user {
+    display: flex;
+    flex-direction: row;
+
+    $user-photo_size: rem(48);
+    &_photo {
+      width: $user-photo_size;
+      height: $user-photo_size;
+      border-radius: $user-photo_size / 2;
+      border: rem(2) solid $default-color;
+      box-sizing: border-box;
+      filter: drop-shadow(rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.1));
+    }
+
+    &_info {
+      margin: rem(1) 0 0 rem(10);
+      font-family: $secondFont;
+      font-size: rem(14);
+    }
+    &_name {
+      font-weight: bold;
+      margin-bottom: rem(5);
+    }
+  }
+
+
+  &__feedback {
+    display: flex;
+    flex-direction: row;
+    margin-top: rem(11);
+
+    &_like {
+      width: rem(48);
+      margin-left: rem(4);
+    }
+    &_text {
+      font-family: $secondFont;
+      margin-left: rem(14);
+      line-height: rem(24);
+      margin-top: rem(-1);
+    }
+  }
+
 }

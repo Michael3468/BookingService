@@ -2,13 +2,19 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 
-.room-search__caption {
-  font-family: $secondFont;
-  margin-bottom: rem(21);
-}
-.room-search__date-dropdown-margin {
-  margin-bottom: rem(22);
-}
-.room-search__dropdown-guests-margin {
-  margin-bottom: rem(31);
+.room-search {
+
+  &__caption {
+    font-family: $secondFont;
+    margin-bottom: rem(21);
+  }
+
+  &__date-dropdown-margin {
+    margin-bottom: rem(22);
+  }
+
+  &__dropdown-guests-margin {
+    margin-bottom: rem(31);
+  }
+
 }
