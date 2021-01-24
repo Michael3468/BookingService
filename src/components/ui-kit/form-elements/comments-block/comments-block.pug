@@ -1,20 +1,20 @@
 mixin comments-block(params)
   .comments-block
     .comments-block__user
-      img.comments-block__user-photo(src="/assets/img/"+params.imageName, alt="alt text")
+      img.comments-block__user_photo(src="/assets/img/"+params.imageName, alt="alt text")
       
-      .comments-block__user-info
-        .comments-block__user-name= params.userName
+      .comments-block__user_info
+        .comments-block__user_name= params.userName
         .comments-block__comment-date= params.commentDate
 
     .comments-block__feedback
-      .comments-block__feedback-like
+      .comments-block__feedback_like
         include ../like-button/like-button
         +like-button({likeBtnId:     params.likeBtnId,
                       likeBtnStatus: params.likeBtnStatus,
                       likeBtnText:   params.likeBtnText,
                     })
-      .comments-block__feedback-text= params.feedbackText
+      .comments-block__feedback_text= params.feedbackText
 
 
 //- example
