@@ -1,26 +1,26 @@
 import './dropdown-guests.scss';
 
 
-addClickListenersToClasses('dropdown-guests-block', showHideDropdownMenu);
-addClickListenersToClasses('button-increment', buttonIncrementClick);
-addClickListenersToClasses('button-decrement', buttonDecrementClick);
-addClickListenersToClasses('dropdown-guests-button_clean', cleanButtonClick);
+addClickListenersToClasses('dropdown-guests__block', showHideDropdownMenu);
+addClickListenersToClasses('dropdown-guests__button-increment', buttonIncrementClick);
+addClickListenersToClasses('dropdown-guests__button-decrement', buttonDecrementClick);
+addClickListenersToClasses('dropdown-guests__button_clean', cleanButtonClick);
 
 
 function cleanButtonClick(event) {
 
   const menu = this.offsetParent;
-  const menuCounters = menu.querySelectorAll('.counter');
-  const decrementButtons = menu.querySelectorAll('.button-decrement');
+  const menuCounters = menu.querySelectorAll('.dropdown-guests__counter');
+  const decrementButtons = menu.querySelectorAll('.dropdown-guests__button-decrement');
 
   menuCounters.forEach(element => {
     element.innerText = 0;
   });
   decrementButtons.forEach(element => {
-    element.classList.remove('button-decrement_dark');
+    element.classList.remove('dropdown-guests__button-decrement_dark');
   });
 
-  this.classList.remove('dropdown-guests-button_clean_show');
+  this.classList.remove('dropdown-guests__button_clean_show');
 
   const dropdownText = menu.previousElementSibling.firstChild;
   dropdownText.innerText = 'Сколько гостей';
@@ -38,7 +38,7 @@ function buttonDecrementClick(event) {
   if ( +(counter.innerText) > 0 ) {
     counter.innerText = +(counter.innerText) - 1;
     if ( +(counter.innerText) == 0 ) {
-      buttonDecrement.classList.remove('button-decrement_dark');
+      buttonDecrement.classList.remove('dropdown-guests__button-decrement_dark');
     }
   }
 
@@ -62,7 +62,7 @@ function buttonIncrementClick(event) {
   //- TODO do not inc last counter if others == 0 when it is guests dropdown
   if ( countersSum < maxGuests ) {
     counter.innerText = +(counter.innerText) + 1;
-    buttonDecrement.classList.add('button-decrement_dark');
+    buttonDecrement.classList.add('dropdown-guests__button-decrement_dark');
   }
 
   //- TODO add change dropdownText on click for dropdown-options
@@ -80,7 +80,7 @@ function changeDropdownText(dropdownType, dropdownMenu) {
 
     //- change dropdown-guests text
     let dropdownText = dropdownMenu.previousElementSibling.firstChild;
-    const counters = dropdownMenu.querySelectorAll('.counter');
+    const counters = dropdownMenu.querySelectorAll('.dropdown-guests__counter');
     const guestsNum = Number(counters[0].innerText) + Number(counters[1].innerText);
     const babiesNum = Number( counters[2].innerText );
 
@@ -142,13 +142,13 @@ function showHideDropdownMenu() {
 
   const dropdown = this;
   const dropdownMenu = this.querySelector('.dropdown-guests__menu');
-  const cleanButton = this.querySelector('.dropdown-guests-button_clean');
+  const cleanButton = this.querySelector('.dropdown-guests__button_clean');
 
   dropdownMenu.classList.toggle('visibility-hidden');
   if ( dropdownMenu.classList.contains('visibility-hidden') ) {
     //- hide menu
     dropdown.classList.remove('menu-open');
-    cleanButton.classList.remove('dropdown-guests-button_clean_show');
+    cleanButton.classList.remove('dropdown-guests__button_clean_show');
   } else {
     //- show menu
     dropdown.classList.add('menu-open');
@@ -164,13 +164,13 @@ function showHideCleanButton(dropdownMenu) {
 
   let countersSum = getCountersValuesSum(dropdownMenu);
 
-  const cleanButton = dropdownMenu.querySelector('.dropdown-guests-button_clean');
+  const cleanButton = dropdownMenu.querySelector('.dropdown-guests__button_clean');
   if ( countersSum > 0 ) {
     //- show clean button
-    cleanButton.classList.add('dropdown-guests-button_clean_show');
+    cleanButton.classList.add('dropdown-guests__button_clean_show');
   } else {
     //- hide clean button
-    cleanButton.classList.remove('dropdown-guests-button_clean_show');
+    cleanButton.classList.remove('dropdown-guests__button_clean_show');
   }
 
 }
@@ -178,7 +178,7 @@ function showHideCleanButton(dropdownMenu) {
 
 function getCountersValuesSum(dropdownMenu) {
 
-  const counters = dropdownMenu.querySelectorAll('.counter');
+  const counters = dropdownMenu.querySelectorAll('.dropdown-guests__counter');
 
   let countersValuesSum = 0;
   counters.forEach(element => {

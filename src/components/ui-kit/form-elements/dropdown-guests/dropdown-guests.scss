@@ -2,172 +2,162 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 
-.dropdown-guests__caption {
-  margin-bottom: $inputCapMarBottom;
+.dropdown-guests,
+.dropdown-guests__button-decrement,
+.dropdown-guests__button-increment,
+.dropdown-guests__button-decrement_icon,
+.dropdown-guests__button-increment_icon,
+.dropdown-guests__button_clean,
+.dropdown-guests__button_apply {
+  cursor: pointer;
 }
-
-//common input__style
-.input__style {
-  border: 1px solid $DarkShade25;
-  border-radius: $BorderRadius;
-  width: 100%;
-  font-family: $secondFont;
-}
-//common input__style end
 
 .dropdown-guests {
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: rem(-3) rem(9) rem(0) rem(0);
-}
-.dropdown-guests__expand-button {
-  position: relative;
-  cursor: pointer;
-  color: $DarkShade50;
-  margin: rem(-3) rem(9) rem(0) rem(0);
+
+  &__caption {
+    margin-bottom: $inputCapMarBottom;
+  }
+
+  &__block {
+    height: rem(44);
+    align-items: center;
+    border: rem(1) solid $DarkShade25;
+    border-radius: rem(4);
+  }
+  &__block.menu-open {
+    border-bottom-left-radius: rem(0);
+    border-bottom-right-radius: rem(0);
+    display: block;
+  }
+
+  &__selection_text {
+    font-family: $secondFont;
+    font-size: rem(14);
+    color: $DarkShade75;
+    height: rem(45);
+    padding: rem(9) rem(15) rem(0) rem(15);
+  }
+  &__expand-button {
+    position: relative;
+    cursor: pointer;
+    color: $DarkShade50;
+    margin: rem(-3) rem(9) rem(0) rem(0);
+  }
+
+
+  &__menu {
+    position: relative;
+    background: $default-color;
+    z-index: 10;
+    border-bottom-left-radius: rem(4);
+    border-bottom-right-radius: rem(4);
+    border: rem(1) solid $DarkShade25;
+    cursor: default;
+    margin: rem(-3) rem(-1) rem(-1);
+
+    &_option {
+      display: flex;
+      justify-content: space-between;
+      height: rem(37);
+      padding: rem(0) rem(5) rem(0) rem(15);
+    }
+
+    &-item {
+      font-family: $secondFont;
+      font-weight: bold;
+      font-size: rem(12);
+      color: $DarkShade100;
+      text-transform: uppercase;
+      padding-top: rem(7);
+    }
+  }
+  &__button-decrement,
+  &__button-increment {
+    border-radius: 50%;
+    height: rem(30);
+    width: rem(30);
+    margin-top: rem(6);
+    background: $default-color;
+  }
+  &__counter {
+    position: relative;
+    display: inline-block;
+    border: none;
+    font-family: $secondFont;
+    font-size: rem(12);
+    font-weight: bold;
+    text-align: center;
+    width: rem(33);
+    top: rem(-3);
+  }
+  &__button-increment {
+    color: $DarkShade50;
+    border: rem(1) solid $DarkShade50;
+  }
+  &__button-decrement {
+    color: $DarkShade25;
+    border: rem(1) solid $DarkShade25;
+    &_dark {
+      color: $DarkShade50 !important;
+      border: rem(1) solid $DarkShade50 !important;
+    }
+  }
+  &__button-decrement_icon::after,
+  &__button-increment_icon::after {
+    font-size: rem(18);
+    font-style: normal;
+    font-family: $secondFont;
+  }
+  &__button-decrement_icon::after {
+    display: block;
+    content: '-';
+  }
+  &__button-increment_icon::after {
+    content: '+';
+  }
+  //- menu buttons
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: rem(19) rem(0) rem(11) rem(5);
+  }
+  &__button_clean,
+  &__button_apply {
+    font-family: $secondFont;
+    font-size: rem(12);
+    font-weight: bold;
+    color: $purple;
+    text-transform: uppercase;
+    background: $default-color;
+  }
+  &__button_clean {
+    visibility: hidden;
+    &_show {
+      visibility: visible;
+    }
+  }
+  //- menu buttons end
 }
 
-//- item-quantity-dropdown styles
-.dropdown-guests-block {
-  height: rem(44);
-  align-items: center;
+//common class input__style
+.input__style {
+  //- TODO add to main.scss (or common.scss) and comment it here 
+  //- (don't del this class to use this component in others projects)
   border: rem(1) solid $DarkShade25;
-  border-radius: rem(4);
-}
-
-.dropdown-guests-block.menu-open {
-  border-bottom-left-radius: rem(0);
-  border-bottom-right-radius: rem(0);
-  display: block;
-}
-.dropdown-guests-selection__text {
+  border-radius: $BorderRadius;
+  width: 100%;
   font-family: $secondFont;
-  font-size: rem(14);
-  color: $DarkShade75;
-  height: rem(45);
-  padding: rem(9) rem(15) rem(0) rem(15);
 }
-.dropdown-guests__menu {
-  position: relative;
-  background: white;
-  z-index: 10;
-  border-bottom-left-radius: rem(4);
-  border-bottom-right-radius: rem(4);
+//common class input__style end
 
-  border: rem(1) solid $DarkShade25;
-  cursor: default;
-  margin: rem(-3) rem(-1) rem(-1);
-}
 .visibility-hidden {
   visibility: hidden;
 }
-.dropdown-guests-item {
-  font-family: $secondFont;
-  font-weight: bold;
-  font-size: rem(12);
-  color: $DarkShade100;
-  text-transform: uppercase;
-  padding-top: rem(7);
-}
-.dropdown-guests__menu_option {
-  display: flex;
-  justify-content: space-between;
-}
-.dropdown-guests__menu_option {
-  height: rem(37);
-  padding: rem(0) rem(5) rem(0) rem(15);
-}
-.dropdown-guests-item-controls button.button-decrement,
-.dropdown-guests-item-controls button.button-increment {
-  border-radius: 50%;
-  height: rem(30);
-  width: rem(30);
-  margin-top: rem(6);
-}
-.dropdown-guests-item-controls .counter {
-  position: relative;
-  border: none;
-  top: rem(-3);
-  font-family: $secondFont;
-  font-size: rem(12);
-  font-weight: bold;
-}
-.counter {
-  display: inline-block;
-  text-align: center;
-  width: rem(33);
-}
-.icon-increment::before {
-  display: block;
-  height: rem(0);
-  top: rem(6);
-  width: rem(13);
-}
-.dropdown-guests,
-.icon-decrement,
-.icon-increment,
-.dropdown-guests-button_clean,
-.dropdown-guests-button_apply {
-  cursor: pointer;
-}
-.button-decrement,
-.button-increment {
-  background: $default-color;
-  cursor: pointer;
-}
-.icon-decrement::after,
-.icon-increment::after {
-  font-size: rem(18);
-  font-style: normal;
-  font-family: $secondFont;
-}
-.icon-decrement::after {
-  display: block;
-  content: '-';
-}
-.icon-increment::after {
-  content: '+';
-}
 
-.button-increment {
-  color: $DarkShade50;
-  border: rem(1) solid $DarkShade50;
-}
-.dropdown-guests-item-controls button {
-  padding: rem(0);
-}
-.button-decrement {
-  color: $DarkShade25;
-  border: rem(1) solid $DarkShade25;
-  &_dark {
-    color: $DarkShade50 !important;
-    border: rem(1) solid $DarkShade50 !important;
-  }
-}
-//- item-quantity-dropdown styles end
-
-//- buttons
-.dropdown-guests-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: rem(19) rem(0) rem(11) rem(5);
-}
-.dropdown-guests-button_clean,
-.dropdown-guests-button_apply {
-  font-family: $secondFont;
-  font-size: rem(12);
-  font-weight: bold;
-  color: $purple;
-  text-transform: uppercase;
-  background: $default-color;
-}
-.dropdown-guests-button_clean {
-  visibility: hidden;
-}
-.dropdown-guests-button_clean_show {
-  visibility: visible;
-}
-//- buttons end

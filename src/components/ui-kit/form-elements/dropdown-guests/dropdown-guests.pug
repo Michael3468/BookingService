@@ -1,33 +1,33 @@
 mixin dropdown-guests(params)
   h3.dropdown-guests__caption= params.leftCaption
-  .dropdown-guests-block(id=`dropdown-guests${params.idPostfix}` class=params.menuStatus)
+  .dropdown-guests__block(id=`dropdown-guests${params.idPostfix}` class=params.menuStatus)
     .dropdown-guests
-      p.dropdown-guests-selection__text= params.selectionText
+      p.dropdown-guests__selection_text= params.selectionText
       .dropdown-guests__expand-button.material-icons expand_more
       
     .dropdown-guests__menu(class=params.expMenuStatus)
 
       if (params.idPostfix == '-changed-example')
-        - var items = { 'item1': {valName : 'Взрослые', valCounter: '2', valClass: 'button-decrement_dark'},'item2': {valName : 'Дети', valCounter: '1', valClass: 'button-decrement_dark'},'item3': {valName : 'Младенцы'} };
+        - var items = { 'item1': {valName : 'Взрослые', valCounter: '2', valClass: 'dropdown-guests__button-decrement_dark'},'item2': {valName : 'Дети', valCounter: '1', valClass: 'dropdown-guests__button-decrement_dark'},'item3': {valName : 'Младенцы'} };
       else
         - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
 
       each val, key in items
         .dropdown-guests__menu_option(id=key)
-          p.dropdown-guests-item= val.valName
-          .dropdown-guests-item-controls
-            button.button-decrement(id=`dropdown-guests${params.idPostfix}-${key}-button-decrement` class=(val.valClass))
-              i.icon-decrement
-            span.counter(id=`dropdown-guests${params.idPostfix}-${key}-counter`)= val.valCounter || 0
-            button.button-increment(id=`dropdown-guests${params.idPostfix}-${key}-button-increment`)
-              i.icon-increment
+          p.dropdown-guests__menu-item= val.valName
+          .dropdown-guests__menu-item-controls
+            button.dropdown-guests__button-decrement(id=`dropdown-guests${params.idPostfix}-${key}-dropdown-guests__button-decrement` class=(val.valClass))
+              i.dropdown-guests__button-decrement_icon
+            span.dropdown-guests__counter(id=`dropdown-guests${params.idPostfix}-${key}-counter`)= val.valCounter || 0
+            button.dropdown-guests__button-increment(id=`dropdown-guests${params.idPostfix}-${key}-dropdown-guests__button-increment`)
+              i.dropdown-guests__button-increment_icon
       
-      .dropdown-guests-buttons
+      .dropdown-guests__buttons
         if (params.cleanButtonStatus == 'show')
-          - var cleanButtonClass = 'dropdown-guests-button_clean_'+params.cleanButtonStatus
+          - var cleanButtonClass = 'dropdown-guests__button_clean_'+params.cleanButtonStatus
 
-        button.dropdown-guests-button_clean(id=`dropdown-guests${params.idPostfix}-button-clean` class=cleanButtonClass) очистить
-        button.dropdown-guests-button_apply(id=`dropdown-guests${params.idPostfix}-button-apply`) применить
+        button.dropdown-guests__button_clean(id=`dropdown-guests${params.idPostfix}-button-clean` class=cleanButtonClass) очистить
+        button.dropdown-guests__button_apply(id=`dropdown-guests${params.idPostfix}-button-apply`) применить
 
 //- examples
 
