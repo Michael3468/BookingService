@@ -1,19 +1,20 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+
 .booking {
 
   display: flex;
   flex-direction: column;
 
-  &__options-block,
-  &__options-item-block {
-    display: flex;
-    flex-direction: row;
-  }
-
   &__date-dropdown-margin {
     margin-bottom: rem(21);
+  }
+  
+  &__options-block,
+  &__options-item_block {
+    display: flex;
+    flex-direction: row;
   }
 
   &__options-block {
@@ -21,7 +22,7 @@
     margin-top: rem(20);
   }
 
-  &__options-item-block {
+  &__options-item_block {
     display: flex;
     justify-content: space-between;
     width: rem(239);
@@ -31,7 +32,6 @@
   &__options-info-icon {
     cursor: pointer;
     border: rem(1) solid $DarkShade25;
-    box-sizing: border-box;
     width: rem(20);
     height: rem(20);
     border-radius: rem(10);
@@ -51,9 +51,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: $secondFont;
-    font-weight: bold;
-    font-size: rem(19);
+    font: bold rem(19) $secondFont;
     margin-top: rem(12);
     margin-bottom: rem(18);
   
@@ -62,15 +60,16 @@
       border-bottom: rem(1) dashed $DarkShade25;
       margin: 0 rem(3) rem(7);
     }
+    &_text,
+    &_sum {
+      font: bold rem(19) $secondFont;
+      color: $DarkShade100;
+    }
   }
 
-
-  &__options-right &__options-item {
+  &__options-item_text {
     display: flex;
     justify-content: flex-end;
-  }
-
-  &__options-item {
     margin-bottom: rem(14);
     line-height: rem(20);
   }
