@@ -3,7 +3,12 @@
 @import 'utils/fonts.scss';
 @import 'utils/reset.scss';
 
-html{
+
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: $mainFont;
   font-size: $mainFontSize;
   font-weight: normal;
@@ -15,12 +20,12 @@ html{
     font-size: $mainFontSize;
   }
   @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth){
-    font-size: 0.85rem;
+    font-size: rem(.85);
   }
 }
 
 section,
-.section{
+.section {
   position: relative;
   padding: rem(40) 0;
   @media screen and (min-width: $tableWidth) and (max-width: $smDesktopWidth){
@@ -34,7 +39,7 @@ section,
   }
 }
 
-.wrapper{
+.wrapper {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -55,24 +60,24 @@ section,
 }
 
 //flexbox+
-.flex-row{
+.flex-row {
   display: flex;
   flex-direction: row;
 }
-.flex-row-reverse{
+.flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
 }
-.flex-column-reverse{
+.flex-column-reverse {
   display: flex;
   flex-direction: column-reverse;
 }
-.justify-content-between{
+.justify-content-between {
   display: flex;
   justify-content: space-between;
 }
