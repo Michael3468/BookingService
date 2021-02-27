@@ -43,6 +43,12 @@ block content
 
             .room-details__left-block
               h2.room-details__h2 Впечатления от номера
+              include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
+              .d3js-donut-chart_position
+                +d3js-donut-chart({ width:  '120',
+                                    height: '120',
+                                    legendValues: ['Великолепно','Хорошо','Удовлетворительно','Разочарован']})
+
 
           .room-details__feedbacks
             .room-details__feedbacks_caption

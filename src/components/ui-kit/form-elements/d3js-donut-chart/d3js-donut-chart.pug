@@ -1,0 +1,7 @@
+mixin d3js-donut-chart(params)
+  .d3js-donut-chart
+    svg.d3js-donut-chart__chart(width= params.width, height= params.height)
+    .d3js-donut-chart__legend
+      ul
+        each val in params.legendValues
+          li.d3js-donut-chart__legend-values= val
