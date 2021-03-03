@@ -6,26 +6,25 @@ block variables
   - var pageClass = 'landing-page';
 
 block content
-  .wrapper
 
-    img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-1.jpg", alt="landing page background image")
-    img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-2.jpg", alt="landing page background image")
-    img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-3.jpg", alt="landing page background image")
+  img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-1.jpg", alt="landing page background image")
+  img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-2.jpg", alt="landing page background image")
+  img.landing-page__background.landing-page__fade-in(src="/assets/img/landing-page__background-image-3.jpg", alt="landing page background image")
 
-    include ../components/ui-kit/headers-and-footers/headers/headers
-    +header()
+  include ../components/ui-kit/headers-and-footers/headers/headers
+  +header()
 
-    .container
+  .container
 
-      .landing-page__room-search_block-width.landing-page__room-search_position
-        include ../components/ui-kit/cards/room-search/room-search
-        +room-search()
+    .landing-page__room-search_block-width.landing-page__room-search_position
+      include ../components/ui-kit/cards/room-search/room-search
+      +room-search()
 
-    .container
+  .container
 
-      p.landing-page__img-text.landing-page__img-text_position
-        | Лучшие номера для вашей работы,<br>
-        | отдыха и просто вдохновения
+    p.landing-page__img-text.landing-page__img-text_position
+      | Лучшие номера для вашей работы,<br>
+      | отдыха и просто вдохновения
 
-    include ../components/ui-kit/headers-and-footers/footers/footers
-    +footer()
+  include ../components/ui-kit/headers-and-footers/footers/footers
+  +footer()

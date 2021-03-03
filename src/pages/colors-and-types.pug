@@ -6,12 +6,12 @@ block variables
   - var pageClass = 'colors-and-types';
 
 block content
-  .wrapper
-    include ../components/ui-kit/logo/logo
-    .container.flex-row.justify-content-between.colors-and-types
 
-      .colors-and-types__colors
-        include ../components/ui-kit/colors-and-types/colors/colors
+  include ../components/ui-kit/logo/logo
+  .container.flex-row.justify-content-between.colors-and-types
 
-      .colors-and-types__types
-        include ../components/ui-kit/colors-and-types/types/types
+    .colors-and-types__colors
+      include ../components/ui-kit/colors-and-types/colors/colors
+
+    .colors-and-types__types
+      include ../components/ui-kit/colors-and-types/types/types

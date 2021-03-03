@@ -6,102 +6,101 @@ block variables
   - var pageClass = 'room-details';
 
 block content
-  .wrapper
 
-    include ../components/ui-kit/headers-and-footers/headers/headers
-    +header()
+  include ../components/ui-kit/headers-and-footers/headers/headers
+  +header()
 
-    .room-details__images-block
-      .room-details__images-block_left
-        img(src="/assets/img/room-card-888-big_size.jpg", alt="room 888 big picture").room-details__images-block_big-size
-      .room-details__images-block_right
-        img(src="/assets/img/room-card-888-2-mid_size.jpg", alt="").room-details__images-block_middle-size
-        img(src="/assets/img/room-card-888-3-mid_size.jpg", alt="").room-details__images-block_middle-size
+  .room-details__images-block
+    .room-details__images-block_left
+      img(src="/assets/img/room-card-888-big_size.jpg", alt="room 888 big picture").room-details__images-block_big-size
+    .room-details__images-block_right
+      img(src="/assets/img/room-card-888-2-mid_size.jpg", alt="").room-details__images-block_middle-size
+      img(src="/assets/img/room-card-888-3-mid_size.jpg", alt="").room-details__images-block_middle-size
 
-    .container
+  .container
 
-      .room-details__container
+    .room-details__container
 
-        .room-details__column-1
+      .room-details__column-1
 
-          .room-details__blocks
-            .room-details__right-block
-              h2.room-details__h2 Сведения о номере
-              .room-details__icon-text-list__position
-                include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
-                +icon-text-list({ iconName : 'insert_emoticon',
-                                  caption:   'Комфорт',
-                                  text:      'Шумопоглощающие стены'})
+        .room-details__blocks
+          .room-details__right-block
+            h2.room-details__h2 Сведения о номере
+            .room-details__icon-text-list__position
+              include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
+              +icon-text-list({ iconName : 'insert_emoticon',
+                                caption:   'Комфорт',
+                                text:      'Шумопоглощающие стены'})
 
-                +icon-text-list({ iconName : 'location_city',
-                                  caption:   'Удобство',
-                                  text:      'Окно в каждой из спален'})
+              +icon-text-list({ iconName : 'location_city',
+                                caption:   'Удобство',
+                                text:      'Окно в каждой из спален'})
 
-                +icon-text-list({ iconName : 'whatshot',
-                                  caption:   'Уют',
-                                  text:      'Номер оснащен камином'})
+              +icon-text-list({ iconName : 'whatshot',
+                                caption:   'Уют',
+                                text:      'Номер оснащен камином'})
 
-            .room-details__left-block
-              h2.room-details__h2 Впечатления от номера
-              include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
-              .d3js-donut-chart_position
-                +d3js-donut-chart({ width:  '120',
-                                    height: '120',
-                                    legendValues: ['Великолепно','Хорошо','Удовлетворительно','Разочарован']})
-
-
-          .room-details__feedbacks
-            .room-details__feedbacks_caption
-              h2.room-details__h2 Отзывы посетителей номера
-              p 2 отзыва
-
-            include ../components/ui-kit/form-elements/comments-block/comments-block
-            .room-details__comments-block_position
-              +comments-block({ imageName:     'avatar.jpg',
-                                userName:      'Мурад Сарафанов',
-                                commentDate:   '5 дней назад',
-                                feedbackText:  'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                                likeBtnId:     'likeBtnId-1',
-                                likeBtnStatus: 'checked',
-                                likeBtnText:   '12',
-                              })
-
-            .room-details__comments-block_position
-              +comments-block({ imageName:     'avatar2.jpg',
-                                userName:      'Патрисия Стёклышкова',
-                                commentDate:   'Неделю назад',
-                                feedbackText:  'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.',
-                                likeBtnId:     'likeBtnId-2',
-                                likeBtnStatus: '',
-                                likeBtnText:   '2',
-                              })
-
-          .room-details__rules
-            .room-details__rules-block
-              include ../components/ui-kit/form-elements/bullet-list/bullet-list
-              h2.room-details__h2.room-details__h2_rules-block Правила
-              +bullet-list({options: ['Нельзя с питомцами',
-                                      'Без вечеринок и мероприятий',
-                                      'Время прибытия - после 13:00, а выезд до 12:00']})
-
-            .room-details__cancel-block
-              h2.room-details__h2.room-details__h2_cancel-block Отмена
-              p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          .room-details__left-block
+            h2.room-details__h2 Впечатления от номера
+            include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
+            .d3js-donut-chart_position
+              +d3js-donut-chart({ width:  '120',
+                                  height: '120',
+                                  legendValues: ['Великолепно','Хорошо','Удовлетворительно','Разочарован']})
 
 
-        .room-details__column-2
-          include ../components/ui-kit/cards/booking/booking
-          +booking({  roomPrice:                    '9 990₽',
-                      daysPriceText:                ' x 4 суток',
-                      servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
-                      additionalServicesPriceText:  'Сбор за дополнительные услуги',
-                      daysPriceValue:               '39 960₽',
-                      servicesPriceValue:           '0₽',
-                      additionalServicesPriceValue: '300₽',
-                      resultText:                   'Итого',
-                      resultSum:                    `38\u00A0081₽`})
+        .room-details__feedbacks
+          .room-details__feedbacks_caption
+            h2.room-details__h2 Отзывы посетителей номера
+            p 2 отзыва
+
+          include ../components/ui-kit/form-elements/comments-block/comments-block
+          .room-details__comments-block_position
+            +comments-block({ imageName:     'avatar.jpg',
+                              userName:      'Мурад Сарафанов',
+                              commentDate:   '5 дней назад',
+                              feedbackText:  'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                              likeBtnId:     'likeBtnId-1',
+                              likeBtnStatus: 'checked',
+                              likeBtnText:   '12',
+                            })
+
+          .room-details__comments-block_position
+            +comments-block({ imageName:     'avatar2.jpg',
+                              userName:      'Патрисия Стёклышкова',
+                              commentDate:   'Неделю назад',
+                              feedbackText:  'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.',
+                              likeBtnId:     'likeBtnId-2',
+                              likeBtnStatus: '',
+                              likeBtnText:   '2',
+                            })
+
+        .room-details__rules
+          .room-details__rules-block
+            include ../components/ui-kit/form-elements/bullet-list/bullet-list
+            h2.room-details__h2.room-details__h2_rules-block Правила
+            +bullet-list({options: ['Нельзя с питомцами',
+                                    'Без вечеринок и мероприятий',
+                                    'Время прибытия - после 13:00, а выезд до 12:00']})
+
+          .room-details__cancel-block
+            h2.room-details__h2.room-details__h2_cancel-block Отмена
+            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
 
-    .room-details__footer
-      include ../components/ui-kit/headers-and-footers/footers/footers
-      +footer()
+      .room-details__column-2
+        include ../components/ui-kit/cards/booking/booking
+        +booking({  roomPrice:                    '9 990₽',
+                    daysPriceText:                ' x 4 суток',
+                    servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
+                    additionalServicesPriceText:  'Сбор за дополнительные услуги',
+                    daysPriceValue:               '39 960₽',
+                    servicesPriceValue:           '0₽',
+                    additionalServicesPriceValue: '300₽',
+                    resultText:                   'Итого',
+                    resultSum:                    `38\u00A0081₽`})
+
+
+  .room-details__footer
+    include ../components/ui-kit/headers-and-footers/footers/footers
+    +footer()
