@@ -1,10 +1,9 @@
-import './assets/js/common'
-import './assets/scss/main.scss'
+import './assets/js/common';
+import './assets/scss/main.scss';
 
 // Bootstrap (example)
 // import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css'
-
 
 //requireAll block
 function requireAll(requireContext) {

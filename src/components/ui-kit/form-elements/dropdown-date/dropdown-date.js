@@ -1,16 +1,14 @@
 import './dropdown-date.scss';
 import '../../cards/date-picker/date-picker.js';
 
-$(function() {
-
+$(function () {
   let $isDropdownDateBlock = $('.dropdown-date__input-block');
-  if( $isDropdownDateBlock ) {
+  if ($isDropdownDateBlock) {
     $isDropdownDateBlock.on('click', showHideDatePicker);
   }
-
 });
 
-function showHideDatePicker(){
+function showHideDatePicker() {
   let $dropdownDate = $(this.parentElement.offsetParent.nextSibling);
   $dropdownDate.toggle('.dropdown-date__date-picker_hidden');
-};
+}
