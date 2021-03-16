@@ -36,7 +36,7 @@ module.exports = {
     'search-room' : `${PATHS.site_pages}/search-room/search-room.js`,
     'sign-in'     : `${PATHS.site_pages}/sign-in/sign-in.js`,
 
-    'cards': `${PATHS.ui_kit}/cards/cards.js`,
+    'cards'              : `${PATHS.ui_kit}/cards/cards.js`,
     'colors-and-types'   : `${PATHS.ui_kit}/colors-and-types/colors-and-types.js`,
     'form-elements'      : `${PATHS.ui_kit}/form-elements/form-elements.js`,
     'headers-and-footers': `${PATHS.ui_kit}/headers-and-footers/headers-and-footers/headers-and-footers.js`,
