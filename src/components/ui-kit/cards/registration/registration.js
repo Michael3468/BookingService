@@ -1,4 +1,5 @@
 import './registration.scss';
+import '../card-background-border.scss';
 
 import '../../form-elements/text-field/text-field.js';
 import '../../form-elements/radio-buttons/radio-buttons.js';

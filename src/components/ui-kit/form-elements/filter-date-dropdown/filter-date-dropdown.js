@@ -12,5 +12,5 @@ $(function() {
 
 function showHideDatePicker(){
   let $filterDateDropdown = $(this.offsetParent.nextElementSibling);
-  $filterDateDropdown.toggle('.dropdown-date__date-picker_hidden');
+  $filterDateDropdown.toggle('.filter-date-dropdown_hidden');
 };

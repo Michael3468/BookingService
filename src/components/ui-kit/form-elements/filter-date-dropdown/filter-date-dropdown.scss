@@ -1,7 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .filter-date-dropdown__caption {
   margin-bottom: $inputCapMarBottom;
 }
@@ -29,4 +28,10 @@
 .filter-date-dropdown__expand-button {
   margin: rem(10) rem(0) rem(0) rem(10);
   width: rem(20);
+}
+
+.filter-date-dropdown_hidden {
+  display: none;
+  position: absolute;
+  z-index: 10;
 }

@@ -8,9 +8,7 @@
   border-radius: $BorderRadius $BorderRadius 0 0;
 }
 
-
 .room-card {
-
   box-sizing: border-box;
   width: rem(271);
   background: $default-color;
@@ -21,7 +19,6 @@
   &__picture {
     object-fit: contain;
   }
-
 
   &__picture-block {
     &::before,
@@ -39,21 +36,28 @@
       }
 
       &::before {
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 99.99%,
+          rgba(255, 255, 255, 0) 100%
+        );
       }
       &::after {
-        background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(
+          -90deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 99.99%,
+          rgba(255, 255, 255, 0) 100%
+        );
         right: 0;
       }
     }
   }
-
 }
-
 
 //- navigation
 .room-card {
-
   &__picture-navigation {
     position: absolute;
     display: flex;
@@ -82,7 +86,6 @@
     }
   }
 
-
   &__picture-slides {
     position: absolute;
     display: flex;
@@ -104,13 +107,10 @@
       background: $default-color;
     }
   }
-
 }
 //- navigation end
 
-
 .room-card {
-
   &__number-price {
     margin: rem(14) rem(18) 0 rem(22);
     border-bottom: rem(1) solid $DarkShade25;
@@ -123,18 +123,14 @@
     align-items: center;
     padding: rem(3) rem(20) rem(14) rem(20);
   }
-
 }
 
-
 .number-price {
-
   &_font-size {
-    font-size: rem(19);
+    font-size: rem(19) !important;
   }
 
   &_m-bottom {
     margin-bottom: rem(7);
   }
-
 }
