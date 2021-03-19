@@ -1,16 +1,14 @@
 import './filter-date-dropdown.scss';
 import '../../form-elements/filter-date-picker/filter-date-picker.js';
 
-$(function() {
-
+$(function () {
   let $isFilterDateDropdown = $('.filter-date-dropdown__input');
-  if ( $isFilterDateDropdown ) {
+  if ($isFilterDateDropdown) {
     $isFilterDateDropdown.on('click', showHideDatePicker);
   }
-
 });
 
-function showHideDatePicker(){
+function showHideDatePicker() {
   let $filterDateDropdown = $(this.offsetParent.nextElementSibling);
   $filterDateDropdown.toggle('.filter-date-dropdown_hidden');
-};
+}

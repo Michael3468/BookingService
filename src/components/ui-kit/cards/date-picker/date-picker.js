@@ -31,10 +31,10 @@ function addApplyButton() {
   }
 }
 
-function hideDatePicker() {
-  let $isDatePicker = $('.dropdown-date__date-picker');
-  // TODO удалить dropdown-date__date-picker_hidden везде
-  // $isDatePicker.toggle('.dropdown-date__date-picker_hidden');
-
-  $isDatePicker.css('display', 'none');
+function hideDatePicker(event) {
+  let $picker = $(event.target).closest('.dropdown-date__date-picker');
+  let $pickerStatus = $picker.css('display');
+  if ($pickerStatus == 'block') {
+    $picker.css('display', 'none');
+  }
 }
