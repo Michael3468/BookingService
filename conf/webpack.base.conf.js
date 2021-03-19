@@ -20,10 +20,6 @@ const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter((filename) => filename.endsWith('.pug'));
 
-function getNameWithoutExt(page) {
-  return page.slice(0, -4); // slice '.pug' extension
-}
-
 module.exports = {
   externals: {
     paths: PATHS,
@@ -143,7 +139,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`, // .pug
           filename: `./${page.replace(/\.pug/, '.html')}`, // .html
-          chunks: ['app', 'vendors', getNameWithoutExt(page)],
+          chunks: ['app', 'vendors', path.parse(page).name],
         })
     ),
   ],
