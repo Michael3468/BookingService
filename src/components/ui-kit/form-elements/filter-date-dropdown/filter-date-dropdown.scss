@@ -1,37 +1,38 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.filter-date-dropdown__caption {
-  margin-bottom: $inputCapMarBottom;
-}
-.filter-date-dropdown__input_block {
-  position: relative;
-}
-.filter-date-dropdown__input,
-.filter-date-dropdown__input::placeholder,
-.filter-date-dropdown__input_arrow,
-.filter-date-dropdown__expand-button {
-  color: $DarkShade50;
-}
-.filter-date-dropdown__input {
-  padding: rem(12) rem(10) rem(12) rem(15);
-  cursor: pointer;
-  &::placeholder {
-    opacity: 1;
+.filter-date-dropdown {
+  &__caption {
+    margin-bottom: $inputCapMarBottom;
   }
-}
-.filter-date-dropdown__input_arrow {
-  position: absolute;
-  top: rem(10);
-  right: rem(10);
-}
-.filter-date-dropdown__expand-button {
-  margin: rem(10) rem(0) rem(0) rem(10);
-  width: rem(20);
-}
-
-.filter-date-dropdown_hidden {
-  display: none;
-  position: absolute;
-  z-index: 10;
+  &__input_block {
+    position: relative;
+  }
+  &__input,
+  &__input::placeholder,
+  &__input_arrow,
+  &__expand-button {
+    color: $DarkShade50;
+  }
+  &__input {
+    padding: rem(12) rem(10) rem(12) rem(15);
+    cursor: pointer;
+    &::placeholder {
+      opacity: 1;
+    }
+    &_arrow {
+      position: absolute;
+      top: rem(10);
+      right: rem(10);
+    }
+  }
+  &__expand-button {
+    margin: rem(10) rem(0) rem(0) rem(10);
+    width: rem(20);
+  }
+  &_hidden {
+    display: none;
+    position: absolute;
+    z-index: 20;
+  }
 }
