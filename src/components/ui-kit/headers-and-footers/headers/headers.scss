@@ -18,7 +18,17 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      color: $DarkShade75;
+      font-family: $secondFont;
+      font-weight: normal;
+      line-height: rem(25);
+      color: $DarkShade50;
+      cursor: pointer;
+
+      &_active,
+      &:hover {
+        font-weight: bold;
+        color: $DarkShade75;
+      }
     }
 
     &-ul {
@@ -28,21 +38,9 @@
       line-height: rem(17);
     }
 
-    &-li {
-      font-family: $secondFont;
-      font-weight: normal;
-      line-height: rem(25);
-      color: $DarkShade50;
-      cursor: pointer;
-
-      &-active {
-        font-family: $secondFont;
-        font-weight: bold;
-      }
-      &:hover {
-        color: $DarkShade75;
-        font-weight: bold;
-      }
+    &-li:hover {
+      font-weight: bold;
+      color: $DarkShade75;
     }
   }
   // nav end
@@ -200,7 +198,7 @@
     &__burger {
       display: block;
       justify-content: flex-end;
-  
+
       &-logo {
         display: flex;
         flex-direction: row;

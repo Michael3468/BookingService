@@ -14,8 +14,8 @@ mixin header(loginStatus)
       input#header__menu-checkbox(type='checkbox')
       nav.header__nav(role='navigation')
         ul.header__nav-ul.header__expand-menu
-          li.header__nav-li.header__nav-li-active 
-            a.header__nav-link(href='change-me-link') О нас
+          li.header__nav-li
+            a.header__nav-link.header__nav-link_active(href='change-me-link') О нас
           //- css dropdown
           li.header__nav-li.header__nav-dropdown.header__nav-link Услуги
               //- used material icons font
