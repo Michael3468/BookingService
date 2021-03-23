@@ -14,7 +14,7 @@ block content
 
       .block-margin
         include ../components/ui-kit/form-elements/text-field/text-field
-        +text-field({leftCaption:    'text field',
+        +text-field({ leftCaption:    'text field',
                       rightCaption:   'default',
                       inpType:        'email',
                       inpName:        'email',
@@ -23,7 +23,7 @@ block content
                       inpId:          'emailTextField'})
 
       .block-margin
-        +text-field({leftCaption:    'text field',
+        +text-field({  leftCaption:    'text field',
                       rightCaption:   'hover /focus',
                       inpType:        'text',
                       inpName:        'text',
@@ -95,14 +95,14 @@ block content
 
       .block-margin.toggle-margin
         include ../components/ui-kit/form-elements/toggle/toggle
-        +toggle({leftCaption:    'toggle',
+        +toggle({ leftCaption:    'toggle',
                   toggleId:       'toggle-button1',
                   toggleBtnText:  'Получать спецпредложения',
                   toggleStatus:   'checked'})
         .toggle-margin-between
-          +toggle({leftCaption:  '',
-                  toggleId:      'toggle-button2',
-                  toggleBtnText: 'Получать спецпредложения',})
+          +toggle({ leftCaption:   '',
+                    toggleId:      'toggle-button2',
+                    toggleBtnText: 'Получать спецпредложения',})
 
       .block-margin.like-buttons-margin
         include ../components/ui-kit/form-elements/like-button/like-button
@@ -135,8 +135,8 @@ block content
 
       .mini-column
         include ../components/ui-kit/form-elements/range-slider/range-slider
-        +range-slider({leftCaption:  'range slider',
-                      rightCaption:  '5 000₽ - 10 000₽'})
+        +range-slider({ leftCaption:  'range slider',
+                        rightCaption:  '5 000₽ - 10 000₽'})
 
       .block-margin
         include ../components/ui-kit/form-elements/buttons/buttons
@@ -173,21 +173,21 @@ block content
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
-          +dropdown-options({leftCaption:  'dropdown',
-                            rightCaption:  'default',
-                            idPrefix:      'dropdown-options',
-                            idPostfix:     '-1',
-                            selectionText: '2 спальни, 2 кровати...',
-                            expMenuStatus: 'visibility-hidden',
+          +dropdown-options({ leftCaption:  'dropdown',
+                              rightCaption:  'default',
+                              idPrefix:      'dropdown-options',
+                              idPostfix:     '-1',
+                              selectionText: '2 спальни, 2 кровати...',
+                              expMenuStatus: 'visibility-hidden',
                             })
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
-          +dropdown-options({leftCaption:   'dropdown',
-                            rightCaption:   'expanded',
-                            idPrefix:       'dropdown-options',
-                            idPostfix:      '-changed-example',
-                            selectionText:  '2 спальни, 2 кровати...',
+          +dropdown-options({ leftCaption:   'dropdown',
+                              rightCaption:   'expanded',
+                              idPrefix:       'dropdown-options',
+                              idPostfix:      '-changed-example',
+                              selectionText:  '2 спальни, 2 кровати...',
                             })
 
 
@@ -200,7 +200,7 @@ block content
                         idPostfix:      '-2',
                         items:          ['Взрослые','Дети','Младенцы'],
                         menuStatus:     'menu-open',
-                        })
+                      })
 
 
     .column-3
@@ -213,7 +213,7 @@ block content
                         items:             ['Взрослые','Дети','Младенцы'],
                         menuStatus:        'menu-open',
                         cleanButtonStatus: 'show'
-                        })
+                      })
 
 
   .third-container.container
@@ -224,7 +224,7 @@ block content
 
         .block-margin.expandable-checkbox-list__margin
           include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-          +checkbox-buttons({caption:         'expandable checkbox list',
+          +checkbox-buttons({ caption:         'expandable checkbox list',
                               leftCaption:    'checkbox buttons',
                               inpId:          'check-box-buttons-1',
                               optionsDisplay: 'display-none',
@@ -277,11 +277,11 @@ block content
 
       .icon-text-list__wrapper
         include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
-        +icon-text-list({iconName : 'insert_emoticon',
+        +icon-text-list({ iconName : 'insert_emoticon',
                           caption:   'Комфорт',
                           text:      'Шумопоглощающие стены'})
 
-        +icon-text-list({iconName : 'location_city',
+        +icon-text-list({ iconName : 'location_city',
                           caption:   'Удобство',
                           text:      'Окно в каждой из спален'})
 
