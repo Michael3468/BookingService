@@ -2,34 +2,34 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .first-container {
-  margin-bottom: 85px;
+  margin-bottom: rem(85);
 }
 .second-container {
-  margin-bottom: 149px;
+  margin-bottom: rem(149);
 }
 .third-container {
-  margin-bottom: 73px;
+  margin-bottom: rem(73);
 }
 .fourth-container {
-  margin-bottom: 111px;
+  margin-bottom: rem(111);
 }
 .column-1, .column-2, .column-3 {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  min-width: rem(320);
   margin-top: rem(5);
 }
 .column-4 {
   width: 100%;
 }
 .column-1 {
-  margin-right: 127px;
+  margin-right: rem(127);
 }
 .column-2 {
-  margin-right: 72px;
+  margin-right: rem(72);
 }
 .mini-column {
-  width: 266px;
+  width: rem(266);
 }
 .block-margin {
   margin-bottom: rem(19);
