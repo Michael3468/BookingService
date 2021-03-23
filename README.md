@@ -20,7 +20,7 @@ $ npm run dev
 # Build project. Output will be at 'dist' folder
 $ npm run build
 
-# Deploy project to gh-pages
+# Deploy project to gh-pages (after "npm run build")
 $ npm run deploy
 ```
 
