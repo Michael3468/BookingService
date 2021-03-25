@@ -55,15 +55,15 @@
   padding: rem(9) rem(15) rem(0) rem(15);
 }
 .dropdown-options-menu {
+  position: relative;
+  z-index: 20;
+  background: $default-color;
   cursor: default;
   border-bottom-left-radius: rem(4);
   border-bottom-right-radius: rem(4);
   border: rem(1) solid $DarkShade25;
   margin: rem(-3) rem(-1) rem(-1);
   padding-bottom: rem(6);
-}
-.visibility-hidden {
-  visibility: hidden;
 }
 .dropdown-options-item {
   font-family: $secondFont;
@@ -73,22 +73,35 @@
   text-transform: uppercase;
   padding-top: rem(7);
 }
-.dropdown-options-menu-option {
+.dropdown-options__menu-option {
   display: flex;
   justify-content: space-between;
 }
-.dropdown-options-menu-option {
+.dropdown-options__menu-option {
   height: rem(37);
   padding: rem(0) rem(5) rem(0) rem(15);
 }
-.dropdown-options-item-controls button.button-decrement,
-.dropdown-options-item-controls button.button-increment {
+.dropdown-options__button-decrement,
+.dropdown-options__button-increment {
   border-radius: 50%;
   height: rem(30);
   width: rem(30);
   margin-top: rem(6);
 }
-.dropdown-options-item-controls .counter {
+.dropdown-options__button-decrement::after,
+.dropdown-options__button-increment::after {
+  font-size: rem(18);
+  font-style: normal;
+  font-family: $secondFont;
+}
+.dropdown-options__button-decrement::after {
+  content: '-';
+}
+.dropdown-options__button-increment::after {
+  content: '+';
+}
+
+.dropdown-options__counter {
   position: relative;
   border: none;
   top: rem(-3);
@@ -96,7 +109,7 @@
   font-size: rem(12);
   font-weight: bold;
 }
-.counter {
+.dropdown-options__counter {
   display: inline-block;
   text-align: center;
   width: rem(33);
@@ -108,38 +121,23 @@
   width: rem(13);
 }
 .dropdown-options,
-.icon-decrement,
-.icon-increment,
 .dropdown-options-button_clean,
 .dropdown-options-button_apply {
   cursor: pointer;
 }
-.button-decrement,
-.button-increment {
+.dropdown-options__button-decrement,
+.dropdown-options__button-increment {
+  cursor: pointer;
   background: $default-color;
 }
-.icon-decrement::after,
-.icon-increment::after {
-  font-size: rem(18);
-  font-style: normal;
-  font-family: $secondFont;
-}
-.icon-decrement::after {
-  display: block;
-  content: '-';
-}
-.icon-increment::after {
-  content: '+';
-}
-
-.button-increment {
+.dropdown-options__button-increment {
   color: $DarkShade50;
   border: rem(1) solid $DarkShade50;
 }
-.dropdown-options-item-controls button {
+.dropdown-options__item-controls button {
   padding: rem(0);
 }
-.button-decrement {
+.dropdown-options__button-decrement {
   color: $DarkShade25;
   border: rem(1) solid $DarkShade25;
 }
