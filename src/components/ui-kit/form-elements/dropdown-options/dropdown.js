@@ -3,8 +3,8 @@ export class Dropdown {
   constructor(elem) {
     this._elem = elem;
     this._ddBlock = elem.querySelector('.js-dropdown-options-block');
+    this._selectionText = elem.querySelector('.js-dropdown-options__selection_text');
     this._menu = elem.querySelector('.js-dropdown-options-menu');
-
     elem.onclick = this.onClick.bind(this);
   }
 
