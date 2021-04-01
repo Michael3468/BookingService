@@ -1,14 +1,14 @@
 mixin dropdown-options(params)
-  .dropdown-options(id=params.id)
-    .dropdown-options__caption
-      h3.dropdown-options__caption-left= params.leftCaption
-      h3.dropdown-options__caption-right= params.rightCaption
-    .dropdown-options-block.js-dropdown-options-block(class=params.menuStatus)
-      .dropdown-options__block_top(data-dd-action='showHide')
-        p.dropdown-options__selection_text.js-dropdown-options__selection_text(data-dd-action='showHide')= params.selectionText
-        .dropdown-options__expand-button.material-icons(data-dd-action='showHide') expand_more
+  .dropdown(id=params.id)
+    .dropdown__caption
+      h3.dropdown__caption-left= params.leftCaption
+      h3.dropdown__caption-right= params.rightCaption
+    .dropdown__block.js-dropdown__block(class=params.menuStatus)
+      .dropdown__block_top(data-dd-action='showHide')
+        p.dropdown__selection_text.js-dropdown__selection-text(data-dd-action='showHide')= params.selectionText
+        .dropdown__expand-button.material-icons(data-dd-action='showHide') expand_more
 
-      .dropdown-options-menu.js-dropdown-options-menu(hidden=params.expMenuStatus)
+      .dropdown__menu.js-dropdown__menu(hidden=params.expMenuStatus)
 
         if (params.idPostfix == '-changed-example')
           - var items = { 'item1': {valName : 'Спальни', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Кровати', valCounter: '2', valClass: 'dark'},'item3': {valName : 'Ванные комнаты'} };
@@ -16,12 +16,12 @@ mixin dropdown-options(params)
           - var items = { 'item1': {valName : 'Спальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
 
         each val, key in items
-          .dropdown-options__menu-option(class=key)
-            p.dropdown-options-item= val.valName
-            .dropdown-options__item-controls.js-dropdown-options__item-controls
-              button.dropdown-options__button-decrement.js-dropdown-options__button-decrement(class=val.valClass data-dd-action='decrement')
-              span.dropdown-options__counter.js-dropdown-options__counter= val.valCounter || 0
-              button.dropdown-options__button-increment(data-dd-action='increment')
+          .dropdown__menu-option(class=key)
+            p.dropdown__item= val.valName
+            .dropdown__item-controls.js-dropdown__item-controls
+              button.dropdown__button-decrement.js-dropdown__button-decrement(class=val.valClass data-dd-action='decrement')
+              span.dropdown__counter.js-dropdown__counter= val.valCounter || 0
+              button.dropdown__button-increment(data-dd-action='increment')
 
 
 //- examples

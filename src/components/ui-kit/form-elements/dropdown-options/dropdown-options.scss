@@ -1,14 +1,14 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.dropdown-options__caption {
+.dropdown__caption {
   display: flex;
   justify-content: space-between;
 }
-.dropdown-options__caption-left {
+.dropdown__caption-left {
   margin-bottom: $inputCapMarBottom;
 }
-.dropdown-options__caption-right {
+.dropdown__caption-right {
   font-weight: normal;
 }
 
@@ -21,33 +21,33 @@
 }
 //common input__style end
 
-.dropdown-options__block_top {
+.dropdown__block_top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: rem(-3) rem(9) rem(0) rem(0);
 }
-.dropdown-options__expand-button {
+.dropdown__expand-button {
   position: relative;
   cursor: pointer;
   color: $DarkShade50;
   margin: rem(-3) rem(9) rem(0) rem(0);
 }
 
-.dropdown-options-block {
+.dropdown__block {
   height: rem(44);
   align-items: center;
   border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
 }
 
-.dropdown-options-block.menu-open {
+.dropdown__block.menu-open {
   border-bottom-left-radius: rem(0);
   border-bottom-right-radius: rem(0);
   display: block;
 }
-.dropdown-options__selection_text {
+.dropdown__selection_text {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -59,7 +59,7 @@
   width: 73%;
   padding: rem(9) rem(15) rem(33) rem(15);
 }
-.dropdown-options-menu {
+.dropdown__menu {
   position: relative;
   z-index: 20;
   background: $default-color;
@@ -70,7 +70,7 @@
   margin: rem(-3) rem(-1) rem(-1);
   padding-bottom: rem(6);
 }
-.dropdown-options-item {
+.dropdown__item {
   font-family: $secondFont;
   font-weight: bold;
   font-size: rem(12);
@@ -78,35 +78,35 @@
   text-transform: uppercase;
   padding-top: rem(7);
 }
-.dropdown-options__menu-option {
+.dropdown__menu-option {
   display: flex;
   justify-content: space-between;
 }
-.dropdown-options__menu-option {
+.dropdown__menu-option {
   height: rem(37);
   padding: rem(0) rem(5) rem(0) rem(15);
 }
-.dropdown-options__button-decrement,
-.dropdown-options__button-increment {
+.dropdown__button-decrement,
+.dropdown__button-increment {
   border-radius: 50%;
   height: rem(30);
   width: rem(30);
   margin-top: rem(6);
 }
-.dropdown-options__button-decrement::after,
-.dropdown-options__button-increment::after {
+.dropdown__button-decrement::after,
+.dropdown__button-increment::after {
   font-size: rem(18);
   font-style: normal;
   font-family: $secondFont;
 }
-.dropdown-options__button-decrement::after {
+.dropdown__button-decrement::after {
   content: '-';
 }
-.dropdown-options__button-increment::after {
+.dropdown__button-increment::after {
   content: '+';
 }
 
-.dropdown-options__counter {
+.dropdown__counter {
   position: relative;
   border: none;
   top: rem(-3);
@@ -114,29 +114,29 @@
   font-size: rem(12);
   font-weight: bold;
 }
-.dropdown-options__counter {
+.dropdown__counter {
   display: inline-block;
   text-align: center;
   width: rem(33);
 }
-.dropdown-options__block_top,
-.dropdown-options-button_clean,
-.dropdown-options-button_apply {
+.dropdown__block_top,
+.dropdown-button_clean,
+.dropdown-button_apply {
   cursor: pointer;
 }
-.dropdown-options__button-decrement,
-.dropdown-options__button-increment {
+.dropdown__button-decrement,
+.dropdown__button-increment {
   cursor: pointer;
   background: $default-color;
 }
-.dropdown-options__button-increment {
+.dropdown__button-increment {
   color: $DarkShade50;
   border: rem(1) solid $DarkShade50;
 }
-.dropdown-options__item-controls button {
+.dropdown__item-controls button {
   padding: rem(0);
 }
-.dropdown-options__button-decrement {
+.dropdown__button-decrement {
   color: $DarkShade25;
   border: rem(1) solid $DarkShade25;
 }

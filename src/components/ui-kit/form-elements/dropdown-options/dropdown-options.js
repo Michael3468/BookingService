@@ -2,7 +2,6 @@ import './dropdown-options.scss';
 import { Dropdown } from './dropdown.js';
 
 class DropdownOptions extends Dropdown {
-
   increment(event) {
     super.increment(event);
     this._selectionText.innerText = updateDropdownOptionsSelectionText(this);
@@ -18,7 +17,7 @@ let dropdownOptions = document.querySelector('#dropdown-options');
 new DropdownOptions(dropdownOptions);
 
 function updateDropdownOptionsSelectionText(thisObj) {
-  let dropdownCounters = thisObj._elem.querySelectorAll('.js-dropdown-options__counter');
+  let dropdownCounters = thisObj._elem.querySelectorAll('.js-dropdown__counter');
 
   let bedroomsCounter = dropdownCounters[0].innerText;
   let bedsCounter = dropdownCounters[1].innerText;
