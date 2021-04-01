@@ -21,7 +21,7 @@
 }
 //common input__style end
 
-.dropdown-options {
+.dropdown-options__block_top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,11 +48,16 @@
   display: block;
 }
 .dropdown-options__selection_text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-family: $secondFont;
   font-size: rem(14);
   color: $DarkShade75;
-  height: rem(45);
-  padding: rem(9) rem(15) rem(0) rem(15);
+
+  height: rem(35);
+  width: 73%;
+  padding: rem(9) rem(15) rem(33) rem(15);
 }
 .dropdown-options-menu {
   position: relative;
@@ -114,13 +119,7 @@
   text-align: center;
   width: rem(33);
 }
-.icon-increment::before {
-  display: block;
-  height: rem(0);
-  top: rem(6);
-  width: rem(13);
-}
-.dropdown-options,
+.dropdown-options__block_top,
 .dropdown-options-button_clean,
 .dropdown-options-button_apply {
   cursor: pointer;

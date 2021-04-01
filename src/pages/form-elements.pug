@@ -173,21 +173,21 @@ block content
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
-          +dropdown-options({ leftCaption:  'dropdown',
+          +dropdown-options({ leftCaption:   'dropdown',
                               rightCaption:  'default',
-                              idPrefix:      'dropdown-options',
                               idPostfix:     '-1',
+                              id:            'dropdown-options',
                               selectionText: '2 спальни, 2 кровати...',
-                              expMenuStatus: 'visibility-hidden',
+                              expMenuStatus: 'hidden',
                             })
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
           +dropdown-options({ leftCaption:   'dropdown',
-                              rightCaption:   'expanded',
-                              idPrefix:       'dropdown-options',
-                              idPostfix:      '-changed-example',
-                              selectionText:  '2 спальни, 2 кровати...',
+                              rightCaption:  'expanded',
+                              menuStatus:    'menu-open',
+                              idPostfix:     '-changed-example',
+                              selectionText: '2 спальни, 2 кровати...',
                             })
 
 

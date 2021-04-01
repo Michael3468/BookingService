@@ -1,25 +1,33 @@
 mixin dropdown-options(params)
-  .dropdown-options__caption
-    h3.dropdown-options__caption-left= params.leftCaption
-    h3.dropdown-options__caption-right= params.rightCaption
-  .dropdown-options-block(id=`dropdown-options${params.idPostfix}` class=params.menuStatus)
-    .dropdown-options
-      p.dropdown-options__selection_text= params.selectionText
-      .dropdown-options__expand-button.material-icons expand_more
-      
-    .dropdown-options-menu(class=params.expMenuStatus)
+  .dropdown-options(id=params.id)
+    .dropdown-options__caption
+      h3.dropdown-options__caption-left= params.leftCaption
+      h3.dropdown-options__caption-right= params.rightCaption
+    .dropdown-options-block.js-dropdown-options-block(class=params.menuStatus)
+      .dropdown-options__block_top(data-dd-action='showHide')
+        p.dropdown-options__selection_text.js-dropdown-options__selection_text(data-dd-action='showHide')= params.selectionText
+        .dropdown-options__expand-button.material-icons(data-dd-action='showHide') expand_more
 
-      if (params.idPostfix == '-changed-example')
-        - var items = { 'item1': {valName : 'Спальни', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Кровати', valCounter: '2', valClass: 'dark'},'item3': {valName : 'Ванные комнаты'} };
-      else
-        - var items = { 'item1': {valName : 'Спальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
+      .dropdown-options-menu.js-dropdown-options-menu(hidden=params.expMenuStatus)
 
-      each val, key in items
-        .dropdown-options-menu-option(id=key)
-          p.dropdown-options-item= val.valName
-          .dropdown-options-item-controls
-            button.button-decrement(id=`dropdown-options${params.idPostfix}-${key}-button-decrement` class=(val.valClass))
-              i.icon-decrement
-            span.counter(id=`dropdown-options${params.idPostfix}-${key}-counter`)= val.valCounter || 0
-            button.button-increment(id=`dropdown-options${params.idPostfix}-${key}-button-increment`)
-              i.icon-increment
+        if (params.idPostfix == '-changed-example')
+          - var items = { 'item1': {valName : 'Спальни', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Кровати', valCounter: '2', valClass: 'dark'},'item3': {valName : 'Ванные комнаты'} };
+        else
+          - var items = { 'item1': {valName : 'Спальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
+
+        each val, key in items
+          .dropdown-options__menu-option(class=key)
+            p.dropdown-options-item= val.valName
+            .dropdown-options__item-controls.js-dropdown-options__item-controls
+              button.dropdown-options__button-decrement.js-dropdown-options__button-decrement(class=val.valClass data-dd-action='decrement')
+              span.dropdown-options__counter.js-dropdown-options__counter= val.valCounter || 0
+              button.dropdown-options__button-increment(data-dd-action='increment')
+
+
+//- example
+//- +dropdown-options({ leftCaption:   'dropdown',
+//-                     rightCaption:  'default',
+//-                     idPostfix:     '-1',
+//-                     selectionText: '2 спальни, 2 кровати...',
+//-                     expMenuStatus: 'hidden',
+//-                   })
