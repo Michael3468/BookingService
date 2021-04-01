@@ -24,10 +24,17 @@ mixin dropdown-options(params)
               button.dropdown-options__button-increment(data-dd-action='increment')
 
 
-//- example
+//- examples
 //- +dropdown-options({ leftCaption:   'dropdown',
 //-                     rightCaption:  'default',
-//-                     idPostfix:     '-1',
+//-                     id:            'dropdown-options',
 //-                     selectionText: '2 спальни, 2 кровати...',
 //-                     expMenuStatus: 'hidden',
+//-                   })
+
+//- +dropdown-options({ leftCaption:   'dropdown',
+//-                     rightCaption:  'expanded',
+//-                     menuStatus:    'menu-open',
+//-                     idPostfix:     '-changed-example',
+//-                     selectionText: '2 спальни, 2 кровати...',
 //-                   })
