@@ -12,8 +12,10 @@ mixin dropdown(params)
 
         if (params.idPostfix == '-changed-example')
           - var items = { 'item1': {valName : 'Спальни', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Кровати', valCounter: '2', valClass: 'dark'},'item3': {valName : 'Ванные комнаты'} };
-        else
+        if (params.id == 'dropdown-options')
           - var items = { 'item1': {valName : 'Спальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
+        if (params.id == 'dropdown-guests')
+          - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
 
         each val, key in items
           .dropdown__menu-option(class=key)
@@ -22,6 +24,15 @@ mixin dropdown(params)
               button.dropdown__button-decrement.js-dropdown__button-decrement(class=val.valClass data-dd-action='decrement')
               span.dropdown__counter.js-dropdown__counter= val.valCounter || 0
               button.dropdown__button-increment(data-dd-action='increment')
+
+        //- dropdown buttons for dropdown-guests
+        if (params.id == 'dropdown-guests')
+          .dropdown-guests__buttons
+            if (params.cleanButtonStatus == 'show')
+              - var cleanButtonClass = 'dropdown-guests__button_clean_'+params.cleanButtonStatus
+
+            button.dropdown-guests__button_clean(class=cleanButtonClass) очистить
+            button.dropdown-guests__button_apply применить
 
 
 //- examples
