@@ -51,12 +51,11 @@ block content
 
       .search-room__options-column__dropdown-options
         include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
-        +dropdown-options({ leftCaption:   'удобства номера',
-                            idPostfix:     '-1',
-                            id:            'dropdown-options',
-                            selectionText: '2 спальни, 2 кровати...',
-                            expMenuStatus: 'hidden',
-                          })
+        +dropdown({ leftCaption:   'удобства номера',
+                    id:            'dropdown-options',
+                    selectionText: '2 спальни, 2 кровати...',
+                    expMenuStatus: 'hidden',
+                  })
 
       .search-room__options-column__checkbox-buttons_expandable
         include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
