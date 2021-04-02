@@ -61,7 +61,7 @@
 }
 .dropdown__menu {
   position: relative;
-  z-index: 20;
+  z-index: 19;
   background: $default-color;
   cursor: default;
   border-bottom-left-radius: rem(4);
@@ -119,9 +119,7 @@
   text-align: center;
   width: rem(33);
 }
-.dropdown__block_top,
-.dropdown-button_clean,
-.dropdown-button_apply {
+.dropdown__block_top {
   cursor: pointer;
 }
 .dropdown__button-decrement,
@@ -144,3 +142,33 @@
   color: $DarkShade50;
   border: rem(1) solid $DarkShade50;
 }
+
+// dropdown-guests--buttons.scss
+.dropdown-guests {
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: rem(19) rem(0) rem(11) rem(5);
+  }
+  &__button_clean,
+  &__button_apply {
+    font-family: $secondFont;
+    font-size: rem(12);
+    font-weight: bold;
+    color: $purple;
+    text-transform: uppercase;
+    background: $default-color;
+  }
+  &__button_clean {
+    visibility: hidden;
+    &_show {
+      visibility: visible;
+    }
+  }
+  &__button_clean,
+  &__button_apply {
+    cursor: pointer;
+  }
+}
+// dropdown-guests--buttons.scss
