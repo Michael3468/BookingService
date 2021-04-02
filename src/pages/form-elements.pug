@@ -23,7 +23,7 @@ block content
                       inpId:          'emailTextField'})
 
       .block-margin
-        +text-field({  leftCaption:    'text field',
+        +text-field({ leftCaption:    'text field',
                       rightCaption:   'hover /focus',
                       inpType:        'text',
                       inpName:        'text',
@@ -33,12 +33,13 @@ block content
                       hoverStyle:     'like-hover'})
 
       .block-margin
-        include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
-        +dropdown-guests({leftCaption:   'dropdown',
-                          idPostfix:     '-1',
-                          selectionText: 'Сколько гостей',
-                          expMenuStatus: 'visibility-hidden',
-                          })
+        include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
+        +dropdown({ leftCaption:   'dropdown',
+                    rightCaption:  'default',
+                    id:            'dropdown-guests',
+                    selectionText: 'Сколько гостей',
+                    expMenuStatus: 'hidden',
+                  })
 
       .block-margin.date-margin
         include ../components/ui-kit/form-elements/masked-text-field/masked-text-field
@@ -174,46 +175,40 @@ block content
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
           +dropdown({ leftCaption:   'dropdown',
-                              rightCaption:  'default',
-                              id:            'dropdown-options',
-                              selectionText: '2 спальни, 2 кровати...',
-                              expMenuStatus: 'hidden',
-                            })
+                      rightCaption:  'default',
+                      id:            'dropdown-options',
+                      selectionText: '2 спальни, 2 кровати...',
+                      expMenuStatus: 'hidden',
+                    })
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
           +dropdown({ leftCaption:   'dropdown',
-                              rightCaption:  'expanded',
-                              menuStatus:    'menu-open',
-                              idPostfix:     '-changed-example',
-                              selectionText: '2 спальни, 2 кровати...',
-                            })
+                      rightCaption:  'expanded',
+                      menuStatus:    'menu-open',
+                      idPostfix:     '-changed-example',
+                      selectionText: '2 спальни, 2 кровати...',
+                    })
 
 
     .column-2
 
-      include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
-      +dropdown-guests({leftCaption:    'dropdown',
-                        selectionText:  'Сколько гостей',
-                        idPrefix:       'dropdown-guests',
-                        idPostfix:      '-2',
-                        items:          ['Взрослые','Дети','Младенцы'],
-                        menuStatus:     'menu-open',
-                      })
+      include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
+      +dropdown({ leftCaption:   'dropdown',
+                  id:            'dropdown-guests',
+                  selectionText: 'Сколько гостей',
+                  menuStatus:    'menu-open',
+                })
 
 
     .column-3
 
-      include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
-      +dropdown-guests({leftCaption:       'dropdown',
-                        selectionText:     '3 гостя',
-                        idPrefix:          'dropdown-guests',
-                        idPostfix:         '-changed-example',
-                        items:             ['Взрослые','Дети','Младенцы'],
-                        menuStatus:        'menu-open',
-                        cleanButtonStatus: 'show'
-                      })
-
+      include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
+      +dropdown({ leftCaption:   'dropdown',
+                  id:            'dropdown-guests',
+                  selectionText: 'Сколько гостей',
+                  menuStatus:    'menu-open',
+                })
 
   .third-container.container
 
@@ -223,7 +218,7 @@ block content
 
         .block-margin.expandable-checkbox-list__margin
           include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-          +checkbox-buttons({ caption:         'expandable checkbox list',
+          +checkbox-buttons({ caption:        'expandable checkbox list',
                               leftCaption:    'checkbox buttons',
                               inpId:          'check-box-buttons-1',
                               optionsDisplay: 'display-none',
