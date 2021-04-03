@@ -1,5 +1,5 @@
 import './dropdown-options.scss';
-import { Dropdown } from './dropdown.js';
+import { Dropdown } from './Dropdown.js';
 
 class DropdownOptions extends Dropdown {
   increment(event) {

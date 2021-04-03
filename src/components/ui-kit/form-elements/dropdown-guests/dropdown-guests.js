@@ -1,7 +1,7 @@
 // TODO move styles for buttons to dropdown-guests.scss
 // import './dropdown-guests.scss';
 
-import { Dropdown } from '../dropdown-options/dropdown.js';
+import { Dropdown } from '../dropdown-options/Dropdown.js';
 
 class DropdownGuests extends Dropdown {
   constructor(elem) {
