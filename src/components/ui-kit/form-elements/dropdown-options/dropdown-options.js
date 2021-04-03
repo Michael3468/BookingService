@@ -17,11 +17,10 @@ let dropdownOptions = document.querySelector('#dropdown-options');
 new DropdownOptions(dropdownOptions);
 
 function updateDropdownOptionsSelectionText(thisObj) {
-  let dropdownCounters = thisObj._elem.querySelectorAll('.js-dropdown__counter');
 
-  let bedroomsCounter = dropdownCounters[0].innerText;
-  let bedsCounter = dropdownCounters[1].innerText;
-  let bathroomsCounter = dropdownCounters[2].innerText;
+  const bedroomsCounter = thisObj._dropdownCounters[0].innerText;
+  const bedsCounter = thisObj._dropdownCounters[1].innerText;
+  const bathroomsCounter = thisObj._dropdownCounters[2].innerText;
 
   let bedrooms = 'спален';
   switch (bedroomsCounter) {
@@ -59,35 +58,27 @@ function updateDropdownOptionsSelectionText(thisObj) {
       break;
   }
 
-  let selectionText = 'Удобства';
-
   if (bedroomsCounter > 0 && bedsCounter > 0 && bathroomsCounter > 0) {
     return `${bedroomsCounter} ${bedrooms}, ${bedsCounter} ${beds}, ${bathroomsCounter} ${baths}`;
   }
-
   if (bedroomsCounter > 0 && bedsCounter > 0) {
     return `${bedroomsCounter} ${bedrooms}, ${bedsCounter} ${beds}`;
   }
-
   if (bedroomsCounter > 0 && bathroomsCounter > 0) {
     return `${bedroomsCounter} ${bedrooms}, ${bathroomsCounter} ${baths}`;
   }
-
   if (bedsCounter > 0 && bathroomsCounter > 0) {
     return `${bedsCounter} ${beds}, ${bathroomsCounter} ${baths}`;
   }
-
   if (bedroomsCounter > 0) {
     return `${bedroomsCounter} ${bedrooms}`;
   }
-
   if (bedsCounter > 0) {
     return `${bedsCounter} ${beds}`;
   }
-
   if (bathroomsCounter > 0) {
     return `${bathroomsCounter} ${baths}`;
   }
 
-  return selectionText;
+  return 'Удобства';
 }

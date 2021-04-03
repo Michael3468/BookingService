@@ -4,6 +4,7 @@ export class Dropdown {
     this._ddBlock = elem.querySelector('.js-dropdown__block');
     this._selectionText = elem.querySelector('.js-dropdown__selection-text');
     this._menu = elem.querySelector('.js-dropdown__menu');
+    this._dropdownCounters = this._elem.querySelectorAll('.js-dropdown__counter');
     elem.onclick = this.onClick.bind(this);
   }
 
