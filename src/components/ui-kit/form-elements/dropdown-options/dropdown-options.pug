@@ -31,8 +31,8 @@ mixin dropdown(params)
             if (params.cleanButtonStatus == 'show')
               - var cleanButtonClass = 'dropdown-guests__button_clean_'+params.cleanButtonStatus
 
-            button.dropdown-guests__button_clean(class=cleanButtonClass) очистить
-            button.dropdown-guests__button_apply применить
+            button.dropdown-guests__button_clean(class=cleanButtonClass data-dd-action='clean') очистить
+            button.dropdown-guests__button_apply(data-dd-action='apply') применить
 
 
 //- examples
