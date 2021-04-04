@@ -15,12 +15,12 @@ block content
         include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
         +filter-date-dropdown({leftCaption : 'даты пребывания в отеле'})
 
-      include ../components/ui-kit/form-elements/dropdown-guests/dropdown-guests
-      +dropdown-guests({leftCaption:   'гости',
-                        idPostfix:     '-1',
-                        selectionText: 'Сколько гостей',
-                        expMenuStatus: 'visibility-hidden',
-                        })
+      include ../components/ui-kit/form-elements/dropdown/dropdown
+      +dropdown({ leftCaption:   'dropdown',
+                  id:            'dropdown-guests',
+                  selectionText: 'Сколько гостей',
+                  expMenuStatus: 'hidden',
+                })
 
       .search-room__options-column__range-slider
         include ../components/ui-kit/form-elements/range-slider/range-slider
@@ -50,7 +50,7 @@ block content
                                 })
 
       .search-room__options-column__dropdown-options
-        include ../components/ui-kit/form-elements/dropdown-options/dropdown-options
+        include ../components/ui-kit/form-elements/dropdown/dropdown
         +dropdown({ leftCaption:   'удобства номера',
                     id:            'dropdown-options',
                     selectionText: '2 спальни, 2 кровати...',

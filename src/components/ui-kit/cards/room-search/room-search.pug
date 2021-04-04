@@ -11,13 +11,12 @@ mixin room-search(params)
                      })
 
     .room-search__dropdown-guests-margin
-      include ../../../ui-kit/form-elements/dropdown-guests/dropdown-guests
-      +dropdown-guests({leftCaption:   'гости',
-                        idPrefix:      'drop-down',
-                        idPostfix:     '-1',
-                        selectionText: 'Сколько гостей',
-                        expMenuStatus: 'visibility-hidden',
-                      })
+      include ../../../ui-kit/form-elements/dropdown/dropdown
+      +dropdown({ leftCaption:   'dropdown',
+                  id:            'dropdown-guests',
+                  selectionText: 'Сколько гостей',
+                  expMenuStatus: 'hidden',
+                })
 
     include ../../../ui-kit/form-elements/buttons/buttons
     +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Подобрать номер'})

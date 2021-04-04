@@ -1,11 +1,11 @@
 import './form-elements.scss';
 
 import './text-field/text-field.js';
-import './dropdown-guests/dropdown-guests.js';
+import './dropdown/_guests/dropdown-guests.js';
 import './masked-text-field/masked-text-field.js';
 import './dropdown-date/dropdown-date.js';
 import './filter-date-dropdown/filter-date-dropdown.js';
-import './dropdown-options/dropdown-options.js';
+import './dropdown/_options/dropdown-options.js';
 import './checkbox-buttons/checkbox-buttons.js';
 import './icon-text-list/icon-text-list.js';
 
