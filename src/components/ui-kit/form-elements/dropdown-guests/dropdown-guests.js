@@ -1,5 +1,4 @@
-// TODO move styles for buttons to dropdown-guests.scss
-// import './dropdown-guests.scss';
+import './dropdown-guests.scss';
 
 import { Dropdown } from '../dropdown-options/Dropdown.js';
 

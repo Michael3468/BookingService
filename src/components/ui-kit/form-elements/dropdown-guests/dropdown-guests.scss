@@ -1,127 +1,8 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
-.dropdown-guests,
-.dropdown-guests__button-decrement,
-.dropdown-guests__button-increment,
-.dropdown-guests__button-decrement_icon,
-.dropdown-guests__button-increment_icon,
-.dropdown-guests__button_clean,
-.dropdown-guests__button_apply {
-  cursor: pointer;
-}
-
+// dropdown-guests--buttons.scss
 .dropdown-guests {
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: rem(-3) rem(9) rem(0) rem(0);
-
-  &__caption {
-    margin-bottom: $inputCapMarBottom;
-  }
-
-  &__block {
-    height: rem(44);
-    align-items: center;
-    border: rem(1) solid $DarkShade25;
-    border-radius: rem(4);
-  }
-  &__block.menu-open {
-    border-bottom-left-radius: rem(0);
-    border-bottom-right-radius: rem(0);
-    display: block;
-  }
-
-  &__selection_text {
-    font-family: $secondFont;
-    font-size: rem(14);
-    color: $DarkShade75;
-    height: rem(45);
-    padding: rem(9) rem(15) rem(0) rem(15);
-  }
-  &__expand-button {
-    position: relative;
-    cursor: pointer;
-    color: $DarkShade50;
-    margin: rem(-3) rem(9) rem(0) rem(0);
-  }
-
-
-  &__menu {
-    position: relative;
-    background: $default-color;
-    z-index: 10;
-    border-bottom-left-radius: rem(4);
-    border-bottom-right-radius: rem(4);
-    border: rem(1) solid $DarkShade25;
-    cursor: default;
-    margin: rem(-3) rem(-1) rem(-1);
-
-    &_option {
-      display: flex;
-      justify-content: space-between;
-      height: rem(37);
-      padding: rem(0) rem(5) rem(0) rem(15);
-    }
-
-    &-item {
-      font-family: $secondFont;
-      font-weight: bold;
-      font-size: rem(12);
-      color: $DarkShade100;
-      text-transform: uppercase;
-      padding-top: rem(7);
-    }
-  }
-  &__button-decrement,
-  &__button-increment {
-    border-radius: 50%;
-    height: rem(30);
-    width: rem(30);
-    margin-top: rem(6);
-    background: $default-color;
-  }
-  &__counter {
-    position: relative;
-    display: inline-block;
-    border: none;
-    font-family: $secondFont;
-    font-size: rem(12);
-    font-weight: bold;
-    text-align: center;
-    width: rem(33);
-    top: rem(-3);
-  }
-  &__button-increment {
-    color: $DarkShade50;
-    border: rem(1) solid $DarkShade50;
-  }
-  &__button-decrement {
-    color: $DarkShade25;
-    border: rem(1) solid $DarkShade25;
-    &_dark {
-      color: $DarkShade50 !important;
-      border: rem(1) solid $DarkShade50 !important;
-    }
-  }
-  &__button-decrement_icon::after,
-  &__button-increment_icon::after {
-    font-size: rem(18);
-    font-style: normal;
-    font-family: $secondFont;
-  }
-  &__button-decrement_icon::after {
-    display: block;
-    content: '-';
-  }
-  &__button-increment_icon::after {
-    content: '+';
-  }
-  //- menu buttons
   &__buttons {
     display: flex;
     flex-direction: row;
@@ -143,21 +24,9 @@
       visibility: visible;
     }
   }
-  //- menu buttons end
+  &__button_clean,
+  &__button_apply {
+    cursor: pointer;
+  }
 }
-
-//common class input__style
-.input__style {
-  //- TODO add to main.scss (or common.scss) and comment it here 
-  //- (don't del this class to use this component in others projects)
-  border: rem(1) solid $DarkShade25;
-  border-radius: $BorderRadius;
-  width: 100%;
-  font-family: $secondFont;
-}
-//common class input__style end
-
-.visibility-hidden {
-  visibility: hidden;
-}
-
+// dropdown-guests--buttons.scss
