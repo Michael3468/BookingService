@@ -1,8 +1,11 @@
 @import '../../../../../assets/scss/utils/vars.scss';
 @import '../../../../../assets/scss/utils/mixins.scss';
 
-// dropdown-guests--buttons.scss
 .dropdown-guests {
+  &__caption-right_color {
+    color: $DarkShade50;
+  }
+  // dropdown-guests--buttons.scss
   &__buttons {
     display: flex;
     flex-direction: row;
@@ -28,5 +31,5 @@
   &__button_apply {
     cursor: pointer;
   }
-}
 // dropdown-guests--buttons.scss
+}
