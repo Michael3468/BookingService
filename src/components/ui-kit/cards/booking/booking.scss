@@ -1,16 +1,14 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .booking {
-
   display: flex;
   flex-direction: column;
 
   &__date-dropdown-margin {
     margin-bottom: rem(21);
   }
-  
+
   &__options-block,
   &__options-item_block {
     display: flex;
@@ -28,14 +26,13 @@
     width: rem(239);
   }
 
-
   &__options-info-icon {
     cursor: pointer;
     border: rem(1) solid $DarkShade25;
     width: rem(20);
     height: rem(20);
     border-radius: rem(10);
-  
+
     &::before {
       content: 'i';
       position: relative;
@@ -46,15 +43,14 @@
     }
   }
 
-
   &__options-result {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font: bold rem(19) $secondFont;
     margin-top: rem(12);
-    margin-bottom: rem(18);
-  
+    margin-bottom: rem(22);
+
     &_line {
       width: 100%;
       border-bottom: rem(1) dashed $DarkShade25;
@@ -73,5 +69,4 @@
     margin-bottom: rem(14);
     line-height: rem(20);
   }
-
 }
