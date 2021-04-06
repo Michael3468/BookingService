@@ -2,7 +2,10 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .colors-and-types {
-  padding-top: rem(7);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
 
   &__colors {
     padding-left: rem(10);

@@ -44,6 +44,7 @@ section,
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .container {
@@ -61,10 +62,6 @@ section,
 }
 
 //flexbox+
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
 .flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
@@ -77,10 +74,6 @@ section,
 .flex-column-reverse {
   display: flex;
   flex-direction: column-reverse;
-}
-.justify-content-between {
-  display: flex;
-  justify-content: space-between;
 }
 //flexbox-
 
