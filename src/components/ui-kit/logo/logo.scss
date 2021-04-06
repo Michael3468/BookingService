@@ -1,5 +1,8 @@
-.toxin-logo{
-  margin: 30px 0 60px 30px;
-  width: 48px;
-  height: 48px;
+@import '../../../assets/scss/utils/mixins.scss';
+@import '../../../assets/scss/utils/vars.scss';
+
+.toxin-logo {
+  margin: rem(30) 0 rem(60) rem(30);
+  width: rem(48);
+  height: rem(48);
 }
