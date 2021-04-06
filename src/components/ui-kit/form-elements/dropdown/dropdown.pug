@@ -2,10 +2,7 @@ mixin dropdown(params)
   .dropdown(id=params.id)
     .dropdown__caption
       h3.dropdown__caption-left= params.leftCaption
-      if (params.id == 'dropdown-guests')
-        h3.dropdown__caption-right(class= 'dropdown-guests__caption-right_color')= params.rightCaption
-      else
-        h3.dropdown__caption-right= params.rightCaption
+      h3.dropdown__caption-right= params.rightCaption
     .dropdown__block.js-dropdown__block(class=params.menuStatus)
       .dropdown__block_top(data-dd-action='showHide')
         p.dropdown__selection_text.js-dropdown__selection-text(data-dd-action='showHide')= params.selectionText
@@ -19,6 +16,9 @@ mixin dropdown(params)
           - var items = { 'item1': {valName : 'Спальни'},'item2': {valName : 'Кровати'},'item3': {valName : 'Ванные комнаты'} };
         if (params.id == 'dropdown-guests')
           - var items = { 'item1': {valName : 'Взрослые'},'item2': {valName : 'Дети'},'item3': {valName : 'Младенцы'} };
+
+          if (params.idPostfix == '-changed-example')
+            - var items = { 'item1': {valName : 'Взрослые', valCounter: '2', valClass: 'dark'},'item2': {valName : 'Дети', valCounter: '1', valClass: 'dark'},'item3': {valName : 'Младенцы'} };
 
         each val, key in items
           .dropdown__menu-option(class=key)

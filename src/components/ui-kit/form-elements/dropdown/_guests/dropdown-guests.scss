@@ -2,15 +2,12 @@
 @import '../../../../../assets/scss/utils/mixins.scss';
 
 .dropdown-guests {
-  &__caption-right_color {
-    color: $DarkShade50;
-  }
   // dropdown-guests--buttons.scss
   &__buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: rem(19) rem(0) rem(11) rem(5);
+    padding: rem(19) rem(0) rem(5) rem(5);
   }
   &__button_clean,
   &__button_apply {
