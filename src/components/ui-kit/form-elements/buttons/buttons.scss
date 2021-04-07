@@ -2,21 +2,21 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 
-$height: 44px;
-$height-small: 34px;
-$width: 99px;
-$padding: 15px;
-$padding-small-lr: 20px;
-$border-width: 2px;
-$arrow-fsz: 24px;
-$arrow-right: 11px;
+$height: rem(44);
+$height-small: rem(34);
+$width: rem(99);
+$padding: rem(15);
+$padding-small-lr: rem(20);
+$border-width: rem(2);
+$arrow-fsz: rem(24);
+$arrow-right: rem(11);
 $backgroundBtnColor: $default-color;
 
 .button {
   margin: 0;
   display: inline-block;
   font-family: $secondFont;
-  font-size: 12px;
+  font-size: rem(12);
   font-weight: bold;
   background: $primaryGradient;
   background-position: center;
@@ -25,7 +25,7 @@ $backgroundBtnColor: $default-color;
   min-height: $height - $padding * 2;
   min-width: $width;
   line-height: $height - $padding * 2;
-  border-radius: 22px;
+  border-radius: rem(22);
   border: none;
   color: $backgroundBtnColor;
   text-decoration: none;
@@ -96,7 +96,7 @@ $backgroundBtnColor: $default-color;
       font-family: "Material Icons";
       font-weight: normal;
       font-style: normal;
-      font-size: 24px;
+      font-size: rem(24);
       line-height: 1;
       letter-spacing: normal;
       text-transform: none;
