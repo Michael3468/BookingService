@@ -1,10 +1,7 @@
 {
-  "cSpell.ignoreWords": [
-    "air",
-    "datepicker",
-    "liga",
-    "rangeslider",
-    "whatshot"
-  ],
   "cSpell.language": "en,ru",
+
+  "scss.validate": false,
+  "css.validate": false,
+  "less.validate": false,
 }
