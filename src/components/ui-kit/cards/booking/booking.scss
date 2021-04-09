@@ -27,19 +27,19 @@
   }
 
   &__options-info-icon {
-    cursor: pointer;
-    border: rem(1) solid $DarkShade25;
     width: rem(20);
     height: rem(20);
+    border: rem(1) solid $DarkShade25;
     border-radius: rem(10);
+    cursor: pointer;
 
     &::before {
-      content: 'i';
       position: relative;
       left: rem(7);
-      font-family: $secondFont;
-      font-size: rem(14);
       color: $DarkShade25;
+      font-size: rem(14);
+      font-family: $secondFont;
+      content: 'i';
     }
   }
 
@@ -47,19 +47,20 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font: bold rem(19) $secondFont;
     margin-top: rem(12);
     margin-bottom: rem(22);
+    font: bold rem(19) $secondFont;
 
     &_line {
       width: 100%;
-      border-bottom: rem(1) dashed $DarkShade25;
       margin: 0 rem(3) rem(7);
+      border-bottom: rem(1) dashed $DarkShade25;
     }
+
     &_text,
     &_sum {
-      font: bold rem(19) $secondFont;
       color: $DarkShade100;
+      font: bold rem(19) $secondFont;
     }
   }
 

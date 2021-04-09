@@ -1,12 +1,10 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .registration {
-
   &__caption {
-    font-family: $secondFont;
     margin-bottom: rem(17);
+    font-family: $secondFont;
   }
 
   &__radio-buttons_position {
@@ -19,18 +17,16 @@
     margin-bottom: rem(23);
   }
 
-
   &__enter-button-block {
     display: flex;
     flex-shrink: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     &_position {
       margin-top: rem(30);
     }
   }
-
 
   &__text-field {
     &_position {
@@ -45,5 +41,4 @@
       margin-top: rem(4);
     }
   }
-
 }

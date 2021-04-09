@@ -1,59 +1,66 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .rich-checkbox-buttons__caption {
   margin-bottom: rem(16);
 }
+
 .rich-checkbox-buttons__item {
   display: flex;
   flex-direction: row;
   margin-bottom: rem(9);
 }
+
 .rich-checkbox-buttons__input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.rich-checkbox-buttons__input+label::before {
+
+.rich-checkbox-buttons__input + label::before {
   position: absolute;
-  content: '';
-  cursor: pointer;
   display: inline-block;
   align-items: flex-start;
   width: rem(20);
   height: rem(20);
-  border: 1px solid $DarkShade25;
-  border-radius: rem(4);
   margin-right: rem(10);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+  border: 1px solid $DarkShade25;
+  border-radius: rem(4);
+  cursor: pointer;
+  content: '';
 }
-.rich-checkbox-buttons__input:checked+label::before {
-  border-color: $purple;
+
+.rich-checkbox-buttons__input:checked + label::before {
   background-image: url("/assets/img/checkbox-vector.svg");
   background-size: rem(12) rem(12);
+  border-color: $purple;
 }
+
 .rich-checkbox-buttons__text {
   display: flex;
 }
+
 .rich-checkbox-buttons__text-block {
-  cursor: pointer;
   margin-left: rem(30);
   font-family: $secondFont;
+  cursor: pointer;
 }
+
 .rich-checkbox-buttons__text_bold {
+  margin-bottom: rem(6);
+  color: $DarkShade75;
   font-weight: bold;
   font-size: rem(14);
-  color: $DarkShade75;
   letter-spacing: rem(0);
-  margin-bottom: rem(6);
 }
+
 .rich-checkbox-buttons__p {
+  color: $DarkShade50;
   font-weight: normal;
   font-size: rem(12);
   line-height: rem(14);
-  color: $DarkShade50;
   letter-spacing: rem(0);
 }

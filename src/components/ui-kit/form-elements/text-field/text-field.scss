@@ -11,53 +11,58 @@
     display: flex;
     justify-self: flex-start;
   }
+
   &-right {
     display: flex;
     justify-content: flex-end;
-    font-weight: normal;
     color: $DarkShade50;
+    font-weight: normal;
   }
 }
 
 //common input__style
 .input__style {
-  border: 1px solid $DarkShade25;
-  border-radius: $BorderRadius;
   width: 100%;
   font-family: $secondFont;
+  border: 1px solid $DarkShade25;
+  border-radius: $BorderRadius;
 }
 
 .text-field__input {
   &_block {
     position: relative;
   }
+
   &_arrow-forward {
     position: absolute;
-    right: 5px;
     top: 10px;
+    right: 5px;
     // arrow color
     background: $primaryGradient;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     // arrow color end
   }
-}
 
-.text-field__input {
   padding: 13px 10px 12px 15px;
   color: $DarkShade75;
+
   &::placeholder {
     color: $DarkShade25;
   }
+
   &:hover {
     border-color: $DarkShade50;
+
     &::placeholder {
       color: $DarkShade75;
     }
   }
 }
+
 .like-hover {
   border-color: $DarkShade50;
+
   &::placeholder {
     color: $DarkShade75;
   }

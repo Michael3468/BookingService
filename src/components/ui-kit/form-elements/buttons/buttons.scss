@@ -1,7 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 $height: rem(44);
 $height-small: rem(34);
 $width: rem(99);
@@ -13,97 +12,109 @@ $arrow-right: rem(11);
 $backgroundBtnColor: $default-color;
 
 .button {
-  margin: 0;
   display: inline-block;
-  font-family: $secondFont;
-  font-size: rem(12);
+  min-width: $width;
+  min-height: $height - $padding * 2;
+  margin: 0;
+  padding: $padding;
+  color: $backgroundBtnColor;
   font-weight: bold;
+  font-size: rem(12);
+  font-family: $secondFont;
+  line-height: $height - $padding * 2;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
   background: $primaryGradient;
   background-position: center;
-  text-align: center;
-  vertical-align: middle;
-  min-height: $height - $padding * 2;
-  min-width: $width;
-  line-height: $height - $padding * 2;
-  border-radius: rem(22);
   border: none;
-  color: $backgroundBtnColor;
-  text-decoration: none;
-  padding: $padding;
-  text-transform: uppercase;
+  border-radius: rem(22);
+
   &:hover {
     opacity: 0.5;
   }
+
   &_hover {
     opacity: 0.5;
   }
+
   &_no-background {
-    background: $backgroundBtnColor;
-    color: $purple;
-    padding: 0;
     min-width: auto;
+    padding: 0;
+    color: $purple;
+    background: $backgroundBtnColor;
+
     &:hover {
       color: $DarkShade50;
       opacity: 1;
     }
+
     &_hover {
       color: $DarkShade50;
     }
   }
+
   &_bordered {
-    background: none;
-    color: $purple;
     min-height: $height - $padding * 2 - $border-width * 2;
+    color: $purple;
     line-height: $height - $padding * 2 - $border-width * 2;
-    border: $border-width solid transparent;
+    background: none;
     background-image: linear-gradient($backgroundBtnColor, $backgroundBtnColor), $primaryGradient;
-    background-origin: border-box;
     background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: $border-width solid transparent;
+
     &:hover {
+      background-clip: padding-box, border-box;
+      background-origin: border-box;
       border: $border-width solid transparent;
       opacity: 0.5;
-      background-origin: border-box;
-      background-clip: padding-box, border-box;
     }
   }
+
   &_small {
+    min-width: unset;
     min-height: $height-small - $padding * 2;
-    line-height: $height-small - $padding * 2;
-    min-width: unset;
-    padding-left: $padding-small-lr;
     padding-right: $padding-small-lr;
+    padding-left: $padding-small-lr;
+    line-height: $height-small - $padding * 2;
   }
+
   &_small.button_bordered {
-    min-height: $height-small - $padding * 2 - $border-width * 2;
-    line-height: $height-small - $padding * 2 - $border-width * 2;
     min-width: unset;
-    padding-left: $padding-small-lr - $border-width;
+    min-height: $height-small - $padding * 2 - $border-width * 2;
     padding-right: $padding-small-lr - $border-width;
+    padding-left: $padding-small-lr - $border-width;
+    line-height: $height-small - $padding * 2 - $border-width * 2;
   }
+
   &_block {
     display: flex;
     width: 100%;
   }
+
   &_with_arrow {
     position: relative;
     justify-content: center;
-    &:after {
-      content: "arrow_forward";
+
+    &::after {
       position: absolute;
-      right: $arrow-right;
       top: 50%;
-      transform:translateY(-50%);
-      font-family: "Material Icons";
-      font-weight: normal;
-      font-style: normal;
-      font-size: rem(24);
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
+      right: $arrow-right;
       display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
+      font-weight: normal;
+      font-size: rem(24);
+      font-family: 'Material Icons', sans-serif;
+      font-style: normal;
+      line-height: 1;
       direction: ltr;
+      letter-spacing: normal;
+      white-space: nowrap;
+      text-transform: none;
+      word-wrap: normal;
+      transform: translateY(-50%);
+      content: 'arrow_forward';
     }
   }
 }

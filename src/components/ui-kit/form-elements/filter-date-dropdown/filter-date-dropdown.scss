@@ -5,34 +5,41 @@
   &__caption {
     margin-bottom: $inputCapMarBottom;
   }
+
   &__input_block {
     position: relative;
   }
+
   &__input,
   &__input::placeholder,
   &__input_arrow,
   &__expand-button {
     color: $DarkShade50;
   }
+
   &__input {
     padding: rem(12) rem(10) rem(12) rem(15);
     cursor: pointer;
+
     &::placeholder {
       opacity: 1;
     }
+
     &_arrow {
       position: absolute;
       top: rem(10);
       right: rem(10);
     }
   }
+
   &__expand-button {
-    margin: rem(10) rem(0) rem(0) rem(10);
     width: rem(20);
+    margin: rem(10) rem(0) rem(0) rem(10);
   }
+
   &_hidden {
-    display: none;
     position: absolute;
     z-index: 20;
+    display: none;
   }
 }

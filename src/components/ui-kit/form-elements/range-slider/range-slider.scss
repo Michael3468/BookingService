@@ -9,26 +9,35 @@ $border_bg-color: $default-color;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .range-slider__caption-left {
   margin-right: rem(30);
 }
+
 .range-slider__caption-right {
   font-weight: normal;
 }
+
 .range-slider__input {
   margin-top: rem(-5);
 }
 
 /* rangeSlider.css */
-.irs-min, .irs-max, .irs-single {
+.irs-min,
+.irs-max,
+.irs-single {
   display: none;
 }
-.irs-from, .irs-to {
+
+.irs-from,
+.irs-to {
   display: none;
 }
+
 .irs--flat .irs-bar--single {
   border-radius: rem(4);
 }
+
 .irs--flat .irs-line {
   top: rem(23);
   height: rem(7);
@@ -36,33 +45,43 @@ $border_bg-color: $default-color;
   border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
 }
+
 .irs--flat .irs-bar {
   top: rem(23);
   height: rem(7);
   background: $secondaryGradient;
 }
 
-
 $size: rem(16);
+
+.irs-handle {
+  width: rem(10);
+  height: rem(10);
+  cursor: pointer;
+}
+
 .irs--flat .irs-handle {
   top: $size/2;
   width: rem(1);
   height: $size;
 }
-.irs-handle {
-  cursor: pointer;
-  width: rem(10);
-  height: rem(10);
-}
+
+// .irs-handle {
+//   cursor: pointer;
+//   width: rem(10);
+//   height: rem(10);
+// }
+
 .irs--flat .irs-handle > i:first-child {
   position: absolute;
-  display: block;
   top: 60%;
+  display: block;
   width: $size;
   height: $size;
   margin-left: -($size / 2);
   background: $secondaryGradient;
-  border-radius: 50%;
   border: rem(2) solid $border_bg-color;
+  border-radius: 50%;
 }
+
 /* rangeSlider.css */

@@ -1,7 +1,6 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-
 .search-room__options-column__date-dropdown,
 .container__room-cards_column {
   margin-top: rem(28);
@@ -13,30 +12,35 @@
   &__date-dropdown {
     margin-bottom: rem(20);
   }
+
   &__range-slider {
     margin-top: rem(30);
     margin-bottom: rem(26);
   }
+
   &__checkbox-buttons {
     width: rem(225);
   }
+
   &__rich-checkbox-buttons {
-    margin-top: rem(31);
     width: rem(260);
+    margin-top: rem(31);
   }
+
   &__dropdown-options {
     margin-top: rem(28);
   }
+
   &__checkbox-buttons_expandable {
     margin-top: rem(30);
   }
 }
 
 .search-room__range-slider_text {
-  font-family: $secondFont;
-  font-size: rem(12);
-  color: $DarkShade50;
   margin-top: rem(-3);
+  color: $DarkShade50;
+  font-size: rem(12);
+  font-family: $secondFont;
 }
 
 .room-cards_column {
@@ -45,23 +49,23 @@
 }
 
 .search-room__room-cards {
- 
   &_h1 {
-    font-family: $secondFont;
     margin-bottom: rem(20);
+    font-family: $secondFont;
   }
+
   &_grid-layout {
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-column-gap: rem(32);
     grid-row-gap: rem(20);
-  }
-  &_pagination-position {
+    grid-column-gap: rem(32);
+    grid-template-columns: repeat(auto-fill, 250px);
     width: 100%;
+  }
+
+  &_pagination-position {
     display: flex;
+    width: 100%;
     margin-top: rem(43);
     margin-bottom: rem(70);
   }
-
 }

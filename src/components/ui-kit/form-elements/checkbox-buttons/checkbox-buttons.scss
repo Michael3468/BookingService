@@ -1,7 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .checkbox-buttons {
   display: flex;
   flex-direction: column;
@@ -17,10 +16,10 @@
   }
 
   &__text {
-    cursor: pointer;
-    line-height: rem(18);
-    font-family: $secondFont;
     color: $DarkShade50;
+    font-family: $secondFont;
+    line-height: rem(18);
+    cursor: pointer;
   }
 }
 
@@ -30,34 +29,35 @@
   opacity: 0;
 }
 
-.custom-checkbox+label {
+.custom-checkbox + label {
   display: inline-flex;
   align-items: flex-start;
   user-select: none;
 
   &::before {
-    content: '';
-    cursor: pointer;
     display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
     align-items: flex-start;
     width: rem(20);
     height: rem(20);
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: rem(1) solid $DarkShade25;
-    border-radius: rem(4);
     margin-right: rem(10);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
+    border: rem(1) solid $DarkShade25;
+    border-radius: rem(4);
+    cursor: pointer;
+    content: '';
   }
 }
 
-.custom-checkbox:checked+label::before {
-  border-color: $purple;
+.custom-checkbox:checked + label::before {
   background-image: url("/assets/img/checkbox-vector.svg");
   background-size: rem(12) rem(12);
+  border-color: $purple;
 }
+
 .display-none {
   display: none;
 }
@@ -67,9 +67,9 @@
   margin-bottom: rem(12);
 
   &__caption {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
   }
 
   &__text {

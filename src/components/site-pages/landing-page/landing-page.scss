@@ -1,15 +1,12 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-
 .landing-page {
-
   &__background {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-
 
   &__room-search {
     &_block-width {
@@ -21,11 +18,10 @@
     }
   }
 
-
   &__img-text {
     display: flex;
-    width: 100%;
     justify-content: flex-end;
+    width: 100%;
     text-align: right;
 
     &_position {
@@ -33,18 +29,17 @@
       margin-bottom: rem(20);
     }
   }
-
 }
-
 
 //- background animation
 @keyframes fade {
-  0%    {opacity: 0;}
-  15%   {opacity: 1;}
-  35%   {opacity: 1;}
-  55%   {opacity: 0;}
-  100%  {opacity: 0;}
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  35% { opacity: 1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
 }
+
 .landing-page__fade-in {
   animation-name: fade;
   animation-duration: 30s;

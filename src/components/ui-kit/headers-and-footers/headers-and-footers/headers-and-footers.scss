@@ -2,18 +2,22 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 .headers-and-footers {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
+
 .hf-bg-color {
   background: $default-color;
   box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 }
+
 .headers-and-footers__margin {
   margin-top: rem(38);
+
   &:last-child {
     margin-bottom: rem(140);
   }
 }
+
 .responsive-footer-container {
   display: grid;
   max-width: rem(768);

@@ -9,24 +9,24 @@
     justify-content: space-between;
     padding: rem(19) rem(0) rem(5) rem(5);
   }
+
   &__button_clean,
   &__button_apply {
-    font-family: $secondFont;
-    font-size: rem(12);
-    font-weight: bold;
     color: $purple;
+    font-weight: bold;
+    font-size: rem(12);
+    font-family: $secondFont;
     text-transform: uppercase;
     background: $default-color;
+    cursor: pointer;
   }
+
   &__button_clean {
     visibility: hidden;
+
     &_show {
       visibility: visible;
     }
   }
-  &__button_clean,
-  &__button_apply {
-    cursor: pointer;
-  }
-// dropdown-guests--buttons.scss
+  // dropdown-guests--buttons.scss
 }

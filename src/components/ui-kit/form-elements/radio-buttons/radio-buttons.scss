@@ -5,44 +5,48 @@
   display: flex;
   flex-direction: row;
 }
+
 .radio-buttons__text {
   margin-top: rem(13);
   margin-right: rem(20);
+
   &:last-child {
     margin-right: rem(0);
   }
 }
 
-.radio-button__size {
-  width: rem(20);
-  height: rem(20);
-}
+$radio-button__size: 20;
+
 .radio-buttons__input {
   position: absolute;
-  cursor: pointer;
   z-index: 1;
-  opacity: 0;
-  @extend .radio-button__size;
-}
-.radio-buttons__label {
-  display: inline-block;
+  width: rem($radio-button__size);
+  height: rem($radio-button__size);
   cursor: pointer;
-  position: relative;
-  padding-left: rem(30);
-  line-height: rem(18);
-  user-select: none;
+  opacity: 0;
 }
 
-.radio-buttons__label::before {
-  content: "";
+.radio-buttons__label {
+  position: relative;
   display: inline-block;
-  position: absolute;
-  left: 0;
-  border: 1px solid $DarkShade25;
-  border-radius: 50%;
-  @extend .radio-button__size;
+  padding-left: rem(30);
+  line-height: rem(18);
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: rem($radio-button__size);
+    height: rem($radio-button__size);
+    border: 1px solid $DarkShade25;
+    border-radius: 50%;
+    content: "";
+  }
 }
-.radio-buttons__input:checked + .radio-buttons__label::before{
+
+.radio-buttons__input:checked + .radio-buttons__label::before {
   display: block;
   background-image: url("/assets/img/radiochecked.svg");
   background-repeat: no-repeat;

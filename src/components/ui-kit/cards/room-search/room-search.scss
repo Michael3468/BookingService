@@ -1,12 +1,10 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .room-search {
-
   &__caption {
-    font-family: $secondFont;
     margin-bottom: rem(21);
+    font-family: $secondFont;
   }
 
   &__date-dropdown-margin {
@@ -16,5 +14,4 @@
   &__dropdown-guests-margin {
     margin-bottom: rem(31);
   }
-
 }

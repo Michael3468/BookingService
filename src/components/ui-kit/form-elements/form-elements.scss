@@ -4,92 +4,120 @@
 .first-container {
   margin-bottom: rem(74);
 }
+
 .second-container {
   margin-bottom: rem(149);
 }
+
 .third-container {
   margin-bottom: rem(73);
 }
+
 .fourth-container {
   margin-bottom: rem(111);
 }
-.column-1, .column-2, .column-3 {
+
+.column-1,
+.column-2,
+.column-3 {
   display: flex;
   flex-direction: column;
   min-width: rem(320);
   margin-top: rem(5);
 }
+
 .column-4 {
   width: 100%;
 }
+
 .column-1 {
   margin-right: rem(127);
 }
+
 .column-2 {
   margin-right: rem(72);
 }
+
 .mini-column {
   width: rem(266);
 }
+
 .block-margin {
   margin-bottom: rem(19);
 }
+
 .date-margin {
   margin-top: rem(3);
   margin-bottom: rem(41);
 }
+
 .date-dropdown-margin {
   margin-top: rem(22);
 }
+
 .subscription-text-field-margin {
   margin-top: rem(41);
 }
+
 .checkbox-buttons-margin {
   margin-top: rem(11);
 }
+
 .toggle-margin {
   margin-top: rem(21);
 }
+
 .toggle-margin-between {
   margin-top: rem(-2);
 }
+
 .like-buttons-margin {
   margin-top: rem(25);
 }
+
 .like-buttons__direction {
   display: flex;
   flex-direction: row;
 }
+
 .like-button__caption {
   margin-bottom: rem(16);
 }
+
 .like-button__margin {
   margin-right: rem(10);
 }
+
 .rate-button__caption {
   margin-top: rem(21);
   margin-bottom: rem(11);
 }
+
 .rate-buttons-block {
   display: flex;
   flex-direction: row;
 }
+
 .rate-buttons-margin {
   margin-right: rem(20);
 }
+
 .buttons__caption {
   margin-top: rem(33);
   margin-bottom: rem(16);
 }
+
 .buttons-block {
   display: flex;
   flex-direction: row;
-  margin-bottom: rem(30);
   width: 100%;
+  margin-bottom: rem(30);
 }
+
 .button__margin {
   margin-right: rem(20);
 }
+
 .btn-mt {
   margin-top: rem(-4);
 }

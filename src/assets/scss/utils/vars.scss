@@ -1,6 +1,6 @@
 // Fonts
-$mainFont                : 'Quicksand', Arial, sans-serif;
-$secondFont              : 'Montserrat', Arial, sans-serif;
+$mainFont                : 'Quicksand', arial, sans-serif;
+$secondFont              : 'Montserrat', arial, sans-serif;
 
 // Size
 $mainFontColor           : #101010;
@@ -20,19 +20,19 @@ $desktopWidthPadding     : 30px;
 
 // Colors
 $DarkShade100            : rgba(31, 32, 65, 1);
-$DarkShade75             : rgba(31, 32, 65, .75);
-$DarkShade50             : rgba(31, 32, 65, .5);
-$DarkShade25             : rgba(31, 32, 65, .25);
-$DarkShade5              : rgba(31, 32, 65, .05);
+$DarkShade75             : rgba(31, 32, 65, 0.75);
+$DarkShade50             : rgba(31, 32, 65, 0.5);
+$DarkShade25             : rgba(31, 32, 65, 0.25);
+$DarkShade5              : rgba(31, 32, 65, 0.05);
 $purple                  : rgba(188, 156, 255, 1);
 $green                   : rgba(111, 207, 151, 1);
 $backgroundColor         : #e5e5e5;
 
-$primaryGradient         : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-$secondaryGradient       : linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$primaryGradient         : linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$secondaryGradient       : linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
 // Main color
-$default-color           : #ffffff;
+$default-color           : #fff;
 $menu-hover-color        : #e3e3e3;
 
 $BorderRadius       : 4px;

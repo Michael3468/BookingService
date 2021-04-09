@@ -2,10 +2,9 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 .login {
-
   &__caption {
-    font-family: $secondFont;
     margin-bottom: rem(17);
+    font-family: $secondFont;
   }
 
   &__inputs-block {
@@ -15,9 +14,8 @@
   &__create-login-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: rem(30);
   }
-
 }

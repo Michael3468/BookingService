@@ -6,26 +6,30 @@ $toggle-size: rem(10);
 .toggle__caption {
   margin-bottom: rem(16);
 }
+
 .toggle {
   display: flex;
   align-items: center;
 }
+
 .toggle__button {
-  appearance: none;
-  cursor: pointer;
   width: $toggle-size*4;
   height: $toggle-size*2;
-  border: $toggle-size/10 solid $purple;
-  border-radius: $toggle-size;
   background: url("/assets/img/radiochecked.svg") no-repeat;
   background-position: 10% 50%;
   background-size: 34%;
+  border: $toggle-size/10 solid $purple;
+  border-radius: $toggle-size;
+  cursor: pointer;
   filter: grayscale(100%);
+  appearance: none;
 }
+
 .toggle__button:checked {
-  filter: grayscale(0);
   background-position: 90% 50%;
+  filter: grayscale(0);
 }
+
 .toggle__text {
   margin-left: rem(11);
   color: $DarkShade75;

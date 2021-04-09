@@ -3,25 +3,25 @@
 @import 'utils/fonts.scss';
 @import 'utils/reset.scss';
 
-
 * {
   box-sizing: border-box;
   user-select: none;
 }
 
 html {
-  font-family: $mainFont;
-  font-size: $mainFontSize;
-  font-weight: normal;
-  color: $mainFontColor;
-  line-height: $mainLineHeight;
   height: 100%;
+  color: $mainFontColor;
+  font-weight: normal;
+  font-size: $mainFontSize;
+  font-family: $mainFont;
+  line-height: $mainLineHeight;
 
-  @media screen and (min-width: $tableWidth) and (max-width: $desktopWidth){
+  @media screen and (min-width: $tableWidth) and (max-width: $desktopWidth) {
     font-size: $mainFontSize;
   }
-  @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth){
-    font-size: rem(.85);
+
+  @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth) {
+    font-size: rem(0.85);
   }
 }
 
@@ -29,92 +29,106 @@ section,
 .section {
   position: relative;
   padding: rem(40) 0;
-  @media screen and (min-width: $tableWidth) and (max-width: $smDesktopWidth){
+
+  @media screen and (min-width: $tableWidth) and (max-width: $smDesktopWidth) {
     padding: rem(36) 0;
   }
-  @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth){
+
+  @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth) {
     padding: rem(28) 0;
   }
-  @media screen and (min-width: $smPhoneWidth) and (max-width: $phoneWidth){
+
+  @media screen and (min-width: $smPhoneWidth) and (max-width: $phoneWidth) {
     padding: rem(20) 0;
   }
 }
 
 .wrapper {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1160px;
+  flex: 0 0 auto;
   flex-direction: row;
   width: 100%;
-  flex: 0 0 auto;
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
 
-  @media screen and (max-width: $desktopWidth){
+  @media screen and (max-width: $desktopWidth) {
     padding: 0 $desktopWidthPadding;
   }
 }
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: rem(24);  /* Preferred icon size 24px*/
   display: inline-block;
+  font-weight: normal;
+  font-size: rem(24);  /* Preferred icon size 24px */
+  font-family: 'Material Icons', sans-serif;
+  font-style: normal;
   line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
   direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
   vertical-align: middle;
+  word-wrap: normal;
+  cursor: pointer;
+
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
+
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
+
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
+
   /* Support for IE. */
   font-feature-settings: 'liga';
-  cursor: pointer;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
+h1,
+h2,
+h3 {
   color: $DarkShade100;
+  font-weight: bold;
 }
+
 h1 {
-  font-family: $mainFont;
   font-size: rem(24);
+  font-family: $mainFont;
   line-height: rem(30);
 }
+
 h2 {
-  font-family: $mainFont;
   font-size: rem(19);
+  font-family: $mainFont;
   line-height: rem(24);
 }
+
 h3 {
-  font-family: $secondFont;
   font-size: rem(12);
+  font-family: $secondFont;
   line-height: rem(15);
   text-transform: uppercase;
 }
+
 p {
-  font-family: $secondFont;
-  font-size: rem(14);
-  line-height: rem(24);
-  font-weight: normal;
   color: $DarkShade75;
+  font-weight: normal;
+  font-size: rem(14);
+  font-family: $secondFont;
+  line-height: rem(24);
 }
 
 a {
   color: $DarkShade50;
+
   &:hover {
     font-weight: bold;
   }

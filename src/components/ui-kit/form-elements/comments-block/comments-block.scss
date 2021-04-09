@@ -1,7 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .comments-block {
   color: $DarkShade75;
 
@@ -10,26 +9,27 @@
     flex-direction: row;
 
     $user-photo_size: rem(48);
+
     &_photo {
+      box-sizing: border-box;
       width: $user-photo_size;
       height: $user-photo_size;
-      border-radius: $user-photo_size / 2;
       border: rem(2) solid $default-color;
-      box-sizing: border-box;
+      border-radius: $user-photo_size / 2;
       filter: drop-shadow(rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.1));
     }
 
     &_info {
       margin: rem(1) 0 0 rem(10);
-      font-family: $secondFont;
       font-size: rem(14);
+      font-family: $secondFont;
     }
+
     &_name {
-      font-weight: bold;
       margin-bottom: rem(5);
+      font-weight: bold;
     }
   }
-
 
   &__feedback {
     display: flex;
@@ -40,12 +40,12 @@
       width: rem(48);
       margin-left: rem(4);
     }
+
     &_text {
-      font-family: $secondFont;
-      margin-left: rem(14);
-      line-height: rem(24);
       margin-top: rem(-1);
+      margin-left: rem(14);
+      font-family: $secondFont;
+      line-height: rem(24);
     }
   }
-
 }

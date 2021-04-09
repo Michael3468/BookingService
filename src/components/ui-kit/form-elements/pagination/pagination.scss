@@ -7,47 +7,71 @@ $size: rem(40);
 .pagination {
   margin: 0 auto;
 }
+
 #pagination-container {
   display: inline-block;
   width: auto;
 }
+
 .paginationjs {
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
+  width: 100%;
   font-family: $secondFont;
 }
+
+.paginationjs .paginationjs-pages li {
+  color: $DarkShade50;
+  font-size: rem(12);
+  line-height: $size;
+  border-radius: $size / 2;
+}
+
+.paginationjs .paginationjs-pages li > a {
+  color: $DarkShade50;
+  font-size: rem(12);
+  line-height: $size;
+  border: none;
+  border-radius: $size / 2;
+}
+
+.paginationjs .paginationjs-pages li > a,
+.paginationjs .paginationjs-pages li > a:hover {
+  text-align: center;
+  background: transparent;
+}
+
+.paginationjs .paginationjs-pages li,
+.paginationjs .paginationjs-pages li:last-child,
+.paginationjs .paginationjs-pages li:first-child,
+.paginationjs .paginationjs-pages li:first-child > a,
+.paginationjs .paginationjs-pages li:last-child > a {
+  border: none;
+  border-radius: $size / 2;
+}
+
 .paginationjs-page,
 .paginationjs-page .active,
 .paginationjs-prev,
 .paginationjs-next,
 .paginationjs .paginationjs-pages li.active > a {
+  box-sizing: border-box;
   width: $size;
   height: $size;
   line-height: $size;
   border-radius: $size / 2;
-  box-sizing: border-box;
   cursor: pointer;
 }
-.paginationjs .paginationjs-pages li:first-child,
-.paginationjs .paginationjs-pages li:first-child > a,
-.paginationjs .paginationjs-pages li:last-child,
-.paginationjs .paginationjs-pages li:last-child > a,
-.paginationjs .paginationjs-pages li,
-.paginationjs .paginationjs-pages li > a {
-  border-radius: $size / 2;
-  border: none;
-}
+
 .paginationjs-page .active,
-.paginationjs .paginationjs-pages li,
-.paginationjs .paginationjs-pages li > a,
+// .paginationjs .paginationjs-pages li > a,
 .paginationjs .paginationjs-pages li:first-child,
 .paginationjs .paginationjs-pages li:first-child > a {
-  border-radius: $size / 2;
-  line-height: $size;
-  font-size: rem(12);
   color: $DarkShade50;
+  font-size: rem(12);
+  line-height: $size;
+  border-radius: $size / 2;
 }
 
 .paginationjs-prev,
@@ -55,29 +79,24 @@ $size: rem(40);
   background: $secondaryGradient;
 }
 
-.paginationjs .paginationjs-pages li > a,
-.paginationjs .paginationjs-pages li > a:hover {
-  background: transparent;
-  text-align: center;
-}
-
 .paginationjs .paginationjs-pages li.active > a {
-  background: $primaryGradient;
   color: $default-color;
   font-weight: bold;
+  background: $primaryGradient;
 }
 
 .paginationjs-next::before,
 .paginationjs-prev::before {
   margin-left: rem(8);
-  font-family: 'Material Icons';
-  font-size: rem(22);
   color: $default-color;
+  font-size: rem(22);
+  font-family: 'Material Icons', sans-serif;
 }
 
 .paginationjs-next::before {
   content: 'arrow_forward';
 }
+
 .paginationjs-prev::before {
   content: 'arrow_backward';
 }
@@ -85,7 +104,7 @@ $size: rem(40);
 .paginationjs-pages-footer {
   display: flex;
   justify-content: center;
-  font-size: rem(14);
-  color: $DarkShade75;
   margin-top: rem(10);
+  color: $DarkShade75;
+  font-size: rem(14);
 }

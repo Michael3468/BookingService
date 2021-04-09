@@ -3,13 +3,14 @@
 
 .colors-and-types {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 
   &__colors {
     padding-left: rem(10);
   }
+
   &__types {
     padding-right: rem(51);
   }

@@ -9,6 +9,7 @@
   &_left {
     width: 68.125%;
   }
+
   &_right {
     width: 31.875%;
   }
@@ -34,43 +35,47 @@
     width: rem(710);
     margin-right: rem(70);
   }
+
   &__blocks {
     display: flex;
     flex-direction: row;
   }
+
   &__right-block {
     margin-right: rem(80);
   }
+
   &__column-2 {
     width: rem(380);
   }
-}
-//- room-details columns end
 
-//- info about room
-.room-details {
-  &__container {
-    margin-top: rem(67);
+  //- rules block
+  &__rules {
     display: flex;
     flex-direction: row;
+    margin-top: rem(30);
   }
 
-  &__h2 {
-    font-family: $secondFont;
+  &__rules-block {
+    width: rem(270);
+    margin-right: rem(90);
   }
 
-  &__icon-text-list__position {
-    margin-top: rem(20);
-    width: rem(280);
+  &__h2_rules-block {
+    margin-bottom: rem(19);
+    margin-left: rem(20);
   }
-}
-//- info about room end
 
-//- impressions of the room
-//- impressions of the room end
+  &__cancel-block {
+    width: rem(335);
+  }
 
-//- visitors feedbacks
-.room-details {
+  &__h2_cancel-block {
+    margin-bottom: rem(20);
+  }
+  //- rules block end
+
+  //- visitors feedbacks
   &__feedbacks {
     margin-top: rem(11);
 
@@ -89,36 +94,27 @@
       margin-bottom: 0;
     }
   }
-}
-//- visitors feedbacks end
+  //- visitors feedbacks end
 
-//- rules block
-.room-details {
-  &__rules {
+  //- info about room
+  &__container {
     display: flex;
     flex-direction: row;
-    margin-top: rem(30);
+    margin-top: rem(67);
+    margin-bottom: rem(62);
   }
-  &__rules-block {
-    width: rem(270);
-    margin-right: rem(90);
-  }
-  &__h2_rules-block {
-    margin-left: rem(20);
-    margin-bottom: rem(19);
-  }
-  &__cancel-block {
-    width: rem(335);
-  }
-  &__h2_cancel-block {
-    margin-bottom: rem(20);
-  }
-}
-//- rules block end
 
-.room-details__container {
-  margin-bottom: rem(62);
+  &__h2 {
+    font-family: $secondFont;
+  }
+
+  &__icon-text-list__position {
+    width: rem(280);
+    margin-top: rem(20);
+  }
+  //- info about room end
 }
+//- room-details columns end
 
 // d3js chart
 .d3js-donut-chart_position {

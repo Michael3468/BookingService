@@ -1,9 +1,7 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .bullet-list {
-
   &__caption {
     margin-bottom: rem(14);
   }
@@ -23,19 +21,18 @@
     display: inline-block;
     width: rem(11);
     height: rem(10);
-    border-radius: rem(5);
-    background: $DarkShade25;
     margin: rem(6) rem(11) 0 0;
+    background: $DarkShade25;
+    border-radius: rem(5);
   }
 
   &__li {
     display: inline-block;
-    list-style-type: none;
-    font-family: $secondFont;
-    font-size: rem(14);
-    line-height: rem(24);
-    color: $DarkShade75;
     width: 100%;
+    color: $DarkShade75;
+    font-size: rem(14);
+    font-family: $secondFont;
+    line-height: rem(24);
+    list-style-type: none;
   }
-
 }

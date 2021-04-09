@@ -1,7 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-
 .icon-text-list {
   display: flex;
   flex-direction: row;
@@ -26,21 +25,23 @@
   //- text-block
   &__text-block {
     margin-left: rem(10);
+    color: $DarkShade75;
+    font-size: rem(14);
     font-family: $secondFont;
-    font-size: rem(14);
-    color: $DarkShade75;
   }
+
   &__caption {
-    text-transform: none;
-    color: $DarkShade75;
-    font-size: rem(14);
     margin-top: rem(4);
     margin-bottom: rem(5);
+    color: $DarkShade75;
     font-weight: bold;
+    font-size: rem(14);
+    text-transform: none;
   }
+
   &__text {
-    font-weight: normal;
     margin-bottom: rem(21);
+    font-weight: normal;
   }
   //- text-block end
 }

@@ -4,22 +4,27 @@
 .rate-button__inp {
   display: none;
 }
-.rate-button__star, .rate-button__star_border {
+
+.rate-button__star,
+.rate-button__star_border {
   display: inline-block;
   width: rem(24);
 }
-.rate-button__star::after, .rate-button__star_border::after {
-  cursor: pointer;
-  font-family: "Material Icons";
+
+.rate-button__star::after,
+.rate-button__star_border::after {
   font-size: rem(24);
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-family: "Material Icons", sans-serif;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   background-clip: text;
+  cursor: pointer;
   -webkit-text-fill-color: transparent;
-  
 }
+
 .rate-button__star::after {
   content: "star";
 }
+
 .rate-button__star_border::after {
   content: "star_border";
 }

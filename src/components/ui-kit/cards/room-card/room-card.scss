@@ -16,18 +16,74 @@
   &__picture-container {
     position: relative;
   }
+
   &__picture {
     object-fit: contain;
   }
+
+  //- navigation
+  &__picture-navigation {
+    position: absolute;
+    top: 36%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: $default-color;
+    opacity: 0;
+
+    &_left,
+    &_right {
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(44);
+      height: rem(44);
+      cursor: pointer;
+    }
+
+    &_left {
+      transform: rotate(90deg);
+    }
+
+    &_right {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__picture-slides {
+    position: absolute;
+    right: 5.5%;
+    bottom: 10%;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+  }
+
+  $room-card__picture-slide_width: rem(8);
+
+  &__picture-slide {
+    width: $room-card__picture-slide_width;
+    height: $room-card__picture-slide_width;
+    margin-left: $room-card__picture-slide_width / 2;
+    border: rem(1) solid $default-color;
+    border-radius: $room-card__picture-slide_width / 2;
+    cursor: pointer;
+
+    &_active {
+      background: $default-color;
+    }
+  }
+  // navigation end
 
   &__picture-block {
     &::before,
     &::after {
       position: absolute;
       display: inline-block;
-      content: '';
       width: rem(42);
       height: 100%;
+      content: '';
     }
 
     &:hover {
@@ -36,81 +92,28 @@
       }
 
       &::before {
-        background: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.5) 0%,
-          rgba(0, 0, 0, 0) 99.99%,
-          rgba(255, 255, 255, 0) 100%
-        );
+        background:
+          linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0) 99.99%,
+            rgba(255, 255, 255, 0) 100%
+          );
       }
+
       &::after {
-        background: linear-gradient(
-          -90deg,
-          rgba(0, 0, 0, 0.5) 0%,
-          rgba(0, 0, 0, 0) 99.99%,
-          rgba(255, 255, 255, 0) 100%
-        );
         right: 0;
+        background:
+          linear-gradient(
+            -90deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0) 99.99%,
+            rgba(255, 255, 255, 0) 100%
+          );
       }
     }
   }
-}
 
-//- navigation
-.room-card {
-  &__picture-navigation {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    top: 36%;
-    color: $default-color;
-    width: 100%;
-    opacity: 0;
-
-    &_left,
-    &_right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: rem(44);
-      height: rem(44);
-      cursor: pointer;
-      z-index: 20;
-    }
-
-    &_left {
-      transform: rotate(90deg);
-    }
-    &_right {
-      transform: rotate(-90deg);
-    }
-  }
-
-  &__picture-slides {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    right: 5.5%;
-    bottom: 10%;
-    z-index: 20;
-  }
-
-  $room-card__picture-slide_width: rem(8);
-  &__picture-slide {
-    width: $room-card__picture-slide_width;
-    height: $room-card__picture-slide_width;
-    border: rem(1) solid $default-color;
-    border-radius: $room-card__picture-slide_width / 2;
-    margin-left: $room-card__picture-slide_width / 2;
-    cursor: pointer;
-    &_active {
-      background: $default-color;
-    }
-  }
-}
-//- navigation end
-
-.room-card {
   &__number-price {
     margin: rem(14) rem(18) 0 rem(22);
     border-bottom: rem(1) solid $DarkShade25;
@@ -119,8 +122,8 @@
   &__feedback-block {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: rem(3) rem(20) rem(14) rem(20);
   }
 }

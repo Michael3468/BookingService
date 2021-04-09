@@ -13,10 +13,10 @@
   }
 
   &__sample {
+    top: rem(145);
+    left: rem(150);
     width: rem(70);
     height: rem(70);
-    left: rem(150);
-    top: rem(145);
     border-radius: rem(6);
   }
 
@@ -25,10 +25,10 @@
     flex-direction: column;
     align-items: flex-start;
     margin: rem(8) 0 0 rem(40);
-    font-family: $mainFont;
-    color: #1F2041;
+    color: #1f2041;
     font-weight: bold;
     font-size: rem(19);
+    font-family: $mainFont;
     line-height: rem(29);
   }
 
@@ -37,10 +37,9 @@
   }
 
   &__colorCode {
-    font-family: $mainFont;
+    margin-top: rem(6);
     font-weight: normal;
     font-size: rem(19);
-    margin-top: rem(6);
+    font-family: $mainFont;
   }
-
 }
