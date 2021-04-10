@@ -40,7 +40,7 @@ $radio-button__size: 20;
     display: inline-block;
     width: rem($radio-button__size);
     height: rem($radio-button__size);
-    border: 1px solid $DarkShade25;
+    border: rem(1) solid $DarkShade25;
     border-radius: 50%;
     content: "";
   }

@@ -58,7 +58,7 @@
     display: grid;
     grid-row-gap: rem(20);
     grid-column-gap: rem(32);
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, rem(250));
     width: 100%;
   }
 

@@ -1,15 +1,18 @@
+@import '../../../../../assets/scss/utils/vars.scss';
+@import '../../../../../assets/scss/utils/mixins.scss';
+
 .header__logo {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
 
-.header__logo-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 12px;
-}
+  &-img {
+    width: rem(40);
+    height: rem(40);
+    margin-right: rem(12);
+  }
 
-.header__logo-name {
-  height: 14px;
+  &-name {
+    height: rem(14);
+  }
 }

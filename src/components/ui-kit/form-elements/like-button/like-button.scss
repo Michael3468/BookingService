@@ -1,16 +1,16 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-$size: 10px;
-$padding: 1px;
+$size: rem(10);
+$padding: rem(1);
 
-.like-button__container {
-  width: $size * 4;
-  height: $size * 2;
-  padding: $padding;
-  background: $DarkShade25;
-  border-radius: $size;
-}
+// .like-button__container {
+//   width: $size * 4;
+//   height: $size * 2;
+//   padding: $padding;
+//   background: $DarkShade25;
+//   border-radius: $size;
+// }
 
 .like-button {
   position: absolute;
@@ -18,24 +18,42 @@ $padding: 1px;
   height: $size * 2 - $padding * 2;
   background: white;
   border-radius: $size;
+
+  &__container {
+    width: $size * 4;
+    height: $size * 2;
+    padding: $padding;
+    background: $DarkShade25;
+    border-radius: $size;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(1);
+    padding-left: 28%;
+    color: $DarkShade25;
+    font-size: rem(10);
+    font-family: $mainFont;
+  }
 }
 
-.like-button__content {
-  display: flex;
-  justify-content: center;
-  margin-top: 1px;
-  padding-left: 28%;
-  color: $DarkShade25;
-  font-size: rem(10);
-  font-family: $mainFont;
-}
+// .like-button__content {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: rem(1);
+//   padding-left: 28%;
+//   color: $DarkShade25;
+//   font-size: rem(10);
+//   font-family: $mainFont;
+// }
 
 .like-button-icon {
   position: absolute;
   display: flex;
   align-items: center;
   height: 100%;
-  margin-left: 4px;
+  margin-left: rem(4);
   color: $DarkShade25;
   font-size: rem(10);
 }

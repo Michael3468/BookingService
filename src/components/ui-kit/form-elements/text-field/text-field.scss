@@ -1,4 +1,5 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .text-field__caption {
   display: flex;
@@ -24,7 +25,7 @@
 .input__style {
   width: 100%;
   font-family: $secondFont;
-  border: 1px solid $DarkShade25;
+  border: rem(1) solid $DarkShade25;
   border-radius: $BorderRadius;
 }
 
@@ -35,8 +36,8 @@
 
   &_arrow-forward {
     position: absolute;
-    top: 10px;
-    right: 5px;
+    top: rem(10);
+    right: rem(5);
     // arrow color
     background: $primaryGradient;
     background-clip: text;
@@ -44,7 +45,7 @@
     // arrow color end
   }
 
-  padding: 13px 10px 12px 15px;
+  padding: rem(13) rem(10) rem(12) rem(15);
   color: $DarkShade75;
 
   &::placeholder {

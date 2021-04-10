@@ -27,7 +27,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
-  border: 1px solid $DarkShade25;
+  border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
   cursor: pointer;
   content: '';

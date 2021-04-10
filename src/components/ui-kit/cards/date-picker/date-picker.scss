@@ -4,7 +4,7 @@
 
 .datepicker-inline .datepicker {
   box-sizing: border-box;
-  min-width: 320px;
+  min-width: rem(320);
   box-shadow: rem(0) rem(10) rem(20) $DarkShade5;
 }
 

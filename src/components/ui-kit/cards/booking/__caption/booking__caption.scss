@@ -11,7 +11,7 @@
 .booking__caption-right {
   display: flex;
   flex-direction: row;
-  margin-top: 5px;
+  margin-top: rem(5);
   font-weight: bold;
   font-family: $secondFont;
 }
