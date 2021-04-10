@@ -159,10 +159,6 @@
   height: auto;
   border-bottom: none;
 }
-
-// .sub-footer {
-
-// }
 // mobile end
 
 @media screen and (max-width: $desktopWidth) {
@@ -180,7 +176,6 @@
       grid-column: span 12;
       align-items: flex-start;
       justify-content: center;
-      // grid-column: span 1;
       justify-items: center;
       margin-top: rem(19);
     }
