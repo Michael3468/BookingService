@@ -5,6 +5,10 @@
   &__caption {
     margin-bottom: rem(21);
     font-family: $secondFont;
+
+    @media screen and (max-width: $phoneWidth) {
+      font-size: 5.5vw;
+    }
   }
 
   &__date-dropdown-margin {

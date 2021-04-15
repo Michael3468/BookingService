@@ -7,6 +7,7 @@
     "dev": "webpack-dev-server --open --config ./conf/webpack.dev.conf.js",
     "build": "webpack --config ./conf/webpack.build.conf.js",
     "deploy": "gh-pages -d dist",
+    "stylelint": "stylelint **/*.scss",
     "stylelint-fix": "stylelint **/*.scss --fix"
   },
   "browserslist": [

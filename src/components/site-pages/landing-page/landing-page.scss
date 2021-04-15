@@ -5,6 +5,10 @@
   &__background {
     position: absolute;
     z-index: -1;
+    width: 100%;
+    max-width: rem(1440);
+    min-height: rem(500);
+    overflow: hidden;
     opacity: 0;
   }
 
@@ -15,6 +19,11 @@
 
     &_position {
       margin-top: rem(68);
+
+      @media screen and (max-width: $phoneWidth) {
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
 
@@ -25,7 +34,7 @@
     text-align: right;
 
     &_position {
-      margin-top: rem(318);
+      margin-top: 22vw;
       margin-bottom: rem(20);
     }
   }
@@ -33,11 +42,25 @@
 
 //- background animation
 @keyframes fade {
-  0% { opacity: 0; }
-  15% { opacity: 1; }
-  35% { opacity: 1; }
-  55% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .landing-page__fade-in {
@@ -45,8 +68,16 @@
   animation-duration: 30s;
   animation-iteration-count: infinite;
 
-  &:nth-child(1) { animation-delay: 0s; }
-  &:nth-child(2) { animation-delay: 10s; }
-  &:nth-child(3) { animation-delay: 20s; }
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 10s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 20s;
+  }
 }
 //- background animation end

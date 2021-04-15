@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
-const StylelintPlugin = require('stylelint-webpack-plugin');
+// const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -144,8 +144,8 @@ module.exports = {
         })
     ),
 
-    new StylelintPlugin({
-      files: '**/*.(s(c|a)ss|css)',
-    }),
+    // new StylelintPlugin({
+    //   files: '**/*.(s(c|a)ss|css)',
+    // }),
   ],
 };

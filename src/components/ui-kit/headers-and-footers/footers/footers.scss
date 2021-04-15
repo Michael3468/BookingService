@@ -12,6 +12,10 @@
   border-top: rem(1) solid rgba(223, 222, 227, 1);
   border-bottom: rem(1) solid rgba(223, 222, 227, 1);
 
+  @media screen and (max-width: $phoneWidth) {
+    padding-top: 0;
+  }
+
   &__logo-p {
     color: $DarkShade75;
     line-height: rem(24);
@@ -55,6 +59,14 @@
   align-items: center;
   height: rem(70);
   background-color: $default-color;
+
+  @media (max-width: $phoneWidth) {
+    height: rem(140);
+  }
+
+  @media (min-width: $phoneWidth) and (max-width: $smDesktopWidth) {
+    height: rem(207);
+  }
 
   &__content {
     justify-content: space-between;
@@ -131,6 +143,14 @@
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
 
+  @media screen and (max-width: $desktopWidth) {
+    grid-column-gap: rem(10);
+  }
+
+  @media screen and (max-width: $smDesktopWidth) {
+    grid-template-columns: 1fr;
+  }
+
   &__logo {
     grid-column: span 3;
   }
@@ -161,16 +181,8 @@
 }
 // mobile end
 
-@media screen and (max-width: $desktopWidth) {
+@media screen and (max-width: $smDesktopWidth) {
   .grid-layout {
-    grid-column-gap: rem(10);
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .grid-layout {
-    grid-template-columns: 1fr;
-
     &__logo {
       display: grid;
       grid-column: span 12;
@@ -194,7 +206,6 @@
 
   .sub-footer {
     align-items: flex-start;
-    height: rem(207);
 
     &__content {
       display: flex;

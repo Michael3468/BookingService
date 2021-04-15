@@ -30,6 +30,12 @@
     text-transform: uppercase;
     cursor: pointer;
     caret-color: transparent;
+
+    @media screen and (max-width: $phoneWidth) {
+      padding-right: 2vw;
+      padding-left: 2vw;
+      font-size: 3.5vw;
+    }
   }
 
   &__expand-button {
@@ -39,6 +45,11 @@
     width: rem(20);
     color: $DarkShade50;
     cursor: pointer;
+
+    @media screen and (max-width: $phoneWidth) {
+      top: 20%;
+      right: 5%;
+    }
   }
 
   &__date-picker {

@@ -21,7 +21,7 @@ html {
   }
 
   @media screen and (min-width: $phoneWidth) and (max-width: $tableWidth) {
-    font-size: rem(0.85);
+    font-size: rem(12);
   }
 }
 
@@ -61,6 +61,10 @@ section,
 
   @media screen and (max-width: $desktopWidth) {
     padding: 0 $desktopWidthPadding;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    padding: 0 5%;
   }
 }
 
