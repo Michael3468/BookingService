@@ -6,8 +6,44 @@
   margin-top: rem(28);
 }
 
+.search-room__options-column_button {
+  position: fixed;
+  z-index: 5;
+  display: none;
+  width: rem(40);
+  height: rem(40);
+  margin-top: rem(90);
+  background-color: $default-color;
+  border: rem(3) solid $DarkShade50;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (max-width: $smTableWidth) {
+    display: block;
+  }
+
+  &::after {
+    position: relative;
+    top: rem(-7);
+    left: rem(11);
+    color: $DarkShade50;
+    font-weight: bold;
+    font-size: rem(30);
+    content: '\BB';
+  }
+
+  &:hover {
+    border-color: $purple;
+  }
+}
+
 .search-room__options-column {
+  display: block;
   min-width: rem(266);
+
+  @media (max-width: $smTableWidth) {
+    display: none;
+  }
 
   &__date-dropdown {
     margin-bottom: rem(20);
@@ -46,12 +82,26 @@
 .room-cards_column {
   width: 100%;
   margin-left: rem(59);
+
+  @media (max-width: $smTableWidth) {
+    margin-left: 0;
+  }
 }
 
 .search-room__room-cards {
   &_h1 {
     margin-bottom: rem(20);
     font-family: $secondFont;
+
+    @media (max-width: $desktopWidth) {
+      text-align: center;
+    }
+
+    @media (max-width: $tableWidth) {
+      padding-right: 3vw;
+      padding-left: 3vw;
+      font-size: calc(0.75rem + 1.5vw);
+    }
   }
 
   &_grid-layout {
@@ -60,6 +110,10 @@
     grid-column-gap: rem(32);
     grid-template-columns: repeat(auto-fill, rem(250));
     width: 100%;
+
+    @media (max-width: $desktopWidth) {
+      justify-content: center;
+    }
   }
 
   &_pagination-position {
