@@ -1,52 +1,53 @@
-export class Dropdown {
-  constructor(elem) {
-    this._elem = elem;
-    this._ddBlock = elem.querySelector('.js-dropdown__block');
-    this._selectionText = elem.querySelector('.js-dropdown__selection-text');
-    this._menu = elem.querySelector('.js-dropdown__menu');
-    this._dropdownCounters = this._elem.querySelectorAll('.js-dropdown__counter');
-    elem.onclick = this.onClick.bind(this);
-  }
-
-  onClick(event) {
-    let action = event.target.dataset.ddAction;
-    if (action) {
-      this._action = action;
-      this[action](event);
-    }
-  }
-
-  showHide() {
-    this._menu.hidden = !this._menu.hidden;
-    this._ddBlock.classList.toggle('menu-open');
-  }
-
-  increment(event) {
-    setCounterValue(this._action, event);
-  }
-
-  decrement(event) {
-    setCounterValue(this._action, event);
-  }
-}
-
+/* eslint-disable no-plusplus */
 function setCounterValue(act, event) {
   const itemControls = event.target.closest('.js-dropdown__item-controls');
   const decrementButton = itemControls.querySelector('.js-dropdown__button-decrement');
   const counter = itemControls.querySelector('.js-dropdown__counter');
   let counterValue = Number(counter.innerText);
 
-  if (act == 'increment') {
+  if (act === 'increment') {
     counter.innerText = ++counterValue;
     decrementButton.classList.add('dark');
   }
 
-  if (act == 'decrement') {
-    if (counter.innerText != '0') {
+  if (act === 'decrement') {
+    if (counter.innerText !== '0') {
       counter.innerText = --counterValue;
-      if (counter.innerText == '0') {
+      if (counter.innerText === '0') {
         decrementButton.classList.remove('dark');
       }
     }
+  }
+}
+
+export default class Dropdown {
+  constructor(elem) {
+    this.elem = elem;
+    this.ddBlock = elem.querySelector('.js-dropdown__block');
+    this.selectionText = elem.querySelector('.js-dropdown__selection-text');
+    this.menu = elem.querySelector('.js-dropdown__menu');
+    this.dropdownCounters = elem.querySelectorAll('.js-dropdown__counter');
+    this.elem.onclick = this.onClick.bind(this);
+  }
+
+  onClick(event) {
+    const action = event.target.dataset.ddAction;
+    if (action) {
+      this.action = action;
+      this[action](event);
+    }
+  }
+
+  showHide() {
+    this.menu.hidden = !this.menu.hidden;
+    this.ddBlock.classList.toggle('menu-open');
+  }
+
+  increment(event) {
+    setCounterValue(this.action, event);
+  }
+
+  decrement(event) {
+    setCounterValue(this.action, event);
   }
 }

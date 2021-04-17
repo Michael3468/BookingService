@@ -1,28 +1,12 @@
 import './dropdown-options.scss';
-import { Dropdown } from '../Dropdown.js';
-
-class DropdownOptions extends Dropdown {
-  increment(event) {
-    super.increment(event);
-    this._selectionText.innerText = updateDropdownOptionsSelectionText(this);
-  }
-
-  decrement(event) {
-    super.decrement(event);
-    this._selectionText.innerText = updateDropdownOptionsSelectionText(this);
-  }
-}
-
-let dropdownOptions = document.querySelector('#dropdown-options');
-new DropdownOptions(dropdownOptions);
+import Dropdown from '../Dropdown';
 
 function updateDropdownOptionsSelectionText(thisObj) {
+  const bedroomsCounter = thisObj.dropdownCounters[0].innerText;
+  const bedsCounter = thisObj.dropdownCounters[1].innerText;
+  const bathroomsCounter = thisObj.dropdownCounters[2].innerText;
 
-  const bedroomsCounter = thisObj._dropdownCounters[0].innerText;
-  const bedsCounter = thisObj._dropdownCounters[1].innerText;
-  const bathroomsCounter = thisObj._dropdownCounters[2].innerText;
-
-  let bedrooms = 'спален';
+  let bedrooms;
   switch (bedroomsCounter) {
     case '1':
       bedrooms = 'спальня';
@@ -32,9 +16,10 @@ function updateDropdownOptionsSelectionText(thisObj) {
     case '4':
       bedrooms = 'спальни';
       break;
+    default: bedrooms = 'спален';
   }
 
-  let beds = 'кроватей';
+  let beds;
   switch (bedsCounter) {
     case '1':
       beds = 'кровать';
@@ -44,9 +29,10 @@ function updateDropdownOptionsSelectionText(thisObj) {
     case '4':
       beds = 'кровати';
       break;
+    default: beds = 'кроватей';
   }
 
-  let baths = 'ванн';
+  let baths;
   switch (bathroomsCounter) {
     case '1':
       baths = 'ванна';
@@ -56,6 +42,7 @@ function updateDropdownOptionsSelectionText(thisObj) {
     case '4':
       baths = 'ванны';
       break;
+    default: baths = 'ванн';
   }
 
   if (bedroomsCounter > 0 && bedsCounter > 0 && bathroomsCounter > 0) {
@@ -79,6 +66,21 @@ function updateDropdownOptionsSelectionText(thisObj) {
   if (bathroomsCounter > 0) {
     return `${bathroomsCounter} ${baths}`;
   }
-
   return 'Удобства';
 }
+
+class DropdownOptions extends Dropdown {
+  increment(event) {
+    super.increment(event);
+    this.selectionText.innerText = updateDropdownOptionsSelectionText(this);
+  }
+
+  decrement(event) {
+    super.decrement(event);
+    this.selectionText.innerText = updateDropdownOptionsSelectionText(this);
+  }
+}
+
+const dropdownOptions = document.querySelector('#dropdown-options');
+// eslint-disable-next-line no-new
+new DropdownOptions(dropdownOptions);
