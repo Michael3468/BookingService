@@ -1,14 +1,19 @@
 import './filter-date-dropdown.scss';
-import '../../form-elements/filter-date-picker/filter-date-picker.js';
+import '../filter-date-picker/filter-date-picker';
 
-$(function () {
-  let $isFilterDateDropdown = $('.filter-date-dropdown__input');
-  if ($isFilterDateDropdown) {
-    $isFilterDateDropdown.on('click', showHideDatePicker);
+function showHideDatePicker(event) {
+  const filterDateDropdown = event.target.closest('.filter-date-dropdown')
+    .querySelector('.dropdown-date__date-picker');
+  const filterStatus = filterDateDropdown.style.display;
+
+  if (filterStatus === 'block') {
+    filterDateDropdown.style.display = 'none';
+  } else {
+    filterDateDropdown.style.display = 'block';
   }
-});
-
-function showHideDatePicker() {
-  let $filterDateDropdown = $(this.offsetParent.nextElementSibling);
-  $filterDateDropdown.toggle('.filter-date-dropdown_hidden');
 }
+
+(() => {
+  const isFilterDateDropdown = document.querySelector('.filter-date-dropdown__input');
+  isFilterDateDropdown.addEventListener('click', showHideDatePicker);
+})();
