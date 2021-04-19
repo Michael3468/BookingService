@@ -1,14 +1,20 @@
 import './dropdown-date.scss';
-import '../../cards/date-picker/date-picker.js';
+import '../../cards/date-picker/date-picker';
 
-$(function () {
-  let $isDropdownDateBlock = $('.dropdown-date__input-block');
-  if ($isDropdownDateBlock) {
-    $isDropdownDateBlock.on('click', showHideDatePicker);
+function showHideDatePicker(event) {
+  if (!event.target.className.includes('dropdown-date__input')) return;
+
+  const ddDate = event.target.closest('.dropdown-date');
+  const dropdownDate = ddDate.nextSibling;
+  const ddDateStatus = dropdownDate.style.display;
+  if (ddDateStatus === 'block') {
+    dropdownDate.style.display = 'none';
+  } else {
+    dropdownDate.style.display = 'block';
   }
-});
-
-function showHideDatePicker() {
-  let $dropdownDate = $(this.parentElement.offsetParent.nextSibling);
-  $dropdownDate.toggle('.dropdown-date__date-picker_hidden');
 }
+
+(() => {
+  const isDropdownDateBlock = document.querySelector('.dropdown-date');
+  isDropdownDateBlock.addEventListener('click', showHideDatePicker);
+})();
