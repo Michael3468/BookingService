@@ -1,18 +1,17 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-underscore-dangle */
 import './pagination.scss';
 
-//- http://pagination.js.org
 import 'paginationjs/dist/pagination';
 
-
-$(function(){
-
+(() => {
   const _pageSize = 12;
 
   $('#pagination-container').pagination({
-    dataSource: function(done){
-      var result = [];
-      for (var i = 1; i < 180; i++) {
-          result.push(i);
+    dataSource: (done) => {
+      const result = [];
+      for (let i = 1; i < 180; i += 1) {
+        result.push(i);
       }
       done(result);
     },
@@ -23,23 +22,22 @@ $(function(){
     autoHideNext: true,
     prevText: '',
     nextText: '',
-    footer: function(currentPage) {
-      var pageSize = _pageSize;
-      var prevPage = currentPage - 1;
-      var fromPage;
-      var toPage = currentPage * pageSize;
+    footer: (currentPage) => {
+      const pageSize = _pageSize;
+      const prevPage = currentPage - 1;
+      let fromPage;
+      const toPage = currentPage * pageSize;
 
-      if (currentPage == 1) {
+      if (currentPage === 1) {
         fromPage = currentPage;
       } else {
         fromPage = prevPage * pageSize + 1;
       }
-      return '<div class=paginationjs-pages-footer>' + fromPage + ' - ' + toPage + ' из 100+ вариантов аренды</div>';
+      return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
     },
-    callback: function(data, pagination) {
-        var html = template(data);
-        $('#data-container').html(html);
-    }
-  })
-
-});
+    callback: (data) => {
+      const html = template(data);
+      $('#data-container').html(html);
+    },
+  });
+})();

@@ -1,6 +1,6 @@
-import './components/ui-kit/index/index.js';
+import './components/ui-kit/index/index';
 // import './assets/js/common';
-import './components/ui-kit/logo/logo.js';
+import './components/ui-kit/logo/logo';
 import './assets/scss/main.scss';
 
 // Bootstrap (example)

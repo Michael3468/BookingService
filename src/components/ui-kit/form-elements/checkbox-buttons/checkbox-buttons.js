@@ -1,8 +1,8 @@
 import './checkbox-buttons.scss';
 
 const expandableCheckbox = document.getElementById('expandable-checkbox-list-check-box-buttons-1');
-const checkboxOptions = expandableCheckbox.nextElementSibling; // querySelector
-const expandMore = expandableCheckbox.lastElementChild.children[1]; // querySelector
+const checkboxOptions = expandableCheckbox.nextElementSibling;
+const expandMore = expandableCheckbox.lastElementChild.children[1];
 
 function isCheckboxOptionsVisible() {
   const notVisible = checkboxOptions.classList.contains('display-none');
