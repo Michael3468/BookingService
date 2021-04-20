@@ -6,11 +6,19 @@
   box-sizing: border-box;
   min-width: rem(320);
   box-shadow: rem(0) rem(10) rem(20) $DarkShade5;
+
+  @media (max-width: $phoneWidth) {
+    min-width: rem(260);
+  }
 }
 
 .datepicker--nav {
   min-height: rem(70);
   border-bottom: none;
+
+  @media (max-width: $phoneWidth) {
+    width: rem(250);
+  }
 }
 
 .datepicker--nav-action {
@@ -35,14 +43,14 @@
   display: none;
 }
 
-.datepicker--nav-action[data-action=prev]::after {
+.datepicker--nav-action[data-action='prev']::after {
   margin-left: rem(14);
-  content: "arrow_back";
+  content: 'arrow_back';
 }
 
-.datepicker--nav-action[data-action=next]::after {
+.datepicker--nav-action[data-action='next']::after {
   margin-right: rem(14);
-  content: "arrow_forward";
+  content: 'arrow_forward';
 }
 
 .datepicker--nav-action::after {
@@ -51,7 +59,7 @@
   margin-top: rem(-7);
   color: $purple;
   font-weight: normal;
-  font-size: rem(24);  /* Preferred icon size 24px */
+  font-size: rem(24); /* Preferred icon size 24px */
 
   //- .material-icons main.scss
   font-family: 'Material Icons', sans-serif;
@@ -73,6 +81,10 @@
 
 .datepicker--content {
   padding: rem(4) rem(20);
+
+  @media (max-width: $phoneWidth) {
+    width: rem(220);
+  }
 }
 
 .datepicker--days-names {
@@ -92,6 +104,10 @@
   color: $DarkShade50;
   font-size: rem(12);
   font-family: $secondFont;
+
+  @media (max-width: $phoneWidth) {
+    height: rem(30);
+  }
 }
 
 .datepicker--buttons {
@@ -99,6 +115,10 @@
   justify-content: space-between;
   margin-bottom: rem(7);
   border: none;
+
+  @media (max-width: $phoneWidth) {
+    width: rem(250px);
+  }
 }
 
 .datepicker--button {
@@ -128,7 +148,7 @@
   background: transparent;
   background: $primaryGradient;
   opacity: 0.25;
-  content: "";
+  content: '';
 }
 
 .datepicker--cell.-range-to-::after {
@@ -140,7 +160,7 @@
   background: transparent;
   background: $primaryGradient;
   opacity: 0.25;
-  content: "";
+  content: '';
 }
 
 .datepicker--cell.-selected-,
@@ -177,4 +197,18 @@
 .datepicker--cell.-in-range- {
   color: $DarkShade50;
   background: none;
+}
+
+@media (max-width: $phoneWidth) {
+  .datepicker--cells {
+    width: rem(220);
+  }
+
+  .datepicker--body.active {
+    width: rem(220);
+  }
+
+  .date-picker {
+    width: rem(250);
+  }
 }
