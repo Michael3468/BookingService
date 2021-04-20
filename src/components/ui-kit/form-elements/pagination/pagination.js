@@ -1,12 +1,11 @@
 /* eslint-disable no-undef */
-/* eslint-disable no-underscore-dangle */
+/* eslint-disable prefer-arrow-callback */
 import './pagination.scss';
-
 import 'paginationjs/dist/pagination';
 
-(() => {
-  const _pageSize = 12;
-
+// eslint-disable-next-line func-names
+$(function () {
+  const pSize = 12;
   $('#pagination-container').pagination({
     dataSource: (done) => {
       const result = [];
@@ -15,7 +14,7 @@ import 'paginationjs/dist/pagination';
       }
       done(result);
     },
-    pageSize: _pageSize,
+    pageSize: pSize,
     pageNumber: 1,
     pageRange: 1,
     autoHidePrevious: true,
@@ -23,7 +22,7 @@ import 'paginationjs/dist/pagination';
     prevText: '',
     nextText: '',
     footer: (currentPage) => {
-      const pageSize = _pageSize;
+      const pageSize = pSize;
       const prevPage = currentPage - 1;
       let fromPage;
       const toPage = currentPage * pageSize;
@@ -35,9 +34,9 @@ import 'paginationjs/dist/pagination';
       }
       return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
     },
-    callback: (data) => {
+    callback: (data, pagination) => {
       const html = template(data);
       $('#data-container').html(html);
     },
   });
-})();
+});
