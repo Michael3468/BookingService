@@ -2,63 +2,71 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .room-details__images-block {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 68.125% 31.875%;
 
-  &_left {
-    width: 68.125%;
+  @media screen and (max-width: $smTableWidth) {
+    grid-template-rows: auto 2fr;
+    grid-template-columns: 1fr;
+
+    &_left {
+      margin-bottom: rem(1);
+    }
+
+    &_right {
+      width: 100%;
+      height: auto;
+    }
+
+    &_middle-size {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &_right {
-    width: 31.875%;
-  }
-
-  &_big-size {
-    width: 100%;
-    height: auto;
-  }
-
-  &_middle-size {
-    width: 100%;
-    height: auto;
-
-    &:last-child {
-      margin-top: rem(-1);
-    }
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
 //- room-details columns
 .room-details {
-  &__column-1 {
-    width: rem(710);
-    margin-right: rem(70);
-  }
-
-  &__blocks {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__right-block {
-    margin-right: rem(80);
-  }
-
   &__column-2 {
-    width: rem(380);
+    max-width: rem(380);
+  }
+
+  &__container {
+    margin-top: rem(67);
+    margin-bottom: rem(62);
+  }
+
+  // info about the room
+  &__h2 {
+    font-family: $secondFont;
+  }
+
+  &__icon-text-list__position {
+    width: rem(280);
+    margin-top: rem(20);
+  }
+  // info about the room end
+
+  &__block_left {
+    margin-bottom: rem(10);
+  }
+
+  &__block_right {
+    margin-bottom: rem(20);
   }
 
   //- rules block
   &__rules {
-    display: flex;
-    flex-direction: row;
     margin-top: rem(30);
   }
 
   &__rules-block {
-    width: rem(270);
-    margin-right: rem(90);
+    width: rem(255);
   }
 
   &__h2_rules-block {
@@ -67,7 +75,7 @@
   }
 
   &__cancel-block {
-    width: rem(335);
+    max-width: rem(335);
   }
 
   &__h2_cancel-block {
@@ -77,13 +85,17 @@
 
   //- visitors feedbacks
   &__feedbacks {
-    margin-top: rem(11);
+    margin-right: rem(10);
 
     &_caption {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: rem(21);
+      margin-bottom: rem(22);
+
+      @media screen and (max-width: $smTableWidth) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -95,24 +107,6 @@
     }
   }
   //- visitors feedbacks end
-
-  //- info about room
-  &__container {
-    display: flex;
-    flex-direction: row;
-    margin-top: rem(67);
-    margin-bottom: rem(62);
-  }
-
-  &__h2 {
-    font-family: $secondFont;
-  }
-
-  &__icon-text-list__position {
-    width: rem(280);
-    margin-top: rem(20);
-  }
-  //- info about room end
 }
 //- room-details columns end
 
@@ -120,3 +114,40 @@
 .d3js-donut-chart_position {
   margin-top: rem(20);
 }
+
+/* grid block */
+.room-details__container {
+  display: grid;
+  grid-column-gap: rem(60);
+  grid-template-columns: 1fr 380px;
+}
+
+@media only screen and (max-width: 800px) {
+  .room-details__container {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+  }
+
+  .room-details__column-1 {
+    order: 1;
+  }
+
+  .room-details__column-2 {
+    order: -1;
+    margin-bottom: rem(30);
+  }
+}
+
+.room-details__blocks {
+  display: grid;
+  grid-row-gap: rem(10);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.room-details__rules {
+  display: grid;
+  grid-row-gap: rem(10);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* grid block end */

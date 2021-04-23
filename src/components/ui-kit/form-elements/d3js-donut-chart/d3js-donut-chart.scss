@@ -29,6 +29,10 @@
   &__legend {
     margin-top: rem(27);
     margin-left: rem(32);
+
+    @media screen and (max-width: $phoneWidth) {
+      margin-left: rem(15);
+    }
   }
 
   &__legend-values {
