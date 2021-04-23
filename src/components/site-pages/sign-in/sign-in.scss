@@ -2,6 +2,14 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .sign-in {
+  &__block {
+    min-height: 540px;
+
+    @media screen and (max-width: $phoneWidth) {
+      min-height: auto;
+    }
+  }
+
   &__background-image {
     position: relative;
     z-index: -10;
