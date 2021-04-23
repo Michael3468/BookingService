@@ -15,5 +15,19 @@
     top: rem(90);
     left: calc(50% - (#{$card-width} / 2));
     width: $card-width;
+
+    @media screen and (max-width: $phoneWidth) {
+      left: 0;
+      width: 100%;
+    }
+
+    @media screen and (max-width: $smTableWidth) {
+      position: static;
+    }
+
+    &_block {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
