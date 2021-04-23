@@ -6,7 +6,7 @@
     position: relative;
     z-index: -10;
     width: 100%;
-    height: rem(770);
+    height: auto;
     margin-top: rem(-72);
   }
 
@@ -17,5 +17,18 @@
     top: rem(242);
     left: calc(50% - (#{$card-width} / 2));
     width: $card-width;
+
+    @media screen and (max-width: $smTableWidth) {
+      position: static;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+      width: 100%;
+    }
+
+    &_block {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
