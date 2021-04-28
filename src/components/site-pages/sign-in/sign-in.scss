@@ -3,9 +3,11 @@
 
 .sign-in {
   &__block {
-    min-height: 540px;
+    height: rem(699);
+    min-height: rem(540);
 
     @media screen and (max-width: $phoneWidth) {
+      height: auto;
       min-height: auto;
     }
   }
@@ -14,7 +16,6 @@
     position: relative;
     z-index: -10;
     width: 100%;
-    height: auto;
     margin-top: rem(-72);
   }
 
