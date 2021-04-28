@@ -5,7 +5,13 @@
   &__background-image {
     position: relative;
     z-index: -10;
+    width: 100%;
     margin-top: rem(-72);
+  }
+
+  &_block {
+    display: flex;
+    justify-content: center;
   }
 
   $card-width: rem(380);

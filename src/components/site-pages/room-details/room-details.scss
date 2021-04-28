@@ -10,6 +10,7 @@
     grid-template-columns: 1fr;
 
     &_left {
+      width: 100%;
       margin-bottom: rem(1);
     }
 
@@ -27,6 +28,14 @@
   &_right {
     display: grid;
     grid-template-rows: 1fr 1fr;
+  }
+
+  &_big-size {
+    width: 100%;
+  }
+
+  &_middle-size {
+    width: 100%;
   }
 }
 
