@@ -25,8 +25,8 @@ mixin room-card(params)
 
     .room-card__feedback-block
       include ../../form-elements/rate-button/rate-button
-      +rate-button({rateBtnName: 'rateBtnName-1',
-                    rateBtnId:   'rateBtnId-1',
+      +rate-button({rateBtnName: `rateBtnName-${params.number}`,
+                    rateBtnId:   `rateBtnId-${params.number}-`,
                     starsCount:  params.starsRate})
 
       include __feedbacks/__feedbacks
@@ -37,11 +37,11 @@ mixin room-card(params)
 
 
 //- example
-//- +room-card({  id:        '2',
-//-               number:    '840',
-//-               status:    'Люкс',
-//-               price:     '9 900₽',
-//-               photoName: 'room-card-840.jpg',
-//-               starsRate: '4',
-//-               feedbacks: '65',
-//-             })
+//- +room-card({  id:         index+1,
+//-               number:     room.number,
+//-               status:     room.luxStatus,
+//-               price:      `${room.price}₽`,
+//-               photoName:  `room-card-${room.number}.jpg`,
+//-               starsRate:  room.starsRate,
+//-               feedbacks:  room.feedbacks,
+//-           })

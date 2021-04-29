@@ -1,30 +1,39 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+.rate-buttons {
+  display: flex;
+  transform: rotateY(180deg);
+}
 .rate-button__inp {
   display: none;
 }
-
-.rate-button__star,
-.rate-button__star_border {
-  display: inline-block;
-  width: rem(24);
-}
-
-.rate-button__star::after,
-.rate-button__star_border::after {
+.rate-button__star {
+  display: block;
+  cursor: pointer;
+  font-family: 'Material Icons';
   font-size: rem(24);
-  font-family: "Material Icons", sans-serif;
+
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   background-clip: text;
-  cursor: pointer;
   -webkit-text-fill-color: transparent;
 }
-
-.rate-button__star::after {
-  content: "star";
+.rate-button__star::before {
+  content: 'star_border';
+  position: relative;
 }
-
-.rate-button__star_border::after {
-  content: "star_border";
+.rate-button__star::after {
+  content: 'star';
+  position: absolute;
+  top: rem(0);
+  display: block;
+  opacity: 0;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rate-button__star:hover::after,
+.rate-button__star:hover ~ .rate-button__star::after,
+.rate-button__inp:checked ~ .rate-button__star::after {
+  opacity: 1;
 }

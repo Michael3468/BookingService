@@ -81,13 +81,13 @@ block content
 
           include ../components/ui-kit/cards/room-card/room-card
           each room, index in rooms
-            +room-card({  id:        index+1,
-                          number:    room.number,
-                          status:    room.luxStatus,
-                          price:     `${room.price}₽`,
-                          photoName: `room-card-${room.number}.jpg`,
-                          starsRate: room.starsRate,
-                          feedbacks: room.feedbacks,
+            +room-card({  id:         index+1,
+                          number:     room.number,
+                          status:     room.luxStatus,
+                          price:      `${room.price}₽`,
+                          photoName:  `room-card-${room.number}.jpg`,
+                          starsRate:  room.starsRate,
+                          feedbacks:  room.feedbacks,
                       })
 
         //- pagination
