@@ -1,10 +1,9 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
+@import './slick-carousel/slick-carousel.scss';
 
 .room-card,
-.room-card__picture,
-.room-card__picture-block::before,
-.room-card__picture-block::after {
+.room-card__picture {
   border-radius: $BorderRadius $BorderRadius 0 0;
 }
 
@@ -77,39 +76,9 @@
   // navigation end
 
   &__picture-block {
-    &::before,
-    &::after {
-      position: absolute;
-      display: inline-block;
-      width: rem(42);
-      height: 100%;
-      content: '';
-    }
-
     &:hover {
       .room-card__picture-navigation {
         opacity: 1;
-      }
-
-      &::before {
-        background:
-          linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0) 99.99%,
-            rgba(255, 255, 255, 0) 100%
-          );
-      }
-
-      &::after {
-        right: 0;
-        background:
-          linear-gradient(
-            -90deg,
-            rgba(0, 0, 0, 0.5) 0%,
-            rgba(0, 0, 0, 0) 99.99%,
-            rgba(255, 255, 255, 0) 100%
-          );
       }
     }
   }

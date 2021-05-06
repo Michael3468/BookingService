@@ -3,16 +3,9 @@ mixin room-card(params)
     .room-card__picture-container
       .room-card__picture-block
         img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
-
-        .room-card__picture-navigation
-          .room-card__picture-navigation_left.material-icons expand_more
-          .room-card__picture-navigation_right.material-icons expand_more
-
-        .room-card__picture-slides
-          .room-card__picture-slide.room-card__picture-slide_active
-          .room-card__picture-slide
-          .room-card__picture-slide
-          .room-card__picture-slide
+        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
 
     include ../booking/__caption/booking__caption
     .room-card__number-price
