@@ -16,10 +16,6 @@
     position: relative;
   }
 
-  &__picture {
-    object-fit: contain;
-  }
-
   //- navigation
   &__picture-navigation {
     position: absolute;
@@ -74,14 +70,6 @@
     }
   }
   // navigation end
-
-  &__picture-block {
-    &:hover {
-      .room-card__picture-navigation {
-        opacity: 1;
-      }
-    }
-  }
 
   &__number-price {
     margin: rem(14) rem(18) 0 rem(22);

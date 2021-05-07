@@ -1,9 +1,16 @@
+@import '../../../../../assets/scss/utils/vars.scss';
+@import '../../../../../assets/scss/utils/mixins.scss';
+
 .slick-track {
   display: flex;
 }
 
+@mixin slick-border-radius {
+  border-radius: $BorderRadius $BorderRadius 0 0;
+}
 .slick-list {
   overflow: hidden;
+  @include slick-border-radius;
 }
 
 .slick-arrow {
@@ -15,27 +22,26 @@
   font-size: 0;
 }
 
-$arrows-top: 42%;
 $arrows-size: rem(40);
+$arrows-top: calc(50% - #{$arrows-size} / 2); //- $arrows-size = arrow height
 
 @mixin slick-slider-arrows {
   position: absolute;
   top: $arrows-top;
   width: $arrows-size;
   height: $arrows-size;
-  background: url('/assets/img/expand_more.svg') 50% 50% / 30% no-repeat;
+  background: url('/assets/img/expand_more.svg') 50% 50% / 20% no-repeat;
   content: '';
 }
 
 .slick-prev {
   left: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0) 99.99%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
 
   &::after {
     @include slick-slider-arrows;
@@ -46,13 +52,12 @@ $arrows-size: rem(40);
 
 .slick-next {
   right: 0;
-  background:
-    linear-gradient(
-      -90deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0) 99.99%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
 
   &::after {
     @include slick-slider-arrows;
@@ -64,6 +69,40 @@ $arrows-size: rem(40);
 
 .slick-arrow.slick-prev,
 .slick-arrow.slick-next {
-  border-radius: $BorderRadius $BorderRadius 0 0;
+  @include slick-border-radius;
   cursor: pointer;
+}
+
+.slick-dots {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: rem(15);
+  right: rem(14);
+  z-index: 50;
+
+  & li {
+    list-style-type: none;
+    margin: 0 rem(2);
+  }
+
+  & li.slick-active button {
+    background: $default-color;
+  }
+
+  & button {
+    font-size: 0;
+    width: rem(7);
+    height: rem(7);
+    border-radius: 50%;
+    padding: 0 0;
+    background: none;
+    border: rem(1) solid $default-color;
+    cursor: pointer;
+  }
+}
+
+.slick__item_picture {
+  object-fit: contain;
 }

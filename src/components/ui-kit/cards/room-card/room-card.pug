@@ -1,11 +1,13 @@
 mixin room-card(params)
   .room-card(id=`room-card-${params.id}`)
     .room-card__picture-container
-      .room-card__picture-block
-        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
-        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
-        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
-        img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+      //- .room-card__picture-block
+      //-   img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+      //-   img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+      //-   img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+      //-   img.room-card__picture(src="/assets/img/"+params.photoName, alt="фото номера")
+      include ./slick-carousel/slick-carousel
+      +slick-carousel({photoName : params.photoName})
 
     include ../booking/__caption/booking__caption
     .room-card__number-price
