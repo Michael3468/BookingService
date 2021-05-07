@@ -5,7 +5,7 @@ const d3 = require('d3');
 
 const innerRadius = 5;
 const colorSmooth = 100; /* smooth transition of colors (resolution) */
-const innerText = 'голосов'; // TODO склонения голосов
+const innerText = 'голосов';
 const innerScore = '260';
 
 // values in percents
