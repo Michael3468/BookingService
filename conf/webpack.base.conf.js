@@ -1,3 +1,5 @@
+/* eslint-disable key-spacing */
+/* eslint-disable quote-props */
 const path = require('path');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -5,7 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
-// const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -15,7 +16,7 @@ const PATHS = {
   assets: 'assets/',
 };
 
-//Pages const for HtmlWebpackPlugin
+// Pages const for HtmlWebpackPlugin
 const PAGES_DIR = `${PATHS.src}/pages`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
@@ -96,7 +97,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              config: { path: `./postcss.config.js` },
+              config: { path: './postcss.config.js' },
             },
           },
           {
@@ -115,7 +116,6 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
-      $: 'jquery',
       jquery: 'jquery',
       jQuery: 'jquery',
       'window.jquery': 'jquery',
@@ -131,21 +131,15 @@ module.exports = {
         to: `${PATHS.assets}img`,
         flatten: true,
       },
-      // { from: `${PATHS.src}/${PATHS.assets}fonts`,  to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
 
     ...PAGES.map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`, // .pug
-          filename: `./${page.replace(/\.pug/, '.html')}`, // .html
-          chunks: ['app', 'vendors', path.parse(page).name],
-        })
+      (page) => new HtmlWebpackPlugin({
+        template: `${PAGES_DIR}/${page}`, // .pug
+        filename: `./${page.replace(/\.pug/, '.html')}`, // .html
+        chunks: ['app', 'vendors', path.parse(page).name],
+      }),
     ),
-
-    // new StylelintPlugin({
-    //   files: '**/*.(s(c|a)ss|css)',
-    // }),
   ],
 };
