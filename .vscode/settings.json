@@ -6,4 +6,13 @@
   "less.validate": false,
 
   "files.eol": "\n",
+  "cSpell.words": [
+    "browserslist",
+    "datepicker",
+    "inputmask",
+    "mqpacker",
+    "paginationjs",
+    "rangeslider",
+    "stylelint"
+  ],
 }
