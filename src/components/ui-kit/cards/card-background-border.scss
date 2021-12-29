@@ -12,7 +12,6 @@
 
     @media screen and (max-width: $phoneWidth) {
       min-width: rem(320);
-      margin-left: -$phoneWidthMargin;
       padding: rem(38) rem(10) rem(29) rem(10);
     }
   }
