@@ -15,7 +15,7 @@ $toggle-size: rem(10);
 .toggle__button {
   width: $toggle-size*4;
   height: $toggle-size*2;
-  background: url("/assets/img/radiochecked.svg") no-repeat;
+  background: url("/assets/img/radio-checked.svg") no-repeat;
   background-position: 10% 50%;
   background-size: 34%;
   border: $toggle-size/10 solid $purple;
