@@ -10,7 +10,9 @@ block content
   .registration__block
     img(src="./assets/img/registration-bg.jpg", alt="registration page background image").registration__background-image
 
-    .registration__registration-card_block
-      .registration__registration-card
-        include ../components/ui-kit/cards/registration/registration
-        +registration()
+    .container
+
+      .registration__registration-card_block
+        .registration__registration-card
+          include ../components/ui-kit/cards/registration/registration
+          +registration()
