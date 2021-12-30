@@ -20,7 +20,7 @@
       color: $DarkShade50;
       font-weight: normal;
       font-family: $secondFont;
-      line-height: rem(25);
+      line-height: rem(50);
       cursor: pointer;
 
       &_active,
@@ -80,13 +80,13 @@
     }
 
     &:hover .header__nav-dropdown-content {
+      z-index: 20;
       display: block;
     }
   }
 
   &__dropdown-link {
     display: inline-block;
-    padding: rem(10) rem(20);
     color: $DarkShade75;
     font-weight: normal;
     background: $default-color;
@@ -173,7 +173,6 @@
 
       &-li {
         width: 100%;
-        padding: rem(15) 0;
         text-align: center;
 
         &:hover {
