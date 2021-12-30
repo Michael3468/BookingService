@@ -6,7 +6,6 @@
 * {
   box-sizing: border-box;
   user-select: none;
-
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -48,6 +47,7 @@ section,
 
 .wrapper {
   width: 100%;
+  min-width: 320px;
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
