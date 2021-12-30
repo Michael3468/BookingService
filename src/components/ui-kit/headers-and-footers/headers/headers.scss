@@ -74,7 +74,6 @@
     &-content {
       position: absolute;
       display: none;
-      font-weight: bold;
       background: $menu-hover-color;
       background-color: $default-color;
     }
@@ -90,9 +89,10 @@
     color: $DarkShade75;
     font-weight: normal;
     background: $default-color;
+    padding: 0 30px;
 
     &:hover {
-      font-weight: bold;
+      text-shadow: 0 0 1px black;
       background: $menu-hover-color;
     }
   } /* header dropdown end */
