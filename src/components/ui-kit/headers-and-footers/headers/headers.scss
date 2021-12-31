@@ -27,6 +27,7 @@
       &:hover {
         color: $DarkShade75;
         font-weight: bold;
+        letter-spacing: rem(-0.4);
       }
     }
 
@@ -73,23 +74,20 @@
 
     &-content {
       position: absolute;
-      display: none;
+      z-index: 20;
       background: $menu-hover-color;
       background-color: $default-color;
-    }
-
-    &:hover .header__nav-dropdown-content {
-      z-index: 20;
-      display: block;
+      box-shadow: 0 2px 3px black;
     }
   }
 
   &__dropdown-link {
     display: inline-block;
+    width: 100%;
+    padding: 0 30px;
     color: $DarkShade75;
     font-weight: normal;
     background: $default-color;
-    padding: 0 30px;
 
     &:hover {
       text-shadow: 0 0 1px black;
