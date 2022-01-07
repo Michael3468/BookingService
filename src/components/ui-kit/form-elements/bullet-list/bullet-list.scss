@@ -12,27 +12,27 @@
   }
 
   &__li {
+    position: relative;
+    left: 20px;
     display: inline-block;
     width: 100%;
+    margin-bottom: 10px;
     color: $DarkShade75;
     font-size: rem(14);
     font-family: $secondFont;
     line-height: rem(24);
-    margin-bottom: 10px;
-    position: relative;
-    left: 20px;
 
     &::before {
-      content: '';
+      position: absolute;
+      top: 7px;
+      left: -20px;
       display: inline-block;
       width: 10px;
       height: 10px;
+      margin-right: 10px;
       background-color: $DarkShade25;
       border-radius: 50%;
-      margin-right: 10px;
-      position: absolute;
-      left: -20px;
-      top: 7px;
+      content: '';
     }
   }
 }

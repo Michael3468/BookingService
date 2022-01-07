@@ -55,21 +55,22 @@
 }
 
 $rich-checkbox-text-margin: 30px;
+
 .rich-checkbox-buttons__text_bold {
   margin-bottom: rem(6);
+  margin-left: $rich-checkbox-text-margin;
   color: $DarkShade75;
   font-weight: bold;
   font-size: rem(14);
   letter-spacing: rem(1);
-  margin-left: $rich-checkbox-text-margin;
 }
 
 .rich-checkbox-buttons__p {
+  margin-left: $rich-checkbox-text-margin;
   color: $DarkShade50;
   font-weight: normal;
   font-size: rem(12);
+  font-family: $secondFont;
   line-height: rem(14);
   letter-spacing: rem(0);
-  font-family: $secondFont;
-  margin-left: $rich-checkbox-text-margin;
 }
