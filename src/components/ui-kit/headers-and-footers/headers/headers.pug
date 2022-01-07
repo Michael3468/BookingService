@@ -7,12 +7,12 @@ mixin header(loginStatus)
         include  header_logo/header_logo.pug
         +header_logo()
         //- label for #header__menu-checkbox input
-        label.material-icons.header__burger(for='header__menu-checkbox', onclick='') menu
+        label.material-icons.header__burger.js-header-burger(for='header__menu-checkbox', onclick='') menu
 
       //- navigation menu
       //- hidden checkbox for burger label
       input#header__menu-checkbox(type='checkbox')
-      nav.header__nav
+      nav.header__nav.js-header__nav.hidden
         ul.header__nav-ul.header__expand-menu
           li.header__nav-li
             a.header__nav-link.header__nav-link_active(href='change-me-link') О нас

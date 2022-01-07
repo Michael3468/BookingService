@@ -187,7 +187,8 @@
 
     // expand menu
     &__expand-menu {
-      display: none;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       background: $default-color;
     }
@@ -203,10 +204,6 @@
       }
     }
     // expand menu end
-  }
-
-  #header__menu-checkbox:checked + nav[role='navigation'] .header__expand-menu {
-    display: block;
   }
 } //- end @media screen and (max-width: 1024px)
 
