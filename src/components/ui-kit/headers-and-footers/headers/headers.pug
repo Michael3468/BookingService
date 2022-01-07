@@ -1,7 +1,7 @@
 include ../../form-elements/buttons/buttons.pug
 
 mixin header(loginStatus)
-  .header.hf-bg-color
+  header.header.hf-bg-color
     .container.header__container
       .header__burger-logo
         include  header_logo/header_logo.pug
@@ -12,7 +12,7 @@ mixin header(loginStatus)
       //- navigation menu
       //- hidden checkbox for burger label
       input#header__menu-checkbox(type='checkbox')
-      nav.header__nav(role='navigation')
+      nav.header__nav
         ul.header__nav-ul.header__expand-menu
           li.header__nav-li
             a.header__nav-link.header__nav-link_active(href='change-me-link') О нас
@@ -45,7 +45,7 @@ mixin header(loginStatus)
           if loginStatus == 'authorized'
             .header__authorized
               - var userName = 'Юлий Цезарь'
-              li.header__nav-li #{userName}
+              span.header__nav-li #{userName}
           else
             .header__notAuthorized
               .header__auth-buttons-padding

@@ -2,7 +2,8 @@ mixin dropdown(params)
   .dropdown(id=params.id)
     .dropdown__caption
       h3.dropdown__caption-left= params.leftCaption
-      h3.dropdown__caption-right= params.rightCaption
+      if (params.rightCaption)
+        h3.dropdown__caption-right= params.rightCaption
     .dropdown__block.js-dropdown__block(class=params.menuStatus)
       .dropdown__block_top(data-dd-action='showHide')
         p.dropdown__selection_text.js-dropdown__selection-text(data-dd-action='showHide')= params.selectionText

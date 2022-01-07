@@ -6,9 +6,9 @@ mixin rich-checkbox-buttons(params)
     .rich-checkbox-buttons__item
       input.rich-checkbox-buttons__input(type='checkbox', id=rcb_item_id, name='rcb-'+index, value=params.optionsValue[index])
       label.rich-checkbox-buttons__text(for=rcb_item_id)
-        .rich-checkbox-buttons__text-block
-          .rich-checkbox-buttons__text_bold #{val}
-          p.rich-checkbox-buttons__p= params.optionSubText[index]
+        //- .rich-checkbox-buttons__text-block
+        span.rich-checkbox-buttons__text_bold #{val}
+        span.rich-checkbox-buttons__p= params.optionSubText[index]
 
 
 //- example

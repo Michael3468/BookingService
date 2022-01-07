@@ -1,13 +1,31 @@
 mixin text-field(params)
   .text-field
     .text-field__caption
-      h3.text-field__caption-left= params.leftCaption
-      h3.text-field__caption-right= params.rightCaption
+      if (params.leftCaption)
+        h3.text-field__caption-left= params.leftCaption
+      if (params.rightCaption)
+        h3.text-field__caption-right= params.rightCaption
     .text-field__input_block
-      input.text-field__input.input__style(style= 'text-transform: '+params.textTransform+';' class=params.hoverStyle type= params.inpType name=params.inpName inputmode=params.inpMode placeholder=params.inpPlaceholder id=params.inpId)
+      if (params.textTransform)
+        input.text-field__input.input__style(
+          style= 'text-transform: '+params.textTransform+';'
+          class=params.hoverStyle
+          type= params.inpType
+          name=params.inpName
+          inputmode=params.inpMode
+          placeholder=params.inpPlaceholder
+          id=params.inpId)
+      else
+        input.text-field__input.input__style(
+          class=params.hoverStyle
+          type= params.inpType
+          name=params.inpName
+          inputmode=params.inpMode
+          placeholder=params.inpPlaceholder
+          id=params.inpId)
       if ( params.isArrow == 'true' )
         .text-field__input_arrow-forward
-          label(id= params.inpId).material-icons.gradient-icon arrow_forward
+          label.material-icons.gradient-icon arrow_forward
       
 //- examples
 //-

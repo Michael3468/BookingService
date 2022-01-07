@@ -11,21 +11,6 @@
     flex-direction: column;
   }
 
-  &__item {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: rem(10);
-  }
-
-  &__li-marker {
-    display: inline-block;
-    width: rem(11);
-    height: rem(10);
-    margin: rem(6) rem(11) 0 0;
-    background: $DarkShade25;
-    border-radius: rem(5);
-  }
-
   &__li {
     display: inline-block;
     width: 100%;
@@ -33,6 +18,21 @@
     font-size: rem(14);
     font-family: $secondFont;
     line-height: rem(24);
-    list-style-type: none;
+    margin-bottom: 10px;
+    position: relative;
+    left: 20px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: $DarkShade25;
+      border-radius: 50%;
+      margin-right: 10px;
+      position: absolute;
+      left: -20px;
+      top: 7px;
+    }
   }
 }

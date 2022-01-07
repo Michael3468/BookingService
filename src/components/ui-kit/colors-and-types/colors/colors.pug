@@ -1,6 +1,9 @@
-mixin color(colorName, colorValue, backgrColor, opacityColor)
+mixin color(colorName, colorValue, backgroundColor, opacityColor)
   .color-block
-    .color__sample(style= 'background: '+backgrColor+'; opacity: '+opacityColor+'')
+    if (opacityColor)
+      .color__sample(style= 'background: '+backgroundColor+'; opacity: '+opacityColor+'')
+    else
+      .color__sample(style= 'background: '+backgroundColor+';')
     .color__description
       h2.color__colorName= colorName
       p.color__colorCode= colorValue

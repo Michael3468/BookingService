@@ -3,13 +3,10 @@
 
 $toggle-size: rem(10);
 
-.toggle__caption {
-  margin-bottom: rem(16);
-}
-
 .toggle {
   display: flex;
   align-items: center;
+  margin-top: rem(16);
 }
 
 .toggle__button {

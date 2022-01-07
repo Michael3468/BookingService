@@ -1,5 +1,6 @@
 mixin toggle(params)
-  h3.toggle__caption= params.leftCaption
+  if (params.leftCaption)
+    h3.toggle__caption= params.leftCaption
   .toggle
     input.toggle__button(type='checkbox' id=params.toggleId checked=params.toggleStatus)
     label.toggle__text(for=params.toggleId) #{params.toggleBtnText}
