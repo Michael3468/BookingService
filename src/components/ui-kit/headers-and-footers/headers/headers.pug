@@ -7,15 +7,15 @@ mixin header(loginStatus)
         include  header_logo/header_logo.pug
         +header_logo()
         //- label for #header__menu-checkbox input
-        label.material-icons.header__burger.js-header-burger(for='header__menu-checkbox', onclick='') menu
+        label.material-icons.header__burger.js-header-burger(for="header__menu-checkbox") menu
 
       //- navigation menu
       //- hidden checkbox for burger label
-      input#header__menu-checkbox(type='checkbox')
+      input#header__menu-checkbox(type="checkbox")
       nav.header__nav.js-header__nav.hidden
         ul.header__nav-ul.header__expand-menu
           li.header__nav-li
-            a.header__nav-link.header__nav-link_active(href='change-me-link') О нас
+            a.header__nav-link.header__nav-link_active(href="change-me-link") О нас
           //- css dropdown
           li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown Услуги
             //- used material icons font
@@ -26,9 +26,9 @@ mixin header(loginStatus)
               a.header__dropdown-link(href="change-me-amenity-3") Услуга-3
           //- css dropdown end
           li.header__nav-li
-            a.header__nav-link(href='change-me-link') Вакансии
+            a.header__nav-link(href="change-me-link") Вакансии
           li.header__nav-li
-            a.header__nav-link(href='change-me-link') Новости
+            a.header__nav-link(href="change-me-link") Новости
 
           //- css dropdown
           li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown Соглашения
@@ -42,9 +42,9 @@ mixin header(loginStatus)
 
         //- authorization block
         .header__expand-menu
-          if loginStatus == 'authorized'
+          if loginStatus == "authorized"
             .header__authorized
-              - var userName = 'Юлий Цезарь'
+              - var userName = "Юлий Цезарь"
               span.header__nav-li #{userName}
           else
             .header__notAuthorized

@@ -1,13 +1,13 @@
 mixin like-button(params)
-  if (params.likeBtnStatus== 'checked')
-    .like-button__container(id=`container_`+params.likeBtnId class='js-container-'+params.likeBtnStatus+'-status')
+  if (params.likeBtnStatus== "checked")
+    .like-button__container(id="container_"+params.likeBtnId class="js-container-"+params.likeBtnStatus+"-status")
       .like-button
-        input.like-button__input(type='checkbox' id= params.likeBtnId class='js-input-'+params.likeBtnStatus+'-status' checked=params.likeBtnStatus)
-        label(for=params.likeBtnId id=`icon_`+params.likeBtnId class='js-icon-'+params.likeBtnStatus+'-status').material-icons.like-button-icon
-        .like-button__content(id=`content_`+params.likeBtnId class='js-content-'+params.likeBtnStatus+'-status')= params.likeBtnText
+        input.like-button__input(type="checkbox" id= params.likeBtnId class="js-input-"+params.likeBtnStatus+"-status" checked=params.likeBtnStatus)
+        label(for=params.likeBtnId id="icon_"+params.likeBtnId class="js-icon-"+params.likeBtnStatus+"-status").material-icons.like-button-icon
+        .like-button__content(id="content_"+params.likeBtnId class="js-content-"+params.likeBtnStatus+"-status")= params.likeBtnText
   else
-    .like-button__container(id=`container_`+params.likeBtnId)
+    .like-button__container(id="container_"+params.likeBtnId)
       .like-button
-        input.like-button__input(type='checkbox' id= params.likeBtnId)
-        label(for=params.likeBtnId id=`icon_`+params.likeBtnId).material-icons.like-button-icon
-        .like-button__content(id=`content_`+params.likeBtnId)= params.likeBtnText
+        input.like-button__input(type="checkbox" id= params.likeBtnId)
+        label(for=params.likeBtnId id="icon_"+params.likeBtnId).material-icons.like-button-icon
+        .like-button__content(id="content_"+params.likeBtnId)= params.likeBtnText

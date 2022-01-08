@@ -1,12 +1,12 @@
 mixin button(params)
   -
     const link= params.link|| "change_me"
-    const value = params.value|| 'Click me'
+    const value = params.value|| "Click me"
     let mod = params.mod
 
     if (mod !== undefined) {
       mod = mod.map((item) => `button_${item}`)
-      classes = mod.join(' ')
+      classes = mod.join(" ")
     } else {
       classes = ""
     }
@@ -34,5 +34,5 @@ mixin button(params)
 //-   +button({link:"#", value:"Подобрать номер", mod: ["with_arrow", "block"]})
 //-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block"]})
 //-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block", "bordered"]})
-//-   +button({link: 'change_me', mod: ['no-background','no-background_hover']})
-//-   +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
+//-   +button({link: "change_me", mod: ["no-background","no-background_hover"]})
+//-   +button({link: "change_me", mod: ["with_arrow","block"], value: "Перейти к оплате"})

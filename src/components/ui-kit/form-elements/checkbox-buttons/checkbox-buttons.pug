@@ -1,9 +1,9 @@
 mixin checkbox-buttons(params)
-  if (params.showCaption == 'true')
+  if (params.showCaption == "true")
     .checkbox-buttons
       h3.checkbox-buttons__caption= params.leftCaption
   else
-    .expandable-checkbox-list(id= 'expandable-checkbox-list-'+params.inpId)
+    .expandable-checkbox-list(id= "expandable-checkbox-list-"+params.inpId)
       .expandable-checkbox-list__caption
         h3.expandable-checkbox-list__text= params.caption
         .expandable-checkbox-list__expand-more.material-icons(class=params.rotate) expand_more
@@ -11,36 +11,36 @@ mixin checkbox-buttons(params)
   .checkbox-buttons__block(class= params.optionsDisplay)
     each val, index in params.inpText
       .checkbox-buttons__input
-        input.custom-checkbox(type='checkbox', checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
+        input.custom-checkbox(type="checkbox", checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
         label.checkbox-buttons__text(for= params.inpId + index) #{val}
 
 
 //- example checkbox buttons only
-//- +checkbox-buttons({leftCaption: 'checkbox buttons',
-//-                   inpId:        'check-box-buttons',
-//-                   inpStatus:    [ ,'checked','checked'],
-//-                   inpName:      'check-box-name',
-//-                   inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
-//-                   inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)'],
+//- +checkbox-buttons({leftCaption: "checkbox buttons",
+//-                   inpId:        "check-box-buttons",
+//-                   inpStatus:    [ ,"checked","checked"],
+//-                   inpName:      "check-box-name",
+//-                   inpValue:     ["allow-smoke", "allow pet",        "allow guests"],
+//-                   inpText:      ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"],
 //-                   })
 
 
 //- example expandable checkbox list (default, not expanded)
-//- +checkbox-buttons({caption:        'expandable checkbox list',
-//-                   leftCaption:    'checkbox buttons',
-//-                   inpId:          'check-box-buttons-1',
-//-                   optionsDisplay: 'display-none',
+//- +checkbox-buttons({caption:       "expandable checkbox list",
+//-                   leftCaption:    "checkbox buttons",
+//-                   inpId:          "check-box-buttons-1",
+//-                   optionsDisplay: "display-none",
 //-                   inpStatus:      [,,,,,,],
-//-                   inpName:        'check-box-name-1',
-//-                   inpValue:       ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
-//-                   inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
+//-                   inpName:        "check-box-name-1",
+//-                   inpValue:       ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+//-                   inpText:        ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"]})
 
 
 //- example expandable checkbox list
-//- +checkbox-buttons({caption:      'expandable checkbox list',
-//-                    inpId:        'check-box-buttons-2',
-//-                    inpStatus:    [ ,'checked','checked'],
-//-                    inpName:      'check-box-name-2',
-//-                    inpValue:     ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
-//-                    inpText:      ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
+//- +checkbox-buttons({caption:      "expandable checkbox list",
+//-                    inpId:        "check-box-buttons-2",
+//-                    inpStatus:    [ ,"checked","checked"],
+//-                    inpName:      "check-box-name-2",
+//-                    inpValue:     ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+//-                    inpText:      ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"]})
 

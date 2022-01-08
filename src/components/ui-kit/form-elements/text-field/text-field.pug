@@ -22,36 +22,36 @@ mixin text-field(params)
           inputmode=params.inpMode
           placeholder=params.inpPlaceholder
           id=params.inpId)
-      if ( params.isArrow == 'true' )
+      if ( params.isArrow == "true" )
         .text-field__input_arrow-forward
           label.material-icons.gradient-icon arrow_forward
       
 //- examples
 //-
 //- text-field
-//- +text-field({leftCaption:    'text field',
-//-              rightCaption:   'default',
-//-              inpType:        'email',
-//-              inpName:        'email',
-//-              inpMode:        'email',
-//-              inpPlaceholder: 'Email',
-//-              inpId:          'email-text-field',
-//-              hoverStyle:     'like-hover'})
+//- +text-field({leftCaption:    "text field",
+//-              rightCaption:   "default",
+//-              inpType:        "email",
+//-              inpName:        "email",
+//-              inpMode:        "email",
+//-              inpPlaceholder: "Email",
+//-              inpId:          "email-text-field",
+//-              hoverStyle:     "like-hover"})
 
 //- mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya
 //-
 //- masked text-field
-//- +text-field({leftCaption:    'masked text field',
-//-              inpType:        'date',
-//-              inpName:        'date',
-//-              inpId:          'dateField'})
+//- +text-field({leftCaption:    "masked text field",
+//-              inpType:        "date",
+//-              inpName:        "date",
+//-              inpId:          "dateField"})
 
 //- subscription text field
-//- +text-field({leftCaption:    'subscription text field',
-//-              inpType:        'email',
-//-              inpName:        'email',
-//-              inpMode:        'email',
-//-              inpPlaceholder: 'Email',
-//-              inpId:          'Subscription',
-//-              isArrow:        'true',
+//- +text-field({leftCaption:    "subscription text field",
+//-              inpType:        "email",
+//-              inpName:        "email",
+//-              inpMode:        "email",
+//-              inpPlaceholder: "Email",
+//-              inpId:          "Subscription",
+//-              isArrow:        "true",
 //-             })

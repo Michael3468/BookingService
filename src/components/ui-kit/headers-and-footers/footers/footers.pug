@@ -1,9 +1,9 @@
-- var copyrightText = 'Copyright © 2018 Toxin отель. Все права зачищены.'
+- var copyrightText = "Copyright © 2018 Toxin отель. Все права зачищены."
 
 include ../headers/header_logo/header_logo.pug
 
 mixin footer(footerType)
-  if footerType != 'mobile'
+  if footerType != "mobile"
     footer.footer
       .container
         .grid-layout
@@ -47,22 +47,22 @@ mixin footer(footerType)
             .footer__nav
               p.footer__nav-p Получайте специальные предложения и новости сервиса
               include ../../form-elements/text-field/text-field
-              +text-field({inpType:        'email',
-                           inpName:        'email',
-                           inpMode:        'email',
-                           inpPlaceholder: 'Email',
-                           inpId:          'Subscription',
-                           isArrow:        'true'})
+              +text-field({inpType:        "email",
+                           inpName:        "email",
+                           inpMode:        "email",
+                           inpPlaceholder: "Email",
+                           inpId:          "Subscription",
+                           isArrow:        "true"})
     .sub-footer
       .container.sub-footer__content
         .sub-footer__copyright
           p #{copyrightText}
         .sub-footer__socials
-          a(href='change_me')
+          a(href="change_me")
             i.fab.fa-twitter.gradient-icon
-          a(href='change_me')
+          a(href="change_me")
             i.fab.fa-facebook.gradient-icon
-          a(href='change_me')
+          a(href="change_me")
             i.fab.fa-instagram.gradient-icon
   
   //- mobile footer
@@ -77,9 +77,9 @@ mixin footer(footerType)
         .sub-footer__copyright
           p #{copyrightText}
         .sub-footer__socials.sub-footer__socials_mob
-          a(href='change_me')
+          a(href="change_me")
             i.fab.fa-twitter.gradient-icon
-          a(href='change_me')
+          a(href="change_me")
             i.fab.fa-facebook.gradient-icon
-          a(href='change_me')
+          a(href="change_me")
             i.fab.fa-instagram.gradient-icon
