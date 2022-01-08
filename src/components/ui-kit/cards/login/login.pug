@@ -2,24 +2,25 @@ mixin login(params)
   .login.cards_border
     h1.login__caption Войти
 
-    .login__inputs-block
-      include ../../../ui-kit/form-elements/text-field/text-field
-      +text-field({ inpType:        'email',
-                    inpName:        'email',
-                    inpMode:        'email',
-                    inpPlaceholder: 'Email',
-                    inpId:          'email',
-                  })
+    form(action='#change-me')
+      .login__inputs-block
+        include ../../../ui-kit/form-elements/text-field/text-field
+        +text-field({ inpType:        'email',
+                      inpName:        'email',
+                      inpMode:        'email',
+                      inpPlaceholder: 'Email',
+                      inpId:          'email',
+                    })
 
-      +text-field({ inpType:        'password',
-                    inpName:        'password',
-                    inpMode:        'password',
-                    inpPlaceholder: 'Пароль',
-                    inpId:          'password',
-                  })
+        +text-field({ inpType:        'password',
+                      inpName:        'password',
+                      inpMode:        'password',
+                      inpPlaceholder: 'Пароль',
+                      inpId:          'password',
+                    })
 
-    include ../../../ui-kit/form-elements/buttons/buttons
-    +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Войти'})
+      include ../../../ui-kit/form-elements/buttons/buttons
+      +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Войти', type: 'submit'})
 
     .login__create-login-block
       p.login__create-login-text Нет аккаунта на Toxin?
