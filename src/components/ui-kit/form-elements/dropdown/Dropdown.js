@@ -3,17 +3,17 @@ function setCounterValue(act, event) {
   const itemControls = event.target.closest('.js-dropdown__item-controls');
   const decrementButton = itemControls.querySelector('.js-dropdown__button-decrement');
   const counter = itemControls.querySelector('.js-dropdown__counter');
-  let counterValue = Number(counter.innerText);
+  let counterValue = Number(counter.value);
 
   if (act === 'increment') {
-    counter.innerText = ++counterValue;
+    counter.value = ++counterValue;
     decrementButton.classList.add('dark');
   }
 
   if (act === 'decrement') {
-    if (counter.innerText !== '0') {
-      counter.innerText = --counterValue;
-      if (counter.innerText === '0') {
+    if (counter.value !== '0') {
+      counter.value = --counterValue;
+      if (counter.value === '0') {
         decrementButton.classList.remove('dark');
       }
     }

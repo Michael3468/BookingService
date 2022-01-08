@@ -10,7 +10,10 @@ mixin button(params)
     } else {
       classes = ""
     }
-  a.button(href=link class=classes)=value
+  if (params.type)
+    a.button(href=link class=classes type=params.type)=value
+  else
+    a.button(href=link class=classes)=value
 
 //- Buttons examples
 //-   +button({link:"#", value:"Кнопка"})

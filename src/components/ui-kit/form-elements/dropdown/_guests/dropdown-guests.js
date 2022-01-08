@@ -2,10 +2,10 @@ import './dropdown-guests.scss';
 import Dropdown from '../Dropdown';
 
 function updateDropdownGuestsSelectionText(thisObj) {
-  const adultsNum = Number(thisObj.dropdownCounters[0].innerText);
-  const guestsNum = Number(thisObj.dropdownCounters[0].innerText)
-    + Number(thisObj.dropdownCounters[1].innerText);
-  const babiesNum = Number(thisObj.dropdownCounters[2].innerText);
+  const adultsNum = Number(thisObj.dropdownCounters[0].value);
+  const guestsNum = Number(thisObj.dropdownCounters[0].value)
+                  + Number(thisObj.dropdownCounters[1].value);
+  const babiesNum = Number(thisObj.dropdownCounters[2].value);
 
   let guestsText;
   switch (guestsNum) {
@@ -79,7 +79,7 @@ class DropdownGuests extends Dropdown {
   clean() {
     this.dropdownCounters.forEach((item) => {
       const counter = item;
-      counter.innerText = 0;
+      counter.value = 0;
     });
 
     const decrementButtons = this.elem.querySelectorAll('.js-dropdown__button-decrement');
