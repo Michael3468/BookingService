@@ -30,6 +30,7 @@ $backgroundBtnColor: $default-color;
   background-position: center;
   border: none;
   border-radius: rem(22);
+  cursor: pointer;
 
   &:hover {
     opacity: 0.5;

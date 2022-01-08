@@ -8,7 +8,6 @@ mixin text-field(params)
     .text-field__input_block
       if (params.textTransform)
         input.text-field__input.input__style(
-          style= 'text-transform: '+params.textTransform+';'
           class=params.hoverStyle
           type= params.inpType
           name=params.inpName
@@ -30,7 +29,7 @@ mixin text-field(params)
 //- examples
 //-
 //- text-field
-//- +text-field({leftCaption:    'text field', 
+//- +text-field({leftCaption:    'text field',
 //-              rightCaption:   'default',
 //-              inpType:        'email',
 //-              inpName:        'email',
@@ -45,11 +44,10 @@ mixin text-field(params)
 //- +text-field({leftCaption:    'masked text field',
 //-              inpType:        'date',
 //-              inpName:        'date',
-//-              inpId:          'dateField',
-//-              textTransform:  'uppercase'})
+//-              inpId:          'dateField'})
 
 //- subscription text field
-//- +text-field({leftCaption:    'subscription text field', 
+//- +text-field({leftCaption:    'subscription text field',
 //-              inpType:        'email',
 //-              inpName:        'email',
 //-              inpMode:        'email',
