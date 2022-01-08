@@ -22,7 +22,7 @@ mixin registration(params)
 
       .registration__radio-buttons_position
         include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
-        +radio-buttons({radioButtonName: 'radio-button',
+        +radio-buttons({radioButtonName: 'gender',
                         inpName:         ['man',    'woman'],
                         inpText:         ['Мужчина','Женщина'],
                         inpStatus:       ['checked',]})
@@ -30,7 +30,7 @@ mixin registration(params)
       include ../../../ui-kit/form-elements/masked-text-field/masked-text-field
       +masked-text-field({leftCaption:    'Дата рождения',
                           inpId:          'masked-date-field',
-                          inpName:        'date',
+                          inpName:        'birthDate',
                           inpPlaceholder: 'ДД.ММ.ГГГГ'})
 
       .registration__text-field_block-position
