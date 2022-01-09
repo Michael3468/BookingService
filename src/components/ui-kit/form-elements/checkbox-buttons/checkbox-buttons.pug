@@ -11,7 +11,7 @@ mixin checkbox-buttons(params)
   .checkbox-buttons__block(class= params.optionsDisplay)
     each val, index in params.inpText
       .checkbox-buttons__input
-        input.custom-checkbox(type="checkbox", checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName + index, value= params.inpValue[index])
+        input.custom-checkbox(type="checkbox", checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName[index], value= params.inpValue[index])
         label.checkbox-buttons__text(for= params.inpId + index) #{val}
 
 
@@ -20,7 +20,7 @@ mixin checkbox-buttons(params)
 //-                   inpId:        "check-box-buttons",
 //-                   inpStatus:    [ ,"checked","checked"],
 //-                   inpName:      "check-box-name",
-//-                   inpValue:     ["allow-smoke", "allow pet",        "allow guests"],
+//-                   inpValue:     ["allow-smoke", "allow-pet",        "allow-guests"],
 //-                   inpText:      ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"],
 //-                   })
 

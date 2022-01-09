@@ -80,14 +80,13 @@ block content
                             inpId:       "check-box-buttons",
                             showCaption: "true",
                             inpStatus:   [ ,"checked","checked"],
-                            inpName:     "check-box-name",
-                            inpValue:    ["allow-smoke", "allow pet",        "allow guests"],
+                            inpName:     ["allow-smoke", "allow-pet", "allow-guests"],
+                            inpValue:    ["allow-smoke", "allow-pet", "allow-guests"],
                             inpText:     ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
 
       .block-margin.checkbox-buttons-margin
         include ../components/ui-kit/form-elements/radio-buttons/radio-buttons
         +radio-buttons({leftCaption:     "radio buttons",
-                        formActionName:  "form-action.php",
                         radioButtonName: "radio-button",
                         inpName:         ["man",    "woman"],
                         inpText:         ["Мужчина","Женщина"],
@@ -224,7 +223,7 @@ block content
                               inpId:          "check-box-buttons-1",
                               optionsDisplay: "display-none",
                               inpStatus:      [,,,,,,],
-                              inpName:        "check-box-name-1",
+                              inpName:        ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
                               inpValue:       ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
                               inpText:        ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"]})
 
@@ -234,7 +233,7 @@ block content
                               leftCaption: "checkbox buttons",
                               inpId:       "check-box-buttons-2",
                               inpStatus:   [ ,"checked","checked","checked",,,],
-                              inpName:     "check-box-name-2",
+                              inpName:     ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
                               inpValue:    ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
                               inpText:     ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
                               rotate:      "expandable-checkbox-list__expand-more-rotate"})
