@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable prefer-arrow-callback */
 import './room-card.scss';
 
 import '../booking/__caption/booking__caption';
