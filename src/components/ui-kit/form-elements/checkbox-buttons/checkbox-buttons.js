@@ -1,6 +1,6 @@
 import './checkbox-buttons.scss';
 
-const expandableCheckbox = document.getElementById('expandable-checkbox-list-check-box-buttons-1');
+const expandableCheckbox = document.querySelector('.js-expandable-checkbox-list');
 const checkboxOptions = expandableCheckbox.nextElementSibling;
 const expandMore = expandableCheckbox.lastElementChild.children[1];
 
