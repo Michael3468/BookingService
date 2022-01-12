@@ -23,6 +23,12 @@
       line-height: rem(50);
       cursor: pointer;
 
+      &:focus {
+        color: $DarkShade75;
+        font-weight: bold;
+        text-shadow: $TabindexShadow;
+      }
+
       &_active,
       &:hover {
         color: $DarkShade75;
@@ -54,6 +60,10 @@
     color: $DarkShade50;
     font-family: $secondFont;
     border-left: rem(1) solid #f4f3f6;
+
+    &:focus {
+      text-shadow: $TabindexShadow;
+    }
   }
 
   &__notAuthorized {
@@ -64,6 +74,11 @@
 
   &__auth-buttons-padding:last-child {
     margin-left: rem(21);
+  }
+
+  &__auth-buttons-padding:focus {
+    border-radius: rem($ButtonsBorderRadius);
+    box-shadow: $TabindexShadow;
   }
   // authorization end
 

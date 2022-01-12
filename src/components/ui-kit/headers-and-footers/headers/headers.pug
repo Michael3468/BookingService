@@ -11,13 +11,12 @@ mixin header(loginStatus)
 
       //- navigation menu
       //- hidden checkbox for burger label
-      input#header__menu-checkbox(type="checkbox")
       nav.header__nav.js-header__nav.hidden
         ul.header__nav-ul.header__expand-menu
           li.header__nav-li
-            a.header__nav-link.header__nav-link_active(href="change-me") О нас
+            a.header__nav-link.header__nav-link_active(href="change-me" tabindex="1") О нас
           //- css dropdown
-          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown Услуги
+          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(tabindex="2") Услуги
             //- used material icons font
             span.material-icons expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
@@ -26,12 +25,12 @@ mixin header(loginStatus)
               a.header__dropdown-link(href="change-me") Услуга-3
           //- css dropdown end
           li.header__nav-li
-            a.header__nav-link(href="change-me") Вакансии
+            a.header__nav-link(href="change-me" tabindex="3") Вакансии
           li.header__nav-li
-            a.header__nav-link(href="change-me") Новости
+            a.header__nav-link(href="change-me" tabindex="4") Новости
 
           //- css dropdown
-          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown Соглашения
+          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(tabindex="5") Соглашения
             //- used material icons font
             span.material-icons expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
@@ -43,14 +42,14 @@ mixin header(loginStatus)
         //- authorization block
         .header__expand-menu
           if loginStatus == "authorized"
-            .header__authorized
+            .header__authorized(tabindex="6")
               - var userName = "Юлий Цезарь"
               span.header__nav-li #{userName}
           else
             .header__notAuthorized
-              .header__auth-buttons-padding
+              .header__auth-buttons-padding(tabindex="6")
                 +button({link:"sign-in.html", value:"Войти", mod: ["bordered","small"]})
-              .header__auth-buttons-padding
+              .header__auth-buttons-padding(tabindex="7")
                 +button({link:"registration.html", value:"Зарегистрироваться", mod: ["small"]})
         //- authorization block end
       //- navigation menu end

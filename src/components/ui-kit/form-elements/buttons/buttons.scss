@@ -29,14 +29,10 @@ $backgroundBtnColor: $default-color;
   background: $primaryGradient;
   background-position: center;
   border: none;
-  border-radius: rem(22);
+  border-radius: rem($ButtonsBorderRadius);
   cursor: pointer;
 
   &:hover {
-    opacity: 0.5;
-  }
-
-  &_hover {
     opacity: 0.5;
   }
 
@@ -49,10 +45,6 @@ $backgroundBtnColor: $default-color;
     &:hover {
       color: $DarkShade50;
       opacity: 1;
-    }
-
-    &_hover {
-      color: $DarkShade50;
     }
   }
 
