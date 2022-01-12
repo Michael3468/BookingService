@@ -11,7 +11,7 @@ mixin dropdown(params)
 
       .dropdown__menu.js-dropdown__menu(hidden=params.expMenuStatus)
 
-        if (params.id == "dropdown-options")
+        if (params.type == "dropdown-options")
           - var items = { "item1": {valName : "Спальни", vName: "bedrooms"},"item2": {valName : "Кровати", vName: "beds"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
         if (params.idPostfix == "-changed-example")
           - var items = { "item1": {valName : "Спальни", vName: "bedrooms", valCounter: "2", valClass: "dark"},"item2": {valName : "Кровати", vName: "beds", valCounter: "2", valClass: "dark"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
@@ -42,7 +42,7 @@ mixin dropdown(params)
 //- examples
 //- +dropdown({ leftCaption:   "dropdown",
 //-             rightCaption:  "default",
-//-             id:            "dropdown-options",
+//-             type:          "dropdown-options",
 //-             selectionText: "2 спальни, 2 кровати...",
 //-             expMenuStatus: "hidden",
 //-           })
