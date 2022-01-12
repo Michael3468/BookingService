@@ -1,5 +1,5 @@
 mixin room-card(params)
-  .room-card(id=`room-card-${params.id}`)
+  .room-card
     .room-card__picture-container
       include ./slick-carousel/slick-carousel
       +slick-carousel({photoName : params.photoName})
@@ -27,8 +27,7 @@ mixin room-card(params)
 
 
 //- example
-//- +room-card({  id:         index+1,
-//-               number:     room.number,
+//- +room-card({  number:     room.number,
 //-               status:     room.luxStatus,
 //-               price:      `${room.price}₽`,
 //-               photoName:  `room-card-${room.number}.jpg`,
