@@ -21,13 +21,14 @@ mixin dropdown(params)
         if (params.idPostfix == "-changed-example")
           - var items = { "item1": {valName : "Взрослые", vName: "adults", valCounter: "2", valClass: "dark"},"item2": {valName : "Дети", vName: "childs", valCounter: "1", valClass: "dark"},"item3": {valName : "Младенцы", vName: "babies"} };
 
-        each val, key in items
-          .dropdown__menu-option(class=key)
-            p.dropdown__item= val.valName
-            .dropdown__item-controls.js-dropdown__item-controls
-              button.dropdown__button-decrement.js-dropdown__button-decrement(class=val.valClass data-dd-action="decrement" type="button")
-              input.dropdown__counter.js-dropdown__counter(name=val.vName value=val.valCounter || 0)
-              button.dropdown__button-increment(data-dd-action="increment" type="button")
+        form(action='change-me')
+          each val, key in items
+            .dropdown__menu-option(class=key)
+              p.dropdown__item= val.valName
+              .dropdown__item-controls.js-dropdown__item-controls
+                button.dropdown__button-decrement.js-dropdown__button-decrement(class=val.valClass data-dd-action="decrement" type="button")
+                input.dropdown__counter.js-dropdown__counter(name=val.vName value=val.valCounter || 0)
+                button.dropdown__button-increment(data-dd-action="increment" type="button")
 
         //- dropdown buttons for dropdown-guests
         if (params.type == "dropdown-guests")
