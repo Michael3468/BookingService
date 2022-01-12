@@ -2,6 +2,11 @@ import './dropdown-options.scss';
 import Dropdown from '../Dropdown';
 
 class DropdownOptions extends Dropdown {
+  constructor(elem) {
+    super(elem);
+    this.selectionText.innerText = this.updateDropdownOptionsSelectionText();
+  }
+
   increment(event) {
     super.increment(event);
     this.selectionText.innerText = this.updateDropdownOptionsSelectionText();
