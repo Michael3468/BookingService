@@ -1,5 +1,5 @@
 mixin dropdown(params)
-  .dropdown(id=params.id)
+  .dropdown(class=`js-${params.type}`)
     .dropdown__caption
       h3.dropdown__caption-left= params.leftCaption
       if (params.rightCaption)
@@ -16,7 +16,7 @@ mixin dropdown(params)
         if (params.idPostfix == "-changed-example")
           - var items = { "item1": {valName : "Спальни", vName: "bedrooms", valCounter: "2", valClass: "dark"},"item2": {valName : "Кровати", vName: "beds", valCounter: "2", valClass: "dark"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
 
-        if (params.id == "dropdown-guests")
+        if (params.type == "dropdown-guests")
           - var items = { "item1": {valName : "Взрослые", vName: "adults"},"item2": {valName : "Дети", vName: "childs"},"item3": {valName : "Младенцы", vName: "babies"} };
         if (params.idPostfix == "-changed-example")
           - var items = { "item1": {valName : "Взрослые", vName: "adults", valCounter: "2", valClass: "dark"},"item2": {valName : "Дети", vName: "childs", valCounter: "1", valClass: "dark"},"item3": {valName : "Младенцы", vName: "babies"} };
@@ -30,7 +30,7 @@ mixin dropdown(params)
               button.dropdown__button-increment(data-dd-action="increment" type="button")
 
         //- dropdown buttons for dropdown-guests
-        if (params.id == "dropdown-guests")
+        if (params.type == "dropdown-guests")
           .dropdown-guests__buttons
             if (params.cleanButtonStatus == "show")
               - var cleanButtonClass = "dropdown-guests__button_clean_"+params.cleanButtonStatus
@@ -48,13 +48,13 @@ mixin dropdown(params)
 //-           })
 
 //- +dropdown({ leftCaption:   "dropdown",
-//-             id:            "dropdown-guests",
+//-             type:          "dropdown-guests",
 //-             selectionText: "Сколько гостей",
 //-             expMenuStatus: "hidden",
 //-           })
 
 //- +dropdown({ leftCaption:   "dropdown",
-//-             id:            "dropdown-guests",
+//-             type:          "dropdown-guests",
 //-             selectionText: "Сколько гостей",
 //-             menuStatus:    "menu-open",
 //-           })

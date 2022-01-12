@@ -22,6 +22,7 @@ function setCounterValue(act, event) {
 
 export default class Dropdown {
   constructor(elem) {
+    if (elem === null) return;
     this.elem = elem;
     this.ddBlock = elem.querySelector('.js-dropdown__block');
     this.selectionText = elem.querySelector('.js-dropdown__selection-text');

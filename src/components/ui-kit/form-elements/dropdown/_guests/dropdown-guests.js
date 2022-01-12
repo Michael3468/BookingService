@@ -96,6 +96,10 @@ class DropdownGuests extends Dropdown {
   }
 }
 
-const dropdownGuests = document.querySelector('#dropdown-guests');
-// eslint-disable-next-line no-new
-new DropdownGuests(dropdownGuests);
+const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
+if (dropdownGuests) {
+  dropdownGuests.forEach((dropdown) => {
+    // eslint-disable-next-line no-new
+    new DropdownGuests(dropdown);
+  });
+}

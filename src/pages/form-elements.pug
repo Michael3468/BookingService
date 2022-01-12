@@ -35,7 +35,7 @@ block content
       .block-margin
         include ../components/ui-kit/form-elements/dropdown/dropdown
         +dropdown({ leftCaption:   "dropdown",
-                    id:            "dropdown-guests",
+                    type:          "dropdown-guests",
                     selectionText: "Сколько гостей",
                     expMenuStatus: "hidden",
                   })
@@ -193,7 +193,7 @@ block content
 
       include ../components/ui-kit/form-elements/dropdown/dropdown
       +dropdown({ leftCaption:   "dropdown",
-                  id:            "dropdown-guests",
+                  type:          "dropdown-guests",
                   selectionText: "Сколько гостей",
                   menuStatus:    "menu-open",
                 })
@@ -203,7 +203,7 @@ block content
 
       include ../components/ui-kit/form-elements/dropdown/dropdown
       +dropdown({ leftCaption:       "dropdown",
-                  id:                "dropdown-guests",
+                  type:              "dropdown-guests",
                   idPostfix:         "-changed-example",
                   selectionText:     "3 гостя",
                   menuStatus:        "menu-open",
