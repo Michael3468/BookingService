@@ -29,6 +29,16 @@ export default class Dropdown {
     this.menu = elem.querySelector('.js-dropdown__menu');
     this.dropdownCounters = elem.querySelectorAll('.js-dropdown__counter');
     this.elem.onclick = this.onClick.bind(this);
+    this.initListeners();
+  }
+
+  initListeners() {
+    const blockTop = this.elem.querySelector('.js-dropdown__block_top');
+    blockTop.addEventListener('keypress', (e) => {
+      if (e.code === 'Enter') {
+        this.showHide();
+      }
+    });
   }
 
   onClick(event) {

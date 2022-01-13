@@ -1,5 +1,6 @@
 @import '../../../../../assets/scss/utils/vars.scss';
 @import '../../../../../assets/scss/utils/mixins.scss';
+@import '../dropdown.scss';
 
 .dropdown-guests {
   // dropdown-guests--buttons.scss
@@ -19,6 +20,11 @@
     text-transform: uppercase;
     background: $default-color;
     cursor: pointer;
+
+    &:focus {
+      text-shadow: $TabindexShadow;
+      color: $DarkShade75;
+    }
   }
 
   &__button_clean {
@@ -29,4 +35,8 @@
     }
   }
   // dropdown-guests--buttons.scss
+}
+
+.dropdown__block_top:focus {
+  box-shadow: $TabindexShadow;
 }
