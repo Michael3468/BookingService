@@ -115,6 +115,12 @@
   justify-content: space-between;
   width: rem(111);
   font-size: rem(24);
+
+  &-link {
+    &:focus {
+      text-shadow: $TabindexShadow;
+    }
+  }
 }
 
 .fab {
