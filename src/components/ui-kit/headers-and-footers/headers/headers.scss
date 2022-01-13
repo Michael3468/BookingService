@@ -101,8 +101,8 @@
 
     &:focus,
     &:hover {
-      text-shadow: $TabindexShadow;
       font-weight: bold;
+      text-shadow: $TabindexShadow;
       background: $menu-hover-color;
     }
   } /* header dropdown end */

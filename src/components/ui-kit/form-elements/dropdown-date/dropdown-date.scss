@@ -32,8 +32,8 @@
     caret-color: transparent;
 
     &:focus {
-      box-shadow: $TabindexShadow;
       border-radius: $BorderRadius;
+      box-shadow: $TabindexShadow;
     }
 
     @media screen and (max-width: $phoneWidth) {

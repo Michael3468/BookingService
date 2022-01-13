@@ -22,8 +22,8 @@
     cursor: pointer;
 
     &:focus {
-      text-shadow: $TabindexShadow;
       color: $DarkShade75;
+      text-shadow: $TabindexShadow;
     }
   }
 
