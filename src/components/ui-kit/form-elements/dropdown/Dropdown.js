@@ -1,25 +1,3 @@
-/* eslint-disable no-plusplus */
-function setCounterValue(act, event) {
-  const itemControls = event.target.closest('.js-dropdown__item-controls');
-  const decrementButton = itemControls.querySelector('.js-dropdown__button-decrement');
-  const counter = itemControls.querySelector('.js-dropdown__counter');
-  let counterValue = Number(counter.value);
-
-  if (act === 'increment') {
-    counter.value = ++counterValue;
-    decrementButton.classList.add('dark');
-  }
-
-  if (act === 'decrement') {
-    if (counter.value !== '0') {
-      counter.value = --counterValue;
-      if (counter.value === '0') {
-        decrementButton.classList.remove('dark');
-      }
-    }
-  }
-}
-
 export default class Dropdown {
   constructor(elem) {
     if (elem === null) return;
@@ -30,6 +8,7 @@ export default class Dropdown {
     this.dropdownCounters = elem.querySelectorAll('.js-dropdown__counter');
     this.elem.onclick = this.onClick.bind(this);
     this.initListeners();
+    this.initDecrementButtonsColors();
   }
 
   initListeners() {
@@ -37,6 +16,17 @@ export default class Dropdown {
     blockTop.addEventListener('keypress', (e) => {
       if (e.code === 'Enter') {
         this.showHide();
+      }
+    });
+  }
+
+  initDecrementButtonsColors() {
+    const dropdownControls = this.menu.querySelectorAll('.js-dropdown__item-controls');
+    dropdownControls.forEach((control) => {
+      const counter = control.querySelector('.js-dropdown__counter');
+      if (Number(counter.value) > 0) {
+        const buttonDecrement = control.querySelector('.js-dropdown__button-decrement');
+        buttonDecrement.classList.add('dark');
       }
     });
   }
@@ -55,10 +45,32 @@ export default class Dropdown {
   }
 
   increment(event) {
-    setCounterValue(this.action, event);
+    this.setCounterValue(this.action, event);
   }
 
   decrement(event) {
-    setCounterValue(this.action, event);
+    this.setCounterValue(this.action, event);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  setCounterValue(act, event) {
+    const itemControls = event.target.closest('.js-dropdown__item-controls');
+    const decrementButton = itemControls.querySelector('.js-dropdown__button-decrement');
+    const counter = itemControls.querySelector('.js-dropdown__counter');
+    const counterValue = Number(counter.value);
+
+    if (act === 'increment') {
+      counter.value = counterValue + 1;
+      decrementButton.classList.add('dark');
+    }
+
+    if (act === 'decrement') {
+      if (counter.value !== '0') {
+        counter.value = counterValue - 1;
+        if (counter.value === '0') {
+          decrementButton.classList.remove('dark');
+        }
+      }
+    }
   }
 }
