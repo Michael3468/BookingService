@@ -2,7 +2,7 @@ mixin room-search(params)
   .room-search.cards_border
     h1.room-search__caption Найдём номера под ваши пожелания
 
-    form(action="#change-me")
+    form.js-room-search-form(action="#change-me")
       .room-search__date-dropdown-margin
         include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
         +dropdown-date({startDateCaption: "прибытие",
@@ -20,4 +20,4 @@ mixin room-search(params)
                   })
 
       include ../../../ui-kit/form-elements/buttons/buttons
-      +button({link: "change_me", mod: ["with_arrow", "block"], value: "Подобрать номер", type: "submit"})
+      +button({mod: ["with_arrow", "block"], value: "Подобрать номер", type: "submit", class: "js-room-search-button"})

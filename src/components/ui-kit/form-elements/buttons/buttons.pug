@@ -1,25 +1,21 @@
 mixin button(params)
   -
     const link= params.link|| "change_me"
-    const value = params.value|| "Click me"
-    let mod = params.mod
+    const value= params.value|| "Click me"
+    const tIndex= params.tabindex|| "0"
 
+    let mod = params.mod
     if (mod !== undefined) {
       mod = mod.map((item) => `button_${item}`)
       classes = mod.join(" ")
     } else {
       classes = ""
     }
+
   if (params.type)
-    if (params.tabindex)
-      button.button.js-button(tabindex=params.tabindex onclick=`location.href='/${link}'` class=classes type=params.type)=value
-    else
-      button.button.js-button(tabindex="0" onclick=`location.href='/${link}'` class=classes type=params.type)=value
+    button.button.js-button(tabindex=tIndex onclick=`location.href='/${link}'` class=`${classes} ${params.class}` type=params.type)=value
   else
-    if (params.tabindex)
-      button.button.js-button(tabindex=params.tabindex onclick=`location.href='/${link}'` class=classes)=value
-    else
-      button.button.js-button(tabindex="0" onclick=`location.href='/${link}'` class=classes)=value
+    button.button.js-button(tabindex=tIndex onclick=`location.href='/${link}'` class=`${classes} ${params.class}`)=value
 
 //- Buttons examples
 //-   +button({link:"#", value:"Кнопка"})
