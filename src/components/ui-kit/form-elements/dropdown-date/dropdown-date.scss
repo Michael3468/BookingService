@@ -31,6 +31,11 @@
     cursor: pointer;
     caret-color: transparent;
 
+    &:focus {
+      box-shadow: $TabindexShadow;
+      border-radius: $BorderRadius;
+    }
+
     @media screen and (max-width: $phoneWidth) {
       padding-right: 2vw;
       padding-left: 2vw;
