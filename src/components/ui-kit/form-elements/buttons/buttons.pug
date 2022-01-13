@@ -11,9 +11,15 @@ mixin button(params)
       classes = ""
     }
   if (params.type)
-    button.button(onclick=`location.href='/${link}'` class=classes type=params.type)=value
+    if (params.tabindex)
+      button.button.js-button(tabindex=params.tabindex onclick=`location.href='/${link}'` class=classes type=params.type)=value
+    else
+      button.button.js-button(tabindex="0" onclick=`location.href='/${link}'` class=classes type=params.type)=value
   else
-    button.button(onclick=`location.href='/${link}'` class=classes)=value
+    if (params.tabindex)
+      button.button.js-button(tabindex=params.tabindex onclick=`location.href='/${link}'` class=classes)=value
+    else
+      button.button.js-button(tabindex="0" onclick=`location.href='/${link}'` class=classes)=value
 
 //- Buttons examples
 //-   +button({link:"#", value:"Кнопка"})

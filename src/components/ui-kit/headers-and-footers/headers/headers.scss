@@ -75,11 +75,6 @@
   &__auth-buttons-padding:last-child {
     margin-left: rem(21);
   }
-
-  &__auth-buttons-padding:focus {
-    border-radius: rem($ButtonsBorderRadius);
-    box-shadow: $TabindexShadow;
-  }
   // authorization end
 
   /* header dropdown */

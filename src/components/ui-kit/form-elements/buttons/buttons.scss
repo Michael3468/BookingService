@@ -32,6 +32,10 @@ $backgroundBtnColor: $default-color;
   border-radius: rem($ButtonsBorderRadius);
   cursor: pointer;
 
+  &:focus {
+    box-shadow: $TabindexShadow;
+  }
+
   &:hover {
     opacity: 0.5;
   }
