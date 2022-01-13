@@ -104,8 +104,10 @@
     font-weight: normal;
     background: $default-color;
 
+    &:focus,
     &:hover {
-      text-shadow: 0 0 1px black;
+      text-shadow: $TabindexShadow;
+      font-weight: bold;
       background: $menu-hover-color;
     }
   } /* header dropdown end */

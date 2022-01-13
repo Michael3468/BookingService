@@ -23,6 +23,12 @@ function headersDropdownShowHide() {
   if (dropdowns !== undefined) {
     dropdowns.forEach((dropdown) => {
       dropdown.addEventListener('click', handleHeaderDropdownClick);
+      dropdown.addEventListener('keypress', (e) => {
+        if (e.code === 'Enter') {
+          handleHeaderDropdownClick(e);
+        }
+      });
+
       dropdown.addEventListener('mouseleave', handleHeaderDropdownMouseLeave);
     });
   }
