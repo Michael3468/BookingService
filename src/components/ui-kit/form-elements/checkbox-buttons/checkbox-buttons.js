@@ -1,6 +1,7 @@
 import './checkbox-buttons.scss';
 
 const expandableCheckbox = document.querySelector('.js-expandable-checkbox-list');
+const checkboxTexts = document.querySelectorAll('.js-checkbox-buttons__text');
 const checkboxOptions = expandableCheckbox.nextElementSibling;
 const expandMore = expandableCheckbox.lastElementChild.children[1];
 
@@ -29,3 +30,12 @@ expandableCheckbox.onclick = () => {
     showCheckboxOptions();
   }
 };
+
+checkboxTexts.forEach((item) => {
+  item.addEventListener('keypress', (e) => {
+    if (e.code === 'Enter') {
+      const checkbox = item.previousElementSibling;
+      checkbox.checked = !checkbox.checked;
+    }
+  });
+});

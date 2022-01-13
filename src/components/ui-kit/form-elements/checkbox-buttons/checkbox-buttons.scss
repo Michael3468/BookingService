@@ -50,6 +50,12 @@
     cursor: pointer;
     content: '';
   }
+
+  &:focus {
+    text-shadow: $TabindexShadow;
+    font-weight: bold;
+    color: $DarkShade75;
+  }
 }
 
 .custom-checkbox:checked + label::before {
@@ -88,5 +94,13 @@
 
   &__expand-more-rotate {
     transform: rotate(180deg);
+  }
+}
+
+.checkbox-buttons__text {
+  &:focus {
+    text-shadow: $TabindexShadow;
+    font-weight: bold;
+    color: $DarkShade75;
   }
 }

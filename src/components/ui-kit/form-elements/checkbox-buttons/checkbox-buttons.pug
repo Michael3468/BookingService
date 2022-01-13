@@ -11,8 +11,8 @@ mixin checkbox-buttons(params)
   .checkbox-buttons__block(class= params.optionsDisplay)
     each val, index in params.inpText
       .checkbox-buttons__input
-        input.custom-checkbox(type="checkbox", checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName[index], value= params.inpValue[index])
-        label.checkbox-buttons__text(for= params.inpId + index) #{val}
+        input.custom-checkbox.js-custom-checkbox(tabindex="-1" type="checkbox", checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName[index], value= params.inpValue[index])
+        label.checkbox-buttons__text.js-checkbox-buttons__text(tabindex="0" for= params.inpId + index) #{val}
 
 
 //- example checkbox buttons only
