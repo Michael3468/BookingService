@@ -2,7 +2,7 @@ mixin login(params)
   .login.cards_border
     h1.login__caption Войти
 
-    form(action="#change-me")
+    form.js-login-form(action="#change-me")
       .login__inputs-block
         include ../../../ui-kit/form-elements/text-field/text-field
         +text-field({ inpType:        "email",
@@ -20,7 +20,7 @@ mixin login(params)
                     })
 
       include ../../../ui-kit/form-elements/buttons/buttons
-      +button({link: "change_me", mod: ["with_arrow","block"], value: "Войти", type: "submit"})
+      +button({mod: ["with_arrow","block"], value: "Войти", type: "submit", class: "js-login-submit-button"})
 
     .login__create-login-block
       p.login__create-login-text Нет аккаунта на Toxin?
