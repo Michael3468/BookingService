@@ -20,6 +20,12 @@ $toggle-size: rem(10);
   cursor: pointer;
   filter: grayscale(100%);
   appearance: none;
+
+  &:focus + .toggle__text {
+    text-shadow: $TabindexShadow;
+    font-weight: bold;
+    color: $DarkShade75;
+  }
 }
 
 .toggle__button:checked {
