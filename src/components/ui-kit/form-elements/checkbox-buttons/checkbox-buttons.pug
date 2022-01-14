@@ -3,7 +3,7 @@ mixin checkbox-buttons(params)
     .checkbox-buttons
       h3.checkbox-buttons__caption= params.leftCaption
   else
-    .expandable-checkbox-list.js-expandable-checkbox-list
+    .expandable-checkbox-list.js-expandable-checkbox-list(tabindex="0")
       .expandable-checkbox-list__caption
         h3.expandable-checkbox-list__text= params.caption
         .expandable-checkbox-list__expand-more.material-icons(class=params.rotate) expand_more

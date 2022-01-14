@@ -52,9 +52,9 @@
   }
 
   &:focus {
-    text-shadow: $TabindexShadow;
-    font-weight: bold;
     color: $DarkShade75;
+    font-weight: bold;
+    text-shadow: $TabindexShadow;
   }
 }
 
@@ -84,6 +84,12 @@
     }
   }
 
+  &:focus {
+    color: $DarkShade75;
+    font-weight: bold;
+    text-shadow: $TabindexShadow;
+  }
+
   &__expand-more {
     margin: rem(-4) rem(8) rem(0) rem(0);
 
@@ -99,8 +105,8 @@
 
 .checkbox-buttons__text {
   &:focus {
-    text-shadow: $TabindexShadow;
-    font-weight: bold;
     color: $DarkShade75;
+    font-weight: bold;
+    text-shadow: $TabindexShadow;
   }
 }

@@ -5,31 +5,26 @@ const checkboxTexts = document.querySelectorAll('.js-checkbox-buttons__text');
 const checkboxOptions = expandableCheckbox.nextElementSibling;
 const expandMore = expandableCheckbox.lastElementChild.children[1];
 
-function isCheckboxOptionsVisible() {
+function showHideCheckboxOptions() {
   const notVisible = checkboxOptions.classList.contains('display-none');
   if (notVisible) {
-    return false;
-  }
-  return true;
-}
-
-function showCheckboxOptions() {
-  checkboxOptions.classList.remove('display-none');
-  expandMore.classList.add('expandable-checkbox-list__expand-more-rotate');
-}
-
-function hideCheckboxOptions() {
-  checkboxOptions.classList.add('display-none');
-  expandMore.classList.remove('expandable-checkbox-list__expand-more-rotate');
-}
-
-expandableCheckbox.onclick = () => {
-  if (isCheckboxOptionsVisible()) {
-    hideCheckboxOptions();
+    checkboxOptions.classList.remove('display-none');
+    expandMore.classList.remove('expandable-checkbox-list__expand-more-rotate');
   } else {
-    showCheckboxOptions();
+    checkboxOptions.classList.add('display-none');
+    expandMore.classList.add('expandable-checkbox-list__expand-more-rotate');
   }
-};
+}
+
+expandableCheckbox.addEventListener('click', () => {
+  showHideCheckboxOptions();
+});
+
+expandableCheckbox.addEventListener('keypress', (e) => {
+  if (e.code === 'Enter') {
+    showHideCheckboxOptions();
+  }
+});
 
 checkboxTexts.forEach((item) => {
   item.addEventListener('keypress', (e) => {
