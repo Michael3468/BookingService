@@ -1,28 +1,37 @@
-/* eslint-disable no-undef */
 import './like-button.scss';
 
-function toggleClasses(elementId) {
-  $(`#icon_${elementId}`).toggleClass('js-icon-checked-status');
-  $(`#content_${elementId}`).toggleClass('js-content-checked-status');
-  $(`#container_${elementId}`).toggleClass('js-container-checked-status');
+function toggleClasses(button) {
+  const likeButtonIcon = button.querySelector('.js-like-button-icon');
+  const likeButtonContent = button.querySelector('.js-like-button-content');
+
+  likeButtonIcon.classList.toggle('js-icon-checked-status');
+  likeButtonContent.classList.toggle('js-content-checked-status');
+  button.classList.toggle('js-container-checked-status');
 }
 
-function changeCounter(elementId) {
-  const counterId = `#content_${elementId}`;
-  const $counterValue = Number($(counterId).text());
+function changeCounter(element) {
+  const counter = element.querySelector('.js-like-button-content');
+  let counterValue = Number(counter.innerText);
 
-  if ($(counterId).hasClass('js-content-checked-status')) {
-    $(counterId).text($counterValue + 1);
+  if (counter.classList.contains('js-content-checked-status')) {
+    counterValue += 1;
+    counter.innerText = counterValue;
   } else {
-    $(counterId).text($counterValue - 1);
+    counterValue -= 1;
+    counter.innerText = counterValue;
   }
 }
 
-(() => {
-  $('.like-button__input').on('click', (event) => {
-    const elementId = event.target.id;
+document.addEventListener('DOMContentLoaded', () => {
+  const likeButtons = document.querySelectorAll('.js-like-button-container');
 
-    toggleClasses(elementId);
-    changeCounter(elementId);
+  likeButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const element = event.target;
+      const likeButton = element.closest('.js-like-button-container');
+
+      toggleClasses(likeButton);
+      changeCounter(likeButton);
+    });
   });
-})();
+});

@@ -1,19 +1,21 @@
 mixin button(params)
   -
     const link= params.link|| "change_me"
-    const value = params.value|| 'Click me'
-    let mod = params.mod
+    const value= params.value|| "Click me"
+    const tIndex= params.tabindex|| "0"
 
+    let mod = params.mod
     if (mod !== undefined) {
       mod = mod.map((item) => `button_${item}`)
-      classes = mod.join(' ')
+      classes = mod.join(" ")
     } else {
       classes = ""
     }
+
   if (params.type)
-    button.button(href=link class=classes type=params.type)=value
+    button.button.js-button(tabindex=tIndex onclick=`location.href='/${link}'` class=`${classes} ${params.class}` type=params.type)=value
   else
-    button.button(href=link class=classes)=value
+    button.button.js-button(tabindex=tIndex onclick=`location.href='/${link}'` class=`${classes} ${params.class}`)=value
 
 //- Buttons examples
 //-   +button({link:"#", value:"Кнопка"})
@@ -34,5 +36,5 @@ mixin button(params)
 //-   +button({link:"#", value:"Подобрать номер", mod: ["with_arrow", "block"]})
 //-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block"]})
 //-   +button({link:"#", value:"Забронировать", mod: ["with_arrow", "block", "bordered"]})
-//-   +button({link: 'change_me', mod: ['no-background','no-background_hover']})
-//-   +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
+//-   +button({link: "change_me", mod: ["no-background","no-background_hover"]})
+//-   +button({link: "change_me", mod: ["with_arrow","block"], value: "Перейти к оплате"})

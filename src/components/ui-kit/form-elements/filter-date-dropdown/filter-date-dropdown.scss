@@ -30,6 +30,10 @@
       top: rem(10);
       right: rem(10);
     }
+
+    &:focus {
+      box-shadow: $TabindexShadow;
+    }
   }
 
   &__expand-button {

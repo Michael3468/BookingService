@@ -1,9 +1,9 @@
 extends ../components/layouts/main
 
 block variables
-  - var title = 'FSD Cards';
-  - var description = 'FSD education project | Cards page';
-  - var pageClass = 'cards';
+  - var title = "FSD Cards";
+  - var description = "FSD education project | Cards page";
+  - var pageClass = "cards";
 
 block content
 
@@ -22,14 +22,14 @@ block content
     .cards__column-2
 
       include ../components/ui-kit/cards/booking/booking
-      +booking({  roomPrice:                    '9 990₽',
-                  daysPriceText:                ' x 4 суток',
-                  servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
-                  additionalServicesPriceText:  'Сбор за дополнительные услуги',
-                  daysPriceValue:               '39 960₽',
-                  servicesPriceValue:           '0₽',
-                  additionalServicesPriceValue: '300₽',
-                  resultText:                   'Итого',
+      +booking({  roomPrice:                    "9 990₽",
+                  daysPriceText:                " x 4 суток",
+                  servicesPriceText:            "Сбор за услуги: скидка 2 179₽",
+                  additionalServicesPriceText:  "Сбор за дополнительные услуги",
+                  daysPriceValue:               "39 960₽",
+                  servicesPriceValue:           "0₽",
+                  additionalServicesPriceValue: "300₽",
+                  resultText:                   "Итого",
                   resultSum:                    `38\u00A0081₽`})
 
       .cards__login_position
@@ -44,22 +44,20 @@ block content
 
       .cards__room-card_position
         include ../components/ui-kit/cards/room-card/room-card
-        +room-card({  id:        '1',
-                      number:    '888',
-                      status:    'Люкс',
-                      price:     '9 900₽',
-                      photoName: 'room-card-888.jpg',
-                      starsRate: '5',
-                      feedbacks: '145',
+        +room-card({  number:    "888",
+                      status:    "Люкс",
+                      price:     "9 900₽",
+                      photoName: "room-card-888.jpg",
+                      starsRate: "5",
+                      feedbacks: "145",
                     })
 
       .cards__room-card_position
         include ../components/ui-kit/cards/room-card/room-card
-        +room-card({  id:        '2',
-                      number:    '840',
-                      status:    'Люкс',
-                      price:     '9 900₽',
-                      photoName: 'room-card-840.jpg',
-                      starsRate: '4',
-                      feedbacks: '65',
+        +room-card({  number:    "840",
+                      status:    "Люкс",
+                      price:     "9 900₽",
+                      photoName: "room-card-840.jpg",
+                      starsRate: "4",
+                      feedbacks: "65",
                     })

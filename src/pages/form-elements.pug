@@ -1,9 +1,9 @@
 extends ../components/layouts/main
 
 block variables
-  - var title = 'FSD Form Elements';
-  - var description = 'FSD education project | Form Elements page';
-  - var pageClass = 'form-elements';
+  - var title = "FSD Form Elements";
+  - var description = "FSD education project | Form Elements page";
+  - var pageClass = "form-elements";
 
 block content
 
@@ -14,150 +14,145 @@ block content
 
       .block-margin
         include ../components/ui-kit/form-elements/text-field/text-field
-        +text-field({ leftCaption:    'text field',
-                      rightCaption:   'default',
-                      inpType:        'email',
-                      inpName:        'email',
-                      inpMode:        'email',
-                      inpPlaceholder: 'Email',
-                      inpId:          'emailTextField'})
+        +text-field({ leftCaption:    "text field",
+                      rightCaption:   "default",
+                      inpType:        "email",
+                      inpName:        "email",
+                      inpMode:        "email",
+                      inpPlaceholder: "Email",
+                      inpId:          "emailTextField"})
 
       .block-margin
-        +text-field({ leftCaption:    'text field',
-                      rightCaption:   'hover /focus',
-                      inpType:        'text',
-                      inpName:        'text',
-                      inpMode:        'text',
-                      inpPlaceholder: 'This is pretty awesome',
-                      inpId:          'textField',
-                      hoverStyle:     'like-hover'})
+        +text-field({ leftCaption:    "text field",
+                      rightCaption:   "hover /focus",
+                      inpType:        "text",
+                      inpName:        "text",
+                      inpMode:        "text",
+                      inpPlaceholder: "This is pretty awesome",
+                      inpId:          "textField",
+                      hoverStyle:     "like-hover"})
 
       .block-margin
         include ../components/ui-kit/form-elements/dropdown/dropdown
-        +dropdown({ leftCaption:   'dropdown',
-                    id:            'dropdown-guests',
-                    selectionText: 'Сколько гостей',
-                    expMenuStatus: 'hidden',
+        +dropdown({ leftCaption:   "dropdown",
+                    type:          "dropdown-guests",
+                    selectionText: "Сколько гостей",
+                    expMenuStatus: "hidden",
                   })
 
       .block-margin.date-margin
         include ../components/ui-kit/form-elements/masked-text-field/masked-text-field
-        +masked-text-field({leftCaption:    'masked text field',
-                            inpId:          'masked-date-field',
-                            inpName:        'date',
-                            inpPlaceholder: 'ДД.ММ.ГГГГ'})
+        +masked-text-field({leftCaption:    "masked text field",
+                            inpName:        "date",
+                            inpPlaceholder: "ДД.ММ.ГГГГ"})
 
       .block-margin.dropdown-date-margin
         include ../components/ui-kit/form-elements/dropdown-date/dropdown-date
-        +dropdown-date({startDateCaption: 'date dropdown',
-                        endDateCaption:   'date dropdown',
-                        startInpId:       'startDate',
-                        endInpId:         'endDate',
-                        endDefaultDate:   '2019-08-19'})
+        +dropdown-date({startDateCaption: "date dropdown",
+                        endDateCaption:   "date dropdown",
+                        startInpId:       "startDate",
+                        endInpId:         "endDate",
+                        endDefaultDate:   "2019-08-19"})
 
       .mini-column
 
         .block-margin.date-dropdown-margin
           include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
-          +filter-date-dropdown({leftCaption : 'filter date dropdown'})
+          +filter-date-dropdown({leftCaption : "filter date dropdown"})
 
         .block-margin.subscription-text-field-margin
           include ../components/ui-kit/form-elements/text-field/text-field
-          +text-field({ leftCaption:    'subscription text field',
-                        inpType:        'email',
-                        inpName:        'email',
-                        inpMode:        'email',
-                        inpPlaceholder: 'Email',
-                        inpId:          'Subscription',
-                        isArrow:        'true'})
+          +text-field({ leftCaption:    "subscription text field",
+                        inpType:        "email",
+                        inpName:        "email",
+                        inpMode:        "email",
+                        inpPlaceholder: "Email",
+                        inpId:          "Subscription",
+                        isArrow:        "true"})
 
 
     .column-2
 
       .block-margin
         include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-        +checkbox-buttons({leftCaption:  'checkbox buttons',
-                            inpId:        'check-box-buttons',
-                            showCaption:  'true',
-                            inpStatus:    [ ,'checked','checked'],
-                            inpName:      'check-box-name',
-                            inpValue:     ['allow-smoke', 'allow pet',        'allow guests'],
-                            inpText:      ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']})
+        +checkbox-buttons({leftCaption:  "checkbox buttons",
+                            inpId:       "check-box-buttons",
+                            showCaption: "true",
+                            inpStatus:   [ ,"checked","checked"],
+                            inpName:     ["allow-smoke", "allow-pet", "allow-guests"],
+                            inpValue:    ["allow-smoke", "allow-pet", "allow-guests"],
+                            inpText:     ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
 
       .block-margin.checkbox-buttons-margin
         include ../components/ui-kit/form-elements/radio-buttons/radio-buttons
-        +radio-buttons({leftCaption:     'radio buttons',
-                        formActionName:  'form-action.php',
-                        radioButtonName: 'radio-button',
-                        inpName:         ['man',    'woman'],
-                        inpText:         ['Мужчина','Женщина'],
-                        inpStatus:       ['checked',]})
+        +radio-buttons({leftCaption:     "radio buttons",
+                        radioButtonName: "gender",
+                        inpName:         ["man",    "woman"],
+                        inpText:         ["Мужчина","Женщина"],
+                        inpStatus:       ["checked",]})
 
       .block-margin.toggle-margin
         include ../components/ui-kit/form-elements/toggle/toggle
-        +toggle({ leftCaption:    'toggle',
-                  toggleId:       'toggle-button1',
-                  toggleBtnText:  'Получать спецпредложения',
-                  toggleStatus:   'checked'})
+        +toggle({ leftCaption:   "toggle",
+                  toggleBtnText: "Получать спецпредложения",
+                  toggleStatus:  "checked"})
         .toggle-margin-between
-          +toggle({ leftCaption:   '',
-                    toggleId:      'toggle-button2',
-                    toggleBtnText: 'Получать спецпредложения',})
+          +toggle({ toggleBtnText: "Получать спецпредложения",})
 
       .block-margin.like-buttons-margin
         include ../components/ui-kit/form-elements/like-button/like-button
         h3.like-button__caption like button
         .like-buttons__direction
           .like-button__margin
-            +like-button({leftCaption:   'like button',
-                          likeBtnId:     'likeBtnId-1',
-                          likeBtnText:   '2'})
+            +like-button({leftCaption:   "like button",
+                          likeBtnId:     "likeBtnId-1",
+                          likeBtnText:   "2"})
 
-          +like-button({likeBtnId:     'likeBtnId-2',
-                        likeBtnStatus: 'checked',
-                        likeBtnText:   '12'})
+          +like-button({likeBtnId:     "likeBtnId-2",
+                        likeBtnStatus: "checked",
+                        likeBtnText:   "12"})
 
       .block-margin
         include ../components/ui-kit/form-elements/rate-button/rate-button
         h3.rate-button__caption rate button
         .rate-buttons-block
           .rate-buttons-margin
-            +rate-button({rateBtnName: 'rateBtnName-1',
-                          rateBtnId:   'rateBtnId-1',
-                          starsCount:  '4'})
+            +rate-button({rateBtnName: "rateBtnName-1",
+                          rateBtnId:   "rateBtnId-1",
+                          starsCount:  "4"})
 
-          +rate-button({rateBtnName: 'rateBtnName-2',
-                        rateBtnId:   'rateBtnId-2',
-                        starsCount:  '5'})
+          +rate-button({rateBtnName: "rateBtnName-2",
+                        rateBtnId:   "rateBtnId-2",
+                        starsCount:  "5"})
 
 
     .column-3
 
       .mini-column
         include ../components/ui-kit/form-elements/range-slider/range-slider
-        +range-slider({ leftCaption:  'range slider',
-                        rightCaption:  '5 000₽ - 10 000₽'})
+        +range-slider({ leftCaption:  "range slider",
+                        rightCaption:  "5 000₽ - 10 000₽"})
 
       .block-margin
         include ../components/ui-kit/form-elements/buttons/buttons
         h3.buttons__caption buttons
         .buttons-block
           .button__margin
-            +button({link : 'change_me'})
-          +button({link : 'change_me', mod: ['hover']})
+            +button({link : "change_me"})
+          +button({link : "change_me", mod: ["hover"]})
 
         .buttons-block
           .button__margin
-            +button({link : 'change_me', mod: ['bordered']})
-          +button({link : 'change_me', mod: ['bordered', 'hover']})
+            +button({link : "change_me", mod: ["bordered"]})
+          +button({link : "change_me", mod: ["bordered", "hover"]})
 
         .buttons-block
           .button__margin.btn-mt
-            +button({link: 'change_me', mod: ['no-background']})
-          +button({link: 'change_me', mod: ['no-background','no-background_hover']})
+            +button({link: "change_me", mod: ["no-background"]})
+          +button({link: "change_me", mod: ["no-background","no-background_hover"]})
 
         .buttons-block
-          +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Перейти к оплате'})
+          +button({link: "change_me", mod: ["with_arrow","block"], value: "Перейти к оплате"})
 
       .block-margin
         include ../components/ui-kit/form-elements/pagination/pagination
@@ -173,42 +168,42 @@ block content
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown/dropdown
-          +dropdown({ leftCaption:   'dropdown',
-                      rightCaption:  'default',
-                      id:            'dropdown-options',
-                      selectionText: '2 спальни, 2 кровати...',
-                      expMenuStatus: 'hidden',
+          +dropdown({ leftCaption:   "dropdown",
+                      rightCaption:  "default",
+                      type:          "dropdown-options",
+                      selectionText: "2 спальни, 2 кровати...",
+                      expMenuStatus: "hidden",
                     })
 
         .block-margin
           include ../components/ui-kit/form-elements/dropdown/dropdown
-          +dropdown({ leftCaption:   'dropdown',
-                      rightCaption:  'expanded',
-                      menuStatus:    'menu-open',
-                      idPostfix:     '-changed-example',
-                      selectionText: '2 спальни, 2 кровати...',
+          +dropdown({ leftCaption:   "dropdown",
+                      rightCaption:  "expanded",
+                      menuStatus:    "menu-open",
+                      idPostfix:     "-changed-example",
+                      selectionText: "2 спальни, 2 кровати...",
                     })
 
 
     .column-2
 
       include ../components/ui-kit/form-elements/dropdown/dropdown
-      +dropdown({ leftCaption:   'dropdown',
-                  id:            'dropdown-guests',
-                  selectionText: 'Сколько гостей',
-                  menuStatus:    'menu-open',
+      +dropdown({ leftCaption:   "dropdown",
+                  type:          "dropdown-guests",
+                  selectionText: "Сколько гостей",
+                  menuStatus:    "menu-open",
                 })
 
 
     .column-3
 
       include ../components/ui-kit/form-elements/dropdown/dropdown
-      +dropdown({ leftCaption:       'dropdown',
-                  id:                'dropdown-guests',
-                  idPostfix:         '-changed-example',
-                  selectionText:     '3 гостя',
-                  menuStatus:        'menu-open',
-                  cleanButtonStatus: 'show',
+      +dropdown({ leftCaption:       "dropdown",
+                  type:              "dropdown-guests",
+                  idPostfix:         "-changed-example",
+                  selectionText:     "3 гостя",
+                  menuStatus:        "menu-open",
+                  cleanButtonStatus: "show",
                 })
 
   .third-container.container
@@ -219,25 +214,25 @@ block content
 
         .block-margin.expandable-checkbox-list__margin
           include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-          +checkbox-buttons({ caption:        'expandable checkbox list',
-                              leftCaption:    'checkbox buttons',
-                              inpId:          'check-box-buttons-1',
-                              optionsDisplay: 'display-none',
+          +checkbox-buttons({ caption:        "expandable checkbox list",
+                              leftCaption:    "checkbox buttons",
+                              inpId:          "check-box-buttons-1",
+                              optionsDisplay: "display-none",
                               inpStatus:      [,,,,,,],
-                              inpName:        'check-box-name-1',
-                              inpValue:       ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
-                              inpText:        ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь']})
+                              inpName:        ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+                              inpValue:       ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+                              inpText:        ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"]})
 
         .block-margin.expandable-checkbox-list__margin2
           include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-          +checkbox-buttons({ caption:     'expandable checkbox list',
-                              leftCaption: 'checkbox buttons',
-                              inpId:       'check-box-buttons-2',
-                              inpStatus:   [ ,'checked','checked','checked',,,],
-                              inpName:     'check-box-name-2',
-                              inpValue:    ['breakfast', 'table', 'chair', 'bed', 'TV', 'shampoo'],
-                              inpText:     ['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь'],
-                              rotate:      'expandable-checkbox-list__expand-more-rotate'})
+          +checkbox-buttons({ caption:     "expandable checkbox list",
+                              leftCaption: "checkbox buttons",
+                              inpId:       "check-box-buttons-2",
+                              inpStatus:   [ ,"checked","checked","checked",,,],
+                              inpName:     ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+                              inpValue:    ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+                              inpText:     ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
+                              rotate:      "expandable-checkbox-list__expand-more-rotate"})
 
 
     .column-2
@@ -245,13 +240,13 @@ block content
       .mini-column
 
         include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
-        +rich-checkbox-buttons({caption:       'rich checkbox buttons',
-                                optionsValue:  ['wide-corridor',
-                                                'assistant-for-the-disabled'],
-                                optionText:    ['Широкий коридор',
-                                                'Помощник для инвалидов'],
-                                optionSubText: ['Ширина коридоров в номере не менее 91 см.',
-                                                'На 1 этаже вас встретит специалист и проводит до номера'],
+        +rich-checkbox-buttons({caption:       "rich checkbox buttons",
+                                optionsValue:  ["wide-corridor",
+                                                "assistant-for-the-disabled"],
+                                optionText:    ["Широкий коридор",
+                                                "Помощник для инвалидов"],
+                                optionSubText: ["Ширина коридоров в номере не менее 91 см.",
+                                                "На 1 этаже вас встретит специалист и проводит до номера"],
                                 })
 
 
@@ -260,10 +255,10 @@ block content
       .mini-column
 
         include ../components/ui-kit/form-elements/bullet-list/bullet-list
-        +bullet-list({caption: 'bullet list',
-                      options: ['Нельзя с питомцами',
-                                'Без вечеринок и мероприятий',
-                                'Время прибытия - после 13:00, а выезд до 12:00']})
+        +bullet-list({caption: "bullet list",
+                      options: ["Нельзя с питомцами",
+                                "Без вечеринок и мероприятий",
+                                "Время прибытия - после 13:00, а выезд до 12:00"]})
 
 
   .fourth-container.container
@@ -272,23 +267,23 @@ block content
 
       .icon-text-list__wrapper
         include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
-        +icon-text-list({ iconName : 'insert_emoticon',
-                          caption:   'Комфорт',
-                          text:      'Шумопоглощающие стены'})
+        +icon-text-list({ iconName : "insert_emoticon",
+                          caption:   "Комфорт",
+                          text:      "Шумопоглощающие стены"})
 
-        +icon-text-list({ iconName : 'location_city',
-                          caption:   'Удобство',
-                          text:      'Окно в каждой из спален'})
+        +icon-text-list({ iconName : "location_city",
+                          caption:   "Удобство",
+                          text:      "Окно в каждой из спален"})
 
     .column-4
 
       .comments-block__margin
         include ../components/ui-kit/form-elements/comments-block/comments-block
-        +comments-block({ imageName:    'avatar.jpg',
-                          userName:     'Мурад Сарафанов',
-                          commentDate:  '5 дней назад',
-                          feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                          likeBtnId:     'likeBtnId-3',
-                          likeBtnStatus: 'checked',
-                          likeBtnText:   '12',
+        +comments-block({ imageName:    "avatar.jpg",
+                          userName:     "Мурад Сарафанов",
+                          commentDate:  "5 дней назад",
+                          feedbackText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                          likeBtnId:     "likeBtnId-3",
+                          likeBtnStatus: "checked",
+                          likeBtnText:   "12",
                         })

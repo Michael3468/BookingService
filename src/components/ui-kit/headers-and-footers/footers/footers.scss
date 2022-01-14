@@ -34,8 +34,16 @@
     padding-bottom: rem(18);
   }
 
-  &__nav-link:hover {
-    color: $DarkShade75;
+  &__nav-link {
+    &:hover {
+      color: $DarkShade75;
+    }
+
+    &:focus {
+      color: $DarkShade75;
+      font-weight: bold;
+      text-shadow: $TabindexShadow;
+    }
   }
 
   &__nav-p {
@@ -107,6 +115,12 @@
   justify-content: space-between;
   width: rem(111);
   font-size: rem(24);
+
+  &-link {
+    &:focus {
+      text-shadow: $TabindexShadow;
+    }
+  }
 }
 
 .fab {

@@ -14,6 +14,11 @@ function showHideDatePicker(event) {
 }
 
 (() => {
-  const isFilterDateDropdown = document.querySelector('.filter-date-dropdown__input');
-  isFilterDateDropdown.addEventListener('click', showHideDatePicker);
+  const filterDateDropdown = document.querySelector('.js-filter-date-dropdown__input');
+  filterDateDropdown.addEventListener('click', showHideDatePicker);
+  filterDateDropdown.addEventListener('keypress', (e) => {
+    if (e.code === 'Enter') {
+      showHideDatePicker(e);
+    }
+  });
 })();

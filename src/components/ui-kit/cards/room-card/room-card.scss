@@ -94,3 +94,9 @@
     margin-bottom: rem(7) !important;
   }
 }
+
+.slick-arrow:focus {
+  background-color: green;
+  box-shadow: $TabindexShadow;
+  opacity: 0.3;
+}

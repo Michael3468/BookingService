@@ -23,6 +23,12 @@
       line-height: rem(50);
       cursor: pointer;
 
+      &:focus {
+        color: $DarkShade75;
+        font-weight: bold;
+        text-shadow: $TabindexShadow;
+      }
+
       &_active,
       &:hover {
         color: $DarkShade75;
@@ -54,6 +60,10 @@
     color: $DarkShade50;
     font-family: $secondFont;
     border-left: rem(1) solid #f4f3f6;
+
+    &:focus {
+      text-shadow: $TabindexShadow;
+    }
   }
 
   &__notAuthorized {
@@ -89,8 +99,10 @@
     font-weight: normal;
     background: $default-color;
 
+    &:focus,
     &:hover {
-      text-shadow: 0 0 1px black;
+      font-weight: bold;
+      text-shadow: $TabindexShadow;
       background: $menu-hover-color;
     }
   } /* header dropdown end */

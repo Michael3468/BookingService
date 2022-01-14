@@ -15,6 +15,11 @@ function showHideDatePicker(event) {
 }
 
 (() => {
-  const isDropdownDateBlock = document.querySelector('.dropdown-date');
-  isDropdownDateBlock.addEventListener('click', showHideDatePicker);
+  const DropdownDateBlock = document.querySelector('.dropdown-date');
+  DropdownDateBlock.addEventListener('click', showHideDatePicker);
+  DropdownDateBlock.addEventListener('keypress', (e) => {
+    if (e.code === 'Enter') {
+      showHideDatePicker(e);
+    }
+  });
 })();

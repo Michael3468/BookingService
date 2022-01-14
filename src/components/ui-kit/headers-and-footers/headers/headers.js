@@ -23,6 +23,12 @@ function headersDropdownShowHide() {
   if (dropdowns !== undefined) {
     dropdowns.forEach((dropdown) => {
       dropdown.addEventListener('click', handleHeaderDropdownClick);
+      dropdown.addEventListener('keypress', (e) => {
+        if (e.code === 'Enter') {
+          handleHeaderDropdownClick(e);
+        }
+      });
+
       dropdown.addEventListener('mouseleave', handleHeaderDropdownMouseLeave);
     });
   }
@@ -32,27 +38,28 @@ document.addEventListener('DOMContentLoaded', headersDropdownShowHide);
 /* dropdown menu end */
 
 /* header-burger expand menu */
-const headerBurger = document.querySelector('.js-header-burger');
-const headerNav = document.querySelector('.js-header__nav');
+const headerBurgers = document.querySelectorAll('.js-header-burger');
+const headerNavs = document.querySelectorAll('.js-header__nav');
 
 function toggleHeaderNav() {
-  headerNav.classList.toggle('hidden');
+  headerNavs[0].classList.toggle('hidden');
 }
 
 function addRemoveHiddenClass(element) {
   if (window.innerWidth < 1025) {
-    element.classList.add('hidden');
+    element.forEach((elem) => elem.classList.add('hidden'));
   } else {
-    element.classList.remove('hidden');
+    element.forEach((elem) => elem.classList.remove('hidden'));
   }
 }
 
-headerBurger.addEventListener('click', toggleHeaderNav);
+headerBurgers.forEach((burger) => burger.addEventListener('click', toggleHeaderNav));
 
 document.addEventListener('DOMContentLoaded', () => {
-  addRemoveHiddenClass(headerNav);
+  addRemoveHiddenClass(headerNavs);
 });
+
 window.addEventListener('resize', () => {
-  addRemoveHiddenClass(headerNav);
+  addRemoveHiddenClass(headerNavs);
 });
 /* header-burger expand menu end */

@@ -1,12 +1,11 @@
 mixin masked-text-field(params)
   .masked-text-field__caption
     h3.masked-text-field__caption-left= params.leftCaption
-  input.masked-text-field__input.input__style(type='text' id=params.inpId name=params.inpName placeholder=params.inpPlaceholder)
+  input.masked-text-field__input.input__style.js-masked-text-field__input(type="text" name=params.inpName placeholder=params.inpPlaceholder)
 
 
 //- examples
 //-
-//- +masked-text-field({leftCaption:    'masked text field',
-//-                     inpId:          'masked-date-field',
-//-                     inpName:        'date',
-//-                     inpPlaceholder: 'ДД.ММ.ГГГГ'})
+//- +masked-text-field({leftCaption:    "masked text field",
+//-                     inpName:        "date",
+//-                     inpPlaceholder: "ДД.ММ.ГГГГ"})

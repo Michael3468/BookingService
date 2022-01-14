@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import './date-picker.scss';
 import 'air-datepicker/dist/js/datepicker.min';
 
@@ -9,7 +10,7 @@ $('.date-picker').datepicker({
     days: 'MM <i>yyyy</i>',
   },
 
-  onSelect: function (fd) {
+  onSelect(fd) {
     $('#startDate').val(fd.split(' - ')[0]);
     $('#endDate').val(fd.split(' - ')[1]);
   },
