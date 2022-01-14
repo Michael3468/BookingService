@@ -1,7 +1,7 @@
 mixin booking(params)
   .booking.cards_border
 
-    form(action="#change-me")
+    form.js-booking-form(action="#change-me")
       include ./__caption/booking__caption
       +booking-caption({roomNumber: "888",
                         roomStatus: "Люкс",
@@ -48,4 +48,4 @@ mixin booking(params)
         p.booking__options-result_sum= params.resultSum
 
       include ../../../ui-kit/form-elements/buttons/buttons
-      +button({link: "change_me", mod: ["with_arrow","block"], value: "Забронировать", type: "submit"})
+      +button({mod: ["with_arrow","block"], value: "Забронировать", class: 'js-booking-submit-button'})
