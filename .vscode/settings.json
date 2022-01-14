@@ -7,6 +7,7 @@
 
   "files.eol": "\n",
   "cSpell.words": [
+    "browserconfig",
     "browserslist",
     "childs",
     "datepicker",
@@ -14,6 +15,8 @@
     "favicons",
     "inputmask",
     "mqpacker",
+    "msapplication",
+    "mstile",
     "Navs",
     "paginationjs",
     "plusplus",
