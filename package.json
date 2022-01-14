@@ -33,6 +33,7 @@
     "gh-pages": "^3.2.3",
     "git-flow": "^0.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
@@ -58,7 +59,6 @@
     "d3": "^6.7.0",
     "inputmask": "^5.0.6",
     "ion-rangeslider": "^2.3.1",
-    "jquery": "^3.6.0",
     "paginationjs": "^2.1.5",
     "slick-carousel": "^1.8.1"
   }
