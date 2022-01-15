@@ -6,6 +6,10 @@
   flex-direction: row;
 }
 
+.radio-buttons__block {
+  display: flex;
+}
+
 .radio-buttons__text {
   margin-top: rem(13);
   margin-right: rem(20);

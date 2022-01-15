@@ -85,14 +85,12 @@
   }
 }
 
-.number-price {
-  &_font-size {
-    font-size: rem(19) !important;
-  }
+.room-card__room-number_font-size {
+  font-size: rem(19);
+}
 
-  &_m-bottom {
-    margin-bottom: rem(7) !important;
-  }
+.room-card__room-number_margin {
+  margin-bottom: rem(7);
 }
 
 .slick-arrow:focus {

@@ -5,7 +5,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: rem(19);
+
+  &_margin {
+    margin-bottom: rem(19);
+  }
 }
 
 .booking__caption-right {
@@ -31,10 +34,15 @@
 }
 
 .booking__caption-room-number {
+  margin-top: rem(3);
+  margin-right: rem(9);
   margin-left: rem(3);
   color: $DarkShade100;
   font-weight: bold;
-  font-size: rem(24);
+
+  &_font-size {
+    font-size: rem(24);
+  }
 }
 
 .booking__caption-status {

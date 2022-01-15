@@ -9,8 +9,8 @@ mixin room-card(params)
       +booking-caption({  roomNumber:    params.number,
                           roomStatus:    params.status,
                           roomPrice:     params.price,
-                          fontSize:     "number-price_font-size",
-                          marginBottom: "number-price_m-bottom",
+                          fontSize:     "room-card-caption",
+                          captionType:  "room-card",
                       })
 
     .room-card__feedback-block

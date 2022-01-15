@@ -1,9 +1,16 @@
 mixin booking-caption(params)
-  .booking__caption(class=params.marginBottom)
+  if (params.captionType === 'booking')
+    - var margin   = 'booking__caption_margin'
+    - var fontSize = 'booking__caption-room-number_font-size'
+  if (params.captionType === 'room-card')
+    - var margin   = 'room-card__room-number_margin'
+    - var fontSize = 'room-card__room-number_font-size'
+
+  .booking__caption(class= margin)
     .booking__caption-right
       h1.booking__caption-number
         span.booking__caption-symbol №
-        span.booking__caption-room-number(class=params.fontSize)= params.roomNumber
+        span.booking__caption-room-number(class=fontSize)= params.roomNumber
       .booking__caption-status=params.roomStatus
     .booking__caption-left
       p.booking__caption-price=params.roomPrice
@@ -22,4 +29,3 @@ mixin booking-caption(params)
 //-                     fontSize:     "number-price_font-size",
 //-                     marginBottom: "number-price_m-bottom",
 //-                 })
-//- add classes .number-price_font-size, .number-price_m-bottom to element's css

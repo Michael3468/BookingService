@@ -22,9 +22,9 @@ $toggle-size: rem(10);
   appearance: none;
 
   &:focus + .toggle__text {
-    text-shadow: $TabindexShadow;
-    font-weight: bold;
     color: $DarkShade75;
+    font-weight: bold;
+    text-shadow: $TabindexShadow;
   }
 }
 

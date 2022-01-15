@@ -3,9 +3,11 @@ mixin booking(params)
 
     form.js-booking-form(action="#change-me")
       include ./__caption/booking__caption
-      +booking-caption({roomNumber: "888",
-                        roomStatus: "Люкс",
-                        roomPrice:  params.roomPrice,})
+      +booking-caption({roomNumber:  "888",
+                        roomStatus:  "Люкс",
+                        roomPrice:   params.roomPrice,
+                        fontSize:    'booking-caption',
+                        captionType: "booking",})
 
       .booking__date-dropdown-margin
         include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
