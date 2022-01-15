@@ -27,11 +27,11 @@
 
 .datepicker--nav-title {
   max-width: rem(150);
-  margin-top: rem(-7);
   font-weight: bold;
   font-size: rem(19);
   font-family: $secondFont;
-  line-height: rem(25);
+  align-self: start;
+  margin-top: 14px;
 }
 
 .datepicker--nav-title,
@@ -56,10 +56,11 @@
 .datepicker--nav-action::after {
   display: inline-block;
   width: rem(25);
-  margin-top: rem(-7);
   color: $purple;
   font-weight: normal;
   font-size: rem(24); /* Preferred icon size 24px */
+  align-self: start;
+  margin-top: 14px;
 
   //- .material-icons main.scss
   font-family: 'Material Icons', sans-serif;

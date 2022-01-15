@@ -12,7 +12,7 @@
 
   &__input {
     display: flex;
-    margin-bottom: rem(11);
+    margin-bottom: rem(10);
   }
 
   &__text {
@@ -70,7 +70,7 @@
 
 //- styles for expandable-checkbox-list
 .expandable-checkbox-list {
-  margin-bottom: rem(12);
+  margin-bottom: rem(9);
 
   &__caption {
     display: flex;
@@ -91,7 +91,8 @@
   }
 
   &__expand-more {
-    margin: rem(-4) rem(8) rem(0) rem(0);
+    // margin: rem(-4) rem(8) rem(0) rem(0);
+    margin: 0 rem(9) 0 0;
 
     &::selection {
       background: transparent;

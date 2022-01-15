@@ -6,7 +6,10 @@ $toggle-size: rem(10);
 .toggle {
   display: flex;
   align-items: center;
-  margin-top: rem(16);
+}
+
+.toggle__caption {
+  margin-bottom: rem(15);
 }
 
 .toggle__button {
@@ -34,7 +37,7 @@ $toggle-size: rem(10);
 }
 
 .toggle__text {
-  margin-left: rem(11);
+  margin-left: rem(9);
   color: $DarkShade75;
   font-family: $secondFont;
 }

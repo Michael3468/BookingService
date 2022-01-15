@@ -91,12 +91,13 @@ block content
                         inpText:         ["Мужчина","Женщина"],
                         inpStatus:       ["checked",]})
 
-      .block-margin.toggle-margin
+      .block-margin.toggle-block-margin
         include ../components/ui-kit/form-elements/toggle/toggle
-        +toggle({ leftCaption:   "toggle",
-                  toggleBtnText: "Получать спецпредложения",
-                  toggleStatus:  "checked"})
-        .toggle-margin-between
+        .form-elements__toggle-margin-between
+          +toggle({ leftCaption:   "toggle",
+                    toggleBtnText: "Получать спецпредложения",
+                    toggleStatus:  "checked"})
+        .form-elements__toggle-margin-between
           +toggle({ toggleBtnText: "Получать спецпредложения",})
 
       .block-margin.like-buttons-margin
@@ -133,7 +134,7 @@ block content
         +range-slider({ leftCaption:  "range slider",
                         rightCaption:  "5 000₽ - 10 000₽"})
 
-      .block-margin
+      .buttons__block-margin
         include ../components/ui-kit/form-elements/buttons/buttons
         h3.buttons__caption buttons
         .buttons-block
