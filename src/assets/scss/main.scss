@@ -17,6 +17,7 @@ html {
   font-size: $mainFontSize;
   font-family: $mainFont;
   line-height: $mainLineHeight;
+  background-color: $default-color;
 
   @media screen and (min-width: $tableWidth) and (max-width: $desktopWidth) {
     font-size: $mainFontSize;

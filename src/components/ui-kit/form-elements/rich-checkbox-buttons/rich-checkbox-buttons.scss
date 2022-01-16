@@ -48,6 +48,7 @@
 .rich-checkbox-buttons__text {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   &::after {
     margin-right: 20px;

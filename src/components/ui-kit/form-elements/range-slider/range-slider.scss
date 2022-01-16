@@ -46,6 +46,10 @@ $border_bg-color: $default-color;
   border-radius: rem(4);
 }
 
+.irs-line {
+  cursor: pointer;
+}
+
 .irs--flat .irs-bar {
   top: rem(23);
   height: rem(7);
@@ -65,12 +69,6 @@ $size: rem(16);
   width: rem(1);
   height: $size;
 }
-
-// .irs-handle {
-//   cursor: pointer;
-//   width: rem(10);
-//   height: rem(10);
-// }
 
 .irs--flat .irs-handle > i:first-child {
   position: absolute;

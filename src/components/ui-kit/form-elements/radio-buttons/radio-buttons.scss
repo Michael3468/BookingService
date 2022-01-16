@@ -41,7 +41,6 @@ $radio-button__size: 20;
   display: inline-block;
   padding-left: rem(30);
   line-height: rem(18);
-  cursor: pointer;
   user-select: none;
 
   &::before {
@@ -52,6 +51,7 @@ $radio-button__size: 20;
     height: rem($radio-button__size);
     border: rem(1) solid $DarkShade25;
     border-radius: 50%;
+    cursor: pointer;
     content: '';
   }
 }
