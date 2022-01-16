@@ -76,7 +76,7 @@ $size: rem(16);
   display: block;
   width: $size;
   height: $size;
-  // margin-left: -($size / 2);
+  transform: translateX(-50%);
   background: $secondaryGradient;
   border: rem(2) solid $border_bg-color;
   border-radius: 50%;
