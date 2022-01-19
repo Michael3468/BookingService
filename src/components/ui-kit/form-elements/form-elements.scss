@@ -10,7 +10,7 @@
 }
 
 .third-container {
-  margin-bottom: rem(73);
+  margin-bottom: rem(75);
 }
 
 .fourth-container {
@@ -42,6 +42,10 @@
   width: rem(266);
 }
 
+.buttons__block-margin {
+  margin-bottom: rem(11);
+}
+
 .block-margin {
   margin-bottom: rem(19);
 }
@@ -52,7 +56,7 @@
 }
 
 .date-dropdown-margin {
-  margin-top: rem(22);
+  margin-top: rem(21);
 }
 
 .subscription-text-field-margin {
@@ -60,15 +64,16 @@
 }
 
 .checkbox-buttons-margin {
-  margin-top: rem(11);
+  margin-top: rem(15);
 }
 
-.toggle-margin {
-  margin-top: rem(21);
+.toggle-block-margin {
+  margin-top: rem(20);
+  margin-bottom: rem(7);
 }
 
-.toggle-margin-between {
-  margin-top: rem(-2);
+.form-elements__toggle-margin-between {
+  margin-bottom: rem(14);
 }
 
 .like-buttons-margin {
@@ -111,24 +116,19 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-bottom: rem(30);
+  margin-bottom: rem(29);
 }
 
 .button__margin {
   margin-right: rem(20);
 }
 
-.btn-mt {
-  margin-top: rem(-4);
-}
-
 .pagination__caption {
-  margin-top: rem(-9);
   margin-bottom: rem(16);
 }
 
 .expandable-checkbox-list__margin {
-  margin-bottom: rem(44);
+  margin-bottom: rem(41);
 }
 
 .comments-block__margin {

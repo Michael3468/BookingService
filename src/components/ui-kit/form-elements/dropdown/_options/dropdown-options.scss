@@ -29,13 +29,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: rem(-3) rem(9) rem(0) rem(0);
   cursor: pointer;
 }
 
 .dropdown__expand-button {
   position: relative;
-  margin: rem(-3) rem(9) rem(0) rem(0);
+  margin: 0 rem(9) 0 0;
   color: $DarkShade50;
   cursor: pointer;
 }
@@ -68,7 +67,6 @@
 .dropdown__menu {
   position: relative;
   z-index: 19;
-  margin: rem(-3) rem(-1) rem(-1);
   padding-bottom: rem(6);
   background: $default-color;
   border: rem(1) solid $DarkShade25;
@@ -90,7 +88,11 @@
   display: flex;
   justify-content: space-between;
   height: rem(37);
-  padding: rem(0) rem(5) rem(0) rem(15);
+  padding: rem(0) rem(5) rem(0) rem(12);
+}
+
+.dropdown__item-controls {
+  display: flex;
 }
 
 .dropdown__button-decrement,
@@ -120,7 +122,6 @@
 
 .dropdown__counter {
   position: relative;
-  top: rem(-3);
   display: inline-block;
   width: 25px;
   margin: 0 4px;

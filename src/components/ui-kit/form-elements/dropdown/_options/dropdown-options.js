@@ -91,6 +91,10 @@ class DropdownOptions extends Dropdown {
   }
 }
 
-const dropdownOptions = document.querySelector('.js-dropdown-options');
-// eslint-disable-next-line no-new
-new DropdownOptions(dropdownOptions);
+const dropdownOptions = document.querySelectorAll('.js-dropdown-options');
+if (dropdownOptions) {
+  dropdownOptions.forEach((item) => {
+    // eslint-disable-next-line no-new
+    new DropdownOptions(item);
+  });
+}

@@ -26,12 +26,12 @@
 }
 
 .datepicker--nav-title {
+  align-self: start;
   max-width: rem(150);
-  margin-top: rem(-7);
+  margin-top: 14px;
   font-weight: bold;
   font-size: rem(19);
   font-family: $secondFont;
-  line-height: rem(25);
 }
 
 .datepicker--nav-title,
@@ -55,8 +55,9 @@
 
 .datepicker--nav-action::after {
   display: inline-block;
+  align-self: start;
   width: rem(25);
-  margin-top: rem(-7);
+  margin-top: 14px;
   color: $purple;
   font-weight: normal;
   font-size: rem(24); /* Preferred icon size 24px */

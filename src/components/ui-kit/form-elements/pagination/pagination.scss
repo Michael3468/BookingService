@@ -74,6 +74,10 @@ $size: rem(40);
   border-radius: $size / 2;
 }
 
+.paginationjs-ellipsis {
+  margin: 0 rem(5);
+}
+
 .paginationjs-prev,
 .paginationjs-next {
   background: $secondaryGradient;
@@ -104,7 +108,7 @@ $size: rem(40);
 .paginationjs-pages-footer {
   display: flex;
   justify-content: center;
-  margin-top: rem(10);
+  margin: rem(9) rem(0) rem(1) rem(0);
   color: $DarkShade75;
   font-size: rem(14);
 }

@@ -129,14 +129,14 @@
   display: grid;
   grid-column-gap: rem(60);
   grid-template-columns: 1fr 380px;
-}
 
-@media only screen and (max-width: 800px) {
-  .room-details__container {
+  @media only screen and (max-width: 800px) {
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr;
   }
+}
 
+@media only screen and (max-width: 800px) {
   .room-details__column-1 {
     order: 1;
   }

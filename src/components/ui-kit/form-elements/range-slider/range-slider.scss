@@ -19,7 +19,7 @@ $border_bg-color: $default-color;
 }
 
 .range-slider__input {
-  margin-top: rem(-5);
+  // margin-top: rem(-5);
 }
 
 /* rangeSlider.css */
@@ -46,6 +46,10 @@ $border_bg-color: $default-color;
   border-radius: rem(4);
 }
 
+.irs-line {
+  cursor: pointer;
+}
+
 .irs--flat .irs-bar {
   top: rem(23);
   height: rem(7);
@@ -66,19 +70,13 @@ $size: rem(16);
   height: $size;
 }
 
-// .irs-handle {
-//   cursor: pointer;
-//   width: rem(10);
-//   height: rem(10);
-// }
-
 .irs--flat .irs-handle > i:first-child {
   position: absolute;
   top: 60%;
   display: block;
   width: $size;
   height: $size;
-  margin-left: -($size / 2);
+  transform: translateX(-50%);
   background: $secondaryGradient;
   border: rem(2) solid $border_bg-color;
   border-radius: 50%;

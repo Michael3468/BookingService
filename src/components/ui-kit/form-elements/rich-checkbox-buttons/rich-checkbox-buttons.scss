@@ -40,7 +40,7 @@
 }
 
 .rich-checkbox-buttons__input:checked + label::before {
-  background-image: url("/assets/img/checkbox-vector.svg");
+  background-image: url('/assets/img/checkbox-vector.svg');
   background-size: rem(12) rem(12);
   border-color: $purple;
 }
@@ -48,6 +48,7 @@
 .rich-checkbox-buttons__text {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   &::after {
     margin-right: 20px;

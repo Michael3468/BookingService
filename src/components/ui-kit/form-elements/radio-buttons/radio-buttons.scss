@@ -6,8 +6,12 @@
   flex-direction: row;
 }
 
+.radio-buttons__block {
+  display: flex;
+}
+
 .radio-buttons__text {
-  margin-top: rem(13);
+  margin-top: rem(6);
   margin-right: rem(20);
 
   &:last-child {
@@ -37,7 +41,6 @@ $radio-button__size: 20;
   display: inline-block;
   padding-left: rem(30);
   line-height: rem(18);
-  cursor: pointer;
   user-select: none;
 
   &::before {
@@ -48,13 +51,14 @@ $radio-button__size: 20;
     height: rem($radio-button__size);
     border: rem(1) solid $DarkShade25;
     border-radius: 50%;
-    content: "";
+    cursor: pointer;
+    content: '';
   }
 }
 
 .radio-buttons__input:checked + .radio-buttons__label::before {
   display: block;
-  background-image: url("/assets/img/radio-checked.svg");
+  background-image: url('/assets/img/radio-checked.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;

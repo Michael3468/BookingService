@@ -25,6 +25,7 @@
   &__input {
     display: flex;
     flex-direction: column;
+    height: 45px;
     padding: rem(12) rem(10) rem(11) rem(13);
     color: $DarkShade75;
     text-transform: uppercase;
