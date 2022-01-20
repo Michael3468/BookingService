@@ -20,6 +20,12 @@
     font-family: $secondFont;
     line-height: rem(18);
     cursor: pointer;
+
+    &:focus {
+      color: $DarkShade75;
+      font-weight: bold;
+      text-shadow: $TabindexShadow;
+    }
   }
 }
 
@@ -100,13 +106,5 @@
 
   &__expand-more-rotate {
     transform: rotate(180deg);
-  }
-}
-
-.checkbox-buttons__text {
-  &:focus {
-    color: $DarkShade75;
-    font-weight: bold;
-    text-shadow: $TabindexShadow;
   }
 }
