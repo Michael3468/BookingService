@@ -1,13 +1,11 @@
 /* eslint-disable no-undef */
-/* eslint-disable prefer-arrow-callback */
 import 'paginationjs/dist/pagination';
 
 import './pagination.scss';
 
-// eslint-disable-next-line func-names
-$(function () {
+$(() => {
   const pSize = 12;
-  $('#pagination-container').pagination({
+  $('.js-pagination-container').pagination({
     dataSource: (done) => {
       const result = [];
       for (let i = 1; i < 180; i += 1) {
@@ -35,9 +33,9 @@ $(function () {
       }
       return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
     },
-    callback: (data, pagination) => {
+    callback: (data) => {
       const html = template(data);
-      $('#data-container').html(html);
+      $('.js-data-container').html(html);
     },
   });
 });
