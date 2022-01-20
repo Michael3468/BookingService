@@ -1,19 +1,9 @@
+/* eslint-disable no-multi-spaces */
 import 'd3/dist/d3.min';
 
 import './d3js-donut-chart.scss';
 
 const d3 = require('d3');
-
-const innerRadius = 5;
-const colorSmooth = 100; /* smooth transition of colors (resolution) */
-const innerText = 'голосов';
-const innerScore = '260';
-
-// values in percents
-const percentsGreat = 50;
-const percentsGood = 25;
-const percentsNormal = 25;
-const percentsBad = 0;
 
 // "start", "end" arcs colors pair per value
 const greatStartColor = '#FFE39C';
@@ -32,16 +22,27 @@ const indent = 1;
 const svg = d3.select('.js-d3js-donut-chart__chart');
 const width = svg.attr('width');
 const height = svg.attr('height');
+
+const percentsGreat = Number(svg.attr('data-great'));
+const percentsGood = Number(svg.attr('data-good'));
+const percentsNormal = Number(svg.attr('data-normal'));
+const percentsBad = Number(svg.attr('data-bad'));
+
+const innerRadius = 5;
+const colorSmooth = 100; /* smooth transition of colors (resolution) */
+const innerText = 'голосов';
+const innerScore = percentsGreat + percentsGood + percentsNormal + percentsBad;
+
 const g = svg
   .append('g')
   .attr('transform', `translate(${width / 2},${height / 2})`);
 
 const radius = d3.min([width, height]) / 2;
 
-const great = (colorSmooth / 100) * percentsGreat;
-const good = (colorSmooth / 100) * percentsGood + great;
-const normal = (colorSmooth / 100) * percentsNormal + good;
-const bad = (colorSmooth / 100) * percentsBad + normal;
+const great  = (colorSmooth / innerScore) * percentsGreat;
+const good   = (colorSmooth / innerScore) * percentsGood   + great;
+const normal = (colorSmooth / innerScore) * percentsNormal + good;
+const bad    = (colorSmooth / innerScore) * percentsBad    + normal;
 
 const dblpi = 2 * Math.PI;
 

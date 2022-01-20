@@ -1,6 +1,6 @@
 mixin d3js-donut-chart(params)
   .d3js-donut-chart
-    svg.d3js-donut-chart__chart.js-d3js-donut-chart__chart(width= params.width, height= params.height)
+    svg.d3js-donut-chart__chart.js-d3js-donut-chart__chart(width= params.width, height= params.height, data-great= params.great, data-good= params.good, data-normal= params.normal, data-bad= params.bad)
     .d3js-donut-chart__legend
       ul
         each val in params.legendValues
