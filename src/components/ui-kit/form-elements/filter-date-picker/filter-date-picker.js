@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
-import './filter-date-picker.scss';
 import 'air-datepicker/dist/js/datepicker.min';
+
+import './filter-date-picker.scss';
 
 $('#filter-date-picker').datepicker({
   range: true,

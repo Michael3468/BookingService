@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
-import './range-slider.scss';
 import 'ion-rangeslider/js/ion.rangeSlider.min';
+
+import './range-slider.scss';
 
 (() => {
   $('.js-range-slider').ionRangeSlider({

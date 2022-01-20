@@ -1,5 +1,6 @@
-import './dropdown-date.scss';
 import '../../cards/date-picker/date-picker';
+
+import './dropdown-date.scss';
 
 function showHideDatePicker(event) {
   if (!event.target.className.includes('dropdown-date__input')) return;

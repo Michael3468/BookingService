@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable prefer-arrow-callback */
-import './pagination.scss';
 import 'paginationjs/dist/pagination';
+
+import './pagination.scss';
 
 // eslint-disable-next-line func-names
 $(function () {

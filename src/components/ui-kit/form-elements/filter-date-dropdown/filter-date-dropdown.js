@@ -1,5 +1,6 @@
-import './filter-date-dropdown.scss';
 import '../filter-date-picker/filter-date-picker';
+
+import './filter-date-dropdown.scss';
 
 function showHideDatePicker(event) {
   const filterDateDropdown = event.target.closest('.filter-date-dropdown')

@@ -1,5 +1,6 @@
-import './d3js-donut-chart.scss';
 import 'd3/dist/d3.min';
+
+import './d3js-donut-chart.scss';
 
 const d3 = require('d3');
 
