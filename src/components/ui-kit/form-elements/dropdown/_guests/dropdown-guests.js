@@ -5,7 +5,7 @@ import './dropdown-guests.scss';
 class DropdownGuests extends Dropdown {
   constructor(elem) {
     super(elem);
-    this.cleanButton = elem.querySelector('.dropdown-guests__button_clean');
+    this.cleanButton = elem.querySelector('.js-dropdown-guests__button_clean');
     this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
   }
 

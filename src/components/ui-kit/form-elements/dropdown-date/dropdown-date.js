@@ -5,7 +5,7 @@ import './dropdown-date.scss';
 function showHideDatePicker(event) {
   if (!event.target.className.includes('dropdown-date__input')) return;
 
-  const ddDate = event.target.closest('.dropdown-date');
+  const ddDate = event.target.closest('.js-dropdown-date');
   const dropdownDate = ddDate.nextSibling;
   const ddDateStatus = dropdownDate.style.display;
   if (ddDateStatus === 'block') {
@@ -22,7 +22,7 @@ function handleDropdownDateBlockKeyPress(e) {
 }
 
 (() => {
-  const DropdownDateBlock = document.querySelector('.dropdown-date');
+  const DropdownDateBlock = document.querySelector('.js-dropdown-date');
   DropdownDateBlock.addEventListener('click', showHideDatePicker);
   DropdownDateBlock.addEventListener('keypress', (e) => {
     handleDropdownDateBlockKeyPress(e);

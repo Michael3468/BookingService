@@ -3,8 +3,8 @@ import '../filter-date-picker/filter-date-picker';
 import './filter-date-dropdown.scss';
 
 function showHideDatePicker(event) {
-  const filterDateDropdown = event.target.closest('.filter-date-dropdown')
-    .querySelector('.dropdown-date__date-picker');
+  const filterDateDropdown = event.target.closest('.js-filter-date-dropdown')
+    .querySelector('.js-dropdown-date__date-picker');
   const filterStatus = filterDateDropdown.style.display;
 
   if (filterStatus === 'block') {

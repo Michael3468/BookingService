@@ -13,8 +13,8 @@ import '../../ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons';
 import '../../ui-kit/headers-and-footers/headers/headers';
 import '../../ui-kit/headers-and-footers/footers/footers';
 
-const optionsColumnButton = document.querySelector('.search-room__options-column_button');
-const menu = document.querySelector('.search-room__options-column');
+const optionsColumnButton = document.querySelector('.js-search-room__options-column_button');
+const menu = document.querySelector('.js-search-room__options-column');
 
 function showColumnOptionsMenu() {
   const menuStatus = menu.style.display;

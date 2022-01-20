@@ -29,7 +29,7 @@ const badEndColor = '#3D4975';
 const indent = 1;
 
 // define the workspace and set the origin to its center
-const svg = d3.select('.d3js-donut-chart__chart');
+const svg = d3.select('.js-d3js-donut-chart__chart');
 const width = svg.attr('width');
 const height = svg.attr('height');
 const g = svg
