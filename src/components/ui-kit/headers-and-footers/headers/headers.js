@@ -13,6 +13,12 @@ function handleHeaderDropdownClick(PointerEvent) {
   getDropdownMenu(PointerEvent).classList.toggle('hidden');
 }
 
+function handleHeaderDropdownKeyPress(e) {
+  if (e.code === 'Enter') {
+    handleHeaderDropdownClick(e);
+  }
+}
+
 function handleHeaderDropdownMouseLeave(PointerEvent) {
   getDropdownMenu(PointerEvent).classList.add('hidden');
 }
@@ -24,9 +30,7 @@ function headersDropdownShowHide() {
     dropdowns.forEach((dropdown) => {
       dropdown.addEventListener('click', handleHeaderDropdownClick);
       dropdown.addEventListener('keypress', (e) => {
-        if (e.code === 'Enter') {
-          handleHeaderDropdownClick(e);
-        }
+        handleHeaderDropdownKeyPress(e);
       });
 
       dropdown.addEventListener('mouseleave', handleHeaderDropdownMouseLeave);

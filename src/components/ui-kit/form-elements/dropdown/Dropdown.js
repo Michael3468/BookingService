@@ -14,9 +14,7 @@ export default class Dropdown {
   initListeners() {
     const blockTop = this.elem.querySelector('.js-dropdown__block_top');
     blockTop.addEventListener('keypress', (e) => {
-      if (e.code === 'Enter') {
-        this.showHide();
-      }
+      this.handleBlockTopKeyPress(e);
     });
   }
 
@@ -29,6 +27,12 @@ export default class Dropdown {
         buttonDecrement.classList.add('dark');
       }
     });
+  }
+
+  handleBlockTopKeyPress(e) {
+    if (e.code === 'Enter') {
+      this.showHide();
+    }
   }
 
   onClick(event) {

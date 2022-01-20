@@ -16,21 +16,27 @@ function showHideCheckboxOptions() {
   }
 }
 
-expandableCheckbox.addEventListener('click', () => {
-  showHideCheckboxOptions();
-});
-
-expandableCheckbox.addEventListener('keypress', (e) => {
+function handleCheckboxCaptionKeyPress(e) {
   if (e.code === 'Enter') {
     showHideCheckboxOptions();
   }
+}
+
+function handleCheckboxItemKeyPress(e, item) {
+  if (e.code === 'Enter') {
+    const checkbox = item.previousElementSibling;
+    checkbox.checked = !checkbox.checked;
+  }
+}
+
+expandableCheckbox.addEventListener('click', showHideCheckboxOptions);
+
+expandableCheckbox.addEventListener('keypress', (e) => {
+  handleCheckboxCaptionKeyPress(e);
 });
 
 checkboxTexts.forEach((item) => {
   item.addEventListener('keypress', (e) => {
-    if (e.code === 'Enter') {
-      const checkbox = item.previousElementSibling;
-      checkbox.checked = !checkbox.checked;
-    }
+    handleCheckboxItemKeyPress(e, item);
   });
 });

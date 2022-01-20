@@ -13,12 +13,16 @@ function showHideDatePicker(event) {
   }
 }
 
+function handleFilterDateDropdownKeyPress(e) {
+  if (e.code === 'Enter') {
+    showHideDatePicker(e);
+  }
+}
+
 (() => {
   const filterDateDropdown = document.querySelector('.js-filter-date-dropdown__input');
   filterDateDropdown.addEventListener('click', showHideDatePicker);
   filterDateDropdown.addEventListener('keypress', (e) => {
-    if (e.code === 'Enter') {
-      showHideDatePicker(e);
-    }
+    handleFilterDateDropdownKeyPress(e);
   });
 })();
