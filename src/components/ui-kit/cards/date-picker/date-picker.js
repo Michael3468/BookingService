@@ -12,8 +12,8 @@ $('.js-date-picker').datepicker({
   },
 
   onSelect(fd) {
-    $('#startDate').val(fd.split(' - ')[0]);
-    $('#endDate').val(fd.split(' - ')[1]);
+    $('.js-start-date').val(fd.split(' - ')[0]);
+    $('.js-end-date').val(fd.split(' - ')[1]);
   },
 });
 

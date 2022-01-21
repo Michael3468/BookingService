@@ -5,14 +5,14 @@ mixin dropdown-date(params)
       .dropdown-date__caption
         h3= params.startDateCaption
       .dropdown-date__input-block
-        input.dropdown-date__input(tabindex="0" id=params.startInpId type="text" name=params.startInpId placeholder="ДД.ММ.ГГГГ" readonly="").input__style
+        input.dropdown-date__input.js-start-date(tabindex="0" type="text" name=params.startInpId placeholder="ДД.ММ.ГГГГ" readonly="").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 
     .dropdown-date__block
       .dropdown-date__caption
         h3= params.endDateCaption
       .dropdown-date__input-block
-        input.dropdown-date__input(tabindex="0" id=params.endInpId type="text" name=params.endInpId placeholder="ДД.ММ.ГГГГ" readonly="").input__style
+        input.dropdown-date__input.js-end-date(tabindex="0" type="text" name=params.endInpId placeholder="ДД.ММ.ГГГГ" readonly="").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 
   //- .dropdown-date
@@ -23,7 +23,5 @@ mixin dropdown-date(params)
 //- example
 //- +dropdown-date({startDateCaption: "date dropdown",
 //-                 endDateCaption:   "date dropdown",
-//-                 startInpId:       "startDate",
-//-                 endInpId:         "endDate",
 //-                 startDefaultDate: "19.08.2019",
 //-                 endDefaultDate:   "23.08.2019"})
