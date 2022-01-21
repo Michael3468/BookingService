@@ -1,24 +1,50 @@
+/* eslint-disable no-underscore-dangle */
 export default class Dropdown {
   constructor(elem) {
     if (elem === null) return;
     this.elem = elem;
+    this._defineElements(elem);
+    this.elem.onclick = this._onClick.bind(this);
+    this._initListeners();
+    this._initDecrementButtonsColors();
+  }
+
+  showHide() {
+    this.menu.hidden = !this.menu.hidden;
+    this.ddBlock.classList.toggle('menu-open');
+  }
+
+  increment(event) {
+    this._setCounterValue(this.action, event);
+  }
+
+  decrement(event) {
+    this._setCounterValue(this.action, event);
+  }
+
+  _defineElements(elem) {
     this.ddBlock = elem.querySelector('.js-dropdown__block');
     this.selectionText = elem.querySelector('.js-dropdown__selection-text');
     this.menu = elem.querySelector('.js-dropdown__menu');
     this.dropdownCounters = elem.querySelectorAll('.js-dropdown__counter');
-    this.elem.onclick = this.onClick.bind(this);
-    this.initListeners();
-    this.initDecrementButtonsColors();
   }
 
-  initListeners() {
+  _onClick(event) {
+    const action = event.target.dataset.ddAction;
+    if (action) {
+      this.action = action;
+      this[action](event);
+    }
+  }
+
+  _initListeners() {
     const blockTop = this.elem.querySelector('.js-dropdown__block_top');
     blockTop.addEventListener('keypress', (e) => {
-      this.handleBlockTopKeyPress(e);
+      this._handleBlockTopKeyPress(e);
     });
   }
 
-  initDecrementButtonsColors() {
+  _initDecrementButtonsColors() {
     const dropdownControls = this.menu.querySelectorAll('.js-dropdown__item-controls');
     dropdownControls.forEach((control) => {
       const counter = control.querySelector('.js-dropdown__counter');
@@ -29,35 +55,8 @@ export default class Dropdown {
     });
   }
 
-  handleBlockTopKeyPress(e) {
-    if (e.code === 'Enter') {
-      this.showHide();
-    }
-  }
-
-  onClick(event) {
-    const action = event.target.dataset.ddAction;
-    if (action) {
-      this.action = action;
-      this[action](event);
-    }
-  }
-
-  showHide() {
-    this.menu.hidden = !this.menu.hidden;
-    this.ddBlock.classList.toggle('menu-open');
-  }
-
-  increment(event) {
-    this.setCounterValue(this.action, event);
-  }
-
-  decrement(event) {
-    this.setCounterValue(this.action, event);
-  }
-
   // eslint-disable-next-line class-methods-use-this
-  setCounterValue(act, event) {
+  _setCounterValue(act, event) {
     const itemControls = event.target.closest('.js-dropdown__item-controls');
     const decrementButton = itemControls.querySelector('.js-dropdown__button-decrement');
     const counter = itemControls.querySelector('.js-dropdown__counter');
@@ -75,6 +74,12 @@ export default class Dropdown {
           decrementButton.classList.remove('dark');
         }
       }
+    }
+  }
+
+  _handleBlockTopKeyPress(e) {
+    if (e.code === 'Enter') {
+      this.showHide();
     }
   }
 }
