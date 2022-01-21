@@ -58,7 +58,7 @@ $radio-button__size: 20;
 
 .radio-buttons__input:checked + .radio-buttons__label::before {
   display: block;
-  background-image: url('/assets/img/radio-checked.svg');
+  background-image: url('./radio-checked.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
