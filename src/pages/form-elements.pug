@@ -50,8 +50,6 @@ block content
         include ../components/ui-kit/form-elements/dropdown-date/dropdown-date
         +dropdown-date({startDateCaption: "date dropdown",
                         endDateCaption:   "date dropdown",
-                        startInpId:       "startDate",
-                        endInpId:         "endDate",
                         endDefaultDate:   "2019-08-19"})
 
       .mini-column
@@ -105,12 +103,10 @@ block content
         h3.like-button__caption like button
         .like-buttons__direction
           .like-button__margin
-            +like-button({leftCaption:   "like button",
-                          likeBtnId:     "likeBtnId-1",
-                          likeBtnText:   "2"})
+            +like-button({leftCaption: "like button",
+                          likeBtnText: "2"})
 
-          +like-button({likeBtnId:     "likeBtnId-2",
-                        likeBtnStatus: "checked",
+          +like-button({likeBtnStatus: "checked",
                         likeBtnText:   "12"})
 
       .block-margin

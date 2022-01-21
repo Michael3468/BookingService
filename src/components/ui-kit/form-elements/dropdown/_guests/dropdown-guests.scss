@@ -11,6 +11,14 @@
     padding: rem(18) rem(1) rem(5) rem(7);
   }
 
+  &__button_clean {
+    visibility: hidden;
+
+    &_show {
+      visibility: visible;
+    }
+  }
+
   &__button_clean,
   &__button_apply {
     color: $purple;
@@ -24,14 +32,6 @@
     &:focus {
       color: $DarkShade75;
       text-shadow: $TabindexShadow;
-    }
-  }
-
-  &__button_clean {
-    visibility: hidden;
-
-    &_show {
-      visibility: visible;
     }
   }
   // dropdown-guests--buttons.scss

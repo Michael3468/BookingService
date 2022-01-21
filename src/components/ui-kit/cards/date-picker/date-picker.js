@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
-import './date-picker.scss';
 import 'air-datepicker/dist/js/datepicker.min';
 
-$('.date-picker').datepicker({
+import './date-picker.scss';
+
+$('.js-date-picker').datepicker({
   range: true,
   multipleDatesSeparator: ' - ',
   clearButton: true,
@@ -11,13 +12,13 @@ $('.date-picker').datepicker({
   },
 
   onSelect(fd) {
-    $('#startDate').val(fd.split(' - ')[0]);
-    $('#endDate').val(fd.split(' - ')[1]);
+    $('.js-start-date').val(fd.split(' - ')[0]);
+    $('.js-end-date').val(fd.split(' - ')[1]);
   },
 });
 
 function addApplyButton() {
-  const $isPickerButtons = $('.date-picker').find('.datepicker--buttons');
+  const $isPickerButtons = $('.js-date-picker').find('.datepicker--buttons');
   if ($isPickerButtons) {
     $isPickerButtons.append(
       '<span class="datepicker--button" data-action="apply">Применить</span>',
@@ -26,7 +27,7 @@ function addApplyButton() {
 }
 
 function hideDatePicker(event) {
-  const $picker = $(event.target).closest('.dropdown-date__date-picker');
+  const $picker = $(event.target).closest('.js-dropdown-date__date-picker');
   const $pickerStatus = $picker.css('display');
   if ($pickerStatus === 'block') {
     $picker.css('display', 'none');

@@ -1,9 +1,10 @@
-import './filter-date-dropdown.scss';
 import '../filter-date-picker/filter-date-picker';
 
+import './filter-date-dropdown.scss';
+
 function showHideDatePicker(event) {
-  const filterDateDropdown = event.target.closest('.filter-date-dropdown')
-    .querySelector('.dropdown-date__date-picker');
+  const filterDateDropdown = event.target.closest('.js-filter-date-dropdown')
+    .querySelector('.js-dropdown-date__date-picker');
   const filterStatus = filterDateDropdown.style.display;
 
   if (filterStatus === 'block') {
@@ -13,12 +14,16 @@ function showHideDatePicker(event) {
   }
 }
 
+function handleFilterDateDropdownKeyPress(e) {
+  if (e.code === 'Enter') {
+    showHideDatePicker(e);
+  }
+}
+
 (() => {
   const filterDateDropdown = document.querySelector('.js-filter-date-dropdown__input');
   filterDateDropdown.addEventListener('click', showHideDatePicker);
   filterDateDropdown.addEventListener('keypress', (e) => {
-    if (e.code === 'Enter') {
-      showHideDatePicker(e);
-    }
+    handleFilterDateDropdownKeyPress(e);
   });
 })();

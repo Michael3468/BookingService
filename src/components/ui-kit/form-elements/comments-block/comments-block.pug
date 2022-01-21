@@ -10,8 +10,7 @@ mixin comments-block(params)
     .comments-block__feedback
       .comments-block__feedback_like
         include ../like-button/like-button
-        +like-button({likeBtnId:     params.likeBtnId,
-                      likeBtnStatus: params.likeBtnStatus,
+        +like-button({likeBtnStatus: params.likeBtnStatus,
                       likeBtnText:   params.likeBtnText,
                     })
       .comments-block__feedback_text= params.feedbackText

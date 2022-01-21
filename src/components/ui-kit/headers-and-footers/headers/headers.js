@@ -1,7 +1,7 @@
-import './headers.scss';
-
 import './header_logo/header_logo';
 import '../../form-elements/buttons/buttons';
+
+import './headers.scss';
 
 /* dropdown menu */
 function getDropdownMenu(PointerEvent) {
@@ -11,6 +11,12 @@ function getDropdownMenu(PointerEvent) {
 
 function handleHeaderDropdownClick(PointerEvent) {
   getDropdownMenu(PointerEvent).classList.toggle('hidden');
+}
+
+function handleHeaderDropdownKeyPress(e) {
+  if (e.code === 'Enter') {
+    handleHeaderDropdownClick(e);
+  }
 }
 
 function handleHeaderDropdownMouseLeave(PointerEvent) {
@@ -24,9 +30,7 @@ function headersDropdownShowHide() {
     dropdowns.forEach((dropdown) => {
       dropdown.addEventListener('click', handleHeaderDropdownClick);
       dropdown.addEventListener('keypress', (e) => {
-        if (e.code === 'Enter') {
-          handleHeaderDropdownClick(e);
-        }
+        handleHeaderDropdownKeyPress(e);
       });
 
       dropdown.addEventListener('mouseleave', handleHeaderDropdownMouseLeave);

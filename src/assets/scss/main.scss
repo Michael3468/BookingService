@@ -52,6 +52,7 @@ section,
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
+  background-color: $default-color;
 }
 
 .container {
@@ -62,6 +63,7 @@ section,
   max-width: 1160px;
   margin-right: auto;
   margin-left: auto;
+  background-color: $default-color;
 
   @media screen and (max-width: $desktopWidth) {
     padding: 0 $desktopWidthPadding;
@@ -139,5 +141,5 @@ a {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }

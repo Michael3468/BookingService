@@ -12,6 +12,12 @@ $toggle-size: rem(10);
   margin-bottom: rem(15);
 }
 
+.toggle__text {
+  margin-left: rem(9);
+  color: $DarkShade75;
+  font-family: $secondFont;
+}
+
 .toggle__button {
   width: $toggle-size*4;
   height: $toggle-size*2;
@@ -34,10 +40,4 @@ $toggle-size: rem(10);
 .toggle__button:checked {
   background-position: 90% 50%;
   filter: grayscale(0);
-}
-
-.toggle__text {
-  margin-left: rem(9);
-  color: $DarkShade75;
-  font-family: $secondFont;
 }

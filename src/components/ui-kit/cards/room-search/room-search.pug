@@ -7,8 +7,6 @@ mixin room-search(params)
         include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
         +dropdown-date({startDateCaption: "прибытие",
                         endDateCaption:   "выезд",
-                        startInpId:       "startDate",
-                        endInpId:         "endDate",
                       })
 
       .room-search__dropdown-guests-margin
@@ -17,7 +15,9 @@ mixin room-search(params)
                     type:          "dropdown-guests",
                     selectionText: "Сколько гостей",
                     expMenuStatus: "hidden",
+                    formPart:      "true",
                   })
 
-      include ../../../ui-kit/form-elements/buttons/buttons
-      +button({mod: ["with_arrow", "block"], value: "Подобрать номер", type: "submit", class: "js-room-search-button"})
+      .room-search__submit-button
+        include ../../../ui-kit/form-elements/buttons/buttons
+        +button({mod: ["with_arrow", "block"], value: "Подобрать номер", type: "submit", class: "js-room-search-button"})

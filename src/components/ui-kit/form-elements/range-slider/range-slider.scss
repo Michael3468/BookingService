@@ -38,16 +38,16 @@ $border_bg-color: $default-color;
   border-radius: rem(4);
 }
 
+.irs-line {
+  cursor: pointer;
+}
+
 .irs--flat .irs-line {
   top: rem(23);
   height: rem(7);
   background-color: $border_bg-color;
   border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
-}
-
-.irs-line {
-  cursor: pointer;
 }
 
 .irs--flat .irs-bar {
@@ -76,10 +76,10 @@ $size: rem(16);
   display: block;
   width: $size;
   height: $size;
-  transform: translateX(-50%);
   background: $secondaryGradient;
   border: rem(2) solid $border_bg-color;
   border-radius: 50%;
+  transform: translateX(-50%);
 }
 
 /* rangeSlider.css */

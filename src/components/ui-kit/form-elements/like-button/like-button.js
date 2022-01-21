@@ -22,16 +22,24 @@ function changeCounter(element) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function handleLikeButtonClick(e) {
+  const element = e.target;
+  const likeButton = element.closest('.js-like-button-container');
+
+  toggleClasses(likeButton);
+  changeCounter(likeButton);
+}
+
+function handleDomContentLoaded() {
   const likeButtons = document.querySelectorAll('.js-like-button-container');
 
   likeButtons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-      const element = event.target;
-      const likeButton = element.closest('.js-like-button-container');
-
-      toggleClasses(likeButton);
-      changeCounter(likeButton);
+    button.addEventListener('click', (e) => {
+      handleLikeButtonClick(e);
     });
   });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  handleDomContentLoaded();
 });

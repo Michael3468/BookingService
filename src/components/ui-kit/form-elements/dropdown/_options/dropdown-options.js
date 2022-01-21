@@ -1,5 +1,6 @@
-import './dropdown-options.scss';
 import Dropdown from '../Dropdown';
+
+import './dropdown-options.scss';
 
 class DropdownOptions extends Dropdown {
   constructor(elem) {
