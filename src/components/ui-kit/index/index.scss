@@ -16,6 +16,7 @@
 .navigation__link {
   color: #808080;
 
+  &:focus,
   &:hover {
     color: #000;
   }
