@@ -32,7 +32,7 @@ $arrows-top: calc(50% - #{$arrows-size} / 2); //- $arrows-size = arrow height
   top: $arrows-top;
   width: $arrows-size;
   height: $arrows-size;
-  background: url('/assets/img/expand_more.svg') 50% 50% / 20% no-repeat;
+  background: url('./expand_more.svg') 50% 50% / 20% no-repeat;
   content: '';
 }
 
