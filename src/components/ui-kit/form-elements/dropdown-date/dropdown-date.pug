@@ -5,14 +5,14 @@ mixin dropdown-date(params)
       .dropdown-date__caption
         h3= params.startDateCaption
       .dropdown-date__input-block
-        input.dropdown-date__input.js-start-date(tabindex="0" type="text" name=params.startInpId placeholder="ДД.ММ.ГГГГ" readonly="").input__style
+        input.dropdown-date__input.js-start-date(name="start-date" tabindex="0" type="text" placeholder="ДД.ММ.ГГГГ" readonly="").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 
     .dropdown-date__block
       .dropdown-date__caption
         h3= params.endDateCaption
       .dropdown-date__input-block
-        input.dropdown-date__input.js-end-date(tabindex="0" type="text" name=params.endInpId placeholder="ДД.ММ.ГГГГ" readonly="").input__style
+        input.dropdown-date__input.js-end-date(name="end-date" tabindex="0" type="text" placeholder="ДД.ММ.ГГГГ" readonly="").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 
   //- .dropdown-date
