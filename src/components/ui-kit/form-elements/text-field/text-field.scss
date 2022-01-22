@@ -68,3 +68,15 @@
     color: $DarkShade75;
   }
 }
+
+.arrow-forward:focus {
+  color: $DarkShade75;
+  font-weight: bold;
+  text-shadow: $TabindexShadow;
+}
+
+.gradient-icon {
+  background: $primaryGradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

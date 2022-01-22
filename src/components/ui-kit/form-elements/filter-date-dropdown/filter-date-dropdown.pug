@@ -1,16 +1,16 @@
 mixin filter-date-dropdown(params)
-  .filter-date-dropdown
+  .filter-date-dropdown.js-filter-date-dropdown
     .filter-date-dropdown__caption
       h3= params.leftCaption
     .filter-date-dropdown__input_block
-      input.filter-date-dropdown__input.input__style(type='text' placeholder='Выберите даты' readonly)
+      input.filter-date-dropdown__input.js-filter-date-dropdown__input.input__style(tabindex="0" type="text" placeholder="Выберите даты" readonly)
       .filter-date-dropdown__input_arrow.material-icons expand_more
 
-    //- dropdown datepicker from 'dropdown-date.js'
-    .dropdown-date__date-picker.filter-date-dropdown_hidden
+    //- dropdown datepicker from "dropdown-date.js"
+    .dropdown-date__date-picker.js-dropdown-date__date-picker.filter-date-dropdown_hidden
       include ../filter-date-picker/filter-date-picker
       +filter-date-picker()
 
 
 //- example
-//- +filter-date-dropdown({leftCaption : 'filter date dropdown'})
+//- +filter-date-dropdown({leftCaption : "filter date dropdown"})

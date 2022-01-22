@@ -1,5 +1,5 @@
 mixin room-card(params)
-  .room-card(id=`room-card-${params.id}`)
+  .room-card
     .room-card__picture-container
       include ./slick-carousel/slick-carousel
       +slick-carousel({photoName : params.photoName})
@@ -9,8 +9,8 @@ mixin room-card(params)
       +booking-caption({  roomNumber:    params.number,
                           roomStatus:    params.status,
                           roomPrice:     params.price,
-                          fontSize:     'number-price_font-size',
-                          marginBottom: 'number-price_m-bottom',
+                          fontSize:     "room-card-caption",
+                          captionType:  "room-card",
                       })
 
     .room-card__feedback-block
@@ -22,13 +22,12 @@ mixin room-card(params)
       include __feedbacks/__feedbacks
       +feedbacks({
                   number: params.feedbacks,
-                  text:   'Отзывов',
+                  text:   "Отзывов",
                 })
 
 
 //- example
-//- +room-card({  id:         index+1,
-//-               number:     room.number,
+//- +room-card({  number:     room.number,
 //-               status:     room.luxStatus,
 //-               price:      `${room.price}₽`,
 //-               photoName:  `room-card-${room.number}.jpg`,

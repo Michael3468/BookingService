@@ -1,50 +1,51 @@
 mixin booking(params)
   .booking.cards_border
 
-    include ./__caption/booking__caption
-    +booking-caption({roomNumber: '888',
-                      roomStatus: 'Люкс',
-                      roomPrice:  params.roomPrice,})
+    form.js-booking-form(action="#change-me")
+      include ./__caption/booking__caption
+      +booking-caption({roomNumber:  "888",
+                        roomStatus:  "Люкс",
+                        roomPrice:   params.roomPrice,
+                        fontSize:    'booking-caption',
+                        captionType: "booking",})
 
-    .booking__date-dropdown-margin
-      include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
-      +dropdown-date({startDateCaption: 'прибытие',
-                      endDateCaption:   'выезд',
-                      startInpId:       'startDate',
-                      endInpId:         'endDate',
-                      startDefaultDate: '19.08.2019',
-                      endDefaultDate:   '23.08.2019',
-                      })
+      .booking__date-dropdown-margin
+        include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
+        +dropdown-date({startDateCaption: "прибытие",
+                        endDateCaption:   "выезд",
+                        startDefaultDate: "19.08.2019",
+                        endDefaultDate:   "23.08.2019",
+                        })
 
-    include ../../../ui-kit/form-elements/dropdown/dropdown
-    +dropdown({ leftCaption:   'гости',
-                id:            'dropdown-guests',
-                selectionText: '3 гостя',
-                expMenuStatus: 'hidden',
-              })
+      include ../../../ui-kit/form-elements/dropdown/dropdown
+      +dropdown({ leftCaption:   "гости",
+                  type:          "dropdown-guests",
+                  selectionText: "3 гостя",
+                  expMenuStatus: "hidden",
+                  formPart:      "true",
+                })
 
+      .booking__options-block
 
-    .booking__options-block
+        .booking__options_left
+          .booking__options-item_block
+            p.booking__options-item_text=params.roomPrice + params.daysPriceText
+          .booking__options-item_block
+            p.booking__options-item_text=params.servicesPriceText
+            .booking__options-info-icon
+          .booking__options-item_block
+            p.booking__options-item_text=params.additionalServicesPriceText
+            .booking__options-info-icon
 
-      .booking__options_left
-        .booking__options-item_block
-          p.booking__options-item_text=params.roomPrice + params.daysPriceText
-        .booking__options-item_block
-          p.booking__options-item_text=params.servicesPriceText
-          .booking__options-info-icon
-        .booking__options-item_block
-          p.booking__options-item_text=params.additionalServicesPriceText
-          .booking__options-info-icon
+        .booking__options_right
+          p.booking__options-item_text=params.daysPriceValue
+          p.booking__options-item_text=params.servicesPriceValue
+          p.booking__options-item_text=params.additionalServicesPriceValue
 
-      .booking__options_right
-        p.booking__options-item_text=params.daysPriceValue
-        p.booking__options-item_text=params.servicesPriceValue
-        p.booking__options-item_text=params.additionalServicesPriceValue
+      .booking__options-result
+        p.booking__options-result_text=params.resultText
+        .booking__options-result_line
+        p.booking__options-result_sum= params.resultSum
 
-    .booking__options-result
-      p.booking__options-result_text=params.resultText
-      .booking__options-result_line
-      p.booking__options-result_sum= params.resultSum
-
-    include ../../../ui-kit/form-elements/buttons/buttons
-    +button({link: 'change_me', mod: ['with_arrow','block'], value: 'Забронировать'})
+      include ../../../ui-kit/form-elements/buttons/buttons
+      +button({mod: ["with_arrow","block"], value: "Забронировать", class: 'js-booking-submit-button'})

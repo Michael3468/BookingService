@@ -1,9 +1,9 @@
 extends ../components/layouts/main
 
 block variables
-  - var title = 'FSD Headers & Footers';
-  - var description = 'FSD education project | Headers & Footers page';
-  - var pageClass = 'headers-and-footers';
+  - var title = "FSD Headers & Footers";
+  - var description = "FSD education project | Headers & Footers page";
+  - var pageClass = "headers-and-footers";
 
 block content
 
@@ -11,10 +11,10 @@ block content
   include ../components/ui-kit/headers-and-footers/headers/headers
   +header()
   .headers-and-footers__margin
-    +header('authorized')
+    +header("authorized")
   include ../components/ui-kit/headers-and-footers/footers/footers
   .headers-and-footers__margin
     +footer()
   .headers-and-footers__margin
     .responsive-footer-container
-      +footer('mobile')
+      +footer("mobile")

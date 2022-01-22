@@ -6,13 +6,22 @@ $toggle-size: rem(10);
 .toggle {
   display: flex;
   align-items: center;
-  margin-top: rem(16);
+}
+
+.toggle__caption {
+  margin-bottom: rem(15);
+}
+
+.toggle__text {
+  margin-left: rem(9);
+  color: $DarkShade75;
+  font-family: $secondFont;
 }
 
 .toggle__button {
   width: $toggle-size*4;
   height: $toggle-size*2;
-  background: url("/assets/img/radio-checked.svg") no-repeat;
+  background: url('./radio-checked.svg') no-repeat;
   background-position: 10% 50%;
   background-size: 34%;
   border: $toggle-size/10 solid $purple;
@@ -20,15 +29,15 @@ $toggle-size: rem(10);
   cursor: pointer;
   filter: grayscale(100%);
   appearance: none;
+
+  &:focus + .toggle__text {
+    color: $DarkShade75;
+    font-weight: bold;
+    text-shadow: $TabindexShadow;
+  }
 }
 
 .toggle__button:checked {
   background-position: 90% 50%;
   filter: grayscale(0);
-}
-
-.toggle__text {
-  margin-left: rem(11);
-  color: $DarkShade75;
-  font-family: $secondFont;
 }

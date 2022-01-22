@@ -68,7 +68,7 @@ module.exports = {
         exclude: '/node_modules/',
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader',
         options: {
           outputPath: 'assets/fonts',
@@ -78,11 +78,17 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'url-loader',
-        options: {
-          name: '[name].[ext]',
-        },
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/img',
+              publicPath: '../img',
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -131,7 +137,7 @@ module.exports = {
         to: `${PATHS.assets}img`,
         flatten: true,
       },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/static`, to: 'static' },
     ]),
 
     ...PAGES.map(

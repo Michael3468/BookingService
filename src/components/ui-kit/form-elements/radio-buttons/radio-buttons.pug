@@ -3,17 +3,15 @@ mixin radio-buttons(params)
     if (params.leftCaption)
       h3.radio-buttons__caption= params.leftCaption
     .radio-buttons__block
-      form.radio-buttons__form(action= params.formActionName)
-        each val, index in params.inpText
-          p.radio-buttons__text
-            input.radio-buttons__input(type='radio', id= params.inpName[index], name= params.radioButtonName, value= params.inpName[index], checked= params.inpStatus[index])
-            label.radio-buttons__label #{val}
+      each val, index in params.inpText
+        p.radio-buttons__text
+          input.radio-buttons__input(type="radio", name= params.radioButtonName, value= params.inpName[index], checked= params.inpStatus[index])
+          label.radio-buttons__label #{val}
 
 //- example
-//- +radio-buttons({leftCaption:    'radio buttons',
-//-                 formActionName: 'form-action.php',
-//-                 radioButtonName:  'radio-button',
-//-                 inpName:        ['man',    'woman'],
-//-                 inpText:        ['Мужчина','Женщина'],
-//-                 inpStatus:      ['checked',],
+//- +radio-buttons({leftCaption:     "radio buttons",
+//-                 radioButtonName: "radio-button",
+//-                 inpName:        ["man", "woman"],
+//-                 inpText:        ["Мужчина","Женщина"],
+//-                 inpStatus:      ["checked",],
 //-                 })

@@ -1,79 +1,22 @@
-import './dropdown-guests.scss';
 import Dropdown from '../Dropdown';
 
-function updateDropdownGuestsSelectionText(thisObj) {
-  const adultsNum = Number(thisObj.dropdownCounters[0].value);
-  const guestsNum = Number(thisObj.dropdownCounters[0].value)
-                  + Number(thisObj.dropdownCounters[1].value);
-  const babiesNum = Number(thisObj.dropdownCounters[2].value);
-
-  let guestsText;
-  switch (guestsNum) {
-    case 1:
-      guestsText = 'гость';
-      break;
-    case 2:
-    case 3:
-    case 4:
-      guestsText = 'гостя';
-      break;
-    default:
-      guestsText = 'гостей';
-  }
-
-  let babiesText;
-  switch (babiesNum) {
-    case 1:
-      babiesText = 'младенец';
-      break;
-    case 2:
-    case 3:
-    case 4:
-      babiesText = 'младенца';
-      break;
-    default:
-      babiesText = 'младенцев';
-  }
-
-  // cleanButton visibility
-  if (guestsNum > 0 || babiesNum > 0) {
-    thisObj.cleanButton.classList.add('dropdown-guests__button_clean_show');
-  } else {
-    thisObj.cleanButton.classList.remove('dropdown-guests__button_clean_show');
-  }
-  // cleanButton visibility end
-
-  // change selection text
-  if (adultsNum === 0 && (babiesNum > 0 || guestsNum > 0)) {
-    return 'Должны быть взрослые';
-  }
-  if (guestsNum > 0 && babiesNum > 0) {
-    return `${guestsNum} ${guestsText}, ${babiesNum} ${babiesText}`;
-  }
-  if (guestsNum > 0) {
-    return `${guestsNum} ${guestsText}`;
-  }
-  if (guestsNum === 0 && babiesNum === 0) {
-    return 'Сколько гостей';
-  }
-  return 'Сколько гостей';
-  // change selection text end
-}
+import './dropdown-guests.scss';
 
 class DropdownGuests extends Dropdown {
   constructor(elem) {
     super(elem);
-    this.cleanButton = elem.querySelector('.dropdown-guests__button_clean');
+    this.cleanButton = elem.querySelector('.js-dropdown-guests__button_clean');
+    this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
   }
 
   increment(event) {
     super.increment(event);
-    this.selectionText.innerText = updateDropdownGuestsSelectionText(this);
+    this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
   }
 
   decrement(event) {
     super.increment(event);
-    this.selectionText.innerText = updateDropdownGuestsSelectionText(this);
+    this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
   }
 
   clean() {
@@ -94,8 +37,76 @@ class DropdownGuests extends Dropdown {
   apply() {
     super.showHide();
   }
+
+  updateDropdownGuestsSelectionText() {
+    const adultsNum = Number(this.dropdownCounters[0].value);
+    const guestsNum = Number(this.dropdownCounters[0].value)
+                    + Number(this.dropdownCounters[1].value);
+    const babiesNum = Number(this.dropdownCounters[2].value);
+
+    let guestsText;
+    switch (guestsNum) {
+      case 1:
+        guestsText = 'гость';
+        break;
+      case 2:
+      case 3:
+      case 4:
+        guestsText = 'гостя';
+        break;
+      default:
+        guestsText = 'гостей';
+    }
+
+    let babiesText;
+    switch (babiesNum) {
+      case 1:
+        babiesText = 'младенец';
+        break;
+      case 2:
+      case 3:
+      case 4:
+        babiesText = 'младенца';
+        break;
+      default:
+        babiesText = 'младенцев';
+    }
+
+    const isGuestsOrBabies = guestsNum > 0 || babiesNum > 0;
+    const isChildsWithoutAdults = adultsNum === 0 && (babiesNum > 0 || guestsNum > 0);
+    const isGuests = guestsNum > 0 && babiesNum > 0;
+
+    // cleanButton visibility
+    if (isGuestsOrBabies) {
+      this.cleanButton.classList.add('dropdown-guests__button_clean_show');
+    } else {
+      this.cleanButton.classList.remove('dropdown-guests__button_clean_show');
+    }
+    // cleanButton visibility end
+
+    // change selection text
+    if (isChildsWithoutAdults) {
+      return 'Должны быть взрослые';
+    }
+
+    if (isGuests) {
+      return `${guestsNum} ${guestsText}, ${babiesNum} ${babiesText}`;
+    }
+    if (guestsNum > 0) {
+      return `${guestsNum} ${guestsText}`;
+    }
+    if (!isGuests) {
+      return 'Сколько гостей';
+    }
+    return 'Сколько гостей';
+    // change selection text end
+  }
 }
 
-const dropdownGuests = document.querySelector('#dropdown-guests');
-// eslint-disable-next-line no-new
-new DropdownGuests(dropdownGuests);
+const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
+if (dropdownGuests) {
+  dropdownGuests.forEach((dropdown) => {
+    // eslint-disable-next-line no-new
+    new DropdownGuests(dropdown);
+  });
+}

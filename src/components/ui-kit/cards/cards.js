@@ -1,7 +1,7 @@
 import './cards.scss';
 
-import './room-search/room-search';
-import './registration/registration';
 import './booking/booking';
 import './login/login';
+import './registration/registration';
 import './room-card/room-card';
+import './room-search/room-search';

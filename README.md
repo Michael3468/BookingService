@@ -32,11 +32,12 @@ $ npm run deploy
 
 ## Plugins
 ```
-"air-datepicker": "^2.2.3",
-"d3": "^6.7.0",
-"inputmask": "^5.0.6",
-"ion-rangeslider": "^2.3.1",
 "jquery": "^3.6.0",
+"air-datepicker": "^2.2.3",
+"airbnb-browser-shims": "^3.3.0",
+"d3": "^6.7.0",
+"inputmask": "^5.0.7",
+"ion-rangeslider": "^2.3.1",
 "paginationjs": "^2.1.5",
 "slick-carousel": "^1.8.1"
 ```

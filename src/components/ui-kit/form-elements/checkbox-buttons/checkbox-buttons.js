@@ -1,31 +1,42 @@
 import './checkbox-buttons.scss';
 
-const expandableCheckbox = document.getElementById('expandable-checkbox-list-check-box-buttons-1');
+const expandableCheckbox = document.querySelector('.js-expandable-checkbox-list');
+const checkboxTexts = document.querySelectorAll('.js-checkbox-buttons__text');
 const checkboxOptions = expandableCheckbox.nextElementSibling;
 const expandMore = expandableCheckbox.lastElementChild.children[1];
 
-function isCheckboxOptionsVisible() {
+function showHideCheckboxOptions() {
   const notVisible = checkboxOptions.classList.contains('display-none');
   if (notVisible) {
-    return false;
-  }
-  return true;
-}
-
-function showCheckboxOptions() {
-  checkboxOptions.classList.remove('display-none');
-  expandMore.classList.add('expandable-checkbox-list__expand-more-rotate');
-}
-
-function hideCheckboxOptions() {
-  checkboxOptions.classList.add('display-none');
-  expandMore.classList.remove('expandable-checkbox-list__expand-more-rotate');
-}
-
-expandableCheckbox.onclick = () => {
-  if (isCheckboxOptionsVisible()) {
-    hideCheckboxOptions();
+    checkboxOptions.classList.remove('display-none');
+    expandMore.classList.remove('expandable-checkbox-list__expand-more-rotate');
   } else {
-    showCheckboxOptions();
+    checkboxOptions.classList.add('display-none');
+    expandMore.classList.add('expandable-checkbox-list__expand-more-rotate');
   }
-};
+}
+
+function handleCheckboxCaptionKeyPress(e) {
+  if (e.code === 'Enter') {
+    showHideCheckboxOptions();
+  }
+}
+
+function handleCheckboxItemKeyPress(e, item) {
+  if (e.code === 'Enter') {
+    const checkbox = item.previousElementSibling;
+    checkbox.checked = !checkbox.checked;
+  }
+}
+
+expandableCheckbox.addEventListener('click', showHideCheckboxOptions);
+
+expandableCheckbox.addEventListener('keypress', (e) => {
+  handleCheckboxCaptionKeyPress(e);
+});
+
+checkboxTexts.forEach((item) => {
+  item.addEventListener('keypress', (e) => {
+    handleCheckboxItemKeyPress(e, item);
+  });
+});

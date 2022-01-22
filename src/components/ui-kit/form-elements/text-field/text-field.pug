@@ -6,54 +6,44 @@ mixin text-field(params)
       if (params.rightCaption)
         h3.text-field__caption-right= params.rightCaption
     .text-field__input_block
-      if (params.textTransform)
-        input.text-field__input.input__style(
-          style= 'text-transform: '+params.textTransform+';'
-          class=params.hoverStyle
-          type= params.inpType
-          name=params.inpName
-          inputmode=params.inpMode
-          placeholder=params.inpPlaceholder
-          id=params.inpId)
-      else
-        input.text-field__input.input__style(
-          class=params.hoverStyle
-          type= params.inpType
-          name=params.inpName
-          inputmode=params.inpMode
-          placeholder=params.inpPlaceholder
-          id=params.inpId)
-      if ( params.isArrow == 'true' )
+      input.text-field__input.input__style(
+        class=(params.hoverStyle, `js-${params.inpType}`)
+        type=params.inpType
+        name=params.inpName
+        inputmode=params.inpMode
+        placeholder=params.inpPlaceholder
+        tabindex="0"
+        )
+      if ( params.isArrow == "true" )
         .text-field__input_arrow-forward
-          label.material-icons.gradient-icon arrow_forward
+          button.material-icons.gradient-icon.arrow-forward.js-arrow-forward(tabindex="0" type='submit') arrow_forward
       
 //- examples
 //-
 //- text-field
-//- +text-field({leftCaption:    'text field', 
-//-              rightCaption:   'default',
-//-              inpType:        'email',
-//-              inpName:        'email',
-//-              inpMode:        'email',
-//-              inpPlaceholder: 'Email',
-//-              inpId:          'email-text-field',
-//-              hoverStyle:     'like-hover'})
+//- +text-field({leftCaption:    "text field",
+//-              rightCaption:   "default",
+//-              inpType:        "email",
+//-              inpName:        "email",
+//-              inpMode:        "email",
+//-              inpPlaceholder: "Email",
+//-              inpId:          "email-text-field",
+//-              hoverStyle:     "like-hover"})
 
 //- mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya
 //-
 //- masked text-field
-//- +text-field({leftCaption:    'masked text field',
-//-              inpType:        'date',
-//-              inpName:        'date',
-//-              inpId:          'dateField',
-//-              textTransform:  'uppercase'})
+//- +text-field({leftCaption:    "masked text field",
+//-              inpType:        "date",
+//-              inpName:        "date",
+//-              inpId:          "dateField"})
 
 //- subscription text field
-//- +text-field({leftCaption:    'subscription text field', 
-//-              inpType:        'email',
-//-              inpName:        'email',
-//-              inpMode:        'email',
-//-              inpPlaceholder: 'Email',
-//-              inpId:          'Subscription',
-//-              isArrow:        'true',
+//- +text-field({leftCaption:    "subscription text field",
+//-              inpType:        "email",
+//-              inpName:        "email",
+//-              inpMode:        "email",
+//-              inpPlaceholder: "Email",
+//-              inpId:          "Subscription",
+//-              isArrow:        "true",
 //-             })

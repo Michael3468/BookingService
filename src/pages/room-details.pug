@@ -1,9 +1,9 @@
 extends ../components/layouts/main-header-footer
 
 block variables
-  - var title = 'FSD Room details';
-  - var description = 'FSD education project | Room details';
-  - var pageClass = 'room-details';
+  - var title = "FSD Room details";
+  - var description = "FSD education project | Room details";
+  - var pageClass = "room-details";
 
 block content
 
@@ -25,25 +25,29 @@ block content
             h2.room-details__h2 Сведения о номере
             .room-details__icon-text-list__position
               include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
-              +icon-text-list({ iconName : 'insert_emoticon',
-                                caption:   'Комфорт',
-                                text:      'Шумопоглощающие стены'})
+              +icon-text-list({ iconName : "insert_emoticon",
+                                caption:   "Комфорт",
+                                text:      "Шумопоглощающие стены"})
 
-              +icon-text-list({ iconName : 'location_city',
-                                caption:   'Удобство',
-                                text:      'Окно в каждой из спален'})
+              +icon-text-list({ iconName : "location_city",
+                                caption:   "Удобство",
+                                text:      "Окно в каждой из спален"})
 
-              +icon-text-list({ iconName : 'whatshot',
-                                caption:   'Уют',
-                                text:      'Номер оснащен камином'})
+              +icon-text-list({ iconName : "whatshot",
+                                caption:   "Уют",
+                                text:      "Номер оснащен камином"})
 
           .room-details__block_right
             h2.room-details__h2 Впечатления от номера
             include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
             .d3js-donut-chart_position
-              +d3js-donut-chart({ width:  '120',
-                                  height: '120',
-                                  legendValues: ['Великолепно','Хорошо','Удовлетворительно','Разочарован']})
+              +d3js-donut-chart({ width:  "120",
+                                  height: "120",
+                                  great:  "130",
+                                  good:   "65",
+                                  normal: "65",
+                                  bad:    "0",
+                                  legendValues: ["Великолепно","Хорошо","Удовлетворительно","Разочарован"]})
 
 
         .room-details__feedbacks
@@ -53,32 +57,32 @@ block content
 
           include ../components/ui-kit/form-elements/comments-block/comments-block
           .room-details__comments-block_position
-            +comments-block({ imageName:     'avatar.jpg',
-                              userName:      'Мурад Сарафанов',
-                              commentDate:   '5 дней назад',
-                              feedbackText:  'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                              likeBtnId:     'likeBtnId-1',
-                              likeBtnStatus: 'checked',
-                              likeBtnText:   '12',
+            +comments-block({ imageName:     "avatar.jpg",
+                              userName:      "Мурад Сарафанов",
+                              commentDate:   "5 дней назад",
+                              feedbackText:  "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                              likeBtnId:     "likeBtnId-1",
+                              likeBtnStatus: "checked",
+                              likeBtnText:   "12",
                             })
 
           .room-details__comments-block_position
-            +comments-block({ imageName:     'avatar2.jpg',
-                              userName:      'Патрисия Стёклышкова',
-                              commentDate:   'Неделю назад',
-                              feedbackText:  'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.',
-                              likeBtnId:     'likeBtnId-2',
-                              likeBtnStatus: '',
-                              likeBtnText:   '2',
+            +comments-block({ imageName:     "avatar2.jpg",
+                              userName:      "Патрисия Стёклышкова",
+                              commentDate:   "Неделю назад",
+                              feedbackText:  "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.",
+                              likeBtnId:     "likeBtnId-2",
+                              likeBtnStatus: "",
+                              likeBtnText:   "2",
                             })
 
         .room-details__rules
           .room-details__rules-block
             include ../components/ui-kit/form-elements/bullet-list/bullet-list
             h2.room-details__h2.room-details__h2_rules-block Правила
-            +bullet-list({options: ['Нельзя с питомцами',
-                                    'Без вечеринок и мероприятий',
-                                    'Время прибытия - после 13:00, а выезд до 12:00']})
+            +bullet-list({options: ["Нельзя с питомцами",
+                                    "Без вечеринок и мероприятий",
+                                    "Время прибытия - после 13:00, а выезд до 12:00"]})
 
           .room-details__cancel-block
             h2.room-details__h2.room-details__h2_cancel-block Отмена
@@ -87,12 +91,12 @@ block content
 
       .room-details__column-2
         include ../components/ui-kit/cards/booking/booking
-        +booking({  roomPrice:                    '9 990₽',
-                    daysPriceText:                ' x 4 суток',
-                    servicesPriceText:            'Сбор за услуги: скидка 2 179₽',
-                    additionalServicesPriceText:  'Сбор за дополнительные услуги',
-                    daysPriceValue:               '39 960₽',
-                    servicesPriceValue:           '0₽',
-                    additionalServicesPriceValue: '300₽',
-                    resultText:                   'Итого',
+        +booking({  roomPrice:                    "9 990₽",
+                    daysPriceText:                " x 4 суток",
+                    servicesPriceText:            "Сбор за услуги: скидка 2 179₽",
+                    additionalServicesPriceText:  "Сбор за дополнительные услуги",
+                    daysPriceValue:               "39 960₽",
+                    servicesPriceValue:           "0₽",
+                    additionalServicesPriceValue: "300₽",
+                    resultText:                   "Итого",
                     resultSum:                    `38\u00A0081₽`})

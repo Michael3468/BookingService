@@ -1,0 +1,8 @@
+@import '../../../../assets/scss/utils/vars.scss';
+
+.dropdown__button-decrement,
+.dropdown__button-increment {
+  &:focus {
+    box-shadow: $TabindexShadow;
+  }
+}
