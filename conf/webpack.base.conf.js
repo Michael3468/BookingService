@@ -137,7 +137,7 @@ module.exports = {
         to: `${PATHS.assets}img`,
         flatten: true,
       },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/static`, to: 'static' },
     ]),
 
     ...PAGES.map(
