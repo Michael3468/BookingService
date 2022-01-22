@@ -17,7 +17,6 @@ html {
   font-size: $mainFontSize;
   font-family: $mainFont;
   line-height: $mainLineHeight;
-  background-color: $default-color;
 
   @media screen and (min-width: $tableWidth) and (max-width: $desktopWidth) {
     font-size: $mainFontSize;
@@ -52,7 +51,6 @@ section,
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
-  background-color: $default-color;
 }
 
 .container {
@@ -63,7 +61,6 @@ section,
   max-width: 1160px;
   margin-right: auto;
   margin-left: auto;
-  background-color: $default-color;
 
   @media screen and (max-width: $desktopWidth) {
     padding: 0 $desktopWidthPadding;

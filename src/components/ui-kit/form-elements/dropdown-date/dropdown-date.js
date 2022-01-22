@@ -16,6 +16,7 @@ function showHideDatePicker(event) {
 }
 
 function handleDropdownDateBlockKeyPress(e) {
+  e.preventDefault();
   if (e.code === 'Enter') {
     showHideDatePicker(e);
   }
