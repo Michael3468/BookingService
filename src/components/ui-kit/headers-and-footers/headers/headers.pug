@@ -43,7 +43,7 @@ mixin header(loginStatus)
         .header__expand-menu
           if loginStatus == "authorized"
             .header__authorized(tabindex="6")
-              - var userName = "Юлий Цезарь"
+              - userName = "Юлий Цезарь"
               span.header__nav-li #{userName}
           else
             .header__notAuthorized

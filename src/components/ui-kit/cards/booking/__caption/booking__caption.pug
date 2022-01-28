@@ -1,10 +1,10 @@
 mixin booking-caption(params)
   if (params.captionType === 'booking')
-    - var margin   = 'booking__caption_margin'
-    - var fontSize = 'booking__caption-room-number_font-size'
+    - margin   = 'booking__caption_margin'
+    - fontSize = 'booking__caption-room-number_font-size'
   if (params.captionType === 'room-card')
-    - var margin   = 'room-card__room-number_margin'
-    - var fontSize = 'room-card__room-number_font-size'
+    - margin   = 'room-card__room-number_margin'
+    - fontSize = 'room-card__room-number_font-size'
 
   .booking__caption(class= margin)
     .booking__caption-right

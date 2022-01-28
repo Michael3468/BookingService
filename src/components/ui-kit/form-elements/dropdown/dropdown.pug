@@ -12,14 +12,14 @@ mixin dropdown(params)
       .dropdown__menu.js-dropdown__menu(hidden=params.expMenuStatus)
 
         if (params.type == "dropdown-options")
-          - var items = { "item1": {valName : "Спальни", vName: "bedrooms"},"item2": {valName : "Кровати", vName: "beds"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
+          - items = { "item1": {valName : "Спальни", vName: "bedrooms"},"item2": {valName : "Кровати", vName: "beds"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
           if (params.idPostfix == "-changed-example")
-            - var items = { "item1": {valName : "Спальни", vName: "bedrooms", valCounter: "2", valClass: "dark"},"item2": {valName : "Кровати", vName: "beds", valCounter: "2", valClass: "dark"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
+            - items = { "item1": {valName : "Спальни", vName: "bedrooms", valCounter: "2", valClass: "dark"},"item2": {valName : "Кровати", vName: "beds", valCounter: "2", valClass: "dark"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
 
         if (params.type == "dropdown-guests")
-          - var items = { "item1": {valName : "Взрослые", vName: "adults"},"item2": {valName : "Дети", vName: "childs"},"item3": {valName : "Младенцы", vName: "babies"} };
+          - items = { "item1": {valName : "Взрослые", vName: "adults"},"item2": {valName : "Дети", vName: "childs"},"item3": {valName : "Младенцы", vName: "babies"} };
           if (params.idPostfix == "-changed-example")
-            - var items = { "item1": {valName : "Взрослые", vName: "adults", valCounter: "2", valClass: "dark"},"item2": {valName : "Дети", vName: "childs", valCounter: "1", valClass: "dark"},"item3": {valName : "Младенцы", vName: "babies"} };
+            - items = { "item1": {valName : "Взрослые", vName: "adults", valCounter: "2", valClass: "dark"},"item2": {valName : "Дети", vName: "childs", valCounter: "1", valClass: "dark"},"item3": {valName : "Младенцы", vName: "babies"} };
 
         //- form(action='change-me')
         if (params.formPart === 'true')
@@ -44,7 +44,7 @@ mixin dropdown(params)
         if (params.type == "dropdown-guests")
           .dropdown-guests__buttons
             if (params.cleanButtonStatus == "show")
-              - var cleanButtonClass = "dropdown-guests__button_clean_"+params.cleanButtonStatus
+              - cleanButtonClass = "dropdown-guests__button_clean_"+params.cleanButtonStatus
 
             button.dropdown-guests__button_clean.js-dropdown-guests__button_clean(tabindex="0" class=cleanButtonClass data-dd-action="clean" type="button") очистить
             button.dropdown-guests__button_apply.js-dropdown-guests__button_apply(tabindex="0" data-dd-action="apply" type="button") применить
