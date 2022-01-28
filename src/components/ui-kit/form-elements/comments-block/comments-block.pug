@@ -1,7 +1,7 @@
 mixin comments-block(params)
   .comments-block
     .comments-block__user
-      img.comments-block__user_photo(src="./assets/img/"+params.imageName, alt="alt text")
+      img.comments-block__user_photo(src="./assets/img/"+params.imageName, alt="alt text", loading="lazy")
       
       .comments-block__user_info
         .comments-block__user_name= params.userName
