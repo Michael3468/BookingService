@@ -7,7 +7,6 @@ mixin registration(params)
         include ../../../ui-kit/form-elements/text-field/text-field
         +text-field({ inpType:        "text",
                       inpName:        "firstName",
-                      inpMode:        "text",
                       inpPlaceholder: "Имя",
                       inpId:          "user-name",
                     })
@@ -15,7 +14,6 @@ mixin registration(params)
       include ../../../ui-kit/form-elements/text-field/text-field
       +text-field({ inpType:        "text",
                     inpName:        "lastName",
-                    inpMode:        "text",
                     inpPlaceholder: "Фамилия",
                     inpId:          "user-last-name",
                   })
@@ -36,14 +34,12 @@ mixin registration(params)
         +text-field({ leftCaption:    "Данные для входа в сервис",
                       inpType:        "email",
                       inpName:        "email",
-                      inpMode:        "email",
                       inpPlaceholder: "Email",
                       inpId:          "email",
                     })
       .registration__text-field_block-margin-between
         +text-field({ inpType:        "password",
                       inpName:        "password",
-                      inpMode:        "password",
                       inpPlaceholder: "Пароль",
                       inpId:          "password",
                     })

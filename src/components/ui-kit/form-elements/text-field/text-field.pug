@@ -10,7 +10,6 @@ mixin text-field(params)
         class=(params.hoverStyle, `js-${params.inpType}`)
         type=params.inpType
         name=params.inpName
-        inputmode=params.inpMode
         placeholder=params.inpPlaceholder
         tabindex="0"
         )
@@ -25,7 +24,6 @@ mixin text-field(params)
 //-              rightCaption:   "default",
 //-              inpType:        "email",
 //-              inpName:        "email",
-//-              inpMode:        "email",
 //-              inpPlaceholder: "Email",
 //-              inpId:          "email-text-field",
 //-              hoverStyle:     "like-hover"})
@@ -42,7 +40,6 @@ mixin text-field(params)
 //- +text-field({leftCaption:    "subscription text field",
 //-              inpType:        "email",
 //-              inpName:        "email",
-//-              inpMode:        "email",
 //-              inpPlaceholder: "Email",
 //-              inpId:          "Subscription",
 //-              isArrow:        "true",
