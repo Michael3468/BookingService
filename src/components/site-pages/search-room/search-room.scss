@@ -18,6 +18,10 @@
   border-radius: 50%;
   cursor: pointer;
 
+  &_rotate {
+    rotate: 180deg;
+  }
+
   @media (max-width: $smTableWidth) {
     display: block;
   }
@@ -38,12 +42,7 @@
 }
 
 .search-room__options-column {
-  display: block;
   min-width: rem(266);
-
-  @media (max-width: $smTableWidth) {
-    display: none;
-  }
 
   &__date-dropdown {
     margin-bottom: rem(20);

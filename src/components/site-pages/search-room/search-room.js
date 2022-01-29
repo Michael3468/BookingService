@@ -17,16 +17,19 @@ const optionsColumnButton = document.querySelector('.js-search-room__options-col
 const menu = document.querySelector('.js-search-room__options-column');
 
 function showColumnOptionsMenu() {
-  const menuStatus = menu.style.display;
-  if (menuStatus !== 'block') {
-    menu.style.display = 'block';
-    menu.style.marginRight = '10px';
-    optionsColumnButton.style.rotate = '180deg';
+  menu.classList.toggle('hidden');
+  optionsColumnButton.classList.toggle('search-room__options-column_button_rotate');
+}
+
+function handleWindowResize() {
+  if (window.innerWidth < 641) {
+    menu.classList.add('hidden');
   } else {
-    menu.style.display = 'none';
-    menu.style.marginRight = '0px';
-    optionsColumnButton.style.rotate = '0deg';
+    menu.classList.remove('hidden');
   }
 }
 
 optionsColumnButton.addEventListener('click', showColumnOptionsMenu);
+
+window.addEventListener('resize', handleWindowResize);
+window.addEventListener('DOMContentLoaded', handleWindowResize);
