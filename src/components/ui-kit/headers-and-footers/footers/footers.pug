@@ -57,13 +57,9 @@ mixin footer(footerType)
       .container.sub-footer__content
         .sub-footer__copyright
           p #{copyrightText}
-        .sub-footer__socials
-          a.sub-footer__socials-link(href="change_me" tabindex="0" target="_blank" rel="noopener noreferrer")
-            i.fab.fa-twitter.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0" target="_blank" rel="noopener noreferrer")
-            i.fab.fa-facebook.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0" target="_blank" rel="noopener noreferrer")
-            i.fab.fa-instagram.gradient-icon
+
+        include ../../form-elements/socials/socials.pug
+        +socials({ mobile: 'false' })
   
   //- mobile footer
   else
@@ -76,10 +72,6 @@ mixin footer(footerType)
       .container.sub-footer__content.sub-footer__content_mob
         .sub-footer__copyright
           p #{copyrightText}
-        .sub-footer__socials.sub-footer__socials_mob
-          a.sub-footer__socials-link(href="change_me" tabindex="0" target="_blank" rel="noopener noreferrer")
-            i.fab.fa-twitter.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0" target="_blank" rel="noopener noreferrer")
-            i.fab.fa-facebook.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0" target="_blank" rel="noopener noreferrer")
-            i.fab.fa-instagram.gradient-icon
+
+        include ../../form-elements/socials/socials.pug
+        +socials({ mobile: 'true' })

@@ -125,46 +125,8 @@
     align-items: center;
     margin-top: rem(15);
   }
-
-  &__socials_mob {
-    margin-top: rem(14);
-  }
   // mobile end
 }
-
-//sub-footer__socials
-.sub-footer__socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: rem(111);
-  font-size: rem(24);
-
-  &-link {
-    &:focus {
-      text-shadow: $TabindexShadow;
-    }
-  }
-}
-
-.fab {
-  font-size: rem(24);
-  font-family: 'Font Awesome 5 Brands', sans-serif;
-  font-style: normal;
-}
-
-.fa-twitter::before {
-  content: '\f099';
-}
-
-.fa-facebook::before {
-  content: '\f09a';
-}
-
-.fa-instagram::before {
-  content: '\f16d';
-}
-//sub-footer__socials end
 // sub-footer end
 
 // grid
