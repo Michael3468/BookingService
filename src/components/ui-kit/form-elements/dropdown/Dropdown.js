@@ -10,7 +10,7 @@ export default class Dropdown {
   }
 
   showHide() {
-    this.menu.hidden = !this.menu.hidden;
+    this.menu.classList.toggle('dropdown__menu_hidden');
     this.ddBlock.classList.toggle('menu-open');
   }
 

@@ -1,4 +1,6 @@
 mixin dropdown(params)
+  - expMenuHidden = params.expMenuHidden === 'true' ? 'dropdown__menu_hidden' : ''
+
   .dropdown(class=`js-${params.type}`)
     .dropdown__caption
       h3.dropdown__caption-left= params.leftCaption
@@ -9,7 +11,7 @@ mixin dropdown(params)
         p.dropdown__selection_text.js-dropdown__selection-text(data-dd-action="showHide")= params.selectionText
         .dropdown__expand-button.material-icons(data-dd-action="showHide") expand_more
 
-      .dropdown__menu.js-dropdown__menu(hidden=params.expMenuStatus)
+      .dropdown__menu.js-dropdown__menu(class= expMenuHidden)
 
         if (params.type == "dropdown-options")
           - items = { "item1": {valName : "Спальни", vName: "bedrooms"},"item2": {valName : "Кровати", vName: "beds"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
@@ -55,13 +57,13 @@ mixin dropdown(params)
 //-             rightCaption:  "default",
 //-             type:          "dropdown-options",
 //-             selectionText: "2 спальни, 2 кровати...",
-//-             expMenuStatus: "hidden",
+//-             expMenuHidden: "true",
 //-           })
 
 //- +dropdown({ leftCaption:   "dropdown",
 //-             type:          "dropdown-guests",
 //-             selectionText: "Сколько гостей",
-//-             expMenuStatus: "hidden",
+//-             expMenuHidden: "true",
 //-           })
 
 //- +dropdown({ leftCaption:   "dropdown",
