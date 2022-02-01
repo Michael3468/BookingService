@@ -10,8 +10,8 @@ mixin comments-block(params)
     .comments-block__feedback
       .comments-block__feedback_like
         include ../like-button/like-button
-        +like-button({likeBtnStatus: params.likeBtnStatus,
-                      likeBtnText:   params.likeBtnText,
+        +like-button({likeBtnChecked: params.likeBtnChecked,
+                      likeBtnText:    params.likeBtnText,
                     })
       .comments-block__feedback_text= params.feedbackText
 
@@ -25,6 +25,6 @@ mixin comments-block(params)
 //-                     commentDate:   "5 дней назад",
 //-                     feedbackText:  "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
 //-                     likeBtnId:     "likeBtnId-1",
-//-                     likeBtnStatus: "checked",
+//-                     likeBtnChecked: "true",
 //-                     likeBtnText:   "12",
 //-                   })
