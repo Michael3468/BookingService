@@ -1,5 +1,6 @@
 mixin checkbox-buttons(params)
   - visibility = params.hidden === "true" ? "hidden" : ""
+  - rotate = params.rotate === "true" ? "checkbox-buttons__expandable-list__expand-more-rotate" : ""
 
   if (params.showCaption == "true")
     .checkbox-buttons
@@ -8,7 +9,7 @@ mixin checkbox-buttons(params)
     .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(tabindex="0")
       .checkbox-buttons__expandable-list__caption
         h3.checkbox-buttons__expandable-list__text= params.caption
-        .checkbox-buttons__expandable-list__expand-more.material-icons(class=params.rotate) expand_more
+        .checkbox-buttons__expandable-list__expand-more.material-icons(class= rotate) expand_more
 
   .checkbox-buttons__block(class= visibility)
     each val, index in params.inpText
