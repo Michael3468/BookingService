@@ -6,7 +6,7 @@ mixin dropdown(params)
       h3.dropdown__caption-left= params.leftCaption
       if (params.rightCaption)
         h3.dropdown__caption-right= params.rightCaption
-    .dropdown__block.js-dropdown__block(class=params.menuStatus)
+    .dropdown__block.js-dropdown__block
       .dropdown__block_top.js-dropdown__block_top(data-dd-action="showHide" tabindex="0")
         p.dropdown__selection_text.js-dropdown__selection-text(data-dd-action="showHide")= params.selectionText
         .dropdown__expand-button.material-icons(data-dd-action="showHide") expand_more
@@ -69,5 +69,4 @@ mixin dropdown(params)
 //- +dropdown({ leftCaption:   "dropdown",
 //-             type:          "dropdown-guests",
 //-             selectionText: "Сколько гостей",
-//-             menuStatus:    "menu-open",
 //-           })
