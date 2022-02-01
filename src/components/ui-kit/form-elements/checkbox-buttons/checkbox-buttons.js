@@ -6,13 +6,13 @@ const checkboxOptions = expandableCheckbox.nextElementSibling;
 const expandMore = expandableCheckbox.lastElementChild.children[1];
 
 function showHideCheckboxOptions() {
-  const notVisible = checkboxOptions.classList.contains('display-none');
+  const notVisible = checkboxOptions.classList.contains('hidden');
   if (notVisible) {
-    checkboxOptions.classList.remove('display-none');
-    expandMore.classList.remove('checkbox-buttons__expandable-list__expand-more-rotate');
-  } else {
-    checkboxOptions.classList.add('display-none');
+    checkboxOptions.classList.remove('hidden');
     expandMore.classList.add('checkbox-buttons__expandable-list__expand-more-rotate');
+  } else {
+    checkboxOptions.classList.add('hidden');
+    expandMore.classList.remove('checkbox-buttons__expandable-list__expand-more-rotate');
   }
 }
 
