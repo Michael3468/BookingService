@@ -5,54 +5,58 @@ mixin registration(params)
     form.js-registration-form(action="#change-me")
       .registration__text-field_position
         include ../../../ui-kit/form-elements/text-field/text-field
-        +text-field({ inpType:        "text",
-                      inpName:        "firstName",
-                      inpMode:        "text",
-                      inpPlaceholder: "Имя",
-                      inpId:          "user-name",
-                    })
+        +text-field({
+          inpType:        "text",
+          inpName:        "firstName",
+          inpPlaceholder: "Имя",
+        })
 
       include ../../../ui-kit/form-elements/text-field/text-field
-      +text-field({ inpType:        "text",
-                    inpName:        "lastName",
-                    inpMode:        "text",
-                    inpPlaceholder: "Фамилия",
-                    inpId:          "user-last-name",
-                  })
+      +text-field({
+        inpType:        "text",
+        inpName:        "lastName",
+        inpPlaceholder: "Фамилия",
+      })
 
       .registration__radio-buttons_position
         include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
-        +radio-buttons({radioButtonName: "gender",
-                        inpName:         ["man", "woman"],
-                        inpText:         ["Мужчина", "Женщина"],
-                        inpStatus:       ["checked",]})
+        +radio-buttons({
+          radioButtonName: "gender",
+          inpName:         ["man", "woman"],
+          inpText:         ["Мужчина", "Женщина"],
+          inpStatus:       ["checked",],
+          inpId:           "registration-radio-buttons-",
+        })
 
       include ../../../ui-kit/form-elements/masked-text-field/masked-text-field
-      +masked-text-field({leftCaption:    "Дата рождения",
-                          inpName:        "birthDate",
-                          inpPlaceholder: "ДД.ММ.ГГГГ"})
+      +masked-text-field({
+        leftCaption:    "Дата рождения",
+        inpName:        "birthDate",
+        inpPlaceholder: "ДД.ММ.ГГГГ",
+      })
 
       .registration__text-field_block-position
-        +text-field({ leftCaption:    "Данные для входа в сервис",
-                      inpType:        "email",
-                      inpName:        "email",
-                      inpMode:        "email",
-                      inpPlaceholder: "Email",
-                      inpId:          "email",
-                    })
+        +text-field({
+          leftCaption:    "Данные для входа в сервис",
+          inpType:        "email",
+          inpName:        "email",
+          inpPlaceholder: "Email",
+        })
+
       .registration__text-field_block-margin-between
-        +text-field({ inpType:        "password",
-                      inpName:        "password",
-                      inpMode:        "password",
-                      inpPlaceholder: "Пароль",
-                      inpId:          "password",
-                    })
+        +text-field({
+          inpType:        "password",
+          inpName:        "password",
+          inpPlaceholder: "Пароль",
+        })
 
       .registration__toggle_position
         include ../../../ui-kit/form-elements/toggle/toggle
-        +toggle({ toggleBtnText: "Получать спецпредложения",
-                  toggleName:    "specialOffers",
-                })
+        +toggle({
+          toggleBtnText: "Получать спецпредложения",
+          toggleName:    "specialOffers",
+          toggleId:      "registration-toggle",
+        })
 
       include ../../../ui-kit/form-elements/buttons/buttons
       +button({mod: ["with_arrow", "block"], value: "Зарегистрироваться", type: "submit", class: "js-registration-submit-button"})

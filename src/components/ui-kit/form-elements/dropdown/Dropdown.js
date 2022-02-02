@@ -10,8 +10,7 @@ export default class Dropdown {
   }
 
   showHide() {
-    this.menu.hidden = !this.menu.hidden;
-    this.ddBlock.classList.toggle('menu-open');
+    this.menu.classList.toggle('dropdown__menu_hidden');
   }
 
   increment(event) {
@@ -23,7 +22,6 @@ export default class Dropdown {
   }
 
   _defineElements(elem) {
-    this.ddBlock = elem.querySelector('.js-dropdown__block');
     this.selectionText = elem.querySelector('.js-dropdown__selection-text');
     this.menu = elem.querySelector('.js-dropdown__menu');
     this.dropdownCounters = elem.querySelectorAll('.js-dropdown__counter');

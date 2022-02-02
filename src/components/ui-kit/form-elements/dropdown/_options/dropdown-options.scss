@@ -40,14 +40,11 @@
 }
 
 .dropdown__block {
+  display: block;
   align-items: center;
   height: rem(44);
   border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
-}
-
-.dropdown__block.menu-open {
-  display: block;
   border-bottom-right-radius: rem(0);
   border-bottom-left-radius: rem(0);
 }

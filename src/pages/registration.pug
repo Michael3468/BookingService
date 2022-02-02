@@ -1,14 +1,14 @@
 extends ../components/layouts/main-header-footer
 
 block variables
-  - var title = "FSD Registration";
-  - var description = "FSD education project | Registration";
-  - var pageClass = "registration-page";
+  - title = "FSD Registration";
+  - description = "FSD education project | Registration";
+  - pageClass = "registration-page";
 
 block content
 
   .registration__block
-    img(src="./assets/img/registration-bg.jpg", alt="registration page background image").registration__background-image
+    img(src="./assets/img/registration-bg.jpg", alt="registration page background image", loading="lazy").registration__background-image
 
     .container
 
