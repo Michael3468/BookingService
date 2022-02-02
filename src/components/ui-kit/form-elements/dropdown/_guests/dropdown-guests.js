@@ -31,7 +31,7 @@ class DropdownGuests extends Dropdown {
     });
 
     this.selectionText.innerText = 'Сколько гостей';
-    this.cleanButton.classList.remove('dropdown-guests__button_clean_show');
+    this.cleanButton.classList.remove('dropdown-guests__button_clean_visible');
   }
 
   apply() {
@@ -78,9 +78,9 @@ class DropdownGuests extends Dropdown {
 
     // cleanButton visibility
     if (isGuestsOrBabies) {
-      this.cleanButton.classList.add('dropdown-guests__button_clean_show');
+      this.cleanButton.classList.add('dropdown-guests__button_clean_visible');
     } else {
-      this.cleanButton.classList.remove('dropdown-guests__button_clean_show');
+      this.cleanButton.classList.remove('dropdown-guests__button_clean_visible');
     }
     // cleanButton visibility end
 

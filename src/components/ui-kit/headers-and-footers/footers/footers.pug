@@ -1,4 +1,4 @@
-- var copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
+- copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
 
 include ../headers/header_logo/header_logo.pug
 
@@ -50,21 +50,15 @@ mixin footer(footerType)
                 include ../../form-elements/text-field/text-field
                 +text-field({inpType:       "email",
                             inpName:        "email",
-                            inpMode:        "email",
                             inpPlaceholder: "Email",
-                            inpId:          "Subscription",
                             isArrow:        "true"})
     .sub-footer
       .container.sub-footer__content
         .sub-footer__copyright
           p #{copyrightText}
-        .sub-footer__socials
-          a.sub-footer__socials-link(href="change_me" tabindex="0")
-            i.fab.fa-twitter.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0")
-            i.fab.fa-facebook.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0")
-            i.fab.fa-instagram.gradient-icon
+
+        include ../../form-elements/socials/socials.pug
+        +socials({ mobile: 'false' })
   
   //- mobile footer
   else
@@ -77,10 +71,6 @@ mixin footer(footerType)
       .container.sub-footer__content.sub-footer__content_mob
         .sub-footer__copyright
           p #{copyrightText}
-        .sub-footer__socials.sub-footer__socials_mob
-          a.sub-footer__socials-link(href="change_me" tabindex="0")
-            i.fab.fa-twitter.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0")
-            i.fab.fa-facebook.gradient-icon
-          a.sub-footer__socials-link(href="change_me" tabindex="0")
-            i.fab.fa-instagram.gradient-icon
+
+        include ../../form-elements/socials/socials.pug
+        +socials({ mobile: 'true' })

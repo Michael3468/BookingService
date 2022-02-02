@@ -1,0 +1,46 @@
+@import '../../../../assets/scss/utils/mixins.scss';
+@import '../../../../assets/scss/utils/vars.scss';
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: rem(111);
+  font-size: rem(24);
+
+  &-link {
+    font-size: rem(24);
+
+    &:focus {
+      text-shadow: $TabindexShadow;
+    }
+  }
+
+  &_mob {
+    margin-top: rem(14);
+  }
+}
+
+.fab {
+  font-size: rem(24);
+  font-family: 'Font Awesome 5 Brands', sans-serif;
+  font-style: normal;
+}
+
+.fa-twitter::before {
+  content: '\f099';
+}
+
+.fa-facebook::before {
+  content: '\f09a';
+}
+
+.fa-instagram::before {
+  content: '\f16d';
+}
+
+.gradient-icon {
+  background: $primaryGradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

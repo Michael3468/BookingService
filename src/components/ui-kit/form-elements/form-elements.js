@@ -17,5 +17,4 @@ import './rich-checkbox-buttons/rich-checkbox-buttons';
 import './text-field/text-field';
 import './toggle/toggle';
 
-
 import './form-elements.scss';

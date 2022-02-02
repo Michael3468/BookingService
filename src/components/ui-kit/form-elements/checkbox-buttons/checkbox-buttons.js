@@ -1,18 +1,18 @@
 import './checkbox-buttons.scss';
 
-const expandableCheckbox = document.querySelector('.js-expandable-checkbox-list');
+const expandableCheckbox = document.querySelector('.js-checkbox-buttons__expandable-list');
 const checkboxTexts = document.querySelectorAll('.js-checkbox-buttons__text');
 const checkboxOptions = expandableCheckbox.nextElementSibling;
 const expandMore = expandableCheckbox.lastElementChild.children[1];
 
 function showHideCheckboxOptions() {
-  const notVisible = checkboxOptions.classList.contains('display-none');
+  const notVisible = checkboxOptions.classList.contains('hidden');
   if (notVisible) {
-    checkboxOptions.classList.remove('display-none');
-    expandMore.classList.remove('expandable-checkbox-list__expand-more-rotate');
+    checkboxOptions.classList.remove('hidden');
+    expandMore.classList.add('checkbox-buttons__expandable-list__expand-more-rotate');
   } else {
-    checkboxOptions.classList.add('display-none');
-    expandMore.classList.add('expandable-checkbox-list__expand-more-rotate');
+    checkboxOptions.classList.add('hidden');
+    expandMore.classList.remove('checkbox-buttons__expandable-list__expand-more-rotate');
   }
 }
 

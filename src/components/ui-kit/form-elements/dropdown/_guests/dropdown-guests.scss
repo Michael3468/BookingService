@@ -8,13 +8,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: rem(18) rem(1) rem(5) rem(7);
+    padding: rem(18) rem(7) rem(5) rem(7);
   }
 
   &__button_clean {
     visibility: hidden;
 
-    &_show {
+    &_visible {
       visibility: visible;
     }
   }

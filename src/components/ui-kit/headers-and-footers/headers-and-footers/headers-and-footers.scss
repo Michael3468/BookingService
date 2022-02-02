@@ -1,13 +1,8 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.headers-and-footers {
+html {
   background-color: #e5e5e5;
-}
-
-.hf-bg-color {
-  background: $default-color;
-  box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 }
 
 .headers-and-footers__margin {

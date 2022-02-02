@@ -2,7 +2,7 @@ mixin rich-checkbox-buttons(params)
   h3.rich-checkbox-buttons__caption= params.caption
 
   each val, index in params.optionText
-    - var rcb_item_id = "rich-checkbox-buttons-" + index
+    - rcb_item_id = "rich-checkbox-buttons-" + index
     .rich-checkbox-buttons__item.js-rich-checkbox-buttons__item(tabindex="0")
       input.rich-checkbox-buttons__input.js-rich-checkbox-buttons__input(tabindex="-1" type="checkbox", id=rcb_item_id, name="rcb-"+index, value=params.optionsValue[index])
       label.rich-checkbox-buttons__text.js-rich-checkbox-buttons__text(for=rcb_item_id)

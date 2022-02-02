@@ -1,18 +1,17 @@
 include ../../form-elements/buttons/buttons.pug
 
 mixin header(loginStatus)
-  header.header.hf-bg-color
-    .container.header__container
+  header.header.header_bg-color
+    .container.container_mob
       .header__burger-logo
         include  header_logo/header_logo.pug
         +header_logo()
-        //- label for #header__menu-checkbox input
-        label.material-icons.header__burger.js-header-burger(for="header__menu-checkbox") menu
+        .material-icons.header__burger.js-header-burger menu
 
       //- navigation menu
       //- hidden checkbox for burger label
       nav.header__nav.js-header__nav.hidden
-        ul.header__nav-ul.header__expand-menu
+        ul.header__nav-links
           li.header__nav-li
             a.header__nav-link.header__nav-link_active(href="change-me" tabindex="1") О нас
           //- css dropdown
@@ -40,10 +39,10 @@ mixin header(loginStatus)
           //- css dropdown end
 
         //- authorization block
-        .header__expand-menu
+        .header__authorization-block
           if loginStatus == "authorized"
             .header__authorized(tabindex="6")
-              - var userName = "Юлий Цезарь"
+              - userName = "Юлий Цезарь"
               span.header__nav-li #{userName}
           else
             .header__notAuthorized
