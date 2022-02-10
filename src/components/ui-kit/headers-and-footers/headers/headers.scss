@@ -4,6 +4,7 @@
 .header {
   display: flex;
   align-items: center;
+  max-width: 1440px;
   height: rem(70);
   background-color: $default-color;
 

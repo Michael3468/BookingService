@@ -3,6 +3,7 @@
 
 .footer {
   display: flex;
+  max-width: 1440px;
   height: rem(376);
   padding-top: rem(102);
   font-weight: normal;
@@ -75,6 +76,7 @@
 .sub-footer {
   display: flex;
   align-items: center;
+  max-width: 1440px;
   height: rem(70);
   background-color: $default-color;
 
