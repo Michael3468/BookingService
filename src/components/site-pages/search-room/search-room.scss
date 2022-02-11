@@ -2,7 +2,7 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .search-room__options-column__date-dropdown,
-.container__room-cards_column {
+.container__room-cards-column {
   margin-top: rem(28);
 }
 
@@ -78,7 +78,7 @@
   line-height: 21px;
 }
 
-.room-cards_column {
+.search-room__room-cards {
   width: 100%;
   margin-left: rem(59);
 
@@ -88,7 +88,7 @@
 }
 
 .search-room__room-cards {
-  &_h1 {
+  &-caption {
     margin-bottom: rem(20);
     font-family: $secondFont;
 
