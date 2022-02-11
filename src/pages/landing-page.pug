@@ -7,13 +7,13 @@ block variables
 
 block content
   .landing-page__background-block
-    img.landing-page__background.landing-page__background_fade-in(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
-    img.landing-page__background.landing-page__background_fade-in(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
-    img.landing-page__background.landing-page__background_fade-in(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
+    img.landing-page__background(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
+    img.landing-page__background(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
+    img.landing-page__background(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
 
   .container
 
-    .landing-page__room-search_block-width.landing-page__room-search_position
+    .landing-page__room-search
       include ../components/ui-kit/cards/room-search/room-search
       +room-search()
 
