@@ -1,6 +1,10 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
+.search-room__container {
+  @include container;
+}
+
 .search-room__options-column__date-dropdown,
 .container__room-cards-column {
   margin-top: rem(28);
@@ -89,6 +93,7 @@
 
 .search-room__room-cards {
   &-caption {
+    margin-top: rem(28);
     margin-bottom: rem(20);
     font-family: $secondFont;
 

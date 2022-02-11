@@ -7,7 +7,7 @@ block variables
 
 block content
 
-  .container
+  .search-room__container
 
     .search-room__options-column.js-search-room__options-column
 
@@ -71,25 +71,23 @@ block content
     .search-room__options-column_button.js-search-room__options-column_button.search-room__options-column_button_rotate
 
     .search-room__room-cards
-      .container__room-cards-column
+      h1.search-room__room-cards-caption Номера, которые мы для вас подобрали
 
-        h1.search-room__room-cards-caption Номера, которые мы для вас подобрали
+      .search-room__room-cards_grid-layout
 
-        .search-room__room-cards_grid-layout
+        - rooms = [{number: "888", luxStatus: "Люкс", price: "9 900", starsRate: "5", feedbacks: "145"}, {number: "840", luxStatus: "", price: "9 900", starsRate: "4", feedbacks: "65"}, {number: "980", luxStatus: "Люкс", price: "8 500", starsRate: "3", feedbacks: "35"},{number: "856", luxStatus: "", price: "7 300", starsRate: "5", feedbacks: "19"}, {number: "740", luxStatus: "", price: "6 600", starsRate: "4", feedbacks: "44"}, {number: "982", luxStatus: "", price: "5 800", starsRate: "3", feedbacks: "56"},{number: "678", luxStatus: "", price: "5 500", starsRate: "5", feedbacks: "45"}, {number: "450", luxStatus: "", price: "5 300", starsRate: "4", feedbacks: "39"}, {number: "350", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "77"},{number: "666", luxStatus: "", price: "5 000", starsRate: "5", feedbacks: "25"}, {number: "444", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "15"}, {number: "352", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "55"}]
 
-          - rooms = [{number: "888", luxStatus: "Люкс", price: "9 900", starsRate: "5", feedbacks: "145"}, {number: "840", luxStatus: "", price: "9 900", starsRate: "4", feedbacks: "65"}, {number: "980", luxStatus: "Люкс", price: "8 500", starsRate: "3", feedbacks: "35"},{number: "856", luxStatus: "", price: "7 300", starsRate: "5", feedbacks: "19"}, {number: "740", luxStatus: "", price: "6 600", starsRate: "4", feedbacks: "44"}, {number: "982", luxStatus: "", price: "5 800", starsRate: "3", feedbacks: "56"},{number: "678", luxStatus: "", price: "5 500", starsRate: "5", feedbacks: "45"}, {number: "450", luxStatus: "", price: "5 300", starsRate: "4", feedbacks: "39"}, {number: "350", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "77"},{number: "666", luxStatus: "", price: "5 000", starsRate: "5", feedbacks: "25"}, {number: "444", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "15"}, {number: "352", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "55"}]
+        include ../components/ui-kit/cards/room-card/room-card
+        each room in rooms
+          +room-card({  number:     room.number,
+                        status:     room.luxStatus,
+                        price:      `${room.price}₽`,
+                        photoName:  `room-card-${room.number}.jpg`,
+                        starsRate:  room.starsRate,
+                        feedbacks:  room.feedbacks,
+                    })
 
-          include ../components/ui-kit/cards/room-card/room-card
-          each room in rooms
-            +room-card({  number:     room.number,
-                          status:     room.luxStatus,
-                          price:      `${room.price}₽`,
-                          photoName:  `room-card-${room.number}.jpg`,
-                          starsRate:  room.starsRate,
-                          feedbacks:  room.feedbacks,
-                      })
-
-        //- pagination
-        include ../components/ui-kit/form-elements/pagination/pagination
-        .search-room__room-cards_pagination-position
-          +pagination()
+      //- pagination
+      include ../components/ui-kit/form-elements/pagination/pagination
+      .search-room__room-cards_pagination-position
+        +pagination()

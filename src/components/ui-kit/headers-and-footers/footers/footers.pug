@@ -5,7 +5,7 @@ include ../headers/header_logo/header_logo.pug
 mixin footer(footerType)
   if footerType != "mobile"
     footer.footer
-      .container
+      .footer__container
         .grid-layout
           .grid-layout__logo
             +header_logo()
@@ -53,7 +53,7 @@ mixin footer(footerType)
                             inpPlaceholder: "Email",
                             isArrow:        "true"})
     .sub-footer
-      .container.sub-footer__content
+      .sub-footer__container.sub-footer__content
         .sub-footer__copyright
           p #{copyrightText}
 
@@ -63,12 +63,12 @@ mixin footer(footerType)
   //- mobile footer
   else
     .footer.footer__mob
-      .container
+      .footer__container
         .grid-layout
           .grid-layout__logo.grid-layout__logo_mob
             +header_logo()
     .sub-footer.sub-footer__mob
-      .container.sub-footer__content.sub-footer__content_mob
+      .sub-footer__container.sub-footer__content.sub-footer__content_mob
         .sub-footer__copyright
           p #{copyrightText}
 

@@ -10,3 +10,21 @@
 
   @return $pixels / $content * 1rem;
 }
+
+@mixin container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: $desktopWidth) {
+    padding: 0 $desktopWidthPadding;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    padding: 0 $phoneWidthMargin;
+  }
+}

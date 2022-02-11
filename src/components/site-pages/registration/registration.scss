@@ -12,6 +12,10 @@
     justify-content: center;
   }
 
+  &__container {
+    @include container;
+  }
+
   $card-width: rem(380);
 
   &__registration-card {

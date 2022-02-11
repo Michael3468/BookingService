@@ -13,6 +13,20 @@
     box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
   }
 
+  &__container {
+    @include container;
+
+    &_mob {
+      z-index: 30;
+      height: rem(40);
+
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
   &__burger {
     display: none;
     color: $DarkShade50;
@@ -207,16 +221,3 @@
     }
   } /* header dropdown end */
 }
-
-/* adaptive header */
-.container_mob {
-  z-index: 30;
-  height: rem(40);
-
-  @media screen and (max-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* adaptive header end */

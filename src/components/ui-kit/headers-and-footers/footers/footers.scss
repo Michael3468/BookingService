@@ -72,6 +72,11 @@
   }
 }
 
+.footer__container,
+.sub-footer__container {
+  @include container;
+}
+
 // sub-footer
 .sub-footer {
   display: flex;

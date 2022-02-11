@@ -28,6 +28,10 @@
     }
   }
 
+  &__container {
+    @include container;
+  }
+
   &__room-search {
     width: rem(380);
     margin-top: rem(67);

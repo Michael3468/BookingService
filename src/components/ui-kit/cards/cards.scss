@@ -5,6 +5,8 @@
   background: $backgroundColor;
 
   &__container {
+    @include container;
+
     margin-bottom: rem(140);
   }
 

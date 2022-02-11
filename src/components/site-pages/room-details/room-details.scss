@@ -124,8 +124,12 @@
   margin-top: rem(20);
 }
 
-/* grid block */
 .room-details__container {
+  @include container;
+}
+
+/* grid block */
+.room-details__grid-container {
   display: grid;
   grid-column-gap: rem(60);
   grid-template-columns: 1fr 380px;

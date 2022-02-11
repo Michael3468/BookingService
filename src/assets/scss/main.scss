@@ -53,24 +53,6 @@ section,
   margin-left: auto;
 }
 
-.container {
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1160px;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media screen and (max-width: $desktopWidth) {
-    padding: 0 $desktopWidthPadding;
-  }
-
-  @media screen and (max-width: $phoneWidth) {
-    padding: 0 $phoneWidthMargin;
-  }
-}
-
 .material-icons {
   display: inline-block;
   font-weight: normal;
