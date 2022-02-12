@@ -5,7 +5,6 @@
   @include container;
 }
 
-.search-room__options-column__date-dropdown,
 .container__room-cards-column {
   margin-top: rem(28);
 }
@@ -45,10 +44,11 @@
   }
 }
 
-.search-room__options-column {
+.search-room {
   min-width: rem(266);
 
   &__date-dropdown {
+    margin-top: rem(28);
     margin-bottom: rem(20);
   }
 
@@ -70,12 +70,12 @@
     margin-top: rem(28);
   }
 
-  &__checkbox-buttons_expandable {
+  &__checkbox-buttons-expandable {
     margin-top: rem(30);
   }
 }
 
-.search-room__range-slider_text {
+.search-room__range-slider-text {
   color: $DarkShade50;
   font-size: rem(12);
   font-family: $secondFont;
