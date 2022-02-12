@@ -1,8 +1,8 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.landing-page {
-  &__background {
+.landing {
+  &-background {
     position: absolute;
     z-index: -1;
     height: 830px;

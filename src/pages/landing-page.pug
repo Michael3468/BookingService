@@ -3,22 +3,21 @@ extends ../components/layouts/main-header-footer
 block variables
   - title = "FSD Landing page";
   - description = "FSD education project | Landing page";
-  - pageClass = "landing-page";
 
 block content
-  .landing-page__background-block
-    img.landing-page__background(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
-    img.landing-page__background(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
-    img.landing-page__background(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
+  .landing-background-block
+    img.landing-background(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
+    img.landing-background(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
+    img.landing-background(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
 
-  .landing-page__container
+  .landing__container
 
-    .landing-page__room-search
+    .landing__room-search
       include ../components/ui-kit/cards/room-search/room-search
       +room-search()
 
-  .landing-page__container
+  .landing__container
 
-    p.landing-page__img-text
+    p.landing__img-text
       | Лучшие номера для вашей работы,<br>
       | отдыха и просто вдохновения
