@@ -4,8 +4,8 @@ mixin header(loginStatus)
   header.header.header_bg-color
     .header__container.header__container_mob
       .header__burger-logo
-        include  header_logo/header_logo.pug
-        +header_logo()
+        include  ../logo/logo.pug
+        +logo({ position: 'header' })
         .material-icons.header__burger.js-header-burger menu
 
       //- navigation menu

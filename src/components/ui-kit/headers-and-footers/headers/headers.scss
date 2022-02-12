@@ -1,5 +1,6 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
+@import '../logo/logo.scss';
 
 .header {
   display: flex;
@@ -7,6 +8,24 @@
   max-width: 1440px;
   height: rem(70);
   background-color: $default-color;
+
+  @media screen and (max-width: 1024px) {
+    &__auth-buttons-padding {
+      padding: rem(10) 0;
+    }
+  }
+
+  @mixin header__expand-menu {
+    display: -webkit-box;
+    flex-direction: row;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background: $default-color;
+    }
+  }
 
   &_bg-color {
     background: $default-color;
@@ -45,22 +64,8 @@
     }
   }
 
-  @media screen and (max-width: 1024px) {
-    &__auth-buttons-padding {
-      padding: rem(10) 0;
-    }
-  }
-
-  @mixin header__expand-menu {
-    display: -webkit-box;
-    flex-direction: row;
-
-    @media screen and (max-width: 1024px) {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      background: $default-color;
-    }
+  &__logo {
+    @include logo;
   }
 
   // nav
