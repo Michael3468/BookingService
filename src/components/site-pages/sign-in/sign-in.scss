@@ -20,7 +20,7 @@
 
   $card-width: rem(380);
 
-  &__sign-in-card {
+  &-card {
     position: absolute;
     top: rem(242);
     left: calc(50% - (#{$card-width} / 2));
@@ -32,12 +32,6 @@
       max-width: 320px;
       margin-right: auto;
       margin-left: auto;
-    }
-
-    &_block {
-      display: flex;
-      justify-content: center;
-      width: 100%;
     }
   }
 }

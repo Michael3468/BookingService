@@ -18,7 +18,7 @@
 
   $card-width: rem(380);
 
-  &__registration-card {
+  &__card {
     position: absolute;
     top: rem(90);
     left: calc(50% - (#{$card-width} / 2));
@@ -29,7 +29,7 @@
       width: 100%;
     }
 
-    &_block {
+    &-block {
       display: flex;
       justify-content: center;
       width: 100%;

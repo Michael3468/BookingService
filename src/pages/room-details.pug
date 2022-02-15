@@ -20,9 +20,9 @@ block content
       .room-details__column-1
 
         .room-details__blocks
-          .room-details__block_left
-            h2.room-details__h2 Сведения о номере
-            .room-details__icon-text-list__position
+          .room-details__description
+            h2.room-details__caption Сведения о номере
+            .room-details__icon-text-list
               include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
               +icon-text-list({
                 iconName : "insert_emoticon",
@@ -42,28 +42,27 @@ block content
                 text:      "Номер оснащен камином",
               })
 
-          .room-details__block_right
-            h2.room-details__h2 Впечатления от номера
+          .room-details__chart
+            h2.room-details__caption Впечатления от номера
             include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
-            .d3js-donut-chart_position
-              +d3js-donut-chart({
-                width:  "120",
-                height: "120",
-                great:  "130",
-                good:   "65",
-                normal: "65",
-                bad:    "0",
-                legendValues: ["Великолепно","Хорошо","Удовлетворительно","Разочарован",],
-              })
+            +d3js-donut-chart({
+              width:  "120",
+              height: "120",
+              great:  "130",
+              good:   "65",
+              normal: "65",
+              bad:    "0",
+              legendValues: ["Великолепно","Хорошо","Удовлетворительно","Разочарован",],
+            })
 
 
         .room-details__feedbacks
-          .room-details__feedbacks_caption
-            h2.room-details__h2 Отзывы посетителей номера
+          .room-details__feedbacks-caption
+            h2.room-details__caption Отзывы посетителей номера
             p 2 отзыва
 
           include ../components/ui-kit/form-elements/comments-block/comments-block
-          .room-details__comments-block_position
+          .room-details__comments-block
             +comments-block({
               imageName:      "avatar.jpg",
               userName:       "Мурад Сарафанов",
@@ -74,7 +73,7 @@ block content
               likeBtnText:    "12",
             })
 
-          .room-details__comments-block_position
+          .room-details__comments-block
             +comments-block({
               imageName:     "avatar2.jpg",
               userName:      "Патрисия Стёклышкова",
@@ -87,7 +86,7 @@ block content
         .room-details__rules
           .room-details__rules-block
             include ../components/ui-kit/form-elements/bullet-list/bullet-list
-            h2.room-details__h2.room-details__h2_rules-block Правила
+            h2.room-details__caption.room-details__caption_position Правила
             +bullet-list({
               options: ["Нельзя с питомцами",
                         "Без вечеринок и мероприятий",
@@ -95,7 +94,7 @@ block content
             })
 
           .room-details__cancel-block
-            h2.room-details__h2.room-details__h2_cancel-block Отмена
+            h2.room-details__caption Отмена
             p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
 

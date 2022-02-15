@@ -14,7 +14,7 @@ block content
       include ../components/ui-kit/cards/room-search/room-search
       +room-search()
 
-      .cards__registration_position
+      .cards__registration
         include ../components/ui-kit/cards/registration/registration
         +registration()
 
@@ -31,7 +31,7 @@ block content
                   resultText:                   "Итого",
                   resultSum:                    `38\u00A0081₽`})
 
-      .cards__login_position
+      .cards__login
         include ../components/ui-kit/cards/login/login
         +login()
 
@@ -41,7 +41,7 @@ block content
       include ../components/ui-kit/cards/date-picker/date-picker
       +date-picker()
 
-      .cards__room-card_position
+      .cards__room-card
         include ../components/ui-kit/cards/room-card/room-card
         +room-card({  number:    "888",
                       status:    "Люкс",
@@ -51,7 +51,7 @@ block content
                       feedbacks: "145",
                     })
 
-      .cards__room-card_position
+      .cards__room-card
         include ../components/ui-kit/cards/room-card/room-card
         +room-card({  number:    "840",
                       status:    "Люкс",

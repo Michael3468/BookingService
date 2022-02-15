@@ -51,44 +51,40 @@
   }
 
   // info about the room
-  &__h2 {
+  &__caption {
     font-family: $secondFont;
+    margin-bottom: rem(20);
+
+    &_position {
+      margin-left: rem(20);
+    }
   }
 
-  &__icon-text-list__position {
+  &__icon-text-list {
     width: rem(280);
     margin-top: rem(20);
   }
   // info about the room end
 
-  &__block_left {
+  &__description {
     margin-bottom: rem(10);
   }
 
-  &__block_right {
+  &__chart {
     margin-bottom: rem(20);
   }
 
   //- rules block
   &__rules {
     margin-top: rem(30);
-  }
 
-  &__rules-block {
-    width: rem(255);
-  }
-
-  &__h2_rules-block {
-    margin-bottom: rem(19);
-    margin-left: rem(20);
+    &-block {
+      width: rem(255);
+    }
   }
 
   &__cancel-block {
     max-width: rem(335);
-  }
-
-  &__h2_cancel-block {
-    margin-bottom: rem(20);
   }
   //- rules block end
 
@@ -96,11 +92,10 @@
   &__feedbacks {
     margin-right: rem(10);
 
-    &_caption {
+    &-caption {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: rem(22);
 
       @media screen and (max-width: $smTableWidth) {
         flex-direction: column;
@@ -108,7 +103,7 @@
     }
   }
 
-  &__comments-block_position {
+  &__comments-block {
     margin-bottom: rem(23);
 
     &:last-child {
@@ -120,9 +115,9 @@
 //- room-details columns end
 
 // d3js chart
-.d3js-donut-chart_position {
-  margin-top: rem(20);
-}
+// .d3js-donut-chart {
+//   margin-top: rem(20);
+// }
 
 .room-details__container {
   @include container;

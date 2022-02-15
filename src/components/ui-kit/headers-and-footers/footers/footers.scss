@@ -46,30 +46,30 @@
     padding-top: rem(17);
   }
 
-  &__nav {
+  &-nav {
     padding-top: rem(21);
     color: $DarkShade50;
-  }
 
-  &__nav-li {
-    padding-bottom: rem(18);
-  }
-
-  &__nav-link {
-    &:hover {
-      color: $DarkShade75;
+    &__item {
+      padding-bottom: rem(18);
     }
 
-    &:focus {
-      color: $DarkShade75;
-      font-weight: bold;
-      text-shadow: $TabindexShadow;
+    &__link {
+      &:hover {
+        color: $DarkShade75;
+      }
+  
+      &:focus {
+        color: $DarkShade75;
+        font-weight: bold;
+        text-shadow: $TabindexShadow;
+      }
     }
-  }
 
-  &__nav-p {
-    margin-bottom: rem(19);
-    line-height: rem(22);
+    &__text {
+      margin-bottom: rem(19);
+      line-height: rem(22);
+    }
   }
 
   &__nav-input {

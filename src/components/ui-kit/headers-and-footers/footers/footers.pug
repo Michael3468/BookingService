@@ -13,39 +13,39 @@ mixin footer(footerType)
               | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
           .footer__grid-layout-col
             h3 Навигация
-            ul.footer__nav
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") О нас
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Новости
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Служба поддержки
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Услуги
+            ul.footer-nav
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") О нас
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Новости
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Служба поддержки
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Услуги
           .footer__grid-layout-col
             h3 О нас
-            ul.footer__nav
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") О сервисе
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Наша команда
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Вакансии
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Инвесторы
+            ul.footer-nav
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") О сервисе
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Наша команда
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Вакансии
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Инвесторы
           .footer__grid-layout-col
             h3 Служба поддержки
-            ul.footer__nav
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Соглашения
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Сообщества
-              li.footer__nav-li
-                a.footer__nav-link(href="change_me" tabindex="0") Связь с нами
+            ul.footer-nav
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Соглашения
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Сообщества
+              li.footer-nav__item
+                a.footer-nav__link(href="change_me" tabindex="0") Связь с нами
           .footer__grid-layout-form
             h3 Подписка
-            .footer__nav
-              p.footer__nav-p Получайте специальные предложения и новости сервиса
+            .footer-nav
+              p.footer-nav__text Получайте специальные предложения и новости сервиса
               form.js-subscription-form(action='#change-me')
                 include ../../form-elements/text-field/text-field
                 +text-field({inpType:       "email",
