@@ -42,7 +42,12 @@
 //- room-details columns
 .room-details {
   &__column-2 {
-    max-width: rem(380);
+    min-width: rem(380);
+
+    @media screen and (max-width: 1130px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__container {
@@ -51,44 +56,41 @@
   }
 
   // info about the room
-  &__h2 {
+  &__caption {
     font-family: $secondFont;
+    margin-bottom: rem(20);
+
+    &_position {
+      margin-left: rem(20);
+    }
   }
 
-  &__icon-text-list__position {
+  &__icon-text-list {
     width: rem(280);
     margin-top: rem(20);
   }
   // info about the room end
 
-  &__block_left {
+  &__description {
     margin-bottom: rem(10);
   }
 
-  &__block_right {
+  &__chart {
     margin-bottom: rem(20);
+    min-width: rem(310);
   }
 
   //- rules block
   &__rules {
     margin-top: rem(30);
-  }
 
-  &__rules-block {
-    width: rem(255);
-  }
-
-  &__h2_rules-block {
-    margin-bottom: rem(19);
-    margin-left: rem(20);
+    &-block {
+      width: rem(255);
+    }
   }
 
   &__cancel-block {
     max-width: rem(335);
-  }
-
-  &__h2_cancel-block {
-    margin-bottom: rem(20);
   }
   //- rules block end
 
@@ -96,11 +98,10 @@
   &__feedbacks {
     margin-right: rem(10);
 
-    &_caption {
+    &-caption {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: rem(22);
 
       @media screen and (max-width: $smTableWidth) {
         flex-direction: column;
@@ -108,7 +109,7 @@
     }
   }
 
-  &__comments-block_position {
+  &__comments-block {
     margin-bottom: rem(23);
 
     &:last-child {
@@ -118,21 +119,22 @@
   //- visitors feedbacks end
 }
 //- room-details columns end
-
-// d3js chart
-.d3js-donut-chart_position {
-  margin-top: rem(20);
+.room-details__container {
+  @include container;
 }
 
 /* grid block */
-.room-details__container {
-  display: grid;
-  grid-column-gap: rem(60);
-  grid-template-columns: 1fr 380px;
+.room-details__flex-container {
+  display: flex;
+  gap: rem(60);
+
+  @media screen and (max-width: 1130px) {
+    flex-wrap: wrap-reverse;
+  }
 
   @media only screen and (max-width: 800px) {
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr;
+    flex: 1 auto;
+    flex-direction: column;
   }
 }
 
@@ -144,19 +146,30 @@
   .room-details__column-2 {
     order: -1;
     margin-bottom: rem(30);
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .room-details__blocks {
-  display: grid;
-  grid-row-gap: rem(10);
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(80);
+
+  @media screen and (max-width: $desktopWidth) {
+    column-gap: rem(50);
+  }
 }
 
 .room-details__rules {
-  display: grid;
-  grid-row-gap: rem(10);
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(106);
 }
 
 /* grid block end */
+
+.booking.cards_border {
+  max-width: rem(380);
+}

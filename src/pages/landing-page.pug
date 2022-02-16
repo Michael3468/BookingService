@@ -3,22 +3,21 @@ extends ../components/layouts/main-header-footer
 block variables
   - title = "FSD Landing page";
   - description = "FSD education project | Landing page";
-  - pageClass = "landing-page";
 
 block content
-  .landing-page__background-block
-    img.landing-page__background.landing-page__fade-in(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
-    img.landing-page__background.landing-page__fade-in(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
-    img.landing-page__background.landing-page__fade-in(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
+  .landing-background-block
+    img.landing-background(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
+    img.landing-background(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
+    img.landing-background(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
 
-  .container
+  .landing__container
 
-    .landing-page__room-search_block-width.landing-page__room-search_position
+    .landing__room-search
       include ../components/ui-kit/cards/room-search/room-search
       +room-search()
 
-  .container
+  .landing__container
 
-    p.landing-page__img-text.landing-page__img-text_position
+    p.landing__img-text
       | Лучшие номера для вашей работы,<br>
       | отдыха и просто вдохновения

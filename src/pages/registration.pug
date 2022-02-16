@@ -3,16 +3,15 @@ extends ../components/layouts/main-header-footer
 block variables
   - title = "FSD Registration";
   - description = "FSD education project | Registration";
-  - pageClass = "registration-page";
 
 block content
 
   .registration__block
     img(src="./assets/img/registration-bg.jpg", alt="registration page background image", loading="lazy").registration__background-image
 
-    .container
+    .registration__container
 
-      .registration__registration-card_block
-        .registration__registration-card
+      .registration__card-block
+        .registration__card
           include ../components/ui-kit/cards/registration/registration
           +registration()
