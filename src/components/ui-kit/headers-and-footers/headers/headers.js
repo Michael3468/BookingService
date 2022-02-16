@@ -1,4 +1,4 @@
-import './header_logo/header_logo';
+import '../logo/logo';
 import '../../form-elements/buttons/buttons';
 
 import './headers.scss';

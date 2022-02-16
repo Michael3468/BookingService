@@ -1,6 +1,6 @@
 {
   "name": "fsd_step_2",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "edu project",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.16.10",
-    "@babel/preset-env": "^7.16.10",
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^9.8.8",
     "babel-loader": "^8.2.3",
     "babel-preset-airbnb": "^5.0.0",

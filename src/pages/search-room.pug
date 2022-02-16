@@ -3,93 +3,103 @@ extends ../components/layouts/main-header-footer
 block variables
   - title = "FSD Search room";
   - description = "FSD education project | Search room";
-  - pageClass = "search-room";
 
 block content
 
-  .container
+  .search-room__container
 
     .search-room__options-column.js-search-room__options-column
 
-      .search-room__options-column__date-dropdown
+      .search-room__date-dropdown
         include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
-        +filter-date-dropdown({leftCaption : "даты пребывания в отеле"})
+        +filter-date-dropdown({
+          leftCaption : "даты пребывания в отеле",
+        })
 
       include ../components/ui-kit/form-elements/dropdown/dropdown
-      +dropdown({ leftCaption:   "гости",
-                  type:          "dropdown-guests",
-                  selectionText: "Сколько гостей",
-                  expMenuHidden: "true",
-                })
+      +dropdown({
+        leftCaption:   "гости",
+        type:          "dropdown-guests",
+        selectionText: "Сколько гостей",
+        expMenuHidden: "true",
+      })
 
-      .search-room__options-column__range-slider
+      .search-room__range-slider
         include ../components/ui-kit/form-elements/range-slider/range-slider
-        +range-slider({ leftCaption:  "диапазон цены",
-                        rightCaption: "5 000₽ - 10 000₽"})
-        p.search-room__range-slider_text Стоимость за сутки пребывания в номере
+        +range-slider({
+          leftCaption:  "диапазон цены",
+          rightCaption: "5 000₽ - 10 000₽",
+        })
 
-      .search-room__options-column__checkbox-buttons
+        p.search-room__range-slider-text Стоимость за сутки пребывания в номере
+
+      .search-room__checkbox-buttons
         include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-        +checkbox-buttons({ leftCaption: "правила дома",
-                            inpId:       "check-box-buttons",
-                            showCaption: "true",
-                            inpStatus:   [ ,"checked","checked"],
-                            inpName:     "check-box-name",
-                            inpValue:    ["allow-smoke", "allow pet",        "allow guests"],
-                            inpText:     ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
+        +checkbox-buttons({
+          leftCaption: "правила дома",
+          inpId:       "check-box-buttons",
+          showCaption: "true",
+          inpStatus:   [ ,"checked","checked"],
+          inpName:     "check-box-name",
+          inpValue:    ["allow-smoke", "allow pet",        "allow guests"],
+          inpText:     ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"],
+        })
 
-      .search-room__options-column__rich-checkbox-buttons
+      .search-room__rich-checkbox-buttons
         include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
-        +rich-checkbox-buttons({caption:       "доступность",
-                                optionsValue:  ["wide-corridor",
-                                                "assistant-for-the-disabled"],
-                                optionText:    ["Широкий коридор",
-                                                "Помощник для инвалидов"],
-                                optionSubText: ["Ширина коридоров в номере не менее 91 см.",
-                                                "На 1 этаже вас встретит специалист и проводит до номера"],
-                                })
+        +rich-checkbox-buttons({
+          caption:       "доступность",
+          optionsValue:  ["wide-corridor",
+                          "assistant-for-the-disabled"],
+          optionText:    ["Широкий коридор",
+                          "Помощник для инвалидов"],
+          optionSubText: ["Ширина коридоров в номере не менее 91 см.",
+                          "На 1 этаже вас встретит специалист и проводит до номера"],
+        })
 
-      .search-room__options-column__dropdown-options
+      .search-room__dropdown-options
         include ../components/ui-kit/form-elements/dropdown/dropdown
-        +dropdown({ leftCaption:   "удобства номера",
-                    type:          "dropdown-options",
-                    selectionText: "Удобства",
-                    expMenuHidden: "true",
-                  })
+        +dropdown({
+          leftCaption:   "удобства номера",
+          type:          "dropdown-options",
+          selectionText: "Удобства",
+          expMenuHidden: "true",
+        })
 
-      .search-room__options-column__checkbox-buttons_expandable
+      .search-room__checkbox-buttons-expandable
         include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-        +checkbox-buttons({ caption:        "дополнительные удобства",
-                            leftCaption:    "checkbox buttons",
-                            inpId:          "check-box-buttons-1",
-                            hidden:         "true",
-                            inpStatus:      [,,,,,,],
-                            inpName:        "check-box-name-1",
-                            inpValue:       ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-                            inpText:        ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"]})
+        +checkbox-buttons({
+          caption:     "дополнительные удобства",
+          leftCaption: "checkbox buttons",
+          inpId:       "check-box-buttons-1",
+          hidden:      "true",
+          inpStatus:   [,,,,,,],
+          inpName:     "check-box-name-1",
+          inpValue:    ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+          inpText:     ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
+        })
 
     .search-room__options-column_button.js-search-room__options-column_button.search-room__options-column_button_rotate
 
-    .room-cards_column
-      .container__room-cards_column
+    .search-room__room-cards
+      h1.search-room__room-cards-caption Номера, которые мы для вас подобрали
 
-        h1.search-room__room-cards_h1 Номера, которые мы для вас подобрали
+      .search-room__room-cards_grid-layout
 
-        .search-room__room-cards_grid-layout
+        - rooms = [{number: "888", luxStatus: "Люкс", price: "9 900", starsRate: "5", feedbacks: "145"}, {number: "840", luxStatus: "", price: "9 900", starsRate: "4", feedbacks: "65"}, {number: "980", luxStatus: "Люкс", price: "8 500", starsRate: "3", feedbacks: "35"},{number: "856", luxStatus: "", price: "7 300", starsRate: "5", feedbacks: "19"}, {number: "740", luxStatus: "", price: "6 600", starsRate: "4", feedbacks: "44"}, {number: "982", luxStatus: "", price: "5 800", starsRate: "3", feedbacks: "56"},{number: "678", luxStatus: "", price: "5 500", starsRate: "5", feedbacks: "45"}, {number: "450", luxStatus: "", price: "5 300", starsRate: "4", feedbacks: "39"}, {number: "350", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "77"},{number: "666", luxStatus: "", price: "5 000", starsRate: "5", feedbacks: "25"}, {number: "444", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "15"}, {number: "352", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "55"}]
 
-          - rooms = [{number: "888", luxStatus: "Люкс", price: "9 900", starsRate: "5", feedbacks: "145"}, {number: "840", luxStatus: "", price: "9 900", starsRate: "4", feedbacks: "65"}, {number: "980", luxStatus: "Люкс", price: "8 500", starsRate: "3", feedbacks: "35"},{number: "856", luxStatus: "", price: "7 300", starsRate: "5", feedbacks: "19"}, {number: "740", luxStatus: "", price: "6 600", starsRate: "4", feedbacks: "44"}, {number: "982", luxStatus: "", price: "5 800", starsRate: "3", feedbacks: "56"},{number: "678", luxStatus: "", price: "5 500", starsRate: "5", feedbacks: "45"}, {number: "450", luxStatus: "", price: "5 300", starsRate: "4", feedbacks: "39"}, {number: "350", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "77"},{number: "666", luxStatus: "", price: "5 000", starsRate: "5", feedbacks: "25"}, {number: "444", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "15"}, {number: "352", luxStatus: "", price: "5 000", starsRate: "3", feedbacks: "55"}]
+        include ../components/ui-kit/cards/room-card/room-card
+        each room in rooms
+          +room-card({
+            number:    room.number,
+            status:    room.luxStatus,
+            price:     `${room.price}₽`,
+            photoName: `room-card-${room.number}.jpg`,
+            starsRate: room.starsRate,
+            feedbacks: room.feedbacks,
+          })
 
-          include ../components/ui-kit/cards/room-card/room-card
-          each room in rooms
-            +room-card({  number:     room.number,
-                          status:     room.luxStatus,
-                          price:      `${room.price}₽`,
-                          photoName:  `room-card-${room.number}.jpg`,
-                          starsRate:  room.starsRate,
-                          feedbacks:  room.feedbacks,
-                      })
-
-        //- pagination
-        include ../components/ui-kit/form-elements/pagination/pagination
-        .search-room__room-cards_pagination-position
-          +pagination()
+      //- pagination
+      include ../components/ui-kit/form-elements/pagination/pagination
+      .search-room__room-cards_pagination-position
+        +pagination()

@@ -5,6 +5,8 @@
   background: $backgroundColor;
 
   &__container {
+    @include container;
+
     margin-bottom: rem(140);
   }
 
@@ -20,15 +22,15 @@
     margin-top: rem(12);
   }
 
-  &__registration_position {
+  &__registration {
     margin-top: rem(40);
   }
 
-  &__login_position {
+  &__login {
     margin-top: rem(40);
   }
 
-  &__room-card_position {
+  &__room-card {
     margin-top: rem(40);
   }
 }

@@ -17,6 +17,13 @@
   margin-bottom: rem(111);
 }
 
+.first-container,
+.second-container,
+.third-container,
+.fourth-container {
+  @include container;
+}
+
 .column-1,
 .column-2,
 .column-3 {

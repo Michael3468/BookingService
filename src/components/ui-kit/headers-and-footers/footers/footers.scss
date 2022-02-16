@@ -1,8 +1,10 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
+@import '../logo/logo.scss';
 
 .footer {
   display: flex;
+  max-width: 1440px;
   height: rem(376);
   padding-top: rem(102);
   font-weight: normal;
@@ -18,7 +20,17 @@
   }
 
   @media screen and (max-width: $phoneWidth) {
-    padding-top: 0;
+    margin-top: rem(100);
+    padding-top: rem(40);
+  }
+
+  &__mob {
+    height: auto;
+    border-bottom: none;
+  }
+
+  &__logo {
+    @include logo;
   }
 
   &__logo-p {
@@ -34,30 +46,30 @@
     padding-top: rem(17);
   }
 
-  &__nav {
+  &-nav {
     padding-top: rem(21);
     color: $DarkShade50;
-  }
 
-  &__nav-li {
-    padding-bottom: rem(18);
-  }
-
-  &__nav-link {
-    &:hover {
-      color: $DarkShade75;
+    &__item {
+      padding-bottom: rem(18);
     }
 
-    &:focus {
-      color: $DarkShade75;
-      font-weight: bold;
-      text-shadow: $TabindexShadow;
-    }
-  }
+    &__link {
+      &:hover {
+        color: $DarkShade75;
+      }
 
-  &__nav-p {
-    margin-bottom: rem(19);
-    line-height: rem(22);
+      &:focus {
+        color: $DarkShade75;
+        font-weight: bold;
+        text-shadow: $TabindexShadow;
+      }
+    }
+
+    &__text {
+      margin-bottom: rem(19);
+      line-height: rem(22);
+    }
   }
 
   &__nav-input {
@@ -70,10 +82,16 @@
   }
 }
 
+.footer__container,
+.sub-footer__container {
+  @include container;
+}
+
 // sub-footer
 .sub-footer {
   display: flex;
   align-items: center;
+  max-width: 1440px;
   height: rem(70);
   background-color: $default-color;
 
@@ -130,7 +148,7 @@
 // sub-footer end
 
 // grid
-.grid-layout {
+.footer__grid-layout {
   display: grid;
   grid-column-gap: rem(40);
   grid-template-columns: repeat(12, 1fr);
@@ -144,7 +162,7 @@
     grid-template-columns: 1fr;
   }
 
-  &__logo {
+  &-logo {
     grid-column: span 3;
 
     @media screen and (max-width: $smDesktopWidth) {
@@ -155,9 +173,17 @@
       justify-items: center;
       margin-top: rem(19);
     }
+
+    &_mob {
+      display: grid;
+      grid-column: span 12;
+      align-items: flex-start;
+      justify-items: center;
+      margin-top: rem(19);
+    }
   }
 
-  &__col {
+  &-col {
     grid-column: span 2;
     padding-top: rem(3);
 
@@ -166,7 +192,7 @@
     }
   }
 
-  &__form {
+  &-form {
     grid-column: span 3;
     padding-top: rem(3);
 
@@ -175,19 +201,4 @@
     }
   }
 }
-
-// mobile
-.grid-layout__logo_mob {
-  display: grid;
-  grid-column: span 12;
-  align-items: flex-start;
-  justify-items: center;
-  margin-top: rem(19);
-}
-
-.footer__mob {
-  height: auto;
-  border-bottom: none;
-}
-// mobile end
 // grid end
