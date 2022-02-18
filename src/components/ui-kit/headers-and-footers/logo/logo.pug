@@ -1,9 +1,21 @@
 mixin logo(props)
   if (props.position === 'header')
-    - classPrefix = 'header'
-  if (props.position === 'footer')
-    -classPrefix = 'footer'
+    - classPrefix = 'header__logo'
 
-  div(class=`${classPrefix}__logo`)
-    img(class=`${classPrefix}__logo-img` src="./assets/img/logo_colored.svg", alt="logo", loading="lazy")
-    img(class=`${classPrefix}__logo-name` src="./assets/img/TOXIN.png", alt="logo", loading="lazy")
+  if (props.position === 'footer')
+    -classPrefix = 'footer__logo'
+
+  div(class=`${classPrefix}`)
+    img(
+      class=`${classPrefix}-img`,
+      src="./assets/img/logo_colored.svg",
+      alt="logo",
+      loading="lazy",
+    )
+
+    img(
+      class=`${classPrefix}-name`,
+      src="./assets/img/TOXIN.png",
+      alt="logo",
+      loading="lazy",
+    )
