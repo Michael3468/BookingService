@@ -8,6 +8,7 @@
   max-width: 1440px;
   height: rem(70);
   background-color: $default-color;
+  box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 
   @media screen and (max-width: 1024px) {
     &__auth-buttons-padding {
@@ -25,11 +26,6 @@
       width: 100%;
       background: $default-color;
     }
-  }
-
-  &_bg-color {
-    background: $default-color;
-    box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
   }
 
   &__container {
