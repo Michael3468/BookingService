@@ -59,9 +59,18 @@ mixin registration(params)
         })
 
       include ../../../ui-kit/form-elements/buttons/buttons
-      +button({mod: ["with_arrow", "block"], value: "Зарегистрироваться", type: "submit", class: "js-registration-submit-button"})
+      +button({
+        mod:   ["with_arrow", "block"],
+        value: "Зарегистрироваться",
+        type:  "submit",
+        class: "js-registration-submit-button",
+      })
 
     .registration__enter-button-block_position
       .registration__enter-button-block
         p.registration__enter-button-text Уже есть аккаунт на Toxin
-        +button({link: "sign-in.html", mod: ["bordered"], value: "Войти"})
+        +button({
+          link:  "sign-in.html",
+          mod:   ["bordered"],
+          value: "Войти",
+        })

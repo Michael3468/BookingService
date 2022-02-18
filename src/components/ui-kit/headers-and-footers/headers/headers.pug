@@ -47,8 +47,20 @@ mixin header(loginStatus)
           else
             .header__notAuthorized
               .header__auth-buttons-padding
-                +button({link:"sign-in.html", value:"Войти", mod: ["bordered","small"], tabindex: 10})
+                +button({
+                  link:"sign-in.html",
+                  value:"Войти",
+                  mod: ["bordered","small"],
+                  tabindex: 10
+                })
+
               .header__auth-buttons-padding
-                +button({link:"registration.html", value:"Зарегистрироваться", mod: ["small"], tabindex: 11})
+                +button({
+                  link:"registration.html",
+                  value:"Зарегистрироваться",
+                  mod: ["small"],
+                  tabindex: 11
+                })
+
         //- authorization block end
       //- navigation menu end

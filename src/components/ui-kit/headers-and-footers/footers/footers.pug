@@ -48,10 +48,12 @@ mixin footer(footerType)
               p.footer-nav__text Получайте специальные предложения и новости сервиса
               form.js-subscription-form(action='#change-me')
                 include ../../form-elements/text-field/text-field
-                +text-field({inpType:       "email",
-                            inpName:        "email",
-                            inpPlaceholder: "Email",
-                            isArrow:        "true"})
+                +text-field({
+                  inpType:        "email",
+                  inpName:        "email",
+                  inpPlaceholder: "Email",
+                  isArrow:        "true",
+                })
     .sub-footer
       .sub-footer__container.sub-footer__content
         .sub-footer__copyright

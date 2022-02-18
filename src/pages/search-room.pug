@@ -41,20 +41,34 @@ block content
           showCaption: "true",
           inpStatus:   [ ,"checked","checked"],
           inpName:     "check-box-name",
-          inpValue:    ["allow-smoke", "allow pet",        "allow guests"],
-          inpText:     ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"],
+          inpValue: [
+            "allow-smoke",
+            "allow pet",
+            "allow guests",
+          ],
+          inpText: [
+            "Можно курить",
+            "Можно с питомцами",
+            "Можно пригласить гостей (до 10 человек)",
+          ],
         })
 
       .search-room-rich-checkbox-buttons
         include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
         +rich-checkbox-buttons({
           caption:       "доступность",
-          optionsValue:  ["wide-corridor",
-                          "assistant-for-the-disabled"],
-          optionText:    ["Широкий коридор",
-                          "Помощник для инвалидов"],
-          optionSubText: ["Ширина коридоров в номере не менее 91 см.",
-                          "На 1 этаже вас встретит специалист и проводит до номера"],
+          optionsValue: [
+            "wide-corridor",
+            "assistant-for-the-disabled",
+          ],
+          optionText: [
+            "Широкий коридор",
+            "Помощник для инвалидов",
+          ],
+          optionSubText: [
+            "Ширина коридоров в номере не менее 91 см.",
+            "На 1 этаже вас встретит специалист и проводит до номера",
+          ],
         })
 
       .search-room-dropdown-options
@@ -75,8 +89,22 @@ block content
           hidden:      "true",
           inpStatus:   [,,,,,,],
           inpName:     "check-box-name-1",
-          inpValue:    ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-          inpText:     ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
+          inpValue: [
+            "breakfast",
+            "table",
+            "chair",
+            "bed",
+            "TV",
+            "shampoo",
+          ],
+          inpText: [
+            "Завтрак",
+            "Письменный стол",
+            "Стул для кормления",
+            "Кроватка",
+            "Телевизор",
+            "Шампунь",
+          ],
         })
 
     .search-room-options-column-button.js-search-room-options-column-button.search-room-options-column-button_rotate
