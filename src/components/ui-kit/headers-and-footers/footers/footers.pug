@@ -9,7 +9,7 @@ mixin footer(footerType)
         .footer__grid-layout
           .footer__grid-layout-logo
             +logo({ position: 'footer' })
-            p.footer__logo-p.footer__padding
+            p.footer__logo-text
               | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
           .footer__grid-layout-col
             h3 Навигация
@@ -55,7 +55,7 @@ mixin footer(footerType)
                   isArrow:        "true",
                 })
     .sub-footer
-      .sub-footer__container.sub-footer__content
+      .sub-footer__container
         .sub-footer__copyright
           p #{copyrightText}
 
@@ -70,7 +70,7 @@ mixin footer(footerType)
           .footer__grid-layout-logo.footer__grid-layout-logo_mob
             +logo({ position: 'footer' })
     .sub-footer.sub-footer__mob
-      .sub-footer__container.sub-footer__content.sub-footer__content_mob
+      .sub-footer__container.sub-footer__container_mob
         .sub-footer__copyright
           p #{copyrightText}
 
