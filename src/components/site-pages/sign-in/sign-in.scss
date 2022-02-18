@@ -2,11 +2,11 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .sign-in {
-  &__block {
+  &-block {
     height: 100%;
   }
 
-  &__background-image {
+  &-background-image {
     position: relative;
     z-index: -10;
     height: 100%;
@@ -14,7 +14,7 @@
     object-fit: cover;
   }
 
-  &__container {
+  &-container {
     @include container;
   }
 

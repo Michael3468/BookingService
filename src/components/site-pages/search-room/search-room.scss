@@ -1,15 +1,16 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.search-room__container {
+.search-room-container {
   @include container;
 }
 
+// TODO rename ?
 .container__room-cards-column {
   margin-top: rem(28);
 }
 
-.search-room__options-column_button {
+.search-room-options-column-button {
   position: fixed;
   z-index: 20;
   display: none;
@@ -47,42 +48,42 @@
 .search-room {
   min-width: rem(266);
 
-  &__date-dropdown {
+  &-date-dropdown {
     margin-top: rem(28);
     margin-bottom: rem(20);
   }
 
-  &__range-slider {
+  &-range-slider {
     margin-top: rem(30);
     margin-bottom: rem(26);
   }
 
-  &__checkbox-buttons {
+  &-checkbox-buttons {
     width: rem(225);
   }
 
-  &__rich-checkbox-buttons {
+  &-rich-checkbox-buttons {
     width: rem(260);
     margin-top: rem(31);
   }
 
-  &__dropdown-options {
+  &-dropdown-options {
     margin-top: rem(28);
   }
 
-  &__checkbox-buttons-expandable {
+  &-checkbox-buttons-expandable {
     margin-top: rem(30);
   }
 }
 
-.search-room__range-slider-text {
+.search-room-range-slider-text {
   color: $DarkShade50;
   font-size: rem(12);
   font-family: $secondFont;
   line-height: 21px;
 }
 
-.search-room__room-cards {
+.search-room-room-cards {
   width: 100%;
   margin-left: rem(59);
 
@@ -91,8 +92,8 @@
   }
 }
 
-.search-room__room-cards {
-  &-caption {
+.search-room-room-cards {
+  &__caption {
     margin-top: rem(28);
     margin-bottom: rem(20);
     font-family: $secondFont;
@@ -108,7 +109,7 @@
     }
   }
 
-  &_grid-layout {
+  &__grid-layout {
     display: grid;
     grid-row-gap: rem(20);
     grid-column-gap: rem(32);
@@ -120,7 +121,7 @@
     }
   }
 
-  &_pagination-position {
+  &__pagination {
     display: flex;
     width: 100%;
     margin-top: rem(43);

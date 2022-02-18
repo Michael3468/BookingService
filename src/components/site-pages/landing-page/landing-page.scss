@@ -28,11 +28,11 @@
     }
   }
 
-  &__container {
+  &-container {
     @include container;
   }
 
-  &__room-search {
+  &-room-search {
     width: rem(380);
     margin-top: rem(70);
 
@@ -42,7 +42,7 @@
     }
   }
 
-  &__img-text {
+  &-img-text {
     display: flex;
     justify-content: flex-end;
     width: 100%;

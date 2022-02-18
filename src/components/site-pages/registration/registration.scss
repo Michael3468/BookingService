@@ -2,23 +2,18 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .registration {
-  &__background-image {
+  &-background-image {
     height: 683px;
     object-fit: cover;
   }
 
-  &_block {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__container {
+  &-container {
     @include container;
   }
 
   $card-width: rem(380);
 
-  &__card {
+  &-card {
     position: absolute;
     top: rem(90);
     left: calc(50% - (#{$card-width} / 2));

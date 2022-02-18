@@ -6,23 +6,23 @@ block variables
 
 block content
 
-  .room-details__images-block
-    .room-details__images-block_left
-      img(src="./assets/img/room-card-888-big_size.jpg", alt="room 888 big picture", loading="lazy").room-details__images-block_big-size
-    .room-details__images-block_right
-      img(src="./assets/img/room-card-888-2-mid_size.jpg", alt="room 888 picture", loading="lazy").room-details__images-block_middle-size
-      img(src="./assets/img/room-card-888-3-mid_size.jpg", alt="room 888 picture", loading="lazy").room-details__images-block_middle-size
+  .room-details-images-block
+    .room-details-images-block__left
+      img(src="./assets/img/room-card-888-big_size.jpg", alt="room 888 big picture", loading="lazy").room-details-images-block_size_big
+    .room-details-images-block__right
+      img(src="./assets/img/room-card-888-2-mid_size.jpg", alt="room 888 picture", loading="lazy").room-details-images-block_size_middle
+      img(src="./assets/img/room-card-888-3-mid_size.jpg", alt="room 888 picture", loading="lazy").room-details-images-block_size_middle
 
-  .room-details__container
+  .room-details-container
 
-    .room-details__flex-container
+    .room-details-flex-container
 
-      .room-details__column-1
+      .room-details-column-1
 
-        .room-details__blocks
-          .room-details__description
-            h2.room-details__caption Сведения о номере
-            .room-details__icon-text-list
+        .room-details-blocks
+          .room-details-description
+            h2.room-details-caption Сведения о номере
+            .room-details-icon-text-list
               include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
               +icon-text-list({
                 iconName : "insert_emoticon",
@@ -42,8 +42,8 @@ block content
                 text:      "Номер оснащен камином",
               })
 
-          .room-details__chart
-            h2.room-details__caption Впечатления от номера
+          .room-details-chart
+            h2.room-details-caption Впечатления от номера
             include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
             +d3js-donut-chart({
               width:  "120",
@@ -56,13 +56,13 @@ block content
             })
 
 
-        .room-details__feedbacks
-          .room-details__feedbacks-caption
-            h2.room-details__caption Отзывы посетителей номера
+        .room-details-feedbacks
+          .room-details-feedbacks__caption
+            h2.room-details-caption Отзывы посетителей номера
             p 2 отзыва
 
           include ../components/ui-kit/form-elements/comments-block/comments-block
-          .room-details__comments-block
+          .room-details-comments-block
             +comments-block({
               imageName:      "avatar.jpg",
               userName:       "Мурад Сарафанов",
@@ -73,7 +73,7 @@ block content
               likeBtnText:    "12",
             })
 
-          .room-details__comments-block
+          .room-details-comments-block
             +comments-block({
               imageName:     "avatar2.jpg",
               userName:      "Патрисия Стёклышкова",
@@ -83,22 +83,22 @@ block content
               likeBtnText:   "2",
             })
 
-        .room-details__rules
-          .room-details__rules-block
+        .room-details-rules
+          .room-details-rules-block
             include ../components/ui-kit/form-elements/bullet-list/bullet-list
-            h2.room-details__caption.room-details__caption_position Правила
+            h2.room-details-caption.room-details-caption_position Правила
             +bullet-list({
               options: ["Нельзя с питомцами",
                         "Без вечеринок и мероприятий",
                         "Время прибытия - после 13:00, а выезд до 12:00"],
             })
 
-          .room-details__cancel-block
-            h2.room-details__caption Отмена
+          .room-details-cancel-block
+            h2.room-details-caption Отмена
             p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
 
-      .room-details__column-2
+      .room-details-column-2
         include ../components/ui-kit/cards/booking/booking
         +booking({
           roomPrice:                    "9 990₽",
