@@ -3,7 +3,7 @@
 import 'slick-carousel/slick/slick.min';
 
 $(() => {
-  $('.js-slick-picture-block').slick({
+  $('.js-slick-picture').slick({
     dots: true,
   });
 });
