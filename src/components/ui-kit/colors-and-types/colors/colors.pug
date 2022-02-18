@@ -1,10 +1,31 @@
-mixin color(colorName, colorValue, backgroundColor, opacityColor)
+mixin color(props)
+  - opacity = props.opacity
+  - name = props.name
+
   .color
-    if (opacityColor)
-      .color__sample(style= "background: "+backgroundColor+"; opacity: "+opacityColor+"")
+    if (opacity)
+      case opacity
+        when "1"
+          .color__sample.color__sample_opacity_100
+        when ".75"
+          .color__sample.color__sample_opacity_75
+        when ".50"
+          .color__sample.color__sample_opacity_50
+        when ".25"
+          .color__sample.color__sample_opacity_25
+        when ".05"
+          .color__sample.color__sample_opacity_05
     else
-      .color__sample(style= "background: "+backgroundColor+";")
+      case name
+        when "Purple"
+          .color__sample.color__sample_bg_purple
+        when "Green"
+          .color__sample.color__sample_bg_green
 
     .color__description
-      h2.color__name= colorName
-      p.color__code= colorValue
+      h2.color__name= name
+
+      if (props.color)
+        p.color__code= props.color
+      else
+        p.color__code= "#1F2041"

@@ -12,6 +12,39 @@
     width: rem(70);
     height: rem(70);
     border-radius: rem(6);
+    background-color: $DarkShade100;
+
+    &_opacity {
+      &_100 {
+        opacity: 1;
+      }
+
+      &_75 {
+        opacity: .75;
+      }
+
+      &_50 {
+        opacity: .5;
+      }
+
+      &_25 {
+        opacity: .25;
+      }
+
+      &_05 {
+        opacity: .05;
+      }
+    }
+
+    &_bg {
+      &_purple {
+        background-color: $purple;
+      }
+
+      &_green {
+        background-color: $green;
+      }
+    }
   }
 
   &__description {
@@ -19,7 +52,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin: rem(8) 0 0 rem(40);
-    color: #1f2041;
+    color: $DarkShade100;
     font-weight: bold;
     font-size: rem(19);
     font-family: $mainFont;
@@ -28,12 +61,14 @@
 
   &__name {
     font-weight: bold;
+    letter-spacing: rem(1);
   }
 
   &__code {
-    margin-top: rem(6);
+    margin-top: rem(4);
     font-weight: normal;
     font-size: rem(19);
     font-family: $mainFont;
+    letter-spacing: rem(1);
   }
 }

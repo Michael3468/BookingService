@@ -13,13 +13,40 @@ block content
   .colors-and-types
 
     .colors-and-types__colors
-      +color("Dark Shade 100%","#1F2041", "#1F2041", "1")
-      +color("Dark Shade 75%" ,"#1F2041", "#1F2041", ".75")
-      +color("Dark Shade 50%" ,"#1F2041", "#1F2041", ".5")
-      +color("Dark Shade 25%" ,"#1F2041", "#1F2041", ".25")
-      +color("Dark Shade 5%"  ,"#1F2041", "#1F2041", ".05")
-      +color("Purple"         ,"#BC9CFF", "#BC9CFF")
-      +color("Green"          ,"#6FCF97", "#6FCF97")
+      +color({
+        name:    "Dark Shade 100%",
+        opacity: "1",
+      })
+
+      +color({
+        name:    "Dark Shade 75%",
+        opacity: ".75",
+      })
+
+      +color({
+        name:    "Dark Shade 50%",
+        opacity: ".50",
+      })
+
+      +color({
+        name:    "Dark Shade 25%",
+        opacity: ".25",
+      })
+
+      +color({
+        name:    "Dark Shade 5%",
+        opacity: ".05",
+      })
+
+      +color({
+        name:  "Purple",
+        color: "#BC9CFF",
+      })
+
+      +color({
+        name:  "Green",
+        color: "#6FCF97",
+      })
 
     .colors-and-types__types
       +types()
