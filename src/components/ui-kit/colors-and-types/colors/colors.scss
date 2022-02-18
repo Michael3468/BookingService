@@ -1,16 +1,10 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.colors {
-  width: rem(269);
-}
-
 .color {
-  &-block {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: rem(20);
-  }
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(20);
 
   &__sample {
     top: rem(145);
@@ -32,11 +26,11 @@
     line-height: rem(29);
   }
 
-  &__colorName {
+  &__name {
     font-weight: bold;
   }
 
-  &__colorCode {
+  &__code {
     margin-top: rem(6);
     font-weight: normal;
     font-size: rem(19);

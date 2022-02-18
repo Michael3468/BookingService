@@ -2,17 +2,20 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .colors-and-types {
+  @include container;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 
-  &__container {
-    @include container;
-  }
+  // &__container {
+    
+  // }
 
   &__colors {
     padding-left: rem(10);
+    width: rem(269);
   }
 
   &__types {

@@ -1,18 +1,12 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.types__block {
+.type {
   display: flex;
   flex-direction: row;
   margin-bottom: rem(50);
-}
 
-.type {
-  &__tagDescription {
-    width: rem(336);
-  }
-
-  &__tagName {
+  &__name {
     display: flex;
     justify-content: flex-end;
     width: rem(37);
@@ -20,5 +14,9 @@
     color: $DarkShade25;
     font-weight: normal;
     font-family: $secondFont;
+  }
+
+  &__description {
+    width: rem(336);
   }
 }
