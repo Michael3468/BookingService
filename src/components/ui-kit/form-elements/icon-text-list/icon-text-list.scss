@@ -23,8 +23,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  //- text-block
-  &__text-block {
+  &__content {
     margin-left: rem(10);
     color: $DarkShade75;
     font-size: rem(14);
@@ -44,5 +43,4 @@
     margin-bottom: rem(21);
     font-weight: normal;
   }
-  //- text-block end
 }

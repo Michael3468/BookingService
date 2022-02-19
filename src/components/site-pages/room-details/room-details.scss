@@ -40,6 +40,14 @@
 
 //- room-details columns
 .room-details {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(80);
+
+  @media screen and (max-width: $desktopWidth) {
+    column-gap: rem(50);
+  }
+
   &-column-1 {
     @media only screen and (max-width: 800px) {
       order: 1;
@@ -84,16 +92,6 @@
     }
   }
 
-  &-blocks {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: rem(80);
-
-    @media screen and (max-width: $desktopWidth) {
-      column-gap: rem(50);
-    }
-  }
-
   &-description {
     margin-bottom: rem(10);
   }
@@ -132,7 +130,7 @@
     }
   }
 
-  &-comments-block {
+  &-comments {
     margin-bottom: rem(23);
 
     &:last-child {
@@ -141,22 +139,20 @@
   }
   //- visitors feedbacks end
 
-  //- rules block
   &-rules {
     display: flex;
     flex-wrap: wrap;
     margin-top: rem(30);
     column-gap: rem(106);
 
-    &-block {
+    &__left {
       width: rem(255);
     }
-  }
 
-  &-cancel-block {
-    max-width: rem(335);
+    &__right {
+      max-width: rem(335);
+    }
   }
-  //- rules block end
 }
 //- room-details columns end
 

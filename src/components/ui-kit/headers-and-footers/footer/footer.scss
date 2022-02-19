@@ -34,9 +34,9 @@
   }
 
   &__logo-text {
+    padding-top: rem(17);
     color: $DarkShade75;
     line-height: rem(24);
-    padding-top: rem(17);
 
     @media screen and (max-width: $smDesktopWidth) {
       display: none;

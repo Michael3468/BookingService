@@ -6,11 +6,14 @@ block variables
 
 block content
 
-  img(src="./assets/img/registration-bg.jpg", alt="registration page background image", loading="lazy").registration-background-image
+  img(
+    src="./assets/img/registration-bg.jpg",
+    alt="registration page background image",
+    loading="lazy",
+  ).registration-background-image
 
   .registration-container
 
-    .registration-card-block
-      .registration-card
-        include ../components/ui-kit/cards/registration/registration
-        +registration()
+    .registration-card
+      include ../components/ui-kit/cards/registration/registration
+      +registration()

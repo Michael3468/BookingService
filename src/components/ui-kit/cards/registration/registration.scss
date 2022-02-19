@@ -7,37 +7,32 @@
     font-family: $secondFont;
   }
 
-  &__radio-buttons_position {
+  &__name {
+    margin-bottom: rem(4);
+  }
+
+  &__gender {
     margin-bottom: rem(23);
   }
 
-  &__toggle_position {
+  &__email {
+    margin-top: rem(18);
+  }
+
+  &__password {
+    margin-top: rem(4);
+  }
+
+  &__special-offers {
     margin-top: rem(10);
     margin-bottom: rem(23);
   }
 
-  &__enter-button-block {
+  &__enter-button {
     display: flex;
     flex-shrink: row;
     align-items: center;
     justify-content: space-between;
-
-    &_position {
-      margin-top: rem(30);
-    }
-  }
-
-  &__text-field {
-    &_position {
-      margin-bottom: rem(4);
-    }
-
-    &_block-position {
-      margin-top: rem(18);
-    }
-
-    &_block-margin-between {
-      margin-top: rem(4);
-    }
+    margin-top: rem(30);
   }
 }

@@ -3,7 +3,7 @@ mixin registration(params)
     h1.registration__caption Регистрация аккаунта
 
     form.js-registration-form(action="#change-me")
-      .registration__text-field_position
+      .registration__name
         include ../../../ui-kit/form-elements/text-field/text-field
         +text-field({
           inpType:        "text",
@@ -18,7 +18,7 @@ mixin registration(params)
         inpPlaceholder: "Фамилия",
       })
 
-      .registration__radio-buttons_position
+      .registration__gender
         include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
         +radio-buttons({
           radioButtonName: "gender",
@@ -35,7 +35,7 @@ mixin registration(params)
         inpPlaceholder: "ДД.ММ.ГГГГ",
       })
 
-      .registration__text-field_block-position
+      .registration__email
         +text-field({
           leftCaption:    "Данные для входа в сервис",
           inpType:        "email",
@@ -43,14 +43,14 @@ mixin registration(params)
           inpPlaceholder: "Email",
         })
 
-      .registration__text-field_block-margin-between
+      .registration__password
         +text-field({
           inpType:        "password",
           inpName:        "password",
           inpPlaceholder: "Пароль",
         })
 
-      .registration__toggle_position
+      .registration__special-offers
         include ../../../ui-kit/form-elements/toggle/toggle
         +toggle({
           toggleBtnText: "Получать спецпредложения",
@@ -66,11 +66,10 @@ mixin registration(params)
         class: "js-registration-submit-button",
       })
 
-    .registration__enter-button-block_position
-      .registration__enter-button-block
-        p.registration__enter-button-text Уже есть аккаунт на Toxin
-        +button({
-          link:  "sign-in.html",
-          mod:   ["bordered"],
-          value: "Войти",
-        })
+    .registration__enter-button
+      p.registration__enter-button-text Уже есть аккаунт на Toxin
+      +button({
+        link:  "sign-in.html",
+        mod:   ["bordered"],
+        value: "Войти",
+      })

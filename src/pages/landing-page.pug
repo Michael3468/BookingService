@@ -1,19 +1,34 @@
 extends ../components/layouts/main-header-footer
 
+include ../components/ui-kit/cards/room-search/room-search
+
 block variables
   - title = "FSD Landing page";
   - description = "FSD education project | Landing page";
 
 block content
-  .landing-background-block
-    img.landing-background(src="./assets/img/landing-page__background-image-1.jpg", alt="landing page background image", loading="lazy")
-    img.landing-background(src="./assets/img/landing-page__background-image-2.jpg", alt="landing page background image", loading="lazy")
-    img.landing-background(src="./assets/img/landing-page__background-image-3.jpg", alt="landing page background image", loading="lazy")
+  .landing-background
+    img.landing-background-img(
+      src="./assets/img/landing-page__background-image-1.jpg",
+      alt="landing page background image",
+      loading="lazy",
+    )
+
+    img.landing-background-img(
+      src="./assets/img/landing-page__background-image-2.jpg",
+      alt="landing page background image",
+      loading="lazy",
+    )
+
+    img.landing-background-img(
+      src="./assets/img/landing-page__background-image-3.jpg",
+      alt="landing page background image",
+      loading="lazy",
+    )
 
   .landing-container
 
     .landing-room-search
-      include ../components/ui-kit/cards/room-search/room-search
       +room-search()
 
   .landing-container

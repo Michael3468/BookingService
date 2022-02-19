@@ -3,7 +3,7 @@ mixin login(params)
     h1.login__caption Войти
 
     form.js-login-form(action="#change-me")
-      .login__inputs-block
+      .login__inputs
         include ../../../ui-kit/form-elements/text-field/text-field
         +text-field({
           inpType:        "email",
@@ -24,7 +24,7 @@ mixin login(params)
         type:  "submit"
       })
 
-    .login__create-login-block
+    .login__create-login
       p.login__create-login-text Нет аккаунта на Toxin?
       +button({
         link:  "registration.html",

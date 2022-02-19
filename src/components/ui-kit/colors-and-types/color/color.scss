@@ -11,8 +11,8 @@
     left: rem(150);
     width: rem(70);
     height: rem(70);
-    border-radius: rem(6);
     background-color: $DarkShade100;
+    border-radius: rem(6);
 
     &_opacity {
       &_100 {
@@ -20,19 +20,19 @@
       }
 
       &_75 {
-        opacity: .75;
+        opacity: 0.75;
       }
 
       &_50 {
-        opacity: .5;
+        opacity: 0.5;
       }
 
       &_25 {
-        opacity: .25;
+        opacity: 0.25;
       }
 
       &_05 {
-        opacity: .05;
+        opacity: 0.05;
       }
     }
 

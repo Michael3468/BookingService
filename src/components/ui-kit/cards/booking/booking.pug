@@ -29,31 +29,32 @@ mixin booking(params)
         formPart:      "true",
       })
 
-      .booking__options-block
-
+      .booking__options
         .booking__options_left
-          .booking__options-item_block
-            p.booking__options-item_text=params.roomPrice + params.daysPriceText
-          .booking__options-item_block
-            p.booking__options-item_text=params.servicesPriceText
+          .booking__options-item
+            p.booking__options-item-text=params.roomPrice + params.daysPriceText
+
+          .booking__options-item
+            p.booking__options-item-text=params.servicesPriceText
             .booking__options-info-icon
-          .booking__options-item_block
-            p.booking__options-item_text=params.additionalServicesPriceText
+
+          .booking__options-item
+            p.booking__options-item-text=params.additionalServicesPriceText
             .booking__options-info-icon
 
         .booking__options_right
-          p.booking__options-item_text=params.daysPriceValue
-          p.booking__options-item_text=params.servicesPriceValue
-          p.booking__options-item_text=params.additionalServicesPriceValue
+          p.booking__options-item-text=params.daysPriceValue
+          p.booking__options-item-text=params.servicesPriceValue
+          p.booking__options-item-text=params.additionalServicesPriceValue
 
       .booking__options-result
-        p.booking__options-result_text=params.resultText
-        .booking__options-result_line
-        p.booking__options-result_sum= params.resultSum
+        p.booking__options-result-text=params.resultText
+        .booking__options-result-line
+        p.booking__options-result-sum= params.resultSum
 
       include ../../../ui-kit/form-elements/button/button
       +button({
-        mod: ["with_arrow","block"],
+        mod:   ["with_arrow","block"],
         value: "Забронировать",
         class: 'js-booking-submit-button',
       })

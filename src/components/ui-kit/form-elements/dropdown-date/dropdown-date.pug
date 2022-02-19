@@ -1,17 +1,17 @@
 mixin dropdown-date(params)
   .dropdown-date.js-dropdown-date
 
-    .dropdown-date__block
+    .dropdown-date__item
       .dropdown-date__caption
         h3= params.startDateCaption
-      .dropdown-date__input-block
+      .dropdown-date__input-item
         input.dropdown-date__input.js-start-date(name="start-date" tabindex="0" type="text" placeholder="ДД.ММ.ГГГГ" readonly="").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 
-    .dropdown-date__block
+    .dropdown-date__item
       .dropdown-date__caption
         h3= params.endDateCaption
-      .dropdown-date__input-block
+      .dropdown-date__input-item
         input.dropdown-date__input.js-end-date(name="end-date" tabindex="0" type="text" placeholder="ДД.ММ.ГГГГ" readonly="").input__style
         span.dropdown-date__expand-button.material-icons expand_more
 

@@ -20,15 +20,15 @@
     width: rem(336);
 
     &_h1 {
-      font-family: $secondFont;
       font-weight: bold;
       font-size: rem(24);
+      font-family: $secondFont;
     }
 
     &_h2 {
-      font-family: $secondFont;
       font-weight: bold;
       font-size: rem(19);
+      font-family: $secondFont;
     }
   }
 }

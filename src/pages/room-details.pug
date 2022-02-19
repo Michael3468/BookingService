@@ -33,7 +33,7 @@ block content
 
       .room-details-column-1
 
-        .room-details-blocks
+        .room-details
           .room-details-description
             h2.room-details-caption Сведения о номере
             .room-details-icon-text-list
@@ -66,7 +66,12 @@ block content
               good:   "65",
               normal: "65",
               bad:    "0",
-              legendValues: ["Великолепно","Хорошо","Удовлетворительно","Разочарован",],
+              legendValues: [
+                "Великолепно",
+                "Хорошо",
+                "Удовлетворительно",
+                "Разочарован",
+              ],
             })
 
 
@@ -76,7 +81,7 @@ block content
             p 2 отзыва
 
           include ../components/ui-kit/form-elements/comments-block/comments-block
-          .room-details-comments-block
+          .room-details-comments
             +comments-block({
               imageName:      "avatar.jpg",
               userName:       "Мурад Сарафанов",
@@ -87,7 +92,7 @@ block content
               likeBtnText:    "12",
             })
 
-          .room-details-comments-block
+          .room-details-comments
             +comments-block({
               imageName:     "avatar2.jpg",
               userName:      "Патрисия Стёклышкова",
@@ -98,7 +103,7 @@ block content
             })
 
         .room-details-rules
-          .room-details-rules-block
+          .room-details-rules__left
             include ../components/ui-kit/form-elements/bullet-list/bullet-list
             h2.room-details-caption.room-details-caption_position Правила
             +bullet-list({
@@ -109,7 +114,7 @@ block content
               ],
             })
 
-          .room-details-cancel-block
+          .room-details-rules__right
             h2.room-details-caption Отмена
             p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 

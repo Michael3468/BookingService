@@ -6,11 +6,15 @@ block variables
 
 block content
 
-  .sign-in-block
-    img(src="./assets/img/sign-in-bg.jpg", alt="sign in page background image", loading="lazy").sign-in-background-image
+  .sign-in
+    img(
+      src="./assets/img/sign-in-bg.jpg",
+      alt="sign in page background image",
+      loading="lazy",
+    ).sign-in__background-image
 
-    .sign-in-container
+    .sign-in__container
 
-      .sign-in-card
+      .sign-in__card
         include ../components/ui-kit/cards/login/login
         +login()

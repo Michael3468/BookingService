@@ -39,7 +39,7 @@ mixin header(loginStatus)
           //- css dropdown end
 
         //- authorization block
-        .header__authorization-block
+        .header__authorization
           if loginStatus == "authorized"
             .header__authorized(tabindex="6")
               - userName = "Юлий Цезарь"
@@ -48,18 +48,18 @@ mixin header(loginStatus)
             .header__not-authorized
               .header__auth-buttons-padding
                 +button({
-                  link:"sign-in.html",
-                  value:"Войти",
-                  mod: ["bordered","small"],
-                  tabindex: 10
+                  link:     "sign-in.html",
+                  value:    "Войти",
+                  mod:      ["bordered","small"],
+                  tabindex: 10,
                 })
 
               .header__auth-buttons-padding
                 +button({
-                  link:"registration.html",
-                  value:"Зарегистрироваться",
-                  mod: ["small"],
-                  tabindex: 11
+                  link:     "registration.html",
+                  value:    "Зарегистрироваться",
+                  mod:      ["small"],
+                  tabindex: 11,
                 })
 
         //- authorization block end

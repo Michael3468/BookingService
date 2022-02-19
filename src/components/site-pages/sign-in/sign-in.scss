@@ -2,11 +2,9 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .sign-in {
-  &-block {
-    height: 100%;
-  }
+  height: 100%;
 
-  &-background-image {
+  &__background-image {
     position: relative;
     z-index: -10;
     height: 100%;
@@ -14,13 +12,13 @@
     object-fit: cover;
   }
 
-  &-container {
+  &__container {
     @include container;
   }
 
   $card-width: rem(380);
 
-  &-card {
+  &__card {
     position: absolute;
     top: rem(242);
     left: calc(50% - (#{$card-width} / 2));
