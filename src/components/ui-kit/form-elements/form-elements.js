@@ -1,4 +1,4 @@
-import './buttons/buttons';
+import './button/button';
 import './bullet-list/bullet-list';
 import './checkbox-buttons/checkbox-buttons';
 import './comments-block/comments-block';

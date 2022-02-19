@@ -1,5 +1,5 @@
 import '../logo/logo';
-import '../../form-elements/buttons/buttons';
+import '../../form-elements/button/button';
 
 import './header.scss';
 
