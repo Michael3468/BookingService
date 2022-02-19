@@ -6,12 +6,26 @@ block variables
 
 block content
 
-  .room-details-images-block
-    .room-details-images-block__left
-      img(src="./assets/img/room-card-888-big_size.jpg", alt="room 888 big picture", loading="lazy").room-details-images-block_size_big
-    .room-details-images-block__right
-      img(src="./assets/img/room-card-888-2-mid_size.jpg", alt="room 888 picture", loading="lazy").room-details-images-block_size_middle
-      img(src="./assets/img/room-card-888-3-mid_size.jpg", alt="room 888 picture", loading="lazy").room-details-images-block_size_middle
+  .room-details-images
+    .room-details-images__left
+      img(
+        src="./assets/img/room-card-888-big_size.jpg",
+        alt="room 888 big picture",
+        loading="lazy",
+      ).room-details-images_size_big
+
+    .room-details-images__right
+      img(
+        src="./assets/img/room-card-888-2-mid_size.jpg",
+        alt="room 888 picture",
+        loading="lazy",
+      ).room-details-images_size_middle
+      
+      img(
+        src="./assets/img/room-card-888-3-mid_size.jpg",
+        alt="room 888 picture",
+        loading="lazy",
+      ).room-details-images_size_middle
 
   .room-details-container
 
@@ -88,9 +102,11 @@ block content
             include ../components/ui-kit/form-elements/bullet-list/bullet-list
             h2.room-details-caption.room-details-caption_position Правила
             +bullet-list({
-              options: ["Нельзя с питомцами",
-                        "Без вечеринок и мероприятий",
-                        "Время прибытия - после 13:00, а выезд до 12:00"],
+              options: [
+                "Нельзя с питомцами",
+                "Без вечеринок и мероприятий",
+                "Время прибытия - после 13:00, а выезд до 12:00",
+              ],
             })
 
           .room-details-cancel-block

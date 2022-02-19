@@ -1,13 +1,12 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.room-details-images-block {
-  display: grid;
-  grid-template-columns: 68.125% 31.875%;
+.room-details-images {
+  display: flex;
+  flex: 2 1;
 
   @media screen and (max-width: $smTableWidth) {
-    grid-template-rows: auto 2fr;
-    grid-template-columns: 1fr;
+    flex-direction: column;
 
     &__left {
       width: 100%;
@@ -26,8 +25,8 @@
   }
 
   &__right {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   &_big-size {
