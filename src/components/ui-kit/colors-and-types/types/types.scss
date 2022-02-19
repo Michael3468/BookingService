@@ -18,5 +18,17 @@
 
   &__description {
     width: rem(336);
+
+    &_h1 {
+      font-family: $secondFont;
+      font-weight: bold;
+      font-size: rem(24);
+    }
+
+    &_h2 {
+      font-family: $secondFont;
+      font-weight: bold;
+      font-size: rem(19);
+    }
   }
 }
