@@ -10,8 +10,8 @@ import '../../ui-kit/form-elements/pagination/pagination';
 import '../../ui-kit/form-elements/range-slider/range-slider';
 import '../../ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons';
 
-import '../../ui-kit/headers-and-footers/headers/headers';
-import '../../ui-kit/headers-and-footers/footers/footers';
+import '../../ui-kit/headers-and-footers/header/header';
+import '../../ui-kit/headers-and-footers/footer/footer';
 
 const optionsColumnButton = document.querySelector('.js-search-room-options-column-button');
 const menu = document.querySelector('.js-search-room-options-column');

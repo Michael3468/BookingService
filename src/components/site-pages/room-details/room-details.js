@@ -8,5 +8,5 @@ import '../../ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart';
 import '../../ui-kit/form-elements/icon-text-list/icon-text-list';
 import '../../ui-kit/form-elements/like-button/like-button';
 
-import '../../ui-kit/headers-and-footers/headers/headers';
-import '../../ui-kit/headers-and-footers/footers/footers';
+import '../../ui-kit/headers-and-footers/header/header';
+import '../../ui-kit/headers-and-footers/footer/footer';
