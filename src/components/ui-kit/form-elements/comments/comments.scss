@@ -1,7 +1,7 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.comments-block {
+.comments {
   color: $DarkShade75;
 
   &__user {
@@ -10,7 +10,7 @@
 
     $user-photo_size: rem(48);
 
-    &_photo {
+    &-photo {
       box-sizing: border-box;
       width: $user-photo_size;
       height: $user-photo_size;
@@ -19,13 +19,13 @@
       filter: drop-shadow(rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.1));
     }
 
-    &_info {
+    &-info {
       margin: rem(1) 0 0 rem(10);
       font-size: rem(14);
       font-family: $secondFont;
     }
 
-    &_name {
+    &-name {
       margin-bottom: rem(7);
       font-weight: bold;
     }
@@ -36,12 +36,12 @@
     flex-direction: row;
     margin-top: rem(11);
 
-    &_like {
+    &-like {
       width: rem(48);
       margin-left: rem(4);
     }
 
-    &_text {
+    &-text {
       margin-left: rem(14);
       font-family: $secondFont;
       line-height: rem(24);

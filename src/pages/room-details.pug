@@ -80,9 +80,9 @@ block content
             h2.room-details-caption Отзывы посетителей номера
             p 2 отзыва
 
-          include ../components/ui-kit/form-elements/comments-block/comments-block
+          include ../components/ui-kit/form-elements/comments/comments
           .room-details-comments
-            +comments-block({
+            +comments({
               imageName:      "avatar.jpg",
               userName:       "Мурад Сарафанов",
               commentDate:    "5 дней назад",
@@ -93,7 +93,7 @@ block content
             })
 
           .room-details-comments
-            +comments-block({
+            +comments({
               imageName:     "avatar2.jpg",
               userName:      "Патрисия Стёклышкова",
               commentDate:   "Неделю назад",
