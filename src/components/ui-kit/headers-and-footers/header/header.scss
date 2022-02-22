@@ -11,7 +11,7 @@
   box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 
   @media screen and (max-width: 1024px) {
-    &__auth-buttons-padding {
+    &__auth-buttons {
       padding: rem(10) 0;
     }
   }
@@ -151,12 +151,12 @@
   }
   // nav end
 
-  &__authorization {
+  &__authentification {
     @include header__expand-menu;
   }
 
-  // authorization
-  &__authorized {
+  // authentification
+  &__authentificated {
     display: flex;
     justify-content: flex-end;
     width: rem(120);
@@ -180,7 +180,7 @@
     }
   }
 
-  &__not-authorized {
+  &__not-authentificated {
     display: flex;
     justify-content: flex-end;
     margin-left: rem(21);
@@ -193,14 +193,14 @@
     }
   }
 
-  &__auth-buttons-padding:last-child {
+  &__auth-buttons:last-child {
     margin-left: rem(21);
 
     @media screen and (max-width: 1024px) {
       margin-left: 0;
     }
   }
-  // authorization end
+  // authentification end
 
   &__dropdown-link {
     display: inline-block;

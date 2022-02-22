@@ -38,15 +38,15 @@ mixin header(loginStatus)
               a.header__dropdown-link(href="change-me" tabindex="5") Соглашение-3
           //- css dropdown end
 
-        //- authorization block
-        .header__authorization
-          if loginStatus == "authorized"
-            .header__authorized(tabindex="6")
+        //- authentification block
+        .header__authentification
+          if loginStatus == "authentificated"
+            .header__authentificated(tabindex="6")
               - userName = "Юлий Цезарь"
               span.header__nav-li #{userName}
           else
-            .header__not-authorized
-              .header__auth-buttons-padding
+            .header__not-authentificated
+              .header__auth-buttons
                 +button({
                   link:     "sign-in.html",
                   value:    "Войти",
@@ -54,7 +54,7 @@ mixin header(loginStatus)
                   tabindex: 10,
                 })
 
-              .header__auth-buttons-padding
+              .header__auth-buttons
                 +button({
                   link:     "registration.html",
                   value:    "Зарегистрироваться",
@@ -62,5 +62,5 @@ mixin header(loginStatus)
                   tabindex: 11,
                 })
 
-        //- authorization block end
+        //- authentification block end
       //- navigation menu end
