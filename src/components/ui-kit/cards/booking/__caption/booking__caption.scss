@@ -28,8 +28,9 @@
 }
 
 .booking__caption-symbol {
-  align-self: flex-end;
-  margin-bottom: rem(5);
+  display: flex;
+  align-self: end;
+  margin-bottom: rem(3);
   font-size: rem(14);
 }
 
@@ -39,6 +40,8 @@
   margin-left: rem(3);
   color: $DarkShade100;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 
   &_font-size {
     font-size: rem(24);

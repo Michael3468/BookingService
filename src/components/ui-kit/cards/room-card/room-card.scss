@@ -11,6 +11,7 @@
   box-sizing: border-box;
   width: rem(271);
   background: $defaultColor;
+  box-shadow: 0 rem(10) rem(20) $DarkShade5;
 
   &__picture-container {
     position: relative;
