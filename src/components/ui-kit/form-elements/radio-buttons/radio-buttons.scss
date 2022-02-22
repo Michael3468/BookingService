@@ -19,7 +19,7 @@
   }
 }
 
-$radio-button__size: 20;
+$radioButtonSize: 20;
 
 .radio-buttons__label {
   position: relative;
@@ -32,8 +32,8 @@ $radio-button__size: 20;
     position: absolute;
     left: 0;
     display: inline-block;
-    width: rem($radio-button__size);
-    height: rem($radio-button__size);
+    width: rem($radioButtonSize);
+    height: rem($radioButtonSize);
     border: rem(1) solid $DarkShade25;
     border-radius: 50%;
     cursor: pointer;
@@ -44,8 +44,8 @@ $radio-button__size: 20;
 .radio-buttons__input {
   position: absolute;
   z-index: 1;
-  width: rem($radio-button__size);
-  height: rem($radio-button__size);
+  width: rem($radioButtonSize);
+  height: rem($radioButtonSize);
   cursor: pointer;
   opacity: 0;
 

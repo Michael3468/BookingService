@@ -1,7 +1,7 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-$toggle-size: rem(10);
+$toggleSize: rem(10);
 
 .toggle {
   display: flex;
@@ -19,13 +19,13 @@ $toggle-size: rem(10);
 }
 
 .toggle__button {
-  width: $toggle-size*4;
-  height: $toggle-size*2;
+  width: $toggleSize*4;
+  height: $toggleSize*2;
   background: url('./radio-checked.svg') no-repeat;
   background-position: 10% 50%;
   background-size: 34%;
-  border: $toggle-size/10 solid $purple;
-  border-radius: $toggle-size;
+  border: $toggleSize/10 solid $purple;
+  border-radius: $toggleSize;
   cursor: pointer;
   filter: grayscale(100%);
   appearance: none;

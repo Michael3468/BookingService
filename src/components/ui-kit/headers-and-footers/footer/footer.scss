@@ -10,7 +10,7 @@
   font-weight: normal;
   font-family: $secondFont;
   font-style: normal;
-  background-color: $default-color;
+  background-color: $defaultColor;
   border-top: rem(1) solid rgba(223, 222, 227, 1);
   border-bottom: rem(1) solid rgba(223, 222, 227, 1);
 
@@ -90,7 +90,7 @@
   align-items: center;
   max-width: 1440px;
   height: rem(70);
-  background-color: $default-color;
+  background-color: $defaultColor;
 
   @media screen and (max-width: $smDesktopWidth) {
     align-items: flex-start;

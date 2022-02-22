@@ -98,13 +98,13 @@ $arrows-top: calc(50% - #{$arrows-size} / 2); //- $arrows-size = arrow height
     padding: 0 0;
     font-size: 0;
     background: none;
-    border: rem(1) solid $default-color;
+    border: rem(1) solid $defaultColor;
     border-radius: 50%;
     cursor: pointer;
   }
 
   & li.slick-active button {
-    background: $default-color;
+    background: $defaultColor;
   }
 }
 

@@ -8,14 +8,14 @@
     display: flex;
     flex-direction: row;
 
-    $user-photo_size: rem(48);
+    $userPhotoSize: rem(48);
 
     &-photo {
       box-sizing: border-box;
-      width: $user-photo_size;
-      height: $user-photo_size;
-      border: rem(2) solid $default-color;
-      border-radius: $user-photo_size / 2;
+      width: $userPhotoSize;
+      height: $userPhotoSize;
+      border: rem(2) solid $defaultColor;
+      border-radius: $userPhotoSize / 2;
       filter: drop-shadow(rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.1));
     }
 

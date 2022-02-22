@@ -7,7 +7,7 @@
   align-items: center;
   max-width: 1440px;
   height: rem(70);
-  background-color: $default-color;
+  background-color: $defaultColor;
   box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 
   @media screen and (max-width: 1024px) {
@@ -24,7 +24,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      background: $default-color;
+      background: $defaultColor;
     }
   }
 
@@ -127,7 +127,7 @@
       font-weight: bold;
 
       @media screen and (max-width: 1024px) {
-        background: $menu-hover-color;
+        background: $menuHoverColor;
       }
     }
 
@@ -138,8 +138,8 @@
       &-content {
         position: absolute;
         z-index: 20;
-        background: $menu-hover-color;
-        background-color: $default-color;
+        background: $menuHoverColor;
+        background-color: $defaultColor;
         box-shadow: 0 2px 3px black;
 
         @media screen and (max-width: 1024px) {
@@ -208,13 +208,13 @@
     padding: 0 30px;
     color: $DarkShade75;
     font-weight: normal;
-    background: $default-color;
+    background: $defaultColor;
 
     &:focus,
     &:hover {
       font-weight: bold;
       text-shadow: $TabindexShadow;
-      background: $menu-hover-color;
+      background: $menuHoverColor;
     }
 
     @media screen and (max-width: 1024px) {

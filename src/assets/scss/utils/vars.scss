@@ -1,39 +1,39 @@
 // Fonts
-$mainFont                : 'Quicksand', arial, sans-serif;
-$secondFont              : 'Montserrat', arial, sans-serif;
+$mainFont   : 'Quicksand', arial, sans-serif;
+$secondFont : 'Montserrat', arial, sans-serif;
 
 // Size
-$mainFontColor           : #101010;
-$mainFontSize            : 14px;
-$mainFontWeight          : 400;
-$mainLineHeight          : 1.4;
+$mainFontColor  : #101010;
+$mainFontSize   : 14px;
+$mainFontWeight : 400;
+$mainLineHeight : 1.4;
 
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 1024px;
-$tableWidth              : 768px;
-$smTableWidth            : 640px;
-$phoneWidth              : 414px;
-$smPhoneWidth            : 320px;
+$desktopWidth   : 1280px;
+$smDesktopWidth : 1024px;
+$tableWidth     : 768px;
+$smTableWidth   : 640px;
+$phoneWidth     : 414px;
+$smPhoneWidth   : 320px;
 
 // Paddings
-$desktopWidthPadding     : 30px;
+$desktopWidthPadding : 30px;
 
 // Colors
-$DarkShade100            : rgba(31, 32, 65, 1);
-$DarkShade75             : rgba(31, 32, 65, 0.75);
-$DarkShade50             : rgba(31, 32, 65, 0.5);
-$DarkShade25             : rgba(31, 32, 65, 0.25);
-$DarkShade5              : rgba(31, 32, 65, 0.05);
-$purple                  : rgba(188, 156, 255, 1);
-$green                   : rgba(111, 207, 151, 1);
-$backgroundColor         : #e5e5e5;
+$DarkShade100    : rgba(31, 32, 65, 1);
+$DarkShade75     : rgba(31, 32, 65, 0.75);
+$DarkShade50     : rgba(31, 32, 65, 0.5);
+$DarkShade25     : rgba(31, 32, 65, 0.25);
+$DarkShade5      : rgba(31, 32, 65, 0.05);
+$purple          : rgba(188, 156, 255, 1);
+$green           : rgba(111, 207, 151, 1);
+$backgroundColor : #e5e5e5;
 
-$primaryGradient         : linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-$secondaryGradient       : linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$primaryGradient   : linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$secondaryGradient : linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
 // Main color
-$default-color           : #fff;
-$menu-hover-color        : #e3e3e3;
+$defaultColor   : #fff;
+$menuHoverColor : #e3e3e3;
 
 $BorderRadius        : 4px;
 $ButtonsBorderRadius : 22;

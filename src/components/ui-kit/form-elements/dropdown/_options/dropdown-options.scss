@@ -65,7 +65,7 @@
   position: relative;
   z-index: 19;
   padding-bottom: rem(6);
-  background: $default-color;
+  background: $defaultColor;
   border: rem(1) solid $DarkShade25;
   border-bottom-right-radius: rem(4);
   border-bottom-left-radius: rem(4);
@@ -97,7 +97,7 @@
   width: rem(30);
   height: rem(30);
   margin-top: rem(6);
-  background: $default-color;
+  background: $defaultColor;
   border-radius: 50%;
   cursor: pointer;
 }
