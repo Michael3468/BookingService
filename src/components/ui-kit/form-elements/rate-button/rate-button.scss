@@ -17,7 +17,7 @@
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   background-clip: text;
   cursor: pointer;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .rate-button__star::before {
@@ -33,7 +33,7 @@
   background-clip: text;
   opacity: 0;
   content: 'star';
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .rate-button__star:hover::after,

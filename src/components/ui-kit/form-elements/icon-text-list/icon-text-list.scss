@@ -20,7 +20,7 @@
     font-size: rem(48);
     background: $primaryGradient;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 
   &__content {

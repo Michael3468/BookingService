@@ -41,7 +41,7 @@
     // arrow color
     background: $primaryGradient;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     // arrow color end
   }
 
@@ -78,5 +78,5 @@
 .gradient-icon {
   background: $primaryGradient;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
