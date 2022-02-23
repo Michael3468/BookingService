@@ -39,9 +39,9 @@
     top: rem(10);
     right: rem(8);
     // arrow color
+    color: transparent;
     background: $primaryGradient;
     background-clip: text;
-    color: transparent;
     // arrow color end
   }
 
@@ -76,7 +76,7 @@
 }
 
 .gradient-icon {
+  color: transparent;
   background: $primaryGradient;
   background-clip: text;
-  color: transparent;
 }

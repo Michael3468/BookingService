@@ -35,13 +35,13 @@
 }
 
 .booking__caption-room-number {
+  display: flex;
+  align-items: center;
   margin-top: rem(3);
   margin-right: rem(9);
   margin-left: rem(3);
   color: $DarkShade100;
   font-weight: bold;
-  display: flex;
-  align-items: center;
 
   &_font-size {
     font-size: rem(24);
