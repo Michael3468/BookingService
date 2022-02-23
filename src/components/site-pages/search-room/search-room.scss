@@ -3,11 +3,16 @@
 
 .search-room-container {
   @include container;
+
+  padding-top: 1px;
 }
 
-// TODO rename ?
 .container__room-cards-column {
   margin-top: rem(28);
+}
+
+.search-room-options-column {
+  min-width: 266px;
 }
 
 .search-room-options-column-button {
