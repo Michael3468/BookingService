@@ -13,9 +13,10 @@ mixin logo(props)
       loading="lazy",
     )
 
-    img(
-      class=`${classPrefix}-name`,
-      src="./assets/img/TOXIN.png",
-      alt="logo",
-      loading="lazy",
-    )
+    if (props.label === 'true')
+      img(
+        class=`${classPrefix}-name`,
+        src="./assets/img/TOXIN.png",
+        alt="logo",
+        loading="lazy",
+      )

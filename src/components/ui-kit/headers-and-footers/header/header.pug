@@ -1,11 +1,15 @@
+include  ../logo/logo.pug
 include ../../form-elements/button/button.pug
 
 mixin header(loginStatus)
   header.header
     .header__container.header__container_mob
       .header__burger-logo
-        include  ../logo/logo.pug
-        +logo({ position: 'header' })
+        +logo({
+          position: 'header',
+          label:    'true',
+        })
+
         .material-icons.header__burger.js-header-burger menu
 
       //- navigation menu

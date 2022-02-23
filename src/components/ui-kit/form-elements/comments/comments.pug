@@ -1,3 +1,5 @@
+include ../like-button/like-button
+
 mixin comments(params)
   .comments
     .comments__user
@@ -13,7 +15,6 @@ mixin comments(params)
 
     .comments__feedback
       .comments__feedback-like
-        include ../like-button/like-button
         +like-button({
           likeBtnChecked: params.likeBtnChecked,
           likeBtnText:    params.likeBtnText,

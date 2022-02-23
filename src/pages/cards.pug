@@ -1,26 +1,29 @@
 extends ../components/layouts/main
 
+include ../components/ui-kit/cards/booking/booking
+include ../components/ui-kit/cards/date-picker/date-picker
+include ../components/ui-kit/cards/login/login
+include ../components/ui-kit/cards/registration/registration
+include ../components/ui-kit/cards/room-card/room-card
+include ../components/ui-kit/cards/room-search/room-search
+include ../components/ui-kit/logo/logo
+
 block variables
   - title = "FSD Cards";
   - description = "FSD education project | Cards page";
 
 block content
 
-  include ../components/ui-kit/logo/logo
+  +logo()
   .cards-container
 
     .cards-column-1
-
-      include ../components/ui-kit/cards/room-search/room-search
       +room-search()
 
       .cards-registration
-        include ../components/ui-kit/cards/registration/registration
         +registration()
 
     .cards-column-2
-
-      include ../components/ui-kit/cards/booking/booking
       +booking({
         roomPrice:                    "9 990₽",
         daysPriceText:                " x 4 суток",
@@ -34,17 +37,13 @@ block content
       })
 
       .cards-login
-        include ../components/ui-kit/cards/login/login
         +login()
 
 
     .cards-column-3
-
-      include ../components/ui-kit/cards/date-picker/date-picker
       +date-picker()
 
       .cards-room-card
-        include ../components/ui-kit/cards/room-card/room-card
         +room-card({
           number:    "888",
           status:    "Люкс",
@@ -55,7 +54,6 @@ block content
         })
 
       .cards-room-card
-        include ../components/ui-kit/cards/room-card/room-card
         +room-card({
           number:    "840",
           status:    "Люкс",

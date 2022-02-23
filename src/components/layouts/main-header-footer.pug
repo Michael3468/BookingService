@@ -1,3 +1,6 @@
+include ../ui-kit/headers-and-footers/footer/footer
+include ../ui-kit/headers-and-footers/header/header
+
 block variables
 
 doctype html
@@ -12,14 +15,11 @@ html(lang="ru")
   body
 
     .wrapper
-
-      include ../ui-kit/headers-and-footers/header/header
       +header()
 
       .content
         block content
 
-      include ../ui-kit/headers-and-footers/footer/footer
       +footer()
 
       block script

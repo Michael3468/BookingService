@@ -1,16 +1,15 @@
+include ./favicon.pug
+include ./head.pug
+
 block variables
 
 doctype html
 html(lang="ru")
   head
-    include ./head.pug
     +head()
-
-    include ./favicon.pug
     +favicon()
 
   body
-
     .wrapper
       .content
         block content

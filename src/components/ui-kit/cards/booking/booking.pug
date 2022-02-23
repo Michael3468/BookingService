@@ -1,8 +1,12 @@
+include ./__caption/booking__caption
+include ../../../ui-kit/form-elements/button/button
+include ../../../ui-kit/form-elements/dropdown/dropdown
+include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
+
 mixin booking(params)
   .booking.cards_border
 
     form.js-booking-form(action="#change-me")
-      include ./__caption/booking__caption
       +booking-caption({
         roomNumber:  "888",
         roomStatus:  "Люкс",
@@ -12,7 +16,6 @@ mixin booking(params)
       })
 
       .booking__date-dropdown-margin
-        include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
         +dropdown-date({
           startDateCaption: "прибытие",
           endDateCaption:   "выезд",
@@ -20,7 +23,6 @@ mixin booking(params)
           endDefaultDate:   "23.08.2019",
         })
 
-      include ../../../ui-kit/form-elements/dropdown/dropdown
       +dropdown({
         leftCaption:   "гости",
         type:          "dropdown-guests",
@@ -52,7 +54,6 @@ mixin booking(params)
         .booking__options-result-line
         p.booking__options-result-sum= params.resultSum
 
-      include ../../../ui-kit/form-elements/button/button
       +button({
         mod:   ["with_arrow","block"],
         value: "Забронировать",

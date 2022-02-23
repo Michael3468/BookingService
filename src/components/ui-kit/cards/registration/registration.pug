@@ -1,17 +1,21 @@
+include ../../../ui-kit/form-elements/button/button
+include ../../../ui-kit/form-elements/masked-text-field/masked-text-field
+include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
+include ../../../ui-kit/form-elements/text-field/text-field
+include ../../../ui-kit/form-elements/toggle/toggle
+
 mixin registration(params)
   .registration.cards_border
     h1.registration__caption Регистрация аккаунта
 
     form.js-registration-form(action="#change-me")
       .registration__name
-        include ../../../ui-kit/form-elements/text-field/text-field
         +text-field({
           inpType:        "text",
           inpName:        "firstName",
           inpPlaceholder: "Имя",
         })
 
-      include ../../../ui-kit/form-elements/text-field/text-field
       +text-field({
         inpType:        "text",
         inpName:        "lastName",
@@ -19,7 +23,6 @@ mixin registration(params)
       })
 
       .registration__gender
-        include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
         +radio-buttons({
           radioButtonName: "gender",
           inpName:         ["man", "woman"],
@@ -28,7 +31,6 @@ mixin registration(params)
           inpId:           "registration-radio-buttons-",
         })
 
-      include ../../../ui-kit/form-elements/masked-text-field/masked-text-field
       +masked-text-field({
         leftCaption:    "Дата рождения",
         inpName:        "birthDate",
@@ -51,14 +53,12 @@ mixin registration(params)
         })
 
       .registration__special-offers
-        include ../../../ui-kit/form-elements/toggle/toggle
         +toggle({
           toggleBtnText: "Получать спецпредложения",
           toggleName:    "specialOffers",
           toggleId:      "registration-toggle",
         })
 
-      include ../../../ui-kit/form-elements/button/button
       +button({
         mod:   ["with_arrow", "block"],
         value: "Зарегистрироваться",

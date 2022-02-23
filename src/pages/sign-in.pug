@@ -1,5 +1,7 @@
 extends ../components/layouts/main-header-footer
 
+include ../components/ui-kit/cards/login/login
+
 block variables
   - title = "FSD Sign in";
   - description = "FSD education project | Sign in";
@@ -16,5 +18,4 @@ block content
     .sign-in__container
 
       .sign-in__card
-        include ../components/ui-kit/cards/login/login
         +login()

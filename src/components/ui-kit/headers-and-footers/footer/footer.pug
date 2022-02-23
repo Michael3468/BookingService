@@ -1,14 +1,20 @@
-- copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
-
 include ../logo/logo.pug
+include ../../form-elements/socials/socials.pug
+include ../../form-elements/text-field/text-field
 
 mixin footer(footerType)
+  - copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
+
   if footerType != "mobile"
     footer.footer
       .footer__container
         .footer__grid-layout
           .footer__grid-layout-logo
-            +logo({ position: 'footer' })
+            +logo({
+              position: 'footer',
+              label:    'true',
+            })
+
             p.footer__logo-text
               | Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
           .footer__grid-layout-col
@@ -47,7 +53,6 @@ mixin footer(footerType)
             .footer-nav
               p.footer-nav__text Получайте специальные предложения и новости сервиса
               form.js-subscription-form(action='#change-me')
-                include ../../form-elements/text-field/text-field
                 +text-field({
                   inpType:        "email",
                   inpName:        "email",
@@ -59,7 +64,6 @@ mixin footer(footerType)
         .sub-footer__copyright
           p #{copyrightText}
 
-        include ../../form-elements/socials/socials.pug
         +socials({ mobile: 'false' })
 
   //- mobile footer
@@ -68,11 +72,14 @@ mixin footer(footerType)
       .footer__container
         .footer__grid-layout
           .footer__grid-layout-logo.footer__grid-layout-logo_mob
-            +logo({ position: 'footer' })
+            +logo({
+              position: 'footer',
+              label:    'true',
+            })
+
     .sub-footer.sub-footer__mob
       .sub-footer__container.sub-footer__container_mob
         .sub-footer__copyright
           p #{copyrightText}
 
-        include ../../form-elements/socials/socials.pug
         +socials({ mobile: 'true' })

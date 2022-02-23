@@ -1,3 +1,5 @@
+include ../../cards/date-picker/date-picker
+
 mixin dropdown-date(params)
   .dropdown-date.js-dropdown-date
 
@@ -17,7 +19,6 @@ mixin dropdown-date(params)
 
   //- .dropdown-date
   .dropdown-date__date-picker.js-dropdown-date__date-picker.dropdown-date__date-picker_hidden
-    include ../../cards/date-picker/date-picker
     +date-picker()
 
 //- example

@@ -1,18 +1,36 @@
 extends ../components/layouts/main
 
+include ../components/ui-kit/form-elements/bullet-list/bullet-list
+include ../components/ui-kit/form-elements/button/button
+include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
+include ../components/ui-kit/form-elements/comments/comments
+include ../components/ui-kit/form-elements/dropdown/dropdown
+include ../components/ui-kit/form-elements/dropdown-date/dropdown-date
+include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
+include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
+include ../components/ui-kit/form-elements/like-button/like-button
+include ../components/ui-kit/form-elements/masked-text-field/masked-text-field
+include ../components/ui-kit/form-elements/pagination/pagination
+include ../components/ui-kit/form-elements/radio-buttons/radio-buttons
+include ../components/ui-kit/form-elements/range-slider/range-slider
+include ../components/ui-kit/form-elements/rate-button/rate-button
+include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
+include ../components/ui-kit/form-elements/text-field/text-field
+include ../components/ui-kit/form-elements/toggle/toggle
+include ../components/ui-kit/logo/logo
+
 block variables
   - title = "FSD Form Elements";
   - description = "FSD education project | Form Elements page";
 
 block content
 
-  include ../components/ui-kit/logo/logo
+  +logo()
   .first-container.container
 
     .column-1
 
       .block-margin
-        include ../components/ui-kit/form-elements/text-field/text-field
         +text-field({
           leftCaption:    "text field",
           rightCaption:   "default",
@@ -32,7 +50,6 @@ block content
         })
 
       .block-margin
-        include ../components/ui-kit/form-elements/dropdown/dropdown
         +dropdown({
           leftCaption:   "dropdown",
           type:          "dropdown-guests",
@@ -41,7 +58,6 @@ block content
         })
 
       .block-margin.date-margin
-        include ../components/ui-kit/form-elements/masked-text-field/masked-text-field
         +masked-text-field({
           leftCaption:    "masked text field",
           inpName:        "date",
@@ -49,7 +65,6 @@ block content
         })
 
       .block-margin.dropdown-date-margin
-        include ../components/ui-kit/form-elements/dropdown-date/dropdown-date
         +dropdown-date({
           startDateCaption: "date dropdown",
           endDateCaption:   "date dropdown",
@@ -59,13 +74,11 @@ block content
       .mini-column
 
         .block-margin.date-dropdown-margin
-          include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
           +filter-date-dropdown({
             leftCaption : "filter date dropdown",
           })
 
         .block-margin.subscription-text-field-margin
-          include ../components/ui-kit/form-elements/text-field/text-field
           +text-field({
             leftCaption:    "subscription text field",
             inpType:        "email",
@@ -78,7 +91,6 @@ block content
     .column-2
 
       .block-margin
-        include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
         +checkbox-buttons({
           leftCaption: "checkbox buttons",
           inpId:       "check-box-buttons",
@@ -90,7 +102,6 @@ block content
         })
 
       .block-margin.checkbox-buttons-margin
-        include ../components/ui-kit/form-elements/radio-buttons/radio-buttons
         +radio-buttons({
           leftCaption:     "radio buttons",
           radioButtonName: "gender",
@@ -101,7 +112,6 @@ block content
         })
 
       .block-margin.toggle-block-margin
-        include ../components/ui-kit/form-elements/toggle/toggle
         .form-elements__toggle-margin-between
           +toggle({
             leftCaption:   "toggle",
@@ -117,7 +127,6 @@ block content
           })
 
       .block-margin.like-buttons-margin
-        include ../components/ui-kit/form-elements/like-button/like-button
         h3.like-button__caption like button
         .like-buttons__direction
           .like-button__margin
@@ -132,7 +141,6 @@ block content
           })
 
       .block-margin
-        include ../components/ui-kit/form-elements/rate-button/rate-button
         h3.rate-button__caption rate button
         .rate-buttons-block
           .rate-buttons-margin
@@ -152,14 +160,12 @@ block content
     .column-3
 
       .mini-column
-        include ../components/ui-kit/form-elements/range-slider/range-slider
         +range-slider({
           leftCaption:  "range slider",
           rightCaption:  "5 000₽ - 10 000₽",
         })
 
       .buttons__block-margin
-        include ../components/ui-kit/form-elements/button/button
         h3.buttons__caption buttons
         .buttons-block
           .button__margin
@@ -204,7 +210,6 @@ block content
           })
 
       .block-margin
-        include ../components/ui-kit/form-elements/pagination/pagination
         h3.pagination__caption pagination
         +pagination()
 
@@ -216,7 +221,6 @@ block content
       .mini-column
 
         .block-margin
-          include ../components/ui-kit/form-elements/dropdown/dropdown
           +dropdown({
             leftCaption:   "dropdown",
             rightCaption:  "default",
@@ -226,7 +230,6 @@ block content
           })
 
         .block-margin
-          include ../components/ui-kit/form-elements/dropdown/dropdown
           +dropdown({
             leftCaption:   "dropdown",
             rightCaption:  "expanded",
@@ -238,7 +241,6 @@ block content
 
     .column-2
 
-      include ../components/ui-kit/form-elements/dropdown/dropdown
       +dropdown({
         leftCaption:   "dropdown",
         type:          "dropdown-guests",
@@ -248,7 +250,6 @@ block content
 
     .column-3
 
-      include ../components/ui-kit/form-elements/dropdown/dropdown
       +dropdown({
         leftCaption:        "dropdown",
         type:               "dropdown-guests",
@@ -264,7 +265,6 @@ block content
       .mini-column
 
         .block-margin.checkbox-buttons__expandable-list__margin
-          include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
           +checkbox-buttons({
             caption:        "expandable checkbox list",
             leftCaption:    "checkbox buttons",
@@ -277,7 +277,6 @@ block content
           })
 
         .block-margin.checkbox-buttons__expandable-list__margin2
-          include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
           +checkbox-buttons({
             caption:     "expandable checkbox list",
             leftCaption: "checkbox buttons",
@@ -293,8 +292,6 @@ block content
     .column-2
 
       .mini-column
-
-        include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
         +rich-checkbox-buttons({
           caption:       "rich checkbox buttons",
           optionsValue:  ["wide-corridor",
@@ -309,8 +306,6 @@ block content
     .column-3
 
       .mini-column
-
-        include ../components/ui-kit/form-elements/bullet-list/bullet-list
         +bullet-list({
           caption: "bullet list",
           options: ["Нельзя с питомцами",
@@ -324,7 +319,6 @@ block content
     .column-1
 
       .icon-text-list__wrapper
-        include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
         +icon-text-list({
           iconName : "insert_emoticon",
           caption:   "Комфорт",
@@ -340,7 +334,6 @@ block content
     .column-4
 
       .comments__margin
-        include ../components/ui-kit/form-elements/comments/comments
         +comments({
           imageName:      "avatar.jpg",
           userName:       "Мурад Сарафанов",

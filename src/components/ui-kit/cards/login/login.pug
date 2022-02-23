@@ -1,10 +1,12 @@
+include ../../../ui-kit/form-elements/button/button
+include ../../../ui-kit/form-elements/text-field/text-field
+
 mixin login(params)
   .login.cards_border
     h1.login__caption Войти
 
     form.js-login-form(action="#change-me")
       .login__inputs
-        include ../../../ui-kit/form-elements/text-field/text-field
         +text-field({
           inpType:        "email",
           inpName:        "email",
@@ -17,7 +19,6 @@ mixin login(params)
           inpPlaceholder: "Пароль",
         })
 
-      include ../../../ui-kit/form-elements/button/button
       +button({
         mod:   ["with_arrow","block"],
         value: "Войти",

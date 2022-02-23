@@ -1,12 +1,15 @@
+include ./__feedbacks/__feedbacks
+include ./slick-carousel/slick-carousel
+include ../booking/__caption/booking__caption
+include ../../form-elements/rate-button/rate-button
+
 mixin room-card(params)
   .room-card
     .room-card__picture-container
-      include ./slick-carousel/slick-carousel
       +slick-carousel({
         photoName : params.photoName,
       })
 
-    include ../booking/__caption/booking__caption
     .room-card__number-price
       +booking-caption({ 
         roomNumber:   params.number,
@@ -17,14 +20,12 @@ mixin room-card(params)
       })
 
     .room-card__feedback
-      include ../../form-elements/rate-button/rate-button
       +rate-button({
         rateBtnName: `rateBtnName-${params.number}`,
         rateBtnId:   `rateBtnId-${params.number}-`,
         starsCount:  params.starsRate,
       })
 
-      include __feedbacks/__feedbacks
       +feedbacks({
         number: params.feedbacks,
         text:   "Отзывов",

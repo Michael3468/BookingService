@@ -1,5 +1,11 @@
 extends ../components/layouts/main-header-footer
 
+include ../components/ui-kit/cards/booking/booking
+include ../components/ui-kit/form-elements/bullet-list/bullet-list
+include ../components/ui-kit/form-elements/comments/comments
+include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
+include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
+
 block variables
   - title = "FSD Room details";
   - description = "FSD education project | Room details";
@@ -37,7 +43,6 @@ block content
           .room-details-description
             h2.room-details-caption Сведения о номере
             .room-details-icon-text-list
-              include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
               +icon-text-list({
                 iconName : "insert_emoticon",
                 caption:   "Комфорт",
@@ -58,7 +63,6 @@ block content
 
           .room-details-chart
             h2.room-details-caption Впечатления от номера
-            include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
             +d3js-donut-chart({
               width:  "120",
               height: "120",
@@ -80,7 +84,6 @@ block content
             h2.room-details-caption Отзывы посетителей номера
             p 2 отзыва
 
-          include ../components/ui-kit/form-elements/comments/comments
           .room-details-comments
             +comments({
               imageName:      "avatar.jpg",
@@ -104,7 +107,6 @@ block content
 
         .room-details-rules
           .room-details-rules__left
-            include ../components/ui-kit/form-elements/bullet-list/bullet-list
             h2.room-details-caption.room-details-caption_position Правила
             +bullet-list({
               options: [
@@ -120,7 +122,6 @@ block content
 
 
       .room-details-column-2
-        include ../components/ui-kit/cards/booking/booking
         +booking({
           roomPrice:                    "9 990₽",
           daysPriceText:                " x 4 суток",

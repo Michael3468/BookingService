@@ -1,3 +1,5 @@
+include ../filter-date-picker/filter-date-picker
+
 mixin filter-date-dropdown(params)
   .filter-date-dropdown.js-filter-date-dropdown
     .filter-date-dropdown__caption
@@ -8,7 +10,6 @@ mixin filter-date-dropdown(params)
 
     //- dropdown datepicker from "dropdown-date.js"
     .dropdown-date__date-picker.js-dropdown-date__date-picker.filter-date-dropdown_hidden
-      include ../filter-date-picker/filter-date-picker
       +filter-date-picker()
 
 
