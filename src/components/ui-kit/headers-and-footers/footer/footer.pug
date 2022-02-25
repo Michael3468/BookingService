@@ -1,4 +1,4 @@
-include ../logo/logo.pug
+include ../../logo/logo.pug
 include ../../form-elements/socials/socials.pug
 include ../../form-elements/text-field/text-field
 
@@ -11,8 +11,8 @@ mixin footer(footerType)
         .footer__grid-layout
           .footer__grid-layout-logo
             +logo({
-              position: 'footer',
-              label:    'true',
+              type:  'footer',
+              label: 'true',
             })
 
             p.footer__logo-text
@@ -73,8 +73,8 @@ mixin footer(footerType)
         .footer__grid-layout
           .footer__grid-layout-logo.footer__grid-layout-logo_mob
             +logo({
-              position: 'footer',
-              label:    'true',
+              type:  'footer',
+              label: 'true',
             })
 
     .sub-footer.sub-footer__mob
