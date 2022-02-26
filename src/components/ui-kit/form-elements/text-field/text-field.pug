@@ -5,8 +5,10 @@ mixin text-field(params)
     .text-field__caption
       if (params.leftCaption)
         h3.text-field__caption-left= params.leftCaption
+
       if (params.rightCaption)
         h3.text-field__caption-right= params.rightCaption
+
     .text-field__input_block
       input.text-field__input.input__style(
         class=(`${hover} js-${params.inpType}`)
@@ -15,31 +17,39 @@ mixin text-field(params)
         placeholder=params.inpPlaceholder
         tabindex="0"
         )
-      if ( params.isArrow == "true" )
+
+      if (params.isArrow == "true")
         .text-field__input_arrow-forward
-          button.material-icons.gradient-icon.arrow-forward.js-arrow-forward(tabindex="0" type='submit') arrow_forward
+          button.material-icons.gradient-icon.arrow-forward.js-arrow-forward(
+            tabindex="0"
+            type='submit'
+          ) arrow_forward
       
 //- examples
-//-
 //- text-field
-//- +text-field({leftCaption:    "text field",
-//-              rightCaption:   "default",
-//-              inpType:        "email",
-//-              inpName:        "email",
-//-              inpPlaceholder: "Email",
-//-              hoverStyle:     "true"})
+//- +text-field({
+//-   leftCaption:    "text field",
+//-   rightCaption:   "default",
+//-   inpType:        "email",
+//-   inpName:        "email",
+//-   inpPlaceholder: "Email",
+//-   hoverStyle:     "true",
+//- })
 
 //- mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya
 //-
 //- masked text-field
-//- +text-field({leftCaption:    "masked text field",
-//-              inpType:        "date",
-//-              inpName:        "date",})
+//- +text-field({
+//-   leftCaption: "masked text field",
+//-   inpType:     "date",
+//-   inpName:     "date",
+//- })
 
 //- subscription text field
-//- +text-field({leftCaption:    "subscription text field",
-//-              inpType:        "email",
-//-              inpName:        "email",
-//-              inpPlaceholder: "Email",
-//-              isArrow:        "true",
-//-             })
+//- +text-field({
+//-   leftCaption:    "subscription text field",
+//-   inpType:        "email",
+//-   inpName:        "email",
+//-   inpPlaceholder: "Email",
+//-   isArrow:        "true",
+//- })

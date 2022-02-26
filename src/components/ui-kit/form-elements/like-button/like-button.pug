@@ -2,11 +2,22 @@ mixin like-button(params)
   - likeBtnChecked = params.likeBtnChecked === "true" ? "checked" : ""
 
   if (params.likeBtnChecked=== "true")
-    .like-button__container.js-like-button-container(class=`js-container-${likeBtnChecked}-status`)
+    .like-button__container.js-like-button-container(
+      class=`js-container-${likeBtnChecked}-status`
+    )
       .like-button
-        label(class=`js-icon-${likeBtnChecked}-status`).material-icons.like-button-icon.js-like-button-icon
-          input.like-button__input(type="checkbox" class=`js-input-${likeBtnChecked}-status` checked=likeBtnChecked)
-        .like-button__content.js-like-button-content(class=`js-content-${likeBtnChecked}-status`)= params.likeBtnText
+        label(
+          class=`js-icon-${likeBtnChecked}-status`
+        ).material-icons.like-button-icon.js-like-button-icon
+          input.like-button__input(
+            type="checkbox"
+            class=`js-input-${likeBtnChecked}-status`
+            checked=likeBtnChecked
+          )
+
+        .like-button__content.js-like-button-content(
+          class=`js-content-${likeBtnChecked}-status`
+        )= params.likeBtnText
   else
     .like-button__container.js-like-button-container
       .like-button
