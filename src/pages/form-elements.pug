@@ -105,14 +105,14 @@ block content
         })
 
       .block-margin.checkbox-buttons-margin
-        +radio-buttons({
-          leftCaption:     "radio buttons",
-          radioButtonName: "gender",
-          inpName:         ["man",    "woman"],
-          inpText:         ["Мужчина","Женщина"],
-          inpStatus:       ["checked",],
-          inpId:           "form-elements-radio-buttons-",
-        })
+        +radio-buttons(
+          "radio buttons",
+          "gender",
+          [
+            {value: 'Мужчина', isChecked: 'true'},
+            {value: 'Женщина'}
+          ]
+        )
 
       .block-margin.toggle-block-margin
         .form-elements__toggle-margin-between

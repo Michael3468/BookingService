@@ -1,17 +1,16 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.radio-buttons__form {
-  display: flex;
-  flex-direction: row;
+.radio-buttons__caption {
+  margin-bottom: rem(6);
 }
 
-.radio-buttons__block {
+.radio-buttons__items {
   display: flex;
 }
 
 .radio-buttons__text {
-  margin-top: rem(13);
+  margin-top: rem(7);
   margin-right: rem(20);
 
   &:last-child {

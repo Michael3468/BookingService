@@ -23,13 +23,14 @@ mixin registration(params)
       })
 
       .registration__gender
-        +radio-buttons({
-          radioButtonName: "gender",
-          inpName:         ["man", "woman"],
-          inpText:         ["Мужчина", "Женщина"],
-          inpStatus:       ["checked",],
-          inpId:           "registration-radio-buttons-",
-        })
+        +radio-buttons(
+          "",
+          "gender",
+          [
+            {value: 'Мужчина', isChecked: 'true'},
+            {value: 'Женщина'}
+          ]
+        )
 
       +masked-text-field({
         leftCaption:    "Дата рождения",
