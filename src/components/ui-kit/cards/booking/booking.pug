@@ -34,7 +34,7 @@ mixin booking(params)
       .booking__options
         .booking__options_left
           .booking__options-item
-            p.booking__options-item-text=params.roomPrice + params.daysPriceText
+            p.booking__options-item-text=`${params.roomPrice} ${params.daysPriceText}`
 
           .booking__options-item
             p.booking__options-item-text=params.servicesPriceText
