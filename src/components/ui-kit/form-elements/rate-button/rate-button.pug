@@ -1,6 +1,6 @@
 mixin rate-button(params)
   .rate-buttons
-    each value in [5,4,3,2,1]
+    each value in [5, 4, 3, 2, 1]
       if value == params.starsCount
         input.rate-button__inp(
           type="radio"
@@ -17,6 +17,6 @@ mixin rate-button(params)
 //- example
 //- +rate-button({
 //-   rateBtnName: "rateBtnName-1",
-//-   rateBtnId:   "rateBtnId-1",
-//-   starsCount:  "5",
+//-   rateBtnId: "rateBtnId-1",
+//-   starsCount: "5",
 //- })

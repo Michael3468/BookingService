@@ -18,13 +18,15 @@ mixin booking-caption(params)
 
 
 //- example
-//- +booking-caption({roomNumber: "888",
-//-                   roomStatus: "Люкс",
-//-                   roomPrice:  "9 990₽",})
+//- +booking-caption({
+//-   roomNumber: "888",
+//-   roomStatus: "Люкс",
+//-   roomPrice: "9 990₽",
+//- })
 
-//- usage in other mixin example
-//- +booking-caption({  roomNumber:  params.number,
-//-                     roomStatus:  params.status,
-//-                     roomPrice:   params.price,
-//-                     captionType: "room-card", // ("room-card" || "booking")
-//-                 })
+//- +booking-caption({
+//-   roomNumber: params.number,
+//-   roomStatus: params.status,
+//-   roomPrice: params.price,
+//-   captionType: "room-card", // ("room-card" || "booking")
+//- })

@@ -35,7 +35,7 @@ const innerScore = percentsGreat + percentsGood + percentsNormal + percentsBad;
 
 const g = svg
   .append('g')
-  .attr('transform', `translate(${width / 2},${height / 2})`);
+  .attr('transform', `translate(${width / 2}, ${height / 2})`);
 
 const radius = d3.min([width, height]) / 2;
 

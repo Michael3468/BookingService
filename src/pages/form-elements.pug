@@ -35,59 +35,59 @@ block content
 
       .block-margin
         +text-field({
-          leftCaption:    "text field",
-          rightCaption:   "default",
-          inpType:        "email",
-          inpName:        "email",
+          leftCaption: "text field",
+          rightCaption: "default",
+          inpType: "email",
+          inpName: "email",
           inpPlaceholder: "Email",
         })
 
       .block-margin
         +text-field({
-          leftCaption:    "text field",
-          rightCaption:   "hover /focus",
-          inpType:        "text",
-          inpName:        "text",
+          leftCaption: "text field",
+          rightCaption: "hover /focus",
+          inpType: "text",
+          inpName: "text",
           inpPlaceholder: "This is pretty awesome",
-          hoverStyle:     "true",
+          hoverStyle: "true",
         })
 
       .block-margin
         +dropdown({
-          leftCaption:   "dropdown",
-          type:          "dropdown-guests",
+          leftCaption: "dropdown",
+          type: "dropdown-guests",
           selectionText: "Сколько гостей",
           expMenuHidden: "true",
         })
 
       .block-margin.date-margin
         +masked-text-field({
-          leftCaption:    "masked text field",
-          inpName:        "date",
+          leftCaption: "masked text field",
+          inpName: "date",
           inpPlaceholder: "ДД.ММ.ГГГГ",
         })
 
       .block-margin.dropdown-date-margin
         +dropdown-date({
           startDateCaption: "date dropdown",
-          endDateCaption:   "date dropdown",
-          endDefaultDate:   "2019-08-19",
+          endDateCaption: "date dropdown",
+          endDefaultDate: "2019-08-19",
         })
 
       .mini-column
 
         .block-margin.date-dropdown-margin
           +filter-date-dropdown({
-            leftCaption : "filter date dropdown",
+            leftCaption: "filter date dropdown",
           })
 
         .block-margin.subscription-text-field-margin
           +text-field({
-            leftCaption:    "subscription text field",
-            inpType:        "email",
-            inpName:        "email",
+            leftCaption: "subscription text field",
+            inpType: "email",
+            inpName: "email",
             inpPlaceholder: "Email",
-            isArrow:        "true",
+            isArrow: "true",
           })
 
 
@@ -96,12 +96,12 @@ block content
       .block-margin
         +checkbox-buttons({
           leftCaption: "checkbox buttons",
-          inpId:       "check-box-buttons",
+          inpId: "check-box-buttons",
           showCaption: "true",
-          inpStatus:   [ ,"checked","checked"],
-          inpName:     ["allow-smoke", "allow-pet", "allow-guests"],
-          inpValue:    ["allow-smoke", "allow-pet", "allow-guests"],
-          inpText:     ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"],
+          inpStatus: [, "checked", "checked"],
+          inpName: ["allow-smoke", "allow-pet", "allow-guests"],
+          inpValue: ["allow-smoke", "allow-pet", "allow-guests"],
+          inpText: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"],
         })
 
       .block-margin.checkbox-buttons-margin
@@ -109,24 +109,24 @@ block content
           "radio buttons",
           "gender",
           [
-            {value: 'Мужчина', isChecked: 'true'},
-            {value: 'Женщина'}
+            { value: 'Мужчина', isChecked: 'true' },
+            { value: 'Женщина' }
           ]
         )
 
       .block-margin.toggle-block-margin
         .form-elements__toggle-margin-between
           +toggle({
-            leftCaption:   "toggle",
+            leftCaption: "toggle",
             toggleBtnText: "Получать спецпредложения",
-            toggleStatus:  "checked",
-            toggleId:      "form-elements-toggle-1",
+            toggleStatus: "checked",
+            toggleId: "form-elements-toggle-1",
           })
 
         .form-elements__toggle-margin-between
           +toggle({
             toggleBtnText: "Получать спецпредложения",
-            toggleId:      "form-elements-toggle-2",
+            toggleId: "form-elements-toggle-2",
           })
 
       .block-margin.like-buttons-margin
@@ -140,7 +140,7 @@ block content
 
           +like-button({
             likeBtnChecked: "true",
-            likeBtnText:   "12",
+            likeBtnText: "12",
           })
 
       .block-margin
@@ -149,14 +149,14 @@ block content
           .rate-buttons-margin
             +rate-button({
               rateBtnName: "rateBtnName-1",
-              rateBtnId:   "rateBtnId-1",
-              starsCount:  "4",
+              rateBtnId: "rateBtnId-1",
+              starsCount: "4",
             })
 
           +rate-button({
             rateBtnName: "rateBtnName-2",
-            rateBtnId:   "rateBtnId-2",
-            starsCount:  "5",
+            rateBtnId: "rateBtnId-2",
+            starsCount: "5",
           })
 
 
@@ -164,8 +164,8 @@ block content
 
       .mini-column
         +range-slider({
-          leftCaption:  "range slider",
-          rightCaption:  "5 000₽ - 10 000₽",
+          leftCaption: "range slider",
+          rightCaption: "5 000₽ - 10 000₽",
         })
 
       .buttons__block-margin
@@ -173,23 +173,23 @@ block content
         .buttons-block
           .button__margin
             +button({
-              link : "change_me",
+              link: "change_me",
             })
 
           +button({
-            link : "change_me",
+            link: "change_me",
             mod: ["hover"],
           })
 
         .buttons-block
           .button__margin
             +button({
-              link : "change_me",
+              link: "change_me",
               mod: ["bordered"],
             })
 
           +button({
-            link : "change_me",
+            link: "change_me",
             mod: ["bordered", "hover"],
           })
 
@@ -202,13 +202,13 @@ block content
 
           +button({
             link: "change_me",
-            mod: ["no-background","no-background_hover"],
+            mod: ["no-background", "no-background_hover"],
           })
 
         .buttons-block
           +button({
-            link:  "change_me",
-            mod:   ["with_arrow","block"],
+            link: "change_me",
+            mod: ["with_arrow", "block"],
             value: "Перейти к оплате",
           })
 
@@ -225,19 +225,19 @@ block content
 
         .block-margin
           +dropdown({
-            leftCaption:   "dropdown",
-            rightCaption:  "default",
-            type:          "dropdown-options",
+            leftCaption: "dropdown",
+            rightCaption: "default",
+            type: "dropdown-options",
             selectionText: "2 спальни, 2 кровати...",
             expMenuHidden: "true",
           })
 
         .block-margin
           +dropdown({
-            leftCaption:   "dropdown",
-            rightCaption:  "expanded",
-            type:          "dropdown-options",
-            idPostfix:     "-changed-example",
+            leftCaption: "dropdown",
+            rightCaption: "expanded",
+            type: "dropdown-options",
+            idPostfix: "-changed-example",
             selectionText: "2 спальни, 2 кровати...",
           })
 
@@ -245,8 +245,8 @@ block content
     .column-2
 
       +dropdown({
-        leftCaption:   "dropdown",
-        type:          "dropdown-guests",
+        leftCaption: "dropdown",
+        type: "dropdown-guests",
         selectionText: "Сколько гостей",
       })
 
@@ -254,10 +254,10 @@ block content
     .column-3
 
       +dropdown({
-        leftCaption:        "dropdown",
-        type:               "dropdown-guests",
-        idPostfix:          "-changed-example",
-        selectionText:      "3 гостя",
+        leftCaption: "dropdown",
+        type: "dropdown-guests",
+        idPostfix: "-changed-example",
+        selectionText: "3 гостя",
         cleanButtonVisible: "true",
       })
 
@@ -269,26 +269,40 @@ block content
 
         .block-margin.checkbox-buttons__expandable-list__margin
           +checkbox-buttons({
-            caption:        "expandable checkbox list",
-            leftCaption:    "checkbox buttons",
-            inpId:          "check-box-buttons-1",
-            hidden:         "true",
-            inpStatus:      [,,,,,,],
-            inpName:        ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpValue:       ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpText:        ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
+            caption: "expandable checkbox list",
+            leftCaption: "checkbox buttons",
+            inpId: "check-box-buttons-1",
+            hidden: "true",
+            inpStatus: [,,,,,,],
+            inpName: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+            inpValue: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+            inpText: [
+              "Завтрак",
+              "Письменный стол",
+              "Стул для кормления",
+              "Кроватка",
+              "Телевизор",
+              "Шампунь",
+            ],
           })
 
         .block-margin.checkbox-buttons__expandable-list__margin2
           +checkbox-buttons({
-            caption:     "expandable checkbox list",
+            caption: "expandable checkbox list",
             leftCaption: "checkbox buttons",
-            inpId:       "check-box-buttons-2",
-            inpStatus:   [ ,"checked","checked","checked",,,],
-            inpName:     ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpValue:    ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpText:     ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
-            rotate:      "true",
+            inpId: "check-box-buttons-2",
+            inpStatus: [, "checked", "checked", "checked",,,],
+            inpName: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+            inpValue: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
+            inpText: [
+              "Завтрак",
+              "Письменный стол",
+              "Стул для кормления",
+              "Кроватка",
+              "Телевизор",
+              "Шампунь",
+            ],
+            rotate: "true",
           })
 
 
@@ -296,13 +310,19 @@ block content
 
       .mini-column
         +rich-checkbox-buttons({
-          caption:       "rich checkbox buttons",
-          optionsValue:  ["wide-corridor",
-                          "assistant-for-the-disabled"],
-          optionText:    ["Широкий коридор",
-                          "Помощник для инвалидов"],
-          optionSubText: ["Ширина коридоров в номере не менее 91 см.",
-                          "На 1 этаже вас встретит специалист и проводит до номера"],
+          caption: "rich checkbox buttons",
+          optionsValue: [
+            "wide-corridor",
+            "assistant-for-the-disabled",
+          ],
+          optionText: [
+            "Широкий коридор",
+            "Помощник для инвалидов",
+          ],
+          optionSubText: [
+            "Ширина коридоров в номере не менее 91 см.",
+            "На 1 этаже вас встретит специалист и проводит до номера",
+          ],
         })
 
 
@@ -311,9 +331,11 @@ block content
       .mini-column
         +bullet-list({
           caption: "bullet list",
-          options: ["Нельзя с питомцами",
-                    "Без вечеринок и мероприятий",
-                    "Время прибытия - после 13:00, а выезд до 12:00"],
+          options: [
+            "Нельзя с питомцами",
+            "Без вечеринок и мероприятий",
+            "Время прибытия - после 13:00, а выезд до 12:00",
+          ],
         })
 
 
@@ -323,26 +345,26 @@ block content
 
       .icon-text-list__wrapper
         +icon-text-list({
-          iconName : "insert_emoticon",
-          caption:   "Комфорт",
-          text:      "Шумопоглощающие стены",
+          iconName: "insert_emoticon",
+          caption: "Комфорт",
+          text: "Шумопоглощающие стены",
         })
 
         +icon-text-list({
-          iconName : "location_city",
-          caption:   "Удобство",
-          text:      "Окно в каждой из спален",
+          iconName: "location_city",
+          caption: "Удобство",
+          text: "Окно в каждой из спален",
         })
 
     .column-4
 
       .comments__margin
         +comments({
-          imageName:      "avatar.jpg",
-          userName:       "Мурад Сарафанов",
-          commentDate:    "5 дней назад",
-          feedbackText:   "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-          likeBtnId:      "likeBtnId-3",
+          imageName: "avatar.jpg",
+          userName: "Мурад Сарафанов",
+          commentDate: "5 дней назад",
+          feedbackText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+          likeBtnId: "likeBtnId-3",
           likeBtnChecked: "true",
-          likeBtnText:    "12",
+          likeBtnText: "12",
         })

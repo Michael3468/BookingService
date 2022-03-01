@@ -7,36 +7,37 @@ mixin room-card(params)
   .room-card
     .room-card__picture-container
       +slick-carousel({
-        photoName : params.photoName,
+        photoName: params.photoName,
       })
 
     .room-card__number-price
-      +booking-caption({ 
-        roomNumber:   params.number,
-        roomStatus:   params.status,
-        roomPrice:    params.price,
-        fontSize:    "room-card-caption",
+      +booking-caption({
+        roomNumber: params.number,
+        roomStatus: params.status,
+        roomPrice: params.price,
+        fontSize: "room-card-caption",
         captionType: "room-card",
       })
 
     .room-card__feedback
       +rate-button({
         rateBtnName: `rateBtnName-${params.number}`,
-        rateBtnId:   `rateBtnId-${params.number}-`,
-        starsCount:  params.starsRate,
+        rateBtnId: `rateBtnId-${params.number}-`,
+        starsCount: params.starsRate,
       })
 
       +feedbacks({
         number: params.feedbacks,
-        text:   "Отзывов",
+        text: "Отзывов",
       })
 
 
 //- example
-//- +room-card({  number:     room.number,
-//-               status:     room.luxStatus,
-//-               price:      `${room.price}₽`,
-//-               photoName:  `room-card-${room.number}.jpg`,
-//-               starsRate:  room.starsRate,
-//-               feedbacks:  room.feedbacks,
-//-           })
+//- +room-card({
+//-   number: room.number,
+//-   status: room.luxStatus,
+//-   price: `${room.price}₽`,
+//-   photoName: `room-card-${room.number}.jpg`,
+//-   starsRate: room.starsRate,
+//-   feedbacks: room.feedbacks,
+//- })

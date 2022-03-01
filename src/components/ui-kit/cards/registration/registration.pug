@@ -11,14 +11,14 @@ mixin registration(params)
     form.js-registration-form(action="#change-me")
       .registration__name
         +text-field({
-          inpType:        "text",
-          inpName:        "firstName",
+          inpType: "text",
+          inpName: "firstName",
           inpPlaceholder: "Имя",
         })
 
       +text-field({
-        inpType:        "text",
-        inpName:        "lastName",
+        inpType: "text",
+        inpName: "lastName",
         inpPlaceholder: "Фамилия",
       })
 
@@ -27,50 +27,50 @@ mixin registration(params)
           "",
           "gender",
           [
-            {value: 'Мужчина', isChecked: 'true'},
-            {value: 'Женщина'}
+            { value: 'Мужчина', isChecked: 'true' },
+            { value: 'Женщина' }
           ]
         )
 
       +masked-text-field({
-        leftCaption:    "Дата рождения",
-        inpName:        "birthDate",
+        leftCaption: "Дата рождения",
+        inpName: "birthDate",
         inpPlaceholder: "ДД.ММ.ГГГГ",
       })
 
       .registration__email
         +text-field({
-          leftCaption:    "Данные для входа в сервис",
-          inpType:        "email",
-          inpName:        "email",
+          leftCaption: "Данные для входа в сервис",
+          inpType: "email",
+          inpName: "email",
           inpPlaceholder: "Email",
         })
 
       .registration__password
         +text-field({
-          inpType:        "password",
-          inpName:        "password",
+          inpType: "password",
+          inpName: "password",
           inpPlaceholder: "Пароль",
         })
 
       .registration__special-offers
         +toggle({
           toggleBtnText: "Получать спецпредложения",
-          toggleName:    "specialOffers",
-          toggleId:      "registration-toggle",
+          toggleName: "specialOffers",
+          toggleId: "registration-toggle",
         })
 
       +button({
-        mod:   ["with_arrow", "block"],
+        mod: ["with_arrow", "block"],
         value: "Зарегистрироваться",
-        type:  "submit",
+        type: "submit",
         class: "js-registration-submit-button",
       })
 
     .registration__enter-button
       p.registration__enter-button-text Уже есть аккаунт на Toxin
       +button({
-        link:  "sign-in.html",
-        mod:   ["bordered"],
+        link: "sign-in.html",
+        mod: ["bordered"],
         value: "Войти",
       })

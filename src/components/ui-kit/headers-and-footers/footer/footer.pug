@@ -67,10 +67,10 @@ mixin footer(footerType)
               p.footer-nav__text Получайте специальные предложения и новости сервиса
               form.js-subscription-form(action='#change-me')
                 +text-field({
-                  inpType:        "email",
-                  inpName:        "email",
+                  inpType: "email",
+                  inpName: "email",
                   inpPlaceholder: "Email",
-                  isArrow:        "true",
+                  isArrow: "true",
                 })
 
     .sub-footer
@@ -87,7 +87,7 @@ mixin footer(footerType)
         .footer__grid-layout
           .footer__grid-layout-logo.footer__grid-layout-logo_mob
             +logo({
-              type:  'footer',
+              type: 'footer',
               label: 'true',
             })
 

@@ -8,27 +8,27 @@ mixin login(params)
     form.js-login-form(action="#change-me")
       .login__inputs
         +text-field({
-          inpType:        "email",
-          inpName:        "email",
+          inpType: "email",
+          inpName: "email",
           inpPlaceholder: "Email",
         })
 
         +text-field({
-          inpType:        "password",
-          inpName:        "password",
+          inpType: "password",
+          inpName: "password",
           inpPlaceholder: "Пароль",
         })
 
       +button({
-        mod:   ["with_arrow","block"],
+        mod: ["with_arrow", "block"],
         value: "Войти",
-        type:  "submit"
+        type: "submit"
       })
 
     .login__create-login
       p.login__create-login-text Нет аккаунта на Toxin?
       +button({
-        link:  "registration.html",
-        mod:   ["bordered"],
+        link: "registration.html",
+        mod: ["bordered"],
         value: "Создать",
       })
