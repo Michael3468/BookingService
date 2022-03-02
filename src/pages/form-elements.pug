@@ -94,15 +94,22 @@ block content
     .column-2
 
       .block-margin
-        +checkbox-buttons({
-          leftCaption: "checkbox buttons",
-          inpId: "check-box-buttons",
-          showCaption: "true",
-          inpStatus: [, "checked", "checked"],
-          inpName: ["allow-smoke", "allow-pet", "allow-guests"],
-          inpValue: ["allow-smoke", "allow-pet", "allow-guests"],
-          inpText: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"],
-        })
+        +checkbox-buttons(
+          "",
+          "checkbox buttons",
+          "check-box-buttons",
+          "check-box-name",
+          "false",
+          [
+            { value: "allow-smoke", label: "Можно курить" },
+            { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+            {
+              value: "allow guests",
+              label: "Можно пригласить гостей (до 10 человек)",
+              isChecked: "true",
+            },
+          ]
+        )
 
       .block-margin.checkbox-buttons-margin
         +radio-buttons(
@@ -266,45 +273,37 @@ block content
     .column-1
 
       .mini-column
-
-        .block-margin.checkbox-buttons__expandable-list__margin
-          +checkbox-buttons({
-            caption: "expandable checkbox list",
-            leftCaption: "checkbox buttons",
-            inpId: "check-box-buttons-1",
-            hidden: "true",
-            inpStatus: [,,,,,,],
-            inpName: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpValue: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpText: [
-              "Завтрак",
-              "Письменный стол",
-              "Стул для кормления",
-              "Кроватка",
-              "Телевизор",
-              "Шампунь",
-            ],
-          })
-
+        +checkbox-buttons(
+          "expandable checkbox list",
+          "",
+          "check-box-buttons-1",
+          "check-box-name-1",
+          "true",
+          [
+            { value: "breakfast", label: "Завтрак" },
+            { value: "table", label: "Письменный стол" },
+            { value: "chair", label: "Стул для кормления" },
+            { value: "bed", label: "Кроватка" },
+            { value: "TV", label: "Телевизор" },
+            { value: "shampoo", label: "Шампунь" },
+          ]
+        )
         .block-margin.checkbox-buttons__expandable-list__margin2
-          +checkbox-buttons({
-            caption: "expandable checkbox list",
-            leftCaption: "checkbox buttons",
-            inpId: "check-box-buttons-2",
-            inpStatus: [, "checked", "checked", "checked",,,],
-            inpName: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpValue: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-            inpText: [
-              "Завтрак",
-              "Письменный стол",
-              "Стул для кормления",
-              "Кроватка",
-              "Телевизор",
-              "Шампунь",
-            ],
-            rotate: "true",
-          })
-
+          +checkbox-buttons(
+            "expandable checkbox list",
+            "",
+            "check-box-buttons-2",
+            "check-box-name-2",
+            "false",
+            [
+              { value: "breakfast", label: "Завтрак" },
+              { value: "table", label: "Письменный стол" },
+              { value: "chair", label: "Стул для кормления" },
+              { value: "bed", label: "Кроватка" },
+              { value: "TV", label: "Телевизор" },
+              { value: "shampoo", label: "Шампунь" },
+            ]
+          )
 
     .column-2
 

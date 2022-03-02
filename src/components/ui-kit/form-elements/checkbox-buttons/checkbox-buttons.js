@@ -23,10 +23,13 @@ function handleCheckboxCaptionKeyPress(e) {
 }
 
 function handleCheckboxItemKeyPress(e, item) {
-  if (e.code === 'Enter') {
-    const checkbox = item.previousElementSibling;
-    checkbox.checked = !checkbox.checked;
-  }
+  e.preventDefault();
+  changeCheckedStatus(item);
+}
+
+const changeCheckedStatus = (item) => {
+  const checkbox = item.previousElementSibling;
+  checkbox.checked = !checkbox.checked;
 }
 
 expandableCheckbox.addEventListener('click', showHideCheckboxOptions);
@@ -37,6 +40,12 @@ expandableCheckbox.addEventListener('keypress', (e) => {
 
 checkboxTexts.forEach((item) => {
   item.addEventListener('keypress', (e) => {
+    if (e.code === 'Enter') {
+      handleCheckboxItemKeyPress(e, item);
+    }
+  });
+
+  item.addEventListener('click', (e) => {
     handleCheckboxItemKeyPress(e, item);
   });
 });

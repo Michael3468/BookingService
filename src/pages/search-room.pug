@@ -37,23 +37,22 @@ block content
         p.search-room-range-slider-text Стоимость за сутки пребывания в номере
 
       .search-room-checkbox-buttons
-        +checkbox-buttons({
-          leftCaption: "правила дома",
-          inpId: "check-box-buttons",
-          showCaption: "true",
-          inpStatus: [, "checked", "checked"],
-          inpName: "check-box-name",
-          inpValue: [
-            "allow-smoke",
-            "allow pet",
-            "allow guests",
-          ],
-          inpText: [
-            "Можно курить",
-            "Можно с питомцами",
-            "Можно пригласить гостей (до 10 человек)",
-          ],
-        })
+        +checkbox-buttons(
+          "",
+          "правила дома",
+          "check-box-buttons",
+          "check-box-name",
+          "false",
+          [
+            { value: "allow-smoke", label: "Можно курить" },
+            { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+            {
+              value: "allow guests",
+              label: "Можно пригласить гостей (до 10 человек)",
+              isChecked: "true",
+            },
+          ]
+        )
 
       .search-room-rich-checkbox-buttons
         +rich-checkbox-buttons({
@@ -81,30 +80,21 @@ block content
         })
 
       .search-room-checkbox-buttons-expandable
-        +checkbox-buttons({
-          caption: "дополнительные удобства",
-          leftCaption: "checkbox buttons",
-          inpId: "check-box-buttons-1",
-          hidden: "true",
-          inpStatus: [,,,,,,],
-          inpName: "check-box-name-1",
-          inpValue: [
-            "breakfast",
-            "table",
-            "chair",
-            "bed",
-            "TV",
-            "shampoo",
-          ],
-          inpText: [
-            "Завтрак",
-            "Письменный стол",
-            "Стул для кормления",
-            "Кроватка",
-            "Телевизор",
-            "Шампунь",
-          ],
-        })
+        +checkbox-buttons(
+          "дополнителные удобства",
+          "",
+          "check-box-buttons-1",
+          "check-box-name-1",
+          "false",
+          [
+            { value: "breakfast", label: "Завтрак" },
+            { value: "table", label: "Письменный стол" },
+            { value: "chair", label: "Стул для кормления" },
+            { value: "bed", label: "Кроватка" },
+            { value: "TV", label: "Телевизор" },
+            { value: "shampoo", label: "Шампунь" },
+          ]
+        )
 
     .search-room-options-column-button.js-search-room-options-column-button.search-room-options-column-button_rotate
 

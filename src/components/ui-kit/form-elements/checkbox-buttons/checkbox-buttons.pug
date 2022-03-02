@@ -1,67 +1,68 @@
-mixin checkbox-buttons(params)
-  - visibility = params.hidden === "true" ? "hidden" : ""
-  - rotate = params.rotate === "true" ? "checkbox-buttons__expandable-list__expand-more-rotate" : ""
+mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "", hidden = "false", items = [])
 
-  if (params.showCaption == "true")
+  - visibility = hidden === "true" ? "hidden" : ""
+  - rotateClass = hidden === "false" ? "checkbox-buttons__expandable-list__expand-more-rotate" : ""
+
+  if (leftCaption !== "")
     .checkbox-buttons
-      h3.checkbox-buttons__caption= params.leftCaption
+      h3.checkbox-buttons__caption= leftCaption
   else
     .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
       tabindex="0"
     )
       .checkbox-buttons__expandable-list__caption
-        h3.checkbox-buttons__expandable-list__text= params.caption
+        h3.checkbox-buttons__expandable-list__text= caption
         .checkbox-buttons__expandable-list__expand-more.material-icons(
-          class= rotate
+          class= rotateClass
         ) expand_more
 
   .checkbox-buttons__block(class= visibility)
-    each val, index in params.inpText
+    each item, index in items
       .checkbox-buttons__input
         input.custom-checkbox.js-custom-checkbox(
           tabindex="-1"
           type="checkbox",
-          checked=params.inpStatus[index],
-          id= `params.inpId${index}`,
-          name= params.inpName[index],
-          value= params.inpValue[index]
+          checked=item.isChecked,
+          id= `inpId${index}`,
+          name= inpName,
+          value= item.value,
         )
         label.checkbox-buttons__text.js-checkbox-buttons__text(
           tabindex="0"
-          for= `params.inpId${index}`
-        ) #{val}
-
+          for= `inpId${index}`
+        ) #{item.label}
 
 //- example checkbox buttons only
-//- +checkbox-buttons({
-//-   leftCaption: "checkbox buttons",
-//-   inpId: "check-box-buttons",
-//-   inpStatus: [, "checked", "checked"],
-//-   inpName: "check-box-name",
-//-   inpValue: ["allow-smoke", "allow-pet", "allow-guests"],
-//-   inpText: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"],
-//-  })
-
+//- +checkbox-buttons(
+//-   "",                   // caption
+//-   "правила дома",       // leftCaption
+//-   "check-box-buttons",  // inpId
+//-   "check-box-name",     // inpName
+//-   "false",              // hidden
+//-   [
+//-     { value: "allow-smoke", label: "Можно курить" },
+//-     { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+//-     {
+//-       value: "allow guests",
+//-       label: "Можно пригласить гостей (до 10 человек)",
+//-       isChecked: "true",
+//-     },
+//-   ]
+//- )
 
 //- example expandable checkbox list (default, not expanded)
-//- +checkbox-buttons({
-//-   caption: "expandable checkbox list",
-//-   leftCaption: "checkbox buttons",
-//-   inpId: "check-box-buttons-1",
-//-   hidden: "true",
-//-   inpStatus: [,,,,,,],
-//-   inpName: "check-box-name-1",
-//-   inpValue: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-//-   inpText: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"],
-//- })
-
-
-//- example expandable checkbox list
-//- +checkbox-buttons({
-//-   caption: "expandable checkbox list",
-//-   inpId: "check-box-buttons-2",
-//-   inpStatus: [, "checked", "checked"],
-//-   inpName: "check-box-name-2",
-//-   inpValue: ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-//-   inpText: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"],
-//- })
+//- +checkbox-buttons(
+//-   "дополнителные удобства",  // caption
+//-   "",                        // leftCaption
+//-   "check-box-buttons-1",     // inpId
+//-   "check-box-name-1",        // inpName
+//-   "false",                   // hidden
+//-   [
+//-     { value: "breakfast", label: "Завтрак" },
+//-     { value: "table", label: "Письменный стол" },
+//-     { value: "chair", label: "Стул для кормления" },
+//-     { value: "bed", label: "Кроватка" },
+//-     { value: "TV", label: "Телевизор" },
+//-     { value: "shampoo", label: "Шампунь" },
+//-   ]
+//- )
