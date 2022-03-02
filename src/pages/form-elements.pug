@@ -288,6 +288,7 @@ block content
             { value: "shampoo", label: "Шампунь" },
           ]
         )
+
         .block-margin.checkbox-buttons__expandable-list__margin2
           +checkbox-buttons(
             "expandable checkbox list",
@@ -308,22 +309,21 @@ block content
     .column-2
 
       .mini-column
-        +rich-checkbox-buttons({
-          caption: "rich checkbox buttons",
-          optionsValue: [
-            "wide-corridor",
-            "assistant-for-the-disabled",
-          ],
-          optionText: [
-            "Широкий коридор",
-            "Помощник для инвалидов",
-          ],
-          optionSubText: [
-            "Ширина коридоров в номере не менее 91 см.",
-            "На 1 этаже вас встретит специалист и проводит до номера",
-          ],
-        })
-
+        +rich-checkbox-buttons(
+          "rich checkbox buttons",
+          [
+            {
+              value: "wide-corridor",
+              label: "Широкий коридор",
+              text: "Ширина коридоров в номере не менее 91 см.",
+            },
+            {
+              value: "assistant-for-the-disabled",
+              label: "Помощник для инвалидов",
+              text: "На 1 этаже вас встретит специалист и проводит до номера",
+            }
+          ]
+        )
 
     .column-3
 

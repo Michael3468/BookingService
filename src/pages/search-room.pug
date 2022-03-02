@@ -55,21 +55,21 @@ block content
         )
 
       .search-room-rich-checkbox-buttons
-        +rich-checkbox-buttons({
-          caption: "доступность",
-          optionsValue: [
-            "wide-corridor",
-            "assistant-for-the-disabled",
-          ],
-          optionText: [
-            "Широкий коридор",
-            "Помощник для инвалидов",
-          ],
-          optionSubText: [
-            "Ширина коридоров в номере не менее 91 см.",
-            "На 1 этаже вас встретит специалист и проводит до номера",
-          ],
-        })
+        +rich-checkbox-buttons(
+          "доступность",
+          [
+            {
+              value: "wide-corridor",
+              label: "Широкий коридор",
+              text: "Ширина коридоров в номере не менее 91 см.",
+            },
+            {
+              value: "assistant-for-the-disabled",
+              label: "Помощник для инвалидов",
+              text: "На 1 этаже вас встретит специалист и проводит до номера",
+            }
+          ]
+        )
 
       .search-room-dropdown-options
         +dropdown({
