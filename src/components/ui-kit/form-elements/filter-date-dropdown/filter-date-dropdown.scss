@@ -18,7 +18,10 @@
   }
 
   &__input {
+    position: relative;
+    z-index: 3;
     padding: rem(12) rem(10) rem(12) rem(15);
+    background: transparent;
     cursor: pointer;
 
     &::placeholder {
