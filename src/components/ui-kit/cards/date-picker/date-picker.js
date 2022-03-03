@@ -10,6 +10,7 @@ $('.js-date-picker').datepicker({
   navTitles: {
     days: 'MM <i>yyyy</i>',
   },
+  minDate: new Date(),
 
   onSelect(fd) {
     $('.js-start-date').val(fd.split(' - ')[0]);

@@ -11,6 +11,7 @@ $('.js-filter-date-picker').datepicker({
     days: 'MM <i>yyyy</i>',
   },
   dateFormat: 'dd M',
+  minDate: new Date(),
 
   onSelect: (fd) => {
     $('.js-filter-date-dropdown__input').val(fd.toLowerCase());
