@@ -62,7 +62,7 @@ mixin header(loginStatus)
             .header__not-authentificated
               .header__auth-buttons
                 +button({
-                  link: "sign-in.html",
+                  link: "./sign-in.html",
                   value: "Войти",
                   mod: ["bordered", "small"],
                   tabindex: 10,
@@ -70,7 +70,7 @@ mixin header(loginStatus)
 
               .header__auth-buttons
                 +button({
-                  link: "registration.html",
+                  link: "./registration.html",
                   value: "Зарегистрироваться",
                   mod: ["small"],
                   tabindex: 11,
