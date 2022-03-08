@@ -138,6 +138,7 @@ module.exports = {
         flatten: true,
       },
       { from: `${PATHS.src}/static`, to: 'static' },
+      { from: `${PATHS.src}/assets/json`, to: 'assets/json' },
     ]),
 
     ...PAGES.map(

@@ -6,7 +6,7 @@ mixin booking-caption(params)
     - margin   = 'room-card__room-number_margin'
     - fontSize = 'room-card__room-number_font-size'
 
-  .booking__caption(class= margin)
+  a(class= `booking__caption ${margin}` href= params.link)
     .booking__caption-right
       h1.booking__caption-number
         span.booking__caption-symbol №
@@ -22,6 +22,7 @@ mixin booking-caption(params)
 //-   roomNumber: "888",
 //-   roomStatus: "Люкс",
 //-   roomPrice: "9 990₽",
+//-   link: "page.html"
 //- })
 
 //- +booking-caption({
@@ -29,4 +30,5 @@ mixin booking-caption(params)
 //-   roomStatus: params.status,
 //-   roomPrice: params.price,
 //-   captionType: "room-card", // ("room-card" || "booking")
+//-   link: "page.html"
 //- })

@@ -1,25 +1,42 @@
 /* eslint-disable no-undef */
 import 'paginationjs/dist/pagination';
+import '../../cards/room-card/room-card';
+
+import roomCard from '../../cards/room-card/room-card-template.pug';
+import data from '../../../../assets/json/rooms.json';
 
 import './pagination.scss';
 
-$(() => {
-  const pSize = 12;
-  $('.js-pagination-container').pagination({
-    dataSource: (done) => {
-      const result = [];
-      for (let i = 1; i < 180; i += 1) {
-        result.push(i);
+function simpleTemplating(rooms) {
+  let html = '';
+  $.each(rooms, function(index, room) {
+      const locals = {
+        room,
       }
-      done(result);
-    },
+      html += roomCard(locals);
+  });
+  return html;
+}
+
+function initSlickSlider() {
+  $('.js-slick-picture').slick({
+    dots: true,
+  });
+}
+
+function initPagination() {
+  const pSize = 12;
+  const container = $('.js-pagination-container');
+
+  // TODO move footer to separate function
+  const config = {
+    dataSource: data,
     pageSize: pSize,
     pageNumber: 1,
     pageRange: 1,
+    locator: 'rooms',
     autoHidePrevious: true,
     autoHideNext: true,
-    prevText: '',
-    nextText: '',
     footer: (currentPage) => {
       const pageSize = pSize;
       const prevPage = currentPage - 1;
@@ -33,9 +50,17 @@ $(() => {
       }
       return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
     },
-    callback: (data) => {
-      const html = template(data);
-      $('.js-data-container').html(html);
+    callback(rooms) {
+      var html = simpleTemplating(rooms);
+      $('.search-room-room-cards__grid-layout').html(html);
     },
-  });
+  }
+
+  container.pagination(config);
+  container.addHook('afterPaging', initSlickSlider);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  initPagination();
+  initSlickSlider();
 });
