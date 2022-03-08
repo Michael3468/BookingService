@@ -73,7 +73,7 @@
   // navigation end
 
   &__number-price {
-    margin: rem(14) rem(18) 0 rem(22);
+    margin: rem(10) rem(18) rem(4) rem(22);
     border-bottom: rem(1) solid $DarkShade25;
   }
 
@@ -82,7 +82,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: rem(3) rem(20) rem(14) rem(20);
+    padding: rem(3) rem(20) rem(14) rem(21);
   }
 }
 

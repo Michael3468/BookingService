@@ -14,7 +14,7 @@ mixin room-card(params)
       +booking-caption({
         roomNumber: params.number,
         roomStatus: params.status,
-        roomPrice: params.price,
+        roomPrice: `${params.price}₽`,
         fontSize: "room-card-caption",
         captionType: "room-card",
         link: params.link

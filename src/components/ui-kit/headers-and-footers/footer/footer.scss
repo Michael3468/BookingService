@@ -6,7 +6,7 @@
   display: flex;
   max-width: 1440px;
   height: rem(376);
-  padding-top: rem(102);
+  padding-top: rem(100);
   font-weight: normal;
   font-family: $secondFont;
   font-style: normal;
@@ -34,7 +34,7 @@
   }
 
   &__logo-text {
-    padding-top: rem(17);
+    padding-top: rem(16);
     color: $DarkShade75;
     line-height: rem(24);
 
