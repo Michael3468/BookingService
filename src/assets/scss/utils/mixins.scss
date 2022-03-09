@@ -28,3 +28,7 @@
     padding: 0 $phoneWidthMargin;
   }
 }
+
+@mixin card-max-width {
+  max-width: rem(380);
+}

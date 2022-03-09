@@ -156,6 +156,6 @@
 }
 //- room-details columns end
 
-.booking.cards_border {
-  max-width: rem(380);
+.booking {
+  @include card-max-width;
 }

@@ -1,7 +1,10 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
+@import '../card-background-border.scss';
 
 .registration {
+  @include cards-border;
+
   &__caption {
     margin-bottom: rem(15);
     font-family: $secondFont;
