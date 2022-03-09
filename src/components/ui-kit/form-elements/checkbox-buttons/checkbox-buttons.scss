@@ -10,12 +10,12 @@
     margin-bottom: rem(16);
   }
 
-  &__input {
+  &-input {
     display: flex;
     margin-bottom: rem(10);
   }
 
-  &__text {
+  &-text {
     color: $DarkShade50;
     font-family: $secondFont;
     line-height: rem(18);

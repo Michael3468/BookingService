@@ -1,6 +1,6 @@
 document.addEventListener('click', (e) => {
   // close dropdown menu
-  if (!e.target.closest('.js-dropdown__block')) {
+  if (!e.target.closest('.js-dropdown__body')) {
     const menus = document.querySelectorAll('.js-dropdown__menu');
     menus.forEach((menu) => {
       menu.classList.add('dropdown__menu_hidden');

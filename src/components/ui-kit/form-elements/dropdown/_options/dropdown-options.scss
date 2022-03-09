@@ -24,7 +24,7 @@
 }
 //common input__style end
 
-.dropdown__block_top {
+.dropdown__body_top {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 
-.dropdown__block {
+.dropdown__body {
   display: block;
   align-items: center;
   height: rem(44);

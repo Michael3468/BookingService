@@ -16,20 +16,20 @@ mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "",
           class= rotateClass
         ) expand_more
 
-  .checkbox-buttons__block(class= visibility)
+  .checkbox-buttons-items(class= visibility)
     each item, index in items
-      .checkbox-buttons__input
+      .checkbox-buttons-input
         input.custom-checkbox.js-custom-checkbox(
           tabindex="-1"
           type="checkbox",
-          checked=item.isChecked,
-          id= `inpId${index}`,
+          checked= item.isChecked,
+          id= `inpId-${index}`,
           name= inpName,
           value= item.value,
         )
-        label.checkbox-buttons__text.js-checkbox-buttons__text(
-          tabindex="0"
-          for= `inpId${index}`
+        label.checkbox-buttons-text.js-checkbox-buttons-text(
+          tabindex= "0"
+          for= `inpId-${index}`
         ) #{item.label}
 
 //- example checkbox buttons only
