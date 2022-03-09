@@ -73,25 +73,25 @@
 .checkbox-buttons__expandable-list {
   margin-bottom: rem(9);
 
-  &__caption {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-
-  &__text {
-    &::selection {
-      background: transparent;
-    }
-  }
-
   &:focus {
     color: $DarkShade75;
     font-weight: bold;
     text-shadow: $TabindexShadow;
   }
 
-  &__expand-more {
+  &-caption {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &-text {
+    &::selection {
+      background: transparent;
+    }
+  }
+
+  &-expand-more {
     margin: 0 rem(9) 0 0;
 
     &::selection {
@@ -99,7 +99,7 @@
     }
   }
 
-  &__expand-more-rotate {
+  &-expand-more-rotate {
     transform: rotate(180deg);
   }
 }

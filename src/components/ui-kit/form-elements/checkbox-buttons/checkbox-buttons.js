@@ -9,10 +9,10 @@ function showHideCheckboxOptions() {
   const notVisible = checkboxOptions.classList.contains('hidden');
   if (notVisible) {
     checkboxOptions.classList.remove('hidden');
-    expandMore.classList.add('checkbox-buttons__expandable-list__expand-more-rotate');
+    expandMore.classList.add('checkbox-buttons__expandable-list-expand-more-rotate');
   } else {
     checkboxOptions.classList.add('hidden');
-    expandMore.classList.remove('checkbox-buttons__expandable-list__expand-more-rotate');
+    expandMore.classList.remove('checkbox-buttons__expandable-list-expand-more-rotate');
   }
 }
 

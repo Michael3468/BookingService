@@ -5,17 +5,17 @@
 .dropdown__caption {
   display: flex;
   justify-content: space-between;
+
+  &_left {
+    margin-bottom: $inputCapMarBottom;
+  }
+
+  &_right {
+    font-weight: normal;
+  }
 }
 
-.dropdown__caption-left {
-  margin-bottom: $inputCapMarBottom;
-}
-
-.dropdown__caption-right {
-  font-weight: normal;
-}
-
-//common input__style
+//common input__style // TODO add to @mixin
 .input__style {
   width: 100%;
   font-family: $secondFont;

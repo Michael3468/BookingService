@@ -1,7 +1,7 @@
 mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "", hidden = "false", items = [])
 
   - visibility = hidden === "true" ? "hidden" : ""
-  - rotateClass = hidden === "false" ? "checkbox-buttons__expandable-list__expand-more-rotate" : ""
+  - rotateClass = hidden === "false" ? "checkbox-buttons__expandable-list-expand-more-rotate" : ""
 
   if (leftCaption !== "")
     .checkbox-buttons
@@ -10,9 +10,9 @@ mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "",
     .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
       tabindex="0"
     )
-      .checkbox-buttons__expandable-list__caption
-        h3.checkbox-buttons__expandable-list__text= caption
-        .checkbox-buttons__expandable-list__expand-more.material-icons(
+      .checkbox-buttons__expandable-list-caption
+        h3.checkbox-buttons__expandable-list-text= caption
+        .checkbox-buttons__expandable-list-expand-more.material-icons(
           class= rotateClass
         ) expand_more
 
@@ -20,8 +20,8 @@ mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "",
     each item, index in items
       .checkbox-buttons-input
         input.custom-checkbox.js-custom-checkbox(
-          tabindex="-1"
-          type="checkbox",
+          tabindex= "-1"
+          type= "checkbox",
           checked= item.isChecked,
           id= `inpId-${index}`,
           name= inpName,
