@@ -35,6 +35,8 @@
     cursor: pointer;
     caret-color: transparent;
 
+    @include input-style;
+
     &:focus {
       border-radius: $BorderRadius;
       box-shadow: $TabindexShadow;
@@ -74,12 +76,4 @@
       display: none;
     }
   }
-}
-
-// common input__style
-.input__style {
-  width: 100%;
-  font-family: $secondFont;
-  border: rem(1) solid $DarkShade25;
-  border-radius: $BorderRadius;
 }

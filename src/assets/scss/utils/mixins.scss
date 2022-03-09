@@ -32,3 +32,10 @@
 @mixin card-max-width {
   max-width: rem(380);
 }
+
+@mixin input-style {
+  width: 100%;
+  font-family: $secondFont;
+  border: rem(1) solid $DarkShade25;
+  border-radius: $BorderRadius;
+}

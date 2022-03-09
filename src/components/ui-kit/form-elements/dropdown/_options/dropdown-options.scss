@@ -15,15 +15,6 @@
   }
 }
 
-//common input__style // TODO add to @mixin
-.input__style {
-  width: 100%;
-  font-family: $secondFont;
-  border: rem(1) solid $DarkShade25;
-  border-radius: $BorderRadius;
-}
-//common input__style end
-
 .dropdown__body_top {
   display: flex;
   flex-direction: row;

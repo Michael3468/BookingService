@@ -21,15 +21,9 @@
   }
 }
 
-//common input__style
-.input__style {
-  width: 100%;
-  font-family: $secondFont;
-  border: rem(1) solid $DarkShade25;
-  border-radius: $BorderRadius;
-}
-
 .text-field__input {
+  @include input-style;
+
   &-item {
     position: relative;
   }
