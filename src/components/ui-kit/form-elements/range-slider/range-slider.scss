@@ -8,18 +8,14 @@ $borderBgColor: $defaultColor;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
 
-.range-slider__caption-left {
-  margin-right: rem(30);
-}
+  &_left {
+    margin-right: rem(30);
+  }
 
-.range-slider__caption-right {
-  font-weight: normal;
-}
-
-.range-slider__input {
-  // margin-top: rem(-5);
+  &_right {
+    font-weight: normal;
+  }
 }
 
 /* rangeSlider.css */

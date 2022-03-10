@@ -3,34 +3,34 @@ mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "",
   - visibility = hidden === "true" ? "hidden" : ""
   - rotateClass = hidden === "false" ? "checkbox-buttons__expandable-list-expand-more-rotate" : ""
 
-  if (leftCaption !== "")
-    .checkbox-buttons
-      h3.checkbox-buttons__caption= leftCaption
-  else
-    .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
-      tabindex="0"
-    )
-      .checkbox-buttons__expandable-list-caption
-        h3.checkbox-buttons__expandable-list-text= caption
-        .checkbox-buttons__expandable-list-expand-more(
-          class= rotateClass
-        ) expand_more
+  .checkbox-buttons
+    if (leftCaption !== "")
+        h3.checkbox-buttons__caption= leftCaption
+    else
+      .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
+        tabindex="0"
+      )
+        .checkbox-buttons__expandable-list-caption
+          h3.checkbox-buttons__expandable-list-text= caption
+          .checkbox-buttons__expandable-list-expand-more(
+            class= rotateClass
+          ) expand_more
 
-  .checkbox-buttons-items(class= visibility)
-    each item, index in items
-      .checkbox-buttons-input
-        input.custom-checkbox.js-custom-checkbox(
-          tabindex= "-1"
-          type= "checkbox",
-          checked= item.isChecked,
-          id= `inpId-${index}`,
-          name= inpName,
-          value= item.value,
-        )
-        label.checkbox-buttons-text.js-checkbox-buttons-text(
-          tabindex= "0"
-          for= `inpId-${index}`
-        ) #{item.label}
+    .checkbox-buttons-items(class= visibility)
+      each item, index in items
+        .checkbox-buttons-input
+          input.custom-checkbox.js-custom-checkbox(
+            tabindex= "-1"
+            type= "checkbox",
+            checked= item.isChecked,
+            id= `inpId-${index}`,
+            name= inpName,
+            value= item.value,
+          )
+          label.checkbox-buttons-text.js-checkbox-buttons-text(
+            tabindex= "0"
+            for= `inpId-${index}`
+          ) #{item.label}
 
 //- example checkbox buttons only
 //- +checkbox-buttons(

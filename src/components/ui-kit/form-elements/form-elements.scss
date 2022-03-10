@@ -79,7 +79,7 @@
   margin-bottom: rem(7);
 }
 
-.form-elements__toggle-margin-between {
+.form-elements-toggle-margin-between {
   margin-bottom: rem(14);
 }
 
@@ -87,20 +87,20 @@
   margin-top: rem(25);
 }
 
-.like-buttons__direction {
+.like-button-caption {
+  margin-bottom: rem(16);
+}
+
+.like-buttons-direction {
   display: flex;
   flex-direction: row;
 }
 
-.like-button__caption {
-  margin-bottom: rem(16);
-}
-
-.like-button__margin {
+.like-button-margin {
   margin-right: rem(10);
 }
 
-.rate-button__caption {
+.rate-button-caption {
   margin-top: rem(21);
   margin-bottom: rem(11);
 }
@@ -114,7 +114,7 @@
   margin-right: rem(20);
 }
 
-.buttons__caption {
+.buttons-caption {
   margin-top: rem(33);
   margin-bottom: rem(16);
 }
@@ -126,19 +126,19 @@
   margin-bottom: rem(29);
 }
 
-.button__margin {
+.button-margin {
   margin-right: rem(20);
 }
 
-.pagination__caption {
+.pagination-caption {
   margin-bottom: rem(16);
 }
 
-.checkbox-buttons__expandable-list__margin {
+.checkbox-buttons-expandable-list-margin {
   margin-top: rem(41);
   margin-bottom: rem(19);
 }
 
-.comments__margin {
+.comments-margin {
   margin-top: rem(16);
 }

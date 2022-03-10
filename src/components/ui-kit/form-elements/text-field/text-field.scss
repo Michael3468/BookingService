@@ -47,11 +47,7 @@
   }
 
   &:hover {
-    border-color: $DarkShade50;
-
-    &::placeholder {
-      color: $DarkShade75;
-    }
+    @include like-hover;
   }
 }
 
@@ -59,12 +55,8 @@
   @include material-icons;
 }
 
-.like-hover {
-  border-color: $DarkShade50;
-
-  &::placeholder {
-    color: $DarkShade75;
-  }
+.text-field_hover {
+  @include like-hover;
 }
 
 .arrow-forward:focus {
@@ -73,8 +65,6 @@
   text-shadow: $TabindexShadow;
 }
 
-.gradient-icon {
-  color: transparent;
-  background: $primaryGradient;
-  background-clip: text;
+.text-field-gradient-icon {
+  @include gradient-icon;
 }

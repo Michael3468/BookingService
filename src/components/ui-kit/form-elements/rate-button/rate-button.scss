@@ -6,11 +6,11 @@
   transform: rotateY(180deg);
 }
 
-.rate-button__inp {
+.rate-button-inp {
   display: none;
 }
 
-.rate-button__star {
+.rate-button-star {
   display: block;
   color: transparent;
   font-size: rem(24);
@@ -20,12 +20,12 @@
   cursor: pointer;
 }
 
-.rate-button__star::before {
+.rate-button-star::before {
   position: relative;
   content: 'star_border';
 }
 
-.rate-button__star::after {
+.rate-button-star::after {
   position: absolute;
   top: rem(0);
   display: block;
@@ -36,8 +36,8 @@
   content: 'star';
 }
 
-.rate-button__star:hover::after,
-.rate-button__star:hover ~ .rate-button__star::after,
-.rate-button__inp:checked ~ .rate-button__star::after {
+.rate-button-star:hover::after,
+.rate-button-star:hover ~ .rate-button-star::after,
+.rate-button-inp:checked ~ .rate-button-star::after {
   opacity: 1;
 }

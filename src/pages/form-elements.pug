@@ -122,7 +122,7 @@ block content
         )
 
       .block-margin.toggle-block-margin
-        .form-elements__toggle-margin-between
+        .form-elements-toggle-margin-between
           +toggle({
             leftCaption: "toggle",
             toggleBtnText: "Получать спецпредложения",
@@ -130,16 +130,16 @@ block content
             toggleId: "form-elements-toggle-1",
           })
 
-        .form-elements__toggle-margin-between
+        .form-elements-toggle-margin-between
           +toggle({
             toggleBtnText: "Получать спецпредложения",
             toggleId: "form-elements-toggle-2",
           })
 
       .block-margin.like-buttons-margin
-        h3.like-button__caption like button
-        .like-buttons__direction
-          .like-button__margin
+        h3.like-button-caption like button
+        .like-buttons-direction
+          .like-button-margin
             +like-button({
               leftCaption: "like button",
               likeBtnText: "2",
@@ -151,7 +151,7 @@ block content
           })
 
       .block-margin
-        h3.rate-button__caption rate button
+        h3.rate-button-caption rate button
         .rate-buttons-items
           .rate-buttons-margin
             +rate-button({
@@ -176,9 +176,9 @@ block content
         })
 
       .buttons-margin
-        h3.buttons__caption buttons
+        h3.buttons-caption buttons
         .buttons-block
-          .button__margin
+          .button-margin
             +button({
               link: "change_me",
             })
@@ -189,7 +189,7 @@ block content
           })
 
         .buttons-block
-          .button__margin
+          .button-margin
             +button({
               link: "change_me",
               mod: ["bordered"],
@@ -201,7 +201,7 @@ block content
           })
 
         .buttons-block
-          .button__margin.btn-mt
+          .button-margin.btn-mt
             +button({
               link: "change_me",
               mod: ["no-background"],
@@ -220,7 +220,7 @@ block content
           })
 
       .block-margin
-        h3.pagination__caption pagination
+        h3.pagination-caption pagination
         +pagination()
 
 
@@ -289,7 +289,7 @@ block content
           ]
         )
 
-        .block-margin.checkbox-buttons__expandable-list__margin
+        .block-margin.checkbox-buttons-expandable-list-margin
           +checkbox-buttons(
             "expandable checkbox list",
             "",
@@ -342,22 +342,21 @@ block content
 
     .column-1
 
-      .icon-text-list__wrapper
-        +icon-text-list({
-          iconName: "insert_emoticon",
-          caption: "Комфорт",
-          text: "Шумопоглощающие стены",
-        })
+      +icon-text-list({
+        iconName: "insert_emoticon",
+        caption: "Комфорт",
+        text: "Шумопоглощающие стены",
+      })
 
-        +icon-text-list({
-          iconName: "location_city",
-          caption: "Удобство",
-          text: "Окно в каждой из спален",
-        })
+      +icon-text-list({
+        iconName: "location_city",
+        caption: "Удобство",
+        text: "Окно в каждой из спален",
+      })
 
     .column-4
 
-      .comments__margin
+      .comments-margin
         +comments({
           imageName: "avatar.jpg",
           userName: "Мурад Сарафанов",

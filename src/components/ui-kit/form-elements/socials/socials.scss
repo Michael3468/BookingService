@@ -39,8 +39,6 @@
   content: '\f16d';
 }
 
-.gradient-icon {
-  color: transparent;
-  background: $primaryGradient;
-  background-clip: text;
+.socials-gradient-icon {
+  @include gradient-icon;
 }

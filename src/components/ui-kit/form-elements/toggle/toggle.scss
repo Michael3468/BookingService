@@ -3,7 +3,7 @@
 
 $toggleSize: rem(10);
 
-.toggle {
+.toggle-body {
   display: flex;
   align-items: center;
 }
@@ -12,13 +12,7 @@ $toggleSize: rem(10);
   margin-bottom: rem(15);
 }
 
-.toggle__text {
-  margin-left: rem(9);
-  color: $DarkShade75;
-  font-family: $secondFont;
-}
-
-.toggle__button {
+.toggle-button {
   width: $toggleSize*4;
   height: $toggleSize*2;
   background: url('./radio-checked.svg') no-repeat;
@@ -30,14 +24,20 @@ $toggleSize: rem(10);
   filter: grayscale(100%);
   appearance: none;
 
-  &:focus + .toggle__text {
+  &:focus + .toggle-text {
     color: $DarkShade75;
     font-weight: bold;
     text-shadow: $TabindexShadow;
   }
 }
 
-.toggle__button:checked {
+.toggle-button:checked {
   background-position: 90% 50%;
   filter: grayscale(0);
+}
+
+.toggle-text {
+  margin-left: rem(9);
+  color: $DarkShade75;
+  font-family: $secondFont;
 }
