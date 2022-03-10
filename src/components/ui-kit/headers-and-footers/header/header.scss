@@ -43,6 +43,8 @@
   }
 
   &__burger {
+    @include material-icons;
+
     display: none;
     color: $DarkShade50;
     font-size: rem(40);
@@ -86,6 +88,28 @@
       }
     }
 
+    &-links {
+      @include header__expand-menu;
+
+      display: flex;
+      justify-content: space-between;
+      width: rem(446);
+      line-height: rem(17);
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    &-li:hover {
+      color: $DarkShade75;
+      font-weight: bold;
+
+      @media screen and (max-width: 1024px) {
+        background: $menuHoverColor;
+      }
+    }
+
     &-link {
       display: flex;
       justify-content: center;
@@ -109,26 +133,8 @@
       }
     }
 
-    &-links {
-      @include header__expand-menu;
-
-      display: flex;
-      justify-content: space-between;
-      width: rem(446);
-      line-height: rem(17);
-
-      @media screen and (max-width: 1024px) {
-        width: 100%;
-      }
-    }
-
-    &-li:hover {
-      color: $DarkShade75;
-      font-weight: bold;
-
-      @media screen and (max-width: 1024px) {
-        background: $menuHoverColor;
-      }
+    &-expand-more {
+      @include material-icons;
     }
 
     &-dropdown {

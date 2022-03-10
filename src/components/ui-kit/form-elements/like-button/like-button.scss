@@ -30,6 +30,8 @@ $padding: rem(1);
   }
 
   &-icon {
+    @include material-icons;
+
     position: absolute;
     display: flex;
     align-items: center;

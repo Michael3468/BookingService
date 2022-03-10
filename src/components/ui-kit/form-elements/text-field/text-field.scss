@@ -55,6 +55,10 @@
   }
 }
 
+.text-field__button {
+  @include material-icons;
+}
+
 .like-hover {
   border-color: $DarkShade50;
 

@@ -30,10 +30,13 @@
       opacity: 1;
     }
 
-    &_arrow {
+    &-arrow {
       position: absolute;
       top: rem(10);
       right: rem(10);
+      color: $DarkShade50;
+
+      @include material-icons;
     }
 
     &:focus {

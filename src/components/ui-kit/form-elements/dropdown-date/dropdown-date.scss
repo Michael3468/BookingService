@@ -50,6 +50,8 @@
   }
 
   &__expand-button {
+    @include material-icons;
+
     position: absolute;
     top: rem(10);
     right: 8%;

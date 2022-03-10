@@ -18,6 +18,8 @@
   }
 
   &__icon {
+    @include material-icons;
+
     color: transparent;
     font-size: rem(48);
     background: $primaryGradient;

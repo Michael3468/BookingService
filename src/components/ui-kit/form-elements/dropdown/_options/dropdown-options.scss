@@ -24,6 +24,8 @@
 }
 
 .dropdown__expand-button {
+  @include material-icons;
+
   position: relative;
   margin: 0 rem(9) 0 0;
   color: $DarkShade50;

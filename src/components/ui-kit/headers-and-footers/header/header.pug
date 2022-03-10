@@ -10,7 +10,7 @@ mixin header(loginStatus)
           label: 'true',
         })
 
-        .material-icons.header__burger.js-header-burger menu
+        .header__burger.js-header-burger menu
 
       //- navigation menu
       //- hidden checkbox for burger label
@@ -27,7 +27,7 @@ mixin header(loginStatus)
             tabindex="2"
           ) Услуги
             //- used material icons font
-            span.material-icons expand_more
+            span.header__nav-expand-more expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
               a.header__dropdown-link(href="change-me" tabindex="2") Услуга-1
               a.header__dropdown-link(href="change-me" tabindex="2") Услуга-2
@@ -45,7 +45,7 @@ mixin header(loginStatus)
             tabindex="5"
           ) Соглашения
             //- used material icons font
-            span.material-icons expand_more
+            span.header__nav-expand-more expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
               a.header__dropdown-link(href="change-me" tabindex="5") Соглашение-1
               a.header__dropdown-link(href="change-me" tabindex="5") Соглашение-2

@@ -92,6 +92,8 @@
   }
 
   &-expand-more {
+    @include material-icons;
+
     margin: 0 rem(9) 0 0;
 
     &::selection {
