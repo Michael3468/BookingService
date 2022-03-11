@@ -36,7 +36,8 @@ $backgroundBtnColor: $defaultColor;
     box-shadow: $TabindexShadow;
   }
 
-  &:hover {
+  &:hover,
+  &_hover {
     opacity: 0.5;
   }
 
@@ -46,7 +47,8 @@ $backgroundBtnColor: $defaultColor;
     color: $purple;
     background: $backgroundBtnColor;
 
-    &:hover {
+    &:hover,
+    &_hover {
       color: $DarkShade50;
       opacity: 1;
     }
