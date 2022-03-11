@@ -1,4 +1,4 @@
-//convert px to rem
+// convert px to rem
 @function rem($pixels, $content: $mainFontSize) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;

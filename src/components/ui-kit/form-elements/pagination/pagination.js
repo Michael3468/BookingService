@@ -9,7 +9,7 @@ import './pagination.scss';
 
 function simpleTemplating(rooms) {
   let html = '';
-  $.each(rooms, function(index, room) {
+  $.each(rooms, function (index, room) {
       const locals = {
         room,
       }
