@@ -24,11 +24,24 @@ function initSlickSlider() {
   });
 }
 
+function initFooter(currentPage, pSize) {
+  const pageSize = pSize;
+  const prevPage = currentPage - 1;
+  let fromPage;
+  const toPage = currentPage * pageSize;
+
+  if (currentPage === 1) {
+    fromPage = currentPage;
+  } else {
+    fromPage = prevPage * pageSize + 1;
+  }
+  return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
+}
+
 function initPagination() {
   const pSize = 12;
   const container = $('.js-pagination-container');
 
-  // TODO move footer to separate function
   const config = {
     dataSource: data,
     pageSize: pSize,
@@ -37,18 +50,10 @@ function initPagination() {
     locator: 'rooms',
     autoHidePrevious: true,
     autoHideNext: true,
+    prevText: '',
+    nextText: '',
     footer: (currentPage) => {
-      const pageSize = pSize;
-      const prevPage = currentPage - 1;
-      let fromPage;
-      const toPage = currentPage * pageSize;
-
-      if (currentPage === 1) {
-        fromPage = currentPage;
-      } else {
-        fromPage = prevPage * pageSize + 1;
-      }
-      return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
+      return initFooter(currentPage, pSize);
     },
     callback(rooms) {
       var html = simpleTemplating(rooms);
