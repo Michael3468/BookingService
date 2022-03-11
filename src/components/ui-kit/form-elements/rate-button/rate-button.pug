@@ -3,17 +3,17 @@ mixin rate-button(params)
     each value in [5, 4, 3, 2, 1]
       if value == params.starsCount
         input.rate-button-inp(
-          type= "radio"
+          type = "radio"
           checked
-          name= params.rateBtnName
-          id= `${params.rateBtnName}-${value}`)
+          name = params.rateBtnName
+          id = `${params.rateBtnName}-${value}`)
 
       else
         input.rate-button-inp(
-          type= "radio"
-          name= params.rateBtnName
-          id= `${params.rateBtnName}-${value}`)
-      label.rate-button-star(for= `${params.rateBtnName}-${value}`)
+          type = "radio"
+          name = params.rateBtnName
+          id = `${params.rateBtnName}-${value}`)
+      label.rate-button-star(for = `${params.rateBtnName}-${value}`)
 
 //- example
 //- +rate-button({

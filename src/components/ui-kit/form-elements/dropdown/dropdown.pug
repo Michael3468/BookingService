@@ -1,7 +1,7 @@
 mixin dropdown(params)
   - expMenuHidden = params.expMenuHidden === 'true' ? 'dropdown__menu_hidden' : ''
 
-  .dropdown(class=`js-${params.type}`)
+  .dropdown(class = `js-${params.type}`)
     .dropdown__caption
       h3.dropdown__caption_left= params.leftCaption
       if (params.rightCaption)
@@ -9,18 +9,18 @@ mixin dropdown(params)
 
     .dropdown__body.js-dropdown__body
       .dropdown__body_top.js-dropdown__body_top(
-        data-dd-action= "showHide"
-        tabindex= "0"
+        data-dd-action = "showHide"
+        tabindex = "0"
       )
         p.dropdown__selection-text.js-dropdown__selection-text(
-          data-dd-action= "showHide"
+          data-dd-action = "showHide"
         )= params.selectionText
 
         .dropdown__expand-button(
-          data-dd-action= "showHide"
+          data-dd-action = "showHide"
         ) expand_more
 
-      .dropdown__menu.js-dropdown__menu(class= expMenuHidden)
+      .dropdown__menu.js-dropdown__menu(class = expMenuHidden)
 
         if (params.type == "dropdown-options")
           - items = { "item1": { valName: "Спальни", vName: "bedrooms" }, "item2": { valName: "Кровати", vName: "beds" }, "item3": { valName: "Ванные комнаты", vName: "bathrooms" } };
@@ -32,53 +32,53 @@ mixin dropdown(params)
           if (params.idPostfix == "-changed-example")
             - items = { "item1": { valName: "Взрослые", vName: "adults", valCounter: "2", valClass: "dark" }, "item2": { valName: "Дети", vName: "childs", valCounter: "1", valClass: "dark" }, "item3": { valName: "Младенцы", vName: "babies" } };
 
-        //- form(action='change-me')
+        //- form(action = 'change-me')
         if (params.formPart === 'true')
           each val, key in items
-            .dropdown__menu-option(class=key)
+            .dropdown__menu-option(class = key)
               p.dropdown__item= val.valName
               .dropdown__item-controls.js-dropdown__item-controls
                 button.dropdown__button-decrement.js-dropdown__button-decrement(
-                  tabindex= "0"
-                  class= val.valClass
-                  data-dd-action= "decrement"
-                  type= "button"
+                  tabindex = "0"
+                  class = val.valClass
+                  data-dd-action = "decrement"
+                  type = "button"
                 )
 
                 input.dropdown__counter.js-dropdown__counter(
-                  tabindex= "-1"
-                  name= val.vName
-                  value= val.valCounter || 0
+                  tabindex = "-1"
+                  name = val.vName
+                  value = val.valCounter || 0
                 )
 
                 button.dropdown__button-increment(
-                  tabindex= "0"
-                  data-dd-action= "increment"
-                  type= "button"
+                  tabindex = "0"
+                  data-dd-action = "increment"
+                  type = "button"
                 )
         else
-          form(action='change-me')
+          form(action = 'change-me')
             each val, key in items
-              .dropdown__menu-option(class=key)
+              .dropdown__menu-option(class = key)
                 p.dropdown__item= val.valName
                 .dropdown__item-controls.js-dropdown__item-controls
                   button.dropdown__button-decrement.js-dropdown__button-decrement(
-                    tabindex= "0"
-                    class= val.valClass
-                    data-dd-action= "decrement"
-                    type= "button"
+                    tabindex = "0"
+                    class = val.valClass
+                    data-dd-action = "decrement"
+                    type = "button"
                   )
 
                   input.dropdown__counter.js-dropdown__counter(
-                    tabindex= "-1"
-                    name= val.vName
-                    value= val.valCounter || 0
+                    tabindex = "-1"
+                    name = val.vName
+                    value = val.valCounter || 0
                   )
 
                   button.dropdown__button-increment(
-                    tabindex= "0"
-                    data-dd-action= "increment"
-                    type= "button"
+                    tabindex = "0"
+                    data-dd-action = "increment"
+                    type = "button"
                   )
 
         //- dropdown buttons for dropdown-guests
@@ -88,16 +88,16 @@ mixin dropdown(params)
               - cleanButtonClass = "dropdown-guests__button_clean_visible"
 
             button.dropdown-guests__button_clean.js-dropdown-guests__button_clean(
-              tabindex= "0"
-              class= cleanButtonClass
-              data-dd-action= "clean"
-              type= "button"
+              tabindex = "0"
+              class = cleanButtonClass
+              data-dd-action = "clean"
+              type = "button"
             ) очистить
 
             button.dropdown-guests__button_apply.js-dropdown-guests__button_apply(
-              tabindex= "0"
-              data-dd-action= "apply"
-              type= "button"
+              tabindex = "0"
+              data-dd-action = "apply"
+              type = "button"
             ) применить
 
 

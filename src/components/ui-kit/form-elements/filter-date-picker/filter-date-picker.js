@@ -21,7 +21,7 @@ $('.js-filter-date-picker').datepicker({
 function addApplyButton() {
   const $isPickerButtons = $('.js-filter-date-picker').find('.datepicker--buttons');
   if ($isPickerButtons) {
-    $isPickerButtons.append('<span class="datepicker--button" data-action="apply">Применить</span>');
+    $isPickerButtons.append('<span class = "datepicker--button" data-action = "apply">Применить</span>');
   }
 }
 

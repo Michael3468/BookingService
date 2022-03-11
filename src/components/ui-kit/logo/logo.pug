@@ -7,24 +7,24 @@ mixin logo(props)
 
   if (props.type === 'toxin')
     .toxin-logo
-      a(href="index.html")
-        img(src="./assets/img/logo.svg", alt="logo", loading="lazy")
+      a(href = "index.html")
+        img(src = "./assets/img/logo.svg", alt = "logo", loading = "lazy")
 
   else
-    div(class=`${classPrefix}`)
+    div(class = `${classPrefix}`)
       img(
-        class=`${classPrefix}-img`,
-        src="./assets/img/logo_colored.svg",
-        alt="logo",
-        loading="lazy",
+        class = `${classPrefix}-img`,
+        src = "./assets/img/logo_colored.svg",
+        alt = "logo",
+        loading = "lazy",
       )
 
       if (props.label === 'true')
         img(
-          class=`${classPrefix}-name`,
-          src="./assets/img/TOXIN.svg",
-          alt="logo",
-          loading="lazy",
+          class = `${classPrefix}-name`,
+          src = "./assets/img/TOXIN.svg",
+          alt = "logo",
+          loading = "lazy",
         )
 
 //- example

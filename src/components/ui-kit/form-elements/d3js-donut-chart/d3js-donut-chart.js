@@ -39,10 +39,10 @@ const g = svg
 
 const radius = d3.min([width, height]) / 2;
 
-const great  = (colorSmooth / innerScore) * percentsGreat;
-const good   = (colorSmooth / innerScore) * percentsGood   + great;
+const great = (colorSmooth / innerScore) * percentsGreat;
+const good = (colorSmooth / innerScore) * percentsGood   + great;
 const normal = (colorSmooth / innerScore) * percentsNormal + good;
-const bad    = (colorSmooth / innerScore) * percentsBad    + normal;
+const bad = (colorSmooth / innerScore) * percentsBad    + normal;
 
 const dblpi = 2 * Math.PI;
 

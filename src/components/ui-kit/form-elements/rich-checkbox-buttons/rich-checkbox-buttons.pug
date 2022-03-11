@@ -5,16 +5,16 @@ mixin rich-checkbox-buttons(caption = "", items = [])
     each item, index in items
       - rcb_item_id = `rich-checkbox-buttons-${index}`
 
-      .rich-checkbox-buttons__item.js-rich-checkbox-buttons__item(tabindex="0")
+      .rich-checkbox-buttons__item.js-rich-checkbox-buttons__item(tabindex = "0")
         input.rich-checkbox-buttons__input.js-rich-checkbox-buttons__input(
-          tabindex= "-1"
-          type= "checkbox"
-          id= rcb_item_id
-          name= `rcb-${index}`
-          value= item.value
+          tabindex = "-1"
+          type = "checkbox"
+          id = rcb_item_id
+          name = `rcb-${index}`
+          value = item.value
         )
 
-        label.rich-checkbox-buttons__text.js-rich-checkbox-buttons__text(for=rcb_item_id)
+        label.rich-checkbox-buttons__text.js-rich-checkbox-buttons__text(for = rcb_item_id)
           span.rich-checkbox-buttons__text_bold #{item.label}
           span.rich-checkbox-buttons__p= item.text
 

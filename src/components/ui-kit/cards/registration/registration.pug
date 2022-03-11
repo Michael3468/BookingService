@@ -8,7 +8,7 @@ mixin registration(params)
   .registration
     h1.registration__caption Регистрация аккаунта
 
-    form.js-registration-form(action="#change-me")
+    form.js-registration-form(action = "#change-me")
       .registration__name
         +text-field({
           inpType: "text",

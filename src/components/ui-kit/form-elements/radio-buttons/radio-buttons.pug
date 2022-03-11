@@ -7,13 +7,13 @@ mixin radio-buttons(leftCaption = "", name = "", items = [])
       each item, index in items
         p.radio-buttons__text
           input.radio-buttons__input(
-            id= `${name}-${index}`,
-            type= "radio",
-            name= name,
-            value= item.value,
-            checked= item.isChecked,
+            id = `${name}-${index}`,
+            type = "radio",
+            name = name,
+            value = item.value,
+            checked = item.isChecked,
           )
-          label.radio-buttons__label(for= `${name}-${index}`) #{item.value}
+          label.radio-buttons__label(for = `${name}-${index}`) #{item.value}
 
 //- example
 //- +radio-buttons(

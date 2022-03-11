@@ -1,19 +1,19 @@
 mixin booking-caption(params)
   if (params.captionType === 'booking')
-    - margin   = 'booking__caption_margin'
+    - margin = 'booking__caption_margin'
     - fontSize = 'booking__caption-room-number_font-size'
   if (params.captionType === 'room-card')
-    - margin   = 'room-card__room-number_margin'
+    - margin = 'room-card__room-number_margin'
     - fontSize = 'room-card__room-number_font-size'
 
-  a(class= `booking__caption ${margin}` href= params.link)
+  a(class = `booking__caption ${margin}` href = params.link)
     .booking__caption-right
       h1.booking__caption-number
         span.booking__caption-symbol №
-        span.booking__caption-room-number(class=fontSize)= params.roomNumber
-      .booking__caption-status=params.roomStatus
+        span.booking__caption-room-number(class = fontSize)= params.roomNumber
+      .booking__caption-status= params.roomStatus
     .booking__caption-left
-      p.booking__caption-price=params.roomPrice
+      p.booking__caption-price= params.roomPrice
       p.booking__caption-text в сутки
 
 

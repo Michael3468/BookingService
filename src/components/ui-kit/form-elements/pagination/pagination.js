@@ -35,7 +35,7 @@ function initFooter(currentPage, pSize) {
   } else {
     fromPage = prevPage * pageSize + 1;
   }
-  return `<div class=paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
+  return `<div class = paginationjs-pages-footer>${fromPage} - ${toPage} из 100+ вариантов аренды</div>`;
 }
 
 function initPagination() {

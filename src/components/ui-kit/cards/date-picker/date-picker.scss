@@ -43,12 +43,12 @@
   display: none;
 }
 
-.datepicker--nav-action[data-action='prev']::after {
+.datepicker--nav-action[data-action = 'prev']::after {
   margin-left: rem(14);
   content: 'arrow_back';
 }
 
-.datepicker--nav-action[data-action='next']::after {
+.datepicker--nav-action[data-action = 'next']::after {
   margin-right: rem(14);
   content: 'arrow_forward';
 }

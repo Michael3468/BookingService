@@ -6,7 +6,7 @@ include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
 mixin booking(params)
   .booking
 
-    form.js-booking-form(action="#change-me")
+    form.js-booking-form(action = "#change-me")
       +booking-caption({
         roomNumber: "888",
         roomStatus: "Люкс",
@@ -34,23 +34,23 @@ mixin booking(params)
       .booking__options
         .booking__options_left
           .booking__options-item
-            p.booking__options-item-text=`${params.roomPrice} ${params.daysPriceText}`
+            p.booking__options-item-text= `${params.roomPrice} ${params.daysPriceText}`
 
           .booking__options-item
-            p.booking__options-item-text=params.servicesPriceText
+            p.booking__options-item-text= params.servicesPriceText
             .booking__options-info-icon
 
           .booking__options-item
-            p.booking__options-item-text=params.additionalServicesPriceText
+            p.booking__options-item-text= params.additionalServicesPriceText
             .booking__options-info-icon
 
         .booking__options_right
-          p.booking__options-item-text=params.daysPriceValue
-          p.booking__options-item-text=params.servicesPriceValue
-          p.booking__options-item-text=params.additionalServicesPriceValue
+          p.booking__options-item-text= params.daysPriceValue
+          p.booking__options-item-text= params.servicesPriceValue
+          p.booking__options-item-text= params.additionalServicesPriceValue
 
       .booking__options-result
-        p.booking__options-result-text=params.resultText
+        p.booking__options-result-text= params.resultText
         .booking__options-result-line
         p.booking__options-result-sum= params.resultSum
 

@@ -8,28 +8,28 @@ mixin checkbox-buttons(caption = "", leftCaption = "", inpId = "", inpName = "",
         h3.checkbox-buttons__caption= leftCaption
     else
       .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
-        tabindex="0"
+        tabindex = "0"
       )
         .checkbox-buttons__expandable-list-caption
           h3.checkbox-buttons__expandable-list-text= caption
           .checkbox-buttons__expandable-list-expand-more(
-            class= rotateClass
+            class = rotateClass
           ) expand_more
 
-    .checkbox-buttons-items(class= visibility)
+    .checkbox-buttons-items(class = visibility)
       each item, index in items
         .checkbox-buttons-input
           input.custom-checkbox.js-custom-checkbox(
-            tabindex= "-1"
-            type= "checkbox",
-            checked= item.isChecked,
-            id= `inpId-${index}`,
-            name= inpName,
-            value= item.value,
+            tabindex = "-1"
+            type = "checkbox",
+            checked = item.isChecked,
+            id = `inpId-${index}`,
+            name = inpName,
+            value = item.value,
           )
           label.checkbox-buttons-text.js-checkbox-buttons-text(
-            tabindex= "0"
-            for= `inpId-${index}`
+            tabindex = "0"
+            for = `inpId-${index}`
           ) #{item.label}
 
 //- example checkbox buttons only

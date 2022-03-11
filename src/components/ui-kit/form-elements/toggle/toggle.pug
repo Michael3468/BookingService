@@ -4,13 +4,13 @@ mixin toggle(params)
       h3.toggle__caption= params.leftCaption
     .toggle-body
       input.toggle-button.js-toggle__button(
-        id= params.toggleId,
-        type="checkbox"
-        checked=params.toggleStatus
-        name=params.toggleName
+        id = params.toggleId,
+        type = "checkbox"
+        checked = params.toggleStatus
+        name = params.toggleName
       )
 
-      label.toggle-text(for= params.toggleId) #{params.toggleBtnText}
+      label.toggle-text(for = params.toggleId) #{params.toggleBtnText}
 
 //- example
 //- +toggle({

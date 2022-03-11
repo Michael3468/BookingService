@@ -18,44 +18,44 @@ mixin header(loginStatus)
         ul.header__nav-links
           li.header__nav-li
             a.header__nav-link.header__nav-link_active(
-              href="change-me"
-              tabindex="1"
+              href = "change-me"
+              tabindex = "1"
             ) О нас
 
           //- css dropdown
           li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(
-            tabindex="2"
+            tabindex = "2"
           ) Услуги
             //- used material icons font
             span.header__nav-expand-more expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
-              a.header__dropdown-link(href="change-me" tabindex="2") Услуга-1
-              a.header__dropdown-link(href="change-me" tabindex="2") Услуга-2
-              a.header__dropdown-link(href="change-me" tabindex="2") Услуга-3
+              a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-1
+              a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-2
+              a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-3
           //- css dropdown end
 
           li.header__nav-li
-            a.header__nav-link(href="change-me" tabindex="3") Вакансии
+            a.header__nav-link(href = "change-me" tabindex = "3") Вакансии
 
           li.header__nav-li
-            a.header__nav-link(href="change-me" tabindex="4") Новости
+            a.header__nav-link(href = "change-me" tabindex = "4") Новости
 
           //- css dropdown
           li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(
-            tabindex="5"
+            tabindex = "5"
           ) Соглашения
             //- used material icons font
             span.header__nav-expand-more expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
-              a.header__dropdown-link(href="change-me" tabindex="5") Соглашение-1
-              a.header__dropdown-link(href="change-me" tabindex="5") Соглашение-2
-              a.header__dropdown-link(href="change-me" tabindex="5") Соглашение-3
+              a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-1
+              a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-2
+              a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-3
           //- css dropdown end
 
         //- authentification block
         .header__authentification
           if loginStatus == "authentificated"
-            .header__authentificated(tabindex="6")
+            .header__authentificated(tabindex = "6")
               - userName = "Юлий Цезарь"
               span.header__nav-li #{userName}
           else
