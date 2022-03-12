@@ -1,4 +1,15 @@
-mixin radio-buttons(leftCaption = "", name = "", items = [])
+mixin radio-buttons(params = {})
+
+  -
+    const {
+      leftCaption = "",
+      name = "gender",
+      items = [
+        { value: 'Мужчина', isChecked: 'true' },
+        { value: 'Женщина' }
+      ],
+    } = params
+
   .radio-buttons
     if (leftCaption)
       h3.radio-buttons__caption= leftCaption
@@ -15,12 +26,11 @@ mixin radio-buttons(leftCaption = "", name = "", items = [])
           )
           label.radio-buttons__label(for = `${name}-${index}`) #{item.value}
 
-//- example
-//- +radio-buttons(
-//-   "",
-//-   "gender",
-//-   [
-//-     { value: 'Мужчина', isChecked: 'true' },
-//-     { value: 'Женщина' }
+//- +radio-buttons({
+//-   leftCaption: "Radio Buttons Name",
+//-   name: "input-name",
+//-   items: [
+//-     { value: 'value1', isChecked: 'true' },
+//-     { value: 'value2' }
 //-   ]
-//- )
+//- })

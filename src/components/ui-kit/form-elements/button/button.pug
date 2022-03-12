@@ -1,49 +1,36 @@
-mixin button(params)
+mixin button(params = {})
   -
-    const link = params.link|| "change_me"
-    const value = params.value|| "Click me"
-    const tIndex = params.tabindex|| "0"
+    const {
+      link = 'change_me',
+      mod = ["with_arrow", "block"],
+      value = 'Click me',
+      type = '',
+      tabindex = '0',
+    } = params
 
-    let mod = params.mod
-    if (mod !== undefined) {
-      mod = mod.map((item) => `button_${item}`)
-      classes = mod.join(" ")
-    } else {
-      classes = ""
-    }
+  - classes = ''
+  if (mod)
+    each item in mod
+      - classes += ` button_${item}`
 
-  if (params.type)
+  if (type)
     button.button.js-button(
       tabindex = tIndex
-      onclick = `location.href = ${link}`
-      class = `${classes} ${params.class}`
-      type = params.type
+      onclick = `location.href = '${link}'`
+      class = `${classes}`
+      type = type
     )= value
   else
     button.button.js-button(
       tabindex = tIndex
-      onclick = `location.href = ${link}`
-      class = `${classes} ${params.class}`
+      onclick = `location.href = '${link}'`
+      class = `${classes}`
     )= value
 
 //- Buttons examples
-//-   +button( link:"#", value:"Кнопка" })
-//-   +button( value:"Кнопка" })
-//-   +button( link:"#", value:"Кнопка", mod: ["bordered"] })
-//-   +button( value:"Кнопка", mod: ["bordered"] })
-//-   +button( link:"#", value:"Войти", mod: ["bordered", "small"] })
-//-   +button( value:"Кнопка", mod: ["bordered", "small"] })
-//-   +button( link:"#", value:"Зарегистрироваться", mod: ["small"] })
-//-   +button( value:"Кнопка", mod: ["small"] })
-//-   +button( value:"Очень большой текст", mod: ["small"] })
-//-   +button( link:"#", value:"Кнопка", mod: ["block"] })
-//-   +button( link:"#", value:"Кнопка", mod: ["bordered", "block"] })
-//-   +button( link:"#", value:"Кнопка", mod: ["bordered", "small", "block"] })
-//-   +button( link:"#", value:"Кнопка", mod: ["small", "block"] })
-//-   +button( link:"#", value:"Кнопка", mod: ["with_arrow"] })
-
-//-   +button( link:"#", value:"Подобрать номер", mod: ["with_arrow", "block"] })
-//-   +button( link:"#", value:"Забронировать", mod: ["with_arrow", "block"] })
-//-   +button( link:"#", value:"Забронировать", mod: ["with_arrow", "block", "bordered"] })
-//-   +button( link: "change_me", mod: ["no-background", "no-background_hover"] })
-//-   +button( link: "change_me", mod: ["with_arrow", "block"], value: "Перейти к оплате" })
+//- +button({ value: "Забронировать" })
+//- +button({ link: "./registration.html", mod: ["bordered"], value: "Создать" })
+//- +button({ value: "Зарегистрироваться", type: "submit" })
+//- +button({ link: "./sign-in.html", mod: ["bordered"], value: "Войти" })
+//- +button({ mod: ["bordered", "hover"] })
+//- +button({ link: "./sign-in.html", mod: ["bordered", "small"], value: "Войти", tabindex: 10 })

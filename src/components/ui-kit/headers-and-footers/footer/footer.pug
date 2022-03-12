@@ -10,10 +10,7 @@ mixin footer(footerType)
       .footer__container
         .footer__grid-layout
           .footer__grid-layout-logo
-            +logo({
-              type: 'footer',
-              label: 'true',
-            })
+            +logo({ type: 'footer' })
 
             p.footer__logo-text
               | Бронирование номеров в лучшем отеле 2019 года по версии
@@ -86,10 +83,7 @@ mixin footer(footerType)
       .footer__container
         .footer__grid-layout
           .footer__grid-layout-logo.footer__grid-layout-logo_mob
-            +logo({
-              type: 'footer',
-              label: 'true',
-            })
+            +logo({ type: 'footer' })
 
     .sub-footer.sub-footer__mob
       .sub-footer__container.sub-footer__container_mob

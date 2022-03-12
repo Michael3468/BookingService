@@ -1,11 +1,17 @@
-mixin logo(props)
-  if (props.type === 'header')
+mixin logo(params = {})
+  -
+    const {
+      type = 'toxin',
+      label = 'true',
+    } = params
+
+  if (type === 'header')
     - classPrefix = 'header__logo'
 
-  if (props.type === 'footer')
+  if (type === 'footer')
     -classPrefix = 'footer__logo'
 
-  if (props.type === 'toxin')
+  if (type === 'toxin')
     .toxin-logo
       a(href = "index.html")
         img(src = "./assets/img/logo.svg", alt = "logo", loading = "lazy")
@@ -19,7 +25,7 @@ mixin logo(props)
         loading = "lazy",
       )
 
-      if (props.label === 'true')
+      if (label === 'true')
         img(
           class = `${classPrefix}-name`,
           src = "./assets/img/TOXIN.svg",
@@ -28,7 +34,4 @@ mixin logo(props)
         )
 
 //- example
-//- +logo({
-//-   type: 'header',
-//-   label: 'true',
-//- })
+//- +logo({ type: 'header' })

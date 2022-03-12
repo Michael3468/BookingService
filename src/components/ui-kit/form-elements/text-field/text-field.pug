@@ -1,24 +1,35 @@
-mixin text-field(params)
+mixin text-field(params = {})
+  -
+    const {
+      leftCaption = '',
+      rightCaption = '',
+      inpType = 'text',
+      inpName = 'text',
+      inpPlaceholder = '',
+      hoverStyle = 'false',
+      isArrow = 'false',
+    } = params
+
   - hover = params.hoverStyle === 'true' ? 'text-field_hover' : ''
 
   .text-field(class = hover)
     .text-field__caption
-      if (params.leftCaption)
-        h3.text-field__caption-left= params.leftCaption
+      if (leftCaption)
+        h3.text-field__caption-left= leftCaption
 
-      if (params.rightCaption)
-        h3.text-field__caption-right= params.rightCaption
+      if (rightCaption)
+        h3.text-field__caption-right= rightCaption
 
     .text-field__input-item
       input.text-field__input(
-        class = (`${hover} js-${params.inpType}`)
-        type = params.inpType
-        name = params.inpName
-        placeholder = params.inpPlaceholder
+        class = (`${hover} js-${inpType}`)
+        type = inpType
+        name = inpName
+        placeholder = inpPlaceholder
         tabindex = "0"
         )
 
-      if (params.isArrow == "true")
+      if (isArrow == "true")
         .text-field__input_arrow-forward
           button.text-field__button.text-field-gradient-icon.arrow-forward.js-arrow-forward(
             tabindex = "0"

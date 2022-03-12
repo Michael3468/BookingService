@@ -5,10 +5,7 @@ mixin header(loginStatus)
   header.header
     .header__container.header__container_mob
       .header__burger-logo
-        +logo({
-          type: 'header',
-          label: 'true',
-        })
+        +logo({ type: 'header' })
 
         .header__burger.js-header-burger menu
 
@@ -63,16 +60,16 @@ mixin header(loginStatus)
               .header__auth-buttons
                 +button({
                   link: "./sign-in.html",
-                  value: "Войти",
                   mod: ["bordered", "small"],
+                  value: "Войти",
                   tabindex: 10,
                 })
 
               .header__auth-buttons
                 +button({
                   link: "./registration.html",
-                  value: "Зарегистрироваться",
                   mod: ["small"],
+                  value: "Зарегистрироваться",
                   tabindex: 11,
                 })
 

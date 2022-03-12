@@ -25,9 +25,7 @@ block variables
 
 block content
 
-  +logo({
-    type: 'toxin',
-  })
+  +logo()
 
   .first-container.container
 
@@ -46,8 +44,6 @@ block content
         +text-field({
           leftCaption: "text field",
           rightCaption: "hover /focus",
-          inpType: "text",
-          inpName: "text",
           inpPlaceholder: "This is pretty awesome",
           hoverStyle: "true",
         })
@@ -112,14 +108,7 @@ block content
         )
 
       .block-margin.checkbox-buttons-margin
-        +radio-buttons(
-          "radio buttons",
-          "gender",
-          [
-            { value: 'Мужчина', isChecked: 'true' },
-            { value: 'Женщина' }
-          ]
-        )
+        +radio-buttons({ leftCaption: 'radio buttons' })
 
       .block-margin.toggle-block-margin
         .form-elements-toggle-margin-between
@@ -179,45 +168,24 @@ block content
         h3.buttons-caption buttons
         .buttons-block
           .button-margin
-            +button({
-              link: "change_me",
-            })
+            +button({ mod: ["none"] })
 
-          +button({
-            link: "change_me",
-            mod: ["hover"],
-          })
+          +button({ mod: ["hover"] })
 
         .buttons-block
           .button-margin
-            +button({
-              link: "change_me",
-              mod: ["bordered"],
-            })
+            +button({ mod: ["bordered"] })
 
-          +button({
-            link: "change_me",
-            mod: ["bordered", "hover"],
-          })
+          +button({ mod: ["bordered", "hover"] })
 
         .buttons-block
           .button-margin.btn-mt
-            +button({
-              link: "change_me",
-              mod: ["no-background"],
-            })
+            +button({ mod: ["no-background"] })
 
-          +button({
-            link: "change_me",
-            mod: ["no-background", "no-background_hover"],
-          })
+          +button({ mod: ["no-background", "no-background_hover"] })
 
         .buttons-block
-          +button({
-            link: "change_me",
-            mod: ["with_arrow", "block"],
-            value: "Перейти к оплате",
-          })
+          +button({ value: "Перейти к оплате" })
 
       .block-margin
         h3.pagination-caption pagination
@@ -328,14 +296,7 @@ block content
     .column-3
 
       .mini-column
-        +bullet-list({
-          caption: "bullet list",
-          options: [
-            "Нельзя с питомцами",
-            "Без вечеринок и мероприятий",
-            "Время прибытия - после 13:00, а выезд до 12:00",
-          ],
-        })
+        +bullet-list({ caption: "bullet list" })
 
 
   .fourth-container.container

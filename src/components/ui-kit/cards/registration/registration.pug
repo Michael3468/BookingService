@@ -11,26 +11,17 @@ mixin registration(params)
     form.js-registration-form(action = "#change-me")
       .registration__name
         +text-field({
-          inpType: "text",
           inpName: "firstName",
           inpPlaceholder: "Имя",
         })
 
       +text-field({
-        inpType: "text",
         inpName: "lastName",
         inpPlaceholder: "Фамилия",
       })
 
       .registration__gender
-        +radio-buttons(
-          "",
-          "gender",
-          [
-            { value: 'Мужчина', isChecked: 'true' },
-            { value: 'Женщина' }
-          ]
-        )
+        +radio-buttons()
 
       +masked-text-field({
         leftCaption: "Дата рождения",
@@ -61,7 +52,6 @@ mixin registration(params)
         })
 
       +button({
-        mod: ["with_arrow", "block"],
         value: "Зарегистрироваться",
         type: "submit",
       })
