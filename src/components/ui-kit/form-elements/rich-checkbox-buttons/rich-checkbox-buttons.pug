@@ -1,4 +1,21 @@
-mixin rich-checkbox-buttons(caption = "", items = [])
+mixin rich-checkbox-buttons(params = {})
+  -
+    const {
+      caption = 'доступность',
+      items = [
+        {
+          value: "wide-corridor",
+          label: "Широкий коридор",
+          text: "Ширина коридоров в номере не менее 91 см.",
+        },
+        {
+          value: "assistant-for-the-disabled",
+          label: "Помощник для инвалидов",
+          text: "На 1 этаже вас встретит специалист и проводит до номера",
+        }
+      ]
+    } = params
+
   .rich-checkbox-buttons
     h3.rich-checkbox-buttons__caption= caption
 
@@ -20,18 +37,5 @@ mixin rich-checkbox-buttons(caption = "", items = [])
 
 
 //- example
-//- +rich-checkbox-buttons(
-//-   "rich checkbox buttons",
-//-   [
-//-     {
-//-       value: "wide-corridor",
-//-       label: "Широкий коридор",
-//-       text: "Ширина коридоров в номере не менее 91 см.",
-//-     },
-//-     {
-//-       value: "assistant-for-the-disabled",
-//-       label: "Помощник для инвалидов",
-//-       text: "На 1 этаже вас встретит специалист и проводит до номера",
-//-     }
-//-   ]
-//- )
+//- +rich-checkbox-buttons()
+//- +rich-checkbox-buttons({ caption : "rich checkbox buttons" })

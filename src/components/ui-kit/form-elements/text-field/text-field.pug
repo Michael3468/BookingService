@@ -10,7 +10,7 @@ mixin text-field(params = {})
       isArrow = 'false',
     } = params
 
-  - hover = params.hoverStyle === 'true' ? 'text-field_hover' : ''
+  - hover = hoverStyle === 'true' ? 'text-field_hover' : ''
 
   .text-field(class = hover)
     .text-field__caption
@@ -37,14 +37,23 @@ mixin text-field(params = {})
           ) arrow_forward
       
 //- examples
-//- text-field
 //- +text-field({
-//-   leftCaption: "text field",
-//-   rightCaption: "default",
 //-   inpType: "email",
 //-   inpName: "email",
 //-   inpPlaceholder: "Email",
-//-   hoverStyle: "true",
+//- })
+
+//- +text-field({
+//-   inpType: "password",
+//-   inpName: "password",
+//-   inpPlaceholder: "Пароль",
+//- })
+
+//- +text-field({
+//-   leftCaption: "Данные для входа в сервис",
+//-   inpType: "email",
+//-   inpName: "email",
+//-   inpPlaceholder: "Email",
 //- })
 
 //- mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya

@@ -1,15 +1,31 @@
-mixin d3js-donut-chart(params)
+mixin d3js-donut-chart(params = {})
+  -
+    const {
+      width = "120",
+      height = "120",
+      great = "130",
+      good = "65",
+      normal = "65",
+      bad = "0",
+      legendValues = [
+        "Великолепно",
+        "Хорошо",
+        "Удовлетворительно",
+        "Разочарован",
+      ]
+    } = params
+
   .d3js-donut-chart
     svg.d3js-donut-chart__chart.js-d3js-donut-chart__chart(
-      width= params.width,
-      height= params.height,
-      data-great= params.great,
-      data-good= params.good,
-      data-normal= params.normal,
-      data-bad= params.bad
+      width= width,
+      height= height,
+      data-great= great,
+      data-good= good,
+      data-normal= normal,
+      data-bad= bad
     )
 
     .d3js-donut-chart__legend
       ul
-        each val in params.legendValues
+        each val in legendValues
           li.d3js-donut-chart__legend-values= val

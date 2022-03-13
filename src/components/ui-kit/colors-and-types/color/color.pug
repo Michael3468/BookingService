@@ -1,6 +1,10 @@
-mixin color(props)
-  - opacity = props.opacity
-  - name = props.name
+mixin color(params = {})
+  -
+    const {
+      opacity = '',
+      name = 'Dark Shade 100%',
+      color = ''
+    } = params
 
   .color
     if (opacity)
@@ -25,7 +29,7 @@ mixin color(props)
     .color__description
       h2.color__name= name
 
-      if (props.color)
-        p.color__code= props.color
+      if (color)
+        p.color__code= color
       else
         p.color__code= "#1F2041"

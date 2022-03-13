@@ -1,7 +1,12 @@
 include ../../logo/logo.pug
 include ../../form-elements/button/button.pug
 
-mixin header(loginStatus)
+mixin header(params = {})
+  -
+    const {
+      loginStatus = ''
+    } = params
+
   header.header
     .header__container.header__container_mob
       .header__burger-logo

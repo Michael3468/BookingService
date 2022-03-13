@@ -14,9 +14,9 @@ block content
 
   +header()
   .headers-and-footers
-    +header("authentificated")
+    +header({ loginStatus: "authentificated" })
   .headers-and-footers
     +footer()
   .headers-and-footers
     .responsive-footer-container
-      +footer("mobile")
+      +footer({ footerType: "mobile" })

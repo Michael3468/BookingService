@@ -1,11 +1,18 @@
-mixin masked-text-field(params)
+mixin masked-text-field(params = {})
+  -
+    const {
+      leftCaption = "Дата рождения",
+      inpName = "birthDate",
+      inpPlaceholder = "ДД.ММ.ГГГГ",
+    } = params
+
   .masked-text-field
     .masked-text-field__caption
-      h3.masked-text-field__caption_left= params.leftCaption
+      h3.masked-text-field__caption_left= leftCaption
     input.masked-text-field__input.js-masked-text-field__input(
       type = "text"
-      name = params.inpName
-      placeholder = params.inpPlaceholder
+      name = inpName
+      placeholder = inpPlaceholder
     )
 
 
@@ -13,5 +20,4 @@ mixin masked-text-field(params)
 //- +masked-text-field({
 //-   leftCaption: "masked text field",
 //-   inpName: "date",
-//-   inpPlaceholder: "ДД.ММ.ГГГГ",
 //- })

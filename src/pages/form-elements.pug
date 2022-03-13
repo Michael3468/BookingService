@@ -53,21 +53,18 @@ block content
           leftCaption: "dropdown",
           type: "dropdown-guests",
           selectionText: "Сколько гостей",
-          expMenuHidden: "true",
         })
 
       .block-margin.date-margin
         +masked-text-field({
           leftCaption: "masked text field",
           inpName: "date",
-          inpPlaceholder: "ДД.ММ.ГГГГ",
         })
 
       .block-margin.dropdown-date-margin
         +dropdown-date({
           startDateCaption: "date dropdown",
           endDateCaption: "date dropdown",
-          endDefaultDate: "2019-08-19",
         })
 
       .mini-column
@@ -90,13 +87,11 @@ block content
     .column-2
 
       .block-margin
-        +checkbox-buttons(
-          "",
-          "checkbox buttons",
-          "check-box-buttons",
-          "check-box-name",
-          "false",
-          [
+        +checkbox-buttons({
+          leftCaption: "checkbox buttons",
+          inpId: "check-box-buttons",
+          inpName: "check-box-name",
+          items: [
             { value: "allow-smoke", label: "Можно курить" },
             { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
             {
@@ -105,7 +100,7 @@ block content
               isChecked: "true",
             },
           ]
-        )
+        })
 
       .block-margin.checkbox-buttons-margin
         +radio-buttons({ leftCaption: 'radio buttons' })
@@ -114,14 +109,12 @@ block content
         .form-elements-toggle-margin-between
           +toggle({
             leftCaption: "toggle",
-            toggleBtnText: "Получать спецпредложения",
-            toggleStatus: "checked",
+            isChecked: "true",
             toggleId: "form-elements-toggle-1",
           })
 
         .form-elements-toggle-margin-between
           +toggle({
-            toggleBtnText: "Получать спецпредложения",
             toggleId: "form-elements-toggle-2",
           })
 
@@ -135,7 +128,7 @@ block content
             })
 
           +like-button({
-            likeBtnChecked: "true",
+            likeBtnChecked: "checked",
             likeBtnText: "12",
           })
 
@@ -143,11 +136,7 @@ block content
         h3.rate-button-caption rate button
         .rate-buttons-items
           .rate-buttons-margin
-            +rate-button({
-              rateBtnName: "rateBtnName-1",
-              rateBtnId: "rateBtnId-1",
-              starsCount: "4",
-            })
+            +rate-button()
 
           +rate-button({
             rateBtnName: "rateBtnName-2",
@@ -161,7 +150,6 @@ block content
       .mini-column
         +range-slider({
           leftCaption: "range slider",
-          rightCaption: "5 000₽ - 10 000₽",
         })
 
       .buttons-margin
@@ -204,7 +192,6 @@ block content
             rightCaption: "default",
             type: "dropdown-options",
             selectionText: "2 спальни, 2 кровати...",
-            expMenuHidden: "true",
           })
 
         .block-margin
@@ -214,6 +201,7 @@ block content
             type: "dropdown-options",
             idPostfix: "-changed-example",
             selectionText: "2 спальни, 2 кровати...",
+            expMenuHidden: "false",
           })
 
 
@@ -223,6 +211,7 @@ block content
         leftCaption: "dropdown",
         type: "dropdown-guests",
         selectionText: "Сколько гостей",
+        expMenuHidden: "false",
       })
 
 
@@ -234,6 +223,7 @@ block content
         idPostfix: "-changed-example",
         selectionText: "3 гостя",
         cleanButtonVisible: "true",
+        expMenuHidden: "false",
       })
 
   .third-container.container
@@ -241,57 +231,22 @@ block content
     .column-1
 
       .mini-column
-        +checkbox-buttons(
-          "expandable checkbox list",
-          "",
-          "check-box-buttons-1",
-          "check-box-name-1",
-          "true",
-          [
-            { value: "breakfast", label: "Завтрак" },
-            { value: "table", label: "Письменный стол" },
-            { value: "chair", label: "Стул для кормления" },
-            { value: "bed", label: "Кроватка" },
-            { value: "TV", label: "Телевизор" },
-            { value: "shampoo", label: "Шампунь" },
-          ]
-        )
+        +checkbox-buttons({
+          inpId: "check-box-buttons-1",
+          inpName: "check-box-name-1",
+          hidden: "true"
+        })
 
         .block-margin.checkbox-buttons-expandable-list-margin
-          +checkbox-buttons(
-            "expandable checkbox list",
-            "",
-            "check-box-buttons-2",
-            "check-box-name-2",
-            "false",
-            [
-              { value: "breakfast", label: "Завтрак" },
-              { value: "table", label: "Письменный стол" },
-              { value: "chair", label: "Стул для кормления" },
-              { value: "bed", label: "Кроватка" },
-              { value: "TV", label: "Телевизор" },
-              { value: "shampoo", label: "Шампунь" },
-            ]
-          )
+          +checkbox-buttons({
+            inpId: "check-box-buttons-2",
+            inpName: "check-box-name-2",
+          })
 
     .column-2
 
       .mini-column
-        +rich-checkbox-buttons(
-          "rich checkbox buttons",
-          [
-            {
-              value: "wide-corridor",
-              label: "Широкий коридор",
-              text: "Ширина коридоров в номере не менее 91 см.",
-            },
-            {
-              value: "assistant-for-the-disabled",
-              label: "Помощник для инвалидов",
-              text: "На 1 этаже вас встретит специалист и проводит до номера",
-            }
-          ]
-        )
+        +rich-checkbox-buttons({ caption : "rich checkbox buttons" })
 
     .column-3
 
@@ -303,11 +258,7 @@ block content
 
     .column-1
 
-      +icon-text-list({
-        iconName: "insert_emoticon",
-        caption: "Комфорт",
-        text: "Шумопоглощающие стены",
-      })
+      +icon-text-list()
 
       +icon-text-list({
         iconName: "location_city",
@@ -324,6 +275,6 @@ block content
           commentDate: "5 дней назад",
           feedbackText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
           likeBtnId: "likeBtnId-3",
-          likeBtnChecked: "true",
+          likeBtnChecked: "checked",
           likeBtnText: "12",
         })

@@ -4,7 +4,7 @@ include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
 include ../../../ui-kit/form-elements/text-field/text-field
 include ../../../ui-kit/form-elements/toggle/toggle
 
-mixin registration(params)
+mixin registration()
   .registration
     h1.registration__caption Регистрация аккаунта
 
@@ -23,11 +23,7 @@ mixin registration(params)
       .registration__gender
         +radio-buttons()
 
-      +masked-text-field({
-        leftCaption: "Дата рождения",
-        inpName: "birthDate",
-        inpPlaceholder: "ДД.ММ.ГГГГ",
-      })
+      +masked-text-field()
 
       .registration__email
         +text-field({
@@ -46,8 +42,6 @@ mixin registration(params)
 
       .registration__special-offers
         +toggle({
-          toggleBtnText: "Получать спецпредложения",
-          toggleName: "specialOffers",
           toggleId: "registration-toggle",
         })
 

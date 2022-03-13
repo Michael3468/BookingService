@@ -2,7 +2,12 @@ include ../../logo/logo.pug
 include ../../form-elements/socials/socials.pug
 include ../../form-elements/text-field/text-field
 
-mixin footer(footerType)
+mixin footer(params = {})
+  -
+    const {
+      footerType = ''
+    } = params
+
   - copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
 
   if footerType != "mobile"
@@ -75,7 +80,7 @@ mixin footer(footerType)
         .sub-footer__copyright
           p #{copyrightText}
 
-        +socials({ mobile: 'false' })
+        +socials()
 
   //- mobile footer
   else

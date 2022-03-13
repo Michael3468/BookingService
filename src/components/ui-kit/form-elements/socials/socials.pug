@@ -1,5 +1,10 @@
-mixin socials(params)
-  - mobile = params.mobile === 'true' ? 'socials_mob' : ''
+mixin socials(params = {})
+  -
+    let {
+      mobile = 'false'
+    } = params
+
+  - mobile = mobile === 'true' ? 'socials_mob' : ''
 
   .socials(class = mobile)
     a.socials-link(

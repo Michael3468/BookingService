@@ -1,9 +1,14 @@
 include ../filter-date-picker/filter-date-picker
 
-mixin filter-date-dropdown(params)
+mixin filter-date-dropdown(params = {})
+  -
+    const {
+      leftCaption = "даты пребывания в отеле"
+    } = params
+
   .filter-date-dropdown.js-filter-date-dropdown
     .filter-date-dropdown__caption
-      h3= params.leftCaption
+      h3= leftCaption
     .filter-date-dropdown__input-item
       input.filter-date-dropdown__input.js-filter-date-dropdown__input(
         tabindex = "0"
@@ -11,7 +16,6 @@ mixin filter-date-dropdown(params)
         placeholder = "Выберите даты"
         readonly
       )
-
       .filter-date-dropdown__input-arrow expand_more
 
     //- dropdown datepicker from "dropdown-date.js"

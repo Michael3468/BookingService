@@ -3,32 +3,41 @@ include ./slick-carousel/slick-carousel
 include ../booking/__caption/booking__caption
 include ../../form-elements/rate-button/rate-button
 
-mixin room-card(params)
+mixin room-card(params = {})
+  -
+    const {
+      number = '',
+      status = '',
+      price = '',
+      photoName = '',
+      starsRate = '',
+      feedbacks = '',
+      link = "change-me"
+    } = params
+
   .room-card
     .room-card__picture-container
       +slick-carousel({
-        photoName: params.photoName,
+        photoName: photoName,
       })
 
     .room-card__number-price
       +booking-caption({
-        roomNumber: params.number,
-        roomStatus: params.status,
-        roomPrice: `${params.price}₽`,
-        fontSize: "room-card-caption",
-        captionType: "room-card",
-        link: params.link
+        roomNumber: number,
+        roomStatus: status,
+        roomPrice: `${price}₽`,
+        link: link
       })
 
     .room-card__feedback
       +rate-button({
-        rateBtnName: `rateBtnName-${params.number}`,
-        rateBtnId: `rateBtnId-${params.number}-`,
-        starsCount: params.starsRate,
+        rateBtnName: `rateBtnName-${number}`,
+        rateBtnId: `rateBtnId-${number}-`,
+        starsCount: starsRate,
       })
 
       +feedbacks({
-        number: params.feedbacks,
+        number: feedbacks,
         text: "Отзывов",
       })
 

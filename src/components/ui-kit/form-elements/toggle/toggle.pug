@@ -1,23 +1,39 @@
-mixin toggle(params)
-  .toggle
-    if (params.leftCaption)
-      h3.toggle__caption= params.leftCaption
-    .toggle-body
-      input.toggle-button.js-toggle__button(
-        id = params.toggleId,
-        type = "checkbox"
-        checked = params.toggleStatus
-        name = params.toggleName
-      )
+mixin toggle(params = {})
+  -
+    const {
+      leftCaption = '',
+      toggleBtnText = 'Получать спецпредложения',
+      isChecked = '',
+      toggleName = 'specialOffers',
+      toggleId = 'toggle',
+    } = params
 
-      label.toggle-text(for = params.toggleId) #{params.toggleBtnText}
+  .toggle
+    if (leftCaption)
+      h3.toggle__caption= leftCaption
+    .toggle-body
+      if (isChecked === 'true')
+        input.toggle-button.js-toggle__button(
+          id = toggleId,
+          type = "checkbox"
+          checked = isChecked
+          name = toggleName
+        )
+      else
+        input.toggle-button.js-toggle__button(
+          id = toggleId,
+          type = "checkbox"
+          name = toggleName
+        )
+
+      label.toggle-text(for = toggleId) #{toggleBtnText}
 
 //- example
 //- +toggle({
 //-   leftCaption: "toggle",
 //-   toggleBtnText: "Получать спецпредложения",
 //-   toggleName: "someName",
-//-   toggleStatus: "checked",
+//-   isChecked: "true",
 //-   toggleId: "toggle-id-name-",
 //- })
 

@@ -1,19 +1,28 @@
-mixin booking-caption(params)
-  if (params.captionType === 'booking')
+mixin booking-caption(params = {})
+  -
+    const {
+      roomNumber = '',
+      roomStatus = '',
+      roomPrice = '',
+      captionType = "room-card",
+      link = ''
+    } = params
+
+  if (captionType === 'booking')
     - margin = 'booking__caption_margin'
     - fontSize = 'booking__caption-room-number_font-size'
-  if (params.captionType === 'room-card')
+  if (captionType === 'room-card')
     - margin = 'room-card__room-number_margin'
     - fontSize = 'room-card__room-number_font-size'
 
-  a(class = `booking__caption ${margin}` href = params.link)
+  a(class = `booking__caption ${margin}` href = link)
     .booking__caption-right
       h1.booking__caption-number
         span.booking__caption-symbol №
-        span.booking__caption-room-number(class = fontSize)= params.roomNumber
-      .booking__caption-status= params.roomStatus
+        span.booking__caption-room-number(class = fontSize)= roomNumber
+      .booking__caption-status= roomStatus
     .booking__caption-left
-      p.booking__caption-price= params.roomPrice
+      p.booking__caption-price= roomPrice
       p.booking__caption-text в сутки
 
 
@@ -21,14 +30,13 @@ mixin booking-caption(params)
 //- +booking-caption({
 //-   roomNumber: "888",
 //-   roomStatus: "Люкс",
-//-   roomPrice: "9 990₽",
-//-   link: "page.html"
+//-   roomPrice: 9900,
+//-   captionType: "booking",
 //- })
 
 //- +booking-caption({
-//-   roomNumber: params.number,
-//-   roomStatus: params.status,
-//-   roomPrice: params.price,
-//-   captionType: "room-card", // ("room-card" || "booking")
-//-   link: "page.html"
+//-   roomNumber: number,
+//-   roomStatus: status,
+//-   roomPrice: `${price}₽`,
+//-   link: link
 //- })

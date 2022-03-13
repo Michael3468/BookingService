@@ -2,23 +2,18 @@ include ../../../ui-kit/form-elements/button/button
 include ../../../ui-kit/form-elements/dropdown/dropdown
 include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
 
-mixin room-search(params)
+mixin room-search()
   .room-search
     h1.room-search__caption Найдём номера под ваши пожелания
 
     form.js-room-search-form(action = "#change-me")
       .room-search__date-dropdown-margin
-        +dropdown-date({
-          startDateCaption: "прибытие",
-          endDateCaption: "выезд",
-        })
+        +dropdown-date()
 
       .room-search__dropdown-guests-margin
         +dropdown({
-          leftCaption: "гости",
           type: "dropdown-guests",
           selectionText: "Сколько гостей",
-          expMenuHidden: "true",
           formPart: "true",
         })
 
