@@ -1,0 +1,1653 @@
+{
+  "rooms": [
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+
+
+    {
+      "number": "856",
+      "price": "7 300",
+      "starsRate": "5",
+      "feedbacks": "19",
+      "photoName": "room-card-856.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "840",
+      "price": 9900,
+      "starsRate": 4,
+      "feedbacks": 65,
+      "photoName": "room-card-840.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "888",
+      "price": 9900,
+      "starsRate": 5,
+      "feedbacks": 145,
+      "photoName": "room-card-888.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "740",
+      "price": "6 600",
+      "starsRate": "4",
+      "feedbacks": "44",
+      "photoName": "room-card-740.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "980",
+      "price": "8 500",
+      "starsRate": "3",
+      "feedbacks": "35",
+      "photoName": "room-card-980.jpg",
+      "status": "Люкс",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "982",
+      "price": "5 800",
+      "starsRate": "3",
+      "feedbacks": "56",
+      "photoName": "room-card-982.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "666",
+      "price": "5 000",
+      "starsRate": "5",
+      "feedbacks": "25",
+      "photoName": "room-card-666.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "450",
+      "price": "5 300",
+      "starsRate": "4",
+      "feedbacks": "39",
+      "photoName": "room-card-450.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "678",
+      "price": "5 500",
+      "starsRate": "5",
+      "feedbacks": "45",
+      "photoName": "room-card-678.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "444",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "15",
+      "photoName": "room-card-444.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "350",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "77",
+      "photoName": "room-card-350.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    },
+    {
+      "number": "352",
+      "price": "5 000",
+      "starsRate": "3",
+      "feedbacks": "55",
+      "photoName": "room-card-352.jpg",
+      "status": "",
+      "link": "./room-details.html#"
+    }
+  ]
+}
+
