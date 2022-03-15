@@ -1,10 +1,13 @@
+include ../ui-kit/headers-and-footers/footer/footer
+include ../ui-kit/headers-and-footers/header/header
+
 block variables
 
 doctype html
-html(lang="ru")
+html(lang = "ru")
   head
-    include ./head-block.pug
-    +head-block()
+    include ./head.pug
+    +head()
 
     include ./favicon.pug
     +favicon()
@@ -12,14 +15,11 @@ html(lang="ru")
   body
 
     .wrapper
-
-      include ../ui-kit/headers-and-footers/headers/headers
       +header()
 
       .content
         block content
 
-      include ../ui-kit/headers-and-footers/footers/footers
       +footer()
 
       block script

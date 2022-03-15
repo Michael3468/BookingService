@@ -1,21 +1,29 @@
-mixin icon-text-list(params)
+mixin icon-text-list(params = {})
+  -
+    const {
+      iconName = "insert_emoticon",
+      caption = "Комфорт",
+      text = "Шумопоглощающие стены",
+    } = params
+
   .icon-text-list
-    .icon-text-list__icon.material-icons #{params.iconName}
-    .icon-text-list__text-block
-      h3.icon-text-list__caption= params.caption
-      p.icon-text-list__text= params.text
+    .icon-text-list__icon #{iconName}
+    .icon-text-list__content
+      h3.icon-text-list__caption= caption
+      p.icon-text-list__text= text
 
 
 //- examples
+//- +icon-text-list()
 
-//- +icon-text-list({iconName : "insert_emoticon",
-//-                   caption:  "Комфорт",
-//-                   text:     "Шумопоглощающие стены"})
+//- +icon-text-list({
+//-   iconName: "location_city",
+//-   caption: "Удобство",
+//-   text: "Окно в каждой из спален",
+//- })
 
-//- +icon-text-list({iconName : "location_city",
-//-                   caption:  "Удобство",
-//-                   text:     "Окно в каждой из спален"})
-
-//- +icon-text-list({iconName : "whatshot",
-//-                   caption:  "Уют",
-//-                   text:     "Номер оснащен камином"})
+//- +icon-text-list({
+//-   iconName: "whatshot",
+//-   caption: "Уют",
+//-   text: "Номер оснащен камином",
+//- })

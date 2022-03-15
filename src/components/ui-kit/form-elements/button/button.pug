@@ -1,0 +1,36 @@
+mixin button(params = {})
+  -
+    const {
+      link = 'change_me',
+      mod = ["with_arrow", "block"],
+      value = 'Click me',
+      type = '',
+      tabindex = '0',
+    } = params
+
+  - classes = ''
+  if (mod)
+    each item in mod
+      - classes += ` button_${item}`
+
+  if (type)
+    button.button.js-button(
+      tabindex = tIndex
+      onclick = `location.href = '${link}'`
+      class = `${classes}`
+      type = type
+    )= value
+  else
+    button.button.js-button(
+      tabindex = tIndex
+      onclick = `location.href = '${link}'`
+      class = `${classes}`
+    )= value
+
+//- Buttons examples
+//- +button({ value: "Забронировать" })
+//- +button({ link: "./registration.html", mod: ["bordered"], value: "Создать" })
+//- +button({ value: "Зарегистрироваться", type: "submit" })
+//- +button({ link: "./sign-in.html", mod: ["bordered"], value: "Войти" })
+//- +button({ mod: ["bordered", "hover"] })
+//- +button({ link: "./sign-in.html", mod: ["bordered", "small"], value: "Войти", tabindex: 10 })

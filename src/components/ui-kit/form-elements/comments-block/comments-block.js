@@ -1,1 +1,0 @@
-import './comments-block.scss';

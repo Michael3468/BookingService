@@ -1,11 +1,30 @@
-mixin slick-carousel(params)
-  .slick-picture-block.js-slick-picture-block
-    //- data-lazy для загрузки по мере необходимости 
-    .slick__item
-      img.slick__item_picture(src="./assets/img/"+params.photoName, loading="lazy", alt="фото номера")
-    .slick__item
-      img.slick__item_picture(src="./assets/img/"+params.photoName, loading="lazy", alt="фото номера")
-    .slick__item
-      img.slick__item_picture(src="./assets/img/"+params.photoName, loading="lazy", alt="фото номера")
-    .slick__item
-      img.slick__item_picture(src="./assets/img/"+params.photoName, loading="lazy", alt="фото номера")
+mixin slick-carousel(params = {})
+  -
+    const {
+      photoName = ''
+    } = params
+
+  .slick-picture.js-slick-picture
+    img.slick-item_picture(
+      src = `./assets/img/${photoName}`,
+      loading = "lazy",
+      alt = "фото номера",
+    )
+
+    img.slick-item_picture(
+      src = `./assets/img/${photoName}`,
+      loading = "lazy",
+      alt = "фото номера",
+    )
+
+    img.slick-item_picture(
+      src = `./assets/img/${photoName}`,
+      loading = "lazy",
+      alt = "фото номера",
+    )
+
+    img.slick-item-picture(
+      src = `./assets/img/${photoName}`,
+      loading = "lazy",
+      alt = "фото номера",
+    )

@@ -1,0 +1,98 @@
+include ../../logo/logo.pug
+include ../../form-elements/socials/socials.pug
+include ../../form-elements/text-field/text-field
+
+mixin footer(params = {})
+  -
+    const {
+      footerType = ''
+    } = params
+
+  - copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
+
+  if footerType != "mobile"
+    footer.footer
+      .footer__container
+        .footer__grid-layout
+          .footer__grid-layout-logo
+            +logo({ type: 'footer' })
+
+            p.footer__logo-text
+              | Бронирование номеров в лучшем отеле 2019 года по версии
+              | ассоциации «Отельные взгляды»
+
+          .footer__grid-layout-col
+            h3 Навигация
+            ul.footer-nav
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") О нас
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Новости
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Служба поддержки
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Услуги
+
+          .footer__grid-layout-col
+            h3 О нас
+            ul.footer-nav
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") О сервисе
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Наша команда
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Вакансии
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Инвесторы
+
+          .footer__grid-layout-col
+            h3 Служба поддержки
+            ul.footer-nav
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Соглашения
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Сообщества
+
+              li.footer-nav__item
+                a.footer-nav__link(href = "change_me" tabindex = "0") Связь с нами
+
+          .footer__grid-layout-form
+            h3 Подписка
+            .footer-nav
+              p.footer-nav__text Получайте специальные предложения и новости сервиса
+              form.js-subscription-form(action = '#change-me')
+                +text-field({
+                  inpType: "email",
+                  inpName: "email",
+                  inpPlaceholder: "Email",
+                  isArrow: "true",
+                })
+
+    .sub-footer
+      .sub-footer__container
+        .sub-footer__copyright
+          p #{copyrightText}
+
+        +socials()
+
+  //- mobile footer
+  else
+    .footer.footer__mob
+      .footer__container
+        .footer__grid-layout
+          .footer__grid-layout-logo.footer__grid-layout-logo_mob
+            +logo({ type: 'footer' })
+
+    .sub-footer.sub-footer__mob
+      .sub-footer__container.sub-footer__container_mob
+        .sub-footer__copyright
+          p #{copyrightText}
+
+        +socials({ mobile: 'true' })

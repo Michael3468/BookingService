@@ -1,51 +1,61 @@
-mixin booking(params)
-  .booking.cards_border
+include ./__caption/booking__caption
+include ../../../ui-kit/form-elements/button/button
+include ../../../ui-kit/form-elements/dropdown/dropdown
+include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
 
-    form.js-booking-form(action="#change-me")
-      include ./__caption/booking__caption
-      +booking-caption({roomNumber:  "888",
-                        roomStatus:  "Люкс",
-                        roomPrice:   params.roomPrice,
-                        fontSize:    'booking-caption',
-                        captionType: "booking",})
+mixin booking(params = {})
+  -
+    const {
+      roomPrice = '9 990₽',
+      daysPriceText = ' x 4 суток',
+      servicesPriceText = 'Сбор за услуги: скидка 2 179₽',
+      additionalServicesPriceText = 'Сбор за дополнительные услуги',
+      daysPriceValue = '39\u00A0960₽',
+      servicesPriceValue = '0₽',
+      additionalServicesPriceValue = '300₽',
+      resultText = 'Итого',
+      resultSum = '38\u00A0081₽'
+    } = params
+
+  .booking
+    form.js-booking-form(action = "#change-me")
+      +booking-caption({
+        roomNumber: "888",
+        roomStatus: "Люкс",
+        roomPrice: roomPrice,
+        captionType: "booking",
+      })
 
       .booking__date-dropdown-margin
-        include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
-        +dropdown-date({startDateCaption: "прибытие",
-                        endDateCaption:   "выезд",
-                        startDefaultDate: "19.08.2019",
-                        endDefaultDate:   "23.08.2019",
-                        })
+        +dropdown-date()
 
-      include ../../../ui-kit/form-elements/dropdown/dropdown
-      +dropdown({ leftCaption:   "гости",
-                  type:          "dropdown-guests",
-                  selectionText: "3 гостя",
-                  expMenuHidden: "true",
-                  formPart:      "true",
-                })
+      +dropdown({
+        type: "dropdown-guests",
+        selectionText: "3 гостя",
+        formPart: "true",
+      })
 
-      .booking__options-block
-
+      .booking__options
         .booking__options_left
-          .booking__options-item_block
-            p.booking__options-item_text=params.roomPrice + params.daysPriceText
-          .booking__options-item_block
-            p.booking__options-item_text=params.servicesPriceText
+          .booking__options-item
+            p.booking__options-item-text= `${roomPrice} ${daysPriceText}`
+
+          .booking__options-item
+            p.booking__options-item-text= servicesPriceText
             .booking__options-info-icon
-          .booking__options-item_block
-            p.booking__options-item_text=params.additionalServicesPriceText
+
+          .booking__options-item
+            p.booking__options-item-text= additionalServicesPriceText
             .booking__options-info-icon
 
         .booking__options_right
-          p.booking__options-item_text=params.daysPriceValue
-          p.booking__options-item_text=params.servicesPriceValue
-          p.booking__options-item_text=params.additionalServicesPriceValue
+          p.booking__options-item-text= daysPriceValue
+          p.booking__options-item-text= servicesPriceValue
+          p.booking__options-item-text= additionalServicesPriceValue
 
       .booking__options-result
-        p.booking__options-result_text=params.resultText
-        .booking__options-result_line
-        p.booking__options-result_sum= params.resultSum
+        p.booking__options-result-text= resultText
+        .booking__options-result-line
+        p.booking__options-result-sum= resultSum
 
-      include ../../../ui-kit/form-elements/buttons/buttons
-      +button({mod: ["with_arrow","block"], value: "Забронировать", class: 'js-booking-submit-button'})
+      +button({ value: "Забронировать" })

@@ -1,0 +1,43 @@
+include ../like-button/like-button
+
+mixin comments(params = {})
+  -
+    const {
+      imageName = '',
+      userName = '',
+      commentDate = '',
+      feedbackText = '',
+      likeBtnChecked = '',
+      likeBtnText = '0',
+    } = params
+
+  .comments
+    .comments__user
+      img.comments__user-photo(
+        src = `./assets/img/${imageName}`,
+        alt = "avatar",
+        loading = "lazy",
+      )
+
+      .comments__user-info
+        .comments__user-name= userName
+        .comments__comment-date= commentDate
+
+    .comments__feedback
+      .comments__feedback-like
+        +like-button({
+          likeBtnChecked: likeBtnChecked,
+          likeBtnText: likeBtnText,
+        })
+      .comments__feedback-text= feedbackText
+
+
+//- example
+//- +comments({
+//-   imageName: "avatar.jpg",
+//-   userName: "Мурад Сарафанов",
+//-   commentDate: "5 дней назад",
+//-   feedbackText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+//-   likeBtnChecked: "checked",
+//-   likeBtnText: "12",
+//- })

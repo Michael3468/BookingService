@@ -6,7 +6,7 @@
     margin-bottom: $inputCapMarBottom;
   }
 
-  &__input_block {
+  &__input-item {
     position: relative;
   }
 
@@ -18,17 +18,25 @@
   }
 
   &__input {
+    position: relative;
+    z-index: 3;
     padding: rem(12) rem(10) rem(12) rem(15);
+    background: transparent;
     cursor: pointer;
+
+    @include input-style;
 
     &::placeholder {
       opacity: 1;
     }
 
-    &_arrow {
+    &-arrow {
       position: absolute;
       top: rem(10);
       right: rem(10);
+      color: $DarkShade50;
+
+      @include material-icons;
     }
 
     &:focus {

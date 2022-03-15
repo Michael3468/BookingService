@@ -5,10 +5,11 @@
   display: flex;
   flex-direction: row;
   margin-bottom: rem(19);
-  border-bottom: rem(1) solid $DarkShade25;
+  border-bottom: rem(1) solid $DarkShade10;
 
   &:last-child {
     margin-bottom: 0;
+    border-bottom: transparent;
   }
 
   &__wrapper {
@@ -17,14 +18,15 @@
   }
 
   &__icon {
+    @include material-icons;
+
+    color: transparent;
     font-size: rem(48);
     background: $primaryGradient;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
-  //- text-block
-  &__text-block {
+  &__content {
     margin-left: rem(10);
     color: $DarkShade75;
     font-size: rem(14);
@@ -44,5 +46,4 @@
     margin-bottom: rem(21);
     font-weight: normal;
   }
-  //- text-block end
 }

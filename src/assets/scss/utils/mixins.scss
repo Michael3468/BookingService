@@ -1,4 +1,4 @@
-//convert px to rem
+// convert px to rem
 @function rem($pixels, $content: $mainFontSize) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
@@ -26,5 +26,52 @@
 
   @media screen and (max-width: $phoneWidth) {
     padding: 0 $phoneWidthMargin;
+  }
+}
+
+@mixin card-max-width {
+  max-width: rem(380);
+}
+
+@mixin input-style {
+  width: 100%;
+  font-family: $secondFont;
+  border: rem(1) solid $DarkShade25;
+  border-radius: $BorderRadius;
+}
+
+@mixin material-icons {
+  display: inline-block;
+  font-weight: normal;
+  font-size: rem(24);  /* Preferred icon size 24px */
+  font-family: 'Material Icons', sans-serif;
+  font-style: normal;
+  line-height: 1;
+  direction: ltr;
+  letter-spacing: normal;
+  white-space: nowrap;
+  text-transform: none;
+  vertical-align: middle;
+  word-wrap: normal;
+  cursor: pointer;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@mixin gradient-icon {
+  color: transparent;
+  background: $primaryGradient;
+  background-clip: text;
+}
+
+@mixin like-hover {
+  border-color: $DarkShade50;
+
+  &::placeholder {
+    color: $DarkShade75;
   }
 }

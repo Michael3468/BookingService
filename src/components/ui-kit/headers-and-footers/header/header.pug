@@ -1,0 +1,82 @@
+include ../../logo/logo.pug
+include ../../form-elements/button/button.pug
+
+mixin header(params = {})
+  -
+    const {
+      loginStatus = ''
+    } = params
+
+  header.header
+    .header__container.header__container_mob
+      .header__burger-logo
+        +logo({ type: 'header' })
+
+        .header__burger.js-header-burger menu
+
+      //- navigation menu
+      //- hidden checkbox for burger label
+      nav.header__nav.js-header__nav.hidden
+        ul.header__nav-links
+          li.header__nav-li
+            a.header__nav-link.header__nav-link_active(
+              href = "change-me"
+              tabindex = "1"
+            ) О нас
+
+          //- css dropdown
+          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(
+            tabindex = "2"
+          ) Услуги
+            //- used material icons font
+            span.header__nav-expand-more expand_more
+            .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
+              a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-1
+              a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-2
+              a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-3
+          //- css dropdown end
+
+          li.header__nav-li
+            a.header__nav-link(href = "change-me" tabindex = "3") Вакансии
+
+          li.header__nav-li
+            a.header__nav-link(href = "change-me" tabindex = "4") Новости
+
+          //- css dropdown
+          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(
+            tabindex = "5"
+          ) Соглашения
+            //- used material icons font
+            span.header__nav-expand-more expand_more
+            .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
+              a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-1
+              a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-2
+              a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-3
+          //- css dropdown end
+
+        //- authentification block
+        .header__authentification
+          if loginStatus == "authentificated"
+            .header__authentificated(tabindex = "6")
+              - userName = "Юлий Цезарь"
+              span.header__nav-li #{userName}
+          else
+            .header__not-authentificated
+              .header__auth-buttons
+                +button({
+                  link: "./sign-in.html",
+                  mod: ["bordered", "small"],
+                  value: "Войти",
+                  tabindex: 10,
+                })
+
+              .header__auth-buttons
+                +button({
+                  link: "./registration.html",
+                  mod: ["small"],
+                  value: "Зарегистрироваться",
+                  tabindex: 11,
+                })
+
+        //- authentification block end
+      //- navigation menu end

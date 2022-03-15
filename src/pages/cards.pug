@@ -1,62 +1,55 @@
 extends ../components/layouts/main
 
+include ../components/ui-kit/cards/booking/booking
+include ../components/ui-kit/cards/date-picker/date-picker
+include ../components/ui-kit/cards/login/login
+include ../components/ui-kit/cards/registration/registration
+include ../components/ui-kit/cards/room-card/room-card
+include ../components/ui-kit/cards/room-search/room-search
+include ../components/ui-kit/logo/logo
+
 block variables
   - title = "FSD Cards";
   - description = "FSD education project | Cards page";
 
 block content
 
-  include ../components/ui-kit/logo/logo
-  .cards__container
+  +logo()
 
-    .cards__column-1
+  .cards-container
 
-      include ../components/ui-kit/cards/room-search/room-search
+    .cards-column-1
       +room-search()
 
-      .cards__registration
-        include ../components/ui-kit/cards/registration/registration
+      .cards-registration
         +registration()
 
-    .cards__column-2
+    .cards-column-2
+      +booking()
 
-      include ../components/ui-kit/cards/booking/booking
-      +booking({  roomPrice:                    "9 990₽",
-                  daysPriceText:                " x 4 суток",
-                  servicesPriceText:            "Сбор за услуги: скидка 2 179₽",
-                  additionalServicesPriceText:  "Сбор за дополнительные услуги",
-                  daysPriceValue:               "39\u00A0960₽",
-                  servicesPriceValue:           "0₽",
-                  additionalServicesPriceValue: "300₽",
-                  resultText:                   "Итого",
-                  resultSum:                    `38\u00A0081₽`})
-
-      .cards__login
-        include ../components/ui-kit/cards/login/login
+      .cards-login
         +login()
 
 
-    .cards__column-3
-
-      include ../components/ui-kit/cards/date-picker/date-picker
+    .cards-column-3
       +date-picker()
 
-      .cards__room-card
-        include ../components/ui-kit/cards/room-card/room-card
-        +room-card({  number:    "888",
-                      status:    "Люкс",
-                      price:     "9 900₽",
-                      photoName: "room-card-888.jpg",
-                      starsRate: "5",
-                      feedbacks: "145",
-                    })
+      .cards-room-card
+        +room-card({
+          number: "888",
+          status: "Люкс",
+          price: "9 900",
+          photoName: "room-card-888.jpg",
+          starsRate: "5",
+          feedbacks: "145",
+        })
 
-      .cards__room-card
-        include ../components/ui-kit/cards/room-card/room-card
-        +room-card({  number:    "840",
-                      status:    "Люкс",
-                      price:     "9 900₽",
-                      photoName: "room-card-840.jpg",
-                      starsRate: "4",
-                      feedbacks: "65",
-                    })
+      .cards-room-card
+        +room-card({
+          number: "840",
+          status: "Люкс",
+          price: "9 900",
+          photoName: "room-card-840.jpg",
+          starsRate: "4",
+          feedbacks: "65",
+        })

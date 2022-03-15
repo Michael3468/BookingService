@@ -1,53 +1,77 @@
-mixin checkbox-buttons(params)
-  - visibility = params.hidden === "true" ? "hidden" : ""
-  - rotate = params.rotate === "true" ? "checkbox-buttons__expandable-list__expand-more-rotate" : ""
+mixin checkbox-buttons(params = {})
+  -
+    const {
+      caption = 'expandable checkbox list',
+      leftCaption = '',
+      inpId = '',
+      inpName = '',
+      hidden = 'false',
+      items = [
+        { value: "breakfast", label: "Завтрак" },
+        { value: "table", label: "Письменный стол" },
+        { value: "chair", label: "Стул для кормления" },
+        { value: "bed", label: "Кроватка" },
+        { value: "TV", label: "Телевизор" },
+        { value: "shampoo", label: "Шампунь" },
+      ]
+    } = params
 
-  if (params.showCaption == "true")
-    .checkbox-buttons
-      h3.checkbox-buttons__caption= params.leftCaption
-  else
-    .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(tabindex="0")
-      .checkbox-buttons__expandable-list__caption
-        h3.checkbox-buttons__expandable-list__text= params.caption
-        .checkbox-buttons__expandable-list__expand-more.material-icons(class= rotate) expand_more
+  - visibility = hidden === "true" ? "hidden" : ""
+  - rotateClass = hidden === "false" ? "checkbox-buttons__expandable-list-expand-more-rotate" : ""
 
-  .checkbox-buttons__block(class= visibility)
-    each val, index in params.inpText
-      .checkbox-buttons__input
-        input.custom-checkbox.js-custom-checkbox(tabindex="-1" type="checkbox", checked=params.inpStatus[index], id= params.inpId + index, name= params.inpName[index], value= params.inpValue[index])
-        label.checkbox-buttons__text.js-checkbox-buttons__text(tabindex="0" for= params.inpId + index) #{val}
+  .checkbox-buttons
+    if (leftCaption !== "")
+        h3.checkbox-buttons__caption= leftCaption
+    else
+      .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
+        tabindex = "0"
+      )
+        .checkbox-buttons__expandable-list-caption
+          h3.checkbox-buttons__expandable-list-text= caption
+          .checkbox-buttons__expandable-list-expand-more(
+            class = rotateClass
+          ) expand_more
 
+    .checkbox-buttons-items(class = visibility)
+      each item, index in items
+        .checkbox-buttons-input
+          input.custom-checkbox.js-custom-checkbox(
+            tabindex = "-1"
+            type = "checkbox",
+            checked = item.isChecked
+            id = `inpId-${index}`,
+            name = inpName,
+            value = item.value,
+          )
+          label.checkbox-buttons-text.js-checkbox-buttons-text(
+            tabindex = "0"
+            for = `inpId-${index}`
+          ) #{item.label}
 
-//- example checkbox buttons only
+//- examples
 //- +checkbox-buttons({
-//-   leftCaption:  "checkbox buttons",
-//-   inpId:        "check-box-buttons",
-//-   inpStatus:    [ ,"checked","checked"],
-//-   inpName:      "check-box-name",
-//-   inpValue:     ["allow-smoke", "allow-pet",        "allow-guests"],
-//-   inpText:      ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"],
-//-  })
-
-
-//- example expandable checkbox list (default, not expanded)
-//- +checkbox-buttons({
-//-   caption:     "expandable checkbox list",
 //-   leftCaption: "checkbox buttons",
-//-   inpId:       "check-box-buttons-1",
-//-   hidden:      "true",
-//-   inpStatus:   [,,,,,,],
-//-   inpName:     "check-box-name-1",
-//-   inpValue:    ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-//-   inpText:     ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
+//-   inpId: "check-box-buttons",
+//-   inpName: "check-box-name",
+//-   items: [
+//-     { value: "allow-smoke", label: "Можно курить" },
+//-     { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+//-     {
+//-       value: "allow guests",
+//-       label: "Можно пригласить гостей (до 10 человек)",
+//-       isChecked: "true",
+//-     },
+//-   ]
 //- })
 
-
-//- example expandable checkbox list
 //- +checkbox-buttons({
-//-   caption:   "expandable checkbox list",
-//-   inpId:     "check-box-buttons-2",
-//-   inpStatus: [ ,"checked","checked"],
-//-   inpName:   "check-box-name-2",
-//-   inpValue:  ["breakfast", "table", "chair", "bed", "TV", "shampoo"],
-//-   inpText:   ["Завтрак","Письменный стол","Стул для кормления","Кроватка","Телевизор","Шампунь"],
+//-   inpId: "check-box-buttons-1",
+//-   inpName: "check-box-name-1",
+//-   hidden: "true"
+//- })
+
+//- +checkbox-buttons({
+//-   caption: "дополнительные удобства",
+//-   inpId: "check-box-buttons-1",
+//-   inpName: "check-box-name-1",
 //- })

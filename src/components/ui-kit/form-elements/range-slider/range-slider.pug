@@ -1,6 +1,18 @@
-mixin range-slider(params)
-  .range-slider__caption
-    h3.range-slider__caption-left= params.leftCaption
-    h3.range-slider__caption-right= params.rightCaption
+mixin range-slider(params = {})
+  -
+    const {
+      leftCaption = 'диапазон цены',
+      rightCaption = '5 000₽ - 10 000₽',
+    } = params
 
-  input.range-slider__input(type="text" class="js-range-slider" name="my_range" value="")
+  .range-slider
+    .range-slider__caption
+      h3.range-slider__caption_left= leftCaption
+      h3.range-slider__caption_right= rightCaption
+
+    input.range-slider__input(
+      type = "text"
+      class = "js-range-slider"
+      name = "my_range"
+      value = ""
+    )

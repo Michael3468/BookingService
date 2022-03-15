@@ -1,19 +1,36 @@
-mixin radio-buttons(params)
-  .radio-buttons
-    if (params.leftCaption)
-      h3.radio-buttons__caption= params.leftCaption
-    .radio-buttons__block
-      each val, index in params.inpText
-        p.radio-buttons__text
-          input.radio-buttons__input(id= params.inpId + index, type="radio", name= params.radioButtonName, value= params.inpName[index], checked= params.inpStatus[index])
-          label.radio-buttons__label(for= params.inpId + index) #{val}
+mixin radio-buttons(params = {})
 
-//- example
+  -
+    const {
+      leftCaption = "",
+      name = "gender",
+      items = [
+        { value: 'Мужчина', isChecked: 'true' },
+        { value: 'Женщина' }
+      ],
+    } = params
+
+  .radio-buttons
+    if (leftCaption)
+      h3.radio-buttons__caption= leftCaption
+
+    .radio-buttons__items
+      each item, index in items
+        p.radio-buttons__text
+          input.radio-buttons__input(
+            id = `${name}-${index}`,
+            type = "radio",
+            name = name,
+            value = item.value,
+            checked = item.isChecked,
+          )
+          label.radio-buttons__label(for = `${name}-${index}`) #{item.value}
+
 //- +radio-buttons({
-//-   leftCaption:     "radio buttons",
-//-   radioButtonName: "radio-button",
-//-   inpName:         ["man", "woman"],
-//-   inpText:         ["Мужчина","Женщина"],
-//-   inpStatus:       ["checked",],
-//-   inpId:           "radio-button-id-name-",
+//-   leftCaption: "Radio Buttons Name",
+//-   name: "input-name",
+//-   items: [
+//-     { value: 'value1', isChecked: 'true' },
+//-     { value: 'value2' }
+//-   ]
 //- })

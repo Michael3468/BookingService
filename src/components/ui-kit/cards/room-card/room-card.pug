@@ -1,36 +1,53 @@
-mixin room-card(params)
+include ./__feedbacks/__feedbacks
+include ./slick-carousel/slick-carousel
+include ../booking/__caption/booking__caption
+include ../../form-elements/rate-button/rate-button
+
+mixin room-card(params = {})
+  -
+    const {
+      number = '',
+      status = '',
+      price = '',
+      photoName = '',
+      starsRate = '',
+      feedbacks = '',
+      link = "change-me"
+    } = params
+
   .room-card
     .room-card__picture-container
-      include ./slick-carousel/slick-carousel
-      +slick-carousel({photoName : params.photoName})
+      +slick-carousel({
+        photoName: photoName,
+      })
 
-    include ../booking/__caption/booking__caption
     .room-card__number-price
-      +booking-caption({  roomNumber:    params.number,
-                          roomStatus:    params.status,
-                          roomPrice:     params.price,
-                          fontSize:     "room-card-caption",
-                          captionType:  "room-card",
-                      })
+      +booking-caption({
+        roomNumber: number,
+        roomStatus: status,
+        roomPrice: `${price}₽`,
+        link: link
+      })
 
-    .room-card__feedback-block
-      include ../../form-elements/rate-button/rate-button
-      +rate-button({rateBtnName: `rateBtnName-${params.number}`,
-                    rateBtnId:   `rateBtnId-${params.number}-`,
-                    starsCount:  params.starsRate})
+    .room-card__feedback
+      +rate-button({
+        rateBtnName: `rateBtnName-${number}`,
+        rateBtnId: `rateBtnId-${number}-`,
+        starsCount: starsRate,
+      })
 
-      include __feedbacks/__feedbacks
       +feedbacks({
-                  number: params.feedbacks,
-                  text:   "Отзывов",
-                })
+        number: feedbacks,
+        text: "Отзывов",
+      })
 
 
 //- example
-//- +room-card({  number:     room.number,
-//-               status:     room.luxStatus,
-//-               price:      `${room.price}₽`,
-//-               photoName:  `room-card-${room.number}.jpg`,
-//-               starsRate:  room.starsRate,
-//-               feedbacks:  room.feedbacks,
-//-           })
+//- +room-card({
+//-   number: room.number,
+//-   status: room.luxStatus,
+//-   price: `${room.price}₽`,
+//-   photoName: `room-card-${room.number}.jpg`,
+//-   starsRate: room.starsRate,
+//-   feedbacks: room.feedbacks,
+//- })

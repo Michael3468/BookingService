@@ -1,0 +1,35 @@
+mixin color(params = {})
+  -
+    const {
+      opacity = '',
+      name = 'Dark Shade 100%',
+      color = ''
+    } = params
+
+  .color
+    if (opacity)
+      case opacity
+        when "1"
+          .color__sample.color__sample_opacity_100
+        when ".75"
+          .color__sample.color__sample_opacity_75
+        when ".50"
+          .color__sample.color__sample_opacity_50
+        when ".25"
+          .color__sample.color__sample_opacity_25
+        when ".05"
+          .color__sample.color__sample_opacity_05
+    else
+      case name
+        when "Purple"
+          .color__sample.color__sample_bg_purple
+        when "Green"
+          .color__sample.color__sample_bg_green
+
+    .color__description
+      h2.color__name= name
+
+      if (color)
+        p.color__code= color
+      else
+        p.color__code= "#1F2041"

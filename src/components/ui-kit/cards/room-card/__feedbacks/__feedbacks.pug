@@ -1,4 +1,10 @@
-mixin feedbacks(params)
+mixin feedbacks(params = {})
+  -
+    const {
+      number = '',
+      text = ''
+    } = params
+
   .feedbacks
-    p.feedbacks__number=params.number
-    p.feedbacks__text=params.text
+    p.feedbacks__number= number
+    p.feedbacks__text= text

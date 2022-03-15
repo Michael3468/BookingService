@@ -30,6 +30,8 @@ $padding: rem(1);
   }
 
   &-icon {
+    @include material-icons;
+
     position: absolute;
     display: flex;
     align-items: center;
@@ -48,7 +50,7 @@ $padding: rem(1);
   }
 }
 
-.like-button__input + .like-button-icon::after {
+.like-button-icon::after {
   color: $DarkShade25;
   font-family: 'Material Icons', sans-serif;
   content: 'favorite_border';
