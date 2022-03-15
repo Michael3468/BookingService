@@ -11,6 +11,7 @@ $('.js-filter-date-picker').datepicker({
     days: 'MM <i>yyyy</i>',
   },
   dateFormat: 'dd M',
+  minDate: new Date(),
 
   onSelect: (fd) => {
     $('.js-filter-date-dropdown__input').val(fd.toLowerCase());
@@ -20,7 +21,7 @@ $('.js-filter-date-picker').datepicker({
 function addApplyButton() {
   const $isPickerButtons = $('.js-filter-date-picker').find('.datepicker--buttons');
   if ($isPickerButtons) {
-    $isPickerButtons.append('<span class="datepicker--button" data-action="apply">Применить</span>');
+    $isPickerButtons.append('<span class = "datepicker--button" data-action = "apply">Применить</span>');
   }
 }
 

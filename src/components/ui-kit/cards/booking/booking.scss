@@ -1,29 +1,39 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
+@import '../card-background-border.scss';
 
 .booking {
   display: flex;
   flex-direction: column;
 
+  @include cards-border;
+
   &__date-dropdown-margin {
     margin-bottom: rem(21);
   }
 
-  &__options-block,
-  &__options-item_block {
+  &__options,
+  &__options-item {
     display: flex;
     flex-direction: row;
   }
 
-  &__options-block {
+  &__options {
     justify-content: space-between;
     margin-top: rem(20);
   }
 
-  &__options-item_block {
+  &__options-item {
     display: flex;
     justify-content: space-between;
     width: rem(239);
+
+    &-text {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: rem(14);
+      line-height: rem(20);
+    }
   }
 
   &__options-info-icon {
@@ -51,23 +61,16 @@
     margin-bottom: rem(22);
     font: bold rem(19) $secondFont;
 
-    &_line {
+    &-line {
       width: 100%;
       margin: 0 rem(3) rem(7);
       border-bottom: rem(1) dashed $DarkShade25;
     }
 
-    &_text,
-    &_sum {
+    &-text,
+    &-sum {
       color: $DarkShade100;
       font: bold rem(19) $secondFont;
     }
-  }
-
-  &__options-item_text {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: rem(14);
-    line-height: rem(20);
   }
 }

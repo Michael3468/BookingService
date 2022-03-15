@@ -9,7 +9,7 @@ $padding-small-lr: rem(20);
 $border-width: rem(2);
 $arrow-fsz: rem(24);
 $arrow-right: rem(11);
-$backgroundBtnColor: $default-color;
+$backgroundBtnColor: $defaultColor;
 
 .button {
   display: inline-block;
@@ -36,7 +36,8 @@ $backgroundBtnColor: $default-color;
     box-shadow: $TabindexShadow;
   }
 
-  &:hover {
+  &:hover,
+  &_hover {
     opacity: 0.5;
   }
 
@@ -46,7 +47,8 @@ $backgroundBtnColor: $default-color;
     color: $purple;
     background: $backgroundBtnColor;
 
-    &:hover {
+    &:hover,
+    &_hover {
       color: $DarkShade50;
       opacity: 1;
     }

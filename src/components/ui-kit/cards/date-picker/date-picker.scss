@@ -43,17 +43,19 @@
   display: none;
 }
 
-.datepicker--nav-action[data-action='prev']::after {
+.datepicker--nav-action[data-action = 'prev']::after {
   margin-left: rem(14);
   content: 'arrow_back';
 }
 
-.datepicker--nav-action[data-action='next']::after {
+.datepicker--nav-action[data-action = 'next']::after {
   margin-right: rem(14);
   content: 'arrow_forward';
 }
 
 .datepicker--nav-action::after {
+  @include material-icons;
+
   display: inline-block;
   align-self: start;
   width: rem(25);
@@ -61,23 +63,6 @@
   color: $purple;
   font-weight: normal;
   font-size: rem(24); /* Preferred icon size 24px */
-
-  //- .material-icons main.scss
-  font-family: 'Material Icons', sans-serif;
-  font-style: normal;
-  line-height: 1;
-  direction: ltr;
-  letter-spacing: normal;
-  white-space: nowrap;
-  text-transform: none;
-  vertical-align: middle;
-  word-wrap: normal;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-  //-
 }
 
 .datepicker--content {
@@ -167,7 +152,7 @@
 .datepicker--cell.-selected-,
 .datepicker--cell.-selected-.-focus-,
 .datepicker--cell.-selected-.-current- {
-  color: $default-color;
+  color: $defaultColor;
   background: $primaryGradient;
 }
 
@@ -180,7 +165,7 @@
 
 .datepicker--cell.-current-,
 .datepicker--cell.-current-.-in-range- {
-  color: $default-color;
+  color: $defaultColor;
   font-weight: bold;
   background: $secondaryGradient;
 }

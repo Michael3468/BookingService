@@ -36,9 +36,9 @@ export default class Dropdown {
   }
 
   _initListeners() {
-    const blockTop = this.elem.querySelector('.js-dropdown__block_top');
-    blockTop.addEventListener('keypress', (e) => {
-      this._handleBlockTopKeyPress(e);
+    const DropdownTop = this.elem.querySelector('.js-dropdown__body_top');
+    DropdownTop.addEventListener('keypress', (e) => {
+      this._handleDropdownTopKeyPress(e);
     });
   }
 
@@ -75,7 +75,7 @@ export default class Dropdown {
     }
   }
 
-  _handleBlockTopKeyPress(e) {
+  _handleDropdownTopKeyPress(e) {
     if (e.code === 'Enter') {
       this.showHide();
     }

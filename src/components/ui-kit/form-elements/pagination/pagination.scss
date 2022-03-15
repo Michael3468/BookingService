@@ -5,6 +5,7 @@
 $size: rem(40);
 
 .pagination {
+  display: flex;
   margin: 0 auto;
 }
 
@@ -84,7 +85,7 @@ $size: rem(40);
 }
 
 .paginationjs .paginationjs-pages li.active > a {
-  color: $default-color;
+  color: $defaultColor;
   font-weight: bold;
   background: $primaryGradient;
 }
@@ -92,7 +93,7 @@ $size: rem(40);
 .paginationjs-next::before,
 .paginationjs-prev::before {
   margin-left: rem(8);
-  color: $default-color;
+  color: $defaultColor;
   font-size: rem(22);
   font-family: 'Material Icons', sans-serif;
 }

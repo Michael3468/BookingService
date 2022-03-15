@@ -1,16 +1,20 @@
 extends ../components/layouts/main-header-footer
 
+include ../components/ui-kit/cards/login/login
+
 block variables
   - title = "FSD Sign in";
   - description = "FSD education project | Sign in";
 
 block content
 
-  .sign-in__block
-    img(src="./assets/img/sign-in-bg.jpg", alt="sign in page background image", loading="lazy").sign-in__background-image
+  .sign-in
+    img(
+      src = "./assets/img/sign-in-bg.jpg",
+      alt = "sign in page background image",
+      loading = "lazy",
+    ).sign-in__background-image
 
     .sign-in__container
-
-      .sign-in-card
-        include ../components/ui-kit/cards/login/login
+      .sign-in__card
         +login()

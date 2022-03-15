@@ -1,72 +1,156 @@
-mixin dropdown(params)
-  - expMenuHidden = params.expMenuHidden === 'true' ? 'dropdown__menu_hidden' : ''
+mixin dropdown-menu(items)
+  each item, key in items
+    .dropdown__menu-option(class = key)
+      p.dropdown__item= item.name
+      .dropdown__item-controls.js-dropdown__item-controls
+        button.dropdown__button-decrement.js-dropdown__button-decrement(
+          tabindex = "0"
+          class = item.class
+          data-dd-action = "decrement"
+          type = "button"
+        )
 
-  .dropdown(class=`js-${params.type}`)
+        input.dropdown__counter.js-dropdown__counter(
+          tabindex = "-1"
+          name = item.vName
+          value = item.counter || 0
+        )
+
+        button.dropdown__button-increment(
+          tabindex = "0"
+          data-dd-action = "increment"
+          type = "button"
+        )
+
+mixin dropdown(params = {})
+  -
+    const {
+      leftCaption = "гости",
+      rightCaption = "",
+      type = "dropdown-guests",
+      idPostfix = "-changed-example",
+      selectionText = "3 гостя",
+      expMenuHidden = "true",
+      formPart = "false",
+      cleanButtonVisible = "true",
+    } = params
+
+  - menuHidden = expMenuHidden === 'true' ? 'dropdown__menu_hidden' : ''
+
+  .dropdown(class = `js-${type}`)
     .dropdown__caption
-      h3.dropdown__caption-left= params.leftCaption
-      if (params.rightCaption)
-        h3.dropdown__caption-right= params.rightCaption
-    .dropdown__block.js-dropdown__block
-      .dropdown__block_top.js-dropdown__block_top(data-dd-action="showHide" tabindex="0")
-        p.dropdown__selection_text.js-dropdown__selection-text(data-dd-action="showHide")= params.selectionText
-        .dropdown__expand-button.material-icons(data-dd-action="showHide") expand_more
+      h3.dropdown__caption_left= leftCaption
+      if (rightCaption)
+        h3.dropdown__caption_right= rightCaption
 
-      .dropdown__menu.js-dropdown__menu(class= expMenuHidden)
+    .dropdown__body.js-dropdown__body
+      .dropdown__body_top.js-dropdown__body_top(
+        data-dd-action = "showHide"
+        tabindex = "0"
+      )
+        p.dropdown__selection-text.js-dropdown__selection-text(
+          data-dd-action = "showHide"
+        )= selectionText
 
-        if (params.type == "dropdown-options")
-          - items = { "item1": {valName : "Спальни", vName: "bedrooms"},"item2": {valName : "Кровати", vName: "beds"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
-          if (params.idPostfix == "-changed-example")
-            - items = { "item1": {valName : "Спальни", vName: "bedrooms", valCounter: "2", valClass: "dark"},"item2": {valName : "Кровати", vName: "beds", valCounter: "2", valClass: "dark"},"item3": {valName : "Ванные комнаты", vName: "bathrooms"} };
+        .dropdown__expand-button(
+          data-dd-action = "showHide"
+        ) expand_more
 
-        if (params.type == "dropdown-guests")
-          - items = { "item1": {valName : "Взрослые", vName: "adults"},"item2": {valName : "Дети", vName: "childs"},"item3": {valName : "Младенцы", vName: "babies"} };
-          if (params.idPostfix == "-changed-example")
-            - items = { "item1": {valName : "Взрослые", vName: "adults", valCounter: "2", valClass: "dark"},"item2": {valName : "Дети", vName: "childs", valCounter: "1", valClass: "dark"},"item3": {valName : "Младенцы", vName: "babies"} };
+      .dropdown__menu.js-dropdown__menu(class = menuHidden)
 
-        //- form(action='change-me')
-        if (params.formPart === 'true')
-          each val, key in items
-            .dropdown__menu-option(class=key)
-              p.dropdown__item= val.valName
-              .dropdown__item-controls.js-dropdown__item-controls
-                button.dropdown__button-decrement.js-dropdown__button-decrement(tabindex="0" class=val.valClass data-dd-action="decrement" type="button")
-                input.dropdown__counter.js-dropdown__counter(tabindex="-1" name=val.vName value=val.valCounter || 0)
-                button.dropdown__button-increment(tabindex="0" data-dd-action="increment" type="button")
+        if (type == "dropdown-options")
+          -
+            items = {
+              "item1": { name: "Спальни", vName: "bedrooms" },
+              "item2": { name: "Кровати", vName: "beds" },
+              "item3": { name: "Ванные комнаты", vName: "bathrooms" },
+            };
+
+          if (idPostfix == "-changed-example")
+            -
+              items = {
+                "item1": { name: "Спальни", vName: "bedrooms", counter: "2", class: "dark" },
+                "item2": { name: "Кровати", vName: "beds", counter: "2", class: "dark" },
+                "item3": { name: "Ванные комнаты", vName: "bathrooms" },
+              };
+
+        if (type == "dropdown-guests")
+          -
+            items = {
+              "item1": { name: "Взрослые", vName: "adults" },
+              "item2": { name: "Дети", vName: "childs" },
+              "item3": { name: "Младенцы", vName: "babies" },
+            };
+
+          if (idPostfix == "-changed-example")
+            -
+              items = {
+                "item1": { name: "Взрослые", vName: "adults", counter: "2", class: "dark" },
+                "item2": { name: "Дети", vName: "childs", counter: "1", class: "dark" },
+                "item3": { name: "Младенцы", vName: "babies" },
+              };
+
+        //- form(action = 'change-me')
+        if (formPart === 'true')
+          +dropdown-menu(items)
         else
-          form(action='change-me')
-            each val, key in items
-              .dropdown__menu-option(class=key)
-                p.dropdown__item= val.valName
-                .dropdown__item-controls.js-dropdown__item-controls
-                  button.dropdown__button-decrement.js-dropdown__button-decrement(tabindex="0" class=val.valClass data-dd-action="decrement" type="button")
-                  input.dropdown__counter.js-dropdown__counter(tabindex="-1" name=val.vName value=val.valCounter || 0)
-                  button.dropdown__button-increment(tabindex="0" data-dd-action="increment" type="button")
+          form(action = 'change-me')
+            +dropdown-menu(items)
 
         //- dropdown buttons for dropdown-guests
-        if (params.type == "dropdown-guests")
+        if (type == "dropdown-guests")
           .dropdown-guests__buttons
-            if (params.cleanButtonVisible == "true")
+            if (cleanButtonVisible == "true")
               - cleanButtonClass = "dropdown-guests__button_clean_visible"
 
-            button.dropdown-guests__button_clean.js-dropdown-guests__button_clean(tabindex="0" class=cleanButtonClass data-dd-action="clean" type="button") очистить
-            button.dropdown-guests__button_apply.js-dropdown-guests__button_apply(tabindex="0" data-dd-action="apply" type="button") применить
+            button.dropdown-guests__button_clean.js-dropdown-guests__button_clean(
+              tabindex = "0"
+              class = cleanButtonClass
+              data-dd-action = "clean"
+              type = "button"
+            ) очистить
 
+            button.dropdown-guests__button_apply.js-dropdown-guests__button_apply(
+              tabindex = "0"
+              data-dd-action = "apply"
+              type = "button"
+            ) применить
 
 //- examples
-//- +dropdown({ leftCaption:   "dropdown",
-//-             rightCaption:  "default",
-//-             type:          "dropdown-options",
-//-             selectionText: "2 спальни, 2 кровати...",
-//-             expMenuHidden: "true",
-//-           })
+//- +dropdown({
+//-   type: "dropdown-guests",
+//-   selectionText: "3 гостя",
+//-   formPart: "true",
+//- })
 
-//- +dropdown({ leftCaption:   "dropdown",
-//-             type:          "dropdown-guests",
-//-             selectionText: "Сколько гостей",
-//-             expMenuHidden: "true",
-//-           })
+//- +dropdown({
+//-   leftCaption: "dropdown",
+//-   rightCaption: "default",
+//-   type: "dropdown-options",
+//-   selectionText: "2 спальни, 2 кровати...",
+//- })
 
-//- +dropdown({ leftCaption:   "dropdown",
-//-             type:          "dropdown-guests",
-//-             selectionText: "Сколько гостей",
-//-           })
+//- +dropdown({
+//-   leftCaption: "dropdown",
+//-   rightCaption: "expanded",
+//-   type: "dropdown-options",
+//-   idPostfix: "-changed-example",
+//-   selectionText: "2 спальни, 2 кровати...",
+//-   expMenuHidden: "false",
+//- })
+
+//- +dropdown({
+//-   leftCaption: "dropdown",
+//-   type: "dropdown-guests",
+//-   selectionText: "Сколько гостей",
+//-   expMenuHidden: "false",
+//- })
+
+//- +dropdown({
+//-   leftCaption: "dropdown",
+//-   type: "dropdown-guests",
+//-   idPostfix: "-changed-example",
+//-   selectionText: "3 гостя",
+//-   cleanButtonVisible: "true",
+//-   expMenuHidden: "false",
+//- })

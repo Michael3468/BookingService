@@ -2,6 +2,11 @@ import Inputmask from 'inputmask';
 
 import './masked-text-field.scss';
 
-const maskedDateField = document.querySelector('.js-masked-text-field__input');
-const inpMask = new Inputmask('99.99.9999', { placeholder: 'дд.мм.гггг' });
-inpMask.mask(maskedDateField);
+window.addEventListener('DOMContentLoaded', () => {
+  const maskedDateField = document.querySelector('.js-masked-text-field__input');
+  Inputmask({
+    "alias": "datetime",
+    "inputFormat": "dd.mm.yyyy",
+    "placeholder": 'дд.мм.гггг',
+  }).mask(maskedDateField);
+});

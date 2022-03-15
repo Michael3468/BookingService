@@ -1,23 +1,34 @@
-mixin login(params)
-  .login.cards_border
+include ../../../ui-kit/form-elements/button/button
+include ../../../ui-kit/form-elements/text-field/text-field
+
+mixin login()
+  .login
     h1.login__caption Войти
 
-    form.js-login-form(action="#change-me")
-      .login__inputs-block
-        include ../../../ui-kit/form-elements/text-field/text-field
-        +text-field({ inpType:        "email",
-                      inpName:        "email",
-                      inpPlaceholder: "Email",
-                    })
+    form.js-login-form(action = "#change-me")
+      .login__inputs
+        +text-field({
+          inpType: "email",
+          inpName: "email",
+          inpPlaceholder: "Email",
+        })
 
-        +text-field({ inpType:        "password",
-                      inpName:        "password",
-                      inpPlaceholder: "Пароль",
-                    })
+        +text-field({
+          inpType: "password",
+          inpName: "password",
+          inpPlaceholder: "Пароль",
+        })
 
-      include ../../../ui-kit/form-elements/buttons/buttons
-      +button({mod: ["with_arrow","block"], value: "Войти", type: "submit"})
+      +button({
+        mod: ["with_arrow", "block"],
+        value: "Войти",
+        type: "submit"
+      })
 
-    .login__create-login-block
+    .login__create-login
       p.login__create-login-text Нет аккаунта на Toxin?
-      +button({link: "registration.html", mod: ["bordered"], value: "Создать"})
+      +button({
+        link: "./registration.html",
+        mod: ["bordered"],
+        value: "Создать",
+      })

@@ -4,33 +4,33 @@
 .cards {
   background: $backgroundColor;
 
-  &__container {
+  &-container {
     @include container;
 
     margin-bottom: rem(140);
   }
 
-  &__column-1,
-  &__column-2 {
+  &-column-1,
+  &-column-2 {
     width: rem(380);
     margin-top: rem(12);
     margin-right: rem(40);
   }
 
-  &__column-3 {
+  &-column-3 {
     width: rem(320);
     margin-top: rem(12);
   }
 
-  &__registration {
+  &-registration {
     margin-top: rem(40);
   }
 
-  &__login {
+  &-login {
     margin-top: rem(40);
   }
 
-  &__room-card {
+  &-room-card {
     margin-top: rem(40);
   }
 }

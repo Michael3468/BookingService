@@ -6,38 +6,38 @@
   transform: rotateY(180deg);
 }
 
-.rate-button__inp {
+.rate-button-inp {
   display: none;
 }
 
-.rate-button__star {
+.rate-button-star {
   display: block;
+  color: transparent;
   font-size: rem(24);
   font-family: 'Material Icons';
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   background-clip: text;
   cursor: pointer;
-  -webkit-text-fill-color: transparent;
 }
 
-.rate-button__star::before {
+.rate-button-star::before {
   position: relative;
   content: 'star_border';
 }
 
-.rate-button__star::after {
+.rate-button-star::after {
   position: absolute;
   top: rem(0);
   display: block;
+  color: transparent;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   background-clip: text;
   opacity: 0;
   content: 'star';
-  -webkit-text-fill-color: transparent;
 }
 
-.rate-button__star:hover::after,
-.rate-button__star:hover ~ .rate-button__star::after,
-.rate-button__inp:checked ~ .rate-button__star::after {
+.rate-button-star:hover::after,
+.rate-button-star:hover ~ .rate-button-star::after,
+.rate-button-inp:checked ~ .rate-button-star::after {
   opacity: 1;
 }

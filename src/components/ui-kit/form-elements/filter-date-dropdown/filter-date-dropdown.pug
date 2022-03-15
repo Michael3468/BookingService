@@ -1,16 +1,26 @@
-mixin filter-date-dropdown(params)
+include ../filter-date-picker/filter-date-picker
+
+mixin filter-date-dropdown(params = {})
+  -
+    const {
+      leftCaption = "даты пребывания в отеле"
+    } = params
+
   .filter-date-dropdown.js-filter-date-dropdown
     .filter-date-dropdown__caption
-      h3= params.leftCaption
-    .filter-date-dropdown__input_block
-      input.filter-date-dropdown__input.js-filter-date-dropdown__input.input__style(tabindex="0" type="text" placeholder="Выберите даты" readonly)
-      .filter-date-dropdown__input_arrow.material-icons expand_more
+      h3= leftCaption
+    .filter-date-dropdown__input-item
+      input.filter-date-dropdown__input.js-filter-date-dropdown__input(
+        tabindex = "0"
+        type = "text"
+        placeholder = "Выберите даты"
+        readonly
+      )
+      .filter-date-dropdown__input-arrow expand_more
 
     //- dropdown datepicker from "dropdown-date.js"
     .dropdown-date__date-picker.js-dropdown-date__date-picker.filter-date-dropdown_hidden
-      include ../filter-date-picker/filter-date-picker
       +filter-date-picker()
 
-
 //- example
-//- +filter-date-dropdown({leftCaption : "filter date dropdown"})
+//- +filter-date-dropdown({ leftCaption: "filter date dropdown" })

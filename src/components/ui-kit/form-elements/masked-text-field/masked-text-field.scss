@@ -1,56 +1,33 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.masked-text-field__caption {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: $inputCapMarBottom;
-}
-
-.masked-text-field__caption-left {
-  display: flex;
-  justify-self: flex-start;
-}
-
-.masked-text-field__caption-right {
-  display: flex;
-  justify-content: flex-end;
-  color: $DarkShade50;
-  font-weight: normal;
-}
-
-//common input__style
-.input__style {
-  width: 100%;
-  font-family: $secondFont;
-  border: rem(1) solid $DarkShade25;
-  border-radius: $BorderRadius;
-}
-
-.masked-text-field__input {
-  padding: rem(13) rem(10) rem(12) rem(15);
-  color: $DarkShade75;
-  text-transform: uppercase;
-
-  &::placeholder {
-    color: $DarkShade25;
+.masked-text-field {
+  &__caption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: $inputCapMarBottom;
   }
 
-  &:hover {
-    border-color: $DarkShade50;
-
-    &::placeholder {
-      color: $DarkShade75;
-    }
+  &-left {
+    display: flex;
+    justify-self: flex-start;
   }
-}
 
-.like-hover {
-  border-color: $DarkShade50;
-
-  &::placeholder {
+  &__input {
+    padding: rem(13) rem(10) rem(12) rem(15);
     color: $DarkShade75;
+    text-transform: uppercase;
+  
+    @include input-style;
+  
+    &::placeholder {
+      color: $DarkShade25;
+    }
+  
+    &:hover {
+      @include like-hover;
+    }
   }
 }

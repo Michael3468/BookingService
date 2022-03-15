@@ -1,33 +1,32 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.room-details__images-block {
-  display: grid;
-  grid-template-columns: 68.125% 31.875%;
+.room-details-images {
+  display: flex;
+  flex: 2 1;
 
   @media screen and (max-width: $smTableWidth) {
-    grid-template-rows: auto 2fr;
-    grid-template-columns: 1fr;
+    flex-direction: column;
 
-    &_left {
+    &__left {
       width: 100%;
       margin-bottom: rem(1);
     }
 
-    &_right {
+    &__right {
       width: 100%;
       height: auto;
     }
 
-    &_middle-size {
+    &_size_middle {
       width: 100%;
       height: auto;
     }
   }
 
-  &_right {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+  &__right {
+    display: flex;
+    flex-direction: column;
   }
 
   &_big-size {
@@ -41,64 +40,86 @@
 
 //- room-details columns
 .room-details {
-  &__column-2 {
-    min-width: rem(380);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(80);
 
-    @media screen and (max-width: 1130px) {
-      margin-left: auto;
-      margin-right: auto;
+  @media screen and (max-width: $desktopWidth) {
+    column-gap: rem(50);
+  }
+
+  &-column-1 {
+    @media only screen and (max-width: 800px) {
+      order: 1;
     }
   }
 
-  &__container {
-    margin-top: rem(67);
-    margin-bottom: rem(62);
+  &-column-2 {
+    min-width: rem(380);
+
+    @media only screen and (max-width: 800px) {
+      order: -1;
+      max-width: 380px;
+      margin-right: auto;
+      margin-bottom: rem(30);
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 1130px) {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
-  // info about the room
-  &__caption {
+  &-container {
+    @include container;
+
+    margin-top: rem(67);
+    margin-bottom: rem(59);
+  }
+
+  &-flex-container {
+    display: flex;
+    gap: rem(60);
+
+    @media screen and (max-width: 1130px) {
+      flex-wrap: wrap-reverse;
+    }
+
+    @media only screen and (max-width: 800px) {
+      flex: 1 auto;
+      flex-direction: column;
+    }
+  }
+
+  &-description {
+    margin-bottom: rem(10);
+  }
+
+  &-caption {
+    margin-bottom: rem(21);
     font-family: $secondFont;
-    margin-bottom: rem(20);
 
     &_position {
       margin-left: rem(20);
     }
   }
 
-  &__icon-text-list {
+  &-icon-text-list {
     width: rem(280);
     margin-top: rem(20);
   }
-  // info about the room end
 
-  &__description {
-    margin-bottom: rem(10);
-  }
-
-  &__chart {
-    margin-bottom: rem(20);
+  &-chart {
     min-width: rem(310);
+    margin-bottom: rem(20);
   }
-
-  //- rules block
-  &__rules {
-    margin-top: rem(30);
-
-    &-block {
-      width: rem(255);
-    }
-  }
-
-  &__cancel-block {
-    max-width: rem(335);
-  }
-  //- rules block end
 
   //- visitors feedbacks
-  &__feedbacks {
+  &-feedbacks {
     margin-right: rem(10);
 
-    &-caption {
+    &__caption {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -109,7 +130,7 @@
     }
   }
 
-  &__comments-block {
+  &-comments {
     margin-bottom: rem(23);
 
     &:last-child {
@@ -117,59 +138,24 @@
     }
   }
   //- visitors feedbacks end
+
+  &-rules {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(30);
+    column-gap: rem(106);
+
+    &__left {
+      width: rem(255);
+    }
+
+    &__right {
+      max-width: rem(335);
+    }
+  }
 }
 //- room-details columns end
-.room-details__container {
-  @include container;
-}
 
-/* grid block */
-.room-details__flex-container {
-  display: flex;
-  gap: rem(60);
-
-  @media screen and (max-width: 1130px) {
-    flex-wrap: wrap-reverse;
-  }
-
-  @media only screen and (max-width: 800px) {
-    flex: 1 auto;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .room-details__column-1 {
-    order: 1;
-  }
-
-  .room-details__column-2 {
-    order: -1;
-    margin-bottom: rem(30);
-    max-width: 380px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.room-details__blocks {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: rem(80);
-
-  @media screen and (max-width: $desktopWidth) {
-    column-gap: rem(50);
-  }
-}
-
-.room-details__rules {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: rem(106);
-}
-
-/* grid block end */
-
-.booking.cards_border {
-  max-width: rem(380);
+.booking {
+  @include card-max-width;
 }

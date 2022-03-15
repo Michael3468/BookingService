@@ -1,35 +1,31 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
-@import '../logo/logo.scss';
+@import '../../logo/logo.scss';
 
 .header {
   display: flex;
   align-items: center;
   max-width: 1440px;
   height: rem(70);
-  background-color: $default-color;
+  background-color: $defaultColor;
+  box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 
   @media screen and (max-width: 1024px) {
-    &__auth-buttons-padding {
+    &__auth-buttons {
       padding: rem(10) 0;
     }
   }
 
   @mixin header__expand-menu {
-    display: -webkit-box;
+    display: block;
     flex-direction: row;
 
     @media screen and (max-width: 1024px) {
       display: flex;
       flex-direction: column;
       width: 100%;
-      background: $default-color;
+      background: $defaultColor;
     }
-  }
-
-  &_bg-color {
-    background: $default-color;
-    box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
   }
 
   &__container {
@@ -47,6 +43,8 @@
   }
 
   &__burger {
+    @include material-icons;
+
     display: none;
     color: $DarkShade50;
     font-size: rem(40);
@@ -90,6 +88,28 @@
       }
     }
 
+    &-links {
+      @include header__expand-menu;
+
+      display: flex;
+      justify-content: space-between;
+      width: rem(446);
+      line-height: rem(17);
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    &-li:hover {
+      color: $DarkShade75;
+      font-weight: bold;
+
+      @media screen and (max-width: 1024px) {
+        background: $menuHoverColor;
+      }
+    }
+
     &-link {
       display: flex;
       justify-content: center;
@@ -113,26 +133,8 @@
       }
     }
 
-    &-links {
-      @include header__expand-menu;
-
-      display: flex;
-      justify-content: space-between;
-      width: rem(446);
-      line-height: rem(17);
-
-      @media screen and (max-width: 1024px) {
-        width: 100%;
-      }
-    }
-
-    &-li:hover {
-      color: $DarkShade75;
-      font-weight: bold;
-
-      @media screen and (max-width: 1024px) {
-        background: $menu-hover-color;
-      }
+    &-expand-more {
+      @include material-icons;
     }
 
     &-dropdown {
@@ -142,8 +144,8 @@
       &-content {
         position: absolute;
         z-index: 20;
-        background: $menu-hover-color;
-        background-color: $default-color;
+        background: $menuHoverColor;
+        background-color: $defaultColor;
         box-shadow: 0 2px 3px black;
 
         @media screen and (max-width: 1024px) {
@@ -155,12 +157,12 @@
   }
   // nav end
 
-  &__authorization-block {
+  &__authentification {
     @include header__expand-menu;
   }
 
-  // authorization
-  &__authorized {
+  // authentification
+  &__authentificated {
     display: flex;
     justify-content: flex-end;
     width: rem(120);
@@ -184,7 +186,7 @@
     }
   }
 
-  &__notAuthorized {
+  &__not-authentificated {
     display: flex;
     justify-content: flex-end;
     margin-left: rem(21);
@@ -197,14 +199,14 @@
     }
   }
 
-  &__auth-buttons-padding:last-child {
+  &__auth-buttons:last-child {
     margin-left: rem(21);
 
     @media screen and (max-width: 1024px) {
       margin-left: 0;
     }
   }
-  // authorization end
+  // authentification end
 
   &__dropdown-link {
     display: inline-block;
@@ -212,13 +214,13 @@
     padding: 0 30px;
     color: $DarkShade75;
     font-weight: normal;
-    background: $default-color;
+    background: $defaultColor;
 
     &:focus,
     &:hover {
       font-weight: bold;
       text-shadow: $TabindexShadow;
-      background: $menu-hover-color;
+      background: $menuHoverColor;
     }
 
     @media screen and (max-width: 1024px) {

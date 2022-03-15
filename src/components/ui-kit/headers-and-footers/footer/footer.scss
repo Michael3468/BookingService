@@ -1,16 +1,16 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
-@import '../logo/logo.scss';
+@import '../../logo/logo.scss';
 
 .footer {
   display: flex;
   max-width: 1440px;
   height: rem(376);
-  padding-top: rem(102);
+  padding-top: rem(100);
   font-weight: normal;
   font-family: $secondFont;
   font-style: normal;
-  background-color: $default-color;
+  background-color: $defaultColor;
   border-top: rem(1) solid rgba(223, 222, 227, 1);
   border-bottom: rem(1) solid rgba(223, 222, 227, 1);
 
@@ -33,17 +33,14 @@
     @include logo;
   }
 
-  &__logo-p {
+  &__logo-text {
+    padding-top: rem(16);
     color: $DarkShade75;
     line-height: rem(24);
 
     @media screen and (max-width: $smDesktopWidth) {
       display: none;
     }
-  }
-
-  &__padding {
-    padding-top: rem(17);
   }
 
   &-nav {
@@ -93,17 +90,10 @@
   align-items: center;
   max-width: 1440px;
   height: rem(70);
-  background-color: $default-color;
+  background-color: $defaultColor;
 
   @media screen and (max-width: $smDesktopWidth) {
     align-items: flex-start;
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: rem(15);
-    }
 
     &__socials {
       margin-top: rem(17);
@@ -118,8 +108,22 @@
     height: rem(207);
   }
 
-  &__content {
+  &__container {
     justify-content: space-between;
+
+    @media screen and (max-width: $smDesktopWidth) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: rem(15);
+    }
+
+    &_mob {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: rem(15);
+    }
   }
 
   &__copyright {
@@ -131,19 +135,10 @@
     text-align: center;
   }
 
-  // mobile
   &__mob {
     align-items: flex-start;
     height: rem(207);
   }
-
-  &__content_mob {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: rem(15);
-  }
-  // mobile end
 }
 // sub-footer end
 

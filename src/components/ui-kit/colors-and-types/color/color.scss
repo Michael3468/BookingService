@@ -1,0 +1,74 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.color {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(20);
+
+  &__sample {
+    top: rem(145);
+    left: rem(150);
+    width: rem(70);
+    height: rem(70);
+    background-color: $DarkShade100;
+    border-radius: rem(6);
+
+    &_opacity {
+      &_100 {
+        opacity: 1;
+      }
+
+      &_75 {
+        opacity: 0.75;
+      }
+
+      &_50 {
+        opacity: 0.5;
+      }
+
+      &_25 {
+        opacity: 0.25;
+      }
+
+      &_05 {
+        opacity: 0.05;
+      }
+    }
+
+    &_bg {
+      &_purple {
+        background-color: $purple;
+      }
+
+      &_green {
+        background-color: $green;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: rem(8) 0 0 rem(40);
+    color: $DarkShade100;
+    font-weight: bold;
+    font-size: rem(19);
+    font-family: $mainFont;
+    line-height: rem(29);
+  }
+
+  &__name {
+    font-weight: bold;
+    letter-spacing: rem(1);
+  }
+
+  &__code {
+    margin-top: rem(4);
+    font-weight: normal;
+    font-size: rem(19);
+    font-family: $mainFont;
+    letter-spacing: rem(1);
+  }
+}

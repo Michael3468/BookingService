@@ -1,4 +1,4 @@
-import '../headers/headers';
-import '../footers/footers';
+import '../header/header';
+import '../footer/footer';
 
 import './headers-and-footers.scss';

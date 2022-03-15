@@ -1,3 +1,37 @@
-.toxin-logo
-  a(href="index.html")
-    img(src="./assets/img/logo.svg", alt="logo", loading="lazy")
+mixin logo(params = {})
+  -
+    const {
+      type = 'toxin',
+      label = 'true',
+    } = params
+
+  if (type === 'header')
+    - classPrefix = 'header__logo'
+
+  if (type === 'footer')
+    -classPrefix = 'footer__logo'
+
+  if (type === 'toxin')
+    .toxin-logo
+      a(href = "index.html")
+        img(src = "./assets/img/logo.svg", alt = "logo", loading = "lazy")
+
+  else
+    div(class = `${classPrefix}`)
+      img(
+        class = `${classPrefix}-img`,
+        src = "./assets/img/logo_colored.svg",
+        alt = "logo",
+        loading = "lazy",
+      )
+
+      if (label === 'true')
+        img(
+          class = `${classPrefix}-name`,
+          src = "./assets/img/TOXIN.svg",
+          alt = "logo",
+          loading = "lazy",
+        )
+
+//- example
+//- +logo({ type: 'header' })

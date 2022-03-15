@@ -10,7 +10,8 @@
 .room-card {
   box-sizing: border-box;
   width: rem(271);
-  background: $default-color;
+  background: $defaultColor;
+  box-shadow: 0 rem(10) rem(20) $DarkShade5;
 
   &__picture-container {
     position: relative;
@@ -23,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    color: $default-color;
+    color: $defaultColor;
     opacity: 0;
 
     &_left,
@@ -61,27 +62,27 @@
     width: $room-card__picture-slide_width;
     height: $room-card__picture-slide_width;
     margin-left: $room-card__picture-slide_width / 2;
-    border: rem(1) solid $default-color;
+    border: rem(1) solid $defaultColor;
     border-radius: $room-card__picture-slide_width / 2;
     cursor: pointer;
 
     &_active {
-      background: $default-color;
+      background: $defaultColor;
     }
   }
   // navigation end
 
   &__number-price {
-    margin: rem(14) rem(18) 0 rem(22);
+    margin: rem(10) rem(18) rem(4) rem(22);
     border-bottom: rem(1) solid $DarkShade25;
   }
 
-  &__feedback-block {
+  &__feedback {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: rem(3) rem(20) rem(14) rem(20);
+    padding: rem(3) rem(20) rem(14) rem(21);
   }
 }
 

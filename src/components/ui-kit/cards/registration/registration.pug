@@ -1,67 +1,59 @@
-mixin registration(params)
-  .registration.cards_border
+include ../../../ui-kit/form-elements/button/button
+include ../../../ui-kit/form-elements/masked-text-field/masked-text-field
+include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
+include ../../../ui-kit/form-elements/text-field/text-field
+include ../../../ui-kit/form-elements/toggle/toggle
+
+mixin registration()
+  .registration
     h1.registration__caption Регистрация аккаунта
 
-    form.js-registration-form(action="#change-me")
-      .registration__text-field_position
-        include ../../../ui-kit/form-elements/text-field/text-field
+    form.js-registration-form(action = "#change-me")
+      .registration__name
         +text-field({
-          inpType:        "text",
-          inpName:        "firstName",
+          inpName: "firstName",
           inpPlaceholder: "Имя",
         })
 
-      include ../../../ui-kit/form-elements/text-field/text-field
       +text-field({
-        inpType:        "text",
-        inpName:        "lastName",
+        inpName: "lastName",
         inpPlaceholder: "Фамилия",
       })
 
-      .registration__radio-buttons_position
-        include ../../../ui-kit/form-elements/radio-buttons/radio-buttons
-        +radio-buttons({
-          radioButtonName: "gender",
-          inpName:         ["man", "woman"],
-          inpText:         ["Мужчина", "Женщина"],
-          inpStatus:       ["checked",],
-          inpId:           "registration-radio-buttons-",
-        })
+      .registration__gender
+        +radio-buttons()
 
-      include ../../../ui-kit/form-elements/masked-text-field/masked-text-field
-      +masked-text-field({
-        leftCaption:    "Дата рождения",
-        inpName:        "birthDate",
-        inpPlaceholder: "ДД.ММ.ГГГГ",
-      })
+      +masked-text-field()
 
-      .registration__text-field_block-position
+      .registration__email
         +text-field({
-          leftCaption:    "Данные для входа в сервис",
-          inpType:        "email",
-          inpName:        "email",
+          leftCaption: "Данные для входа в сервис",
+          inpType: "email",
+          inpName: "email",
           inpPlaceholder: "Email",
         })
 
-      .registration__text-field_block-margin-between
+      .registration__password
         +text-field({
-          inpType:        "password",
-          inpName:        "password",
+          inpType: "password",
+          inpName: "password",
           inpPlaceholder: "Пароль",
         })
 
-      .registration__toggle_position
-        include ../../../ui-kit/form-elements/toggle/toggle
+      .registration__special-offers
         +toggle({
-          toggleBtnText: "Получать спецпредложения",
-          toggleName:    "specialOffers",
-          toggleId:      "registration-toggle",
+          toggleId: "registration-toggle",
         })
 
-      include ../../../ui-kit/form-elements/buttons/buttons
-      +button({mod: ["with_arrow", "block"], value: "Зарегистрироваться", type: "submit", class: "js-registration-submit-button"})
+      +button({
+        value: "Зарегистрироваться",
+        type: "submit",
+      })
 
-    .registration__enter-button-block_position
-      .registration__enter-button-block
-        p.registration__enter-button-text Уже есть аккаунт на Toxin
-        +button({link: "sign-in.html", mod: ["bordered"], value: "Войти"})
+    .registration__enter-button
+      p.registration__enter-button-text Уже есть аккаунт на Toxin
+      +button({
+        link: "./sign-in.html",
+        mod: ["bordered"],
+        value: "Войти",
+      })

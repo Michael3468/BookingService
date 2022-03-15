@@ -1,7 +1,7 @@
-import '../logo/logo';
-import '../../form-elements/buttons/buttons';
+import '../../logo/logo';
+import '../../form-elements/button/button';
 
-import './headers.scss';
+import './header.scss';
 
 /* dropdown menu */
 function getDropdownMenu(PointerEvent) {

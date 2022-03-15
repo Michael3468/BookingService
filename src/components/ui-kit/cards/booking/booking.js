@@ -1,5 +1,5 @@
 import './__caption/booking__caption';
-import '../../form-elements/buttons/buttons';
+import '../../form-elements/button/button';
 import '../../form-elements/dropdown-date/dropdown-date';
 import '../../form-elements/dropdown/_guests/dropdown-guests';
 

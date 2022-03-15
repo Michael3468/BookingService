@@ -21,16 +21,10 @@
   }
 }
 
-//common input__style
-.input__style {
-  width: 100%;
-  font-family: $secondFont;
-  border: rem(1) solid $DarkShade25;
-  border-radius: $BorderRadius;
-}
-
 .text-field__input {
-  &_block {
+  @include input-style;
+
+  &-item {
     position: relative;
   }
 
@@ -39,9 +33,9 @@
     top: rem(10);
     right: rem(8);
     // arrow color
+    color: transparent;
     background: $primaryGradient;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     // arrow color end
   }
 
@@ -53,20 +47,16 @@
   }
 
   &:hover {
-    border-color: $DarkShade50;
-
-    &::placeholder {
-      color: $DarkShade75;
-    }
+    @include like-hover;
   }
 }
 
-.like-hover {
-  border-color: $DarkShade50;
+.text-field__button {
+  @include material-icons;
+}
 
-  &::placeholder {
-    color: $DarkShade75;
-  }
+.text-field_hover {
+  @include like-hover;
 }
 
 .arrow-forward:focus {
@@ -75,8 +65,6 @@
   text-shadow: $TabindexShadow;
 }
 
-.gradient-icon {
-  background: $primaryGradient;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.text-field-gradient-icon {
+  @include gradient-icon;
 }

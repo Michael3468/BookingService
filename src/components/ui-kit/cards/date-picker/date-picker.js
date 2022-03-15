@@ -10,6 +10,7 @@ $('.js-date-picker').datepicker({
   navTitles: {
     days: 'MM <i>yyyy</i>',
   },
+  minDate: new Date(),
 
   onSelect(fd) {
     $('.js-start-date').val(fd.split(' - ')[0]);
@@ -21,7 +22,7 @@ function addApplyButton() {
   const $isPickerButtons = $('.js-date-picker').find('.datepicker--buttons');
   if ($isPickerButtons) {
     $isPickerButtons.append(
-      '<span class="datepicker--button" data-action="apply">Применить</span>',
+      '<span class = "datepicker--button" data-action = "apply">Применить</span>',
     );
   }
 }

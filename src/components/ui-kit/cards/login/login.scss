@@ -1,18 +1,21 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
+@import '../card-background-border.scss';
 
 .login {
+  @include cards-border;
+
   &__caption {
     margin-top: rem(2);
     margin-bottom: rem(15);
     font-family: $secondFont;
   }
 
-  &__inputs-block {
+  &__inputs {
     margin-bottom: rem(22);
   }
 
-  &__create-login-block {
+  &__create-login {
     display: flex;
     flex-direction: row;
     align-items: center;

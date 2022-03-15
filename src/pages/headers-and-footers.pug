@@ -1,19 +1,22 @@
 extends ../components/layouts/main
 
+include ../components/ui-kit/headers-and-footers/footer/footer
+include ../components/ui-kit/headers-and-footers/header/header
+include ../components/ui-kit/logo/logo
+
 block variables
   - title = "FSD Headers & Footers";
   - description = "FSD education project | Headers & Footers page";
 
 block content
 
-  include ../components/ui-kit/logo/logo
-  include ../components/ui-kit/headers-and-footers/headers/headers
+  +logo()
+
   +header()
   .headers-and-footers
-    +header("authorized")
-  include ../components/ui-kit/headers-and-footers/footers/footers
+    +header({ loginStatus: "authentificated" })
   .headers-and-footers
     +footer()
   .headers-and-footers
     .responsive-footer-container
-      +footer("mobile")
+      +footer({ footerType: "mobile" })

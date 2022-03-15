@@ -1,17 +1,16 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
-.radio-buttons__form {
-  display: flex;
-  flex-direction: row;
+.radio-buttons__caption {
+  margin-bottom: rem(6);
 }
 
-.radio-buttons__block {
+.radio-buttons__items {
   display: flex;
 }
 
 .radio-buttons__text {
-  margin-top: rem(6);
+  margin-top: rem(7);
   margin-right: rem(20);
 
   &:last-child {
@@ -19,21 +18,20 @@
   }
 }
 
-$radio-button__size: 20;
+$radioButtonSize: 20;
 
 .radio-buttons__label {
   position: relative;
   display: inline-block;
   padding-left: rem(30);
   line-height: rem(18);
-  user-select: none;
 
   &::before {
     position: absolute;
     left: 0;
     display: inline-block;
-    width: rem($radio-button__size);
-    height: rem($radio-button__size);
+    width: rem($radioButtonSize);
+    height: rem($radioButtonSize);
     border: rem(1) solid $DarkShade25;
     border-radius: 50%;
     cursor: pointer;
@@ -44,8 +42,8 @@ $radio-button__size: 20;
 .radio-buttons__input {
   position: absolute;
   z-index: 1;
-  width: rem($radio-button__size);
-  height: rem($radio-button__size);
+  width: rem($radioButtonSize);
+  height: rem($radioButtonSize);
   cursor: pointer;
   opacity: 0;
 
