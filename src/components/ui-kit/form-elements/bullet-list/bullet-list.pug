@@ -9,12 +9,13 @@ mixin bullet-list(params = {})
       ]
     } = params
 
-  if (caption)
-    h3.bullet-list__caption= caption
+  .bullet-list
+    if (caption)
+      h3.bullet-list__caption= caption
 
-  ul.bullet-list__ul
-    each val in options
-      li.bullet-list__li #{val}
+    ul.bullet-list__ul
+      each val in options
+        li.bullet-list__li #{val}
 
 //- example
 //- +bullet-list({ caption: "bullet list" })
