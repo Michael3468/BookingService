@@ -2,7 +2,7 @@ extends ../components/layouts/main-header-footer
 
 include ../components/ui-kit/cards/booking/booking
 include ../components/ui-kit/form-elements/bullet-list/bullet-list
-include ../components/ui-kit/form-elements/comments/comments
+include ../components/ui-kit/form-elements/comment/comment
 include ../components/ui-kit/form-elements/d3js-donut-chart/d3js-donut-chart
 include ../components/ui-kit/form-elements/icon-text-list/icon-text-list
 
@@ -66,8 +66,8 @@ block content
             h2.room-details-caption Отзывы посетителей номера
             p 2 отзыва
 
-          .room-details-comments
-            +comments({
+          .room-details-comment
+            +comment({
               imageName: "avatar.jpg",
               userName: "Мурад Сарафанов",
               commentDate: "5 дней назад",
@@ -76,8 +76,8 @@ block content
               likeBtnText: "12",
             })
 
-          .room-details-comments
-            +comments({
+          .room-details-comment
+            +comment({
               imageName: "avatar2.jpg",
               userName: "Патрисия Стёклышкова",
               commentDate: "Неделю назад",

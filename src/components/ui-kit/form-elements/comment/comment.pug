@@ -1,6 +1,6 @@
 include ../like-button/like-button
 
-mixin comments(params = {})
+mixin comment(params = {})
   -
     const {
       imageName = '',
@@ -11,29 +11,29 @@ mixin comments(params = {})
       likeBtnText = '0',
     } = params
 
-  .comments
-    .comments__user
-      img.comments__user-photo(
+  .comment
+    .comment__user
+      img.comment__user-photo(
         src = `./assets/img/${imageName}`,
         alt = "avatar",
         loading = "lazy",
       )
 
-      .comments__user-info
-        .comments__user-name= userName
-        .comments__comment-date= commentDate
+      .comment__user-info
+        .comment__user-name= userName
+        .comment__comment-date= commentDate
 
-    .comments__feedback
-      .comments__feedback-like
+    .comment__feedback
+      .comment__feedback-like
         +like-button({
           likeBtnChecked: likeBtnChecked,
           likeBtnText: likeBtnText,
         })
-      .comments__feedback-text= feedbackText
+      .comment__feedback-text= feedbackText
 
 
 //- example
-//- +comments({
+//- +comment({
 //-   imageName: "avatar.jpg",
 //-   userName: "Мурад Сарафанов",
 //-   commentDate: "5 дней назад",

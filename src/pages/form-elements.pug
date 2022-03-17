@@ -3,7 +3,7 @@ extends ../components/layouts/main
 include ../components/ui-kit/form-elements/bullet-list/bullet-list
 include ../components/ui-kit/form-elements/button/button
 include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-include ../components/ui-kit/form-elements/comments/comments
+include ../components/ui-kit/form-elements/comment/comment
 include ../components/ui-kit/form-elements/dropdown/dropdown
 include ../components/ui-kit/form-elements/dropdown-date/dropdown-date
 include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
@@ -268,8 +268,8 @@ block content
 
     .column-4
 
-      .comments-margin
-        +comments({
+      .comment-margin
+        +comment({
           imageName: "avatar.jpg",
           userName: "Мурад Сарафанов",
           commentDate: "5 дней назад",

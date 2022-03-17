@@ -1,7 +1,7 @@
 import './button/button';
 import './bullet-list/bullet-list';
 import './checkbox-buttons/checkbox-buttons';
-import './comments/comments';
+import './comment/comment';
 import './dropdown/_guests/dropdown-guests';
 import './dropdown/_options/dropdown-options';
 import './dropdown-date/dropdown-date';
