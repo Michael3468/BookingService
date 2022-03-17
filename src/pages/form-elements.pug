@@ -258,12 +258,19 @@ block content
 
     .column-1
 
-      +icon-text-list()
-
       +icon-text-list({
-        iconName: "location_city",
-        caption: "Удобство",
-        text: "Окно в каждой из спален",
+        items: [
+          {
+            iconName: "insert_emoticon",
+            caption: "Комфорт",
+            text: "Шумопоглощающие стены",
+          },
+          {
+            iconName: "location_city",
+            caption: "Удобство",
+            text: "Окно в каждой из спален",
+          },
+        ]
       })
 
     .column-4
