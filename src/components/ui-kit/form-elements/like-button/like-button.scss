@@ -11,7 +11,7 @@ $padding: rem(1);
   background: white;
   border-radius: $size;
 
-  &__container {
+  &-container {
     width: $size * 4;
     height: $size * 2;
     padding: $padding;
@@ -29,7 +29,7 @@ $padding: rem(1);
     font-family: $mainFont;
   }
 
-  &-icon {
+  &__icon {
     @include material-icons;
 
     position: absolute;
