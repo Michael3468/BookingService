@@ -16,14 +16,15 @@ mixin booking-caption(params = {})
     - fontSize = 'room-card__room-number_font-size'
 
   a(class = `booking__caption ${margin}` href = link)
-    .booking__caption-right
+    .booking__caption-left
       h1.booking__caption-number
         span.booking__caption-symbol №
         span.booking__caption-room-number(class = fontSize)= roomNumber
       .booking__caption-status= roomStatus
-    .booking__caption-left
-      p.booking__caption-price= roomPrice
-      p.booking__caption-text в сутки
+    .booking__caption-right
+      span.booking__caption-price
+        strong= roomPrice
+      span.booking__caption-text в сутки
 
 
 //- example

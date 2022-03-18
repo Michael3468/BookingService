@@ -6,5 +6,6 @@ mixin feedbacks(params = {})
     } = params
 
   .feedbacks
-    p.feedbacks__number= number
-    p.feedbacks__text= text
+    span.feedbacks__number
+      strong= number
+    span.feedbacks__text= text

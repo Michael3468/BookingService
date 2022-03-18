@@ -78,6 +78,16 @@ $arrows-top: calc(50% - #{$arrows-size} / 2); //- $arrows-size = arrow height
   cursor: pointer;
 }
 
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+  display: none !important;
+}
+
+.slick-picture:hover button.slick-prev.slick-arrow,
+.slick-picture:hover button.slick-next.slick-arrow {
+  display: flex !important;
+}
+
 .slick-dots {
   position: absolute;
   right: rem(14);
