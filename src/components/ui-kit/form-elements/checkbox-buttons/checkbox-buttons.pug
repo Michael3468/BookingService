@@ -39,13 +39,13 @@ mixin checkbox-buttons(params = {})
             tabindex = "-1"
             type = "checkbox",
             checked = item.isChecked
-            id = `inpId-${index}`,
+            id = `${inpId}-${index}`,
             name = inpName,
             value = item.value,
           )
           label.checkbox-buttons-text.js-checkbox-buttons-text(
             tabindex = "0"
-            for = `inpId-${index}`
+            for = `${inpId}-${index}`
           ) #{item.label}
 
 //- examples
