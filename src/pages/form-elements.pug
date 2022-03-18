@@ -173,7 +173,10 @@ block content
           +button({ mod: ["no-background", "no-background_hover"] })
 
         .buttons-block
-          +button({ value: "Перейти к оплате" })
+          +button({
+            mod: ["with_arrow", "block"],
+            value: "Перейти к оплате",
+          })
 
       .block-margin
         h3.pagination-caption pagination
