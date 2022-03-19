@@ -21,6 +21,7 @@
     font-size: rem(14);
     font-family: $secondFont;
     line-height: rem(24);
+    white-space: pre-line;
 
     &::before {
       position: absolute;
