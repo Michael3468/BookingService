@@ -16,42 +16,44 @@ block content
 
   .search-room-container
     .search-room-options-column.js-search-room-options-column
-      .search-room-date-dropdown
+      .search-room-sidebar-element
         +filter-date-dropdown()
 
-      +dropdown({
-        type: "dropdown-guests",
-        selectionText: "Сколько гостей",
-      })
+      .search-room-sidebar-element
+        +dropdown({
+          type: "dropdown-guests",
+          selectionText: "Сколько гостей",
+        })
 
-      .search-room-range-slider
+      .search-room-sidebar-element
         +range-slider()
 
         p.search-room-range-slider-text Стоимость за сутки пребывания в номере
 
-      +checkbox-buttons({
-        leftCaption: "правила дома",
-        items: [
-          { value: "allow-smoke", label: "Можно курить" },
-          { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
-          {
-            value: "allow guests",
-            label: "Можно пригласить гостей\n (до 10 человек)",
-          },
-        ]
-      })
+      .search-room-sidebar-element
+        +checkbox-buttons({
+          leftCaption: "правила дома",
+          items: [
+            { value: "allow-smoke", label: "Можно курить" },
+            { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+            {
+              value: "allow guests",
+              label: "Можно пригласить гостей\n (до 10 человек)",
+            },
+          ]
+        })
 
-      .search-room-rich-checkbox-buttons
+      .search-room-sidebar-element
         +rich-checkbox-buttons()
 
-      .search-room-dropdown-options
+      .search-room-sidebar-element
         +dropdown({
           leftCaption: "удобства номера",
           type: "dropdown-options",
           selectionText: "Удобства",
         })
 
-      .search-room-checkbox-buttons-expandable
+      .search-room-sidebar-element
         +checkbox-buttons({ caption: "дополнительные удобства" })
 
     .search-room-options-column-button.js-search-room-options-column-button.search-room-options-column-button_rotate

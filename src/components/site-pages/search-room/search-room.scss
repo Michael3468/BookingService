@@ -53,26 +53,8 @@
 .search-room {
   min-width: rem(266);
 
-  &-date-dropdown {
-    margin-bottom: rem(20);
-  }
-
-  &-range-slider {
-    margin-top: rem(31);
-    margin-bottom: rem(26);
-  }
-
-  &-rich-checkbox-buttons {
-    width: rem(260);
-    margin-top: rem(33);
-  }
-
-  &-dropdown-options {
-    margin-top: rem(28);
-  }
-
-  &-checkbox-buttons-expandable {
-    margin-top: rem(30);
+  &-sidebar-element {
+    margin-bottom: rem(30);
   }
 }
 

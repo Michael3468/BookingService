@@ -1,6 +1,14 @@
 @import '../../../../assets/scss/utils/vars.scss';
 @import '../../../../assets/scss/utils/mixins.scss';
 
+.custom-checkbox {
+  margin-bottom: rem(9);
+
+  &:last-child {
+    margin-bottom: rem(0);
+  }
+}
+
 .custom-checkbox__item {
   display: flex;
   flex-direction: row;
