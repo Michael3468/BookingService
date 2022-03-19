@@ -7,14 +7,14 @@
   justify-content: space-between;
 
   &_margin {
-    margin-bottom: rem(19);
+    margin-bottom: rem(21);
   }
 }
 
-.booking__caption-right {
+.booking__caption-left {
   display: flex;
   flex-direction: row;
-  margin-top: rem(5);
+  margin-top: rem(10);
   font-weight: bold;
   font-family: $secondFont;
 }
@@ -30,7 +30,6 @@
 .booking__caption-symbol {
   display: flex;
   align-self: end;
-  margin-bottom: rem(3);
   font-size: rem(14);
 }
 
@@ -50,20 +49,19 @@
 
 .booking__caption-status {
   align-self: flex-end;
-  margin-bottom: rem(2);
+  margin-top: rem(7);
   color: $purple;
   font-size: rem(12);
   line-height: rem(15);
   text-transform: uppercase;
 }
 
-.booking__caption-left {
+.booking__caption-right {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
   margin-top: rem(9);
   color: $DarkShade50;
-  font-weight: bold;
   font-size: rem(14);
   font-family: $secondFont;
   line-height: rem(18);

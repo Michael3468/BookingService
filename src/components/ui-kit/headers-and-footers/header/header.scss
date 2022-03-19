@@ -31,14 +31,12 @@
   &__container {
     @include container;
 
-    &_mob {
-      z-index: 30;
-      height: rem(40);
+    z-index: 30;
+    height: rem(40);
 
-      @media screen and (max-width: 1024px) {
-        display: flex;
-        flex-direction: column;
-      }
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
     }
   }
 

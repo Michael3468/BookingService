@@ -1,0 +1,94 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+
+.custom-checkbox {
+  margin-bottom: rem(9);
+
+  &:last-child {
+    margin-bottom: rem(0);
+  }
+}
+
+.custom-checkbox__item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: rem(9);
+
+  &:focus {
+    color: $DarkShade75;
+    font-weight: bold;
+    text-shadow: $TabindexShadow;
+  }
+}
+
+.custom-checkbox__label {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &::after {
+    margin-right: 20px;
+  }
+}
+
+.custom-checkbox__text-item {
+  display: flex;
+  flex-direction: column;
+}
+
+$richCheckboxTextMargin: 30px;
+
+.custom-checkbox__text {
+  font-family: $secondFont;
+  margin-bottom: rem(2);
+  margin-left: $richCheckboxTextMargin;
+  color: $DarkShade75;
+  font-size: rem(14);
+  white-space: pre-line;
+  line-height: rem(19);
+
+  &_bold {
+    font-weight: bold;
+    margin-bottom: rem(6);
+  }
+}
+
+.custom-checkbox__p {
+  font-family: $secondFont;
+  margin-left: $richCheckboxTextMargin;
+  color: $DarkShade50;
+  font-weight: normal;
+  font-size: rem(12);
+  font-family: $secondFont;
+  line-height: rem(14);
+  letter-spacing: rem(0);
+  white-space: pre-line;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox__checkbox {
+  position: absolute;
+  display: inline-block;
+  align-items: flex-start;
+  width: rem(20);
+  height: rem(20);
+  margin-right: rem(10);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  border: rem(1) solid $DarkShade25;
+  border-radius: rem(4);
+  cursor: pointer;
+  content: '';
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__checkbox {
+  background-image: url('./custom-checkbox.svg');
+  background-size: rem(12) rem(12);
+  border-color: $purple;
+}

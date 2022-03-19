@@ -5,16 +5,17 @@ mixin bullet-list(params = {})
       options = [
         "Нельзя с питомцами",
         "Без вечеринок и мероприятий",
-        "Время прибытия - после 13:00, а выезд до 12:00",
+        "Время прибытия — после 13:00,\n а выезд до 12:00",
       ]
     } = params
 
-  if (caption)
-    h3.bullet-list__caption= caption
+  .bullet-list
+    if (caption)
+      h3.bullet-list__caption= caption
 
-  ul.bullet-list__ul
-    each val in options
-      li.bullet-list__li #{val}
+    ul.bullet-list__ul
+      each val in options
+        li.bullet-list__li #{val}
 
 //- example
 //- +bullet-list({ caption: "bullet list" })

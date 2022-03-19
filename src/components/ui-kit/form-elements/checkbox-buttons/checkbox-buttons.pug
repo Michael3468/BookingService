@@ -1,10 +1,10 @@
+include ../custom-checkbox/custom-checkbox.pug
+
 mixin checkbox-buttons(params = {})
   -
     const {
       caption = 'expandable checkbox list',
       leftCaption = '',
-      inpId = '',
-      inpName = '',
       hidden = 'false',
       items = [
         { value: "breakfast", label: "Завтрак" },
@@ -33,26 +33,17 @@ mixin checkbox-buttons(params = {})
           ) expand_more
 
     .checkbox-buttons-items(class = visibility)
-      each item, index in items
-        .checkbox-buttons-input
-          input.custom-checkbox.js-custom-checkbox(
-            tabindex = "-1"
-            type = "checkbox",
-            checked = item.isChecked
-            id = `inpId-${index}`,
-            name = inpName,
-            value = item.value,
-          )
-          label.checkbox-buttons-text.js-checkbox-buttons-text(
-            tabindex = "0"
-            for = `inpId-${index}`
-          ) #{item.label}
+      each item in items
+
+        +custom-checkbox({
+          label: item.label,
+          text: item.text,
+          value: item.value,
+        })
 
 //- examples
 //- +checkbox-buttons({
 //-   leftCaption: "checkbox buttons",
-//-   inpId: "check-box-buttons",
-//-   inpName: "check-box-name",
 //-   items: [
 //-     { value: "allow-smoke", label: "Можно курить" },
 //-     { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
@@ -64,14 +55,6 @@ mixin checkbox-buttons(params = {})
 //-   ]
 //- })
 
-//- +checkbox-buttons({
-//-   inpId: "check-box-buttons-1",
-//-   inpName: "check-box-name-1",
-//-   hidden: "true"
-//- })
+//- +checkbox-buttons({ hidden: "true" })
 
-//- +checkbox-buttons({
-//-   caption: "дополнительные удобства",
-//-   inpId: "check-box-buttons-1",
-//-   inpName: "check-box-name-1",
-//- })
+//- +checkbox-buttons({ caption: "дополнительные удобства" })

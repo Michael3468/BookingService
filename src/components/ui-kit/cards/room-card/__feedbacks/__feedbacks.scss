@@ -7,6 +7,11 @@
 
   &__number {
     margin-right: rem(4);
-    font-weight: bold;
+  }
+
+  &__number,
+  &__text {
+    font-family: $secondFont;
+    color: $DarkShade50;
   }
 }

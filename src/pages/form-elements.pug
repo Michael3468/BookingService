@@ -3,7 +3,7 @@ extends ../components/layouts/main
 include ../components/ui-kit/form-elements/bullet-list/bullet-list
 include ../components/ui-kit/form-elements/button/button
 include ../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
-include ../components/ui-kit/form-elements/comments/comments
+include ../components/ui-kit/form-elements/comment/comment
 include ../components/ui-kit/form-elements/dropdown/dropdown
 include ../components/ui-kit/form-elements/dropdown-date/dropdown-date
 include ../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
@@ -89,15 +89,12 @@ block content
       .block-margin
         +checkbox-buttons({
           leftCaption: "checkbox buttons",
-          inpId: "check-box-buttons",
-          inpName: "check-box-name",
           items: [
             { value: "allow-smoke", label: "Можно курить" },
             { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
             {
               value: "allow guests",
-              label: "Можно пригласить гостей (до 10 человек)",
-              isChecked: "true",
+              label: "Можно пригласить гостей\n (до 10 человек)",
             },
           ]
         })
@@ -173,7 +170,10 @@ block content
           +button({ mod: ["no-background", "no-background_hover"] })
 
         .buttons-block
-          +button({ value: "Перейти к оплате" })
+          +button({
+            mod: ["with_arrow", "block"],
+            value: "Перейти к оплате",
+          })
 
       .block-margin
         h3.pagination-caption pagination
@@ -231,22 +231,17 @@ block content
     .column-1
 
       .mini-column
-        +checkbox-buttons({
-          inpId: "check-box-buttons-1",
-          inpName: "check-box-name-1",
-          hidden: "true"
-        })
+        +checkbox-buttons({ hidden: "true" })
 
         .block-margin.checkbox-buttons-expandable-list-margin
-          +checkbox-buttons({
-            inpId: "check-box-buttons-2",
-            inpName: "check-box-name-2",
-          })
+          +checkbox-buttons()
 
     .column-2
 
       .mini-column
-        +rich-checkbox-buttons({ caption : "rich checkbox buttons" })
+        +rich-checkbox-buttons({
+          caption : "rich checkbox buttons",
+        })
 
     .column-3
 
@@ -258,18 +253,25 @@ block content
 
     .column-1
 
-      +icon-text-list()
-
       +icon-text-list({
-        iconName: "location_city",
-        caption: "Удобство",
-        text: "Окно в каждой из спален",
+        items: [
+          {
+            iconName: "insert_emoticon",
+            caption: "Комфорт",
+            text: "Шумопоглощающие стены",
+          },
+          {
+            iconName: "location_city",
+            caption: "Удобство",
+            text: "Окно в каждой из спален",
+          },
+        ]
       })
 
     .column-4
 
-      .comments-margin
-        +comments({
+      .comment-margin
+        +comment({
           imageName: "avatar.jpg",
           userName: "Мурад Сарафанов",
           commentDate: "5 дней назад",

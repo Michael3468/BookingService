@@ -6,38 +6,34 @@
   transform: rotateY(180deg);
 }
 
-.rate-button-inp {
-  display: none;
+@mixin font-size-and-family {
+  font-size: rem(24);
+  font-family: 'Material Icons';
+}
+
+@mixin star-style {
+  display: block;
+  color: transparent;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background-clip: text;
 }
 
 .rate-button-star {
-  display: block;
-  color: transparent;
-  font-size: rem(24);
-  font-family: 'Material Icons';
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  background-clip: text;
-  cursor: pointer;
-}
+  @include font-size-and-family;
 
-.rate-button-star::before {
-  position: relative;
-  content: 'star_border';
-}
+  &::after {
+    @include star-style;
 
-.rate-button-star::after {
-  position: absolute;
-  top: rem(0);
-  display: block;
-  color: transparent;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  background-clip: text;
-  opacity: 0;
-  content: 'star';
-}
+    content: 'star';
+  }
 
-.rate-button-star:hover::after,
-.rate-button-star:hover ~ .rate-button-star::after,
-.rate-button-inp:checked ~ .rate-button-star::after {
-  opacity: 1;
+  &-border {
+    @include font-size-and-family;
+
+    &::after {
+      @include star-style;
+
+      content: 'star_border';
+    }
+  }
 }

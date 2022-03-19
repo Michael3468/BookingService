@@ -74,7 +74,7 @@
 
   &__number-price {
     margin: rem(10) rem(18) rem(4) rem(22);
-    border-bottom: rem(1) solid $DarkShade25;
+    border-bottom: rem(1) solid $DarkShade10;
   }
 
   &__feedback {
@@ -82,7 +82,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: rem(3) rem(20) rem(14) rem(21);
+    padding: rem(0) rem(20) rem(14) rem(20);
   }
 }
 
@@ -91,11 +91,5 @@
 }
 
 .room-card__room-number_margin {
-  margin-bottom: rem(7);
-}
-
-.slick-arrow:focus {
-  background-color: green;
-  box-shadow: $TabindexShadow;
-  opacity: 0.3;
+  margin-bottom: rem(12);
 }

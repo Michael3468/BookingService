@@ -1,11 +1,11 @@
 mixin button(params = {})
   -
     const {
-      link = 'change_me',
-      mod = ["with_arrow", "block"],
+      link = '',
+      mod = [],
       value = 'Click me',
-      type = '',
-      tabindex = '0',
+      type = 'button',
+      tIndex = '0',
     } = params
 
   - classes = ''
@@ -13,19 +13,19 @@ mixin button(params = {})
     each item in mod
       - classes += ` button_${item}`
 
-  if (type)
-    button.button.js-button(
+  if (link)
+    a.button.js-button(
       tabindex = tIndex
       onclick = `location.href = '${link}'`
-      class = `${classes}`
-      type = type
-    )= value
+      class = classes
+    )!= value
   else
-    button.button.js-button(
-      tabindex = tIndex
-      onclick = `location.href = '${link}'`
-      class = `${classes}`
-    )= value
+    if (type === 'button' || type === 'submit')
+      button.button.js-button(
+        tabindex = tIndex
+        class = classes
+        type = type
+      )!= value
 
 //- Buttons examples
 //- +button({ value: "Забронировать" })
@@ -33,4 +33,9 @@ mixin button(params = {})
 //- +button({ value: "Зарегистрироваться", type: "submit" })
 //- +button({ link: "./sign-in.html", mod: ["bordered"], value: "Войти" })
 //- +button({ mod: ["bordered", "hover"] })
-//- +button({ link: "./sign-in.html", mod: ["bordered", "small"], value: "Войти", tabindex: 10 })
+//- +button({ link: "./sign-in.html", mod: ["bordered", "small"], value: "Войти", tIndex: 10 })
+
+//- +button({
+//-   mod: ["with_arrow", "block"],
+//-   value: '<img src="./assets/img/TOXIN.svg">',
+//- })
