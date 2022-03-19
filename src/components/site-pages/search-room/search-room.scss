@@ -4,7 +4,7 @@
 .search-room-container {
   @include container;
 
-  padding-top: 1px;
+  margin-top: rem(29);
 }
 
 .container__room-cards-column {
@@ -54,17 +54,12 @@
   min-width: rem(266);
 
   &-date-dropdown {
-    margin-top: rem(28);
     margin-bottom: rem(20);
   }
 
   &-range-slider {
     margin-top: rem(31);
     margin-bottom: rem(26);
-  }
-
-  &-checkbox-buttons {
-    width: rem(225);
   }
 
   &-rich-checkbox-buttons {
@@ -99,7 +94,6 @@
 
 .search-room-room-cards {
   &__caption {
-    margin-top: rem(28);
     margin-bottom: rem(22);
     font-family: $secondFont;
 

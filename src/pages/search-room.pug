@@ -29,18 +29,17 @@ block content
 
         p.search-room-range-slider-text Стоимость за сутки пребывания в номере
 
-      .search-room-checkbox-buttons
-        +checkbox-buttons({
-          leftCaption: "правила дома",
-          items: [
-            { value: "allow-smoke", label: "Можно курить" },
-            { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
-            {
-              value: "allow guests",
-              label: "Можно пригласить гостей (до 10 человек)",
-            },
-          ]
-        })
+      +checkbox-buttons({
+        leftCaption: "правила дома",
+        items: [
+          { value: "allow-smoke", label: "Можно курить" },
+          { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+          {
+            value: "allow guests",
+            label: "Можно пригласить гостей\n (до 10 человек)",
+          },
+        ]
+      })
 
       .search-room-rich-checkbox-buttons
         +rich-checkbox-buttons()
