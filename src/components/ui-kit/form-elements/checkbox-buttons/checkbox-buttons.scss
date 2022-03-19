@@ -8,64 +8,6 @@
   &__caption {
     margin-bottom: rem(16);
   }
-
-  &-input {
-    display: flex;
-    margin-bottom: rem(10);
-  }
-
-  &-text {
-    color: $DarkShade50;
-    font-family: $secondFont;
-    line-height: rem(18);
-    cursor: pointer;
-
-    &:focus {
-      color: $DarkShade75;
-      font-weight: bold;
-      text-shadow: $TabindexShadow;
-    }
-  }
-}
-
-.custom-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.custom-checkbox + label {
-  display: inline-flex;
-  align-items: flex-start;
-
-  &::before {
-    display: inline-block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    align-items: flex-start;
-    width: rem(20);
-    height: rem(20);
-    margin-right: rem(10);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
-    border: rem(1) solid $DarkShade25;
-    border-radius: rem(4);
-    cursor: pointer;
-    content: '';
-  }
-
-  &:focus {
-    color: $DarkShade75;
-    font-weight: bold;
-    text-shadow: $TabindexShadow;
-  }
-}
-
-.custom-checkbox:checked + label::before {
-  background-image: url('./checkbox-vector.svg');
-  background-size: rem(12) rem(12);
-  border-color: $purple;
 }
 
 //- styles for checkbox-buttons__expandable-list

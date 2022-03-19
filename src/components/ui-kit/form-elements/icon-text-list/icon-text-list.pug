@@ -1,29 +1,47 @@
 mixin icon-text-list(params = {})
   -
     const {
-      iconName = "insert_emoticon",
-      caption = "Комфорт",
-      text = "Шумопоглощающие стены",
+      items = [
+        {
+          iconName: "insert_emoticon",
+          caption: "Комфорт",
+          text: "Шумопоглощающие стены",
+        },
+        {
+          iconName: "location_city",
+          caption: "Удобство",
+          text: "Окно в каждой из спален",
+        },
+        {
+          iconName: "whatshot",
+          caption: "Уют",
+          text: "Номер оснащен камином",
+        }
+      ]
     } = params
 
-  .icon-text-list
-    .icon-text-list__icon #{iconName}
-    .icon-text-list__content
-      h3.icon-text-list__caption= caption
-      p.icon-text-list__text= text
-
+  ul.icon-text-list
+    each item in items
+        li.icon-text-list__li
+          .icon-text-list__icon #{item.iconName}
+          .icon-text-list__content
+            h3.icon-text-list__caption= item.caption
+            p.icon-text-list__text= item.text
 
 //- examples
 //- +icon-text-list()
 
 //- +icon-text-list({
-//-   iconName: "location_city",
-//-   caption: "Удобство",
-//-   text: "Окно в каждой из спален",
-//- })
-
-//- +icon-text-list({
-//-   iconName: "whatshot",
-//-   caption: "Уют",
-//-   text: "Номер оснащен камином",
+//-   items: [
+//-     {
+//-       iconName: "insert_emoticon",
+//-       caption: "Комфорт",
+//-       text: "Шумопоглощающие стены",
+//-     },
+//-     {
+//-       iconName: "location_city",
+//-       caption: "Удобство",
+//-       text: "Окно в каждой из спален",
+//-     },
+//-   ]
 //- })

@@ -1,8 +1,8 @@
 import './like-button.scss';
 
 function toggleClasses(button) {
-  const likeButtonIcon = button.querySelector('.js-like-button-icon');
-  const likeButtonContent = button.querySelector('.js-like-button-content');
+  const likeButtonIcon = button.querySelector('.js-like-button__icon');
+  const likeButtonContent = button.querySelector('.js-like-button__content');
 
   likeButtonIcon.classList.toggle('js-icon-checked-status');
   likeButtonContent.classList.toggle('js-content-checked-status');
@@ -10,7 +10,7 @@ function toggleClasses(button) {
 }
 
 function changeCounter(element) {
-  const counter = element.querySelector('.js-like-button-content');
+  const counter = element.querySelector('.js-like-button__content');
   let counterValue = Number(counter.innerText);
 
   if (counter.classList.contains('js-content-checked-status')) {

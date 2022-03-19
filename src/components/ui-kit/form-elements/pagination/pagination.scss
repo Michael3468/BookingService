@@ -66,7 +66,6 @@ $size: rem(40);
 }
 
 .paginationjs-page .active,
-// .paginationjs .paginationjs-pages li > a,
 .paginationjs .paginationjs-pages li:first-child,
 .paginationjs .paginationjs-pages li:first-child > a {
   color: $DarkShade50;
@@ -88,6 +87,15 @@ $size: rem(40);
   color: $defaultColor;
   font-weight: bold;
   background: $primaryGradient;
+}
+
+.paginationjs .paginationjs-page:hover {
+  font-weight: bold;
+  background: $primaryGradient;
+}
+
+.paginationjs .paginationjs-page:hover > a {
+  color: $defaultColor;
 }
 
 .paginationjs-next::before,
