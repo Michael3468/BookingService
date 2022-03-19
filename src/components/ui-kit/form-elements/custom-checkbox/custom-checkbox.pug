@@ -1,0 +1,43 @@
+mixin custom-checkbox(params = {})
+  -
+    const {
+      rich = 'false',
+      label = '',
+      text = '',
+      value = '',
+    } = params
+
+  .custom-checkbox
+    .custom-checkbox__item.js-custom-checkbox__item(tabindex = "0")
+
+      label.custom-checkbox__label.js-custom-checkbox__label
+        .custom-checkbox__text-item
+          if (rich === 'true')
+            span.custom-checkbox__text.custom-checkbox__text_bold #{label}
+            span.custom-checkbox__p= text
+          if (rich === 'false')
+            span.custom-checkbox__text #{label}
+
+        input.custom-checkbox__input.js-custom-checkbox__input(
+          tabindex = "-1"
+          type = "checkbox"
+          name = value
+          value = value
+        )
+        span.custom-checkbox__checkbox
+
+//- examples
+//- +custom-checkbox({
+//-   label: item.label,
+//-   text: item.text,
+//-   value: item.value,
+//-   index,
+//- })
+
+//- +custom-checkbox({
+//-   rich: 'true',
+//-   label: item.label,
+//-   text: item.text,
+//-   value: item.value,
+//-   index,
+//- })

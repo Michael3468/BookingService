@@ -2,6 +2,7 @@ import './button/button';
 import './bullet-list/bullet-list';
 import './checkbox-buttons/checkbox-buttons';
 import './comment/comment';
+import './custom-checkbox/custom-checkbox';
 import './dropdown/_guests/dropdown-guests';
 import './dropdown/_options/dropdown-options';
 import './dropdown-date/dropdown-date';

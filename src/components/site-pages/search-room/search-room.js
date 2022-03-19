@@ -3,6 +3,7 @@ import './search-room.scss';
 import '../../ui-kit/cards/room-card/room-card';
 
 import '../../ui-kit/form-elements/checkbox-buttons/checkbox-buttons';
+import '../../ui-kit/form-elements/custom-checkbox/custom-checkbox';
 import '../../ui-kit/form-elements/dropdown/_guests/dropdown-guests';
 import '../../ui-kit/form-elements/dropdown/_options/dropdown-options';
 import '../../ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown';

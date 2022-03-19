@@ -89,15 +89,12 @@ block content
       .block-margin
         +checkbox-buttons({
           leftCaption: "checkbox buttons",
-          inpId: "check-box-buttons",
-          inpName: "check-box-name",
           items: [
             { value: "allow-smoke", label: "Можно курить" },
             { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
             {
               value: "allow guests",
-              label: "Можно пригласить гостей (до 10 человек)",
-              isChecked: "true",
+              label: "Можно пригласить гостей\n (до 10 человек)",
             },
           ]
         })
@@ -234,22 +231,17 @@ block content
     .column-1
 
       .mini-column
-        +checkbox-buttons({
-          inpId: "check-box-buttons-1",
-          inpName: "check-box-name-1",
-          hidden: "true"
-        })
+        +checkbox-buttons({ hidden: "true" })
 
         .block-margin.checkbox-buttons-expandable-list-margin
-          +checkbox-buttons({
-            inpId: "check-box-buttons-2",
-            inpName: "check-box-name-2",
-          })
+          +checkbox-buttons()
 
     .column-2
 
       .mini-column
-        +rich-checkbox-buttons({ caption : "rich checkbox buttons" })
+        +rich-checkbox-buttons({
+          caption : "rich checkbox buttons",
+        })
 
     .column-3
 
