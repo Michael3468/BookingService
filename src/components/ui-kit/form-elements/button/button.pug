@@ -16,7 +16,7 @@ mixin button(params = {})
   if (link)
     a.button.js-button(
       tabindex = tIndex
-      onclick = `location.href = '${link}'`
+      href = link
       class = classes
     )!= value
   else
