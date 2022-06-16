@@ -48,13 +48,13 @@
     column-gap: rem(50);
   }
 
-  &-column-1 {
+  &-column-info {
     @media only screen and (max-width: 800px) {
       order: 1;
     }
   }
 
-  &-column-2 {
+  &-column-booking-card {
     min-width: rem(380);
 
     @media only screen and (max-width: 800px) {

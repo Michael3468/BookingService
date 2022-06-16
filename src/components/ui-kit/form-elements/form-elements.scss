@@ -24,24 +24,24 @@
   @include container;
 }
 
-.column-1,
-.column-2,
-.column-3 {
+.column-left,
+.column-center,
+.column-right {
   display: flex;
   flex-direction: column;
   min-width: rem(320);
   margin-top: rem(5);
 }
 
-.column-4 {
+.column-comment {
   width: 100%;
 }
 
-.column-1 {
+.column-left {
   margin-right: rem(127);
 }
 
-.column-2 {
+.column-center {
   margin-right: rem(72);
 }
 
