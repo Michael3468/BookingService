@@ -24,16 +24,16 @@
     }
   }
 
-  &__right {
+  &__images_right {
     display: flex;
     flex-direction: column;
   }
 
-  &_big-size {
+  &_size_big {
     width: 100%;
   }
 
-  &_middle-size {
+  &_size_middle {
     width: 100%;
   }
 }
@@ -100,7 +100,7 @@
     margin-bottom: rem(21);
     font-family: $secondFont;
 
-    &_position {
+    &_margin_left {
       margin-left: rem(20);
     }
   }
