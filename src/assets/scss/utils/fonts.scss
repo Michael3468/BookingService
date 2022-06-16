@@ -3,12 +3,9 @@
   font-weight: bold;
   font-family: 'Quicksand';
   font-style: normal;
-  src: url('../fonts/quicksand/quicksand-bold.eot'); // IE9 Compat Modes
   src:
-    url('../fonts/quicksand/quicksand-bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-        url('../fonts/quicksand/quicksand-bold.woff') format('woff'), // Pretty Modern Browsers
-        url('../fonts/quicksand/quicksand-bold.woff2') format('woff'), // Pretty Modern Browsers
-        url('../fonts/quicksand/quicksand-bold.ttf') format('truetype'), // Safari, Android, iOS
+  url('../fonts/quicksand/quicksand-bold.woff2') format('woff'), // Pretty Modern Browsers
+  url('../fonts/quicksand/quicksand-bold.woff') format('woff'), // Pretty Modern Browsers
 }
 
 // Quicksand-Regular
@@ -16,12 +13,9 @@
   font-weight: normal;
   font-family: 'Quicksand';
   font-style: normal;
-  src: url('../fonts/quicksand/quicksand-regular.eot'); // IE9 Compat Modes
   src:
-    url('../fonts/quicksand/quicksand-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-        url('../fonts/quicksand/quicksand-regular.woff') format('woff'), // Pretty Modern Browsers
-        url('../fonts/quicksand/quicksand-regular.woff2') format('woff'), // Pretty Modern Browsers
-        url('../fonts/quicksand/quicksand-regular.ttf') format('truetype'), // Safari, Android, iOS
+  url('../fonts/quicksand/quicksand-regular.woff2') format('woff'), // Pretty Modern Browsers
+  url('../fonts/quicksand/quicksand-regular.woff') format('woff'), // Pretty Modern Browsers
 }
 
 // Montserrat-Bold
@@ -29,24 +23,18 @@
   font-weight: bold;
   font-family: 'Montserrat';
   font-style: normal;
-  src: url('../fonts/montserrat/montserrat-bold.eot'); // IE9 Compat Modes
   src:
-    url('../fonts/montserrat/montserrat-bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-        url('../fonts/montserrat/montserrat-bold.woff') format('woff'), // Pretty Modern Browsers
-        url('../fonts/montserrat/montserrat-bold.woff2') format('woff'), // Pretty Modern Browsers
-        url('../fonts/montserrat/montserrat-bold.ttf') format('truetype'), // Safari, Android, iOS
+  url('../fonts/montserrat/montserrat-bold.woff2') format('woff'), // Pretty Modern Browsers
+  url('../fonts/montserrat/montserrat-bold.woff') format('woff'), // Pretty Modern Browsers
 }
 
 // Montserrat-Regular
 @font-face {
   font-weight: normal;
   font-family: 'Montserrat';
-  src: url('../fonts/montserrat/montserrat-regular.eot'); // IE9 Compat Modes
   src:
-    url('../fonts/montserrat/montserrat-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
-        url('../fonts/montserrat/montserrat-regular.woff') format('woff'), // Pretty Modern Browsers
-        url('../fonts/montserrat/montserrat-regular.woff2') format('woff'), // Pretty Modern Browsers
-        url('../fonts/montserrat/montserrat-regular.ttf') format('truetype'), // Safari, Android, iOS
+  url('../fonts/montserrat/montserrat-regular.woff2') format('woff'), // Pretty Modern Browsers
+  url('../fonts/montserrat/montserrat-regular.woff') format('woff'), // Pretty Modern Browsers
 }
 
 // Material-icons
@@ -54,12 +42,9 @@
   font-weight: normal;
   font-family: 'Material Icons';
   font-style: normal;
-  src: url('../fonts/material-icons/material-icons-regular.eot'); /* For IE6-8 */
   src:
-    url('../fonts/material-icons/material-icons-regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/material-icons/material-icons-regular.woff') format('woff'),
-    url('../fonts/material-icons/material-icons-regular.woff2') format('woff2'),
-    url('../fonts/material-icons/material-icons-regular.ttf') format('truetype'),
+  url('../fonts/material-icons/material-icons-regular.woff2') format('woff2'),
+  url('../fonts/material-icons/material-icons-regular.woff') format('woff'),
 }
 
 /*!
@@ -70,10 +55,7 @@
   font-weight: normal;
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
-  src: url("../fonts/font-awesome-5-brands/fa-brands-400.eot");
   src:
-    url("../fonts/font-awesome-5-brands/fa-brands-400.eot?#iefix") format("embedded-opentype"),
     url("../fonts/font-awesome-5-brands/fa-brands-400.woff2") format("woff2"),
     url("../fonts/font-awesome-5-brands/fa-brands-400.woff") format("woff"),
-    url("../fonts/font-awesome-5-brands/fa-brands-400.ttf") format("truetype"),
 }
