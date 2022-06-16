@@ -1,7 +1,7 @@
-import './__caption/booking__caption';
+import './__caption/bookingCaption';
 import '../../form-elements/button/button';
-import '../../form-elements/dropdown-date/dropdown-date';
-import '../../form-elements/dropdown/_guests/dropdown-guests';
+import '../../form-elements/dropdown-date/dropdownDate';
+import '../../form-elements/dropdown/_guests/dropdownGuests';
 
 import './booking.scss';
 import '../card-background-border.scss';
