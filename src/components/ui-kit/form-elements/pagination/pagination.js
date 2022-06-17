@@ -9,7 +9,7 @@ import './pagination.scss';
 
 function simpleTemplating(rooms) {
   let html = '';
-  $.each(rooms, function (index, room) {
+  $.each(rooms, (index, room) => {
     const locals = {
       room,
     };
@@ -52,11 +52,9 @@ function initPagination() {
     autoHideNext: true,
     prevText: '',
     nextText: '',
-    footer: (currentPage) => {
-      return initFooter(currentPage, pSize);
-    },
+    footer: (currentPage) => initFooter(currentPage, pSize),
     callback(rooms) {
-      var html = simpleTemplating(rooms);
+      const html = simpleTemplating(rooms);
       $('.search-room-room-cards__grid-layout').html(html);
     },
   };
