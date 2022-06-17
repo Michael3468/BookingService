@@ -25,7 +25,9 @@ class DropdownGuests extends Dropdown {
       counter.value = 0;
     });
 
-    const decrementButtons = this.elem.querySelectorAll('.js-dropdown__button-decrement');
+    const decrementButtons = this.elem.querySelectorAll(
+      '.js-dropdown__button-decrement',
+    );
     decrementButtons.forEach((element) => {
       element.classList.remove('dark');
     });
@@ -40,8 +42,10 @@ class DropdownGuests extends Dropdown {
 
   updateDropdownGuestsSelectionText() {
     const adultsNum = Number(this.dropdownCounters[0].value);
-    const guestsNum = Number(this.dropdownCounters[0].value)
-                    + Number(this.dropdownCounters[1].value);
+    const guestsNum = (
+      Number(this.dropdownCounters[0].value)
+      + Number(this.dropdownCounters[1].value)
+    );
     const babiesNum = Number(this.dropdownCounters[2].value);
 
     let guestsText;
@@ -73,14 +77,18 @@ class DropdownGuests extends Dropdown {
     }
 
     const isGuestsOrBabies = guestsNum > 0 || babiesNum > 0;
-    const isChildsWithoutAdults = adultsNum === 0 && (babiesNum > 0 || guestsNum > 0);
+    const isChildsWithoutAdults = (
+      adultsNum === 0 && (babiesNum > 0 || guestsNum > 0)
+    );
     const isGuests = guestsNum > 0 && babiesNum > 0;
 
     // cleanButton visibility
     if (isGuestsOrBabies) {
       this.cleanButton.classList.add('dropdown-guests__button_clean_visible');
     } else {
-      this.cleanButton.classList.remove('dropdown-guests__button_clean_visible');
+      this.cleanButton.classList.remove(
+        'dropdown-guests__button_clean_visible',
+      );
     }
     // cleanButton visibility end
 
@@ -110,3 +118,13 @@ if (dropdownGuests) {
     new DropdownGuests(dropdown);
   });
 }
+
+document.addEventListener('click', (e) => {
+  // close dropdown__menu
+  if (!e.target.closest('.js-dropdown__body')) {
+    const menus = document.querySelectorAll('.js-dropdown__menu');
+    menus.forEach((menu) => {
+      menu.classList.add('dropdown__menu_hidden');
+    });
+  }
+});

@@ -99,3 +99,13 @@ if (dropdownOptions) {
     new DropdownOptions(item);
   });
 }
+
+document.addEventListener('click', (e) => {
+  // close dropdown__menu
+  if (!e.target.closest('.js-dropdown__body')) {
+    const menus = document.querySelectorAll('.js-dropdown__menu');
+    menus.forEach((menu) => {
+      menu.classList.add('dropdown__menu_hidden');
+    });
+  }
+});
