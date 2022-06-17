@@ -1,4 +1,4 @@
-import '../../cards/date-picker/date-picker';
+import '../../cards/date-picker/datePicker';
 
 import './dropdown-date.scss';
 

@@ -10,14 +10,14 @@
     margin-bottom: rem(140);
   }
 
-  &-column-1,
-  &-column-2 {
+  &-column-left,
+  &-column-center {
     width: rem(380);
     margin-top: rem(12);
     margin-right: rem(40);
   }
 
-  &-column-3 {
+  &-column-right {
     width: rem(320);
     margin-top: rem(12);
   }

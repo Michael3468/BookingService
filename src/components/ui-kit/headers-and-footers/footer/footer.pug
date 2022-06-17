@@ -10,7 +10,7 @@ mixin footer(params = {})
 
   - copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
 
-  if footerType != "mobile"
+  if footerType !== "mobile"
     footer.footer
       .footer__container
         .footer__grid-layout
@@ -84,14 +84,14 @@ mixin footer(params = {})
 
   //- mobile footer
   else
-    .footer.footer__mob
+    .footer.footer__mobile
       .footer__container
         .footer__grid-layout
-          .footer__grid-layout-logo.footer__grid-layout-logo_mob
+          .footer__grid-layout-logo.footer__grid-layout-logo_mobile
             +logo({ type: 'footer' })
 
-    .sub-footer.sub-footer__mob
-      .sub-footer__container.sub-footer__container_mob
+    .sub-footer.sub-footer__mobile
+      .sub-footer__container.sub-footer__container_mobile
         .sub-footer__copyright
           p #{copyrightText}
 

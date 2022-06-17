@@ -1,4 +1,4 @@
-import '../../form-elements/dropdown/_guests/dropdown-guests';
+import '../../form-elements/dropdown/_guests/dropdownGuests';
 
 import './room-search.scss';
 import '../card-background-border.scss';

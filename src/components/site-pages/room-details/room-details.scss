@@ -24,16 +24,16 @@
     }
   }
 
-  &__right {
+  &__images_right {
     display: flex;
     flex-direction: column;
   }
 
-  &_big-size {
+  &_size_big {
     width: 100%;
   }
 
-  &_middle-size {
+  &_size_middle {
     width: 100%;
   }
 }
@@ -48,13 +48,13 @@
     column-gap: rem(50);
   }
 
-  &-column-1 {
+  &-column-info {
     @media only screen and (max-width: 800px) {
       order: 1;
     }
   }
 
-  &-column-2 {
+  &-column-booking-card {
     min-width: rem(380);
 
     @media only screen and (max-width: 800px) {
@@ -100,7 +100,7 @@
     margin-bottom: rem(21);
     font-family: $secondFont;
 
-    &_position {
+    &_margin_left {
       margin-left: rem(20);
     }
   }

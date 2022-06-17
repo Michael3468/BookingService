@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import 'paginationjs/dist/pagination';
-import '../../cards/room-card/room-card';
+import '../../cards/room-card/roomCard';
 
 import roomCard from '../../cards/room-card/room-card-template.pug';
 import data from '../../../../assets/json/rooms.json';
@@ -9,11 +9,11 @@ import './pagination.scss';
 
 function simpleTemplating(rooms) {
   let html = '';
-  $.each(rooms, function (index, room) {
-      const locals = {
-        room,
-      }
-      html += roomCard(locals);
+  $.each(rooms, (index, room) => {
+    const locals = {
+      room,
+    };
+    html += roomCard(locals);
   });
   return html;
 }
@@ -52,14 +52,12 @@ function initPagination() {
     autoHideNext: true,
     prevText: '',
     nextText: '',
-    footer: (currentPage) => {
-      return initFooter(currentPage, pSize);
-    },
+    footer: (currentPage) => initFooter(currentPage, pSize),
     callback(rooms) {
-      var html = simpleTemplating(rooms);
+      const html = simpleTemplating(rooms);
       $('.search-room-room-cards__grid-layout').html(html);
     },
-  }
+  };
 
   container.pagination(config);
   container.addHook('afterPaging', initSlickSlider);

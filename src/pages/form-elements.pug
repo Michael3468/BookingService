@@ -29,7 +29,7 @@ block content
 
   .first-container.container
 
-    .column-1
+    .column-left
 
       .block-margin
         +text-field({
@@ -84,7 +84,7 @@ block content
           })
 
 
-    .column-2
+    .column-center
 
       .block-margin
         +checkbox-buttons({
@@ -142,7 +142,7 @@ block content
           })
 
 
-    .column-3
+    .column-right
 
       .mini-column
         +range-slider({
@@ -182,7 +182,7 @@ block content
 
   .second-container.container
 
-    .column-1
+    .column-left
 
       .mini-column
 
@@ -205,7 +205,7 @@ block content
           })
 
 
-    .column-2
+    .column-center
 
       +dropdown({
         leftCaption: "dropdown",
@@ -215,7 +215,7 @@ block content
       })
 
 
-    .column-3
+    .column-right
 
       +dropdown({
         leftCaption: "dropdown",
@@ -228,7 +228,7 @@ block content
 
   .third-container.container
 
-    .column-1
+    .column-left
 
       .mini-column
         +checkbox-buttons({ hidden: "true" })
@@ -236,14 +236,14 @@ block content
         .block-margin.checkbox-buttons-expandable-list-margin
           +checkbox-buttons()
 
-    .column-2
+    .column-center
 
       .mini-column
         +rich-checkbox-buttons({
           caption : "rich checkbox buttons",
         })
 
-    .column-3
+    .column-right
 
       .mini-column
         +bullet-list({ caption: "bullet list" })
@@ -251,7 +251,7 @@ block content
 
   .fourth-container.container
 
-    .column-1
+    .column-left
 
       +icon-text-list({
         items: [
@@ -268,7 +268,7 @@ block content
         ]
       })
 
-    .column-4
+    .column-comment
 
       .comment-margin
         +comment({

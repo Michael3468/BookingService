@@ -1,4 +1,4 @@
-import '../filter-date-picker/filter-date-picker';
+import '../filter-date-picker/filterDatePicker';
 
 import './filter-date-dropdown.scss';
 

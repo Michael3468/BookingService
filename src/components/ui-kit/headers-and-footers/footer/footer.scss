@@ -24,7 +24,7 @@
     padding-top: rem(40);
   }
 
-  &__mob {
+  &__mobile {
     height: auto;
     border-bottom: none;
   }
@@ -118,7 +118,7 @@
       margin-top: rem(15);
     }
 
-    &_mob {
+    &_mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -135,7 +135,7 @@
     text-align: center;
   }
 
-  &__mob {
+  &__mobile {
     align-items: flex-start;
     height: rem(207);
   }
@@ -169,7 +169,7 @@
       margin-top: rem(19);
     }
 
-    &_mob {
+    &_mobile {
       display: grid;
       grid-column: span 12;
       align-items: flex-start;

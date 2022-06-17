@@ -1,15 +1,15 @@
 import './search-room.scss';
 
-import '../../ui-kit/cards/room-card/room-card';
+import '../../ui-kit/cards/room-card/roomCard';
 
-import '../../ui-kit/form-elements/checkbox-buttons/checkbox-buttons';
-import '../../ui-kit/form-elements/custom-checkbox/custom-checkbox';
-import '../../ui-kit/form-elements/dropdown/_guests/dropdown-guests';
-import '../../ui-kit/form-elements/dropdown/_options/dropdown-options';
-import '../../ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown';
+import '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
+import '../../ui-kit/form-elements/custom-checkbox/customCheckbox';
+import '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
+import '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
+import '../../ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
 import '../../ui-kit/form-elements/pagination/pagination';
-import '../../ui-kit/form-elements/range-slider/range-slider';
-import '../../ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons';
+import '../../ui-kit/form-elements/range-slider/rangeSlider';
+import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
 import '../../ui-kit/headers-and-footers/header/header';
 import '../../ui-kit/headers-and-footers/footer/footer';
