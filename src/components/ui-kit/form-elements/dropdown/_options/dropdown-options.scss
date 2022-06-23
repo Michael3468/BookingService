@@ -6,16 +6,16 @@
   display: flex;
   justify-content: space-between;
 
-  &_left {
+  &_position_left {
     margin-bottom: $inputCapMarBottom;
   }
 
-  &_right {
+  &_position_right {
     font-weight: normal;
   }
 }
 
-.dropdown__body_top {
+.dropdown__body-top {
   display: flex;
   flex-direction: row;
   align-items: center;

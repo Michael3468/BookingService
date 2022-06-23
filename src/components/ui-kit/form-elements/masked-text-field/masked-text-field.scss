@@ -8,11 +8,11 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: $inputCapMarBottom;
-  }
 
-  &-left {
-    display: flex;
-    justify-self: flex-start;
+    &_position_left {
+      display: flex;
+      justify-self: flex-start;
+    }
   }
 
   &__input {

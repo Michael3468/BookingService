@@ -5,7 +5,7 @@ import './dropdown-guests.scss';
 class DropdownGuests extends Dropdown {
   constructor(elem) {
     super(elem);
-    this.cleanButton = elem.querySelector('.js-dropdown-guests__button_clean');
+    this.cleanButton = elem.querySelector('.js-dropdown-guests__button-clean');
     this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
   }
 
@@ -33,7 +33,7 @@ class DropdownGuests extends Dropdown {
     });
 
     this.selectionText.innerText = 'Сколько гостей';
-    this.cleanButton.classList.remove('dropdown-guests__button_clean_visible');
+    this.cleanButton.classList.remove('dropdown-guests__button-clean_visible');
   }
 
   apply() {
@@ -84,10 +84,10 @@ class DropdownGuests extends Dropdown {
 
     // cleanButton visibility
     if (isGuestsOrBabies) {
-      this.cleanButton.classList.add('dropdown-guests__button_clean_visible');
+      this.cleanButton.classList.add('dropdown-guests__button-clean_visible');
     } else {
       this.cleanButton.classList.remove(
-        'dropdown-guests__button_clean_visible',
+        'dropdown-guests__button-clean_visible',
       );
     }
     // cleanButton visibility end

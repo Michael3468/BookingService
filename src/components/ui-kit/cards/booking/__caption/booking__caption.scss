@@ -11,7 +11,7 @@
   }
 }
 
-.booking__caption-left {
+.booking__caption_positon_left {
   display: flex;
   flex-direction: row;
   margin-top: rem(10);
@@ -56,7 +56,7 @@
   text-transform: uppercase;
 }
 
-.booking__caption-right {
+.booking__caption_positon_right {
   display: flex;
   flex-direction: row;
   align-self: flex-end;
