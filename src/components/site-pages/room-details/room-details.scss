@@ -10,7 +10,6 @@
 
     &__left {
       width: 100%;
-      margin-bottom: rem(1);
     }
 
     &__right {
@@ -55,7 +54,7 @@
   }
 
   &-column-booking-card {
-    min-width: rem(380);
+    min-width: rem(300);
 
     @media only screen and (max-width: 800px) {
       order: -1;
