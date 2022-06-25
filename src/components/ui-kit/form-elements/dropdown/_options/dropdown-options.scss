@@ -5,6 +5,7 @@
 .dropdown__caption {
   display: flex;
   justify-content: space-between;
+  margin-bottom: rem(5);
 
   &_position_left {
     margin-bottom: $inputCapMarBottom;

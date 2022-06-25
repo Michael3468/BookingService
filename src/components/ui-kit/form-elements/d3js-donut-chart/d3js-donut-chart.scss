@@ -4,6 +4,7 @@
 // chart styles
 .d3js-donut-chart {
   display: flex;
+  margin-left: rem(1);
 
   &__chart {
     transform: rotateY(180deg);
@@ -27,8 +28,8 @@
 
   // legend styles
   &__legend {
-    margin-top: rem(27);
-    margin-left: rem(32);
+    margin-top: rem(25);
+    margin-left: rem(30);
 
     @media screen and (max-width: $phoneWidth) {
       margin-left: rem(15);
@@ -40,7 +41,7 @@
     font-size: rem(14);
     font-family: $mainFont;
     line-height: rem(24);
-    letter-spacing: rem(0.8);
+    letter-spacing: rem(1.2);
   }
   $size: rem(10);
 
