@@ -19,13 +19,13 @@
     padding: rem(13) rem(10) rem(12) rem(15);
     color: $DarkShade75;
     text-transform: uppercase;
-  
+
     @include input-style;
-  
+
     &::placeholder {
       color: $DarkShade25;
     }
-  
+
     &:hover {
       @include like-hover;
     }
