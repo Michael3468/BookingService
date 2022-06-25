@@ -15,11 +15,12 @@ mixin radio-buttons(params = {})
 
     .radio-buttons__items
       each item in items
-        p.radio-buttons__text
+        label.radio-buttons__label
           input.radio-buttons__input(
-            type = "radio",
-            name = name,
-            value = item.value,
-            checked = item.isChecked,
+            type = 'radio',
+            name = 'name',
+            vale = item.value,
+            checked = item.isChecked
           )
-          label.radio-buttons__label #{item.value}
+          .radio-buttons__radio
+          .radio-buttons__label-text #{item.value}
