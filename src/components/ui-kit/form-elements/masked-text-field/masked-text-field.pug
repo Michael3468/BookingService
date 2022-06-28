@@ -8,16 +8,9 @@ mixin masked-text-field(params = {})
 
   .masked-text-field
     .masked-text-field__caption
-      h3.masked-text-field__caption_left= leftCaption
+      h3.masked-text-field__caption_position_left= leftCaption
     input.masked-text-field__input.js-masked-text-field__input(
       type = "text"
       name = inpName
       placeholder = inpPlaceholder
     )
-
-
-//- examples
-//- +masked-text-field({
-//-   leftCaption: "masked text field",
-//-   inpName: "date",
-//- })

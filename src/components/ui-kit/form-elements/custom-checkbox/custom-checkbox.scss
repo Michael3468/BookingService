@@ -39,26 +39,26 @@
 $richCheckboxTextMargin: 30px;
 
 .custom-checkbox__text {
-  font-family: $secondFont;
   margin-bottom: rem(2);
   margin-left: $richCheckboxTextMargin;
   color: $DarkShade75;
   font-size: rem(14);
-  white-space: pre-line;
+  font-family: $secondFont;
   line-height: rem(19);
+  white-space: pre-line;
 
   &_bold {
-    font-weight: bold;
     margin-bottom: rem(6);
+    font-weight: bold;
   }
 }
 
 .custom-checkbox__p {
-  font-family: $secondFont;
   margin-left: $richCheckboxTextMargin;
   color: $DarkShade50;
   font-weight: normal;
   font-size: rem(12);
+  font-family: $secondFont;
   font-family: $secondFont;
   line-height: rem(14);
   letter-spacing: rem(0);

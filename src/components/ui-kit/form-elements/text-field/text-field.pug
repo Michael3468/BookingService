@@ -15,10 +15,10 @@ mixin text-field(params = {})
   .text-field(class = hover)
     .text-field__caption
       if (leftCaption)
-        h3.text-field__caption-left= leftCaption
+        h3.text-field__caption_position_left= leftCaption
 
       if (rightCaption)
-        h3.text-field__caption-right= rightCaption
+        h3.text-field__caption_position_right= rightCaption
 
     .text-field__input-item
       input.text-field__input(
@@ -35,41 +35,3 @@ mixin text-field(params = {})
             tabindex = "0"
             type = 'submit'
           ) arrow_forward
-      
-//- examples
-//- +text-field({
-//-   inpType: "email",
-//-   inpName: "email",
-//-   inpPlaceholder: "Email",
-//- })
-
-//- +text-field({
-//-   inpType: "password",
-//-   inpName: "password",
-//-   inpPlaceholder: "Пароль",
-//- })
-
-//- +text-field({
-//-   leftCaption: "Данные для входа в сервис",
-//-   inpType: "email",
-//-   inpName: "email",
-//-   inpPlaceholder: "Email",
-//- })
-
-//- mask https://givik.ru/posts/jquery-mask-plugin-primery-ispolzovaniya
-//-
-//- masked text-field
-//- +text-field({
-//-   leftCaption: "masked text field",
-//-   inpType: "date",
-//-   inpName: "date",
-//- })
-
-//- subscription text field
-//- +text-field({
-//-   leftCaption: "subscription text field",
-//-   inpType: "email",
-//-   inpName: "email",
-//-   inpPlaceholder: "Email",
-//-   isArrow: "true",
-//- })

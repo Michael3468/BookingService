@@ -39,12 +39,12 @@ mixin dropdown(params = {})
 
   .dropdown(class = `js-${type}`)
     .dropdown__caption
-      h3.dropdown__caption_left= leftCaption
+      h3.dropdown__caption_positon_left= leftCaption
       if (rightCaption)
-        h3.dropdown__caption_right= rightCaption
+        h3.dropdown__caption_positon_right= rightCaption
 
     .dropdown__body.js-dropdown__body
-      .dropdown__body_top.js-dropdown__body_top(
+      .dropdown__body-top.js-dropdown__body-top(
         data-dd-action = "showHide"
         tabindex = "0"
       )
@@ -101,56 +101,17 @@ mixin dropdown(params = {})
         if (type == "dropdown-guests")
           .dropdown-guests__buttons
             if (cleanButtonVisible == "true")
-              - cleanButtonClass = "dropdown-guests__button_clean_visible"
+              - cleanButtonClass = "dropdown-guests__button-clean_visible"
 
-            button.dropdown-guests__button_clean.js-dropdown-guests__button_clean(
+            button.dropdown-guests__button-clean.js-dropdown-guests__button-clean(
               tabindex = "0"
               class = cleanButtonClass
               data-dd-action = "clean"
               type = "button"
             ) очистить
 
-            button.dropdown-guests__button_apply.js-dropdown-guests__button_apply(
+            button.dropdown-guests__button-apply.js-dropdown-guests__button-apply(
               tabindex = "0"
               data-dd-action = "apply"
               type = "button"
             ) применить
-
-//- examples
-//- +dropdown({
-//-   type: "dropdown-guests",
-//-   selectionText: "3 гостя",
-//-   formPart: "true",
-//- })
-
-//- +dropdown({
-//-   leftCaption: "dropdown",
-//-   rightCaption: "default",
-//-   type: "dropdown-options",
-//-   selectionText: "2 спальни, 2 кровати...",
-//- })
-
-//- +dropdown({
-//-   leftCaption: "dropdown",
-//-   rightCaption: "expanded",
-//-   type: "dropdown-options",
-//-   idPostfix: "-changed-example",
-//-   selectionText: "2 спальни, 2 кровати...",
-//-   expMenuHidden: "false",
-//- })
-
-//- +dropdown({
-//-   leftCaption: "dropdown",
-//-   type: "dropdown-guests",
-//-   selectionText: "Сколько гостей",
-//-   expMenuHidden: "false",
-//- })
-
-//- +dropdown({
-//-   leftCaption: "dropdown",
-//-   type: "dropdown-guests",
-//-   idPostfix: "-changed-example",
-//-   selectionText: "3 гостя",
-//-   cleanButtonVisible: "true",
-//-   expMenuHidden: "false",
-//- })

@@ -9,11 +9,11 @@ $borderBgColor: $defaultColor;
   flex-direction: row;
   justify-content: space-between;
 
-  &_left {
+  &_position_left {
     margin-right: rem(30);
   }
 
-  &_right {
+  &_position_right {
     font-weight: normal;
   }
 }

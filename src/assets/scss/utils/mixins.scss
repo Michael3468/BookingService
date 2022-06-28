@@ -31,6 +31,10 @@
 
 @mixin card-max-width {
   max-width: rem(380);
+
+  @media screen and (max-width: $phoneWidth) {
+    max-width: rem(310);
+  }
 }
 
 @mixin input-style {

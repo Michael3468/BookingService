@@ -14,22 +14,13 @@ mixin radio-buttons(params = {})
       h3.radio-buttons__caption= leftCaption
 
     .radio-buttons__items
-      each item, index in items
-        p.radio-buttons__text
+      each item in items
+        label.radio-buttons__label
           input.radio-buttons__input(
-            id = `${name}-${index}`,
-            type = "radio",
-            name = name,
-            value = item.value,
-            checked = item.isChecked,
+            type = 'radio',
+            name = 'name',
+            vale = item.value,
+            checked = item.isChecked
           )
-          label.radio-buttons__label(for = `${name}-${index}`) #{item.value}
-
-//- +radio-buttons({
-//-   leftCaption: "Radio Buttons Name",
-//-   name: "input-name",
-//-   items: [
-//-     { value: 'value1', isChecked: 'checked' },
-//-     { value: 'value2' }
-//-   ]
-//- })
+          .radio-buttons__radio
+          .radio-buttons__label-text #{item.value}

@@ -19,13 +19,13 @@
   &__description {
     width: rem(336);
 
-    &_h1 {
+    &-h1 {
       font-weight: bold;
       font-size: rem(24);
       font-family: $secondFont;
     }
 
-    &_h2 {
+    &-h2 {
       font-weight: bold;
       font-size: rem(19);
       font-family: $secondFont;

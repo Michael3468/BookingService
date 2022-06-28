@@ -3,7 +3,7 @@
 
 @mixin cards-border {
   box-sizing: border-box;
-  padding: rem(38) rem(30) rem(29) rem(30);
+  padding: 38px 30px 29px 30px;
   background: $defaultColor;
   border: rem(1) solid rgba(0, 0, 0, 0.12);
   border-radius: rem(4);

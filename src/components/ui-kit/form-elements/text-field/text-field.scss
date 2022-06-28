@@ -8,12 +8,12 @@
   width: 100%;
   margin-bottom: $inputCapMarBottom;
 
-  &-left {
+  &_position_left {
     display: flex;
     justify-self: flex-start;
   }
 
-  &-right {
+  &_position_right {
     display: flex;
     justify-content: flex-end;
     color: $DarkShade50;

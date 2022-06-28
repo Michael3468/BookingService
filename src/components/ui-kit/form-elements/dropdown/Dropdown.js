@@ -36,7 +36,7 @@ export default class Dropdown {
   }
 
   _initListeners() {
-    const DropdownTop = this.elem.querySelector('.js-dropdown__body_top');
+    const DropdownTop = this.elem.querySelector('.js-dropdown__body-top');
     DropdownTop.addEventListener('keypress', (e) => {
       this._handleDropdownTopKeyPress(e);
     });

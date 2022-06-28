@@ -37,11 +37,11 @@ $backgroundBtnColor: $defaultColor;
   }
 
   &:hover,
-  &_hover {
+  &_button_hover {
     opacity: 0.5;
   }
 
-  &_no-background {
+  &_button_no-background {
     min-width: auto;
     padding: 0;
     color: $purple;
@@ -54,7 +54,7 @@ $backgroundBtnColor: $defaultColor;
     }
   }
 
-  &_bordered {
+  &_button_bordered {
     min-height: $height - $padding * 2 - $border-width * 2;
     color: $purple;
     line-height: $height - $padding * 2 - $border-width * 2;
@@ -72,7 +72,7 @@ $backgroundBtnColor: $defaultColor;
     }
   }
 
-  &_small {
+  &_button_small {
     min-width: unset;
     min-height: $height-small - $padding * 2;
     padding-right: $padding-small-lr;
@@ -80,7 +80,7 @@ $backgroundBtnColor: $defaultColor;
     line-height: $height-small - $padding * 2;
   }
 
-  &_small.button_bordered {
+  &_button_small.button_bordered {
     min-width: unset;
     min-height: $height-small - $padding * 2 - $border-width * 2;
     padding-right: $padding-small-lr - $border-width;
@@ -88,12 +88,12 @@ $backgroundBtnColor: $defaultColor;
     line-height: $height-small - $padding * 2 - $border-width * 2;
   }
 
-  &_block {
+  &_button_block {
     display: flex;
     width: 100%;
   }
 
-  &_with_arrow {
+  &_button_with_arrow {
     position: relative;
     justify-content: center;
 
