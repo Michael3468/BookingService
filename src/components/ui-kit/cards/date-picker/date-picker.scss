@@ -131,7 +131,6 @@
   z-index: -10;
   width: 50%;
   height: 100%;
-  background: transparent;
   background: $primaryGradient;
   opacity: 0.25;
   content: '';
@@ -143,7 +142,6 @@
   z-index: -10;
   width: 50%;
   height: 100%;
-  background: transparent;
   background: $primaryGradient;
   opacity: 0.25;
   content: '';
@@ -159,7 +157,6 @@
 .datepicker--cell.-range-from-,
 .datepicker--cell.-range-to- {
   font-weight: bold;
-  background-color: none;
   border: none;
 }
 
