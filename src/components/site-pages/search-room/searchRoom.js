@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-underscore-dangle */
 import FilterDateDropdown from '../../ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
+import DropdownOptions from '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
 
 import './search-room.scss';
 
@@ -9,7 +10,6 @@ import '../../ui-kit/cards/room-card/roomCard';
 import '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import '../../ui-kit/form-elements/custom-checkbox/customCheckbox';
 import '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
-import '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
 import '../../ui-kit/form-elements/pagination/pagination';
 import '../../ui-kit/form-elements/range-slider/rangeSlider';
 import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
@@ -69,3 +69,11 @@ new SearchRoom();
 
 // eslint-disable-next-line no-new
 new FilterDateDropdown();
+
+const dropdownOptions = document.querySelectorAll('.js-dropdown-options');
+if (dropdownOptions) {
+  dropdownOptions.forEach((item) => {
+    // eslint-disable-next-line no-new
+    new DropdownOptions(item);
+  });
+}
