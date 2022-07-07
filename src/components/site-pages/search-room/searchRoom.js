@@ -69,9 +69,9 @@ new FilterDateDropdown();
 
 const dropdownOptions = document.querySelectorAll('.js-dropdown-options');
 if (dropdownOptions) {
-  dropdownOptions.forEach((item) => {
+  dropdownOptions.forEach((dropdown) => {
     // eslint-disable-next-line no-new
-    new DropdownOptions(item);
+    new DropdownOptions(dropdown);
   });
 }
 

@@ -11,12 +11,12 @@ class DropdownOptions extends Dropdown {
     this._addListeners();
   }
 
-  _increment(event) {
+  increment(event) {
     super.increment(event);
     this.selectionText.innerText = this._updateDropdownOptionsSelectionText();
   }
 
-  _decrement(event) {
+  decrement(event) {
     super.decrement(event);
     this.selectionText.innerText = this._updateDropdownOptionsSelectionText();
   }
