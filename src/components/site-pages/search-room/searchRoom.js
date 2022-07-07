@@ -2,6 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 import FilterDateDropdown from '../../ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
 import DropdownOptions from '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
+import DropdownGuests from '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 
 import './search-room.scss';
 
@@ -9,7 +10,6 @@ import '../../ui-kit/cards/room-card/roomCard';
 
 import '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import '../../ui-kit/form-elements/custom-checkbox/customCheckbox';
-import '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 import '../../ui-kit/form-elements/pagination/pagination';
 import '../../ui-kit/form-elements/range-slider/rangeSlider';
 import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
@@ -41,8 +41,6 @@ class SearchRoom {
   }
 
   _handleWindowResize = () => {
-    console.log(this.menu);
-
     // TODO 641 constant
     if (window.innerWidth < 641) {
       this.menu.classList.add('hidden');
@@ -57,7 +55,6 @@ class SearchRoom {
       this._showColumnOptionsMenu,
     );
 
-    console.log('add listeners');
     window.addEventListener('resize', this._handleWindowResize);
     window.addEventListener('DOMContentLoaded', this._handleWindowResize);
   }
@@ -75,5 +72,13 @@ if (dropdownOptions) {
   dropdownOptions.forEach((item) => {
     // eslint-disable-next-line no-new
     new DropdownOptions(item);
+  });
+}
+
+const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
+if (dropdownGuests) {
+  dropdownGuests.forEach((dropdown) => {
+    // eslint-disable-next-line no-new
+    new DropdownGuests(dropdown);
   });
 }

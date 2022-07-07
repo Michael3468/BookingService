@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-underscore-dangle */
 import Dropdown from '../Dropdown';
 
 import './dropdown-guests.scss';
@@ -6,17 +8,19 @@ class DropdownGuests extends Dropdown {
   constructor(elem) {
     super(elem);
     this.cleanButton = elem.querySelector('.js-dropdown-guests__button-clean');
-    this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
+    this.selectionText.innerText = this._updateDropdownGuestsSelectionText();
+
+    this._addListeners();
   }
 
   increment(event) {
     super.increment(event);
-    this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
+    this.selectionText.innerText = this._updateDropdownGuestsSelectionText();
   }
 
   decrement(event) {
     super.increment(event);
-    this.selectionText.innerText = this.updateDropdownGuestsSelectionText();
+    this.selectionText.innerText = this._updateDropdownGuestsSelectionText();
   }
 
   clean() {
@@ -40,7 +44,7 @@ class DropdownGuests extends Dropdown {
     super.showHide();
   }
 
-  updateDropdownGuestsSelectionText() {
+  _updateDropdownGuestsSelectionText() {
     const adultsNum = Number(this.dropdownCounters[0].value);
     const guestsNum = (
       Number(this.dropdownCounters[0].value)
@@ -109,22 +113,18 @@ class DropdownGuests extends Dropdown {
     return 'Сколько гостей';
     // change selection text end
   }
-}
 
-const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
-if (dropdownGuests) {
-  dropdownGuests.forEach((dropdown) => {
-    // eslint-disable-next-line no-new
-    new DropdownGuests(dropdown);
-  });
-}
-
-document.addEventListener('click', (e) => {
-  // close dropdown__menu
-  if (!e.target.closest('.js-dropdown__body')) {
-    const menus = document.querySelectorAll('.js-dropdown__menu');
-    menus.forEach((menu) => {
-      menu.classList.add('dropdown__menu_hidden');
+  _addListeners() {
+    document.addEventListener('click', (e) => {
+      // close dropdown__menu
+      if (!e.target.closest('.js-dropdown__body')) {
+        const menus = document.querySelectorAll('.js-dropdown__menu');
+        menus.forEach((menu) => {
+          menu.classList.add('dropdown__menu_hidden');
+        });
+      }
     });
   }
-});
+}
+
+export default DropdownGuests;
