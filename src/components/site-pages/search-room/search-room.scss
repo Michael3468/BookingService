@@ -14,9 +14,10 @@
 .search-room-options-column {
   min-width: 266px;
 
+  // TODO 640px constant
   @media screen and (max-width: 640px) {
     position: absolute;
-    z-index: 20;
+    z-index: 55;
     padding: rem(10);
     background: $defaultColor;
     box-shadow: rem(5) rem(5) rem(10) $DarkShade75;
