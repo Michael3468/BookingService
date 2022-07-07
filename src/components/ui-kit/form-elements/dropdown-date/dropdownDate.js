@@ -1,31 +1,46 @@
-import '../../cards/date-picker/datePicker';
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-underscore-dangle */
+// TODO add eslint rules to config
+import DatePicker from '../../cards/date-picker/datePicker';
 
 import './dropdown-date.scss';
 
-function showHideDatePicker(event) {
-  if (!event.target.className.includes('dropdown-date__input')) return;
+// eslint-disable-next-line no-new
+new DatePicker();
 
-  const ddDate = event.target.closest('.js-dropdown-date');
-  const dropdownDate = ddDate.nextSibling;
-  const ddDateStatus = dropdownDate.style.display;
-  if (ddDateStatus === 'block') {
-    dropdownDate.style.display = 'none';
-  } else {
-    dropdownDate.style.display = 'block';
+class DropdownDate {
+  constructor(elem) {
+    this.elem = elem;
+
+    this._addListeners();
+  }
+
+  _addListeners() {
+    this.elem.addEventListener('click', this._showHideDatePicker);
+    this.elem.addEventListener('keypress', (e) => {
+      this._handleDropdownDateBlockKeyPress(e);
+    });
+  }
+
+  _showHideDatePicker(event) {
+    if (!event.target.className.includes('dropdown-date__input')) return;
+
+    const ddDate = event.target.closest('.js-dropdown-date');
+    const dropdownDate = ddDate.nextSibling; // js-dropdown-date__date-picker
+    const ddDateStatus = dropdownDate.style.display;
+    if (ddDateStatus === 'block') {
+      dropdownDate.style.display = 'none';
+    } else {
+      dropdownDate.style.display = 'block';
+    }
+  }
+
+  _handleDropdownDateBlockKeyPress(e) {
+    e.preventDefault();
+    if (e.code === 'Enter') {
+      this._showHideDatePicker(e);
+    }
   }
 }
 
-function handleDropdownDateBlockKeyPress(e) {
-  e.preventDefault();
-  if (e.code === 'Enter') {
-    showHideDatePicker(e);
-  }
-}
-
-(() => {
-  const DropdownDateBlock = document.querySelector('.js-dropdown-date');
-  DropdownDateBlock.addEventListener('click', showHideDatePicker);
-  DropdownDateBlock.addEventListener('keypress', (e) => {
-    handleDropdownDateBlockKeyPress(e);
-  });
-})();
+export default DropdownDate;
