@@ -4,13 +4,13 @@ import CustomCheckbox from '../../ui-kit/form-elements/custom-checkbox/customChe
 import DropdownGuests from '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 import DropdownOptions from '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
 import FilterDateDropdown from '../../ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
+import Pagination from '../../ui-kit/form-elements/pagination/pagination';
 
 import './search-room.scss';
 
 import '../../ui-kit/cards/room-card/roomCard';
 
 import '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
-import '../../ui-kit/form-elements/pagination/pagination';
 import '../../ui-kit/form-elements/range-slider/rangeSlider';
 import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
@@ -84,3 +84,5 @@ if (dropdownGuests) {
 }
 
 new CustomCheckbox();
+
+new Pagination();
