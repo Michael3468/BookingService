@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-underscore-dangle */
+import CheckboxButtons from '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import CustomCheckbox from '../../ui-kit/form-elements/custom-checkbox/customCheckbox';
 import DropdownGuests from '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 import DropdownOptions from '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
@@ -12,7 +13,6 @@ import './search-room.scss';
 
 import '../../ui-kit/cards/room-card/roomCard';
 
-import '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
 import '../../ui-kit/headers-and-footers/footer/footer';
@@ -90,3 +90,5 @@ new Pagination();
 new RangeSlider();
 
 new Header();
+
+new CheckboxButtons();
