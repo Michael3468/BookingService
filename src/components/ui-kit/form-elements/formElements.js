@@ -1,3 +1,6 @@
+/* eslint-disable no-new */
+import Pagination from './pagination/pagination';
+
 import './button/button';
 import './bullet-list/bulletList';
 import './checkbox-buttons/checkboxButtons';
@@ -10,7 +13,6 @@ import './filter-date-dropdown/filterDateDropdown';
 import './icon-text-list/iconTextList';
 import './like-button/likeButton';
 import './masked-text-field/maskedTextField';
-import './pagination/pagination';
 import './radio-buttons/radioButtons';
 import './range-slider/rangeSlider';
 import './rate-button/rateButton';
@@ -19,3 +21,5 @@ import './text-field/textField';
 import './toggle/toggle';
 
 import './form-elements.scss';
+
+new Pagination();
