@@ -7,7 +7,6 @@ import '../../form-elements/dropdown/_options/dropdown-options.scss';
 const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
 if (dropdownGuests) {
   dropdownGuests.forEach((dropdown) => {
-    // eslint-disable-next-line no-new
     new DropdownGuests(dropdown);
   });
 }

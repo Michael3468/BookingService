@@ -14,7 +14,6 @@ const dropdownDates = document.querySelectorAll('.js-dropdown-date');
 const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
 if (dropdownGuests) {
   dropdownGuests.forEach((dropdown) => {
-    // eslint-disable-next-line no-new
     new DropdownGuests(dropdown);
   });
 }

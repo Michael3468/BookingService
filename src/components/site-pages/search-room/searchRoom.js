@@ -59,17 +59,13 @@ class SearchRoom {
   }
 }
 
-// TODO move eslint-disable to eslint config
-// eslint-disable-next-line no-new
 new SearchRoom();
 
-// eslint-disable-next-line no-new
 new FilterDateDropdown();
 
 const dropdownOptions = document.querySelectorAll('.js-dropdown-options');
 if (dropdownOptions) {
   dropdownOptions.forEach((dropdown) => {
-    // eslint-disable-next-line no-new
     new DropdownOptions(dropdown);
   });
 }
@@ -77,7 +73,6 @@ if (dropdownOptions) {
 const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
 if (dropdownGuests) {
   dropdownGuests.forEach((dropdown) => {
-    // eslint-disable-next-line no-new
     new DropdownGuests(dropdown);
   });
 }
