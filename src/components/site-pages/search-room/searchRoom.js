@@ -15,6 +15,8 @@ import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
 import '../../ui-kit/headers-and-footers/footer/footer';
 
+import { smTableWidth } from '../../../assets/js/common';
+
 class SearchRoom {
   constructor() {
     this.menu = this._initMenu();
@@ -39,8 +41,7 @@ class SearchRoom {
   };
 
   _handleWindowResize = () => {
-    // TODO 641 constant
-    if (window.innerWidth < 641) {
+    if (window.innerWidth <= smTableWidth) {
       this.menu.classList.add('hidden');
     } else {
       this.menu.classList.remove('hidden');

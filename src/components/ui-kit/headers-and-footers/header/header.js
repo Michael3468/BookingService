@@ -3,6 +3,8 @@ import '../../form-elements/button/button';
 
 import './header.scss';
 
+import { smDesktopWidth } from '../../../../assets/js/common';
+
 class Header {
   constructor() {
     this.headerBurgers = this._initHeaderBurgers();
@@ -16,8 +18,7 @@ class Header {
 
   _addRemoveHiddenClass(element) {
     if (!element) return;
-    // TODO add constant (1025)
-    if (window.innerWidth < 1025) {
+    if (window.innerWidth <= smDesktopWidth) {
       element.forEach((elem) => elem.classList.add('hidden'));
     } else {
       element.forEach((elem) => elem.classList.remove('hidden'));
