@@ -12,5 +12,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'class-methods-use-this': 'off',
     'no-new': 'off',
+    'import/no-named-as-default': 'off',
+    'import/no-named-as-default-member': 'off',
   },
 };
