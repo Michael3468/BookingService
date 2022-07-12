@@ -1,4 +1,3 @@
-/* eslint-disable no-new */
 import MaskedTextField from '../../form-elements/masked-text-field/maskedTextField';
 import Toggle from '../../form-elements/toggle/toggle';
 

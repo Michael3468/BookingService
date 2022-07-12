@@ -1,4 +1,3 @@
-/* eslint-disable no-new */
 import Pagination from './pagination/pagination';
 
 import './button/button';

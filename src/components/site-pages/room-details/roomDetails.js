@@ -1,6 +1,3 @@
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable no-new */
 import LikeButton from '../../ui-kit/form-elements/like-button/likeButton';
 import Header from '../../ui-kit/headers-and-footers/header/header';
 

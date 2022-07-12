@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 export default class Dropdown {
   constructor(elem) {
     if (elem === null) return;

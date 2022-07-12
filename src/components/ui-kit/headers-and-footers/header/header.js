@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
 import '../../logo/logo';
 import '../../form-elements/button/button';
 

@@ -1,11 +1,7 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
-// TODO add eslint rules to config
 import DatePicker from '../../cards/date-picker/datePicker';
 
 import './dropdown-date.scss';
 
-// eslint-disable-next-line no-new
 new DatePicker();
 
 class DropdownDate {

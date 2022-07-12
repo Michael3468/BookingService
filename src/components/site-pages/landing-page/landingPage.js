@@ -1,6 +1,3 @@
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable no-new */
 import DropdownDate from '../../ui-kit/form-elements/dropdown-date/dropdownDate';
 import Header from '../../ui-kit/headers-and-footers/header/header';
 

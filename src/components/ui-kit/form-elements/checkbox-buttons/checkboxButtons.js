@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
 import './checkbox-buttons.scss';
 
 class CheckboxButtons {

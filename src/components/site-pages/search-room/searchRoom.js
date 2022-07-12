@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
 import CheckboxButtons from '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import CustomCheckbox from '../../ui-kit/form-elements/custom-checkbox/customCheckbox';
 import DropdownGuests from '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';

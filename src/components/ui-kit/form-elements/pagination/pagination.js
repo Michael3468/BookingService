@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-undef */
 import 'paginationjs/dist/pagination';
 import '../../cards/room-card/roomCard';

@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
 import Inputmask from 'inputmask';
 
 import './masked-text-field.scss';

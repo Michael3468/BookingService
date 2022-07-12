@@ -1,10 +1,7 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-underscore-dangle */
 import FilterDatePicker from '../filter-date-picker/filterDatePicker';
 
 import './filter-date-dropdown.scss';
 
-// eslint-disable-next-line no-new
 new FilterDatePicker();
 
 class FilterDateDropdown {
