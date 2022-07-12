@@ -130,6 +130,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
+      ignoreOrder: true,
     }),
     new CopyWebpackPlugin([
       {
