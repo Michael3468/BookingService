@@ -14,8 +14,7 @@
 .search-room-options-column {
   min-width: 266px;
 
-  // TODO 640px constant
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: $smTableWidth) {
     position: absolute;
     z-index: 55;
     padding: rem(10);

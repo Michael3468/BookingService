@@ -27,7 +27,7 @@
     @media screen and (max-width: $phoneWidth) {
       right: 0;
       left: 0;
-      max-width: 320px;
+      max-width: $smPhoneWidth;
       margin-right: auto;
       margin-left: auto;
     }

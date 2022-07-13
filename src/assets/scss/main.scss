@@ -45,7 +45,7 @@ section,
 
 .wrapper {
   width: 100%;
-  min-width: 320px;
+  min-width: $smPhoneWidth;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;

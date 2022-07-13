@@ -10,7 +10,7 @@
   background-color: $defaultColor;
   box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $smDesktopWidth) {
     &__auth-buttons {
       padding: rem(10) 0;
     }
@@ -20,7 +20,7 @@
     display: block;
     flex-direction: row;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -34,7 +34,7 @@
     z-index: 30;
     height: rem(40);
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       display: flex;
       flex-direction: column;
     }
@@ -48,7 +48,7 @@
     font-size: rem(40);
     cursor: pointer;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       display: block;
       justify-content: flex-end;
 
@@ -71,7 +71,7 @@
     justify-content: flex-end;
     width: 100%;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -79,7 +79,7 @@
       box-shadow: 0 1px 2px $DarkShade75;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       &-li {
         width: 100%;
         text-align: center;
@@ -94,7 +94,7 @@
       width: rem(446);
       line-height: rem(17);
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $smDesktopWidth) {
         width: 100%;
       }
     }
@@ -103,7 +103,7 @@
       color: $DarkShade75;
       font-weight: bold;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: $smDesktopWidth) {
         background: $menuHoverColor;
       }
     }
@@ -146,7 +146,7 @@
         background-color: $defaultColor;
         box-shadow: 0 2px 3px black;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: $smDesktopWidth) {
           width: 100%;
           text-align: center;
         }
@@ -173,7 +173,7 @@
       text-shadow: $TabindexShadow;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -188,7 +188,7 @@
     justify-content: flex-end;
     margin-left: rem(19);
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -199,7 +199,7 @@
   &__auth-buttons:last-child {
     margin-left: rem(21);
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       margin-left: 0;
     }
   }
@@ -220,7 +220,7 @@
       background: $menuHoverColor;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: $smDesktopWidth) {
       width: 100%;
     }
   } /* header dropdown end */
