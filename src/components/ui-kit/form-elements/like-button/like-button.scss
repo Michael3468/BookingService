@@ -50,13 +50,13 @@ $padding: rem(1);
   }
 }
 
-.like-button-icon::after {
+.like-button__icon::after {
   color: $DarkShade25;
   font-family: 'Material Icons', sans-serif;
   content: 'favorite_border';
 }
 
-.like-button__input:checked + .like-button-icon::after,
+.like-button__input:checked + .like-button__icon::after,
 .js-icon-checked-status::after {
   color: $purple;
   font-family: 'Material Icons', sans-serif;

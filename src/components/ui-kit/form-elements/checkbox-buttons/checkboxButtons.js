@@ -1,28 +1,59 @@
 import './checkbox-buttons.scss';
 
-const expandableCheckbox = document.querySelector('.js-checkbox-buttons__expandable-list');
-const checkboxOptions = expandableCheckbox.nextElementSibling;
-const expandMore = expandableCheckbox.lastElementChild.children[1];
+class CheckboxButtons {
+  constructor() {
+    this.expandableCheckbox = this._expandableCheckbox();
+    this.checkboxOptions = this._checkboxOptions();
+    this.expandMore = this._expandMore();
 
-function showHideCheckboxOptions() {
-  const notVisible = checkboxOptions.classList.contains('hidden');
-  if (notVisible) {
-    checkboxOptions.classList.remove('hidden');
-    expandMore.classList.add('checkbox-buttons__expandable-list-expand-more-rotate');
-  } else {
-    checkboxOptions.classList.add('hidden');
-    expandMore.classList.remove('checkbox-buttons__expandable-list-expand-more-rotate');
+    this._addListeners();
+  }
+
+  _expandableCheckbox() {
+    return document.querySelector('.js-checkbox-buttons__expandable-list');
+  }
+
+  _checkboxOptions() {
+    return this.expandableCheckbox.nextElementSibling;
+  }
+
+  _expandMore() {
+    return this.expandableCheckbox.lastElementChild.children[1];
+  }
+
+  _showHideCheckboxOptions = () => {
+    const isHidden = this._checkboxOptions().classList.contains('hidden');
+    if (isHidden) {
+      this.checkboxOptions.classList.remove('hidden');
+      this.expandMore.classList.add(
+        'checkbox-buttons__expandable-list-expand-more-rotate',
+      );
+    } else {
+      this.checkboxOptions.classList.add('hidden');
+      this.expandMore.classList.remove(
+        'checkbox-buttons__expandable-list-expand-more-rotate',
+      );
+    }
+  }
+
+  _handleCheckboxCaptionKeyPress(e) {
+    if (e.code === 'Enter') {
+      this._showHideCheckboxOptions();
+    }
+  }
+
+  _addListeners() {
+    window.addEventListener('DOMContentLoaded', () => {
+      this.expandableCheckbox.addEventListener(
+        'click',
+        this._showHideCheckboxOptions,
+      );
+
+      this.expandableCheckbox.addEventListener('keypress', (e) => {
+        this._handleCheckboxCaptionKeyPress(e);
+      });
+    });
   }
 }
 
-function handleCheckboxCaptionKeyPress(e) {
-  if (e.code === 'Enter') {
-    showHideCheckboxOptions();
-  }
-}
-
-expandableCheckbox.addEventListener('click', showHideCheckboxOptions);
-
-expandableCheckbox.addEventListener('keypress', (e) => {
-  handleCheckboxCaptionKeyPress(e);
-});
+export default CheckboxButtons;

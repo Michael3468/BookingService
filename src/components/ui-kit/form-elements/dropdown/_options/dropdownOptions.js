@@ -5,20 +5,21 @@ import './dropdown-options.scss';
 class DropdownOptions extends Dropdown {
   constructor(elem) {
     super(elem);
-    this.selectionText.innerText = this.updateDropdownOptionsSelectionText();
+    this.selectionText.innerText = this._updateDropdownOptionsSelectionText();
+    this._addListeners();
   }
 
   increment(event) {
     super.increment(event);
-    this.selectionText.innerText = this.updateDropdownOptionsSelectionText();
+    this.selectionText.innerText = this._updateDropdownOptionsSelectionText();
   }
 
   decrement(event) {
     super.decrement(event);
-    this.selectionText.innerText = this.updateDropdownOptionsSelectionText();
+    this.selectionText.innerText = this._updateDropdownOptionsSelectionText();
   }
 
-  updateDropdownOptionsSelectionText() {
+  _updateDropdownOptionsSelectionText() {
     const bedroomsCounter = this.dropdownCounters[0].value;
     const bedsCounter = this.dropdownCounters[1].value;
     const bathroomsCounter = this.dropdownCounters[2].value;
@@ -90,22 +91,18 @@ class DropdownOptions extends Dropdown {
     }
     return 'Удобства';
   }
-}
 
-const dropdownOptions = document.querySelectorAll('.js-dropdown-options');
-if (dropdownOptions) {
-  dropdownOptions.forEach((item) => {
-    // eslint-disable-next-line no-new
-    new DropdownOptions(item);
-  });
-}
-
-document.addEventListener('click', (e) => {
-  // close dropdown__menu
-  if (!e.target.closest('.js-dropdown__body')) {
-    const menus = document.querySelectorAll('.js-dropdown__menu');
-    menus.forEach((menu) => {
-      menu.classList.add('dropdown__menu_hidden');
+  _addListeners() {
+    document.addEventListener('click', (e) => {
+      // close dropdown__menu
+      if (!e.target.closest('.js-dropdown__body')) {
+        const menus = document.querySelectorAll('.js-dropdown__menu');
+        menus.forEach((menu) => {
+          menu.classList.add('dropdown__menu_hidden');
+        });
+      }
     });
   }
-});
+}
+
+export default DropdownOptions;

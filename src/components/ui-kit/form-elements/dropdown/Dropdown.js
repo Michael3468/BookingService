@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 export default class Dropdown {
   constructor(elem) {
     if (elem === null) return;
@@ -53,7 +52,6 @@ export default class Dropdown {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
   _setCounterValue(act, event) {
     const itemControls = event.target.closest('.js-dropdown__item-controls');
     const decrementButton = itemControls.querySelector('.js-dropdown__button-decrement');

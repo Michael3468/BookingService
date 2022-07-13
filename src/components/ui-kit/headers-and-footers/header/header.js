@@ -3,67 +3,90 @@ import '../../form-elements/button/button';
 
 import './header.scss';
 
-/* dropdown menu */
-function getDropdownMenu(PointerEvent) {
-  const { currentTarget } = PointerEvent;
-  return currentTarget.querySelector('.js-header__nav-dropdown-content');
-}
+import { smDesktopWidth } from '../../../../assets/js/common';
 
-function handleHeaderDropdownClick(PointerEvent) {
-  getDropdownMenu(PointerEvent).classList.toggle('hidden');
-}
+class Header {
+  constructor() {
+    this.headerBurgers = this._initHeaderBurgers();
 
-function handleHeaderDropdownKeyPress(e) {
-  if (e.code === 'Enter') {
-    handleHeaderDropdownClick(e);
+    this._addListeners();
   }
-}
 
-function handleHeaderDropdownMouseLeave(PointerEvent) {
-  getDropdownMenu(PointerEvent).classList.add('hidden');
-}
+  _initHeaderBurgers() {
+    return document.querySelectorAll('.js-header-burger');
+  }
 
-function headersDropdownShowHide() {
-  const dropdowns = document.querySelectorAll('.js-header__nav-dropdown');
+  _addRemoveHiddenClass(element) {
+    if (!element) return;
+    if (window.innerWidth <= smDesktopWidth) {
+      element.forEach((elem) => elem.classList.add('hidden'));
+    } else {
+      element.forEach((elem) => elem.classList.remove('hidden'));
+    }
+  }
 
-  if (dropdowns !== undefined) {
-    dropdowns.forEach((dropdown) => {
-      dropdown.addEventListener('click', handleHeaderDropdownClick);
-      dropdown.addEventListener('keypress', (e) => {
-        handleHeaderDropdownKeyPress(e);
-      });
+  _addListeners() {
+    document.addEventListener('DOMContentLoaded', () => {
+      this.headerNavs = document.querySelectorAll('.js-header__nav');
+      this._addRemoveHiddenClass(this.headerNavs);
 
-      dropdown.addEventListener('mouseleave', handleHeaderDropdownMouseLeave);
+      this.headerBurgers.forEach((burger) =>
+        burger.addEventListener('click', this._toggleHeaderNav)
+      );
     });
+
+    window.addEventListener('resize', () => {
+      this._addRemoveHiddenClass(this.headerNavs);
+    });
+
+    // TODO move up
+    document.addEventListener(
+      'DOMContentLoaded',
+      this._headersDropdownShowHide
+    );
+  }
+
+  _toggleHeaderNav() {
+    this.headerNavs = document.querySelectorAll('.js-header__nav');
+    this.headerNavs[0].classList.toggle('hidden');
+  }
+
+  _headersDropdownShowHide = () => {
+    const dropdowns = document.querySelectorAll('.js-header__nav-dropdown');
+
+    if (dropdowns !== undefined) {
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener('click', this._handleHeaderDropdownClick);
+        dropdown.addEventListener('keypress', (e) => {
+          this._handleHeaderDropdownKeyPress(e);
+        });
+
+        dropdown.addEventListener(
+          'mouseleave',
+          this._handleHeaderDropdownMouseLeave
+        );
+      });
+    }
+  };
+
+  _handleHeaderDropdownClick = (PointerEvent) => {
+    this._getDropdownMenu(PointerEvent).classList.toggle('hidden');
+  };
+
+  _handleHeaderDropdownKeyPress(e) {
+    if (e.code === 'Enter') {
+      this._handleHeaderDropdownClick(e);
+    }
+  }
+
+  _handleHeaderDropdownMouseLeave = (PointerEvent) => {
+    this._getDropdownMenu(PointerEvent).classList.add('hidden');
+  };
+
+  _getDropdownMenu(PointerEvent) {
+    const { currentTarget } = PointerEvent;
+    return currentTarget.querySelector('.js-header__nav-dropdown-content');
   }
 }
 
-document.addEventListener('DOMContentLoaded', headersDropdownShowHide);
-/* dropdown menu end */
-
-/* header-burger expand menu */
-const headerBurgers = document.querySelectorAll('.js-header-burger');
-const headerNavs = document.querySelectorAll('.js-header__nav');
-
-function toggleHeaderNav() {
-  headerNavs[0].classList.toggle('hidden');
-}
-
-function addRemoveHiddenClass(element) {
-  if (window.innerWidth < 1025) {
-    element.forEach((elem) => elem.classList.add('hidden'));
-  } else {
-    element.forEach((elem) => elem.classList.remove('hidden'));
-  }
-}
-
-headerBurgers.forEach((burger) => burger.addEventListener('click', toggleHeaderNav));
-
-document.addEventListener('DOMContentLoaded', () => {
-  addRemoveHiddenClass(headerNavs);
-});
-
-window.addEventListener('resize', () => {
-  addRemoveHiddenClass(headerNavs);
-});
-/* header-burger expand menu end */
+export default Header;

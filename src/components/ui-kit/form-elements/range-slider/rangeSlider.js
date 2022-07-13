@@ -17,6 +17,6 @@ import './range-slider.scss';
     const $valueTo = $('.irs-to').text();
     const $valuesRange = `${$valueFrom} ₽ - ${$valueTo} ₽`;
 
-    $('.range-slider__caption_right').text($valuesRange);
+    $('.js-range-slider__caption-right').text($valuesRange);
   });
 })();
