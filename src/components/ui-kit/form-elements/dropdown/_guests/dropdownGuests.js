@@ -28,7 +28,7 @@ class DropdownGuests extends Dropdown {
     });
 
     const decrementButtons = this.elem.querySelectorAll(
-      '.js-dropdown__button-decrement',
+      '.js-dropdown__button-decrement'
     );
     decrementButtons.forEach((element) => {
       element.classList.remove('dark');
@@ -44,14 +44,15 @@ class DropdownGuests extends Dropdown {
 
   _updateDropdownGuestsSelectionText() {
     const adultsNum = Number(this.dropdownCounters[0].value);
-    const guestsNum = (
-      Number(this.dropdownCounters[0].value)
-      + Number(this.dropdownCounters[1].value)
-    );
+    const guestsNum =
+      Number(this.dropdownCounters[0].value) +
+      Number(this.dropdownCounters[1].value);
     const babiesNum = Number(this.dropdownCounters[2].value);
 
     let guestsText;
-    switch (guestsNum) {
+    const lastguestsNum = guestsNum > 20 ? guestsNum % 10 : guestsNum;
+
+    switch (lastguestsNum) {
       case 1:
         guestsText = 'гость';
         break;
@@ -65,7 +66,9 @@ class DropdownGuests extends Dropdown {
     }
 
     let babiesText;
-    switch (babiesNum) {
+    const lastbabiesNum = babiesNum > 20 ? babiesNum % 10 : babiesNum;
+
+    switch (lastbabiesNum) {
       case 1:
         babiesText = 'младенец';
         break;
@@ -79,9 +82,8 @@ class DropdownGuests extends Dropdown {
     }
 
     const isGuestsOrBabies = guestsNum > 0 || babiesNum > 0;
-    const isChildsWithoutAdults = (
-      adultsNum === 0 && (babiesNum > 0 || guestsNum > 0)
-    );
+    const isChildsWithoutAdults =
+      adultsNum === 0 && (babiesNum > 0 || guestsNum > 0);
     const isGuests = guestsNum > 0 && babiesNum > 0;
 
     // cleanButton visibility
@@ -89,7 +91,7 @@ class DropdownGuests extends Dropdown {
       this.cleanButton.classList.add('dropdown-guests__button-clean_visible');
     } else {
       this.cleanButton.classList.remove(
-        'dropdown-guests__button-clean_visible',
+        'dropdown-guests__button-clean_visible'
       );
     }
     // cleanButton visibility end
