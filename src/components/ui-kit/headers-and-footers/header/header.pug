@@ -22,13 +22,15 @@ mixin header(params = {})
             a.header__nav-link.header__nav-link_active(
               href = "change-me"
               tabindex = "1"
-            ) О нас
+              data-text='О нас'
+            ) О&#160;нас
 
           //- css dropdown
-          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(
+          li.header__nav-li.header__nav-dropdown.js-header__nav-dropdown(
             tabindex = "2"
-          ) Услуги
+          )
             //- used material icons font
+            span.header__nav-link(data-text='Услуги') Услуги
             span.header__nav-expand-more expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
               a.header__dropdown-link(href = "change-me" tabindex = "2") Услуга-1
@@ -37,16 +39,17 @@ mixin header(params = {})
           //- css dropdown end
 
           li.header__nav-li
-            a.header__nav-link(href = "change-me" tabindex = "3") Вакансии
+            a.header__nav-link(href = "change-me" tabindex = "3" data-text='Вакансии') Вакансии
 
           li.header__nav-li
-            a.header__nav-link(href = "change-me" tabindex = "4") Новости
+            a.header__nav-link(href = "change-me" tabindex = "4" data-text='Новости') Новости
 
           //- css dropdown
-          li.header__nav-li.header__nav-dropdown.header__nav-link.js-header__nav-dropdown(
+          li.header__nav-li.header__nav-dropdown.js-header__nav-dropdown(
             tabindex = "5"
-          ) Соглашения
+          )
             //- used material icons font
+            span.header__nav-link(data-text='Соглашения') Соглашения
             span.header__nav-expand-more expand_more
             .header__nav-dropdown-content.js-header__nav-dropdown-content.hidden
               a.header__dropdown-link(href = "change-me" tabindex = "5") Соглашение-1

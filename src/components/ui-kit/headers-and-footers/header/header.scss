@@ -110,6 +110,8 @@
 
     &-link {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
       color: $DarkShade50;
       font-weight: normal;
@@ -127,17 +129,41 @@
       &:hover {
         color: $DarkShade75;
         font-weight: bold;
-        letter-spacing: rem(-0.4);
+      }
+
+      &::before {
+        position: relative;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        font-weight: bold;
+        visibility: hidden;
+        content: attr(data-text);
+        content: attr(data-text) / "";
+        user-select: none;
+        pointer-events: none;
       }
     }
 
     &-expand-more {
       @include material-icons;
+
+      color: $DarkShade50;
+    }
+
+    &-li:hover &-expand-more {
+      color: $DarkShade75;
+    }
+
+    &-li:focus &-link {
+      color: $DarkShade75;
+      font-weight: bold;
+      text-shadow: $TabindexShadow;
     }
 
     &-dropdown {
       position: relative;
-      display: inline-block;
+      display: ruby;
 
       &-content {
         position: absolute;
@@ -208,7 +234,7 @@
   &__dropdown-link {
     display: inline-block;
     width: 100%;
-    padding: 0 30px;
+    padding: 15px 30px;
     color: $DarkShade75;
     font-weight: normal;
     background: $defaultColor;
