@@ -1,3 +1,5 @@
+import tippy from 'tippy.js';
+
 import DropdownDate from '../../form-elements/dropdown-date/dropdownDate';
 import DropdownGuests from '../../form-elements/dropdown/_guests/dropdownGuests';
 
@@ -17,3 +19,11 @@ if (dropdownGuests) {
     new DropdownGuests(dropdown);
   });
 }
+
+tippy('.js-booking__options-discont', {
+  content: 'discount',
+});
+
+tippy('.js-booking__options-additional-services', {
+  content: 'additional-services',
+});
