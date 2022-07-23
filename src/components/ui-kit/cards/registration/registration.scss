@@ -5,6 +5,8 @@
 .registration {
   @include cards-border;
 
+  min-width: $cardMinWidth;
+
   &__caption {
     margin-bottom: rem(15);
     font-family: $secondFont;

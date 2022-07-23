@@ -2,18 +2,21 @@
 $mainFont: 'Quicksand', arial, sans-serif;
 $secondFont: 'Montserrat', arial, sans-serif;
 
-// Size
 $mainFontColor: #101010;
 $mainFontSize: 14px;
 $mainFontWeight: 400;
 $mainLineHeight: 1.4;
 
+// screen size
 $desktopWidth: 1280px;
 $smDesktopWidth: 1024px;
 $tableWidth: 768px;
 $smTableWidth: 640px;
 $phoneWidth: 414px;
 $smPhoneWidth: 320px;
+
+// cards width
+$cardMinWidth: 300px;
 
 // Paddings
 $desktopWidthPadding: 30px;
