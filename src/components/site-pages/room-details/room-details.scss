@@ -74,6 +74,10 @@
     }
   }
 
+  &-comment-counter {
+    color: $DarkShade50;
+  }
+
   &-container {
     @include container;
 
