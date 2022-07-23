@@ -39,5 +39,6 @@ $ npm run deploy
 "inputmask": "^5.0.7",
 "ion-rangeslider": "^2.3.1",
 "paginationjs": "^2.1.5",
-"slick-carousel": "^1.8.1"
+"slick-carousel": "^1.8.1",
+"tippy.js": "^6.3.7"
 ```
