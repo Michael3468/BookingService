@@ -2,6 +2,8 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 @import '../card-background-border.scss';
 
+@import '../../../../../node_modules/tippy.js/dist/tippy.css';
+
 .booking {
   display: flex;
   flex-direction: column;
