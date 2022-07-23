@@ -99,6 +99,10 @@
       }
     }
 
+    &-li {
+      cursor: pointer;
+    }
+
     &-li:hover {
       color: $DarkShade75;
       font-weight: bold;

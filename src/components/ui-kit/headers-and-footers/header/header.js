@@ -44,11 +44,43 @@ class Header {
       'DOMContentLoaded',
       this._headersDropdownShowHide
     );
+
+    document.addEventListener('click', (e) => {
+      this._headerNavClose(e);
+    });
   }
 
   _toggleHeaderNav() {
     this.headerNavs = document.querySelectorAll('.js-header__nav');
     this.headerNavs[0].classList.toggle('hidden');
+  }
+
+  _headerNavClose(e) {
+    this.headerNavs = document.querySelectorAll('.js-header__nav');
+
+    const isBurgerButtonVisible = window.innerWidth <= smDesktopWidth;
+
+    const isHeaderNavsVisible =
+      !this.headerNavs[0].classList.contains('hidden');
+
+    const isBurgerButtonClick = e.target.classList.contains('js-header-burger');
+
+    const isOutsideMenuClick =
+      e.target.classList.contains('header__nav-links') ||
+      e.target.classList.contains('header__nav-li') ||
+      e.target.classList.contains('header__nav-link') ||
+      e.target.classList.contains('header__nav-expand-more') ||
+      e.target.classList.contains('header__authentification') ||
+      e.target.classList.contains('header__not-authentificated');
+
+    if (
+      isBurgerButtonVisible &&
+      isHeaderNavsVisible &&
+      !isBurgerButtonClick &&
+      !isOutsideMenuClick
+    ) {
+      this.headerNavs[0].classList.add('hidden');
+    }
   }
 
   _headersDropdownShowHide = () => {
