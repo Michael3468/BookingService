@@ -1,6 +1,6 @@
 {
   "name": "fsd_step_2",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "edu project",
   "main": "index.js",
   "scripts": {
