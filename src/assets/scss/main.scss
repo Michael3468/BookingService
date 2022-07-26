@@ -46,7 +46,7 @@ section,
 .wrapper {
   width: 100%;
   min-width: $smPhoneWidth;
-  max-width: 1440px;
+  max-width: $xlDesktopWidth;
   margin-right: auto;
   margin-left: auto;
 }
