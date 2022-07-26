@@ -87,6 +87,10 @@
     margin-bottom: rem(22);
     font-family: $secondFont;
 
+    @media screen and (min-width: $lgDesktopWidth) {
+      text-align: center;
+    }
+
     @media (max-width: $desktopWidth) {
       text-align: center;
     }
@@ -104,6 +108,10 @@
     grid-column-gap: rem(32);
     grid-template-columns: repeat(auto-fill, rem(250));
     width: 100%;
+
+    @media (min-width: $lgDesktopWidth) {
+      justify-content: center;
+    }
 
     @media (max-width: $desktopWidth) {
       justify-content: center;

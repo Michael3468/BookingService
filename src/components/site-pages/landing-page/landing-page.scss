@@ -4,6 +4,8 @@
 .landing {
   &-background-img {
     position: absolute;
+    right: 0;
+    left: 0;
     z-index: -1;
     height: 830px;
     margin-right: auto;
@@ -25,6 +27,11 @@
 
     &:nth-child(3) {
       animation-delay: 20s;
+    }
+
+    @media screen and (min-width: $lgDesktopWidth) {
+      width: 100%;
+      max-width: $xlDesktopWidth;
     }
   }
 

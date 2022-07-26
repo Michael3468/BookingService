@@ -8,6 +8,8 @@ $mainFontWeight: 400;
 $mainLineHeight: 1.4;
 
 // screen size
+$xlDesktopWidth: 1920px;
+$lgDesktopWidth: 1441px;
 $desktopWidth: 1280px;
 $smDesktopWidth: 1024px;
 $tableWidth: 768px;
@@ -17,6 +19,9 @@ $smPhoneWidth: 320px;
 
 // cards width
 $cardMinWidth: 300px;
+
+// container widht
+$maxContainerWidth: 1640px; // 1920 - 280 (140 + 140)
 
 // Paddings
 $desktopWidthPadding: 30px;

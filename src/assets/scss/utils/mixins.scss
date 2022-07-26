@@ -16,9 +16,18 @@
   flex: 0 0 auto;
   flex-direction: row;
   width: 100%;
-  max-width: 1160px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: $lgDesktopWidth) {
+    max-width: 1640px; // 1920 - (140 + 140) like paddings on 1440 screen
+    padding: 0 50px;
+  }
+
+  @media screen and (max-width: $lgDesktopWidth) {
+    max-width: 1160px;
+    padding: 0 0;
+  }
 
   @media screen and (max-width: $desktopWidth) {
     padding: 0 $desktopWidthPadding;
@@ -32,7 +41,7 @@
 @mixin card-max-width {
   max-width: rem(380);
 
-  @media screen and (max-width: $phoneWidth) {
+  @media screen and (max-width: $smPhoneWidth) {
     max-width: rem(310);
   }
 }
