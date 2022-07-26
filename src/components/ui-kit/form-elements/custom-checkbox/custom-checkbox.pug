@@ -5,6 +5,7 @@ mixin custom-checkbox(params = {})
       label = '',
       text = '',
       value = '',
+      isChecked = '',
     } = params
 
   .custom-checkbox
@@ -18,10 +19,21 @@ mixin custom-checkbox(params = {})
           if (rich === 'false')
             span.custom-checkbox__text #{label}
 
-        input.custom-checkbox__input.js-custom-checkbox__input(
-          tabindex = "-1"
-          type = "checkbox"
-          name = value
-          value = value
-        )
-        span.custom-checkbox__checkbox
+        if (isChecked === 'true')
+          input.custom-checkbox__input.js-custom-checkbox__input(
+            tabindex = "-1"
+            type = "checkbox"
+            name = value
+            value = value
+            checked = isChecked
+          )
+          span.custom-checkbox__checkbox
+        else
+          input.custom-checkbox__input.js-custom-checkbox__input(
+            tabindex = "-1"
+            type = "checkbox"
+            name = value
+            value = value
+          )
+          span.custom-checkbox__checkbox
+

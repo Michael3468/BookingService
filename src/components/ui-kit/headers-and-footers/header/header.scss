@@ -5,7 +5,7 @@
 .header {
   display: flex;
   align-items: center;
-  max-width: 1440px;
+  max-width: $xlDesktopWidth;
   height: rem(70);
   background-color: $defaultColor;
   box-shadow: rem(0) rem(10) rem(20) rgba(31, 32, 65, 0.05);

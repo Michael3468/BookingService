@@ -5,6 +5,8 @@
 .room-search {
   @include cards-border;
 
+  min-width: $cardMinWidth;
+
   &__caption {
     margin-bottom: rem(21);
     font-family: $secondFont;
