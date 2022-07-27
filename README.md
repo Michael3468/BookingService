@@ -43,6 +43,16 @@ $ npm run build
 $ npm run deploy
 ```
 
+## Project file structure
+- /conf - webpack configs
+- /dist - folder for build project
+- /perfect-pixel-files - layouts screenshots
+- /src - source files
+- /src/assets - auxiliary project files
+- /src/components - site components
+- /src/pages - site pages
+- /src/static - static files (favicons, robots.txt, sitemap.xml)
+
 ## Plugins
 ```
 "jquery": "^3.6.0",
