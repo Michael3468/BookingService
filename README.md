@@ -1,5 +1,6 @@
 # **Toxin**
-Booking Service educational project.
+Booking Service educational project. This project was created to learn pug, scss, javascript and how to work with jquery plugins.
+It demonstrates ui-kit with site components and booking service with landing page, room search, room details, registration, and sign in page.
 
 ## **Github pages**
 [Main Page](https://whitedevilman.github.io/FSD/)
