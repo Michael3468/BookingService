@@ -24,6 +24,9 @@ It demonstrates ui-kit with site components and booking service with landing pag
 
 ## Build Setup:
 
+- Node.js 14.18.3
+- npm 6.14.15
+
 ```bash
 # Download repository:
 
