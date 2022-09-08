@@ -38,10 +38,6 @@
 
       @include material-icons;
     }
-
-    &:focus {
-      box-shadow: $TabindexShadow;
-    }
   }
 
   &__expand-button {

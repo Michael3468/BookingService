@@ -10,10 +10,6 @@
 
   &-link {
     font-size: rem(24);
-
-    &:focus {
-      text-shadow: $TabindexShadow;
-    }
   }
 
   &_mobile {

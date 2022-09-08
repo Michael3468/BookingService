@@ -126,7 +126,7 @@
       &:focus {
         color: $DarkShade75;
         font-weight: bold;
-        text-shadow: $TabindexShadow;
+        // text-shadow: $TabindexShadow;
       }
 
       &_active,
@@ -162,7 +162,7 @@
     &-li:focus &-link {
       color: $DarkShade75;
       font-weight: bold;
-      text-shadow: $TabindexShadow;
+      // text-shadow: $TabindexShadow;
     }
 
     &-dropdown {
@@ -199,9 +199,9 @@
     font-family: $secondFont;
     border-left: rem(1) solid #f4f3f6;
 
-    &:focus {
-      text-shadow: $TabindexShadow;
-    }
+    // &:focus {
+    //   text-shadow: $TabindexShadow;
+    // }
 
     @media screen and (max-width: $smDesktopWidth) {
       position: relative;
@@ -246,7 +246,6 @@
     &:focus,
     &:hover {
       font-weight: bold;
-      text-shadow: $TabindexShadow;
       background: $menuHoverColor;
     }
 

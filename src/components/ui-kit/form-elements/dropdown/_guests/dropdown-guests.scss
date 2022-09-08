@@ -31,12 +31,7 @@
 
     &:focus {
       color: $DarkShade75;
-      text-shadow: $TabindexShadow;
     }
   }
   // dropdown-guests--buttons.scss
-}
-
-.dropdown__body-top:focus {
-  box-shadow: $TabindexShadow;
 }
