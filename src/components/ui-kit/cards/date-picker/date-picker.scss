@@ -194,3 +194,9 @@
     width: rem(250);
   }
 }
+
+.datepicker--cell.-current-, .datepicker--cell.-current-.-in-range- {
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
