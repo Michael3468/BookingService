@@ -39,7 +39,6 @@
 
     &:focus {
       border-radius: $BorderRadius;
-      box-shadow: $TabindexShadow;
     }
 
     @media screen and (max-width: $phoneWidth) {
@@ -53,8 +52,8 @@
     @include material-icons;
 
     position: absolute;
-    top: rem(10);
-    right: 8%;
+    top: rem(5);
+    right: rem(14);
     width: rem(20);
     color: $DarkShade50;
     cursor: pointer;

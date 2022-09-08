@@ -3,10 +3,3 @@
 .dropdown__menu_hidden {
   display: none;
 }
-
-.dropdown__button-decrement,
-.dropdown__button-increment {
-  &:focus {
-    box-shadow: $TabindexShadow;
-  }
-}

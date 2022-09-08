@@ -23,6 +23,7 @@
 
 .datepicker--nav-action {
   width: rem(55);
+  height: rem(50);
 }
 
 .datepicker--nav-title {
@@ -57,7 +58,7 @@
   display: inline-block;
   align-self: start;
   width: rem(25);
-  margin-top: 14px;
+  margin: auto;
   color: $purple;
   font-weight: normal;
   font-size: rem(24); /* Preferred icon size 24px */
@@ -192,4 +193,10 @@
   .date-picker {
     width: rem(250);
   }
+}
+
+.datepicker--cell.-current-, .datepicker--cell.-current-.-in-range- {
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
