@@ -8,16 +8,16 @@ mixin registration()
   .registration
     h1.registration__caption Регистрация аккаунта
 
-    form.js-registration-form(action = "#change-me")
+    form.js-registration-form(action = '#change-me')
       .registration__name
         +text-field({
-          inpName: "firstName",
-          inpPlaceholder: "Имя",
+          inpName: 'firstName',
+          inpPlaceholder: 'Имя',
         })
 
       +text-field({
-        inpName: "lastName",
-        inpPlaceholder: "Фамилия",
+        inpName: 'lastName',
+        inpPlaceholder: 'Фамилия',
       })
 
       .registration__gender
@@ -27,34 +27,34 @@ mixin registration()
 
       .registration__email
         +text-field({
-          leftCaption: "Данные для входа в сервис",
-          inpType: "email",
-          inpName: "email",
-          inpPlaceholder: "Email",
+          leftCaption: 'Данные для входа в сервис',
+          inpType: 'email',
+          inpName: 'email',
+          inpPlaceholder: 'Email',
         })
 
       .registration__password
         +text-field({
-          inpType: "password",
-          inpName: "password",
-          inpPlaceholder: "Пароль",
+          inpType: 'password',
+          inpName: 'password',
+          inpPlaceholder: 'Пароль',
         })
 
       .registration__special-offers
         +toggle({
-          toggleId: "registration-toggle",
+          toggleId: 'registration-toggle',
         })
 
       +button({
-        mod: ["with_arrow", "block"],
-        value: "Зарегистрироваться",
-        type: "submit",
+        mod: ['with_arrow', 'block'],
+        value: 'Зарегистрироваться',
+        type: 'submit',
       })
 
     .registration__enter-button
       p.registration__enter-button-text Уже есть аккаунт на Toxin
       +button({
-        link: "./sign-in.html",
-        mod: ["big", "bordered"],
-        value: "Войти",
+        link: './sign-in.html',
+        mod: ['big', 'bordered'],
+        value: 'Войти',
       })

@@ -5,8 +5,8 @@ include ../components/ui-kit/headers-and-footers/header/header
 include ../components/ui-kit/logo/logo
 
 block variables
-  - title = "FSD Headers & Footers";
-  - description = "FSD education project | Headers & Footers page";
+  - title = 'FSD Headers & Footers';
+  - description = 'FSD education project | Headers & Footers page';
 
 block content
 
@@ -14,9 +14,9 @@ block content
 
   +header()
   .headers-and-footers
-    +header({ loginStatus: "authentificated" })
+    +header({ loginStatus: 'authentificated' })
   .headers-and-footers
     +footer()
   .headers-and-footers
     .responsive-footer-container
-      +footer({ footerType: "mobile" })
+      +footer({ footerType: 'mobile' })

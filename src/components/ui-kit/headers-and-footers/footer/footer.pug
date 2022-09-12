@@ -8,9 +8,9 @@ mixin footer(params = {})
       footerType = ''
     } = params
 
-  - copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
+  - copyrightText = 'Copyright © 2018 Toxin отель. Все права защищены.'
 
-  if footerType !== "mobile"
+  if footerType !== 'mobile'
     footer.footer
       .footer__container
         .footer__grid-layout
@@ -69,10 +69,10 @@ mixin footer(params = {})
               p.footer-nav__text Получайте специальные предложения и новости сервиса
               form.js-subscription-form(action = '#change-me')
                 +text-field({
-                  inpType: "email",
-                  inpName: "email",
-                  inpPlaceholder: "Email",
-                  isArrow: "true",
+                  inpType: 'email',
+                  inpName: 'email',
+                  inpPlaceholder: 'Email',
+                  isArrow: 'true',
                 })
 
     .sub-footer

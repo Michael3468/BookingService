@@ -7,24 +7,24 @@ mixin checkbox-buttons(params = {})
       leftCaption = '',
       hidden = 'false',
       items = [
-        { value: "breakfast", label: "Завтрак" },
-        { value: "table", label: "Письменный стол" },
-        { value: "chair", label: "Стул для кормления" },
-        { value: "bed", label: "Кроватка" },
-        { value: "TV", label: "Телевизор" },
-        { value: "shampoo", label: "Шампунь" },
+        { value: 'breakfast', label: 'Завтрак' },
+        { value: 'table', label: 'Письменный стол' },
+        { value: 'chair', label: 'Стул для кормления' },
+        { value: 'bed', label: 'Кроватка' },
+        { value: 'TV', label: 'Телевизор' },
+        { value: 'shampoo', label: 'Шампунь' },
       ]
     } = params
 
-  - visibility = hidden === "true" ? "hidden" : ""
-  - rotateClass = hidden === "false" ? "checkbox-buttons__expandable-list-expand-more-rotate" : ""
+  - visibility = hidden === 'true' ? 'hidden' : ''
+  - rotateClass = hidden === 'false' ? 'checkbox-buttons__expandable-list-expand-more-rotate' : ''
 
   .checkbox-buttons
-    if (leftCaption !== "")
+    if (leftCaption !== '')
         h3.checkbox-buttons__caption= leftCaption
     else
       .checkbox-buttons__expandable-list.js-checkbox-buttons__expandable-list(
-        tabindex = "0"
+        tabindex = '0'
       )
         .checkbox-buttons__expandable-list-caption
           h3.checkbox-buttons__expandable-list-text= caption

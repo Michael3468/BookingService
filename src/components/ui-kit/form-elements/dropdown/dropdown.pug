@@ -25,14 +25,14 @@ mixin dropdown-menu(items)
 mixin dropdown(params = {})
   -
     const {
-      leftCaption = "гости",
-      rightCaption = "",
-      type = "dropdown-guests",
-      idPostfix = "-changed-example",
-      selectionText = "3 гостя",
-      expMenuHidden = "true",
-      formPart = "false",
-      cleanButtonVisible = "true",
+      leftCaption = 'гости',
+      rightCaption = '',
+      type = 'dropdown-guests',
+      idPostfix = '-changed-example',
+      selectionText = '3 гостя',
+      expMenuHidden = 'true',
+      formPart = 'false',
+      cleanButtonVisible = 'true',
     } = params
 
   - menuHidden = expMenuHidden === 'true' ? 'dropdown__menu_hidden' : ''
@@ -61,33 +61,33 @@ mixin dropdown(params = {})
         if (type == "dropdown-options")
           -
             items = {
-              "item1": { name: "Спальни", vName: "bedrooms" },
-              "item2": { name: "Кровати", vName: "beds" },
-              "item3": { name: "Ванные комнаты", vName: "bathrooms" },
+              'item1': { name: 'Спальни', vName: 'bedrooms' },
+              'item2': { name: 'Кровати', vName: 'beds' },
+              'item3': { name: 'Ванные комнаты', vName: 'bathrooms' },
             };
 
-          if (idPostfix == "-changed-example")
+          if (idPostfix == '-changed-example')
             -
               items = {
-                "item1": { name: "Спальни", vName: "bedrooms", counter: "2", class: "dark" },
-                "item2": { name: "Кровати", vName: "beds", counter: "2", class: "dark" },
-                "item3": { name: "Ванные комнаты", vName: "bathrooms" },
+                'item1': { name: 'Спальни', vName: 'bedrooms', counter: '2', class: 'dark' },
+                'item2': { name: 'Кровати', vName: 'beds', counter: '2', class: 'dark' },
+                'item3': { name: 'Ванные комнаты', vName: 'bathrooms' },
               };
 
-        if (type == "dropdown-guests")
+        if (type == 'dropdown-guests')
           -
             items = {
-              "item1": { name: "Взрослые", vName: "adults" },
-              "item2": { name: "Дети", vName: "childs" },
-              "item3": { name: "Младенцы", vName: "babies" },
+              'item1': { name: 'Взрослые', vName: 'adults' },
+              'item2': { name: 'Дети', vName: 'childs' },
+              'item3': { name: 'Младенцы', vName: 'babies' },
             };
 
-          if (idPostfix == "-changed-example")
+          if (idPostfix == '-changed-example')
             -
               items = {
-                "item1": { name: "Взрослые", vName: "adults", counter: "2", class: "dark" },
-                "item2": { name: "Дети", vName: "childs", counter: "1", class: "dark" },
-                "item3": { name: "Младенцы", vName: "babies" },
+                'item1': { name: 'Взрослые', vName: 'adults', counter: '2', class: 'dark' },
+                'item2': { name: 'Дети', vName: 'childs', counter: '1', class: 'dark' },
+                'item3': { name: 'Младенцы', vName: 'babies' },
               };
 
         //- form(action = 'change-me')
@@ -98,10 +98,10 @@ mixin dropdown(params = {})
             +dropdown-menu(items)
 
         //- dropdown buttons for dropdown-guests
-        if (type == "dropdown-guests")
+        if (type == 'dropdown-guests')
           .dropdown-guests__buttons
-            if (cleanButtonVisible == "true")
-              - cleanButtonClass = "dropdown-guests__button-clean_visible"
+            if (cleanButtonVisible == 'true')
+              - cleanButtonClass = 'dropdown-guests__button-clean_visible'
 
             button.dropdown-guests__button-clean.js-dropdown-guests__button-clean(
               tabindex = "0"
