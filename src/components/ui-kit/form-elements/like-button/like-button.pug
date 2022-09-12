@@ -5,7 +5,7 @@ mixin like-button(params = {})
       likeBtnText = '',
     } = params
 
-  if (likeBtnChecked === "checked")
+  if (likeBtnChecked === 'checked')
     .like-button-container.js-like-button-container(
       class = `js-container-${likeBtnChecked}-status`
     )
@@ -14,7 +14,7 @@ mixin like-button(params = {})
           class = `js-icon-${likeBtnChecked}-status`
         ).like-button__icon.js-like-button__icon
           input.like-button__input(
-            type = "checkbox"
+            type = 'checkbox'
             class = `js-input-${likeBtnChecked}-status`
             checked = likeBtnChecked
           )
@@ -26,5 +26,5 @@ mixin like-button(params = {})
     .like-button-container.js-like-button-container
       .like-button
         label.like-button__icon.js-like-button__icon
-          input.like-button__input(type = "checkbox")
+          input.like-button__input(type = 'checkbox')
         .like-button__content.js-like-button__content= likeBtnText

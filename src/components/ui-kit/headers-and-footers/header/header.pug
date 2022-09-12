@@ -59,25 +59,25 @@ mixin header(params = {})
 
         //- authentification block
         .header__authentification
-          if loginStatus == "authentificated"
+          if loginStatus == 'authentificated'
             .header__authentificated(tabindex = "6")
-              - userName = "Юлий Цезарь"
+              - userName = 'Юлий Цезарь'
               span.header__nav-li #{userName}
           else
             .header__not-authentificated
               .header__auth-buttons
                 +button({
-                  link: "./sign-in.html",
-                  mod: ["bordered", "small"],
-                  value: "Войти",
+                  link: './sign-in.html',
+                  mod: ['bordered', 'small'],
+                  value: 'Войти',
                   tIndex: 10,
                 })
 
               .header__auth-buttons
                 +button({
-                  link: "./registration.html",
-                  mod: ["small"],
-                  value: "Зарегистрироваться",
+                  link: './registration.html',
+                  mod: ['small'],
+                  value: 'Зарегистрироваться',
                   tIndex: 11,
                 })
 

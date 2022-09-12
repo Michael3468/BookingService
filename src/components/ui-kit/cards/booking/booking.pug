@@ -18,21 +18,21 @@ mixin booking(params = {})
     } = params
 
   .booking
-    form.js-booking-form(action = "#change-me")
+    form.js-booking-form(action = '#change-me')
       +booking-caption({
-        roomNumber: "888",
-        roomStatus: "Люкс",
+        roomNumber: '888',
+        roomStatus: 'Люкс',
         roomPrice: roomPrice,
-        captionType: "booking",
+        captionType: 'booking',
       })
 
       .booking__date-dropdown-margin
         +dropdown-date()
 
       +dropdown({
-        type: "dropdown-guests",
-        selectionText: "3 гостя",
-        formPart: "true",
+        type: 'dropdown-guests',
+        selectionText: '3 гостя',
+        formPart: 'true',
       })
 
       .booking__options
@@ -59,7 +59,7 @@ mixin booking(params = {})
         p.booking__options-result-sum= resultSum
 
       +button({
-        mod: ["with_arrow", "block"],
-        value: "Забронировать",
-        type: "submit"
+        mod: ['with_arrow', 'block'],
+        value: 'Забронировать',
+        type: 'submit'
       })
