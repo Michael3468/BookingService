@@ -126,7 +126,6 @@
       &:focus {
         color: $DarkShade75;
         font-weight: bold;
-        // text-shadow: $TabindexShadow;
       }
 
       &_active,
@@ -162,7 +161,6 @@
     &-li:focus &-link {
       color: $DarkShade75;
       font-weight: bold;
-      // TODO text-shadow: $TabindexShadow;
     }
 
     &-dropdown {
@@ -199,10 +197,6 @@
     color: $DarkShade50;
     font-family: $secondFont;
     border-left: rem(1) solid #f4f3f6;
-
-    // &:focus {
-    //   text-shadow: $TabindexShadow;
-    // }
 
     @media screen and (max-width: $smDesktopWidth) {
       position: relative;
