@@ -90,11 +90,11 @@ mixin dropdown(params = {})
                 'item3': { name: 'Младенцы', vName: 'babies' },
               };
 
-        //- form(action = 'change-me')
+        //- form(action = '404.html')
         if (formPart === 'true')
           +dropdown-menu(items)
         else
-          form(action = 'change-me')
+          form(action = '404.html')
             +dropdown-menu(items)
 
         //- dropdown buttons for dropdown-guests
