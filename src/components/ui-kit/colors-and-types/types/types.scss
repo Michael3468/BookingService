@@ -14,21 +14,35 @@
     color: $DarkShade25;
     font-weight: normal;
     font-family: $secondFont;
+    
+    &-h1 {
+      @include h1-style;
+    }
+
+    &-h2 {
+      @include h2-style;
+    }
+
+    &-h3 {
+      @include h3-style;
+    }
   }
 
   &__description {
     width: rem(336);
 
     &-h1 {
-      font-weight: bold;
-      font-size: rem(24);
+      @include h1-style;
       font-family: $secondFont;
     }
 
     &-h2 {
-      font-weight: bold;
-      font-size: rem(19);
+      @include h2-style;
       font-family: $secondFont;
+    }
+
+    &-h3 {
+      @include h3-style;
     }
   }
 }

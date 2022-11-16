@@ -87,3 +87,26 @@
     color: $DarkShade75;
   }
 }
+
+@mixin h1-style {
+  color: $DarkShade100;
+  font-weight: bold;
+  font-size: rem(24);
+  line-height: rem(30);
+}
+
+@mixin  h2-style {
+  color: $DarkShade100;
+  font-weight: bold;
+  font-size: rem(19);
+  line-height: rem(24);
+}
+
+@mixin h3-style {
+  color: $DarkShade100;
+  font-weight: bold;
+  font-size: rem(12);
+  font-family: $secondFont;
+  line-height: rem(15);
+  text-transform: uppercase;
+}

@@ -16,6 +16,11 @@ $borderBgColor: $defaultColor;
   &_position_right {
     font-weight: normal;
   }
+
+  &_position_left,
+  &_position_right {
+    @include h3-style;
+  }
 }
 
 /* rangeSlider.css */

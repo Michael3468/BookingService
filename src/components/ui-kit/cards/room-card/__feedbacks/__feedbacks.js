@@ -1,1 +1,0 @@
-import './__feedbacks.scss';

@@ -10,6 +10,7 @@
     margin-bottom: $inputCapMarBottom;
 
     &_position_left {
+      @include h3-style;
       display: flex;
       justify-self: flex-start;
     }
