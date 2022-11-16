@@ -29,6 +29,7 @@
     font-size: rem(48);
     background: $primaryGradient;
     background-clip: text;
+    transform: translateY(rem(-10));
   }
 
   &__content {
@@ -39,10 +40,10 @@
   }
 
   &__caption {
+    @include h3-style;
     margin-top: rem(4);
     margin-bottom: rem(5);
     color: $DarkShade75;
-    font-weight: bold;
     font-size: rem(14);
     text-transform: none;
   }

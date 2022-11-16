@@ -60,7 +60,7 @@
   }
 
   &__name {
-    font-weight: bold;
+    @include h2-style;
     letter-spacing: rem(1);
   }
 

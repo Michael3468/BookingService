@@ -2,5 +2,6 @@
 @import '../../../../assets/scss/utils/mixins.scss';
 
 .rich-checkbox-buttons__caption {
+  @include h3-style;
   margin-bottom: rem(16);
 }

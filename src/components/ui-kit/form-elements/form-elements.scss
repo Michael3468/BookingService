@@ -88,6 +88,7 @@
 }
 
 .like-button-caption {
+  @include h3-style;
   margin-bottom: rem(16);
 }
 
@@ -101,6 +102,7 @@
 }
 
 .rate-button-caption {
+  @include h3-style;
   margin-top: rem(21);
   margin-bottom: rem(11);
 }
@@ -115,6 +117,7 @@
 }
 
 .buttons-caption {
+  @include h3-style;
   margin-top: rem(33);
   margin-bottom: rem(16);
 }
@@ -131,6 +134,7 @@
 }
 
 .pagination-caption {
+  @include h3-style;
   margin-bottom: rem(16);
 }
 
