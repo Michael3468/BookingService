@@ -8,4 +8,8 @@
   color: $DarkShade75;
   font-weight: bold;
   margin-top: 100px;
+
+  @media screen and (max-width: $phoneWidth) {
+    font-size: rem(32);
+  }
 }
