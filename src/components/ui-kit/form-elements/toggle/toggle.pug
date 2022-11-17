@@ -11,19 +11,19 @@ mixin toggle(params = {})
   .toggle
     if (leftCaption)
       h3.toggle__caption= leftCaption
-    .toggle-body
+    .toggle__body
       if (isChecked === 'true')
-        input.toggle-button.js-toggle__button(
+        input.toggle__button.js-toggle__button(
           id = toggleId,
           type = "checkbox"
           checked = isChecked
           name = toggleName
         )
       else
-        input.toggle-button.js-toggle__button(
+        input.toggle__button.js-toggle__button(
           id = toggleId,
           type = "checkbox"
           name = toggleName
         )
 
-      label.toggle-text(for = toggleId) #{toggleBtnText}
+      label.toggle__text(for = toggleId) #{toggleBtnText}

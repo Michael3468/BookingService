@@ -11,7 +11,7 @@
   }
 }
 
-.booking__caption_positon_left {
+.booking__caption_position_left {
   display: flex;
   flex-direction: row;
   margin-top: rem(10);
@@ -20,6 +20,7 @@
 }
 
 .booking__caption-number {
+  @include h1-style;
   display: flex;
   flex-direction: row;
   color: $DarkShade100;
@@ -56,7 +57,7 @@
   text-transform: uppercase;
 }
 
-.booking__caption_positon_right {
+.booking__caption_position_right {
   display: flex;
   flex-direction: row;
   align-self: flex-end;

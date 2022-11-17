@@ -5,30 +5,30 @@ mixin login()
   .login
     h1.login__caption Войти
 
-    form.js-login-form(action = "#change-me")
+    form.js-login-form(action = '404.html')
       .login__inputs
         +text-field({
-          inpType: "email",
-          inpName: "email",
-          inpPlaceholder: "Email",
+          inpType: 'email',
+          inpName: 'email',
+          inpPlaceholder: 'Email',
         })
 
         +text-field({
-          inpType: "password",
-          inpName: "password",
-          inpPlaceholder: "Пароль",
+          inpType: 'password',
+          inpName: 'password',
+          inpPlaceholder: 'Пароль',
         })
 
       +button({
-        mod: ["with_arrow", "block"],
-        value: "Войти",
-        type: "submit"
+        mod: ['with_arrow', 'block'],
+        value: 'Войти',
+        type: 'submit'
       })
 
     .login__create-login
       p.login__create-login-text Нет аккаунта на Toxin?
       +button({
-        link: "./registration.html",
-        mod: ["big", "bordered"],
-        value: "Создать",
+        link: './registration.html',
+        mod: ['big', 'bordered'],
+        value: 'Создать',
       })

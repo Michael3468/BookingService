@@ -4,6 +4,10 @@
 .filter-date-dropdown {
   &__caption {
     margin-bottom: $inputCapMarBottom;
+
+    &-h3 {
+      @include h3-style;
+    }
   }
 
   &__input-item {

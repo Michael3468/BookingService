@@ -19,6 +19,11 @@
     color: $DarkShade50;
     font-weight: normal;
   }
+
+  &_position_left,
+  &_position_right {
+    @include h3-style;
+  }
 }
 
 .text-field__input {

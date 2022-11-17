@@ -12,7 +12,7 @@ mixin dropdown-date(params = {})
   .dropdown-date.js-dropdown-date
     .dropdown-date__item
       .dropdown-date__caption
-        h3= startDateCaption
+        h3.dropdown-date__caption-h3= startDateCaption
 
       .dropdown-date__input-item
         input.dropdown-date__input.js-start-date(
@@ -26,7 +26,7 @@ mixin dropdown-date(params = {})
 
     .dropdown-date__item
       .dropdown-date__caption
-        h3= endDateCaption
+        h3.dropdown-date__caption-h3= endDateCaption
 
       .dropdown-date__input-item
         input.dropdown-date__input.js-end-date(

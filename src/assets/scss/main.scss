@@ -25,7 +25,6 @@ html {
   }
 }
 
-section,
 .section {
   position: relative;
   padding: rem(40) 0;
@@ -71,32 +70,6 @@ section,
 
   /* Support for IE. */
   font-feature-settings: 'liga';
-}
-
-h1,
-h2,
-h3 {
-  color: $DarkShade100;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: rem(24);
-  font-family: $mainFont;
-  line-height: rem(30);
-}
-
-h2 {
-  font-size: rem(19);
-  font-family: $mainFont;
-  line-height: rem(24);
-}
-
-h3 {
-  font-size: rem(12);
-  font-family: $secondFont;
-  line-height: rem(15);
-  text-transform: uppercase;
 }
 
 p {

@@ -20,8 +20,8 @@ include ../components/ui-kit/form-elements/toggle/toggle
 include ../components/ui-kit/logo/logo
 
 block variables
-  - title = "FSD Form Elements";
-  - description = "FSD education project | Form Elements page";
+  - title = 'FSD Form Elements';
+  - description = 'FSD education project | Form Elements page';
 
 block content
 
@@ -33,54 +33,54 @@ block content
 
       .block-margin
         +text-field({
-          leftCaption: "text field",
-          rightCaption: "default",
-          inpType: "email",
-          inpName: "email",
-          inpPlaceholder: "Email",
+          leftCaption: 'text field',
+          rightCaption: 'default',
+          inpType: 'email',
+          inpName: 'email',
+          inpPlaceholder: 'Email',
         })
 
       .block-margin
         +text-field({
-          leftCaption: "text field",
-          rightCaption: "hover /focus",
-          inpPlaceholder: "This is pretty awesome",
-          hoverStyle: "true",
+          leftCaption: 'text field',
+          rightCaption: 'hover /focus',
+          inpPlaceholder: 'This is pretty awesome',
+          hoverStyle: 'true',
         })
 
       .block-margin
         +dropdown({
-          leftCaption: "dropdown",
-          type: "dropdown-guests",
-          selectionText: "Сколько гостей",
+          leftCaption: 'dropdown',
+          type: 'dropdown-guests',
+          selectionText: 'Сколько гостей',
         })
 
       .block-margin.date-margin
         +masked-text-field({
-          leftCaption: "masked text field",
-          inpName: "date",
+          leftCaption: 'masked text field',
+          inpName: 'date',
         })
 
       .block-margin.dropdown-date-margin
         +dropdown-date({
-          startDateCaption: "date dropdown",
-          endDateCaption: "date dropdown",
+          startDateCaption: 'date dropdown',
+          endDateCaption: 'date dropdown',
         })
 
       .mini-column
 
         .block-margin.date-dropdown-margin
           +filter-date-dropdown({
-            leftCaption: "filter date dropdown",
+            leftCaption: 'filter date dropdown',
           })
 
         .block-margin.subscription-text-field-margin
           +text-field({
-            leftCaption: "subscription text field",
-            inpType: "email",
-            inpName: "email",
-            inpPlaceholder: "Email",
-            isArrow: "true",
+            leftCaption: 'subscription text field',
+            inpType: 'email',
+            inpName: 'email',
+            inpPlaceholder: 'Email',
+            isArrow: 'true',
           })
 
 
@@ -88,13 +88,13 @@ block content
 
       .block-margin
         +checkbox-buttons({
-          leftCaption: "checkbox buttons",
+          leftCaption: 'checkbox buttons',
           items: [
-            { value: "allow-smoke", label: "Можно курить" },
-            { value: "allow-pet", label: "Можно с питомцами" },
+            { value: 'allow-smoke', label: 'Можно курить' },
+            { value: 'allow-pet', label: 'Можно с питомцами' },
             {
-              value: "allow guests",
-              label: "Можно пригласить гостей\n (до 10 человек)",
+              value: 'allow guests',
+              label: 'Можно пригласить гостей\n (до 10 человек)',
             },
           ]
         })
@@ -105,14 +105,14 @@ block content
       .block-margin.toggle-block-margin
         .form-elements-toggle-margin-between
           +toggle({
-            leftCaption: "toggle",
-            isChecked: "checked",
-            toggleId: "form-elements-toggle-1",
+            leftCaption: 'toggle',
+            isChecked: 'checked',
+            toggleId: 'form-elements-toggle-1',
           })
 
         .form-elements-toggle-margin-between
           +toggle({
-            toggleId: "form-elements-toggle-2",
+            toggleId: 'form-elements-toggle-2',
           })
 
       .block-margin.like-buttons-margin
@@ -120,13 +120,13 @@ block content
         .like-buttons-direction
           .like-button-margin
             +like-button({
-              leftCaption: "like button",
-              likeBtnText: "2",
+              leftCaption: 'like button',
+              likeBtnText: '2',
             })
 
           +like-button({
-            likeBtnChecked: "checked",
-            likeBtnText: "12",
+            likeBtnChecked: 'checked',
+            likeBtnText: '12',
           })
 
       .block-margin
@@ -136,9 +136,9 @@ block content
             +rate-button()
 
           +rate-button({
-            rateBtnName: "rateBtnName-2",
-            rateBtnId: "rateBtnId-2",
-            starsCount: "5",
+            rateBtnName: 'rateBtnName-2',
+            rateBtnId: 'rateBtnId-2',
+            starsCount: '5',
           })
 
 
@@ -146,7 +146,7 @@ block content
 
       .mini-column
         +range-slider({
-          leftCaption: "range slider",
+          leftCaption: 'range slider',
         })
 
       .buttons-margin
@@ -155,24 +155,24 @@ block content
           .button-margin
             +button()
 
-          +button({ mod: ["hover"] })
+          +button({ mod: ['hover'] })
 
         .buttons-block
           .button-margin
-            +button({ mod: ["big", "bordered"] })
+            +button({ mod: ['big', 'bordered'] })
 
-          +button({ mod: ["big", "bordered", "hover"] })
+          +button({ mod: ['big', 'bordered', 'hover'] })
 
         .buttons-block
           .button-margin.btn-mt
-            +button({ mod: ["no-background"] })
+            +button({ mod: ['no-background'] })
 
-          +button({ mod: ["no-background", "no-background_hover"] })
+          +button({ mod: ['no-background', 'no-background_hover'] })
 
         .buttons-block
           +button({
-            mod: ["with_arrow", "block"],
-            value: "Перейти к оплате",
+            mod: ['with_arrow', 'block'],
+            value: 'Перейти к оплате',
           })
 
       .block-margin
@@ -188,42 +188,42 @@ block content
 
         .block-margin
           +dropdown({
-            leftCaption: "dropdown",
-            rightCaption: "default",
-            type: "dropdown-options",
-            selectionText: "2 спальни, 2 кровати...",
+            leftCaption: 'dropdown',
+            rightCaption: 'default',
+            type: 'dropdown-options',
+            selectionText: '2 спальни, 2 кровати...',
           })
 
         .block-margin
           +dropdown({
-            leftCaption: "dropdown",
-            rightCaption: "expanded",
-            type: "dropdown-options",
-            idPostfix: "-changed-example",
-            selectionText: "2 спальни, 2 кровати...",
-            expMenuHidden: "false",
+            leftCaption: 'dropdown',
+            rightCaption: 'expanded',
+            type: 'dropdown-options',
+            idPostfix: '-changed-example',
+            selectionText: '2 спальни, 2 кровати...',
+            expMenuHidden: 'false',
           })
 
 
     .column-center
 
       +dropdown({
-        leftCaption: "dropdown",
-        type: "dropdown-guests",
-        selectionText: "Сколько гостей",
-        expMenuHidden: "false",
+        leftCaption: 'dropdown',
+        type: 'dropdown-guests',
+        selectionText: 'Сколько гостей',
+        expMenuHidden: 'false',
       })
 
 
     .column-right
 
       +dropdown({
-        leftCaption: "dropdown",
-        type: "dropdown-guests",
-        idPostfix: "-changed-example",
-        selectionText: "3 гостя",
-        cleanButtonVisible: "true",
-        expMenuHidden: "false",
+        leftCaption: 'dropdown',
+        type: 'dropdown-guests',
+        idPostfix: '-changed-example',
+        selectionText: '3 гостя',
+        cleanButtonVisible: 'true',
+        expMenuHidden: 'false',
       })
 
   .third-container.container
@@ -231,7 +231,7 @@ block content
     .column-left
 
       .mini-column
-        +checkbox-buttons({ hidden: "true" })
+        +checkbox-buttons({ hidden: 'true' })
 
         .block-margin.checkbox-buttons-expandable-list-margin
           +checkbox-buttons()
@@ -240,13 +240,13 @@ block content
 
       .mini-column
         +rich-checkbox-buttons({
-          caption : "rich checkbox buttons",
+          caption : 'rich checkbox buttons',
         })
 
     .column-right
 
       .mini-column
-        +bullet-list({ caption: "bullet list" })
+        +bullet-list({ caption: 'bullet list' })
 
 
   .fourth-container.container
@@ -256,14 +256,14 @@ block content
       +icon-text-list({
         items: [
           {
-            iconName: "insert_emoticon",
-            caption: "Комфорт",
-            text: "Шумопоглощающие стены",
+            iconName: 'insert_emoticon',
+            caption: 'Комфорт',
+            text: 'Шумопоглощающие стены',
           },
           {
-            iconName: "location_city",
-            caption: "Удобство",
-            text: "Окно в каждой из спален",
+            iconName: 'location_city',
+            caption: 'Удобство',
+            text: 'Окно в каждой из спален',
           },
         ]
       })
@@ -272,11 +272,11 @@ block content
 
       .comment-margin
         +comment({
-          imageName: "avatar.jpg",
-          userName: "Мурад Сарафанов",
-          commentDate: "5 дней назад",
-          feedbackText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-          likeBtnId: "likeBtnId-3",
-          likeBtnChecked: "checked",
-          likeBtnText: "12",
+          imageName: 'avatar.jpg',
+          userName: 'Мурад Сарафанов',
+          commentDate: '5 дней назад',
+          feedbackText: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+          likeBtnId: 'likeBtnId-3',
+          likeBtnChecked: 'checked',
+          likeBtnText: '12',
         })

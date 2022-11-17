@@ -8,9 +8,9 @@ mixin footer(params = {})
       footerType = ''
     } = params
 
-  - copyrightText = "Copyright © 2018 Toxin отель. Все права защищены."
+  - copyrightText = 'Copyright © 2018 Toxin отель. Все права защищены.'
 
-  if footerType !== "mobile"
+  if footerType !== 'mobile'
     footer.footer
       .footer__container
         .footer__grid-layout
@@ -22,62 +22,62 @@ mixin footer(params = {})
               | ассоциации «Отельные взгляды»
 
           .footer__grid-layout-col
-            h3 Навигация
-            ul.footer-nav
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") О нас
+            h3.footer__caption-h3 Навигация
+            ul.footer__nav
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") О нас
 
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Новости
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Новости
 
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Служба поддержки
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Служба поддержки
 
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Услуги
-
-          .footer__grid-layout-col
-            h3 О нас
-            ul.footer-nav
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") О сервисе
-
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Наша команда
-
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Вакансии
-
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Инвесторы
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Услуги
 
           .footer__grid-layout-col
-            h3 Служба поддержки
-            ul.footer-nav
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Соглашения
+            h3.footer__caption-h3 О нас
+            ul.footer__nav
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") О сервисе
 
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Сообщества
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Наша команда
 
-              li.footer-nav__item
-                a.footer-nav__link(href = "change_me" tabindex = "0") Связь с нами
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Вакансии
+
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Инвесторы
+
+          .footer__grid-layout-col
+            h3.footer__caption-h3 Служба поддержки
+            ul.footer__nav
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Соглашения
+
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Сообщества
+
+              li.footer__nav-item
+                a.footer__nav-link(href = "404.html" tabindex = "0") Связь с нами
 
           .footer__grid-layout-form
-            h3 Подписка
-            .footer-nav
-              p.footer-nav__text Получайте специальные предложения и новости сервиса
-              form.js-subscription-form(action = '#change-me')
+            h3.footer__caption-h3 Подписка
+            .footer__nav
+              p.footer__nav-text Получайте специальные предложения и новости сервиса
+              form.js-subscription-form(action = '404.html')
                 +text-field({
-                  inpType: "email",
-                  inpName: "email",
-                  inpPlaceholder: "Email",
-                  isArrow: "true",
+                  inpType: 'email',
+                  inpName: 'email',
+                  inpPlaceholder: 'Email',
+                  isArrow: 'true',
                 })
 
-    .sub-footer
-      .sub-footer__container
-        .sub-footer__copyright
+    .footer__sub-footer
+      .footer__sub-footer-container
+        .footer__sub-footer-copyright
           p #{copyrightText}
 
         +socials()
@@ -90,9 +90,9 @@ mixin footer(params = {})
           .footer__grid-layout-logo.footer__grid-layout-logo_mobile
             +logo({ type: 'footer' })
 
-    .sub-footer.sub-footer__mobile
-      .sub-footer__container.sub-footer__container_mobile
-        .sub-footer__copyright
+    .footer__sub-footer.footer__sub-footer_mobile
+      .footer__sub-footer-container.footer__sub-footer-container_mobile
+        .footer__sub-footer-copyright
           p #{copyrightText}
 
         +socials({ mobile: 'true' })

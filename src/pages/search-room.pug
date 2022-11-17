@@ -9,8 +9,8 @@ include ../components/ui-kit/form-elements/range-slider/range-slider
 include ../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
 
 block variables
-  - title = "FSD Search room";
-  - description = "FSD education project | Search room";
+  - title = 'FSD Search room';
+  - description = 'FSD education project | Search room';
 
 block content
 
@@ -21,8 +21,8 @@ block content
 
       .search-room-sidebar-element
         +dropdown({
-          type: "dropdown-guests",
-          selectionText: "Сколько гостей",
+          type: 'dropdown-guests',
+          selectionText: 'Сколько гостей',
         })
 
       .search-room-sidebar-element
@@ -32,14 +32,14 @@ block content
 
       .search-room-sidebar-element
         +checkbox-buttons({
-          leftCaption: "правила дома",
+          leftCaption: 'правила дома',
           items: [
-            { value: "allow-smoke", label: "Можно курить" },
-            { value: "allow-pet", label: "Можно с питомцами", isChecked: "true" },
+            { value: 'allow-smoke', label: 'Можно курить' },
+            { value: 'allow-pet', label: 'Можно с питомцами', isChecked: 'true' },
             {
-              value: "allow guests",
-              label: "Можно пригласить гостей\n (до 10 человек)",
-              isChecked: "true",
+              value: 'allow guests',
+              label: 'Можно пригласить гостей\n (до 10 человек)',
+              isChecked: 'true',
             },
           ]
         })
@@ -49,13 +49,13 @@ block content
 
       .search-room-sidebar-element
         +dropdown({
-          leftCaption: "удобства номера",
-          type: "dropdown-options",
-          selectionText: "Удобства",
+          leftCaption: 'удобства номера',
+          type: 'dropdown-options',
+          selectionText: 'Удобства',
         })
 
       .search-room-sidebar-element
-        +checkbox-buttons({ caption: "дополнительные удобства" })
+        +checkbox-buttons({ caption: 'дополнительные удобства' })
 
     .search-room-options-column-button.js-search-room-options-column-button.search-room-options-column-button_rotate
 

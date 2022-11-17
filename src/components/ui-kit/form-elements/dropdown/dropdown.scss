@@ -1,5 +1,13 @@
 @import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
 
 .dropdown__menu_hidden {
   display: none;
+}
+
+.dropdown__caption_positon {
+  &_left,
+  &_right {
+    @include h3-style;
+  }
 }

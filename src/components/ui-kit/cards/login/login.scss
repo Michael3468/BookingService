@@ -6,6 +6,7 @@
   @include cards-border;
 
   &__caption {
+    @include h1-style;
     margin-top: rem(2);
     margin-bottom: rem(15);
     font-family: $secondFont;

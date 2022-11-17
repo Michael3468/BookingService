@@ -8,6 +8,7 @@
   min-width: $cardMinWidth;
 
   &__caption {
+    @include h1-style;
     margin-bottom: rem(21);
     font-family: $secondFont;
 

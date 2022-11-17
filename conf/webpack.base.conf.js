@@ -33,6 +33,7 @@ module.exports = {
     'room-details': `${PATHS.site_pages}/room-details/roomDetails.js`,
     'search-room': `${PATHS.site_pages}/search-room/searchRoom.js`,
     'sign-in': `${PATHS.site_pages}/sign-in/signIn.js`,
+    '404': `${PATHS.site_pages}/404/404.js`,
 
     'cards': `${PATHS.ui_kit}/cards/cards.js`,
     'colors-and-types': `${PATHS.ui_kit}/colors-and-types/colorsAndTypes.js`,
