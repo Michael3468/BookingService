@@ -10,11 +10,11 @@ import './search-room.scss';
 
 import '../../ui-kit/cards/room-card/roomCard';
 
+import '../../ui-kit/form-elements/filter-date-picker/filterDatePicker';
 import '../../ui-kit/form-elements/range-slider/rangeSlider';
 import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
 import '../../ui-kit/headers-and-footers/footer/footer';
-
 import { smTableWidth } from '../../../assets/js/common';
 
 class SearchRoom {
@@ -33,6 +33,7 @@ class SearchRoom {
     return document.querySelector('.js-search-room-options-column-button');
   }
 
+  // TODO = () =>
   _showColumnOptionsMenu = () => {
     this.menu.classList.toggle('hidden');
     this.optionsColumnButton.classList.toggle(

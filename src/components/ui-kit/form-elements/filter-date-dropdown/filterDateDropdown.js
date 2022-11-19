@@ -1,8 +1,4 @@
-import FilterDatePicker from '../filter-date-picker/filterDatePicker';
-
 import './filter-date-dropdown.scss';
-
-new FilterDatePicker();
 
 class FilterDateDropdown {
   constructor() {
@@ -14,6 +10,7 @@ class FilterDateDropdown {
       .querySelector('.js-dropdown-date__date-picker');
     const filterStatus = filterDateDropdown.style.display;
 
+    // TODO ?:
     if (filterStatus === 'block') {
       filterDateDropdown.style.display = 'none';
     } else {
@@ -23,7 +20,7 @@ class FilterDateDropdown {
 
   _handleFilterDateDropdownKeyPress(e) {
     if (e.code === 'Enter') {
-      this._showHideDatePicker(e);
+      this._showHideDatePicker(e); // TODO e to event
     }
   }
 
@@ -31,7 +28,7 @@ class FilterDateDropdown {
     const filterDateDropdown = document.querySelector('.js-filter-date-dropdown__input');
     filterDateDropdown.addEventListener('click', this._showHideDatePicker);
     filterDateDropdown.addEventListener('keypress', (e) => {
-      this._handleFilterDateDropdownKeyPress(e);
+      this._handleFilterDateDropdownKeyPress(e); // TODO e to event
     });
   }
 }

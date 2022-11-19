@@ -9,6 +9,7 @@ import './dropdown/_guests/dropdownGuests';
 import './dropdown/_options/dropdownOptions';
 import './dropdown-date/dropdownDate';
 import './filter-date-dropdown/filterDateDropdown';
+import './filter-date-picker/filterDatePicker';
 import './icon-text-list/iconTextList';
 import './like-button/likeButton';
 import './masked-text-field/maskedTextField';
