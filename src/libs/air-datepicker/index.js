@@ -1,29 +1,31 @@
 /* eslint-disable no-undef */
 import 'air-datepicker/dist/js/datepicker.min';
 
-import './filter-date-picker.scss';
-
-const $filterDatePicker = $('.js-filter-date-picker').datepicker({
-  range: true,
-  multipleDatesSeparator: ' - ',
-  clearButton: true,
-  navTitles: {
-    days: 'MM <i>yyyy</i>',
-  },
-  dateFormat: 'dd M',
-  minDate: new Date(),
-
-  onSelect(fd) {
-    $('.js-filter-date-dropdown__input').val(fd.toLowerCase());
-  },
-});
-
-class FilterDatePicker {
+class DatePicker {
   constructor() {
-    this.elem = $filterDatePicker;
+    this.elem = this._initDatePicker();
 
     this._addApplyButton();
     this._addListeners();
+  }
+
+  _initDatePicker() {
+    const $datePicker = $('.js-date-picker').datepicker({
+      range: true,
+      multipleDatesSeparator: ' - ',
+      clearButton: true,
+      navTitles: {
+        days: 'MM <i>yyyy</i>',
+      },
+      minDate: new Date(),
+
+      onSelect(fd) {
+        $('.js-start-date').val(fd.split(' - ')[0]);
+        $('.js-end-date').val(fd.split(' - ')[1]);
+      },
+    });
+
+    return $datePicker;
   }
 
   _addApplyButton() {
@@ -35,7 +37,7 @@ class FilterDatePicker {
     }
   }
 
-  _hideFilterDatePicker(event) {
+  _hideDatePicker(event) {
     const $picker = $(event.target).closest('.js-dropdown-date__date-picker');
     const $pickerStatus = $picker.css('display');
     if ($pickerStatus === 'block') {
@@ -44,14 +46,14 @@ class FilterDatePicker {
   }
 
   _addListeners() {
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', (event) => {
       // close js-dropdown-date__date-picker
       if (
-        !e.target.closest('.js-filter-date-dropdown')
-        && !e.target.closest('.js-dropdown-date__date-picker')
-        && !e.target.classList.contains('datepicker--cell')
-        && !e.target.classList.contains('datepicker--nav-title')
-        && !e.target.classList.contains('datepicker--nav-action')
+        !event.target.closest('.js-dropdown-date')
+        && !event.target.closest('.js-dropdown-date__date-picker')
+        && !event.target.classList.contains('datepicker--cell')
+        && !event.target.classList.contains('datepicker--nav-title')
+        && !event.target.classList.contains('datepicker--nav-action')
       ) {
         const dropdownDate = document.querySelectorAll(
           '.js-dropdown-date__date-picker',
@@ -64,8 +66,8 @@ class FilterDatePicker {
     });
 
     const $applyButton = $('[data-action="apply"]');
-    $applyButton.on('click', this._hideFilterDatePicker);
+    $applyButton.on('click', this._hideDatePicker);
   }
 }
 
-export default FilterDatePicker;
+export default DatePicker;

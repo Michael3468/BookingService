@@ -1,0 +1,202 @@
+@import '../../../../assets/scss/utils/vars.scss';
+@import '../../../../assets/scss/utils/mixins.scss';
+@import '../../../../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+
+.datepicker-inline .datepicker {
+  box-sizing: border-box;
+  min-width: rem(320);
+  box-shadow: rem(0) rem(10) rem(20) $DarkShade5;
+
+  @media (max-width: $phoneWidth) {
+    min-width: rem(260);
+  }
+}
+
+.datepicker--nav {
+  min-height: rem(70);
+  border-bottom: none;
+
+  @media (max-width: $phoneWidth) {
+    width: rem(250);
+  }
+}
+
+.datepicker--nav-action {
+  width: rem(55);
+  height: rem(50);
+}
+
+.datepicker--nav-title {
+  align-self: start;
+  max-width: rem(150);
+  margin-top: 14px;
+  font-weight: bold;
+  font-size: rem(19);
+  font-family: $secondFont;
+}
+
+.datepicker--nav-title,
+.datepicker--nav-title i {
+  color: $DarkShade100;
+}
+
+.datepicker--nav-action svg {
+  display: none;
+}
+
+.datepicker--nav-action[data-action='prev']::after {
+  content: 'arrow_back';
+}
+
+.datepicker--nav-action[data-action='next']::after {
+  content: 'arrow_forward';
+}
+
+.datepicker--nav-action::after {
+  @include material-icons;
+
+  display: inline-block;
+  align-self: start;
+  width: rem(25);
+  margin: auto;
+  color: $purple;
+  font-weight: normal;
+  font-size: rem(24); /* Preferred icon size 24px */
+}
+
+.datepicker--content {
+  padding: rem(4) rem(20);
+
+  @media (max-width: $phoneWidth) {
+    width: rem(220);
+  }
+}
+
+.datepicker--days-names {
+  margin-bottom: rem(16);
+  font-weight: bold;
+  font-family: $secondFont;
+}
+
+.datepicker--day-name {
+  color: $purple;
+  font-size: rem(12);
+  text-transform: none;
+}
+
+.datepicker--cell {
+  height: rem(39);
+  color: $DarkShade50;
+  font-size: rem(12);
+  font-family: $secondFont;
+
+  @media (max-width: $phoneWidth) {
+    height: rem(30);
+  }
+}
+
+.datepicker--buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(7);
+  border: none;
+
+  @media (max-width: $phoneWidth) {
+    width: rem(250px);
+  }
+}
+
+.datepicker--button {
+  flex: none;
+  margin-top: rem(6);
+  padding: 0 rem(15);
+  color: $purple;
+  font-weight: bold;
+  font-size: rem(12);
+  font-family: $secondFont;
+  text-transform: uppercase;
+}
+
+.datepicker--cell.-range-from-,
+.datepicker--cell.-range-to-,
+.datepicker--cell.-current- {
+  position: relative;
+  border-radius: 50%;
+}
+
+.datepicker--cell.-range-from-::after {
+  position: absolute;
+  left: 50%;
+  z-index: -10;
+  width: 50%;
+  height: 100%;
+  background: $primaryGradient;
+  opacity: 0.25;
+  content: '';
+}
+
+.datepicker--cell.-range-to-::after {
+  position: absolute;
+  right: 50%;
+  z-index: -10;
+  width: 50%;
+  height: 100%;
+  background: $primaryGradient;
+  opacity: 0.25;
+  content: '';
+}
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-focus-,
+.datepicker--cell.-selected-.-current- {
+  color: $defaultColor;
+  background: $primaryGradient;
+}
+
+.datepicker--cell.-range-from-,
+.datepicker--cell.-range-to- {
+  font-weight: bold;
+  border: none;
+}
+
+.datepicker--cell.-current-,
+.datepicker--cell.-current-.-in-range- {
+  color: $defaultColor;
+  font-weight: bold;
+  background: $secondaryGradient;
+}
+
+.datepicker--cell.-in-range-::after {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  background: $primaryGradient;
+  opacity: 0.25;
+  content: '';
+}
+
+.datepicker--cell.-in-range- {
+  color: $DarkShade50;
+  background: none;
+}
+
+@media (max-width: $phoneWidth) {
+  .datepicker--cells {
+    width: rem(220);
+  }
+
+  .datepicker--body.active {
+    width: rem(220);
+  }
+
+  .date-picker {
+    width: rem(250);
+  }
+}
+
+.datepicker--cell.-current-, .datepicker--cell.-current-.-in-range- {
+  width: 38.2px;
+  margin-left: auto;
+  margin-right: auto;
+}
