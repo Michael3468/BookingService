@@ -34,7 +34,6 @@ class SearchRoom {
   }
 
   _showColumnOptionsMenu = () => {
-    console.log('show col');
     this.menu.classList.toggle('hidden');
     this.optionsColumnButton.classList.toggle(
       'search-room-options-column-button_rotate'
