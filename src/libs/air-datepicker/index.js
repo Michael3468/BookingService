@@ -2,15 +2,15 @@
 import 'air-datepicker/dist/js/datepicker.min';
 
 class DatePicker {
-  constructor() {
-    this.elem = this._initDatePicker();
+  constructor({ className }) {
+    this.elem = this._initDatePicker(className);
 
     this._addApplyButton();
     this._addListeners();
   }
 
-  _initDatePicker() {
-    const $datePicker = $('.js-date-picker').datepicker({
+  _initDatePicker(className) {
+    const $datePicker = $(className).datepicker({
       range: true,
       multipleDatesSeparator: ' - ',
       clearButton: true,
