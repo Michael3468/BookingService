@@ -18,17 +18,17 @@ class FilterDateDropdown {
     }
   }
 
-  _handleFilterDateDropdownKeyPress(e) {
-    if (e.code === 'Enter') {
-      this._showHideDatePicker(e); // TODO e to event
+  _handleFilterDateDropdownKeyPress(event) {
+    if (event.code === 'Enter') {
+      this._showHideDatePicker(event);
     }
   }
 
   _addListeners() {
     const filterDateDropdown = document.querySelector('.js-filter-date-dropdown__input');
     filterDateDropdown.addEventListener('click', this._showHideDatePicker);
-    filterDateDropdown.addEventListener('keypress', (e) => {
-      this._handleFilterDateDropdownKeyPress(e); // TODO e to event
+    filterDateDropdown.addEventListener('keypress', (event) => {
+      this._handleFilterDateDropdownKeyPress(event);
     });
   }
 }

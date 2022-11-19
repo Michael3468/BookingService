@@ -33,8 +33,8 @@ class SearchRoom {
     return document.querySelector('.js-search-room-options-column-button');
   }
 
-  // TODO = () =>
   _showColumnOptionsMenu = () => {
+    console.log('show col');
     this.menu.classList.toggle('hidden');
     this.optionsColumnButton.classList.toggle(
       'search-room-options-column-button_rotate'

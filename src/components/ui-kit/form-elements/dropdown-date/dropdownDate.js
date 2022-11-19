@@ -11,8 +11,8 @@ class DropdownDate {
 
   _addListeners() {
     this.elem.addEventListener('click', this._showHideDatePicker);
-    this.elem.addEventListener('keypress', (e) => {
-      this._handleDropdownDateBlockKeyPress(e); // TODO e to event
+    this.elem.addEventListener('keypress', (event) => {
+      this._handleDropdownDateBlockKeyPress(event);
     });
   }
 
@@ -29,10 +29,10 @@ class DropdownDate {
     }
   }
 
-  _handleDropdownDateBlockKeyPress(e) {
-    e.preventDefault(); // TODO e to event
-    if (e.code === 'Enter') {
-      this._showHideDatePicker(e);
+  _handleDropdownDateBlockKeyPress(event) {
+    event.preventDefault();
+    if (event.code === 'Enter') {
+      this._showHideDatePicker(event);
     }
   }
 }
