@@ -10,12 +10,9 @@ class FilterDateDropdown {
       .querySelector('.js-dropdown-date__date-picker');
     const filterStatus = filterDateDropdown.style.display;
 
-    // TODO ?:
-    if (filterStatus === 'block') {
-      filterDateDropdown.style.display = 'none';
-    } else {
-      filterDateDropdown.style.display = 'block';
-    }
+    filterDateDropdown.style.display = filterStatus === 'block'
+      ? 'none'
+      : 'block';
   }
 
   _handleFilterDateDropdownKeyPress(event) {
