@@ -1,4 +1,3 @@
-/* eslint-disable no-multi-spaces */
 import '../../../../libs/d3js-donut-chart';
 
 const d3 = require('d3');
