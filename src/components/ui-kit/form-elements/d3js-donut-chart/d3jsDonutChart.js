@@ -15,8 +15,7 @@ const normalColorEnd = '#8BA4F9';
 const badColorStart = '#919191';
 const badColorEnd = '#3D4975';
 
-// indent between arcs
-const indent = 1;
+const indentBetweenArcs = 1;
 
 // define the workspace and set the origin to its center
 const svg = d3.select('.js-d3js-donut-chart__chart');
@@ -70,7 +69,7 @@ const arc = d3
   .arc()
   .innerRadius(radius - innerRadius)
   .outerRadius(radius)
-  .padAngle((_, i) => (color2(i) === color2(i + indent) ? 0 : 1))
+  .padAngle((_, i) => (color2(i) === color2(i + indentBetweenArcs) ? 0 : 1))
   .startAngle((d) => d)
   .endAngle((d) => d + (dblpi / colorSmooth) * 1.2); // 1.2 to block artifacts on the transitions
 
