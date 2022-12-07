@@ -6,14 +6,14 @@ import './d3js-donut-chart.scss';
 const d3 = require('d3');
 
 // "start", "end" arcs colors pair per value
-const greatStartColor = '#FFE39C';
-const greatEndColor = '#FFBA9C';
-const goodStartColor = '#6FCF97';
-const goodEndColor = '#66D2EA';
-const normalStartColor = '#BC9CFF';
-const normalEndColor = '#8BA4F9';
-const badStartColor = '#919191';
-const badEndColor = '#3D4975';
+const greatColorStart = '#FFE39C';
+const greatColorEnd = '#FFBA9C';
+const goodColorStart = '#6FCF97';
+const goodColorEnd = '#66D2EA';
+const normalColorStart = '#BC9CFF';
+const normalColorEnd = '#8BA4F9';
+const badColorStart = '#919191';
+const badColorEnd = '#3D4975';
 
 // indent between arcs
 const indent = 1;
@@ -50,14 +50,14 @@ const color = d3
   .scaleLinear()
   .domain([0, great, great, good, good, normal, normal, bad])
   .range([
-    greatStartColor,
-    greatEndColor,
-    goodStartColor,
-    goodEndColor,
-    normalStartColor,
-    normalEndColor,
-    badStartColor,
-    badEndColor,
+    greatColorStart,
+    greatColorEnd,
+    goodColorStart,
+    goodColorEnd,
+    normalColorStart,
+    normalColorEnd,
+    badColorStart,
+    badColorEnd,
   ])
   .interpolate(d3.interpolateRgb);
 
