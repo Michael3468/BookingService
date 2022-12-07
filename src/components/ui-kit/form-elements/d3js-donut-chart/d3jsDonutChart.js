@@ -29,8 +29,21 @@ const percentsBad = Number(svg.attr('data-bad'));
 
 const innerRadius = 5;
 const colorSmooth = 100; /* smooth transition of colors (resolution) */
-const innerText = 'голосов';
 const innerScore = percentsGreat + percentsGood + percentsNormal + percentsBad;
+
+let innerText = '';
+switch (innerScore % 10) {
+  case 1:
+    innerText = 'голос';
+    break;
+  case 2:
+  case 3:
+  case 4:
+    innerText = 'голоса';
+    break;
+  default:
+    innerText = 'голосов';
+}
 
 const g = svg
   .append('g')
