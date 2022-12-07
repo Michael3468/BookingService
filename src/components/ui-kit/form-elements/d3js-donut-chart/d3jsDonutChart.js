@@ -1,7 +1,5 @@
 /* eslint-disable no-multi-spaces */
-import 'd3/dist/d3.min';
-
-import './d3js-donut-chart.scss';
+import '../../../../libs/d3js-donut-chart';
 
 const d3 = require('d3');
 
