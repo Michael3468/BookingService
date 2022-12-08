@@ -5,18 +5,21 @@ import './d3js-donut-chart.scss';
 const d3 = require('d3');
 
 // "start", "end" arcs colors pair per value
-const greatColorStart = '#FFE39C';
-const greatColorEnd = '#FFBA9C';
-const goodColorStart = '#6FCF97';
-const goodColorEnd = '#66D2EA';
-const normalColorStart = '#BC9CFF';
-const normalColorEnd = '#8BA4F9';
-const badColorStart = '#919191';
-const badColorEnd = '#3D4975';
+const chartColors = {
+  greatStart: '#FFE39C',
+  greatEnd: '#FFBA9C',
+  goodStart: '#6FCF97',
+  goodEnd: '#66D2EA',
+  normalStart: '#BC9CFF',
+  normalEnd: '#8BA4F9',
+  badStart: '#919191',
+  badEnd: '#3D4975',
+};
 
 class DonutChart {
-  constructor(chartClassName) {
+  constructor(chartClassName, colors = chartColors) {
     this.donutChart = d3.select(chartClassName);
+    this.colors = colors;
 
     this.percentsGreat = Number(this.donutChart.attr('data-great'));
     this.percentsGood = Number(this.donutChart.attr('data-good'));
@@ -75,14 +78,14 @@ class DonutChart {
       .scaleLinear()
       .domain([0, great, great, good, good, normal, normal, bad])
       .range([
-        greatColorStart,
-        greatColorEnd,
-        goodColorStart,
-        goodColorEnd,
-        normalColorStart,
-        normalColorEnd,
-        badColorStart,
-        badColorEnd,
+        this.colors.greatStart,
+        this.colors.greatEnd,
+        this.colors.goodStart,
+        this.colors.goodEnd,
+        this.colors.normalStart,
+        this.colors.normalEnd,
+        this.colors.badStart,
+        this.colors.badEnd,
       ])
       .interpolate(d3.interpolateRgb);
 
