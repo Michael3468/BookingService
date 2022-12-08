@@ -17,25 +17,23 @@ const badColorEnd = '#3D4975';
 class DonutChart {
   constructor(chartClassName) {
     this.donutChart = d3.select(chartClassName);
-    this.width = this.donutChart.attr('width');
-    this.height = this.donutChart.attr('height');
-    this.indentBetweenArcs = 1;
-    this.innerRadius = 5;
-    this.colorSmooth = 100; /* smooth transition of colors (resolution) */
 
     this.percentsGreat = Number(this.donutChart.attr('data-great'));
     this.percentsGood = Number(this.donutChart.attr('data-good'));
     this.percentsNormal = Number(this.donutChart.attr('data-normal'));
     this.percentsBad = Number(this.donutChart.attr('data-bad'));
-    this.innerScore = this.percentsGreat
-      + this.percentsGood
-      + this.percentsNormal
-      + this.percentsBad;
-    this.innerText = this.innerTextDefine(this.innerScore);
+
+    this.innerScore = this.getTotalInnerScore();
+    this.innerText = this.defineInnerText(this.innerScore);
+
     this.initChart();
   }
 
-  innerTextDefine(innerScore) {
+  getTotalInnerScore() {
+    return this.percentsGreat + this.percentsGood + this.percentsNormal + this.percentsBad;
+  }
+
+  defineInnerText(innerScore) {
     let innerText = null;
     switch (innerScore % 10) {
       case 1:
@@ -54,16 +52,22 @@ class DonutChart {
   }
 
   initChart() {
+    const width = this.donutChart.attr('width');
+    const height = this.donutChart.attr('height');
+    const indentBetweenArcs = 1;
+    const innerRadius = 5;
+    const colorSmooth = 100; /* smooth transition of colors (resolution) */
+
     const g = (this.donutChart)
       .append('g')
-      .attr('transform', `translate(${this.width / 2}, ${this.height / 2})`);
+      .attr('transform', `translate(${width / 2}, ${height / 2})`);
 
-    const radius = d3.min([this.width, this.height]) / 2;
+    const radius = d3.min([width, height]) / 2;
 
-    const great = (this.colorSmooth / this.innerScore) * this.percentsGreat;
-    const good = (this.colorSmooth / this.innerScore) * this.percentsGood + great;
-    const normal = (this.colorSmooth / this.innerScore) * this.percentsNormal + good;
-    const bad = (this.colorSmooth / this.innerScore) * this.percentsBad + normal;
+    const great = (colorSmooth / this.innerScore) * this.percentsGreat;
+    const good = (colorSmooth / this.innerScore) * this.percentsGood + great;
+    const normal = (colorSmooth / this.innerScore) * this.percentsNormal + good;
+    const bad = (colorSmooth / this.innerScore) * this.percentsBad + normal;
 
     const dblpi = 2 * Math.PI;
 
@@ -89,16 +93,16 @@ class DonutChart {
 
     const arc = d3
       .arc()
-      .innerRadius(radius - this.innerRadius)
+      .innerRadius(radius - innerRadius)
       .outerRadius(radius)
-      .padAngle((_, i) => (color2(i) === color2(i + this.indentBetweenArcs) ? 0 : 1))
+      .padAngle((_, i) => (color2(i) === color2(i + indentBetweenArcs) ? 0 : 1))
       .startAngle((d) => d)
       .endAngle(
-        (d) => d + (dblpi / this.colorSmooth) * 1.2,
+        (d) => d + (dblpi / colorSmooth) * 1.2,
       ); // 1.2 to block artifacts on the transitions
 
     g.selectAll('path')
-      .data(d3.range(0, dblpi, dblpi / this.colorSmooth))
+      .data(d3.range(0, dblpi, dblpi / colorSmooth))
       .enter()
       .append('path')
       .attr('d', arc)
