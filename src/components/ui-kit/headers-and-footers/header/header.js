@@ -39,7 +39,6 @@ class Header {
       this._addRemoveHiddenClass(this.headerNavs);
     });
 
-    // TODO move up
     document.addEventListener(
       'DOMContentLoaded',
       this._headersDropdownShowHide

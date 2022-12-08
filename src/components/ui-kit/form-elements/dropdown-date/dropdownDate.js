@@ -1,8 +1,6 @@
-import DatePicker from '../../cards/date-picker/datePicker';
+import '../../cards/date-picker/datePicker';
 
 import './dropdown-date.scss';
-
-new DatePicker();
 
 class DropdownDate {
   constructor(elem) {
@@ -13,8 +11,8 @@ class DropdownDate {
 
   _addListeners() {
     this.elem.addEventListener('click', this._showHideDatePicker);
-    this.elem.addEventListener('keypress', (e) => {
-      this._handleDropdownDateBlockKeyPress(e);
+    this.elem.addEventListener('keypress', (event) => {
+      this._handleDropdownDateBlockKeyPress(event);
     });
   }
 
@@ -31,10 +29,10 @@ class DropdownDate {
     }
   }
 
-  _handleDropdownDateBlockKeyPress(e) {
-    e.preventDefault();
-    if (e.code === 'Enter') {
-      this._showHideDatePicker(e);
+  _handleDropdownDateBlockKeyPress(event) {
+    event.preventDefault();
+    if (event.code === 'Enter') {
+      this._showHideDatePicker(event);
     }
   }
 }
