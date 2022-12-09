@@ -20,7 +20,7 @@ if (dropdownGuests) {
   });
 }
 
-tippy('.js-booking__options-discont', {
+tippy('.js-booking__options-discount', {
   content: 'discount',
 });
 
