@@ -1,11 +1,3 @@
-/* eslint-disable no-undef */
-// slick-carousel = slick slider
-import 'slick-carousel/slick/slick.min';
+import SlickCarousel from '../../../../libs/slick-carousel';
 
-import './slick-carousel.scss';
-
-$(() => {
-  $('.js-slick-picture').slick({
-    dots: true,
-  });
-});
+new SlickCarousel();
