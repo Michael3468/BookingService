@@ -66,9 +66,9 @@ class DropdownGuests extends Dropdown {
     }
 
     let babiesText;
-    const lastbabiesNum = babiesNum > 20 ? babiesNum % 10 : babiesNum;
+    const lastBabiesNum = babiesNum > 20 ? babiesNum % 10 : babiesNum;
 
-    switch (lastbabiesNum) {
+    switch (lastBabiesNum) {
       case 1:
         babiesText = 'младенец';
         break;
