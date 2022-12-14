@@ -1,4 +1,4 @@
-import './components/ui-kit/index/index';
+import './pages/index/index';
 import './components/ui-kit/logo/logo';
 
 import './static/favicons';

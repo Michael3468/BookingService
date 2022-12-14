@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable key-spacing */
 /* eslint-disable quote-props */
 const path = require('path');
@@ -20,26 +21,27 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pages`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
-  .filter((filename) => filename.endsWith('.pug'));
+  .filter((filename) => !filename.endsWith('.pug')); // TODO
 
 module.exports = {
   externals: {
     paths: PATHS,
   },
   entry: {
+    // TODO PATHS.site_pages
     'app': PATHS.src,
-    'landing-page': `${PATHS.site_pages}/landing-page/landingPage.js`,
+    'landing-page': `${PAGES_DIR}/landing-page/landingPage.js`,
     'registration': `${PATHS.site_pages}/registration/registration.js`,
     'room-details': `${PATHS.site_pages}/room-details/roomDetails.js`,
-    'search-room': `${PATHS.site_pages}/search-room/searchRoom.js`,
+    'search-room': `${PAGES_DIR}/search-room/searchRoom.js`,
     'sign-in': `${PATHS.site_pages}/sign-in/signIn.js`,
-    '404': `${PATHS.site_pages}/404/404.js`,
+    '404': `${PAGES_DIR}/404/404.js`,
 
     'cards': `${PATHS.ui_kit}/cards/cards.js`,
     'colors-and-types': `${PATHS.ui_kit}/colors-and-types/colorsAndTypes.js`,
     'form-elements': `${PATHS.ui_kit}/form-elements/formElements.js`,
     'headers-and-footers': `${PATHS.ui_kit}/headers-and-footers/headers-and-footers/headersAndFooters.js`,
-    'index': `${PATHS.ui_kit}/index/index.js`,
+    'index': `${PAGES_DIR}/index/index.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
@@ -139,14 +141,24 @@ module.exports = {
         to: `${PATHS.assets}img`,
         flatten: true,
       },
+      {
+        from: `${PATHS.src}/pages/**/*.{jpg,jpeg,png,svg,gif}`,
+        to: `${PATHS.assets}img`,
+        flatten: true,
+      },
+      {
+        from: `${PATHS.src}/pages/**/*.{jpg,jpeg,png,svg,gif}`,
+        to: `${PATHS.assets}img`,
+        flatten: true,
+      },
       { from: `${PATHS.src}/static`, to: 'static' },
       { from: `${PATHS.src}/assets/json`, to: 'assets/json' },
     ]),
 
     ...PAGES.map(
       (page) => new HtmlWebpackPlugin({
-        template: `${PAGES_DIR}/${page}`, // .pug
-        filename: `./${page.replace(/\.pug/, '.html')}`, // .html
+        template: `${PAGES_DIR}/${page}/${page}.pug`, // .pug // TODO
+        filename: `${page}.html`,
         minify: {
           removeScriptTypeAttributes: true,
         },

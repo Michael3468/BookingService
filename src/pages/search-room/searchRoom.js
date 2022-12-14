@@ -1,21 +1,21 @@
-import CheckboxButtons from '../../ui-kit/form-elements/checkbox-buttons/checkboxButtons';
-import CustomCheckbox from '../../ui-kit/form-elements/custom-checkbox/customCheckbox';
-import DropdownGuests from '../../ui-kit/form-elements/dropdown/_guests/dropdownGuests';
-import DropdownOptions from '../../ui-kit/form-elements/dropdown/_options/dropdownOptions';
-import FilterDateDropdown from '../../ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
-import Pagination from '../../ui-kit/form-elements/pagination/pagination';
-import Header from '../../ui-kit/headers-and-footers/header/header';
+import CheckboxButtons from '../../components/ui-kit/form-elements/checkbox-buttons/checkboxButtons';
+import CustomCheckbox from '../../components/ui-kit/form-elements/custom-checkbox/customCheckbox';
+import DropdownGuests from '../../components/ui-kit/form-elements/dropdown/_guests/dropdownGuests';
+import DropdownOptions from '../../components/ui-kit/form-elements/dropdown/_options/dropdownOptions';
+import FilterDateDropdown from '../../components/ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
+import Pagination from '../../components/ui-kit/form-elements/pagination/pagination';
+import Header from '../../components/ui-kit/headers-and-footers/header/header';
 
 import './search-room.scss';
 
-import '../../ui-kit/cards/room-card/roomCard';
+import '../../components/ui-kit/cards/room-card/roomCard';
 
-import '../../ui-kit/form-elements/filter-date-picker/filterDatePicker';
-import '../../ui-kit/form-elements/range-slider/rangeSlider';
-import '../../ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
+import '../../components/ui-kit/form-elements/filter-date-picker/filterDatePicker';
+import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
+import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
-import '../../ui-kit/headers-and-footers/footer/footer';
-import { smTableWidth } from '../../../assets/js/common';
+import '../../components/ui-kit/headers-and-footers/footer/footer';
+import { smTableWidth } from '../../assets/js/common';
 
 class SearchRoom {
   constructor() {
