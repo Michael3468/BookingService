@@ -18,9 +18,7 @@ const PATHS = {
 
 // Pages const for HtmlWebpackPlugin
 const PAGES_DIR = `${PATHS.src}/pages`;
-const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter((filename) => !filename.endsWith('.pug')); // TODO
+const PAGES = fs.readdirSync(PAGES_DIR);
 
 module.exports = {
   externals: {
@@ -155,7 +153,7 @@ module.exports = {
 
     ...PAGES.map(
       (page) => new HtmlWebpackPlugin({
-        template: `${PAGES_DIR}/${page}/${page}.pug`, // .pug // TODO
+        template: `${PAGES_DIR}/${page}/${page}.pug`, // .pug
         filename: `${page}.html`,
         minify: {
           removeScriptTypeAttributes: true,
