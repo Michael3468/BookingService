@@ -10,6 +10,7 @@ export default class Dropdown {
 
   showHide() {
     this.menu.classList.toggle('dropdown__menu_hidden');
+    this.dropdownBody.classList.toggle('dropdown__body-bottom-radius');
   }
 
   increment(event) {
@@ -21,6 +22,7 @@ export default class Dropdown {
   }
 
   _defineElements(elem) {
+    this.dropdownBody = elem.querySelector('.js-dropdown__body');
     this.selectionText = elem.querySelector('.js-dropdown__selection-text');
     this.menu = elem.querySelector('.js-dropdown__menu');
     this.dropdownCounters = elem.querySelectorAll('.js-dropdown__counter');

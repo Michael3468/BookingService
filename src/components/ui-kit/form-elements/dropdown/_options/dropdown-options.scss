@@ -39,8 +39,11 @@
   height: rem(44);
   border: rem(1) solid $DarkShade25;
   border-radius: rem(4);
-  border-bottom-right-radius: rem(0);
-  border-bottom-left-radius: rem(0);
+
+  &-bottom-radius {
+    border-bottom-right-radius: rem(0);
+    border-bottom-left-radius: rem(0);
+  }
 }
 
 .dropdown__selection-text {
