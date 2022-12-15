@@ -39,10 +39,10 @@
   &__legend-values {
     color: $DarkShade75;
     font-size: rem(14);
-    font-family: $mainFont;
+    font-family: $secondFont;
     line-height: rem(24);
-    letter-spacing: rem(1.2);
   }
+
   $size: rem(10);
 
   &__legend-values::before {
