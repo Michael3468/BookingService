@@ -1,0 +1,69 @@
+extends ../../components/layouts/main-header-footer
+
+include ../../components/ui-kit/cards/room-card/room-card
+include ../../components/ui-kit/form-elements/checkbox-buttons/checkbox-buttons
+include ../../components/ui-kit/form-elements/dropdown/dropdown
+include ../../components/ui-kit/form-elements/filter-date-dropdown/filter-date-dropdown
+include ../../components/ui-kit/form-elements/pagination/pagination
+include ../../components/ui-kit/form-elements/range-slider/range-slider
+include ../../components/ui-kit/form-elements/rich-checkbox-buttons/rich-checkbox-buttons
+
+block variables
+  - title = 'FSD Search room';
+  - description = 'FSD education project | Search room';
+
+block content
+
+  .search-room-container
+    .search-room-options-column.js-search-room-options-column
+      .search-room-sidebar-element
+        +filter-date-dropdown()
+
+      .search-room-sidebar-element
+        +dropdown({
+          type: 'dropdown-guests',
+          selectionText: 'Сколько гостей',
+        })
+
+      .search-room-sidebar-element
+        +range-slider()
+
+        p.search-room-range-slider-text Стоимость за сутки пребывания в номере
+
+      .search-room-sidebar-element
+        +checkbox-buttons({
+          leftCaption: 'правила дома',
+          items: [
+            { value: 'allow-smoke', label: 'Можно курить' },
+            { value: 'allow-pet', label: 'Можно с питомцами', isChecked: 'true' },
+            {
+              value: 'allow guests',
+              label: 'Можно пригласить гостей\n (до 10 человек)',
+              isChecked: 'true',
+            },
+          ]
+        })
+
+      .search-room-sidebar-element
+        +rich-checkbox-buttons()
+
+      .search-room-sidebar-element
+        +dropdown({
+          leftCaption: 'удобства номера',
+          type: 'dropdown-options',
+          selectionText: 'Удобства',
+        })
+
+      .search-room-sidebar-element
+        +checkbox-buttons({ caption: 'дополнительные удобства' })
+
+    .search-room-options-column-button.js-search-room-options-column-button.search-room-options-column-button_rotate
+
+    .search-room-room-cards
+      h1.search-room-room-cards__caption Номера, которые мы для вас подобрали
+
+      .search-room-room-cards__grid-layout
+
+      //- pagination
+      .search-room-room-cards__pagination
+        +pagination()

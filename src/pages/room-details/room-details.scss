@@ -1,0 +1,182 @@
+@import '../../assets/scss/utils/vars.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+.room-details-images {
+  display: flex;
+
+  @media screen and (max-width: $smTableWidth) {
+    flex-direction: column;
+
+    &__left {
+      width: 100%;
+    }
+
+    &__images_right {
+      width: 100%;
+      height: auto;
+    }
+
+    &_size_middle {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__left {
+    width: 68.125%;
+  }
+
+  &__images_right {
+    display: flex;
+    flex-direction: column;
+    width: 31.875%;
+  }
+
+  &_size_big {
+    width: 100%;
+  }
+
+  &_size_middle {
+    width: 100%;
+  }
+}
+
+//- room-details columns
+.room-details {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(80);
+
+  @media screen and (max-width: $desktopWidth) {
+    column-gap: rem(50);
+  }
+
+  &-column-info {
+    @media only screen and (max-width: 800px) {
+      order: 1;
+    }
+  }
+
+  &-column-booking-card {
+    min-width: rem(300);
+
+    @media only screen and (min-width: 1131px) {
+      min-width: rem(380);
+    }
+
+    @media only screen and (max-width: 800px) {
+      order: -1;
+      max-width: 380px;
+      margin-right: auto;
+      margin-bottom: rem(30);
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 1130px) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &-comment-counter {
+    color: $DarkShade50;
+  }
+
+  &-container {
+    @include container;
+
+    margin-top: rem(70);
+    margin-bottom: rem(59);
+  }
+
+  &-flex-container {
+    display: flex;
+    gap: rem(60);
+
+    @media screen and (max-width: $desktopWidth) {
+      padding: 0 $desktopWidthPadding;
+    }
+
+    @media screen and (max-width: 1130px) {
+      flex-wrap: wrap-reverse;
+    }
+
+    @media only screen and (max-width: 800px) {
+      flex: 1 auto;
+      flex-direction: column;
+      padding: 0 $desktopWidthPadding;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+      padding: 0 0;
+    }
+  }
+
+  &-description {
+    margin-bottom: rem(10);
+  }
+
+  &-caption {
+    @include h2-style;
+    margin-bottom: rem(21);
+    font-family: $secondFont;
+
+    &_margin_left {
+      margin-left: rem(20);
+    }
+  }
+
+  &-icon-text-list {
+    width: rem(280);
+    margin-top: rem(20);
+  }
+
+  &-chart {
+    min-width: rem(310);
+    margin-bottom: rem(20);
+  }
+
+  //- visitors feedbacks
+  &-feedbacks {
+    margin-right: rem(10);
+
+    &__caption {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media screen and (max-width: $smTableWidth) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-comment {
+    margin-bottom: rem(23);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  //- visitors feedbacks end
+
+  &-rules {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(30);
+    column-gap: rem(106);
+
+    &__left {
+      width: rem(255);
+    }
+
+    &__right {
+      max-width: rem(335);
+    }
+  }
+}
+//- room-details columns end
+
+.booking {
+  @include card-max-width;
+}

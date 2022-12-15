@@ -1,0 +1,36 @@
+@import '../../assets/scss/utils/vars.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+.cards {
+  background: $backgroundColor;
+
+  &-container {
+    @include container;
+
+    margin-bottom: rem(140);
+  }
+
+  &-column-left,
+  &-column-center {
+    width: rem(380);
+    margin-top: rem(12);
+    margin-right: rem(40);
+  }
+
+  &-column-right {
+    width: rem(320);
+    margin-top: rem(12);
+  }
+
+  &-registration {
+    margin-top: rem(40);
+  }
+
+  &-login {
+    margin-top: rem(40);
+  }
+
+  &-room-card {
+    margin-top: rem(40);
+  }
+}
