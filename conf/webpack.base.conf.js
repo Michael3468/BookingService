@@ -35,10 +35,10 @@ module.exports = {
     'sign-in': `${PAGES_DIR}/sign-in/signIn.js`,
     '404': `${PAGES_DIR}/404/404.js`,
 
-    'cards': `${PATHS.ui_kit}/cards/cards.js`,
-    'colors-and-types': `${PATHS.ui_kit}/colors-and-types/colorsAndTypes.js`,
-    'form-elements': `${PATHS.ui_kit}/form-elements/formElements.js`,
-    'headers-and-footers': `${PATHS.ui_kit}/headers-and-footers/headers-and-footers/headersAndFooters.js`,
+    'cards': `${PAGES_DIR}/cards/cards.js`,
+    'colors-and-types': `${PAGES_DIR}/colors-and-types/colorsAndTypes.js`,
+    'form-elements': `${PAGES_DIR}/form-elements/formElements.js`,
+    'headers-and-footers': `${PAGES_DIR}/headers-and-footers/headersAndFooters.js`,
     'index': `${PAGES_DIR}/index/index.js`,
   },
   output: {
