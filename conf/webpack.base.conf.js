@@ -12,7 +12,6 @@ const webpack = require('webpack');
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  site_pages: path.join(__dirname, '../src/components/site-pages'),
   ui_kit: path.join(__dirname, '../src/components/ui-kit'),
   assets: 'assets/',
 };
@@ -28,13 +27,12 @@ module.exports = {
     paths: PATHS,
   },
   entry: {
-    // TODO PATHS.site_pages
     'app': PATHS.src,
     'landing-page': `${PAGES_DIR}/landing-page/landingPage.js`,
-    'registration': `${PATHS.site_pages}/registration/registration.js`,
-    'room-details': `${PATHS.site_pages}/room-details/roomDetails.js`,
+    'registration': `${PAGES_DIR}/registration/registration.js`,
+    'room-details': `${PAGES_DIR}/room-details/roomDetails.js`,
     'search-room': `${PAGES_DIR}/search-room/searchRoom.js`,
-    'sign-in': `${PATHS.site_pages}/sign-in/signIn.js`,
+    'sign-in': `${PAGES_DIR}/sign-in/signIn.js`,
     '404': `${PAGES_DIR}/404/404.js`,
 
     'cards': `${PATHS.ui_kit}/cards/cards.js`,
