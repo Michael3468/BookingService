@@ -44,9 +44,9 @@
     @include material-icons;
 
     display: none;
+    height: rem(40);
     color: $DarkShade50;
     font-size: rem(40);
-    height: rem(40);
     cursor: pointer;
 
     @media screen and (max-width: $smDesktopWidth) {
@@ -83,9 +83,9 @@
 
     @media screen and (max-width: $smDesktopWidth) {
       &-li {
+        justify-content: center;
         width: 100%;
         text-align: center;
-        justify-content: center;
       }
     }
 

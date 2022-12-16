@@ -4,10 +4,10 @@
 .text-404 {
   display: flex;
   justify-content: center;
-  font-size: rem(48);
+  margin-top: 100px;
   color: $DarkShade75;
   font-weight: bold;
-  margin-top: 100px;
+  font-size: rem(48);
 
   @media screen and (max-width: $phoneWidth) {
     font-size: rem(32);

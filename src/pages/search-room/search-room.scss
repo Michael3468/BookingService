@@ -85,6 +85,7 @@
 .search-room-room-cards {
   &__caption {
     @include h1-style;
+
     margin-bottom: rem(22);
     font-family: $secondFont;
 

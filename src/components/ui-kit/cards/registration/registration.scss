@@ -9,6 +9,7 @@
 
   &__caption {
     @include h1-style;
+
     margin-bottom: rem(15);
     font-family: $secondFont;
   }
