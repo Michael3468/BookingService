@@ -195,8 +195,9 @@
   }
 }
 
-.datepicker--cell.-current-, .datepicker--cell.-current-.-in-range- {
+.datepicker--cell.-current-,
+.datepicker--cell.-current-.-in-range- {
   width: 38.2px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }

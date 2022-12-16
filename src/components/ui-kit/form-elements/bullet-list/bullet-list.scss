@@ -4,6 +4,7 @@
 .bullet-list {
   &__caption {
     @include h3-style;
+
     margin-bottom: rem(14);
   }
 

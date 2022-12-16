@@ -41,6 +41,7 @@
 
   &__caption {
     @include h3-style;
+
     margin-top: rem(4);
     margin-bottom: rem(5);
     color: $DarkShade75;

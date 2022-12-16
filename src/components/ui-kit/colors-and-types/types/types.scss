@@ -14,7 +14,7 @@
     color: $DarkShade25;
     font-weight: normal;
     font-family: $secondFont;
-    
+
     &-h1 {
       @include h1-style;
     }
@@ -33,11 +33,13 @@
 
     &-h1 {
       @include h1-style;
+
       font-family: $secondFont;
     }
 
     &-h2 {
       @include h2-style;
+
       font-family: $secondFont;
     }
 
