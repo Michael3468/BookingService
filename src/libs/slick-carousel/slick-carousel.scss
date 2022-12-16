@@ -1,0 +1,122 @@
+@import '../../assets/scss/utils/vars.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+.slick-track {
+  display: flex;
+}
+
+@mixin slick-border-radius {
+  border-radius: $BorderRadius $BorderRadius 0 0;
+}
+
+.slick-list {
+  overflow: hidden;
+
+  @include slick-border-radius;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: rem(44);
+  height: 100%;
+  font-size: 0;
+}
+
+$arrows-size: rem(40);
+$arrows-top: calc(50% - #{$arrows-size} / 2); //- $arrows-size = arrow height
+
+@mixin slick-slider-arrows {
+  position: absolute;
+  top: $arrows-top;
+  width: $arrows-size;
+  height: $arrows-size;
+  background: url('./expand_more.svg') 50% 50% / 20% no-repeat;
+  content: '';
+}
+
+.slick-prev {
+  left: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 99.99%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+  &::after {
+    @include slick-slider-arrows;
+
+    left: 0;
+  }
+}
+
+.slick-next {
+  right: 0;
+  background:
+    linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 99.99%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+  &::after {
+    @include slick-slider-arrows;
+
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  @include slick-border-radius;
+
+  cursor: pointer;
+}
+
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+  display: none !important;
+}
+
+.slick-picture:hover button.slick-prev.slick-arrow,
+.slick-picture:hover button.slick-next.slick-arrow {
+  display: flex !important;
+}
+
+.slick-dots {
+  position: absolute;
+  right: rem(14);
+  bottom: rem(15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & li {
+    margin: 0 rem(2);
+    list-style-type: none;
+  }
+
+  & button {
+    width: rem(7);
+    height: rem(7);
+    padding: 0 0;
+    font-size: 0;
+    background: none;
+    border: rem(1) solid $defaultColor;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  & li.slick-active button {
+    background: $defaultColor;
+  }
+}
+
+.slick-item-picture {
+  object-fit: contain;
+}

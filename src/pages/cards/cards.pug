@@ -1,0 +1,55 @@
+extends ../../components/layouts/main
+
+include ../../components/ui-kit/cards/booking/booking
+include ../../components/ui-kit/cards/date-picker/date-picker
+include ../../components/ui-kit/cards/login/login
+include ../../components/ui-kit/cards/registration/registration
+include ../../components/ui-kit/cards/room-card/room-card
+include ../../components/ui-kit/cards/room-search/room-search
+include ../../components/ui-kit/logo/logo
+
+block variables
+  - title = 'FSD Cards';
+  - description = 'FSD education project | Cards page';
+
+block content
+
+  +logo()
+
+  .cards-container
+
+    .cards-column-left
+      +room-search()
+
+      .cards-registration
+        +registration()
+
+    .cards-column-center
+      +booking()
+
+      .cards-login
+        +login()
+
+
+    .cards-column-right
+      +date-picker()
+
+      .cards-room-card
+        +room-card({
+          number: '888',
+          status: 'Люкс',
+          price: '9 900',
+          photoName: 'room-card-888.jpg',
+          starsRate: '5',
+          feedbacks: '145',
+        })
+
+      .cards-room-card
+        +room-card({
+          number: '840',
+          status: 'Люкс',
+          price: '9 900',
+          photoName: 'room-card-840.jpg',
+          starsRate: '4',
+          feedbacks: '65',
+        })

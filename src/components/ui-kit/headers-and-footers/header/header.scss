@@ -46,12 +46,13 @@
     display: none;
     color: $DarkShade50;
     font-size: rem(40);
-    height: 40px;
+    height: rem(40);
     cursor: pointer;
 
     @media screen and (max-width: $smDesktopWidth) {
       display: block;
       justify-content: flex-end;
+      line-height: rem(40);
 
       &-logo {
         display: flex;
@@ -176,6 +177,7 @@
         background: $menuHoverColor;
         background-color: $defaultColor;
         box-shadow: 0 2px 3px black;
+        transform: translateY(50%);
 
         @media screen and (max-width: $smDesktopWidth) {
           width: 100%;

@@ -50,9 +50,9 @@ class DropdownGuests extends Dropdown {
     const babiesNum = Number(this.dropdownCounters[2].value);
 
     let guestsText;
-    const lastguestsNum = guestsNum > 20 ? guestsNum % 10 : guestsNum;
+    const lastGuestsNum = guestsNum > 20 ? guestsNum % 10 : guestsNum;
 
-    switch (lastguestsNum) {
+    switch (lastGuestsNum) {
       case 1:
         guestsText = 'гость';
         break;
@@ -66,9 +66,9 @@ class DropdownGuests extends Dropdown {
     }
 
     let babiesText;
-    const lastbabiesNum = babiesNum > 20 ? babiesNum % 10 : babiesNum;
+    const lastBabiesNum = babiesNum > 20 ? babiesNum % 10 : babiesNum;
 
-    switch (lastbabiesNum) {
+    switch (lastBabiesNum) {
       case 1:
         babiesText = 'младенец';
         break;
@@ -82,8 +82,7 @@ class DropdownGuests extends Dropdown {
     }
 
     const isGuestsOrBabies = guestsNum > 0 || babiesNum > 0;
-    const isChildsWithoutAdults =
-      adultsNum === 0 && (babiesNum > 0 || guestsNum > 0);
+    const isChildsWithoutAdults = adultsNum === 0 && (babiesNum > 0 || guestsNum > 0);
     const isGuests = guestsNum > 0 && babiesNum > 0;
 
     // cleanButton visibility
@@ -91,7 +90,7 @@ class DropdownGuests extends Dropdown {
       this.cleanButton.classList.add('dropdown-guests__button-clean_visible');
     } else {
       this.cleanButton.classList.remove(
-        'dropdown-guests__button-clean_visible'
+        'dropdown-guests__button-clean_visible',
       );
     }
     // cleanButton visibility end

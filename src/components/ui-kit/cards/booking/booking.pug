@@ -1,4 +1,4 @@
-include ./__caption/booking__caption
+include ../booking-caption/booking-caption
 include ../../../ui-kit/form-elements/button/button
 include ../../../ui-kit/form-elements/dropdown/dropdown
 include ../../../ui-kit/form-elements/dropdown-date/dropdown-date
@@ -42,7 +42,7 @@ mixin booking(params = {})
 
           .booking__options-item
             p.booking__options-item-text= servicesPriceText
-            .booking__options-info-icon.js-booking__options-discont
+            .booking__options-info-icon.js-booking__options-discount
 
           .booking__options-item
             p.booking__options-item-text= additionalServicesPriceText

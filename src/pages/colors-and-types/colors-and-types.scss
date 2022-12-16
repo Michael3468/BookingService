@@ -1,0 +1,25 @@
+@import '../../assets/scss/utils/vars.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+.colors-and-types {
+  @include container;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  &__colors {
+    width: rem(300);
+    padding-left: rem(10);
+  }
+
+  &__types {
+    padding-right: rem(51);
+  }
+
+  &__colors,
+  &__types {
+    padding-top: rem(8);
+  }
+}

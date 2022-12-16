@@ -1,0 +1,20 @@
+@import '../../assets/scss/utils/vars.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+html {
+  background-color: #e5e5e5;
+}
+
+.headers-and-footers {
+  margin-top: rem(38);
+
+  &:last-child {
+    margin-bottom: rem(140);
+  }
+}
+
+.responsive-footer-container {
+  display: grid;
+  max-width: rem(768);
+  margin: 0 auto;
+}

@@ -1,0 +1,74 @@
+@import '../../assets/scss/utils/vars.scss';
+@import '../../assets/scss/utils/mixins.scss';
+
+// chart styles
+.d3js-donut-chart {
+  display: flex;
+  margin-left: rem(1);
+
+  &__chart {
+    transform: rotateY(180deg);
+  }
+
+  &__innerScore,
+  &__innerText {
+    font-weight: bold;
+    font-family: $secondFont;
+    transform: rotateY(180deg);
+    fill: $purple;
+  }
+
+  &__innerScore {
+    font-size: rem(24);
+  }
+
+  &__innerText {
+    font-size: rem(14);
+  }
+
+  // legend styles
+  &__legend {
+    margin-top: rem(25);
+    margin-left: rem(30);
+
+    @media screen and (max-width: $phoneWidth) {
+      margin-left: rem(15);
+    }
+  }
+
+  &__legend-values {
+    color: $DarkShade75;
+    font-size: rem(14);
+    font-family: $secondFont;
+    line-height: rem(24);
+  }
+
+  $size: rem(10);
+
+  &__legend-values::before {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    margin-right: rem(5);
+    border-radius: $size / 2;
+    content: '';
+  }
+
+  // legend li markers
+  &__legend-values:nth-child(1)::before {
+    background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+  }
+
+  &__legend-values:nth-child(2)::before {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  }
+
+  &__legend-values:nth-child(3)::before {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  }
+
+  &__legend-values:nth-child(4)::before {
+    background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+  }
+  // legend styles end
+}
