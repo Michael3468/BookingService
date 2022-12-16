@@ -1,1 +1,1 @@
-import './booking__caption.scss';
+import './booking-caption.scss';
