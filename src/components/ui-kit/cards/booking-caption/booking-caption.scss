@@ -57,6 +57,7 @@
   text-transform: uppercase;
 }
 
+// TODO move to _position { &_left, &_right }
 .booking__caption_position_right {
   display: flex;
   flex-direction: row;
