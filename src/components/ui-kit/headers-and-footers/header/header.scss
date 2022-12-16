@@ -177,6 +177,7 @@
         background: $menuHoverColor;
         background-color: $defaultColor;
         box-shadow: 0 2px 3px black;
+        transform: translateY(50%);
 
         @media screen and (max-width: $smDesktopWidth) {
           width: 100%;
