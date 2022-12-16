@@ -7,14 +7,14 @@
   justify-content: space-between;
 
   &_margin {
-    margin-bottom: rem(19);
+    margin-bottom: rem(22);
   }
 }
 
 .booking__caption_position_left {
   display: flex;
   flex-direction: row;
-  margin-top: rem(10);
+  margin-top: rem(7);
   font-weight: bold;
   font-family: $secondFont;
 }
