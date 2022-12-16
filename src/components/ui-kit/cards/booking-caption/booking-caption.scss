@@ -11,12 +11,25 @@
   }
 }
 
-.booking__caption_position_left {
-  display: flex;
-  flex-direction: row;
-  margin-top: rem(7);
-  font-weight: bold;
-  font-family: $secondFont;
+.booking__caption_position {
+  &_left {
+    display: flex;
+    flex-direction: row;
+    margin-top: rem(7);
+    font-weight: bold;
+    font-family: $secondFont;
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-top: rem(9);
+    color: $DarkShade50;
+    font-size: rem(14);
+    font-family: $secondFont;
+    line-height: rem(18);
+  }
 }
 
 .booking__caption-number {
@@ -55,18 +68,6 @@
   font-size: rem(12);
   line-height: rem(15);
   text-transform: uppercase;
-}
-
-// TODO move to _position { &_left, &_right }
-.booking__caption_position_right {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  margin-top: rem(9);
-  color: $DarkShade50;
-  font-size: rem(14);
-  font-family: $secondFont;
-  line-height: rem(18);
 }
 
 .booking__caption-price {
