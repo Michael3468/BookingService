@@ -9,6 +9,7 @@
 
   &__caption {
     @include h1-style;
+
     margin-bottom: rem(21);
     font-family: $secondFont;
 
@@ -22,6 +23,6 @@
   }
 
   &__dropdown-guests-margin {
-    margin-bottom: rem(31);
+    margin-bottom: rem(27);
   }
 }

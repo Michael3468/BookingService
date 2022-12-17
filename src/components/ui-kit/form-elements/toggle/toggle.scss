@@ -10,6 +10,7 @@ $toggleSize: rem(10);
 
 .toggle__caption {
   margin-bottom: rem(15);
+
   @include h3-style;
 }
 

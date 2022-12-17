@@ -62,7 +62,7 @@
   min-width: rem(266);
 
   &-sidebar-element {
-    margin-bottom: rem(26);
+    margin-bottom: rem(24);
   }
 }
 
@@ -85,6 +85,7 @@
 .search-room-room-cards {
   &__caption {
     @include h1-style;
+
     margin-bottom: rem(22);
     font-family: $secondFont;
 
