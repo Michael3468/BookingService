@@ -37,7 +37,7 @@
     "gh-pages": "^3.2.3",
     "git-flow": "^0.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.6.0",
+    "jquery": "^3.6.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
