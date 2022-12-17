@@ -60,6 +60,7 @@ $ npm run deploy
 - /src - source files
 - /src/assets - auxiliary project files
 - /src/components - site components
+- /src/libs - libs used in this project
 - /src/pages - site pages
 - /src/static - static files (favicons, robots.txt, sitemap.xml)
 
