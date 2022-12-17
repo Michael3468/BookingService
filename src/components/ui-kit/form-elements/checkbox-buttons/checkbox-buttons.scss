@@ -39,6 +39,8 @@
     @include material-icons;
 
     margin: 0 rem(9) 0 0;
+    position: relative;
+    top: -9px;
 
     &::selection {
       background: transparent;
