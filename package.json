@@ -64,7 +64,7 @@
     "d3": "^6.7.0",
     "inputmask": "^5.0.7",
     "ion-rangeslider": "^2.3.1",
-    "paginationjs": "^2.1.5",
+    "paginationjs": "^2.4.2",
     "slick-carousel": "^1.8.1",
     "tippy.js": "^6.3.7"
   },
