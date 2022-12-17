@@ -1,7 +1,7 @@
 {
   "name": "fsd_step_2",
   "version": "0.3.9",
-  "description": "edu project",
+  "description": "educational project",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./conf/webpack.dev.conf.js",
