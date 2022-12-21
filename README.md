@@ -67,13 +67,13 @@ $ npm run deploy
 ## Plugins
 
 ```
-"jquery": "^3.6.0",
+"jquery": "^3.6.2",
 "air-datepicker": "^2.2.3",
 "airbnb-browser-shims": "^3.3.0",
 "d3": "^6.7.0",
 "inputmask": "^5.0.7",
 "ion-rangeslider": "^2.3.1",
-"paginationjs": "^2.1.5",
+"paginationjs": "^2.4.2",
 "slick-carousel": "^1.8.1",
 "tippy.js": "^6.3.7"
 ```
