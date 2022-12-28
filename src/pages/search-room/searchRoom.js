@@ -1,4 +1,3 @@
-import CheckboxButtons from '../../components/ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import DropdownGuests from '../../components/ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 import DropdownOptions from '../../components/ui-kit/form-elements/dropdown/_options/dropdownOptions';
 import FilterDateDropdown from '../../components/ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
@@ -7,6 +6,7 @@ import Header from '../../components/ui-kit/headers-and-footers/header/header';
 
 import '../../components/ui-kit/cards/room-card/roomCard';
 
+import '../../components/ui-kit/form-elements/checkbox-buttons';
 import '../../components/ui-kit/form-elements/custom-checkbox';
 import '../../components/ui-kit/form-elements/filter-date-picker/filterDatePicker';
 import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
