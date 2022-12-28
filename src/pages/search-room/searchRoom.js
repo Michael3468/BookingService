@@ -1,4 +1,3 @@
-import DropdownGuests from '../../components/ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 import DropdownOptions from '../../components/ui-kit/form-elements/dropdown/_options/dropdownOptions';
 import FilterDateDropdown from '../../components/ui-kit/form-elements/filter-date-dropdown/filterDateDropdown';
 import Pagination from '../../components/ui-kit/form-elements/pagination/pagination';
@@ -8,6 +7,7 @@ import '../../components/ui-kit/cards/room-card/roomCard';
 
 import '../../components/ui-kit/form-elements/checkbox-buttons';
 import '../../components/ui-kit/form-elements/custom-checkbox';
+import '../../components/ui-kit/form-elements/dropdown/_guests';
 import '../../components/ui-kit/form-elements/filter-date-picker/filterDatePicker';
 import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
@@ -15,7 +15,7 @@ import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckbox
 import '../../components/ui-kit/headers-and-footers/footer/footer';
 import { smTableWidth } from '../../assets/js/common';
 
-import './search-room.scss';
+import './search-room.scss'; // TODO move to SearchRoom
 
 class SearchRoom {
   constructor() {
@@ -67,13 +67,6 @@ const dropdownOptions = document.querySelectorAll('.js-dropdown-options');
 if (dropdownOptions) {
   dropdownOptions.forEach((dropdown) => {
     new DropdownOptions(dropdown);
-  });
-}
-
-const dropdownGuests = document.querySelectorAll('.js-dropdown-guests');
-if (dropdownGuests) {
-  dropdownGuests.forEach((dropdown) => {
-    new DropdownGuests(dropdown);
   });
 }
 
