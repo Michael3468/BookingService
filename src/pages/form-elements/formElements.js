@@ -4,7 +4,7 @@ import '../../components/ui-kit/form-elements/button/button';
 import '../../components/ui-kit/form-elements/bullet-list/bulletList';
 import '../../components/ui-kit/form-elements/checkbox-buttons/checkboxButtons';
 import '../../components/ui-kit/form-elements/comment/comment';
-import '../../components/ui-kit/form-elements/custom-checkbox/customCheckbox';
+import '../../components/ui-kit/form-elements/custom-checkbox';
 import '../../components/ui-kit/form-elements/dropdown/_guests/dropdownGuests';
 import '../../components/ui-kit/form-elements/dropdown/_options/dropdownOptions';
 import '../../components/ui-kit/form-elements/dropdown-date/dropdownDate';
