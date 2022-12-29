@@ -1,4 +1,6 @@
-export default class Dropdown {
+import './dropdown.scss';
+
+class Dropdown {
   constructor(elem) {
     if (elem === null) return;
     this.elem = elem;
@@ -81,3 +83,5 @@ export default class Dropdown {
     }
   }
 }
+
+export default Dropdown;
