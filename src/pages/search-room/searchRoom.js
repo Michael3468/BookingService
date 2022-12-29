@@ -1,5 +1,4 @@
 import Pagination from '../../components/ui-kit/form-elements/pagination/pagination';
-import Header from '../../components/ui-kit/headers-and-footers/header/header';
 
 import '../../components/ui-kit/cards/room-card/roomCard';
 
@@ -13,6 +12,8 @@ import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
 import '../../components/ui-kit/headers-and-footers/footer/footer';
+import '../../components/ui-kit/headers-and-footers/header';
+
 import { smTableWidth } from '../../assets/js/common';
 
 import './search-room.scss'; // TODO move to SearchRoom
@@ -62,7 +63,5 @@ class SearchRoom {
 new SearchRoom();
 
 new Pagination();
-
-new Header();
 
 new CheckboxButtons();
