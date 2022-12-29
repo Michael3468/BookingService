@@ -8,7 +8,7 @@ import '../../components/ui-kit/form-elements/custom-checkbox';
 import '../../components/ui-kit/form-elements/dropdown/_guests';
 import '../../components/ui-kit/form-elements/dropdown/_options';
 import '../../components/ui-kit/form-elements/filter-date-dropdown';
-import '../../components/ui-kit/form-elements/filter-date-picker/filterDatePicker';
+import '../../components/ui-kit/form-elements/filter-date-picker';
 import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 

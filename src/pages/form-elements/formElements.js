@@ -9,7 +9,7 @@ import '../../components/ui-kit/form-elements/dropdown/_guests';
 import '../../components/ui-kit/form-elements/dropdown/_options';
 import '../../components/ui-kit/form-elements/dropdown-date';
 import '../../components/ui-kit/form-elements/filter-date-dropdown';
-import '../../components/ui-kit/form-elements/filter-date-picker/filterDatePicker';
+import '../../components/ui-kit/form-elements/filter-date-picker';
 import '../../components/ui-kit/form-elements/icon-text-list/iconTextList';
 import '../../components/ui-kit/form-elements/like-button/likeButton';
 import '../../components/ui-kit/form-elements/masked-text-field/maskedTextField';
