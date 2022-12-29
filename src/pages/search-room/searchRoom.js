@@ -60,5 +60,3 @@ class SearchRoom {
 }
 
 new SearchRoom();
-
-new CheckboxButtons();
