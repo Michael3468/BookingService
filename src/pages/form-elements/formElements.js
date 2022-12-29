@@ -18,7 +18,7 @@ import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
 import '../../components/ui-kit/form-elements/rate-button/rateButton';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 import '../../components/ui-kit/form-elements/text-field/textField';
-import '../../components/ui-kit/form-elements/toggle/toggle';
+import '../../components/ui-kit/form-elements/toggle';
 
 import './form-elements.scss';
 
