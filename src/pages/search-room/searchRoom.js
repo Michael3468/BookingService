@@ -1,4 +1,3 @@
-import Pagination from '../../components/ui-kit/form-elements/pagination/pagination';
 
 import '../../components/ui-kit/cards/room-card/roomCard';
 
@@ -8,6 +7,7 @@ import '../../components/ui-kit/form-elements/dropdown/_guests';
 import '../../components/ui-kit/form-elements/dropdown/_options';
 import '../../components/ui-kit/form-elements/filter-date-dropdown';
 import '../../components/ui-kit/form-elements/filter-date-picker';
+import '../../components/ui-kit/form-elements/pagination';
 import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
@@ -61,7 +61,5 @@ class SearchRoom {
 }
 
 new SearchRoom();
-
-new Pagination();
 
 new CheckboxButtons();
