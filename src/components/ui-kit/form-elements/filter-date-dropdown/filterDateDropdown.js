@@ -6,26 +6,25 @@ class FilterDateDropdown {
   }
 
   _showHideDatePicker(event) {
-    const filterDateDropdown = event.target.closest('.js-filter-date-dropdown')
+    const datePicker = event.target
+      .closest('.js-filter-date-dropdown')
       .querySelector('.js-dropdown-date__date-picker');
-    const filterStatus = filterDateDropdown.style.display;
 
-    filterDateDropdown.style.display = filterStatus === 'block'
-      ? 'none'
-      : 'block';
+    datePicker.style.display = datePicker.style.display === 'block' ? 'none' : 'block';
   }
 
-  _handleFilterDateDropdownKeyPress(event) {
+  _handleKeyPress(event) {
     if (event.code === 'Enter') {
       this._showHideDatePicker(event);
     }
   }
 
   _addListeners() {
-    const filterDateDropdown = document.querySelector('.js-filter-date-dropdown__input');
-    filterDateDropdown.addEventListener('click', this._showHideDatePicker);
-    filterDateDropdown.addEventListener('keypress', (event) => {
-      this._handleFilterDateDropdownKeyPress(event);
+    const dropdown = document.querySelector('.js-filter-date-dropdown__input');
+
+    dropdown.addEventListener('click', this._showHideDatePicker);
+    dropdown.addEventListener('keypress', (event) => {
+      this._handleKeyPress(event);
     });
   }
 }
