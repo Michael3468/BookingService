@@ -12,7 +12,7 @@ import '../../components/ui-kit/form-elements/filter-date-dropdown';
 import '../../components/ui-kit/form-elements/filter-date-picker';
 import '../../components/ui-kit/form-elements/icon-text-list/iconTextList';
 import '../../components/ui-kit/form-elements/like-button';
-import '../../components/ui-kit/form-elements/masked-text-field/maskedTextField';
+import '../../components/ui-kit/form-elements/masked-text-field';
 import '../../components/ui-kit/form-elements/radio-buttons/radioButtons';
 import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
 import '../../components/ui-kit/form-elements/rate-button/rateButton';
