@@ -1,4 +1,3 @@
-
 import '../../components/ui-kit/cards/room-card/roomCard';
 
 import '../../components/ui-kit/form-elements/checkbox-buttons';
@@ -8,7 +7,7 @@ import '../../components/ui-kit/form-elements/dropdown/_options';
 import '../../components/ui-kit/form-elements/filter-date-dropdown';
 import '../../components/ui-kit/form-elements/filter-date-picker';
 import '../../components/ui-kit/form-elements/pagination';
-import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
+import '../../components/ui-kit/form-elements/range-slider';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 
 import '../../components/ui-kit/headers-and-footers/footer/footer';
@@ -37,7 +36,7 @@ class SearchRoom {
   _showColumnOptionsMenu = () => {
     this.menu.classList.toggle('hidden');
     this.optionsColumnButton.classList.toggle(
-      'search-room-options-column-button_rotate'
+      'search-room-options-column-button_rotate',
     );
   };
 
@@ -52,7 +51,7 @@ class SearchRoom {
   _addListeners() {
     this.optionsColumnButton.addEventListener(
       'click',
-      this._showColumnOptionsMenu
+      this._showColumnOptionsMenu,
     );
 
     window.addEventListener('resize', this._handleWindowResize);

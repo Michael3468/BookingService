@@ -13,7 +13,7 @@ import '../../components/ui-kit/form-elements/like-button';
 import '../../components/ui-kit/form-elements/masked-text-field';
 import '../../components/ui-kit/form-elements/pagination';
 import '../../components/ui-kit/form-elements/radio-buttons/radioButtons';
-import '../../components/ui-kit/form-elements/range-slider/rangeSlider';
+import '../../components/ui-kit/form-elements/range-slider';
 import '../../components/ui-kit/form-elements/rate-button/rateButton';
 import '../../components/ui-kit/form-elements/rich-checkbox-buttons/richCheckboxButtons';
 import '../../components/ui-kit/form-elements/text-field/textField';
