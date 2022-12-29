@@ -2,7 +2,7 @@ import tippy from 'tippy.js';
 
 import '../booking-caption/bookingCaption';
 import '../../form-elements/button/button';
-import '../../form-elements/dropdown/_guests';
+import '../../form-elements/dropdown-guests';
 import '../../form-elements/dropdown-date';
 
 import './booking.scss';

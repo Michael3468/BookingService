@@ -1,5 +1,5 @@
 /* eslint-disable operator-linebreak */
-import Dropdown from '../Dropdown';
+import Dropdown from '../dropdown/Dropdown';
 
 import './dropdown-guests.scss';
 

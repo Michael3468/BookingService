@@ -3,7 +3,7 @@ import '../../components/ui-kit/form-elements/bullet-list/bulletList';
 import '../../components/ui-kit/form-elements/checkbox-buttons';
 import '../../components/ui-kit/form-elements/comment/comment';
 import '../../components/ui-kit/form-elements/custom-checkbox';
-import '../../components/ui-kit/form-elements/dropdown/_guests';
+import '../../components/ui-kit/form-elements/dropdown-guests';
 import '../../components/ui-kit/form-elements/dropdown/_options';
 import '../../components/ui-kit/form-elements/dropdown-date';
 import '../../components/ui-kit/form-elements/filter-date-dropdown';
