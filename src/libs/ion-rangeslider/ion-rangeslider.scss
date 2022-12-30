@@ -9,6 +9,11 @@ $borderBgColor: $defaultColor;
   flex-direction: row;
   justify-content: space-between;
 
+  &_position_left,
+  &_position_right {
+    @include h3-style;
+  }
+
   &_position_left {
     margin-right: rem(30);
   }
@@ -17,10 +22,6 @@ $borderBgColor: $defaultColor;
     font-weight: normal;
   }
 
-  &_position_left,
-  &_position_right {
-    @include h3-style;
-  }
 }
 
 /* rangeSlider.css */
