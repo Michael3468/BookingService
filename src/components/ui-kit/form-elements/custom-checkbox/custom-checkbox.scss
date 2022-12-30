@@ -13,11 +13,6 @@
   display: flex;
   flex-direction: row;
   margin-bottom: rem(9);
-
-  &:focus {
-    color: $DarkShade75;
-    font-weight: bold;
-  }
 }
 
 .custom-checkbox__label {
