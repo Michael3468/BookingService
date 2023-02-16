@@ -5,7 +5,7 @@ It demonstrates ui-kit with site components and booking service with landing pag
 
 ## **Github pages**
 
-[Main Page](https://whitedevilman.github.io/FSD/)
+[Main Page](https://whitedevilman.github.io/BookingService/)
 
 ## **UI-Kit**
 
