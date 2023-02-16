@@ -148,7 +148,11 @@
 
 .datepicker--cell.-selected-,
 .datepicker--cell.-selected-.-focus-,
-.datepicker--cell.-selected-.-current- {
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.datepicker--cell-day.-range-from-.-focus-,
+.datepicker--cell.datepicker--cell-day.-range-to-.-focus-,
+.datepicker--cell.datepicker--cell-day.-weekend-.-range-from-.-focus-,
+.datepicker--cell.datepicker--cell-day.-weekend-.-range-to-.-focus- {
   color: $defaultColor;
   background: $primaryGradient;
 }

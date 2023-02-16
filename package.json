@@ -1,6 +1,6 @@
 {
   "name": "booking-service",
-  "version": "0.3.10",
+  "version": "0.3.13",
   "description": "educational project",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,11 @@
     "deploy": "gh-pages -d dist",
     "stylelint": "stylelint **/*.scss",
     "stylelint-fix": "stylelint **/*.scss --fix",
-    "cm": "cz"
+    "cm": "cz",
+    "release-same-version": "git flow release start next && git flow release finish -n next",
+    "release-minor": "git flow release start next && npm version minor && git flow release finish -n next",
+    "release-patch": "git flow release start next && npm version patch && git flow release finish -n next",
+    "push": "git checkout master && git push && git checkout develop && git push"
   },
   "browserslist": [
     "> 1%",
@@ -18,13 +22,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.20.5",
+    "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "autoprefixer": "^9.8.8",
     "babel-loader": "^8.3.0",
     "babel-preset-airbnb": "^5.0.0",
     "clean-webpack-plugin": "^3.0.0",
-    "commitizen": "^4.2.6",
+    "commitizen": "^4.3.0",
     "copy-webpack-plugin": "^5.1.2",
     "css-loader": "^3.6.0",
     "css-mqpacker": "^7.0.0",
@@ -32,12 +36,11 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.27.5",
     "file-loader": "^5.1.0",
     "gh-pages": "^3.2.3",
     "git-flow": "^0.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.6.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
@@ -66,7 +69,8 @@
     "ion-rangeslider": "^2.3.1",
     "paginationjs": "^2.4.2",
     "slick-carousel": "^1.8.1",
-    "tippy.js": "^6.3.7"
+    "tippy.js": "^6.3.7",
+    "jquery": "^3.6.2"
   },
   "config": {
     "commitizen": {

@@ -1,4 +1,5 @@
-import Dropdown from '../Dropdown';
+/* eslint-disable operator-linebreak */
+import Dropdown from '../dropdown/Dropdown';
 
 import './dropdown-guests.scss';
 
@@ -28,7 +29,7 @@ class DropdownGuests extends Dropdown {
     });
 
     const decrementButtons = this.elem.querySelectorAll(
-      '.js-dropdown__button-decrement'
+      '.js-dropdown__button-decrement',
     );
     decrementButtons.forEach((element) => {
       element.classList.remove('dark');
