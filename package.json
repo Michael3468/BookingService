@@ -1,5 +1,5 @@
 {
-  "name": "fsd_step_2",
+  "name": "booking-service",
   "version": "0.3.13",
   "description": "educational project",
   "main": "index.js",
