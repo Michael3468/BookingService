@@ -9,7 +9,11 @@
     "deploy": "gh-pages -d dist",
     "stylelint": "stylelint **/*.scss",
     "stylelint-fix": "stylelint **/*.scss --fix",
-    "cm": "cz"
+    "cm": "cz",
+    "release-same-version": "git flow release start next && git flow release finish -n next",
+    "release-minor": "git flow release start next && npm version minor && git flow release finish -n next",
+    "release-patch": "git flow release start next && npm version patch && git flow release finish -n next",
+    "push": "git checkout master && git push && git checkout develop && git push"
   },
   "browserslist": [
     "> 1%",
