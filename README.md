@@ -9,18 +9,18 @@ It demonstrates ui-kit with site components and booking service with landing pag
 
 ## **UI-Kit**
 
-- [Colors & Types](http://whitedevilman.github.io/FSD/colors-and-types.html)
-- [Headers & Footers](http://whitedevilman.github.io/FSD/headers-and-footers.html)
-- [Form & Elements](http://whitedevilman.github.io/FSD/form-elements.html)
-- [Cards](http://whitedevilman.github.io/FSD/cards.html)
+- [Colors & Types](http://whitedevilman.github.io/BookingService/colors-and-types.html)
+- [Headers & Footers](http://whitedevilman.github.io/BookingService/headers-and-footers.html)
+- [Form & Elements](http://whitedevilman.github.io/BookingService/form-elements.html)
+- [Cards](http://whitedevilman.github.io/BookingService/cards.html)
 
 ## **Website pages**
 
-- [Landing page](http://whitedevilman.github.io/FSD/landing-page.html)
-- [Search room](http://whitedevilman.github.io/FSD/search-room.html)
-- [Room details](http://whitedevilman.github.io/FSD/room-details.html)
-- [Registration](http://whitedevilman.github.io/FSD/registration.html)
-- [Sign in](http://whitedevilman.github.io/FSD/sign-in.html)
+- [Landing page](http://whitedevilman.github.io/BookingService/landing-page.html)
+- [Search room](http://whitedevilman.github.io/BookingService/search-room.html)
+- [Room details](http://whitedevilman.github.io/BookingService/room-details.html)
+- [Registration](http://whitedevilman.github.io/BookingService/registration.html)
+- [Sign in](http://whitedevilman.github.io/BookingService/sign-in.html)
 
 ## Build Setup:
 
@@ -30,10 +30,10 @@ It demonstrates ui-kit with site components and booking service with landing pag
 ```bash
 # Download repository:
 
-$ git clone https://github.com/WhiteDevilMan/FSD
+$ git clone https://github.com/WhiteDevilMan/BookingService
 
 # Go to the folder:
-$ cd FSD
+$ cd BookingService
 
 # Install dependencies from package.json:
 $ npm install
